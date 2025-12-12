@@ -1,0 +1,3 @@
+# Optional or experimental dependencies
+networkx
+scikit-learn

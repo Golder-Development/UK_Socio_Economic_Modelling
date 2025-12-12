@@ -1,0 +1,4 @@
+# Dependencies specific to cyclic unrest app
+
+scipy
+statsmodels

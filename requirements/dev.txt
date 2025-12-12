@@ -1,0 +1,8 @@
+# Developer tooling (formatters, linters, test runners)
+# Example: black, ruff, pytest, mypy
+
+black
+flake8
+pytest
+ipykernel
+jupyter

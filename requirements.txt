@@ -1,0 +1,5 @@
+pip install -r requirements/base.txt
+pip install -r requirements/streamlit.txt
+pip install -r requirements/donations.txt
+pip install -r requirements/unrest.txt
+pip install -r requirements/dev.txt

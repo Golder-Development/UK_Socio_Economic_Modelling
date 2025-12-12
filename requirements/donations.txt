@@ -1,0 +1,3 @@
+# Dependencies specific to political donations app
+
+pdpy

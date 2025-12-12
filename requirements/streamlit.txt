@@ -1,0 +1,6 @@
+# Streamlit app dependencies
+# Example: streamlit, plotly, altair
+
+streamlit>=1.31
+plotly>=5.18
+altair

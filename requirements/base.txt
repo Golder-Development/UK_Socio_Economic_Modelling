@@ -1,0 +1,9 @@
+# Base dependencies for UK_Socio_Economic_Modelling
+# Populate with core libraries (e.g., pandas, numpy, requests)
+
+pandas>=2.0
+numpy>=1.26
+python-dateutil
+pytz
+pyyaml
+requests
