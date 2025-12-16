@@ -3,6 +3,7 @@ from ._vendor.pypd import ParliamentApiClient
 
 _client = None
 
+
 def get_client():
     global _client
     if _client is None:

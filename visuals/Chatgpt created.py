@@ -1,11 +1,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
+from pathlib import Path
 
 # Create output directory if it doesn't exist
-output_dir = "output"
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
+output_dir = Path(__file__).parent.parent / "generated_charts"
+output_dir.mkdir(exist_ok=True, parents=True)
 
 # Load data - fixed path to use local output directory
 df = pd.read_csv("output/cleaned_data.csv", low_memory=False)

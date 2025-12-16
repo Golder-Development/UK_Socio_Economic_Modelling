@@ -1,5 +1,9 @@
-pip install -r requirements/base.txt
-pip install -r requirements/streamlit.txt
-pip install -r requirements/donations.txt
-pip install -r requirements/unrest.txt
-pip install -r requirements/dev.txt
+# Install requirements in order
+# Use: pip install -r requirements.txt
+
+-r requirements/base.txt
+-r requirements/streamlit.txt
+-r requirements/donations.txt
+-r requirements/unrest.txt
+-r requirements/dev.txt
+-r requirements/ons.txt

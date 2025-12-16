@@ -1,4 +1,6 @@
 from ._vendor.pdpy import pdpy
+import pandas as pd
+from pathlib import Path
 
 """ Given dates returns a tidy DataFrame
 of UK MP's and their parties over time"""
@@ -44,3 +46,36 @@ def get_party_from_pdpy_df(pdpydf, name):
         return "Unknown"
     else:
         return "Issue with PdPy data"
+
+
+def _most_recent_extract_dir() -> Path:
+    """Return the most recent extract directory, or create a new one."""
+    base_dir = Path(__file__).parent
+    extract_dirs = [p for p in base_dir.iterdir() if p.is_dir() and p.name.startswith("extract_")]
+    if extract_dirs:
+        return max(extract_dirs, key=lambda p: p.stat().st_mtime)
+    
+    ts = pd.Timestamp.now().strftime("%Y%m%d_%H%M%S")
+    new_dir = base_dir / f"extract_{ts}"
+    new_dir.mkdir(parents=True, exist_ok=True)
+    return new_dir
+
+
+def main():
+    """Demo: fetch and save MP party memberships data."""
+    print("Fetching MP party memberships...")
+    try:
+        party_df = get_party_df_from_pdpy()
+        print(f"Retrieved {len(party_df)} party memberships")
+        
+        if len(party_df) > 0:
+            extract_dir = _most_recent_extract_dir()
+            output_file = extract_dir / "mps_party_memberships.csv"
+            party_df.to_csv(output_file, index=False)
+            print(f"✓ Data saved to: {output_file}")
+    except Exception as e:
+        print(f"Error: {e}")
+
+
+if __name__ == "__main__":
+    main()
