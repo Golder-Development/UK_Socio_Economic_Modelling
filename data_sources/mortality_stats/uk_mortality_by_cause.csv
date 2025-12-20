@@ -1,0 +1,403 @@
+year,icd10_chapter,total_deaths,cause_category
+2001,A,6858,Certain infectious and parasitic diseases (A00-B99)
+2001,B,1700,Certain infectious and parasitic diseases (A00-B99)
+2001,C,272468,Neoplasms (C00-D48)
+2001,D,8600,Neoplasms / Blood diseases (D00-D89)
+2001,E,15484,"Endocrine, nutritional and metabolic diseases (E00-E90)"
+2001,F,28548,Mental and behavioural disorders (F00-F99)
+2001,G,28752,Diseases of the nervous system (G00-G99)
+2001,H,78,Diseases of the eye/ear (H00-H95)
+2001,I,424708,Diseases of the circulatory system (I00-I99)
+2001,J,134936,Diseases of the respiratory system (J00-J99)
+2001,K,46872,Diseases of the digestive system (K00-K93)
+2001,L,2570,Diseases of the skin (L00-L99)
+2001,M,9208,Diseases of the musculoskeletal system (M00-M99)
+2001,N,15382,Diseases of the genitourinary system (N00-N99)
+2001,O,90,"Pregnancy, childbirth and the puerperium (O00-O99)"
+2001,P,368,Certain conditions originating in the perinatal period (P00-P96)
+2001,Q,2572,Congenital malformations (Q00-Q99)
+2001,R,26810,"Symptoms, signs and abnormal findings (R00-R99)"
+2001,V,6204,External causes of morbidity and mortality (V01-Y98)
+2001,W,7086,External causes of morbidity and mortality (V01-Y98)
+2001,X,16046,External causes of morbidity and mortality (V01-Y98)
+2001,Y,5360,External causes of morbidity and mortality (V01-Y98)
+2001,n,4296,
+2002,A,7136,Certain infectious and parasitic diseases (A00-B99)
+2002,B,1534,Certain infectious and parasitic diseases (A00-B99)
+2002,C,274102,Neoplasms (C00-D48)
+2002,D,8964,Neoplasms / Blood diseases (D00-D89)
+2002,E,15778,"Endocrine, nutritional and metabolic diseases (E00-E90)"
+2002,F,28890,Mental and behavioural disorders (F00-F99)
+2002,G,29580,Diseases of the nervous system (G00-G99)
+2002,H,84,Diseases of the eye/ear (H00-H95)
+2002,I,419896,Diseases of the circulatory system (I00-I99)
+2002,J,140296,Diseases of the respiratory system (J00-J99)
+2002,K,48328,Diseases of the digestive system (K00-K93)
+2002,L,2964,Diseases of the skin (L00-L99)
+2002,M,9240,Diseases of the musculoskeletal system (M00-M99)
+2002,N,16914,Diseases of the genitourinary system (N00-N99)
+2002,O,74,"Pregnancy, childbirth and the puerperium (O00-O99)"
+2002,P,414,Certain conditions originating in the perinatal period (P00-P96)
+2002,Q,2506,Congenital malformations (Q00-Q99)
+2002,R,26212,"Symptoms, signs and abnormal findings (R00-R99)"
+2002,V,6480,External causes of morbidity and mortality (V01-Y98)
+2002,W,6622,External causes of morbidity and mortality (V01-Y98)
+2002,X,15402,External causes of morbidity and mortality (V01-Y98)
+2002,Y,5022,External causes of morbidity and mortality (V01-Y98)
+2002,n,4274,
+2003,A,7892,Certain infectious and parasitic diseases (A00-B99)
+2003,B,1638,Certain infectious and parasitic diseases (A00-B99)
+2003,C,272060,Neoplasms (C00-D48)
+2003,D,8954,Neoplasms / Blood diseases (D00-D89)
+2003,E,16022,"Endocrine, nutritional and metabolic diseases (E00-E90)"
+2003,F,29932,Mental and behavioural disorders (F00-F99)
+2003,G,31520,Diseases of the nervous system (G00-G99)
+2003,H,74,Diseases of the eye/ear (H00-H95)
+2003,I,411302,Diseases of the circulatory system (I00-I99)
+2003,J,149912,Diseases of the respiratory system (J00-J99)
+2003,K,49938,Diseases of the digestive system (K00-K93)
+2003,L,3322,Diseases of the skin (L00-L99)
+2003,M,9240,Diseases of the musculoskeletal system (M00-M99)
+2003,N,18282,Diseases of the genitourinary system (N00-N99)
+2003,O,86,"Pregnancy, childbirth and the puerperium (O00-O99)"
+2003,P,404,Certain conditions originating in the perinatal period (P00-P96)
+2003,Q,2594,Congenital malformations (Q00-Q99)
+2003,R,25756,"Symptoms, signs and abnormal findings (R00-R99)"
+2003,V,6570,External causes of morbidity and mortality (V01-Y98)
+2003,W,7222,External causes of morbidity and mortality (V01-Y98)
+2003,X,15848,External causes of morbidity and mortality (V01-Y98)
+2003,Y,5238,External causes of morbidity and mortality (V01-Y98)
+2003,n,4496,
+2004,A,8484,Certain infectious and parasitic diseases (A00-B99)
+2004,B,1548,Certain infectious and parasitic diseases (A00-B99)
+2004,C,269746,Neoplasms (C00-D48)
+2004,D,8468,Neoplasms / Blood diseases (D00-D89)
+2004,E,15062,"Endocrine, nutritional and metabolic diseases (E00-E90)"
+2004,F,28638,Mental and behavioural disorders (F00-F99)
+2004,G,29180,Diseases of the nervous system (G00-G99)
+2004,H,78,Diseases of the eye/ear (H00-H95)
+2004,I,381558,Diseases of the circulatory system (I00-I99)
+2004,J,138830,Diseases of the respiratory system (J00-J99)
+2004,K,49926,Diseases of the digestive system (K00-K93)
+2004,L,3340,Diseases of the skin (L00-L99)
+2004,M,8884,Diseases of the musculoskeletal system (M00-M99)
+2004,N,18836,Diseases of the genitourinary system (N00-N99)
+2004,O,96,"Pregnancy, childbirth and the puerperium (O00-O99)"
+2004,P,442,Certain conditions originating in the perinatal period (P00-P96)
+2004,Q,2550,Congenital malformations (Q00-Q99)
+2004,R,23232,"Symptoms, signs and abnormal findings (R00-R99)"
+2004,V,6210,External causes of morbidity and mortality (V01-Y98)
+2004,W,7690,External causes of morbidity and mortality (V01-Y98)
+2004,X,15966,External causes of morbidity and mortality (V01-Y98)
+2004,Y,5258,External causes of morbidity and mortality (V01-Y98)
+2004,n,4478,
+2005,A,10654,Certain infectious and parasitic diseases (A00-B99)
+2005,B,1590,Certain infectious and parasitic diseases (A00-B99)
+2005,C,269788,Neoplasms (C00-D48)
+2005,D,8580,Neoplasms / Blood diseases (D00-D89)
+2005,E,14818,"Endocrine, nutritional and metabolic diseases (E00-E90)"
+2005,F,29280,Mental and behavioural disorders (F00-F99)
+2005,G,30424,Diseases of the nervous system (G00-G99)
+2005,H,88,Diseases of the eye/ear (H00-H95)
+2005,I,367348,Diseases of the circulatory system (I00-I99)
+2005,J,144700,Diseases of the respiratory system (J00-J99)
+2005,K,50386,Diseases of the digestive system (K00-K93)
+2005,L,3578,Diseases of the skin (L00-L99)
+2005,M,8792,Diseases of the musculoskeletal system (M00-M99)
+2005,N,20328,Diseases of the genitourinary system (N00-N99)
+2005,O,92,"Pregnancy, childbirth and the puerperium (O00-O99)"
+2005,P,394,Certain conditions originating in the perinatal period (P00-P96)
+2005,Q,2594,Congenital malformations (Q00-Q99)
+2005,R,22850,"Symptoms, signs and abnormal findings (R00-R99)"
+2005,V,6096,External causes of morbidity and mortality (V01-Y98)
+2005,W,7966,External causes of morbidity and mortality (V01-Y98)
+2005,X,16144,External causes of morbidity and mortality (V01-Y98)
+2005,Y,5056,External causes of morbidity and mortality (V01-Y98)
+2005,n,4440,
+2006,A,13626,Certain infectious and parasitic diseases (A00-B99)
+2006,B,1638,Certain infectious and parasitic diseases (A00-B99)
+2006,C,271270,Neoplasms (C00-D48)
+2006,D,8310,Neoplasms / Blood diseases (D00-D89)
+2006,E,14306,"Endocrine, nutritional and metabolic diseases (E00-E90)"
+2006,F,29726,Mental and behavioural disorders (F00-F99)
+2006,G,30386,Diseases of the nervous system (G00-G99)
+2006,H,50,Diseases of the eye/ear (H00-H95)
+2006,I,349274,Diseases of the circulatory system (I00-I99)
+2006,J,137198,Diseases of the respiratory system (J00-J99)
+2006,K,51572,Diseases of the digestive system (K00-K93)
+2006,L,3624,Diseases of the skin (L00-L99)
+2006,M,8476,Diseases of the musculoskeletal system (M00-M99)
+2006,N,21444,Diseases of the genitourinary system (N00-N99)
+2006,O,82,"Pregnancy, childbirth and the puerperium (O00-O99)"
+2006,P,320,Certain conditions originating in the perinatal period (P00-P96)
+2006,Q,2428,Congenital malformations (Q00-Q99)
+2006,R,21760,"Symptoms, signs and abnormal findings (R00-R99)"
+2006,V,6096,External causes of morbidity and mortality (V01-Y98)
+2006,W,8018,External causes of morbidity and mortality (V01-Y98)
+2006,X,16426,External causes of morbidity and mortality (V01-Y98)
+2006,Y,4478,External causes of morbidity and mortality (V01-Y98)
+2006,n,4690,
+2007,A,14618,Certain infectious and parasitic diseases (A00-B99)
+2007,B,1720,Certain infectious and parasitic diseases (A00-B99)
+2007,C,273608,Neoplasms (C00-D48)
+2007,D,8610,Neoplasms / Blood diseases (D00-D89)
+2007,E,14428,"Endocrine, nutritional and metabolic diseases (E00-E90)"
+2007,F,33164,Mental and behavioural disorders (F00-F99)
+2007,G,32710,Diseases of the nervous system (G00-G99)
+2007,H,40,Diseases of the eye/ear (H00-H95)
+2007,I,340676,Diseases of the circulatory system (I00-I99)
+2007,J,137948,Diseases of the respiratory system (J00-J99)
+2007,K,51340,Diseases of the digestive system (K00-K93)
+2007,L,3644,Diseases of the skin (L00-L99)
+2007,M,8608,Diseases of the musculoskeletal system (M00-M99)
+2007,N,22602,Diseases of the genitourinary system (N00-N99)
+2007,O,94,"Pregnancy, childbirth and the puerperium (O00-O99)"
+2007,P,360,Certain conditions originating in the perinatal period (P00-P96)
+2007,Q,2470,Congenital malformations (Q00-Q99)
+2007,R,22060,"Symptoms, signs and abnormal findings (R00-R99)"
+2007,U,840,
+2007,V,5936,External causes of morbidity and mortality (V01-Y98)
+2007,W,8344,External causes of morbidity and mortality (V01-Y98)
+2007,X,16086,External causes of morbidity and mortality (V01-Y98)
+2007,Y,3634,External causes of morbidity and mortality (V01-Y98)
+2007,n,4564,
+2008,A,11330,Certain infectious and parasitic diseases (A00-B99)
+2008,B,1668,Certain infectious and parasitic diseases (A00-B99)
+2008,C,275662,Neoplasms (C00-D48)
+2008,D,8528,Neoplasms / Blood diseases (D00-D89)
+2008,E,14852,"Endocrine, nutritional and metabolic diseases (E00-E90)"
+2008,F,36876,Mental and behavioural disorders (F00-F99)
+2008,G,35042,Diseases of the nervous system (G00-G99)
+2008,H,66,Diseases of the eye/ear (H00-H95)
+2008,I,336476,Diseases of the circulatory system (I00-I99)
+2008,J,143502,Diseases of the respiratory system (J00-J99)
+2008,K,51994,Diseases of the digestive system (K00-K93)
+2008,L,3790,Diseases of the skin (L00-L99)
+2008,M,8796,Diseases of the musculoskeletal system (M00-M99)
+2008,N,23772,Diseases of the genitourinary system (N00-N99)
+2008,O,88,"Pregnancy, childbirth and the puerperium (O00-O99)"
+2008,P,468,Certain conditions originating in the perinatal period (P00-P96)
+2008,Q,2278,Congenital malformations (Q00-Q99)
+2008,R,22298,"Symptoms, signs and abnormal findings (R00-R99)"
+2008,U,840,
+2008,V,5352,External causes of morbidity and mortality (V01-Y98)
+2008,W,8924,External causes of morbidity and mortality (V01-Y98)
+2008,X,17430,External causes of morbidity and mortality (V01-Y98)
+2008,Y,3550,External causes of morbidity and mortality (V01-Y98)
+2008,n,4598,
+2009,A,9718,Certain infectious and parasitic diseases (A00-B99)
+2009,B,1782,Certain infectious and parasitic diseases (A00-B99)
+2009,C,274840,Neoplasms (C00-D48)
+2009,D,8206,Neoplasms / Blood diseases (D00-D89)
+2009,E,14246,"Endocrine, nutritional and metabolic diseases (E00-E90)"
+2009,F,36042,Mental and behavioural disorders (F00-F99)
+2009,G,34816,Diseases of the nervous system (G00-G99)
+2009,H,68,Diseases of the eye/ear (H00-H95)
+2009,I,319558,Diseases of the circulatory system (I00-I99)
+2009,J,135118,Diseases of the respiratory system (J00-J99)
+2009,K,50460,Diseases of the digestive system (K00-K93)
+2009,L,3698,Diseases of the skin (L00-L99)
+2009,M,8282,Diseases of the musculoskeletal system (M00-M99)
+2009,N,23996,Diseases of the genitourinary system (N00-N99)
+2009,O,126,"Pregnancy, childbirth and the puerperium (O00-O99)"
+2009,P,474,Certain conditions originating in the perinatal period (P00-P96)
+2009,Q,2522,Congenital malformations (Q00-Q99)
+2009,R,18486,"Symptoms, signs and abnormal findings (R00-R99)"
+2009,U,772,
+2009,V,4568,External causes of morbidity and mortality (V01-Y98)
+2009,W,9294,External causes of morbidity and mortality (V01-Y98)
+2009,X,17192,External causes of morbidity and mortality (V01-Y98)
+2009,Y,3930,External causes of morbidity and mortality (V01-Y98)
+2009,n,4502,
+2010,A,8354,Certain infectious and parasitic diseases (A00-B99)
+2010,B,1720,Certain infectious and parasitic diseases (A00-B99)
+2010,C,276528,Neoplasms (C00-D48)
+2010,D,8398,Neoplasms / Blood diseases (D00-D89)
+2010,E,14370,"Endocrine, nutritional and metabolic diseases (E00-E90)"
+2010,F,39832,Mental and behavioural disorders (F00-F99)
+2010,G,36966,Diseases of the nervous system (G00-G99)
+2010,H,62,Diseases of the eye/ear (H00-H95)
+2010,I,316168,Diseases of the circulatory system (I00-I99)
+2010,J,134552,Diseases of the respiratory system (J00-J99)
+2010,K,51324,Diseases of the digestive system (K00-K93)
+2010,L,3738,Diseases of the skin (L00-L99)
+2010,M,8330,Diseases of the musculoskeletal system (M00-M99)
+2010,N,24812,Diseases of the genitourinary system (N00-N99)
+2010,O,70,"Pregnancy, childbirth and the puerperium (O00-O99)"
+2010,P,448,Certain conditions originating in the perinatal period (P00-P96)
+2010,Q,2378,Congenital malformations (Q00-Q99)
+2010,R,19736,"Symptoms, signs and abnormal findings (R00-R99)"
+2010,U,708,
+2010,V,3940,External causes of morbidity and mortality (V01-Y98)
+2010,W,9370,External causes of morbidity and mortality (V01-Y98)
+2010,X,16698,External causes of morbidity and mortality (V01-Y98)
+2010,Y,3686,External causes of morbidity and mortality (V01-Y98)
+2010,n,4296,
+2011,A,9144,Certain infectious and parasitic diseases (A00-B99)
+2011,B,1676,Certain infectious and parasitic diseases (A00-B99)
+2011,C,279902,Neoplasms (C00-D48)
+2011,D,8458,Neoplasms / Blood diseases (D00-D89)
+2011,E,12994,"Endocrine, nutritional and metabolic diseases (E00-E90)"
+2011,F,62096,Mental and behavioural disorders (F00-F99)
+2011,G,37096,Diseases of the nervous system (G00-G99)
+2011,H,84,Diseases of the eye/ear (H00-H95)
+2011,I,279412,Diseases of the circulatory system (I00-I99)
+2011,J,135380,Diseases of the respiratory system (J00-J99)
+2011,K,49164,Diseases of the digestive system (K00-K93)
+2011,L,3318,Diseases of the skin (L00-L99)
+2011,M,8360,Diseases of the musculoskeletal system (M00-M99)
+2011,N,19000,Diseases of the genitourinary system (N00-N99)
+2011,O,88,"Pregnancy, childbirth and the puerperium (O00-O99)"
+2011,P,390,Certain conditions originating in the perinatal period (P00-P96)
+2011,Q,2200,Congenital malformations (Q00-Q99)
+2011,R,20386,"Symptoms, signs and abnormal findings (R00-R99)"
+2011,U,740,
+2011,V,3630,External causes of morbidity and mortality (V01-Y98)
+2011,W,9528,External causes of morbidity and mortality (V01-Y98)
+2011,X,17308,External causes of morbidity and mortality (V01-Y98)
+2011,Y,3974,External causes of morbidity and mortality (V01-Y98)
+2011,n,4406,
+2012,A,8560,Certain infectious and parasitic diseases (A00-B99)
+2012,B,1658,Certain infectious and parasitic diseases (A00-B99)
+2012,C,284214,Neoplasms (C00-D48)
+2012,D,8462,Neoplasms / Blood diseases (D00-D89)
+2012,E,13420,"Endocrine, nutritional and metabolic diseases (E00-E90)"
+2012,F,71730,Mental and behavioural disorders (F00-F99)
+2012,G,42346,Diseases of the nervous system (G00-G99)
+2012,H,82,Diseases of the eye/ear (H00-H95)
+2012,I,282724,Diseases of the circulatory system (I00-I99)
+2012,J,141416,Diseases of the respiratory system (J00-J99)
+2012,K,49146,Diseases of the digestive system (K00-K93)
+2012,L,3350,Diseases of the skin (L00-L99)
+2012,M,8660,Diseases of the musculoskeletal system (M00-M99)
+2012,N,19524,Diseases of the genitourinary system (N00-N99)
+2012,O,92,"Pregnancy, childbirth and the puerperium (O00-O99)"
+2012,P,410,Certain conditions originating in the perinatal period (P00-P96)
+2012,Q,2298,Congenital malformations (Q00-Q99)
+2012,R,21446,"Symptoms, signs and abnormal findings (R00-R99)"
+2012,U,650,
+2012,V,3324,External causes of morbidity and mortality (V01-Y98)
+2012,W,9402,External causes of morbidity and mortality (V01-Y98)
+2012,X,17450,External causes of morbidity and mortality (V01-Y98)
+2012,Y,4098,External causes of morbidity and mortality (V01-Y98)
+2012,n,4200,
+2013,A,8886,Certain infectious and parasitic diseases (A00-B99)
+2013,B,1724,Certain infectious and parasitic diseases (A00-B99)
+2013,C,283818,Neoplasms (C00-D48)
+2013,D,8782,Neoplasms / Blood diseases (D00-D89)
+2013,E,13556,"Endocrine, nutritional and metabolic diseases (E00-E90)"
+2013,F,76466,Mental and behavioural disorders (F00-F99)
+2013,G,45008,Diseases of the nervous system (G00-G99)
+2013,H,68,Diseases of the eye/ear (H00-H95)
+2013,I,280602,Diseases of the circulatory system (I00-I99)
+2013,J,148458,Diseases of the respiratory system (J00-J99)
+2013,K,48716,Diseases of the digestive system (K00-K93)
+2013,L,3440,Diseases of the skin (L00-L99)
+2013,M,8442,Diseases of the musculoskeletal system (M00-M99)
+2013,N,19262,Diseases of the genitourinary system (N00-N99)
+2013,O,94,"Pregnancy, childbirth and the puerperium (O00-O99)"
+2013,P,334,Certain conditions originating in the perinatal period (P00-P96)
+2013,Q,2252,Congenital malformations (Q00-Q99)
+2013,R,22036,"Symptoms, signs and abnormal findings (R00-R99)"
+2013,U,590,
+2013,V,3222,External causes of morbidity and mortality (V01-Y98)
+2013,W,10380,External causes of morbidity and mortality (V01-Y98)
+2013,X,18988,External causes of morbidity and mortality (V01-Y98)
+2013,Y,4662,External causes of morbidity and mortality (V01-Y98)
+2013,n,3794,
+2014,A,8770,Certain infectious and parasitic diseases (A00-B99)
+2014,B,1594,Certain infectious and parasitic diseases (A00-B99)
+2014,C,287276,Neoplasms (C00-D48)
+2014,D,8644,Neoplasms / Blood diseases (D00-D89)
+2014,E,14352,"Endocrine, nutritional and metabolic diseases (E00-E90)"
+2014,F,82226,Mental and behavioural disorders (F00-F99)
+2014,G,48864,Diseases of the nervous system (G00-G99)
+2014,H,54,Diseases of the eye/ear (H00-H95)
+2014,I,271808,Diseases of the circulatory system (I00-I99)
+2014,J,133144,Diseases of the respiratory system (J00-J99)
+2014,K,48438,Diseases of the digestive system (K00-K93)
+2014,L,3506,Diseases of the skin (L00-L99)
+2014,M,7688,Diseases of the musculoskeletal system (M00-M99)
+2014,N,17622,Diseases of the genitourinary system (N00-N99)
+2014,O,92,"Pregnancy, childbirth and the puerperium (O00-O99)"
+2014,P,390,Certain conditions originating in the perinatal period (P00-P96)
+2014,Q,2738,Congenital malformations (Q00-Q99)
+2014,R,22182,"Symptoms, signs and abnormal findings (R00-R99)"
+2014,U,502,
+2014,V,3584,External causes of morbidity and mortality (V01-Y98)
+2014,W,11244,External causes of morbidity and mortality (V01-Y98)
+2014,X,19834,External causes of morbidity and mortality (V01-Y98)
+2014,Y,4556,External causes of morbidity and mortality (V01-Y98)
+2014,n,3740,
+2015,A,9778,Certain infectious and parasitic diseases (A00-B99)
+2015,B,1788,Certain infectious and parasitic diseases (A00-B99)
+2015,C,288660,Neoplasms (C00-D48)
+2015,D,9114,Neoplasms / Blood diseases (D00-D89)
+2015,E,15338,"Endocrine, nutritional and metabolic diseases (E00-E90)"
+2015,F,96634,Mental and behavioural disorders (F00-F99)
+2015,G,56746,Diseases of the nervous system (G00-G99)
+2015,H,100,Diseases of the eye/ear (H00-H95)
+2015,I,277228,Diseases of the circulatory system (I00-I99)
+2015,J,151068,Diseases of the respiratory system (J00-J99)
+2015,K,50202,Diseases of the digestive system (K00-K93)
+2015,L,3802,Diseases of the skin (L00-L99)
+2015,M,8126,Diseases of the musculoskeletal system (M00-M99)
+2015,N,18718,Diseases of the genitourinary system (N00-N99)
+2015,O,58,"Pregnancy, childbirth and the puerperium (O00-O99)"
+2015,P,380,Certain conditions originating in the perinatal period (P00-P96)
+2015,Q,2514,Congenital malformations (Q00-Q99)
+2015,R,23698,"Symptoms, signs and abnormal findings (R00-R99)"
+2015,U,662,
+2015,V,3344,External causes of morbidity and mortality (V01-Y98)
+2015,W,12764,External causes of morbidity and mortality (V01-Y98)
+2015,X,20268,External causes of morbidity and mortality (V01-Y98)
+2015,Y,4514,External causes of morbidity and mortality (V01-Y98)
+2015,n,3806,
+2016,A,9710,Certain infectious and parasitic diseases (A00-B99)
+2016,B,1720,Certain infectious and parasitic diseases (A00-B99)
+2016,C,292186,Neoplasms (C00-D48)
+2016,D,8772,Neoplasms / Blood diseases (D00-D89)
+2016,E,15804,"Endocrine, nutritional and metabolic diseases (E00-E90)"
+2016,F,96420,Mental and behavioural disorders (F00-F99)
+2016,G,60658,Diseases of the nervous system (G00-G99)
+2016,H,84,Diseases of the eye/ear (H00-H95)
+2016,I,267410,Diseases of the circulatory system (I00-I99)
+2016,J,144482,Diseases of the respiratory system (J00-J99)
+2016,K,50280,Diseases of the digestive system (K00-K93)
+2016,L,3934,Diseases of the skin (L00-L99)
+2016,M,7756,Diseases of the musculoskeletal system (M00-M99)
+2016,N,18304,Diseases of the genitourinary system (N00-N99)
+2016,O,88,"Pregnancy, childbirth and the puerperium (O00-O99)"
+2016,P,368,Certain conditions originating in the perinatal period (P00-P96)
+2016,Q,2652,Congenital malformations (Q00-Q99)
+2016,R,23848,"Symptoms, signs and abnormal findings (R00-R99)"
+2016,U,610,
+2016,V,3416,External causes of morbidity and mortality (V01-Y98)
+2016,W,13118,External causes of morbidity and mortality (V01-Y98)
+2016,X,19942,External causes of morbidity and mortality (V01-Y98)
+2016,Y,4676,External causes of morbidity and mortality (V01-Y98)
+2016,n,3858,
+2017,A,9098,Certain infectious and parasitic diseases (A00-B99)
+2017,B,1638,Certain infectious and parasitic diseases (A00-B99)
+2017,C,292538,Neoplasms (C00-D48)
+2017,D,8964,Neoplasms / Blood diseases (D00-D89)
+2017,E,16870,"Endocrine, nutritional and metabolic diseases (E00-E90)"
+2017,F,101530,Mental and behavioural disorders (F00-F99)
+2017,G,66102,Diseases of the nervous system (G00-G99)
+2017,H,106,Diseases of the eye/ear (H00-H95)
+2017,I,267022,Diseases of the circulatory system (I00-I99)
+2017,J,146910,Diseases of the respiratory system (J00-J99)
+2017,K,51254,Diseases of the digestive system (K00-K93)
+2017,L,4264,Diseases of the skin (L00-L99)
+2017,M,7502,Diseases of the musculoskeletal system (M00-M99)
+2017,N,18212,Diseases of the genitourinary system (N00-N99)
+2017,O,52,"Pregnancy, childbirth and the puerperium (O00-O99)"
+2017,P,376,Certain conditions originating in the perinatal period (P00-P96)
+2017,Q,2824,Congenital malformations (Q00-Q99)
+2017,R,24896,"Symptoms, signs and abnormal findings (R00-R99)"
+2017,U,940,
+2017,V,3164,External causes of morbidity and mortality (V01-Y98)
+2017,W,13108,External causes of morbidity and mortality (V01-Y98)
+2017,X,20042,External causes of morbidity and mortality (V01-Y98)
+2017,Y,5198,External causes of morbidity and mortality (V01-Y98)
+2017,n,3896,

@@ -10,3 +10,5 @@ Terminology
 "Dimensions" refers to particular slices of a dataset. For example, inflation figures might be available for the UK, England, Wales, Scotland and Northern Ireland. So the geography dimension could be set to any one of those in order to retrieve all the data from one location. In the code here, the "time" dimension is forced to the wildcard "*" as I want to get a whole time-series for a dataset; if you fixed the time dimension and set geography to "*", then it would return the value for each region at the specified time.
 
 The get_dimensions() function returns a stucture listing all the valid values for each dimension of a dataset. A subset of these must then be specified and passed into the get_observations() function to actually retrieve the data.
+
+So… what datasets are actually available?
