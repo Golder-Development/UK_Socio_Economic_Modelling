@@ -9,6 +9,7 @@ This project brings together multiple analytical models, data pipelines, and vis
 ---
 
 For background on the intent, philosophy, and how to read this project, see [ABOUT.md](ABOUT.md).
+
 A short, non-technical introduction to the charts published from this project is available on the GitHub Pages site: <https://golder-development.github.io/UK_Socio_Economic_Modelling/>
 
 ---
