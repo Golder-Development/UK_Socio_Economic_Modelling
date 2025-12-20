@@ -1,94 +1,222 @@
-<header>
+# UK Socio-Economic Modelling
 
-<!--
-  <<< Author notes: Course header >>>
-  Read <https://skills.github.com/quickstart> for more information about how to build courses using this template.
-  Include a 1280×640 image, course name in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Next to "About", add description & tags; disable releases, packages, & environments.
-  Add your open source license, GitHub uses the MIT license.
--->
+**A living repository for modelling, visualising, and exploring UK socio-economic systems — with an emphasis on structure, incentives, and unintended outcomes.**
 
-# Code with GitHub Copilot
+This project brings together multiple analytical models, data pipelines, and visual outputs designed to help explore how UK socio-economic systems behave over time — and how policy decisions, incentives, and institutional design interact in practice.
 
-_GitHub Copilot can help you code by offering autocomplete-style suggestions right in VS Code and Codespaces._
-
-</header>
-
-<!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
--->
-
-## Step 1: Leverage Codespaces with VS Code for Copilot
-
-_Welcome to "Develop With AI Powered Code Suggestions Using GitHub Copilot and VS Code"! :wave:_
-
-GitHub Copilot is an AI pair programmer that helps you write code faster and with less work. It draws context from comments and code to suggest individual lines and whole functions instantly. GitHub Copilot is powered by OpenAI Codex, a generative pretrained language model created by OpenAI.
-
-**Copilot works with many code editors including VS Code, Visual Studio, JetBrains IDE, and Neovim.**
-
-Additionally, GitHub Copilot is trained on all languages that appear in public repositories. For each language, the quality of suggestions you receive may depend on the volume and diversity of training data for that language.
-
-Using Copilot inside a Codespace shows just how easy it is to get up and running with GitHub's suite of [Collaborative Coding](https://github.com/features#features-collaboration) tools.
-
-> **Note**
-> This skills exercise will focus on leveraging GitHub Codespace. It is recommended that you complete the GitHub skill, [Codespaces](https://github.com/skills/code-with-codespaces), before moving forward with this exercise.
-
-### :keyboard: Activity: Enable Copilot inside a Codespace
-
-**We recommend opening another browser tab to work through the following activities so you can keep these instructions open for reference.**
-
-Before you open up a codespace on a repository, you can create a development container and define specific extensions or configurations that will be used or installed in your codespace. Let's create this development container and add copilot to the list of extensions.
-
-1. Navigating back to your **Code** tab of your repository, click the **Add file** drop-down button, and then click `Create new file`.
-1. Type or paste the following in the empty text field prompt to name your file.
-   ```
-   .devcontainer/devcontainer.json
-   ```
-1. In the body of the new **.devcontainer/devcontainer.json** file, add the following content:
-   ```
-   {
-       // Name this configuration
-       "name": "Codespace for Skills!",
-       "customizations": {
-           "vscode": {
-               "extensions": [
-                   "GitHub.copilot"
-               ]
-           }
-       }
-   }
-   ```
-1. Select the option to **Commit directly to the `main` branch**, and then click the **Commit new file** button.
-1. Navigate back to the home page of your repository by clicking the **Code** tab located at the top left of the screen.
-1. Click the **Code** button located in the middle of the page.
-1. Click the **Codespaces** tab on the box that pops up.
-1. Click the **Create codespace on main** button.
-
-   **Wait about 2 minutes for the codespace to spin itself up.**
-
-1. Verify your codespace is running. The browser should contain a VS Code web-based editor and a terminal should be present such as the below:
-   ![Screen Shot 2023-03-09 at 9 09 07 AM](https://user-images.githubusercontent.com/26442605/224102962-d0222578-3f10-4566-856d-8d59f28fcf2e.png)
-1. The `copilot` extension should show up in the VS Code extension list. Click the extensions sidebar tab. You should see the following:
-   ![Screen Shot 2023-03-09 at 9 04 13 AM](https://user-images.githubusercontent.com/26442605/224102514-7d6d2f51-f435-401d-a529-7bae3ae3e511.png)
-
-**Wait about 60 seconds then refresh your repository landing page for the next step.**
-
-<footer>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
+👉 **GitHub Pages is active for this repository**, allowing selected generated outputs (charts and figures) to be viewed directly in a browser without running the code locally.
 
 ---
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/code-with-copilot) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
+For background on the intent, philosophy, and how to read this project, see [ABOUT.md](ABOUT.md).
+A short, non-technical introduction to the charts published from this project is available on the GitHub Pages site: <https://golder-development.github.io/UK_Socio_Economic_Modelling/>
 
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+---
 
-</footer>
+## 🌍 What this project is (and isn’t)
+
+This repository is **not** a single finished model, paper, or dashboard.
+
+Instead, it is:
+
+* a **modular modelling workspace**,
+* a **shared codebase** for socio-economic analysis,
+* and a bridge between **technical analysis and public explanation**.
+
+Across the project, the recurring questions are things like:
+
+* *How do systems accrete complexity over time?*
+* *What happens when incentives are misaligned — even without bad intent?*
+* *Why do policy outcomes often feel familiar, cyclical, or inevitable?*
+* *What does the data actually say once we step away from moral framing?*
+
+The aim is not to “win” arguments, but to **make systems legible**.
+
+---
+
+## 🌐 GitHub Pages (Live Outputs)
+
+This repository has **GitHub Pages enabled** to host **static outputs generated by the models**.
+
+🔗 **Live site:**
+[https://golder-development.github.io/UK_Socio_Economic_Modelling/](https://golder-development.github.io/UK_Socio_Economic_Modelling/)
+
+### What’s published there
+
+* Charts and figures generated into `generated_charts/`
+* Static outputs intended for:
+
+  * review and discussion
+  * blog posts and written analysis
+  * stakeholder or collaborator inspection
+
+### Why this exists
+
+GitHub Pages is used deliberately as a **lightweight publishing layer**:
+
+* Outputs can be viewed without cloning the repo
+* Results can be discussed independently of execution
+* Visuals can be referenced while models continue to evolve
+
+> Interactive dashboards live elsewhere (`apps/`). Pages exists to make *outputs visible*, not to replace exploration tools.
+
+---
+
+## ✍️ Related Writing & Context
+
+Many of the ideas explored in this repository are written up — in a more conversational, narrative form — on the accompanying blog:
+
+🔗 **Hysnaps: Music and Mental Health (with a bit of politics and systems thinking)**
+[https://hysnapsmusicandmentalhealth.wordpress.com/](https://hysnapsmusicandmentalhealth.wordpress.com/)
+
+The blog posts:
+
+* provide context and motivation for the models,
+* walk through results in plain English,
+* and explore the *“why does this keep happening?”* side of the data.
+
+If you’re coming to this repository from a post, you’ll often find:
+
+* the underlying data,
+* the code that generated the charts,
+* and related exploratory work here.
+
+---
+
+## 🧠 Design philosophy
+
+Several principles recur across the project:
+
+### 1. Systems over events
+
+The focus is on **structures, feedback loops, and incentives**, not just individual decisions or moments in time.
+
+### 2. Accretion, not replacement
+
+New systems tend to **layer on top of old ones**, rather than replacing them cleanly. Models reflect this wherever possible.
+
+### 3. Unintended outcomes matter
+
+Many harmful outcomes arise without malice — through complexity, delegation, and partial understanding.
+
+### 4. Iterative and exploratory
+
+This is a **working repository**. Some models are stable, others are deliberately incomplete or exploratory.
+
+Clarity beats false certainty.
+
+---
+
+## 📦 Repository Structure
+
+```
+UK_Socio_Economic_Modelling/
+├── apps/                     # Interactive dashboards (e.g. Streamlit)
+├── data_sources/             # Raw and processed datasets
+├── generated_charts/         # Generated figures (published via GitHub Pages)
+├── models/                   # Core socio-economic model logic
+├── notebooks/                # Exploration, prototyping, and analysis
+├── sl_core/                  # Shared utilities, adapters, and components
+├── visuals/                  # Plotting helpers and visual conventions
+├── requirements.txt          # Python dependencies
+├── pyproject.toml            # Project configuration
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### 🔧 Prerequisites
+
+* Python 3.8+
+* `pip`
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Dashboards & Exploration
+
+Interactive dashboards live in **apps/** (typically Streamlit-based):
+
+```bash
+cd apps
+streamlit run main_app.py
+```
+
+Dashboards are used where interaction adds value and where readers benefit from being able to *play with the system* rather than just read about it.
+
+---
+
+## 📊 Modelling & Outputs
+
+Typical workflow:
+
+1. Data ingestion or enrichment in `data_sources/`
+2. Analysis via scripts or notebooks in `models/` / `notebooks/`
+3. Visual outputs written to `generated_charts/`
+4. Selected outputs committed for visibility via GitHub Pages
+
+This separation allows:
+
+* reproducible modelling,
+* visible artefacts,
+* and discussion without requiring execution.
+
+---
+
+## 🧑‍🤝‍🧑 Collaboration & contribution
+
+Contributions are welcome, particularly around:
+
+* extending or refining models,
+* adding data sources or adapters,
+* improving visual clarity,
+* documentation and explanation.
+
+If you’re unsure whether something fits, opening an **Issue** for discussion first is encouraged.
+
+---
+
+## 📣 Following the work
+
+If you’d like to follow ongoing thinking, updates, and related discussion, you can find me here:
+
+* **Bluesky:** [https://bsky.app/profile/hysnap.bsky.social](https://bsky.app/profile/hysnap.bsky.social)
+* **Mastodon:** [https://mastodon.social/@Hysnap](https://mastodon.social/@Hysnap)
+* **Facebook:** [https://www.facebook.com/profile.php?id=61585153234910](https://www.facebook.com/profile.php?id=61585153234910)
+
+Updates tend to link back to:
+
+* new blog posts,
+* new charts on GitHub Pages,
+* or new exploratory directions in this repository.
+
+---
+
+## 📄 License
+
+Released under the **MIT License**.
+See the `LICENSE` file for details.
+
+---
+
+## 💬 Discussion
+
+If you’re interested in:
+
+* collaborating on modelling,
+* reusing components,
+* or discussing the wider systems approach,
+
+please open an **Issue** or **Discussion** on GitHub.
+
+This project deliberately sits at the boundary between
+**analysis, explanation, and public conversation**.
+
+---
