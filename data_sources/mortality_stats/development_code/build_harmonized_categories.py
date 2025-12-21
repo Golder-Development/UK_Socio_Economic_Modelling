@@ -20,6 +20,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 DATA_DIR = Path(__file__).parent
+PARENT_DIR = DATA_DIR.parent
 
 # Define harmonized disease categories based on broad ICD chapter-like groupings
 # These are designed to be stable across 1901-2000
@@ -134,8 +135,6 @@ HARMONIZED_CATEGORIES = {
             "neurosis",
             "dementia",
             "delirium",
-            "alcoholism",
-            "drug dependence",
             "schizophrenia",
             "depression",
             "anxiety",
@@ -352,11 +351,6 @@ HARMONIZED_CATEGORIES = {
             "burn",
             "poison",
             "toxic",
-            "accident",
-            "suicide",
-            "homicide",
-            "violence",
-            "assault",
             "drown",
             "suffocation",
             "fall",
@@ -366,6 +360,55 @@ HARMONIZED_CATEGORIES = {
             "fire",
         ],
     },
+    "Suicide": {
+        "name": "Suicide and Self-Inflicted Injury",
+        "keywords": [
+            "suicide",
+        ],
+    },
+    "Accident": {
+        "name": "Accidental Death",
+        "keywords": [
+            "accident",
+        ],
+    },
+    "Homicide": {
+        "name": "Homicide and Assault",
+        "keywords": [
+            "homicide",
+            "violence",
+            "assault",
+            "weapon",
+        ],
+    },
+    "Legal Drugs": {
+        "name": "Legal Drug-Related Deaths",
+        "keywords": [
+            "tobacco",
+            "alcohol",
+            "alcohol dependence syndrome",
+            "alcoholism",
+            "alcoholic psychoses",
+        ],
+    },
+    "Drugs": {
+        "name": "Drug-Related Deaths",
+        "keywords": [
+            "overdose",
+            "drug dependence",
+            'opium',
+            "drug psychoses",
+            "nonedependent abuse of drugs"
+        ],
+    },
+    "War": {
+        "name": "War and War-Related Deaths",
+        "keywords": [
+            "battle",
+            "war ",
+        ],
+    },
+
     "ill_defined": {
         "name": "Symptoms, Signs and Ill-Defined Conditions",
         "keywords": [
@@ -431,13 +474,18 @@ def build_harmonized_mapping():
     logger.info("BUILDING HARMONIZED DISEASE CLASSIFICATION SYSTEM")
     logger.info("=" * 80)
 
-    # Load the full descriptions file
+    # Load the full descriptions file (prefer local, fallback to parent folder)
     desc_file = DATA_DIR / "icd_code_descriptions.csv"
     if not desc_file.exists():
-        logger.error(
-            "icd_code_descriptions.csv not found. Run build_code_descriptions.py first."
-        )
-        return None
+        fallback = PARENT_DIR / "icd_code_descriptions.csv"
+        if fallback.exists():
+            logger.info("Using fallback descriptions from parent folder: icd_code_descriptions.csv")
+            desc_file = fallback
+        else:
+            logger.error(
+                "icd_code_descriptions.csv not found in development_code or parent folder. Run build_code_descriptions.py first."
+            )
+            return None
 
     logger.info(f"\nLoading ICD code descriptions...")
     descriptions_df = pd.read_csv(desc_file)
@@ -504,6 +552,14 @@ def save_harmonized_mapping(harmonized_df):
     output_file = DATA_DIR / "icd_harmonized_categories.csv"
     harmonized_df.to_csv(output_file, index=False)
     logger.info(f"\n✓ Saved harmonized mapping to: {output_file}")
+
+    # Also save to parent folder so downstream scripts loading from parent see latest mapping
+    parent_output = DATA_DIR.parent / "icd_harmonized_categories.csv"
+    try:
+        harmonized_df.to_csv(parent_output, index=False)
+        logger.info(f"✓ Saved harmonized mapping to: {parent_output}")
+    except Exception as e:
+        logger.warning(f"Could not write parent mapping file: {e}")
 
     # Also create a summary of categories
     summary_file = DATA_DIR / "harmonized_categories_summary.csv"

@@ -6,8 +6,11 @@ This folder contains the development and maintenance scripts for the mortality d
 
 - `build_code_descriptions.py` — Extract ICD code→description mappings from ONS Excel files.
 - `add_descriptions_year_aware.py` — Add year-aware descriptions to mortality data.
-- `build_harmonized_categories.py` — Create 19 harmonized disease categories from descriptions.
-- `add_harmonized_categories_to_mortality.py` — Apply harmonized categories to datasets.
+- `build_harmonized_categories.py` — Create 23 harmonized disease categories from descriptions.
+- `rebuild_harmonized_from_archive.py` — Rebuild harmonized dataset from archived source with override support (NEW - recommended).
+- `build_crosstab_icd_harmonization.py` — Generate audit crosswalk for code→category mappings (NEW).
+- `create_interactive_mortality_dashboard.py` — Generate Plotly interactive dashboards (UPDATED).
+- `add_harmonized_categories_to_mortality.py` — Legacy: apply harmonized categories to datasets.
 - `build_mortality_1901_2019.py` — Build historical dataset (ICD-1 period complete).
 - `build_comprehensive_mortality_1901_2025.py` — Extended builder (ICD-2+ improvements pending).
 - `analyze_comprehensive_mortality.py` — Analysis runner for comprehensive outputs.

@@ -7,10 +7,15 @@ This folder contains development scripts, utilities, and work-in-progress items 
 - Key scripts:
   - `add_descriptions_year_aware.py` — Adds ICD code descriptions to datasets with year-aware matching.
   - `build_code_descriptions.py` — Extracts ICD code→description mappings from ONS Excel files.
-  - `build_harmonized_categories.py` — Generates 19-category harmonized mapping from descriptions.
-  - `add_harmonized_categories_to_mortality.py` — Applies harmonized categories without replacing original ICD codes.
-  - `build_comprehensive_mortality_1901_2025.py` — Build pipeline for comprehensive outputs (ICD-2+ improvements pending).
+  - `build_harmonized_categories.py` — Generates 24-category harmonized mapping from descriptions (includes Suicide, Accident, Homicide, Drugs, and War categories).
+  - `rebuild_harmonized_from_archive.py` — Rebuilds harmonized dataset from archived comprehensive file with override support (NEW - primary recommended method).
+  - `build_crosstab_icd_harmonization.py` — Generates audit crosswalk table to review code→category mappings (NEW).
+  - `create_interactive_mortality_dashboard.py` — Generates three Plotly interactive dashboards with filtering and drill-down (UPDATED).
+  - `add_harmonized_categories_to_mortality.py` — Legacy method - applies harmonized categories without replacing original ICD codes.
+  - `build_comprehensive_mortality_1901_2025.py` — Build pipeline for comprehensive outputs.
   - Plus supporting scripts (verification, checks, examination utilities).
+- Input data:
+  - `icd_harmonized_overrides.csv` — User-editable CSV for customizing specific code→category assignments (NEW).
 - WIP directories:
   - `downloaded_sourcefiles/` — Raw ONS downloads used during extraction.
   - `extract_20251220_172134/` — Temporary extraction artefacts for debugging/repro.
@@ -34,15 +39,28 @@ From the repo root or the `mortality_stats` folder:
 # Activate the virtual environment
 & H:/VScode/UK_Socio_Economic_Modelling/.venv/Scripts/Activate.ps1
 
-# Run key build steps
+# Run key build steps (recommended workflow)
 cd data_sources/mortality_stats/development_code
-H:/VScode/UK_Socio_Economic_Modelling/.venv/Scripts/python.exe build_code_descriptions.py
+
+# Step 1: Generate harmonized categories from keywords
 H:/VScode/UK_Socio_Economic_Modelling/.venv/Scripts/python.exe build_harmonized_categories.py
+
+# Step 2: Rebuild harmonized dataset from archive (with override support)
+H:/VScode/UK_Socio_Economic_Modelling/.venv/Scripts/python.exe rebuild_harmonized_from_archive.py
+
+# Step 3: Generate audit crosswalk to review mappings
+H:/VScode/UK_Socio_Economic_Modelling/.venv/Scripts/python.exe build_crosstab_icd_harmonization.py
+
+# Step 4: Create interactive dashboards
+H:/VScode/UK_Socio_Economic_Modelling/.venv/Scripts/python.exe create_interactive_mortality_dashboard.py
+```
+
+**Legacy Method** (still supported, not recommended):
+
+```powershell
 H:/VScode/UK_Socio_Economic_Modelling/.venv/Scripts/python.exe add_descriptions_year_aware.py
 H:/VScode/UK_Socio_Economic_Modelling/.venv/Scripts/python.exe add_harmonized_categories_to_mortality.py
 ```
-
-Outputs are written back to `data_sources/mortality_stats/`.
 
 ## Cross-Repo References (Checked)
 

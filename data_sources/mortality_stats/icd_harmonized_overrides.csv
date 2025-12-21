@@ -2,3 +2,424 @@ code,icd_version,harmonized_category,harmonized_category_name,classification_con
 # Example rows (remove # to activate)
 # 100A,ICD-2 (1911-1920),digestive,Diseases of the Digestive System,override
 # 3A,ICD-2 (1911-1920),infectious_diseases,Infectious and Parasitic Diseases,override
+1740.0,ICD-1 (1901-1910),ill_defined,"Symptoms, Signs and Ill-Defined Conditions",override
+1800.0,ICD-1 (1901-1910),Homicide,Homicide and Assault,override
+1880.0,ICD-1 (1901-1910),War,War and War-Related Deaths,override
+1890.0,ICD-1 (1901-1910),Homicide,Homicide and Assault,override
+1900.0,ICD-1 (1901-1910),Suicide,Suicide and Self-Inflicted Injury,override
+590.0,ICD-1 (1901-1910),Drugs,Drug-Related Deaths,override
+113B,ICD-2 (1911-1920),Legal Drugs,Legal Drug-Related Deaths,override
+155,ICD-2 (1911-1920),Suicide,Suicide and Self-Inflicted Injury,override
+156,ICD-2 (1911-1920),Suicide,Suicide and Self-Inflicted Injury,override
+157,ICD-2 (1911-1920),Suicide,Suicide and Self-Inflicted Injury,override
+158,ICD-2 (1911-1920),Suicide,Suicide and Self-Inflicted Injury,override
+159,ICD-2 (1911-1920),Suicide,Suicide and Self-Inflicted Injury,override
+160,ICD-2 (1911-1920),Suicide,Suicide and Self-Inflicted Injury,override
+161,ICD-2 (1911-1920),Suicide,Suicide and Self-Inflicted Injury,override
+162,ICD-2 (1911-1920),Suicide,Suicide and Self-Inflicted Injury,override
+163,ICD-2 (1911-1920),Suicide,Suicide and Self-Inflicted Injury,override
+170,ICD-2 (1911-1920),Homicide,Homicide and Assault,override
+171,ICD-2 (1911-1920),Homicide,Homicide and Assault,override
+182,ICD-2 (1911-1920),Homicide,Homicide and Assault,override
+183,ICD-2 (1911-1920),Homicide,Homicide and Assault,override
+184,ICD-2 (1911-1920),Homicide,Homicide and Assault,override
+186,ICD-2 (1911-1920),Homicide,Homicide and Assault,override
+56,ICD-2 (1911-1920),Legal Drugs,Legal Drug-Related Deaths,override
+190,ICD-3 (1921-1930),War,War and War-Related Deaths,override
+122a,ICD-3 (1921-1930),Legal Drugs,Legal Drug-Related Deaths,override
+66,ICD-3 (1921-1930),Legal Drugs,Legal Drug-Related Deaths,override
+124(a),ICD-4 (1931-1939),Legal Drugs,Legal Drug-Related Deaths,override
+124a,ICD-5 (1940-1949),Legal Drugs,Legal Drug-Related Deaths,override
+77,ICD-5 (1940-1949),Legal Drugs,Legal Drug-Related Deaths,override
+197,ICD-5 (1940-1949),War,War and War-Related Deaths,override
+9650,ICD-6 (1950-1957),War,War and War-Related Deaths,override
+3070,ICD-6 (1950-1957),Legal Drugs,Legal Drug-Related Deaths,override
+9700,ICD-6 (1950-1957),Suicide,Suicide and Self-Inflicted Injury,override
+9710,ICD-6 (1950-1957),Suicide,Suicide and Self-Inflicted Injury,override
+9720,ICD-6 (1950-1957),Suicide,Suicide and Self-Inflicted Injury,override
+9730,ICD-6 (1950-1957),Suicide,Suicide and Self-Inflicted Injury,override
+9740,ICD-6 (1950-1957),Suicide,Suicide and Self-Inflicted Injury,override
+9750,ICD-6 (1950-1957),Suicide,Suicide and Self-Inflicted Injury,override
+9760,ICD-6 (1950-1957),Suicide,Suicide and Self-Inflicted Injury,override
+9770,ICD-6 (1950-1957),Suicide,Suicide and Self-Inflicted Injury,override
+9780,ICD-6 (1950-1957),Suicide,Suicide and Self-Inflicted Injury,override
+9790,ICD-6 (1950-1957),Suicide,Suicide and Self-Inflicted Injury,override
+9800,ICD-6 (1950-1957),Homicide,Homicide and Assault,override
+9810,ICD-6 (1950-1957),Homicide,Homicide and Assault,override
+9820,ICD-6 (1950-1957),Homicide,Homicide and Assault,override
+9830,ICD-6 (1950-1957),Homicide,Homicide and Assault,override
+9840,ICD-6 (1950-1957),Homicide,Homicide and Assault,override
+9950,ICD-6 (1950-1957),War,War and War-Related Deaths,override
+9990,ICD-6 (1950-1957),War,War and War-Related Deaths,override
+9640,ICD-7 (1958-1967),Homicide,Homicide and Assault,override
+9650,ICD-7 (1958-1967),War,War and War-Related Deaths,override
+9700,ICD-7 (1958-1967),Suicide,Suicide and Self-Inflicted Injury,override
+9710,ICD-7 (1958-1967),Suicide,Suicide and Self-Inflicted Injury,override
+9720,ICD-7 (1958-1967),Suicide,Suicide and Self-Inflicted Injury,override
+9730,ICD-7 (1958-1967),Suicide,Suicide and Self-Inflicted Injury,override
+9740,ICD-7 (1958-1967),Suicide,Suicide and Self-Inflicted Injury,override
+9750,ICD-7 (1958-1967),Suicide,Suicide and Self-Inflicted Injury,override
+9760,ICD-7 (1958-1967),Suicide,Suicide and Self-Inflicted Injury,override
+9770,ICD-7 (1958-1967),Suicide,Suicide and Self-Inflicted Injury,override
+9780,ICD-7 (1958-1967),Suicide,Suicide and Self-Inflicted Injury,override
+9790,ICD-7 (1958-1967),Suicide,Suicide and Self-Inflicted Injury,override
+9800,ICD-7 (1958-1967),Homicide,Homicide and Assault,override
+9810,ICD-7 (1958-1967),Homicide,Homicide and Assault,override
+9820,ICD-7 (1958-1967),Homicide,Homicide and Assault,override
+9830,ICD-7 (1958-1967),Homicide,Homicide and Assault,override
+3070,ICD-7 (1958-1967),Legal Drugs,Legal Drug-Related Deaths,override
+3220,ICD-7 (1958-1967),Legal Drugs,Legal Drug-Related Deaths,override
+3221,ICD-7 (1958-1967),Legal Drugs,Legal Drug-Related Deaths,override
+3222,ICD-7 (1958-1967),Legal Drugs,Legal Drug-Related Deaths,override
+3230,ICD-7 (1958-1967),Drugs,Drug-Related Deaths,override
+9990,ICD-8 (1968-1978),War,War and War-Related Deaths,override
+9930,ICD-9a (1979-1984),War,War and War-Related Deaths,override
+9940,ICD-9a (1979-1984),War,War and War-Related Deaths,override
+9990,ICD-9a (1979-1984),War,War and War-Related Deaths,override
+9680,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9681,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9682,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9683,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9684,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9688,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9689,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9690,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9700,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9500,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9501,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9502,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9503,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9504,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9505,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9506,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9507,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9508,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9509,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9510,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9511,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9518,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9520,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9521,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9528,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9529,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9530,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9531,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9538,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9539,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9540,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9550,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9551,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9552,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9554,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9559,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9560,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9570,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9571,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9572,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9579,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9580,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9581,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9583,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9584,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9585,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9588,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9589,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9590,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9600,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9620,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9621,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9622,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9630,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9640,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9650,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9651,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9653,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9654,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9658,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9660,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9950,ICD-9b (1985-1993),War,War and War-Related Deaths,override
+9972,ICD-9b (1985-1993),War,War and War-Related Deaths,override
+9990,ICD-9b (1985-1993),War,War and War-Related Deaths,override
+9919,ICD-9c (1994-2000),War,War and War-Related Deaths,override
+9950,ICD-9c (1994-2000),War,War and War-Related Deaths,override
+9990,ICD-9c (1994-2000),War,War and War-Related Deaths,override
+8700,ICD-6 (1950-1957),Drugs,Drug-Related Deaths,override
+3220,ICD-6 (1950-1957),Legal Drugs,Legal Drug-Related Deaths,override
+3221,ICD-6 (1950-1957),Legal Drugs,Legal Drug-Related Deaths,override
+3222,ICD-6 (1950-1957),Legal Drugs,Legal Drug-Related Deaths,override
+3230,ICD-6 (1950-1957),Drugs,Drug-Related Deaths,override
+8700,ICD-7 (1958-1967),Drugs,Drug-Related Deaths,override
+8703,ICD-7 (1958-1967),Drugs,Drug-Related Deaths,override
+8707,ICD-7 (1958-1967),Drugs,Drug-Related Deaths,override
+8709,ICD-7 (1958-1967),Drugs,Drug-Related Deaths,override
+3031,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3032,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3039,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3040,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3041,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3042,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3043,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3046,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3048,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3049,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3031,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3032,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3039,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3040,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3041,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3042,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3043,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3046,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3048,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+3049,ICD-8 (1968-1978),Drugs,Drug-Related Deaths,override
+2911,ICD-9a (1979-1984),Legal Drugs,Legal Drug-Related Deaths,override
+2912,ICD-9a (1979-1984),Legal Drugs,Legal Drug-Related Deaths,override
+2918,ICD-9a (1979-1984),Legal Drugs,Legal Drug-Related Deaths,override
+2920,ICD-9a (1979-1984),Drugs,Drug-Related Deaths,override
+3030,ICD-9a (1979-1984),Drugs,Drug-Related Deaths,override
+3040,ICD-9a (1979-1984),Drugs,Drug-Related Deaths,override
+3041,ICD-9a (1979-1984),Drugs,Drug-Related Deaths,override
+3046,ICD-9a (1979-1984),Drugs,Drug-Related Deaths,override
+3047,ICD-9a (1979-1984),Drugs,Drug-Related Deaths,override
+3048,ICD-9a (1979-1984),Drugs,Drug-Related Deaths,override
+3049,ICD-9a (1979-1984),Drugs,Drug-Related Deaths,override
+3050,ICD-9a (1979-1984),Drugs,Drug-Related Deaths,override
+3051,ICD-9a (1979-1984),Drugs,Drug-Related Deaths,override
+3054,ICD-9a (1979-1984),Drugs,Drug-Related Deaths,override
+3055,ICD-9a (1979-1984),Drugs,Drug-Related Deaths,override
+3059,ICD-9a (1979-1984),Drugs,Drug-Related Deaths,override
+9470,ICD-9a (1979-1984),other,Other and Unclassified,override
+9478,ICD-9a (1979-1984),other,Other and Unclassified,override
+9479,ICD-9a (1979-1984),other,Other and Unclassified,override
+9499,ICD-9a (1979-1984),other,Other and Unclassified,override
+9500,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9501,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9502,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9503,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9504,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9505,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9506,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9507,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9508,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9509,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9510,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9511,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9518,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9520,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9521,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9528,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9529,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9530,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9531,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9538,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9539,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9540,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9550,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9551,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9552,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9554,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9559,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9560,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9570,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9571,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9572,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9579,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9580,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9581,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9583,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9584,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9585,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9588,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9589,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9590,ICD-9a (1979-1984),Suicide,Suicide and Self-Inflicted Injury,override
+9600,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9620,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9621,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9622,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9630,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9640,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9650,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9651,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9653,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9654,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9658,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9660,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9680,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9681,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9682,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9683,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9684,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9688,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9689,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9690,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+9700,ICD-9a (1979-1984),Homicide,Homicide and Assault,override
+2910,ICD-9b (1985-1993),Legal Drugs,Legal Drug-Related Deaths,override
+2911,ICD-9b (1985-1993),Legal Drugs,Legal Drug-Related Deaths,override
+2912,ICD-9b (1985-1993),Legal Drugs,Legal Drug-Related Deaths,override
+2918,ICD-9b (1985-1993),Legal Drugs,Legal Drug-Related Deaths,override
+2919,ICD-9b (1985-1993),Legal Drugs,Legal Drug-Related Deaths,override
+2920,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3030,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3040,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3041,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3043,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3044,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3046,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3047,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3048,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3049,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3050,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3051,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3052,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3053,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3054,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3055,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3056,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3057,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3058,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+3059,ICD-9b (1985-1993),Drugs,Drug-Related Deaths,override
+9500,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9501,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9502,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9503,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9504,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9505,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9506,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9507,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9509,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9510,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9511,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9518,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9520,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9521,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9528,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9529,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9530,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9531,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9538,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9539,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9540,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9550,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9551,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9552,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9553,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9554,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9559,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9560,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9570,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9571,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9572,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9579,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9580,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9581,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9582,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9583,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9584,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9585,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9586,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9588,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9589,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9590,ICD-9b (1985-1993),Suicide,Suicide and Self-Inflicted Injury,override
+9600,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9601,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9620,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9622,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9629,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9630,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9640,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9650,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9651,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9654,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9658,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9659,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9660,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9680,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9681,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9682,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9684,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9688,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9689,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+9690,ICD-9b (1985-1993),Homicide,Homicide and Assault,override
+2910,ICD-9c (1994-2000),Legal Drugs,Legal Drug-Related Deaths,override
+2911,ICD-9c (1994-2000),Legal Drugs,Legal Drug-Related Deaths,override
+2912,ICD-9c (1994-2000),Legal Drugs,Legal Drug-Related Deaths,override
+2918,ICD-9c (1994-2000),Legal Drugs,Legal Drug-Related Deaths,override
+2919,ICD-9c (1994-2000),Legal Drugs,Legal Drug-Related Deaths,override
+2920,ICD-9c (1994-2000),Drugs,Drug-Related Deaths,override
+3030,ICD-9c (1994-2000),Legal Drugs,Legal Drug-Related Deaths,override
+3040,ICD-9c (1994-2000),Drugs,Drug-Related Deaths,override
+3041,ICD-9c (1994-2000),Drugs,Drug-Related Deaths,override
+3042,ICD-9c (1994-2000),Drugs,Drug-Related Deaths,override
+3044,ICD-9c (1994-2000),Drugs,Drug-Related Deaths,override
+3046,ICD-9c (1994-2000),Drugs,Drug-Related Deaths,override
+3047,ICD-9c (1994-2000),Drugs,Drug-Related Deaths,override
+3048,ICD-9c (1994-2000),Drugs,Drug-Related Deaths,override
+3049,ICD-9c (1994-2000),Drugs,Drug-Related Deaths,override
+3050,ICD-9c (1994-2000),Legal Drugs,Legal Drug-Related Deaths,override
+3051,ICD-9c (1994-2000),Legal Drugs,Legal Drug-Related Deaths,override
+3052,ICD-9c (1994-2000),Drugs,Drug-Related Deaths,override
+3054,ICD-9c (1994-2000),Drugs,Drug-Related Deaths,override
+3055,ICD-9c (1994-2000),Drugs,Drug-Related Deaths,override
+3056,ICD-9c (1994-2000),Drugs,Drug-Related Deaths,override
+3057,ICD-9c (1994-2000),Drugs,Drug-Related Deaths,override
+3058,ICD-9c (1994-2000),Drugs,Drug-Related Deaths,override
+3059,ICD-9c (1994-2000),Drugs,Drug-Related Deaths,override
+9500,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9501,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9502,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9503,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9504,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9505,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9506,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9507,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9509,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9510,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9511,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9518,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9520,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9521,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9528,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9529,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9530,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9531,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9538,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9539,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9540,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9550,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9551,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9553,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9554,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9559,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9560,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9570,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9571,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9572,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9579,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9580,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9581,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9583,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9584,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9585,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9587,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9588,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9589,ICD-9c (1994-2000),Suicide,Suicide and Self-Inflicted Injury,override
+9600,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9620,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9621,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9622,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9629,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9630,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9640,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9651,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9654,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9658,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9660,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9680,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9682,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9683,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9684,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9688,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9689,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9690,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9700,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+9740,ICD-9c (1994-2000),Homicide,Homicide and Assault,override

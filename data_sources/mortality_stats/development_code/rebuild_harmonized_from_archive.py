@@ -106,12 +106,18 @@ def main():
     overrides_df = None
     if OVERRIDES_FILE.exists():
         logger.info(f"Loading overrides from: {OVERRIDES_FILE}")
-        overrides_df = pd.read_csv(OVERRIDES_FILE)
+        # Support commented example rows; ignore lines starting with '#'
+        overrides_df = pd.read_csv(OVERRIDES_FILE, comment='#')
         overrides_df['code'] = overrides_df['code'].astype(str)
         logger.info(f"Loaded {len(overrides_df):,} override rows")
 
+    # Ensure target columns exist before applying overrides/defaults
+    for col in ['harmonized_category', 'harmonized_category_name', 'classification_confidence']:
+        if col not in df.columns:
+            df[col] = pd.NA
+
     # First apply overrides if present
-    if overrides_df is not None:
+    if overrides_df is not None and len(overrides_df) > 0:
         logger.info("Applying overrides (year-aware)...")
         df = df.merge(
             overrides_df[['code', 'icd_version', 'harmonized_category', 'harmonized_category_name', 'classification_confidence']],
@@ -120,19 +126,30 @@ def main():
             how='left',
             suffixes=(None, '_override')
         )
-        # If override exists, take its values
+        # If override exists, take its values - only for columns that have _override version
         for col in ['harmonized_category', 'harmonized_category_name', 'classification_confidence']:
-            df[col] = df[f"{col}_override"].combine_first(df[col])
-        df = df.drop(columns=[c for c in df.columns if c.endswith('_override')] + ['code'], errors='ignore')
+            override_col = f"{col}_override"
+            if override_col in df.columns:
+                df[col] = df[override_col].combine_first(df[col])
+                df = df.drop(columns=[override_col], errors='ignore')
+        df = df.drop(columns=['code'] if 'code' in df.columns else [], errors='ignore')
 
     # Then apply default mapping for remaining rows
     logger.info("Merging harmonized categories (defaults, year-aware)...")
+    # Merge defaults unconditionally, then fill only missing values
     df = df.merge(
         harm_df[['code', 'icd_version', 'harmonized_category', 'harmonized_category_name', 'classification_confidence']],
         left_on=['cause', 'icd_version'],
         right_on=['code', 'icd_version'],
-        how='left'
+        how='left',
+        suffixes=(None, '_default')
     )
+    # Use defaults for any columns that are still NaN
+    for col in ['harmonized_category', 'harmonized_category_name', 'classification_confidence']:
+        default_col = f"{col}_default"
+        if default_col in df.columns:
+            df[col] = df[col].fillna(df[default_col])
+            df = df.drop(columns=[default_col], errors='ignore')
     df = df.drop(columns=['code'], errors='ignore')
 
     harm_matched = df['harmonized_category'].notna().sum()

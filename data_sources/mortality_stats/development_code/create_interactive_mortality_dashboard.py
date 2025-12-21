@@ -454,7 +454,7 @@ def main():
         config={"displayModeBar": True},
     )
 
-    print("\n✅ All dashboards created successfully!")
+    print("\n[SUCCESS] All dashboards created successfully!")
     print(f"   - Main: {output_main.name}")
     print(f"   - Drill-down: {output_drilldown.name}")
     print(f"   - Filtered: {output_filtered.name}")
