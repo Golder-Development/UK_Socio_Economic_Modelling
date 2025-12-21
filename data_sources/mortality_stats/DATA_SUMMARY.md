@@ -1,96 +1,70 @@
-# UK Mortality Statistics - Data Summary
+# UK Mortality Statistics — Data Summary
 
-## What We Have Now
+## Current Files (kept in this folder)
 
-### 1. **Yearly Totals: 2001-2025** 
-**File:** `uk_mortality_comprehensive.csv`
-- **Coverage:** 23 years (2001-2017, 2020-2025)
-- **Missing:** 2018-2019 (but available in API, just need to add)
-- **Source:** Local CSV files + ONS API
+1. Yearly totals (long-run)
 
-### 2. **Deaths by Cause (ICD-10): 2001-2017**
-**File:** `uk_mortality_by_cause.csv`
-- **Coverage:** 17 years with detailed cause breakdown
-- **Granularity:** ICD-10 chapter level (A-Z categories)
-- **Examples:**
-  - I: Circulatory system diseases (~420k deaths/year)
-  - C: Neoplasms/Cancer (~272k deaths/year)
-  - J: Respiratory diseases (~135k deaths/year)
+- File: `uk_mortality_yearly_totals_1901_2025.csv`
+- Coverage: 1901–2025 (yearly total deaths)
 
-## Data Gaps
+1. Harmonized cause-of-death dataset
 
-### Short-term gaps (easily fillable):
-- **2018-2019 totals**: Already in our API results, just need to include
-- **2020-2025 by cause**: ONS API doesn't provide cause breakdown for recent years
+- File: `uk_mortality_by_cause_1901_2025_harmonized.csv`
+- Columns: year, cause (original ICD code), cause_description, harmonized_category, harmonized_category_name, classification_confidence, sex, age, deaths
+- Notes: Harmonization aligns cause categories across ICD versions; year-aware mapping prevents cross-period confusion.
 
-### Long-term gaps (need additional sources):
-- **Pre-2001 data**: Need historical mortality files going back to 1970s or earlier
+1. Comprehensive harmonized dataset
 
-## Options for Extending Coverage
+- File: `uk_mortality_comprehensive_1901_2025_harmonized.csv`
+- Purpose: Wider coverage variant including harmonized causes; use alongside the main harmonized file for broader analyses.
 
-### Option 1: Fill 2018-2019 gap (5 minutes)
-✅ **Easiest** - Already have the data from API, just update the script
+1. Rates and summaries
 
-### Option 2: Get ONS Bulk Historical Files (requires manual steps)
-The ONS publishes comprehensive mortality datasets but URLs change frequently:
+- File: `uk_mortality_rates_per_100k_yearly_totals.csv` — Annual deaths per 100k
+- File: `uk_mortality_rates_per_100k_by_cause.csv` — Cause-specific rates per 100k
+- File: `harmonized_categories_summary.csv` — Category counts and overview
 
-**Recommended approach:**
-1. Visit: https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets
-2. Look for:
-   - "Deaths registered in England and Wales" (annual series, goes back decades)
-   - "21st Century Mortality Files" (2001-present with ICD codes)
-   - "Historical mortality data" (1970s onwards)
-3. Download Excel/CSV files manually
-4. Place in `data_sources/mortality_stats/ons_downloads/`
-5. Run analysis script to incorporate them
+1. Mappings
 
-### Option 3: Use NOMIS API
-**NOMIS** (nomisweb.co.uk) has historical mortality data:
-- Coverage: 1970s to present
-- Includes: Age, sex, cause of death
-- API access available (more stable than ONS beta API)
-- Requires free registration
+- File: `icd_code_descriptions.csv` — ICD code→description mappings (with ICD version)
+- File: `icd_harmonized_categories.csv` — Code→harmonized category mappings
 
-### Option 4: Office for Health Improvement (OHID)
-Previously Public Health England, has:
-- Mortality rates by cause
-- Standardized mortality ratios
-- Local authority breakdowns
-- Historical trends
+1. Documentation
 
-## Current Capabilities
+- `README.md` — Getting started
+- `INDEX.md` — Structure and usage
+- `HARMONIZED_CATEGORIES_README.md` — Harmonization approach
+- `HARMONIZED_QUICKSTART.md` — Quick usage guide
 
-With what we have now, you can analyze:
+## Development and Archived Content
 
-### 1. Total Deaths Trends (2001-2025)
-```
-2001: 532,498 deaths
-2010: 493,242 deaths (-7.4%)
-2020: 614,114 deaths (COVID spike: +24%)
-2025: 502,553 deaths (partial year)
-```
+- All build scripts and WIP are in `development_code/`.
+- Older CSVs have been moved to `development_code/archive_csv/` to reduce confusion.
 
-### 2. Top Causes of Death (2001-2017)
-```
-1. Circulatory diseases (I): ~420k/year
-2. Cancer (C): ~270k/year  
-3. Respiratory diseases (J): ~135k/year
-4. Mental/behavioral (F): ~29k/year
-5. Nervous system (G): ~29k/year
-```
+## Data Sources
 
-### 3. Trend Analysis by Cause
-- Track how specific causes change over time
-- Compare pre-COVID vs COVID era
-- Identify emerging health trends
+Place source files under: `ons_downloads/`
 
-## Recommendation
+Recommended sources:
 
-**Quick Win:** Let me fix the script to include 2018-2019, giving you complete 2001-2025 coverage.
+- ONS datasets: <https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets>
+- 21st Century Mortality Files (ICD-10)
+- Historical ICD files (1901–2000) used for description extraction and harmonization
 
-**For 50+ years:** I recommend visiting the ONS datasets page directly to download historical files, as their URLs change frequently and bulk downloads are more reliable than scraping.
+## What You Can Analyze Now
 
-Would you like me to:
-A) Fix the 2018-2019 gap now?
-B) Create a helper script to process any ONS Excel files you download manually?
-C) Try the NOMIS API for historical data?
+- Long-run trends in total mortality (1901–2025)
+- Harmonized cause-of-death trends across ICD versions (primarily 1901–2000)
+- Age and sex breakdowns per harmonized category
+- Rates per 100k by year and by harmonized cause
+
+## Important Notes
+
+- Original ICD codes are preserved; harmonized columns are additive.
+- Harmonization uses year-aware mapping to avoid mislabeling the same numeric code across different ICD periods.
+- Later years may have limited cause detail depending on available sources; totals remain complete.
+
+## Next Steps (Optional)
+
+- Improve extraction for ICD-2+ periods in development scripts (see `development_code/`).
+- Incorporate additional recent cause breakdowns when reliable sources are available.

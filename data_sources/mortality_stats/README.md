@@ -91,7 +91,7 @@ circulatory = causes[causes['icd10_chapter'] == 'I'].sort_values('year')
 2. Look for datasets with coverage back to 1970s or earlier
 3. Download Excel/CSV files
 4. Save to: `data_sources/mortality_stats/ons_downloads/`
-5. Run `analyze_comprehensive_mortality.py` again with updated load functions
+5. Run `analyze_comprehensive_mortality.py` again from `data_sources/mortality_stats/development_code` with updated load functions
 
 **Recommended datasets to look for:**
 - "Deaths registered in England and Wales" (annual series - should have 1970+ data)
@@ -115,13 +115,14 @@ circulatory = causes[causes['icd10_chapter'] == 'I'].sort_values('year')
 To regenerate or update these files:
 
 ```powershell
-cd data_sources/mortality_stats
+cd data_sources/mortality_stats/development_code
 python analyze_comprehensive_mortality.py
 ```
 
 To fetch fresh API data (useful if new years released):
 
 ```powershell
+cd data_sources/mortality_stats/development_code
 python fetch_uk_mortality_stats.py
 ```
 

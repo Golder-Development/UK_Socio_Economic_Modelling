@@ -40,6 +40,63 @@ DATA_DIR = Path(__file__).parent
 ONS_DOWNLOADS = DATA_DIR / "ons_downloads" / "extracted"
 
 
+def add_cause_descriptions(df):
+    """Add cause descriptions to dataframe if 'cause' column exists"""
+    if 'cause' not in df.columns:
+        return df
+    
+    desc_file = DATA_DIR / "icd_code_descriptions_simplified.csv"
+    
+    if not desc_file.exists():
+        logger.warning("Code descriptions file not found. Run build_code_descriptions.py first.")
+        return df
+    
+    try:
+        logger.info("Loading code descriptions...")
+        descriptions_df = pd.read_csv(desc_file)
+        descriptions_df['code'] = descriptions_df['code'].astype(str).str.strip()
+        
+        # Convert cause to string for matching
+        df_copy = df.copy()
+        df_copy['cause'] = df_copy['cause'].astype(str).str.strip()
+        
+        # Merge descriptions
+        df_copy = df_copy.merge(
+            descriptions_df[['code', 'description']], 
+            left_on='cause', 
+            right_on='code', 
+            how='left'
+        )
+        
+        # Drop the extra 'code' column from merge
+        if 'code' in df_copy.columns:
+            df_copy = df_copy.drop(columns=['code'])
+        
+        # Rename description column
+        if 'description' in df_copy.columns:
+            df_copy = df_copy.rename(columns={'description': 'cause_description'})
+        
+        # Reorder columns to put description right after cause
+        cols = df_copy.columns.tolist()
+        if 'cause_description' in cols:
+            cols.remove('cause_description')
+            if 'cause' in cols:
+                cause_idx = cols.index('cause')
+                cols.insert(cause_idx + 1, 'cause_description')
+            df_copy = df_copy[cols]
+        
+        # Count matches
+        matched = df_copy['cause_description'].notna().sum()
+        total = len(df_copy)
+        match_rate = (matched / total * 100) if total > 0 else 0
+        logger.info(f"Added descriptions: {matched:,} / {total:,} ({match_rate:.1f}%)")
+        
+        return df_copy
+    except Exception as e:
+        logger.error(f"Error adding descriptions: {e}")
+        return df
+
+
 def load_icd_file(xlsx_path, year_range=None):
     """Load ICD files - data is in a sheet with year in a column"""
     logger.info(f"Loading {xlsx_path.name}")
@@ -445,13 +502,16 @@ def main():
     yearly.to_csv(output_yearly, index=False)
     logger.info(f"✓ Saved yearly totals: {output_yearly.name} ({len(yearly)} records)")
     
+    # Add descriptions to data before saving
+    all_data_with_desc = add_cause_descriptions(all_data)
+    
     # Save comprehensive by all dimensions
-    all_data.to_csv(output_comprehensive, index=False)
-    logger.info(f"✓ Saved comprehensive data: {output_comprehensive.name} ({len(all_data)} records)")
+    all_data_with_desc.to_csv(output_comprehensive, index=False)
+    logger.info(f"✓ Saved comprehensive data: {output_comprehensive.name} ({len(all_data_with_desc)} records)")
     
     # Save by cause (filter to only where cause is defined)
-    if 'cause' in all_data.columns:
-        by_cause = all_data[all_data['cause'] != 'All causes'].copy()
+    if 'cause' in all_data_with_desc.columns:
+        by_cause = all_data_with_desc[all_data_with_desc['cause'] != 'All causes'].copy()
         if not by_cause.empty:
             by_cause.to_csv(output_by_cause, index=False)
             logger.info(f"✓ Saved by cause: {output_by_cause.name} ({len(by_cause)} records)")

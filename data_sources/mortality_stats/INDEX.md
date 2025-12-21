@@ -15,9 +15,11 @@
    - **Status**: ✅ COMPLETE - Ready for trend analysis
 
 ### Documentation Files
-- **COMPREHENSIVE_DATABASE_README.md** - Full reference guide with usage examples
-- **BUILD_SUMMARY.md** - Project completion summary and next steps
+
 - **This file** - Index and file guide
+- **HARMONIZED_CATEGORIES_README.md** - Harmonized categories overview
+- **HARMONIZED_QUICKSTART.md** - Quick usage guide
+- **DATA_SUMMARY.md** - Data sources and notes
 
 ---
 
@@ -33,9 +35,13 @@ mortality_stats/
 │   ├── BUILD_SUMMARY.md                               ← Project summary
 │   └── INDEX.md                                       ← This file
 │
-├── Build Scripts
+├── development_code/
 │   ├── build_mortality_1901_2019.py                   (Main builder)
 │   ├── build_comprehensive_mortality_1901_2025.py     (Extended version)
+│   ├── add_descriptions_year_aware.py                 (Descriptions, year-aware)
+│   ├── build_code_descriptions.py                     (Extract ICD descriptions)
+│   ├── build_harmonized_categories.py                 (Generate categories)
+│   ├── add_harmonized_categories_to_mortality.py      (Apply categories)
 │   ├── check_structure.py                             (Inspection)
 │   ├── check_recent_data.py                           (Inspection)
 │   ├── verify_output.py                               (Validation)
@@ -66,7 +72,8 @@ mortality_stats/
 ## 🚀 Quick Start
 
 ### For New Users
-1. Read **COMPREHENSIVE_DATABASE_README.md** for overview
+
+1. Read **HARMONIZED_CATEGORIES_README.md** for overview
 2. Download **uk_mortality_comprehensive_1901_2019.csv** for detailed analysis
 3. Use **uk_mortality_yearly_totals_1901_2019.csv** for trends
 4. See "Usage Examples" section below
