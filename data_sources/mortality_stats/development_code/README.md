@@ -3,6 +3,7 @@
 This folder contains development scripts, utilities, and work-in-progress items used to build and maintain the UK mortality datasets under `data_sources/mortality_stats`.
 
 ## Contents
+
 - Key scripts:
   - `add_descriptions_year_aware.py` — Adds ICD code descriptions to datasets with year-aware matching.
   - `build_code_descriptions.py` — Extracts ICD code→description mappings from ONS Excel files.
@@ -17,6 +18,7 @@ This folder contains development scripts, utilities, and work-in-progress items 
   - `BUILD_SUMMARY.md`, `COMPREHENSIVE_DATABASE_README.md`, `ICD_DESCRIPTIONS_README.md` — Engineering notes and build guidance.
 
 ## Outputs & Data Locations
+
 - Scripts read/write CSV files in the parent folder: `data_sources/mortality_stats/`.
 - Main artefacts include:
   - `icd_code_descriptions.csv`, `icd_harmonized_categories.csv`
@@ -25,6 +27,7 @@ This folder contains development scripts, utilities, and work-in-progress items 
   - Comprehensive variants under the same folder.
 
 ## How to Run (Windows / PowerShell)
+
 From the repo root or the `mortality_stats` folder:
 
 ```powershell
@@ -42,8 +45,10 @@ H:/VScode/UK_Socio_Economic_Modelling/.venv/Scripts/python.exe add_harmonized_ca
 Outputs are written back to `data_sources/mortality_stats/`.
 
 ## Cross-Repo References (Checked)
+
 A workspace-wide search found no imports or external references to these scripts outside `data_sources/mortality_stats`. Data files are referenced within this folder's documentation only. If you encounter path errors in future code, update references to the new location `data_sources/mortality_stats/development_code`.
 
 ## Notes
+
 - Original ICD codes are preserved in all final datasets; new harmonized columns are additive.
 - For ICD-2+ extraction improvements, work continues in `build_comprehensive_mortality_1901_2025.py`.

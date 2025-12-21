@@ -9,20 +9,25 @@ This system creates **standardized disease categories** that work consistently a
 ### Why Harmonization is Needed
 
 ICD codes changed dramatically over time:
+
 - **ICD-1 (1901-1910)**: 192 codes
+
 - **ICD-9c (1994-2000)**: 5,292 codes  
 
 The same code number meant different things:
+
 - Code `10.0` in 1901 = "Small pox - vaccinated"
 - Code `10.0` in 1935 = "Diphtheria"
 
 Specific conditions were classified differently:
+
 - Tuberculosis had 1 code in ICD-1, but 10+ codes in ICD-9
 - New diseases appeared in later periods (HIV, new cancers, etc.)
 
 ### The Solution: Harmonized Categories
 
 We create **19 broad disease categories** that:
+
 - ✅ Work consistently across all time periods
 - ✅ Map to similar concepts in medical classification
 - ✅ Enable meaningful longitudinal trend analysis
@@ -69,6 +74,7 @@ We create **19 broad disease categories** that:
 ### Mortality Data with Harmonized Categories
 
 3. **`uk_mortality_by_cause_1901_2025_harmonized.csv`** - Main analysis file
+
    - Original columns: `year`, `cause`, `cause_description`, `sex`, `age`, `deaths`
    - **Added columns**:
      - `harmonized_category` - short code (e.g., "infectious_diseases")
@@ -90,6 +96,7 @@ Each category has a list of keywords that identify relevant diseases:
 ```
 
 The system:
+
 1. Looks at the disease description
 2. Counts keyword matches for each category
 3. Assigns to category with most matches
@@ -104,6 +111,7 @@ The system:
 ### Year-Aware Matching Preserved
 
 The harmonized system maintains year-aware matching:
+
 - Codes are matched based on ICD version and year
 - No risk of cross-period contamination
 - Each code gets correct harmonized category for its period
@@ -175,11 +183,13 @@ print(age_pattern)
 ### Cross-Period Consistency Examples
 
 **Infectious Diseases Category includes:**
+
 - ICD-1 (1901): "Small pox - vaccinated", "Diphtheria", "Measles"
 - ICD-5 (1945): "Typhoid fever", "Plague", "Malaria"
 - ICD-9 (1995): "Cholera - Due to Vibrio cholerae", "HIV disease"
 
 **Cancer Category includes:**
+
 - ICD-1 (1901): "Carcinoma", "Sarcoma", "Cancer, malignant disease"
 - ICD-9 (1995): "Malignant neoplasm of stomach", "Leukemia", etc.
 
@@ -198,7 +208,7 @@ print(age_pattern)
 1. **Lost Granularity** - Specific diseases grouped together
    - Example: All tuberculosis types → "Infectious Diseases"
    - Can't distinguish between TB subtypes across time
-   
+
 2. **Later Period Specificity** - Some conditions only exist in later ICDs
    - Example: HIV only appears in ICD-9 (1980s+)
    - Shows as zero in earlier periods (correct, but might be misleading)
@@ -219,12 +229,14 @@ python build_harmonized_categories.py
 ```
 
 **What it does:**
+
 - Loads all ICD code descriptions
 - Applies keyword-based classification
 - Assigns harmonized categories
 - Reports statistics and confidence levels
 
 **Creates:**
+
 - `icd_harmonized_categories.csv` (24,561 mappings)
 - `harmonized_categories_summary.csv` (19 categories)
 
@@ -236,12 +248,14 @@ python add_harmonized_categories_to_mortality.py
 ```
 
 **What it does:**
+
 - Loads harmonized mapping
 - Matches codes with year-awareness
 - Adds category columns to mortality data
 - Reports match rates and distributions
 
 **Creates:**
+
 - `uk_mortality_by_cause_1901_2025_harmonized.csv`
 - `uk_mortality_comprehensive_1901_2025_harmonized.csv`
 
@@ -264,6 +278,7 @@ If you need to adjust the harmonization:
    - Create new categories if needed
 
 2. **Re-run the build process:**
+
    ```bash
    cd data_sources/mortality_stats/development_code
    python build_harmonized_categories.py
@@ -277,14 +292,14 @@ If you need to adjust the harmonization:
 
 ## Validation and Quality
 
-### Recommend Manual Review For:
+### Recommend Manual Review For
 
 1. **Low confidence classifications** (17.8% of codes)
 2. **Critical analyses** requiring high accuracy
 3. **Rare diseases** that might be misclassified
 4. **New disease categories** (HIV, modern conditions)
 
-### Quality Checks:
+### Quality Checks
 
 - ✅ Year-aware matching prevents cross-period contamination
 - ✅ 82.2% high or medium confidence classifications

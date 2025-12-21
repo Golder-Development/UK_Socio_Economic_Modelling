@@ -3,6 +3,7 @@
 ## 🎯 Main Deliverables (Ready for Use)
 
 ### Primary Datasets
+
 1. **uk_mortality_comprehensive_1901_2019.csv** (7.4 MB)
    - 858,680 records
    - Dimensions: year, cause (ICD), sex, age, deaths
@@ -25,7 +26,7 @@
 
 ## 📂 Directory Structure
 
-```
+```text
 mortality_stats/
 │
 ├── MAIN OUTPUTS (Use These)
@@ -79,6 +80,7 @@ mortality_stats/
 4. See "Usage Examples" section below
 
 ### For Integration into Other Projects
+
 ```python
 import pandas as pd
 
@@ -107,6 +109,7 @@ yearly = pd.read_csv('uk_mortality_yearly_totals_1901_2019.csv')
 | **Sex** | Male, Female |
 
 ### Coverage by Period
+
 | Period | Records | Years | ICD Version |
 |--------|---------|-------|-------------|
 | 1901-1910 | 34,519 | 10 | ICD-1 |
@@ -127,25 +130,30 @@ yearly = pd.read_csv('uk_mortality_yearly_totals_1901_2019.csv')
 ## 🔍 Column Guide
 
 ### year (Integer)
+
 - Range: 1901-2017
 - Represents year of death registration
 
 ### cause (String)
+
 - ICD code (varies by period)
 - Examples: '10' (historical), 'I50' (ICD-10), 'C34' (ICD-10)
 - 13,797 unique values across all periods
 
 ### sex (String)
+
 - Values: 'Male' or 'Female'
 - Represents sex of deceased person
 
 ### age (String)
+
 - Age group or band
 - Examples: '<1', '05-09', '25-34', 'T45-54'
 - 'T' prefix indicates 10-year bands in early data
 - 31 unique values
 
 ### deaths (Integer)
+
 - Count of deaths in this category
 - Range: 1 to 50,000+
 - All values > 0 (zero-count categories excluded)
@@ -155,6 +163,7 @@ yearly = pd.read_csv('uk_mortality_yearly_totals_1901_2019.csv')
 ## 💡 Usage Examples
 
 ### Example 1: Annual Mortality Trend
+
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -172,6 +181,7 @@ plt.show()
 ```
 
 ### Example 2: Mortality by Sex
+
 ```python
 df = pd.read_csv('uk_mortality_comprehensive_1901_2019.csv')
 
@@ -185,6 +195,7 @@ by_year_sex['Female_pct'] = (by_year_sex['Female'] / by_year_sex.sum(axis=1)) * 
 ```
 
 ### Example 3: Top Causes of Death (2017)
+
 ```python
 # ICD-10 causes in 2017
 recent = df[df['year'] == 2017]
@@ -193,6 +204,7 @@ print(top_causes)
 ```
 
 ### Example 4: Age-Specific Mortality
+
 ```python
 # Mortality by age group (all years combined)
 by_age = df.groupby('age')['deaths'].sum().sort_values(ascending=False)
@@ -204,6 +216,7 @@ age_dist = df_2017.groupby('age')['deaths'].sum().sort_values(ascending=False)
 ```
 
 ### Example 5: Historical Comparison (Pre/Post WWII)
+
 ```python
 pre_war = df[df['year'] < 1940]['deaths'].sum()
 post_war = df[(df['year'] >= 1945) & (df['year'] < 1960)]['deaths'].sum()
@@ -219,17 +232,20 @@ print(f"Post-War Average: {post_war_avg:,.0f}")
 ## ⚠️ Important Notes
 
 ### ICD Classification Changes
+
 - Codes differ across ICD revisions (1-9 vs A00-Z99)
 - Use yearly totals for consistent long-term trends
 - For cause analysis, focus on 2001+ (consistent ICD-10)
 
 ### Data Gaps & Limitations
+
 - 1997-2000: Some boundary year gaps possible
 - Pre-1945: Wartime impact on reporting
 - Age grouping changed multiple times historically
 - Geographic coverage varies (primarily England & Wales)
 
 ### Recommendations
+
 - **For trends**: Use yearly totals file
 - **For causes**: Focus on 2001+ ICD-10 data
 - **For demographics**: Sex and age consistent throughout
@@ -247,6 +263,7 @@ python build_mortality_1901_2019.py
 ```
 
 This requires:
+
 - Python 3.7+
 - pandas, numpy, openpyxl, xlrd
 - Original ONS Excel files in `ons_downloads/extracted/`
@@ -292,6 +309,7 @@ This requires:
 This dataset is intended for integration into the UK Socio-Economic Modelling project and other research. 
 
 For questions:
+
 - Check COMPREHENSIVE_DATABASE_README.md for FAQs
 - Review ICD classification documentation online
 - Consult ONS official documentation for definitions

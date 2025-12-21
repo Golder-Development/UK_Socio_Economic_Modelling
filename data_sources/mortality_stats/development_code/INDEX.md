@@ -3,6 +3,7 @@
 This folder contains the development and maintenance scripts for the mortality database. Outputs are written to the parent folder `data_sources/mortality_stats/`.
 
 ## Scripts
+
 - `build_code_descriptions.py` — Extract ICD code→description mappings from ONS Excel files.
 - `add_descriptions_year_aware.py` — Add year-aware descriptions to mortality data.
 - `build_harmonized_categories.py` — Create 19 harmonized disease categories from descriptions.
@@ -15,6 +16,7 @@ This folder contains the development and maintenance scripts for the mortality d
 - Demonstration: `demonstrate_harmonized_system.py`, `show_side_by_side.py`, `verify_columns_preserved.py`.
 
 ## How to Run (Windows / PowerShell)
+
 ```powershell
 # From repo root
 cd data_sources/mortality_stats/development_code
@@ -30,5 +32,6 @@ python add_harmonized_categories_to_mortality.py
 ```
 
 ## Notes
+
 - Scripts write outputs back to `data_sources/mortality_stats/`.
 - Original ICD codes remain intact; harmonized columns are additive.

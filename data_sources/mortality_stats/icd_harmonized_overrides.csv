@@ -1,0 +1,4 @@
+code,icd_version,harmonized_category,harmonized_category_name,classification_confidence
+# Example rows (remove # to activate)
+# 100A,ICD-2 (1911-1920),digestive,Diseases of the Digestive System,override
+# 3A,ICD-2 (1911-1920),infectious_diseases,Infectious and Parasitic Diseases,override

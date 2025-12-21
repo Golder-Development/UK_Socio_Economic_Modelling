@@ -5,6 +5,7 @@
 **File**: `uk_mortality_by_cause_1901_2025_harmonized.csv`
 
 **Columns**:
+
 - `year` - Year of death (1901-2000)
 - `cause` - Original ICD code
 - `cause_description` - Human-readable disease name (year-aware)
@@ -39,13 +40,15 @@ year_2000.groupby('harmonized_category_name')['deaths'].sum().plot(kind='bar')
 
 ## Key Features
 
-### ✅ Use harmonized categories when you want to:
+### ✅ Use harmonized categories when you want to
+
 - Track disease trends across the full 1901-2000 period
 - Compare broad disease categories
 - Create visualizations without ICD complexity
 - Perform statistical analyses across time periods
 
-### ⚠️ Use original cause codes when you need:
+### ⚠️ Use original cause codes when you need
+
 - Specific disease detail
 - Medical accuracy for clinical research
 - Granular condition tracking
@@ -77,6 +80,7 @@ year_2000.groupby('harmonized_category_name')['deaths'].sum().plot(kind='bar')
 ## Common Analyses
 
 ### Track Disease Burden Shifts
+
 ```python
 # See how top causes changed over time
 for year in [1901, 1925, 1950, 1975, 2000]:
@@ -86,6 +90,7 @@ for year in [1901, 1925, 1950, 1975, 2000]:
 ```
 
 ### Age Pattern Analysis
+
 ```python
 # Which categories affect which age groups?
 age_patterns = df.groupby(['harmonized_category_name', 'age'])['deaths'].sum()
@@ -93,6 +98,7 @@ age_patterns.unstack().plot(kind='bar', stacked=True)
 ```
 
 ### Sex Differences
+
 ```python
 # Compare male vs female deaths by category
 by_sex = df.groupby(['harmonized_category_name', 'sex'])['deaths'].sum().unstack()

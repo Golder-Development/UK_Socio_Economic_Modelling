@@ -3,9 +3,10 @@
 ## ✅ What You Now Have
 
 ### 1. **Total Deaths by Year: 2001-2025** (25 years)
+
 **File:** `uk_mortality_comprehensive.csv`
 
-```
+```text
 Year Range: 2001 - 2025
 Total Records: 25 years
 Coverage: 100% complete for this period
@@ -13,15 +14,18 @@ Data Quality: Multiple sources merged with deduplication
 ```
 
 **Key Statistics:**
+
 - **Lowest:** 2011 with 484,391 deaths
 - **Highest:** 2020 with 614,114 deaths (COVID-19 spike)
 - **Average:** ~535,000 deaths/year
 - **Recent:** 2025 shows 502,553 (note: partial year data)
 
 ### 2. **Deaths by Cause (ICD-10): 2001-2017** (17 years)
+
 **File:** `uk_mortality_by_cause.csv`
 
 **Includes breakdown by ICD-10 chapter:**
+
 - **I: Circulatory system** - ~420,000 deaths/year (largest cause)
 - **C: Cancer/Neoplasms** - ~270,000 deaths/year
 - **J: Respiratory system** - ~135,000 deaths/year
@@ -47,7 +51,8 @@ Data Quality: Multiple sources merged with deduplication
 
 ## 📈 Usage Examples
 
-### Analyze trends over 25 years:
+### Analyze trends over 25 years
+
 ```python
 import pandas as pd
 
@@ -64,7 +69,8 @@ print(f"COVID era avg: {covid_avg:,.0f}")
 print(f"Increase: {(covid_avg/pre_covid_avg - 1)*100:.1f}%")
 ```
 
-### Compare causes of death:
+### Compare causes of death
+
 ```python
 causes = pd.read_csv('uk_mortality_by_cause.csv')
 
@@ -80,13 +86,15 @@ circulatory = causes[causes['icd10_chapter'] == 'I'].sort_values('year')
 
 ## 🔍 Data Gaps & Next Steps
 
-### Current Gaps:
+### Current Gaps
+
 1. **2018-2019 by cause:** Only have totals (cause breakdown not in API)
 2. **Pre-2001 data:** Not included (need manual historical downloads)
 
-### How to fill pre-2001 gap:
+### How to fill pre-2001 gap
 
 **Manual Download Option:**
+
 1. Visit: https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets
 2. Look for datasets with coverage back to 1970s or earlier
 3. Download Excel/CSV files
@@ -94,6 +102,7 @@ circulatory = causes[causes['icd10_chapter'] == 'I'].sort_values('year')
 5. Run `analyze_comprehensive_mortality.py` again from `data_sources/mortality_stats/development_code` with updated load functions
 
 **Recommended datasets to look for:**
+
 - "Deaths registered in England and Wales" (annual series - should have 1970+ data)
 - "Historical mortality data" (check adhoc releases)
 - "Mortality by cause tables" (if available historically)
@@ -135,4 +144,3 @@ python fetch_uk_mortality_stats.py
 - Cause of death data uses **ICD-10 classification** (standard medical coding)
 - Sources de-duplicated to avoid double-counting in overlap years
 - Weekly data aggregated to yearly totals for main dataset
-
