@@ -3,6 +3,7 @@ Fetch UK mortality statistics from the ONS API and aggregate by year.
 Uses the "Deaths registered weekly in England and Wales by age and sex" dataset.
 Outputs yearly totals to uk_mortality_totals_by_year.csv.
 """
+
 import requests
 import pandas as pd
 import logging
@@ -18,10 +19,12 @@ DATASET_URL = "https://api.beta.ons.gov.uk/v1/datasets/weekly-deaths-age-sex"
 
 def _most_recent_extract_dir() -> Path:
     """Return the most recent extract directory, or create a new one."""
-    extract_dirs = [p for p in OUTPUT_DIR.iterdir() if p.is_dir() and p.name.startswith("extract_")]
+    extract_dirs = [
+        p for p in OUTPUT_DIR.iterdir() if p.is_dir() and p.name.startswith("extract_")
+    ]
     if extract_dirs:
         return max(extract_dirs, key=lambda p: p.stat().st_mtime)
-    
+
     ts = pd.Timestamp.now().strftime("%Y%m%d_%H%M%S")
     new_dir = OUTPUT_DIR / f"extract_{ts}"
     new_dir.mkdir(parents=True, exist_ok=True)
@@ -52,12 +55,11 @@ def get_all_editions(dataset_url):
             edition_name = item.get("edition")
             latest_url = item.get("links", {}).get("latest_version", {}).get("href")
             if edition_name and latest_url:
-                editions.append({
-                    "edition": edition_name,
-                    "url": latest_url
-                })
-        
-        logger.info(f"Found {len(editions)} editions: {[e['edition'] for e in editions]}")
+                editions.append({"edition": edition_name, "url": latest_url})
+
+        logger.info(
+            f"Found {len(editions)} editions: {[e['edition'] for e in editions]}"
+        )
         return editions
     except Exception as e:
         logger.error(f"Error getting editions: {e}")
@@ -222,14 +224,14 @@ def observations_to_dataframe(observations):
 
 def extract_year_from_time(time_str):
     """Extract year from time dimension string.
-    
+
     Examples: "2020-01-03", "2020-W01", "Jan-Mar 2020" -> 2020
-    
+
     Parameters
     ----------
     time_str : str
         Time string from ONS API
-    
+
     Returns
     -------
     int or None
@@ -237,38 +239,39 @@ def extract_year_from_time(time_str):
     """
     if pd.isna(time_str):
         return None
-    
+
     # Try to extract 4-digit year
     import re
-    match = re.search(r'(\d{4})', str(time_str))
+
+    match = re.search(r"(\d{4})", str(time_str))
     if match:
         return int(match.group(1))
-    
+
     return None
 
 
 def aggregate_by_year(df, year):
     """Aggregate death observations for a given year.
-    
+
     Parameters
     ----------
     df : pd.DataFrame
         Raw observations with 'observation' column
     year : int
         Year for these observations
-    
+
     Returns
     -------
     dict
         Dictionary with 'year' and 'total_deaths'
     """
     # Convert observation to numeric
-    df['deaths'] = pd.to_numeric(df['observation'], errors='coerce')
-    
+    df["deaths"] = pd.to_numeric(df["observation"], errors="coerce")
+
     # Filter out nulls and sum
-    total_deaths = df['deaths'].sum(skipna=True)
-    
-    return {'year': year, 'total_deaths': int(total_deaths)}
+    total_deaths = df["deaths"].sum(skipna=True)
+
+    return {"year": year, "total_deaths": int(total_deaths)}
 
 
 def main():
@@ -299,22 +302,22 @@ def main():
                 if dim_name.lower() in ("time", "year"):
                     time_dim_name = dim_name
                     break
-            
+
             if time_dim_name:
                 # We'll fetch data for each year individually since wildcard is limited
                 years_available = list(valid_dimensions[time_dim_name].keys())
                 logger.info(f"Found years: {years_available}")
-                
+
                 for year_option in years_available:
                     year = extract_year_from_time(year_option)
                     if not year:
                         continue
-                    
+
                     logger.info(f"  Fetching year {year}...")
                     api_dimensions = {}
                     for dim_name, options_dict in valid_dimensions.items():
                         dim_lower = dim_name.lower()
-                        
+
                         if dim_name == time_dim_name:
                             api_dimensions[dim_name] = year_option
                         elif dim_lower == "week":
@@ -322,44 +325,66 @@ def main():
                             api_dimensions[dim_name] = "*"
                         elif dim_lower in ("agegroups", "age", "age_group"):
                             for opt_key, opt_label in options_dict.items():
-                                if "all" in opt_label.lower() and "age" in opt_label.lower():
+                                if (
+                                    "all" in opt_label.lower()
+                                    and "age" in opt_label.lower()
+                                ):
                                     api_dimensions[dim_name] = opt_key
                                     break
                             else:
-                                api_dimensions[dim_name] = next(iter(options_dict.keys()))
+                                api_dimensions[dim_name] = next(
+                                    iter(options_dict.keys())
+                                )
                         elif dim_lower in ("sex", "gender"):
                             for opt_key, opt_label in options_dict.items():
                                 if opt_label.lower() == "all":
                                     api_dimensions[dim_name] = opt_key
                                     break
                             else:
-                                api_dimensions[dim_name] = next(iter(options_dict.keys()))
+                                api_dimensions[dim_name] = next(
+                                    iter(options_dict.keys())
+                                )
                         elif dim_lower in ("registrationoroccurrence", "registration"):
                             for opt_key, opt_label in options_dict.items():
                                 if "registration" in opt_label.lower():
                                     api_dimensions[dim_name] = opt_key
                                     break
                             else:
-                                api_dimensions[dim_name] = next(iter(options_dict.keys()))
-                        elif dim_lower in ("administrative_geography", "geography", "area"):
+                                api_dimensions[dim_name] = next(
+                                    iter(options_dict.keys())
+                                )
+                        elif dim_lower in (
+                            "administrative_geography",
+                            "geography",
+                            "area",
+                        ):
                             for opt_key, opt_label in options_dict.items():
-                                if opt_key.startswith("E92") or opt_label.lower() == "england":
+                                if (
+                                    opt_key.startswith("E92")
+                                    or opt_label.lower() == "england"
+                                ):
                                     api_dimensions[dim_name] = opt_key
                                     break
                             else:
-                                api_dimensions[dim_name] = next(iter(options_dict.keys()))
+                                api_dimensions[dim_name] = next(
+                                    iter(options_dict.keys())
+                                )
                         elif dim_lower in ("deaths",):
                             # Special handling for 'deaths' dimension
                             api_dimensions[dim_name] = next(iter(options_dict.keys()))
                         else:
                             api_dimensions[dim_name] = next(iter(options_dict.keys()))
-                    
-                    observations = get_observations(historical_edition["url"], api_dimensions)
+
+                    observations = get_observations(
+                        historical_edition["url"], api_dimensions
+                    )
                     if observations:
                         df = observations_to_dataframe(observations)
                         year_result = aggregate_by_year(df, year)
                         yearly_results.append(year_result)
-                        logger.info(f"    ✓ Year {year}: {year_result['total_deaths']:,} deaths")
+                        logger.info(
+                            f"    ✓ Year {year}: {year_result['total_deaths']:,} deaths"
+                        )
             else:
                 logger.warning("Could not find time/year dimension in 2010-19 edition")
 
@@ -378,62 +403,84 @@ def main():
                 if dim_name.lower() in ("time", "year"):
                     time_dim_name = dim_name
                     break
-            
+
             if time_dim_name:
                 years_available = list(valid_dimensions[time_dim_name].keys())
                 logger.info(f"Found years: {years_available}")
-                
+
                 for year_option in years_available:
                     year = extract_year_from_time(year_option)
                     if not year:
                         continue
-                    
+
                     logger.info(f"  Fetching year {year}...")
                     api_dimensions = {}
                     for dim_name, options_dict in valid_dimensions.items():
                         dim_lower = dim_name.lower()
-                        
+
                         if dim_name == time_dim_name:
                             api_dimensions[dim_name] = year_option
                         elif dim_lower == "week":
                             api_dimensions[dim_name] = "*"
                         elif dim_lower in ("agegroups", "age", "age_group"):
                             for opt_key, opt_label in options_dict.items():
-                                if "all" in opt_label.lower() and "age" in opt_label.lower():
+                                if (
+                                    "all" in opt_label.lower()
+                                    and "age" in opt_label.lower()
+                                ):
                                     api_dimensions[dim_name] = opt_key
                                     break
                             else:
-                                api_dimensions[dim_name] = next(iter(options_dict.keys()))
+                                api_dimensions[dim_name] = next(
+                                    iter(options_dict.keys())
+                                )
                         elif dim_lower in ("sex", "gender"):
                             for opt_key, opt_label in options_dict.items():
                                 if opt_label.lower() == "all":
                                     api_dimensions[dim_name] = opt_key
                                     break
                             else:
-                                api_dimensions[dim_name] = next(iter(options_dict.keys()))
+                                api_dimensions[dim_name] = next(
+                                    iter(options_dict.keys())
+                                )
                         elif dim_lower in ("registrationoroccurrence", "registration"):
                             for opt_key, opt_label in options_dict.items():
                                 if "registration" in opt_label.lower():
                                     api_dimensions[dim_name] = opt_key
                                     break
                             else:
-                                api_dimensions[dim_name] = next(iter(options_dict.keys()))
-                        elif dim_lower in ("administrative_geography", "geography", "area"):
+                                api_dimensions[dim_name] = next(
+                                    iter(options_dict.keys())
+                                )
+                        elif dim_lower in (
+                            "administrative_geography",
+                            "geography",
+                            "area",
+                        ):
                             for opt_key, opt_label in options_dict.items():
-                                if opt_key.startswith("E92") or "england and wales" in opt_label.lower():
+                                if (
+                                    opt_key.startswith("E92")
+                                    or "england and wales" in opt_label.lower()
+                                ):
                                     api_dimensions[dim_name] = opt_key
                                     break
                             else:
-                                api_dimensions[dim_name] = next(iter(options_dict.keys()))
+                                api_dimensions[dim_name] = next(
+                                    iter(options_dict.keys())
+                                )
                         else:
                             api_dimensions[dim_name] = next(iter(options_dict.keys()))
-                    
-                    observations = get_observations(covid_edition["url"], api_dimensions)
+
+                    observations = get_observations(
+                        covid_edition["url"], api_dimensions
+                    )
                     if observations:
                         df = observations_to_dataframe(observations)
                         year_result = aggregate_by_year(df, year)
                         yearly_results.append(year_result)
-                        logger.info(f"    ✓ Year {year}: {year_result['total_deaths']:,} deaths")
+                        logger.info(
+                            f"    ✓ Year {year}: {year_result['total_deaths']:,} deaths"
+                        )
             else:
                 logger.warning("Could not find time/year dimension in covid-19 edition")
 
@@ -441,7 +488,7 @@ def main():
     for edition_info in editions:
         edition_name = edition_info["edition"]
         edition_url = edition_info["url"]
-        
+
         # Try to extract year from edition name
         year = None
         try:
@@ -465,10 +512,10 @@ def main():
         # ONS API allows only ONE wildcard, so we use wildcard for week and specific values for others
         api_dimensions = {}
         wildcard_used = False
-        
+
         for dim_name, options_dict in valid_dimensions.items():
             dim_lower = dim_name.lower()
-            
+
             # Use wildcard for week dimension to get all weeks
             if dim_lower in ("week",) and not wildcard_used:
                 api_dimensions[dim_name] = "*"
@@ -519,7 +566,7 @@ def main():
 
         # Step 5: Convert to DataFrame
         df = observations_to_dataframe(observations)
-        
+
         # Step 6: Aggregate this year
         year_result = aggregate_by_year(df, year)
         yearly_results.append(year_result)
@@ -532,8 +579,8 @@ def main():
     # Step 7: Create final dataframe and save
     logger.info(f"\n{'=' * 70}")
     logger.info("Creating final summary...")
-    yearly_df = pd.DataFrame(yearly_results).sort_values('year')
-    
+    yearly_df = pd.DataFrame(yearly_results).sort_values("year")
+
     yearly_output_file = OUTPUT_DIR / "uk_mortality_totals_by_year.csv"
     yearly_df.to_csv(yearly_output_file, index=False)
     logger.info(f"✓ Yearly totals saved to: {yearly_output_file}")

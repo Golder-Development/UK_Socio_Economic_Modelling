@@ -48,7 +48,11 @@ def read_year_sheet(xls_path: str, sheet_name: str) -> pd.DataFrame:
     if header_row is None:
         # fallback: combine the first two rows and search again
         if raw.shape[0] >= 2:
-            combined = raw.iloc[0].fillna("").astype(str) + " " + raw.iloc[1].fillna("").astype(str)
+            combined = (
+                raw.iloc[0].fillna("").astype(str)
+                + " "
+                + raw.iloc[1].fillna("").astype(str)
+            )
             combined_norm = [normalize_token(x) for x in combined.tolist()]
             if all(normalize_token(t) in combined_norm for t in HEADER_TOKENS):
                 header_row = 1
@@ -191,7 +195,9 @@ def process_sheet(df: pd.DataFrame, sheet_name: str) -> pd.DataFrame:
     header_row = None
     tokens_upper = [t.upper() for t in HEADER_TOKENS]
     for idx in range(min(20, df.shape[0])):
-        row_vals = " ".join([str(x) for x in df.iloc[idx].values if pd.notna(x)]).upper()
+        row_vals = " ".join(
+            [str(x) for x in df.iloc[idx].values if pd.notna(x)]
+        ).upper()
         if all(tok in row_vals for tok in tokens_upper):
             header_row = idx
             break

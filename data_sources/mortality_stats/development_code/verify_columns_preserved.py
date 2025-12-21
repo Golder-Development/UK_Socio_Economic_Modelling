@@ -5,7 +5,7 @@ print("VERIFICATION: Original Codes Preserved Alongside Harmonized Categories")
 print("=" * 80)
 
 # Load harmonized file
-df_harmonized = pd.read_csv('uk_mortality_by_cause_1901_2025_harmonized.csv')
+df_harmonized = pd.read_csv("uk_mortality_by_cause_1901_2025_harmonized.csv")
 
 print("\nColumns in the harmonized dataset:")
 print("-" * 80)
@@ -18,7 +18,7 @@ print("\n" + "=" * 80)
 print("Sample Data Showing All Columns")
 print("=" * 80)
 
-sample = df_harmonized[df_harmonized['year'] == 1901].head(1)
+sample = df_harmonized[df_harmonized["year"] == 1901].head(1)
 
 print("\nOriginal ICD Information:")
 print(f"  Year: {sample['year'].values[0]}")
@@ -40,11 +40,13 @@ print("Comparison: Before vs After")
 print("=" * 80)
 
 # Load the original file with descriptions (before harmonization)
-df_original = pd.read_csv('uk_mortality_by_cause_1901_2025_with_descriptions.csv')
+df_original = pd.read_csv("uk_mortality_by_cause_1901_2025_with_descriptions.csv")
 
 print(f"\nOriginal file (with descriptions):     {len(df_original.columns)} columns")
 print(f"Harmonized file (with categories):     {len(df_harmonized.columns)} columns")
-print(f"New columns added:                      {len(df_harmonized.columns) - len(df_original.columns)}")
+print(
+    f"New columns added:                      {len(df_harmonized.columns) - len(df_original.columns)}"
+)
 
 print("\nOriginal columns preserved:")
 for col in df_original.columns:

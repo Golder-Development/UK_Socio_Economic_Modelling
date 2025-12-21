@@ -12,6 +12,7 @@ and for death-count column candidates (e.g., 'NDTHS', any column containing 'dea
 Rows with non-numeric year or death counts are ignored.
 For overlapping years across sources, the maximum total per year is selected to avoid double-counting.
 """
+
 import logging
 from pathlib import Path
 from typing import List, Optional, Tuple
@@ -78,11 +79,15 @@ def _aggregate_file(path: Path) -> pd.DataFrame:
     deaths = _coerce_numeric(df[deaths_col])
 
     valid = (~years.isna()) & (~deaths.isna())
-    df_valid = pd.DataFrame({"year": years[valid].astype(int), "deaths": deaths[valid].astype(int)})
+    df_valid = pd.DataFrame(
+        {"year": years[valid].astype(int), "deaths": deaths[valid].astype(int)}
+    )
 
     grouped = df_valid.groupby("year", as_index=False)["deaths"].sum()
     grouped.rename(columns={"deaths": "total_deaths"}, inplace=True)
-    logger.info(f"  Years covered: {grouped['year'].min()}–{grouped['year'].max()} ({len(grouped)} years)")
+    logger.info(
+        f"  Years covered: {grouped['year'].min()}–{grouped['year'].max()} ({len(grouped)} years)"
+    )
     return grouped
 
 
@@ -91,10 +96,7 @@ def compute_totals() -> pd.DataFrame:
     if not files:
         raise FileNotFoundError("No source mortality CSVs found.")
 
-    per_file = [
-        _aggregate_file(p)
-        for p in files
-    ]
+    per_file = [_aggregate_file(p) for p in files]
 
     # Outer merge all results on year, then take row-wise max across sources
     if not per_file:
