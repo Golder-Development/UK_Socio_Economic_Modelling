@@ -36,11 +36,7 @@ def get_parent_dir():
 
 
 def run_script(script_name, description, verbose=False):
-<<<<<<< HEAD
     """Run a Python script within development_code and report status."""
-=======
-    """Run a Python script and report status."""
->>>>>>> 4fa00e8f3ec7f689d6bcf43568e2fdba6c8bbd6a
     script_path = get_script_dir() / script_name
     
     print(f"\n{'='*70}")
@@ -79,7 +75,6 @@ def run_script(script_name, description, verbose=False):
         print(f"❌ Exception running {script_name}: {e}")
         return False
 
-<<<<<<< HEAD
 
 def run_parent_script(script_rel_path, description, verbose=False):
     """Run a Python script located in the parent mortality_stats directory."""
@@ -117,17 +112,28 @@ def run_parent_script(script_rel_path, description, verbose=False):
         print(f"❌ Exception running {script_path.name}: {e}")
         return False
 
-=======
->>>>>>> 4fa00e8f3ec7f689d6bcf43568e2fdba6c8bbd6a
 def summarize_harmonized_output():
     """Print a quick summary of the harmonized output to verify categories."""
     try:
-        out_path = get_parent_dir() / "uk_mortality_by_cause_1901_2000_harmonized.csv"
-        if not out_path.exists():
-            print(f"⚠️  Harmonized output not found: {out_path}")
-            return
         import pandas as pd
-        df = pd.read_csv(out_path)
+        import zipfile
+        parent = get_parent_dir()
+        csv_path = parent / "uk_mortality_by_cause_1901_2000_harmonized.csv"
+        zip_path = parent / "uk_mortality_by_cause_1901_2000_harmonized.zip"
+
+        if csv_path.exists():
+            df = pd.read_csv(csv_path)
+        elif zip_path.exists():
+            with zipfile.ZipFile(zip_path, 'r') as zf:
+                inner_csvs = [n for n in zf.namelist() if n.lower().endswith('.csv')]
+                if not inner_csvs:
+                    print(f"⚠️  No CSV found inside {zip_path}")
+                    return
+                with zf.open(inner_csvs[0]) as f:
+                    df = pd.read_csv(f)
+        else:
+            print("⚠️  Harmonized output not found: neither CSV nor ZIP present")
+            return
         total = len(df)
         nulls = df['harmonized_category_name'].isna().sum() if 'harmonized_category_name' in df.columns else total
         uniq = df['harmonized_category_name'].nunique() if 'harmonized_category_name' in df.columns else 0

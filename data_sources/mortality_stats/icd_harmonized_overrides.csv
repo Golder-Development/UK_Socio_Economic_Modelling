@@ -427,3 +427,60 @@ code,icd_version,harmonized_category,harmonized_category_name,classification_con
 25(3),ICD-3 (1921-1930),infectious_diseases,Infectious and Parasitic Diseases,override
 42(2),ICD-3 (1921-1930),infectious_diseases,Infectious and Parasitic Diseases,override
 9740,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
+104E,ICD-2 (1911-1920),perinatal,Conditions Originating in Perinatal Period,override
+104F,ICD-2 (1911-1920),perinatal,Conditions Originating in Perinatal Period,override
+105F,ICD-2 (1911-1920),perinatal,Conditions Originating in Perinatal Period,override
+9500,ICD-8 (1968-1978),Suicide,Suicide and Self-Inflicted Injury,override
+9510,ICD-8 (1968-1978),Suicide,Suicide and Self-Inflicted Injury,override
+9520,ICD-8 (1968-1978),Suicide,Suicide and Self-Inflicted Injury,override
+9530,ICD-8 (1968-1978),Suicide,Suicide and Self-Inflicted Injury,override
+9540,ICD-8 (1968-1978),Suicide,Suicide and Self-Inflicted Injury,override
+9550,ICD-8 (1968-1978),Suicide,Suicide and Self-Inflicted Injury,override
+9560,ICD-8 (1968-1978),Suicide,Suicide and Self-Inflicted Injury,override
+9570,ICD-8 (1968-1978),Suicide,Suicide and Self-Inflicted Injury,override
+9580,ICD-8 (1968-1978),Suicide,Suicide and Self-Inflicted Injury,override
+9590,ICD-8 (1968-1978),Suicide,Suicide and Self-Inflicted Injury,override
+9900,ICD-8 (1968-1978),War,War and War-Related Deaths,override
+9910,ICD-8 (1968-1978),War,War and War-Related Deaths,override
+9930,ICD-8 (1968-1978),War,War and War-Related Deaths,override
+9940,ICD-8 (1968-1978),War,War and War-Related Deaths,override
+9990,ICD-8 (1968-1978),War,War and War-Related Deaths,override
+9600,ICD-8 (1968-1978),Homicide,Homicide and Assault,override
+9610,ICD-8 (1968-1978),Homicide,Homicide and Assault,override
+9620,ICD-8 (1968-1978),Homicide,Homicide and Assault,override
+9630,ICD-8 (1968-1978),Homicide,Homicide and Assault,override
+9640,ICD-8 (1968-1978),Homicide,Homicide and Assault,override
+9650,ICD-8 (1968-1978),Homicide,Homicide and Assault,override
+9660,ICD-8 (1968-1978),Homicide,Homicide and Assault,override
+9670,ICD-8 (1968-1978),Homicide,Homicide and Assault,override
+9680,ICD-8 (1968-1978),Homicide,Homicide and Assault,override
+9690,ICD-8 (1968-1978),Homicide,Homicide and Assault,override
+9700,ICD-8 (1968-1978),Homicide,Homicide and Assault,override
+165,ICD-3 (1921-1930),Suicide,Suicide and Self-Inflicted Injury,override
+166,ICD-3 (1921-1930),Suicide,Suicide and Self-Inflicted Injury,override
+166*,ICD-3 (1921-1930),Suicide,Suicide and Self-Inflicted Injury,override
+"165, 166*",ICD-3 (1921-1930),Suicide,Suicide and Self-Inflicted Injury,override
+167,ICD-3 (1921-1930),Suicide,Suicide and Self-Inflicted Injury,override
+168,ICD-3 (1921-1930),Suicide,Suicide and Self-Inflicted Injury,override
+169,ICD-3 (1921-1930),Suicide,Suicide and Self-Inflicted Injury,override
+170,ICD-3 (1921-1930),Suicide,Suicide and Self-Inflicted Injury,override
+171,ICD-3 (1921-1930),Suicide,Suicide and Self-Inflicted Injury,override
+172,ICD-3 (1921-1930),Suicide,Suicide and Self-Inflicted Injury,override
+173,ICD-3 (1921-1930),Suicide,Suicide and Self-Inflicted Injury,override
+174,ICD-3 (1921-1930),Suicide,Suicide and Self-Inflicted Injury,override
+180,ICD-3 (1921-1930),Accident,Accidental Death,override
+181,ICD-3 (1921-1930),Accident,Accidental Death,override
+182,ICD-3 (1921-1930),Accident,Accidental Death,override
+183,ICD-3 (1921-1930),Accident,Accidental Death,override
+184,ICD-3 (1921-1930),Accident,Accidental Death,override
+185,ICD-3 (1921-1930),Accident,Accidental Death,override
+186,ICD-3 (1921-1930),Accident,Accidental Death,override
+187,ICD-3 (1921-1930),Accident,Accidental Death,override
+188,ICD-3 (1921-1930),Accident,Accidental Death,override
+197,ICD-3 (1921-1930),Homicide,Homicide and Assault,override
+198,ICD-3 (1921-1930),Homicide,Homicide and Assault,override
+199,ICD-3 (1921-1930),Homicide,Homicide and Assault,override
+
+
+
+

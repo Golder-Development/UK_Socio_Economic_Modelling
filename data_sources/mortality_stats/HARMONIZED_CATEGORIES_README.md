@@ -61,6 +61,7 @@ We create **24 broad disease categories** that:
 22. **War and War-Related Deaths** - Wartime deaths and related impacts
 23. **Symptoms, Signs and Ill-Defined Conditions** - Unknown or unclear causes
 24. **Other and Unclassified** - Catch-all for unmatched codes
+25. **Legal Drug-Related Deaths** - Tobacco and Alcohol related deaths
 
 ## Files Generated
 

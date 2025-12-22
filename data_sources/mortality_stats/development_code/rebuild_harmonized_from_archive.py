@@ -208,9 +208,9 @@ def main():
                   'harmonized_category_name', 'classification_confidence', 'sex', 'age', 'deaths']
     df = df[final_cols]
     
-    # Save output
+    # Save output as ZIP (large files are zipped by policy)
     output_zip = BASE_DIR / "uk_mortality_by_cause_1901_2000_harmonized.zip"
-    logger.info(f"\nSaving to: {output_zip}")
+    logger.info(f"\nSaving ZIP to: {output_zip}")
     with zipfile.ZipFile(output_zip, mode='w', compression=zipfile.ZIP_DEFLATED) as zf:
         zf.writestr("uk_mortality_by_cause_1901_2000_harmonized.csv", df.to_csv(index=False))
     logger.info(f"✅ Saved {len(df):,} rows (zipped)")

@@ -478,9 +478,9 @@ code,icd_version,original_description,harmonized_category,harmonized_category_na
 163,ICD-2 (1911-1920),Other suicides,Suicide,Suicide and Self-Inflicted Injury,medium
 164,ICD-2 (1911-1920),Food poisoning,injury_poisoning,"Injury, Poisoning and External Causes",medium
 165,ICD-2 (1911-1920),Other acute poisonings,injury_poisoning,"Injury, Poisoning and External Causes",medium
-166,ICD-2 (1911-1920),Conflagration,Accident,Accidental Death,medium
+166,ICD-2 (1911-1920),Conflagration,other,Other and Unclassified,low
 167,ICD-2 (1911-1920),Burns (not conflagration),injury_poisoning,"Injury, Poisoning and External Causes",medium
-168,ICD-2 (1911-1920),Absorption of deleterious gases (not conflagration),Accident,Accidental Death,medium
+168,ICD-2 (1911-1920),Absorption of deleterious gases (not conflagration),other,Other and Unclassified,low
 169,ICD-2 (1911-1920),Accidental drowning,injury_poisoning,"Injury, Poisoning and External Causes",medium
 170,ICD-2 (1911-1920),Injury by firearms,injury_poisoning,"Injury, Poisoning and External Causes",high
 171,ICD-2 (1911-1920),Injury by cutting or piercing instruments,injury_poisoning,"Injury, Poisoning and External Causes",medium
@@ -493,7 +493,7 @@ code,icd_version,original_description,harmonized_category,harmonized_category_na
 178,ICD-2 (1911-1920),Excessive cold,other,Other and Unclassified,low
 179,ICD-2 (1911-1920),Effects of heat,other,Other and Unclassified,low
 180,ICD-2 (1911-1920),Lightning,other,Other and Unclassified,low
-181,ICD-2 (1911-1920),Electricity (not lightning),Accident,Accidental Death,medium
+181,ICD-2 (1911-1920),Electricity (not lightning),other,Other and Unclassified,low
 182,ICD-2 (1911-1920),Homicide by firearms,eye_ear,Diseases of Eye and Ear,medium
 183,ICD-2 (1911-1920),Homicide by cutting or piercing instruments,Homicide,Homicide and Assault,medium
 184,ICD-2 (1911-1920),Homicide by other means,Homicide,Homicide and Assault,medium
@@ -780,8 +780,8 @@ code,icd_version,original_description,harmonized_category,harmonized_category_na
 175,ICD-3 (1921-1930),Food poisoning,injury_poisoning,"Injury, Poisoning and External Causes",medium
 176,ICD-3 (1921-1930),Poisoning by venomous animals,injury_poisoning,"Injury, Poisoning and External Causes",medium
 177,ICD-3 (1921-1930),Other acute accidental poisoning (not by gas),injury_poisoning,"Injury, Poisoning and External Causes",medium
-178,ICD-3 (1921-1930),Conflagration,Accident,Accidental Death,medium
-179,ICD-3 (1921-1930),Accidental burns (conflagration excepted),Accident,Accidental Death,high
+178,ICD-3 (1921-1930),Conflagration,other,Other and Unclassified,low
+179,ICD-3 (1921-1930),Accidental burns (conflagration excepted),injury_poisoning,"Injury, Poisoning and External Causes",medium
 180,ICD-3 (1921-1930),Accidental mechanical suffocation,injury_poisoning,"Injury, Poisoning and External Causes",medium
 181,ICD-3 (1921-1930),Accidental absorption of irrespirable or poisonous gas,injury_poisoning,"Injury, Poisoning and External Causes",medium
 182,ICD-3 (1921-1930),Accidental drowning,injury_poisoning,"Injury, Poisoning and External Causes",medium
@@ -798,7 +798,7 @@ code,icd_version,original_description,harmonized_category,harmonized_category_na
 193,ICD-3 (1921-1930),Excessive cold,other,Other and Unclassified,low
 194,ICD-3 (1921-1930),Excessive heat,other,Other and Unclassified,low
 195,ICD-3 (1921-1930),Lightning,other,Other and Unclassified,low
-196,ICD-3 (1921-1930),Electricity (lightning excepted),Accident,Accidental Death,medium
+196,ICD-3 (1921-1930),Electricity (lightning excepted),other,Other and Unclassified,low
 197,ICD-3 (1921-1930),Homicide by firearms,eye_ear,Diseases of Eye and Ear,medium
 198,ICD-3 (1921-1930),Homicide by cutting or piercing instruments,Homicide,Homicide and Assault,medium
 199,ICD-3 (1921-1930),Homicide by other means,Homicide,Homicide and Assault,medium
@@ -1112,8 +1112,8 @@ code,icd_version,original_description,harmonized_category,harmonized_category_na
 177.0,ICD-4 (1931-1939),Food poisoning,injury_poisoning,"Injury, Poisoning and External Causes",medium
 178.0,ICD-4 (1931-1939),Accidental absorption of irrespirable or poisonous gas,injury_poisoning,"Injury, Poisoning and External Causes",medium
 179.0,ICD-4 (1931-1939),Other acute accidental poisoning (not by gas),injury_poisoning,"Injury, Poisoning and External Causes",medium
-180.0,ICD-4 (1931-1939),Conflagration,Accident,Accidental Death,medium
-181.0,ICD-4 (1931-1939),Accidental burns (conflagration excepted),Accident,Accidental Death,high
+180.0,ICD-4 (1931-1939),Conflagration,other,Other and Unclassified,low
+181.0,ICD-4 (1931-1939),Accidental burns (conflagration excepted),injury_poisoning,"Injury, Poisoning and External Causes",medium
 182.0,ICD-4 (1931-1939),Accidental mechanical suffocation,injury_poisoning,"Injury, Poisoning and External Causes",medium
 183.0,ICD-4 (1931-1939),Accidental drowning,injury_poisoning,"Injury, Poisoning and External Causes",medium
 184.0,ICD-4 (1931-1939),Accidental injury by firearms,injury_poisoning,"Injury, Poisoning and External Causes",high
@@ -1125,7 +1125,7 @@ code,icd_version,original_description,harmonized_category,harmonized_category_na
 190.0,ICD-4 (1931-1939),Excessive cold,other,Other and Unclassified,low
 191.0,ICD-4 (1931-1939),Excessive heat,other,Other and Unclassified,low
 192.0,ICD-4 (1931-1939),Lightning,other,Other and Unclassified,low
-193.0,ICD-4 (1931-1939),Electricity (lightning excepted),Accident,Accidental Death,medium
+193.0,ICD-4 (1931-1939),Electricity (lightning excepted),other,Other and Unclassified,low
 194(1),ICD-4 (1931-1939),Inattention at birth,perinatal,Conditions Originating in Perinatal Period,medium
 194(2),ICD-4 (1931-1939),Other  and unstated forms of accidental violence,Accident,Accidental Death,medium
 195.0,ICD-4 (1931-1939),Violent deaths of unstated nature,other,Other and Unclassified,low
@@ -1561,8 +1561,8 @@ code,icd_version,original_description,harmonized_category,harmonized_category_na
 177,ICD-5 (1940-1949),Food poisoning,injury_poisoning,"Injury, Poisoning and External Causes",medium
 178,ICD-5 (1940-1949),Accidental absorption of poison gas*,injury_poisoning,"Injury, Poisoning and External Causes",medium
 179,ICD-5 (1940-1949),Other acute accidental poisoning*,injury_poisoning,"Injury, Poisoning and External Causes",medium
-180,ICD-5 (1940-1949),Conflagration*,Accident,Accidental Death,medium
-181,ICD-5 (1940-1949),Accidental burns (conflagration excepted)*,Accident,Accidental Death,high
+180,ICD-5 (1940-1949),Conflagration*,other,Other and Unclassified,low
+181,ICD-5 (1940-1949),Accidental burns (conflagration excepted)*,injury_poisoning,"Injury, Poisoning and External Causes",medium
 182,ICD-5 (1940-1949),Accidental mechanical suffocation*,injury_poisoning,"Injury, Poisoning and External Causes",medium
 183,ICD-5 (1940-1949),Accidental drowning*,injury_poisoning,"Injury, Poisoning and External Causes",medium
 184,ICD-5 (1940-1949),Accidental injury by firearms*,injury_poisoning,"Injury, Poisoning and External Causes",high
@@ -8459,30 +8459,30 @@ code,icd_version,original_description,harmonized_category,harmonized_category_na
 8850,ICD-8 (1968-1978),"Fall on same level from slipping, tripping or stumbling - Fall on same level from slipping, tripping or stumbling",injury_poisoning,"Injury, Poisoning and External Causes",medium
 8860,ICD-8 (1968-1978),"Fall on same level from collision, pushing or shoving by or with other person - Fall on same level from collision, pushing or shoving by or with other person",injury_poisoning,"Injury, Poisoning and External Causes",medium
 8870,ICD-8 (1968-1978),Other and unspecified fall - Other and unspecified fall,injury_poisoning,"Injury, Poisoning and External Causes",medium
-8900,ICD-8 (1968-1978),"Accident caused by conflagration in private dwelling - Paraffin, petrol, methylated spirits",Accident,Accidental Death,high
-8901,ICD-8 (1968-1978),"Accident caused by conflagration in private dwelling - Match, paper, cigarettes",Accident,Accidental Death,high
-8902,ICD-8 (1968-1978),"Accident caused by conflagration in private dwelling - Coal, ash, solid fuel",Accident,Accidental Death,high
-8903,ICD-8 (1968-1978),Accident caused by conflagration in private dwelling - Gas,Accident,Accidental Death,high
-8904,ICD-8 (1968-1978),"Accident caused by conflagration in private dwelling - Fat, candles",Accident,Accidental Death,high
-8905,ICD-8 (1968-1978),Accident caused by conflagration in private dwelling - Electrical equipment,Accident,Accidental Death,high
-8906,ICD-8 (1968-1978),"Accident caused by conflagration in private dwelling - Bedding, furniture (cause not stated)",Accident,Accidental Death,high
-8907,ICD-8 (1968-1978),"Accident caused by conflagration in private dwelling - Clothes, fabrics (cause not stated)",Accident,Accidental Death,high
-8908,ICD-8 (1968-1978),Accident caused by conflagration in private dwelling - Other specified causes,Accident,Accidental Death,high
-8909,ICD-8 (1968-1978),Accident caused by conflagration in private dwelling - Unspecified,Accident,Accidental Death,high
-8910,ICD-8 (1968-1978),"Accident caused by conflagration in other building or structure - Paraffin, petrol, methylated spirits",Accident,Accidental Death,high
-8911,ICD-8 (1968-1978),"Accident caused by conflagration in other building or structure - Match, paper, cigarettes",Accident,Accidental Death,high
-8912,ICD-8 (1968-1978),"Accident caused by conflagration in other building or structure - Coal, ash, solid fuel",Accident,Accidental Death,high
-8913,ICD-8 (1968-1978),Accident caused by conflagration in other building or structure - Gas,Accident,Accidental Death,high
-8914,ICD-8 (1968-1978),"Accident caused by conflagration in other building or structure - Fat, candles",Accident,Accidental Death,high
-8915,ICD-8 (1968-1978),Accident caused by conflagration in other building or structure - Electrical equipment,Accident,Accidental Death,high
-8918,ICD-8 (1968-1978),Accident caused by conflagration in other building or structure - Other specified causes,Accident,Accidental Death,high
-8919,ICD-8 (1968-1978),Accident caused by conflagration in other building or structure - Unspecified,Accident,Accidental Death,high
-8920,ICD-8 (1968-1978),"Accident caused by conflagration not in building or structure - Paraffin, petrol, methylated spirits",Accident,Accidental Death,high
-8921,ICD-8 (1968-1978),"Accident caused by conflagration not in building or structure - Match, paper, cigarettes",Accident,Accidental Death,high
-8922,ICD-8 (1968-1978),"Accident caused by conflagration not in building or structure - Coal, ash, solid fuel",Accident,Accidental Death,high
-8925,ICD-8 (1968-1978),Accident caused by conflagration not in building or structure - Electrical equipment,Accident,Accidental Death,high
-8928,ICD-8 (1968-1978),Accident caused by conflagration not in building or structure - Other specified causes,Accident,Accidental Death,high
-8929,ICD-8 (1968-1978),Accident caused by conflagration not in building or structure - Unspecified,Accident,Accidental Death,high
+8900,ICD-8 (1968-1978),"Accident caused by conflagration in private dwelling - Paraffin, petrol, methylated spirits",Accident,Accidental Death,medium
+8901,ICD-8 (1968-1978),"Accident caused by conflagration in private dwelling - Match, paper, cigarettes",Accident,Accidental Death,medium
+8902,ICD-8 (1968-1978),"Accident caused by conflagration in private dwelling - Coal, ash, solid fuel",Accident,Accidental Death,medium
+8903,ICD-8 (1968-1978),Accident caused by conflagration in private dwelling - Gas,Accident,Accidental Death,medium
+8904,ICD-8 (1968-1978),"Accident caused by conflagration in private dwelling - Fat, candles",Accident,Accidental Death,medium
+8905,ICD-8 (1968-1978),Accident caused by conflagration in private dwelling - Electrical equipment,Accident,Accidental Death,medium
+8906,ICD-8 (1968-1978),"Accident caused by conflagration in private dwelling - Bedding, furniture (cause not stated)",Accident,Accidental Death,medium
+8907,ICD-8 (1968-1978),"Accident caused by conflagration in private dwelling - Clothes, fabrics (cause not stated)",Accident,Accidental Death,medium
+8908,ICD-8 (1968-1978),Accident caused by conflagration in private dwelling - Other specified causes,Accident,Accidental Death,medium
+8909,ICD-8 (1968-1978),Accident caused by conflagration in private dwelling - Unspecified,Accident,Accidental Death,medium
+8910,ICD-8 (1968-1978),"Accident caused by conflagration in other building or structure - Paraffin, petrol, methylated spirits",Accident,Accidental Death,medium
+8911,ICD-8 (1968-1978),"Accident caused by conflagration in other building or structure - Match, paper, cigarettes",Accident,Accidental Death,medium
+8912,ICD-8 (1968-1978),"Accident caused by conflagration in other building or structure - Coal, ash, solid fuel",Accident,Accidental Death,medium
+8913,ICD-8 (1968-1978),Accident caused by conflagration in other building or structure - Gas,Accident,Accidental Death,medium
+8914,ICD-8 (1968-1978),"Accident caused by conflagration in other building or structure - Fat, candles",Accident,Accidental Death,medium
+8915,ICD-8 (1968-1978),Accident caused by conflagration in other building or structure - Electrical equipment,Accident,Accidental Death,medium
+8918,ICD-8 (1968-1978),Accident caused by conflagration in other building or structure - Other specified causes,Accident,Accidental Death,medium
+8919,ICD-8 (1968-1978),Accident caused by conflagration in other building or structure - Unspecified,Accident,Accidental Death,medium
+8920,ICD-8 (1968-1978),"Accident caused by conflagration not in building or structure - Paraffin, petrol, methylated spirits",Accident,Accidental Death,medium
+8921,ICD-8 (1968-1978),"Accident caused by conflagration not in building or structure - Match, paper, cigarettes",Accident,Accidental Death,medium
+8922,ICD-8 (1968-1978),"Accident caused by conflagration not in building or structure - Coal, ash, solid fuel",Accident,Accidental Death,medium
+8925,ICD-8 (1968-1978),Accident caused by conflagration not in building or structure - Electrical equipment,Accident,Accidental Death,medium
+8928,ICD-8 (1968-1978),Accident caused by conflagration not in building or structure - Other specified causes,Accident,Accidental Death,medium
+8929,ICD-8 (1968-1978),Accident caused by conflagration not in building or structure - Unspecified,Accident,Accidental Death,medium
 8930,ICD-8 (1968-1978),"Accident caused by ignition of clothing - Paraffin, petrol, methylated spirits",Accident,Accidental Death,medium
 8931,ICD-8 (1968-1978),"Accident caused by ignition of clothing - Match, paper, cigarettes",Accident,Accidental Death,medium
 8932,ICD-8 (1968-1978),"Accident caused by ignition of clothing - Coal, ash, solid fuel",Accident,Accidental Death,medium
@@ -13505,19 +13505,19 @@ code,icd_version,original_description,harmonized_category,harmonized_category_na
 8869,ICD-9a (1979-1984),"Fall on same level from collision, pushing or shoving, by or with other person - Other and unspecified",injury_poisoning,"Injury, Poisoning and External Causes",medium
 8870,ICD-9a (1979-1984),"Fracture, cause unspecified - Fracture, cause unspecified",injury_poisoning,"Injury, Poisoning and External Causes",medium
 8880,ICD-9a (1979-1984),Other and unspecified fall - Other and unspecified fall,injury_poisoning,"Injury, Poisoning and External Causes",medium
-8900,ICD-9a (1979-1984),Conflagration in private dwelling - Explosion caused by conflagration,Accident,Accidental Death,medium
-8901,ICD-9a (1979-1984),Conflagration in private dwelling - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,Accident,Accidental Death,medium
-8902,ICD-9a (1979-1984),Conflagration in private dwelling - Other smoke and fumes from conflagration,Accident,Accidental Death,medium
+8900,ICD-9a (1979-1984),Conflagration in private dwelling - Explosion caused by conflagration,other,Other and Unclassified,low
+8901,ICD-9a (1979-1984),Conflagration in private dwelling - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,other,Other and Unclassified,low
+8902,ICD-9a (1979-1984),Conflagration in private dwelling - Other smoke and fumes from conflagration,other,Other and Unclassified,low
 8903,ICD-9a (1979-1984),Conflagration in private dwelling - Burning caused by conflagration,injury_poisoning,"Injury, Poisoning and External Causes",medium
-8908,ICD-9a (1979-1984),Conflagration in private dwelling - Other accident resulting from conflagration,Accident,Accidental Death,high
-8909,ICD-9a (1979-1984),Conflagration in private dwelling - Unspecified,Accident,Accidental Death,medium
-8910,ICD-9a (1979-1984),Conflagration in other and unspecified building or structure - Explosion caused by conflagration,Accident,Accidental Death,medium
-8911,ICD-9a (1979-1984),Conflagration in other and unspecified building or structure - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,Accident,Accidental Death,medium
-8912,ICD-9a (1979-1984),Conflagration in other and unspecified building or structure - Other smoke and fumes from conflagration,Accident,Accidental Death,medium
+8908,ICD-9a (1979-1984),Conflagration in private dwelling - Other accident resulting from conflagration,Accident,Accidental Death,medium
+8909,ICD-9a (1979-1984),Conflagration in private dwelling - Unspecified,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+8910,ICD-9a (1979-1984),Conflagration in other and unspecified building or structure - Explosion caused by conflagration,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+8911,ICD-9a (1979-1984),Conflagration in other and unspecified building or structure - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+8912,ICD-9a (1979-1984),Conflagration in other and unspecified building or structure - Other smoke and fumes from conflagration,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
 8913,ICD-9a (1979-1984),Conflagration in other and unspecified building or structure - Burning caused by conflagration,injury_poisoning,"Injury, Poisoning and External Causes",medium
-8918,ICD-9a (1979-1984),Conflagration in other and unspecified building or structure - Other accident resulting from conflagration,Accident,Accidental Death,high
-8919,ICD-9a (1979-1984),Conflagration in other and unspecified building or structure - Unspecified,Accident,Accidental Death,medium
-8920,ICD-9a (1979-1984),Conflagration not in building or structure - Conflagration not in building or structure,Accident,Accidental Death,medium
+8918,ICD-9a (1979-1984),Conflagration in other and unspecified building or structure - Other accident resulting from conflagration,Accident,Accidental Death,medium
+8919,ICD-9a (1979-1984),Conflagration in other and unspecified building or structure - Unspecified,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+8920,ICD-9a (1979-1984),Conflagration not in building or structure - Conflagration not in building or structure,other,Other and Unclassified,low
 8930,ICD-9a (1979-1984),Accident caused by ignition of clothing - From controlled fire in private dwelling,injury_poisoning,"Injury, Poisoning and External Causes",medium
 8931,ICD-9a (1979-1984),Accident caused by ignition of clothing - From controlled fire in other building or structure,injury_poisoning,"Injury, Poisoning and External Causes",medium
 8932,ICD-9a (1979-1984),Accident caused by ignition of clothing - From controlled fire not in building or structure,injury_poisoning,"Injury, Poisoning and External Causes",medium
@@ -18797,19 +18797,19 @@ code,icd_version,original_description,harmonized_category,harmonized_category_na
 8869,ICD-9b (1985-1993),"Fall on same level from collision, pushing or shoving, by or with other person - Other and unspecified",injury_poisoning,"Injury, Poisoning and External Causes",medium
 8870,ICD-9b (1985-1993),"Fracture, cause unspecified - Fracture, cause unspecified",injury_poisoning,"Injury, Poisoning and External Causes",medium
 8880,ICD-9b (1985-1993),Other and unspecified fall - Other and unspecified fall,injury_poisoning,"Injury, Poisoning and External Causes",medium
-8900,ICD-9b (1985-1993),Conflagration in private dwelling - Explosion caused by conflagration,Accident,Accidental Death,medium
-8901,ICD-9b (1985-1993),Conflagration in private dwelling - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,Accident,Accidental Death,medium
-8902,ICD-9b (1985-1993),Conflagration in private dwelling - Other smoke and fumes from conflagration,Accident,Accidental Death,medium
+8900,ICD-9b (1985-1993),Conflagration in private dwelling - Explosion caused by conflagration,other,Other and Unclassified,low
+8901,ICD-9b (1985-1993),Conflagration in private dwelling - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,other,Other and Unclassified,low
+8902,ICD-9b (1985-1993),Conflagration in private dwelling - Other smoke and fumes from conflagration,other,Other and Unclassified,low
 8903,ICD-9b (1985-1993),Conflagration in private dwelling - Burning caused by conflagration,injury_poisoning,"Injury, Poisoning and External Causes",medium
-8908,ICD-9b (1985-1993),Conflagration in private dwelling - Other accident resulting from conflagration,Accident,Accidental Death,high
-8909,ICD-9b (1985-1993),Conflagration in private dwelling - Unspecified,Accident,Accidental Death,medium
-8910,ICD-9b (1985-1993),Conflagration in other and unspecified building or structure - Explosion caused by conflagration,Accident,Accidental Death,medium
-8911,ICD-9b (1985-1993),Conflagration in other and unspecified building or structure - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,Accident,Accidental Death,medium
-8912,ICD-9b (1985-1993),Conflagration in other and unspecified building or structure - Other smoke and fumes from conflagration,Accident,Accidental Death,medium
+8908,ICD-9b (1985-1993),Conflagration in private dwelling - Other accident resulting from conflagration,Accident,Accidental Death,medium
+8909,ICD-9b (1985-1993),Conflagration in private dwelling - Unspecified,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+8910,ICD-9b (1985-1993),Conflagration in other and unspecified building or structure - Explosion caused by conflagration,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+8911,ICD-9b (1985-1993),Conflagration in other and unspecified building or structure - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+8912,ICD-9b (1985-1993),Conflagration in other and unspecified building or structure - Other smoke and fumes from conflagration,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
 8913,ICD-9b (1985-1993),Conflagration in other and unspecified building or structure - Burning caused by conflagration,injury_poisoning,"Injury, Poisoning and External Causes",medium
-8918,ICD-9b (1985-1993),Conflagration in other and unspecified building or structure - Other accident resulting from conflagration,Accident,Accidental Death,high
-8919,ICD-9b (1985-1993),Conflagration in other and unspecified building or structure - Unspecified,Accident,Accidental Death,medium
-8920,ICD-9b (1985-1993),Conflagration not in building or structure - Conflagration not in building or structure,Accident,Accidental Death,medium
+8918,ICD-9b (1985-1993),Conflagration in other and unspecified building or structure - Other accident resulting from conflagration,Accident,Accidental Death,medium
+8919,ICD-9b (1985-1993),Conflagration in other and unspecified building or structure - Unspecified,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+8920,ICD-9b (1985-1993),Conflagration not in building or structure - Conflagration not in building or structure,other,Other and Unclassified,low
 8930,ICD-9b (1985-1993),Accident caused by ignition of clothing - From controlled fire in private dwelling,injury_poisoning,"Injury, Poisoning and External Causes",medium
 8931,ICD-9b (1985-1993),Accident caused by ignition of clothing - From controlled fire in other building or structure,injury_poisoning,"Injury, Poisoning and External Causes",medium
 8932,ICD-9b (1985-1993),Accident caused by ignition of clothing - From controlled fire not in building or structure,injury_poisoning,"Injury, Poisoning and External Causes",medium
@@ -24089,19 +24089,19 @@ code,icd_version,original_description,harmonized_category,harmonized_category_na
 8869,ICD-9c (1994-2000),"Fall on same level from collision, pushing or shoving, by or with other person - Other and unspecified",injury_poisoning,"Injury, Poisoning and External Causes",medium
 8870,ICD-9c (1994-2000),"Fracture, cause unspecified - Fracture, cause unspecified",injury_poisoning,"Injury, Poisoning and External Causes",medium
 8880,ICD-9c (1994-2000),Other and unspecified fall - Other and unspecified fall,injury_poisoning,"Injury, Poisoning and External Causes",medium
-8900,ICD-9c (1994-2000),Conflagration in private dwelling - Explosion caused by conflagration,Accident,Accidental Death,medium
-8901,ICD-9c (1994-2000),Conflagration in private dwelling - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,Accident,Accidental Death,medium
-8902,ICD-9c (1994-2000),Conflagration in private dwelling - Other smoke and fumes from conflagration,Accident,Accidental Death,medium
+8900,ICD-9c (1994-2000),Conflagration in private dwelling - Explosion caused by conflagration,other,Other and Unclassified,low
+8901,ICD-9c (1994-2000),Conflagration in private dwelling - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,other,Other and Unclassified,low
+8902,ICD-9c (1994-2000),Conflagration in private dwelling - Other smoke and fumes from conflagration,other,Other and Unclassified,low
 8903,ICD-9c (1994-2000),Conflagration in private dwelling - Burning caused by conflagration,injury_poisoning,"Injury, Poisoning and External Causes",medium
-8908,ICD-9c (1994-2000),Conflagration in private dwelling - Other accident resulting from conflagration,Accident,Accidental Death,high
-8909,ICD-9c (1994-2000),Conflagration in private dwelling - Unspecified,Accident,Accidental Death,medium
-8910,ICD-9c (1994-2000),Conflagration in other and unspecified building or structure - Explosion caused by conflagration,Accident,Accidental Death,medium
-8911,ICD-9c (1994-2000),Conflagration in other and unspecified building or structure - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,Accident,Accidental Death,medium
-8912,ICD-9c (1994-2000),Conflagration in other and unspecified building or structure - Other smoke and fumes from conflagration,Accident,Accidental Death,medium
+8908,ICD-9c (1994-2000),Conflagration in private dwelling - Other accident resulting from conflagration,Accident,Accidental Death,medium
+8909,ICD-9c (1994-2000),Conflagration in private dwelling - Unspecified,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+8910,ICD-9c (1994-2000),Conflagration in other and unspecified building or structure - Explosion caused by conflagration,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+8911,ICD-9c (1994-2000),Conflagration in other and unspecified building or structure - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+8912,ICD-9c (1994-2000),Conflagration in other and unspecified building or structure - Other smoke and fumes from conflagration,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
 8913,ICD-9c (1994-2000),Conflagration in other and unspecified building or structure - Burning caused by conflagration,injury_poisoning,"Injury, Poisoning and External Causes",medium
-8918,ICD-9c (1994-2000),Conflagration in other and unspecified building or structure - Other accident resulting from conflagration,Accident,Accidental Death,high
-8919,ICD-9c (1994-2000),Conflagration in other and unspecified building or structure - Unspecified,Accident,Accidental Death,medium
-8920,ICD-9c (1994-2000),Conflagration not in building or structure - Conflagration not in building or structure,Accident,Accidental Death,medium
+8918,ICD-9c (1994-2000),Conflagration in other and unspecified building or structure - Other accident resulting from conflagration,Accident,Accidental Death,medium
+8919,ICD-9c (1994-2000),Conflagration in other and unspecified building or structure - Unspecified,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+8920,ICD-9c (1994-2000),Conflagration not in building or structure - Conflagration not in building or structure,other,Other and Unclassified,low
 8930,ICD-9c (1994-2000),Accident caused by ignition of clothing - From controlled fire in private dwelling,injury_poisoning,"Injury, Poisoning and External Causes",medium
 8931,ICD-9c (1994-2000),Accident caused by ignition of clothing - From controlled fire in other building or structure,injury_poisoning,"Injury, Poisoning and External Causes",medium
 8932,ICD-9c (1994-2000),Accident caused by ignition of clothing - From controlled fire not in building or structure,injury_poisoning,"Injury, Poisoning and External Causes",medium

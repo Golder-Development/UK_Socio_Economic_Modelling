@@ -204,15 +204,15 @@ ICD-2 (1911-1920),104A,Infective enteritis,infectious_diseases,Infectious and Pa
 ICD-2 (1911-1920),104B,Diarrhoea - not returned as infective - under 2yrs old,infectious_diseases,Infectious and Parasitic Diseases,medium
 ICD-2 (1911-1920),104C,Enteritis - not returned as infective - under 2yrs old,infectious_diseases,Infectious and Parasitic Diseases,medium
 ICD-2 (1911-1920),104D,Gastro-enteritis - not returned as infective - under 2yrs old,infectious_diseases,Infectious and Parasitic Diseases,medium
-ICD-2 (1911-1920),104E,Dyspepsia - under 2yrs old,other,Other and Unclassified,low
-ICD-2 (1911-1920),104F,Colic - under 2yrs old,other,Other and Unclassified,low
+ICD-2 (1911-1920),104E,Dyspepsia - under 2yrs old,perinatal,Conditions Originating in Perinatal Period,override
+ICD-2 (1911-1920),104F,Colic - under 2yrs old,perinatal,Conditions Originating in Perinatal Period,override
 ICD-2 (1911-1920),104G,Ulceration of intestines - under 2yrs old,digestive,Diseases of the Digestive System,high
 ICD-2 (1911-1920),104H,Duodenal ulcer - under 2yrs old,digestive,Diseases of the Digestive System,medium
 ICD-2 (1911-1920),105A,Infective enteritis - over 2yrs old,infectious_diseases,Infectious and Parasitic Diseases,medium
 ICD-2 (1911-1920),105B,Diarrhoea - not returned as infective - over 2yrs old,infectious_diseases,Infectious and Parasitic Diseases,medium
 ICD-2 (1911-1920),105C,Enteritis - not returned as infective - over 2yrs old,infectious_diseases,Infectious and Parasitic Diseases,medium
 ICD-2 (1911-1920),105D,Gastro-enteritis - not returned as infective - over 2yrs old,infectious_diseases,Infectious and Parasitic Diseases,medium
-ICD-2 (1911-1920),105F,Colic - over 2yrs old,other,Other and Unclassified,low
+ICD-2 (1911-1920),105F,Colic - over 2yrs old,perinatal,Conditions Originating in Perinatal Period,override
 ICD-2 (1911-1920),105G,Ulceration of intestines - over 2yrs old,digestive,Diseases of the Digestive System,high
 ICD-2 (1911-1920),105H,Duodenal ulcer - over 2yrs old,digestive,Diseases of the Digestive System,medium
 ICD-2 (1911-1920),106,Ankylostomiasis,digestive,Diseases of the Digestive System,medium
@@ -317,9 +317,9 @@ ICD-2 (1911-1920),162,Suicide by crushing,Suicide,Suicide and Self-Inflicted Inj
 ICD-2 (1911-1920),163,Other suicides,Suicide,Suicide and Self-Inflicted Injury,override
 ICD-2 (1911-1920),164,Food poisoning,injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-2 (1911-1920),165,Other acute poisonings,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-2 (1911-1920),166,Conflagration,Accident,Accidental Death,medium
+ICD-2 (1911-1920),166,Conflagration,other,Other and Unclassified,low
 ICD-2 (1911-1920),167,Burns (not conflagration),injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-2 (1911-1920),168,Absorption of deleterious gases (not conflagration),Accident,Accidental Death,medium
+ICD-2 (1911-1920),168,Absorption of deleterious gases (not conflagration),other,Other and Unclassified,low
 ICD-2 (1911-1920),169,Accidental drowning,injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-2 (1911-1920),17,Leprosy,infectious_diseases,Infectious and Parasitic Diseases,medium
 ICD-2 (1911-1920),170,Injury by firearms,Homicide,Homicide and Assault,override
@@ -334,7 +334,7 @@ ICD-2 (1911-1920),178,Excessive cold,other,Other and Unclassified,low
 ICD-2 (1911-1920),179,Effects of heat,other,Other and Unclassified,low
 ICD-2 (1911-1920),18,Erysipelas,skin,Diseases of the Skin,medium
 ICD-2 (1911-1920),180,Lightning,other,Other and Unclassified,low
-ICD-2 (1911-1920),181,Electricity (not lightning),Accident,Accidental Death,medium
+ICD-2 (1911-1920),181,Electricity (not lightning),other,Other and Unclassified,low
 ICD-2 (1911-1920),182,Homicide by firearms,Homicide,Homicide and Assault,override
 ICD-2 (1911-1920),183,Homicide by cutting or piercing instruments,Homicide,Homicide and Assault,override
 ICD-2 (1911-1920),184,Homicide by other means,Homicide,Homicide and Assault,override
@@ -613,34 +613,34 @@ ICD-3 (1921-1930),162(3),Other diseases peculiar to early pregnancy,eye_ear,Dise
 ICD-3 (1921-1930),163,Lack of care,other,Other and Unclassified,low
 ICD-3 (1921-1930),164(1),Senile dementia,mental_behavioral,Mental and Behavioral Disorders,medium
 ICD-3 (1921-1930),164(2),Other forms of senile decay,other,Other and Unclassified,low
-ICD-3 (1921-1930),"165, 166*",Suicide by solid or liquid poisons and corrosive substances,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-3 (1921-1930),167,Suicide by poisonous gas,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-3 (1921-1930),168,Suicide by hanging or strangulation,Suicide,Suicide and Self-Inflicted Injury,medium
-ICD-3 (1921-1930),169,Suicide by drowning,injury_poisoning,"Injury, Poisoning and External Causes",medium
+ICD-3 (1921-1930),"165, 166*",Suicide by solid or liquid poisons and corrosive substances,Suicide,Suicide and Self-Inflicted Injury,override
+ICD-3 (1921-1930),167,Suicide by poisonous gas,Suicide,Suicide and Self-Inflicted Injury,override
+ICD-3 (1921-1930),168,Suicide by hanging or strangulation,Suicide,Suicide and Self-Inflicted Injury,override
+ICD-3 (1921-1930),169,Suicide by drowning,Suicide,Suicide and Self-Inflicted Injury,override
 ICD-3 (1921-1930),16a,Amoebic dysentery,infectious_diseases,Infectious and Parasitic Diseases,medium
 ICD-3 (1921-1930),16b,Bacillary dysentery,infectious_diseases,Infectious and Parasitic Diseases,medium
 ICD-3 (1921-1930),16c,Other or unspecified dysentery,infectious_diseases,Infectious and Parasitic Diseases,medium
-ICD-3 (1921-1930),170,Suicide by firearms,eye_ear,Diseases of Eye and Ear,medium
-ICD-3 (1921-1930),171,Suicide by cutting or piercing instruments,Suicide,Suicide and Self-Inflicted Injury,medium
-ICD-3 (1921-1930),172,Suicide by jumping from high place,Suicide,Suicide and Self-Inflicted Injury,medium
-ICD-3 (1921-1930),173,Suicide by crushing,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-3 (1921-1930),174,Suicide by other means,Suicide,Suicide and Self-Inflicted Injury,medium
+ICD-3 (1921-1930),170,Suicide by firearms,Suicide,Suicide and Self-Inflicted Injury,override
+ICD-3 (1921-1930),171,Suicide by cutting or piercing instruments,Suicide,Suicide and Self-Inflicted Injury,override
+ICD-3 (1921-1930),172,Suicide by jumping from high place,Suicide,Suicide and Self-Inflicted Injury,override
+ICD-3 (1921-1930),173,Suicide by crushing,Suicide,Suicide and Self-Inflicted Injury,override
+ICD-3 (1921-1930),174,Suicide by other means,Suicide,Suicide and Self-Inflicted Injury,override
 ICD-3 (1921-1930),175,Food poisoning,injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-3 (1921-1930),176,Poisoning by venomous animals,injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-3 (1921-1930),177,Other acute accidental poisoning (not by gas),injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-3 (1921-1930),178,Conflagration,Accident,Accidental Death,medium
-ICD-3 (1921-1930),179,Accidental burns (conflagration excepted),Accident,Accidental Death,high
+ICD-3 (1921-1930),178,Conflagration,other,Other and Unclassified,low
+ICD-3 (1921-1930),179,Accidental burns (conflagration excepted),injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-3 (1921-1930),17a,Bubonic plague,infectious_diseases,Infectious and Parasitic Diseases,medium
 ICD-3 (1921-1930),18,Yellow fever,infectious_diseases,Infectious and Parasitic Diseases,medium
-ICD-3 (1921-1930),180,Accidental mechanical suffocation,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-3 (1921-1930),181,Accidental absorption of irrespirable or poisonous gas,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-3 (1921-1930),182,Accidental drowning,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-3 (1921-1930),183,Accidental injury by firearms,injury_poisoning,"Injury, Poisoning and External Causes",high
-ICD-3 (1921-1930),184,Accidental injury by cutting or piercing instruments,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-3 (1921-1930),185,Accidental injury by fall,injury_poisoning,"Injury, Poisoning and External Causes",high
-ICD-3 (1921-1930),186,Accidental injury in mining and quarrying,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-3 (1921-1930),187,Accidental injury by machinery,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-3 (1921-1930),188,"Accidental injury by other forms of crushing (road vehicles, etc)",injury_poisoning,"Injury, Poisoning and External Causes",high
+ICD-3 (1921-1930),180,Accidental mechanical suffocation,Accident,Accidental Death,override
+ICD-3 (1921-1930),181,Accidental absorption of irrespirable or poisonous gas,Accident,Accidental Death,override
+ICD-3 (1921-1930),182,Accidental drowning,Accident,Accidental Death,override
+ICD-3 (1921-1930),183,Accidental injury by firearms,Accident,Accidental Death,override
+ICD-3 (1921-1930),184,Accidental injury by cutting or piercing instruments,Accident,Accidental Death,override
+ICD-3 (1921-1930),185,Accidental injury by fall,Accident,Accidental Death,override
+ICD-3 (1921-1930),186,Accidental injury in mining and quarrying,Accident,Accidental Death,override
+ICD-3 (1921-1930),187,Accidental injury by machinery,Accident,Accidental Death,override
+ICD-3 (1921-1930),188,"Accidental injury by other forms of crushing (road vehicles, etc)",Accident,Accidental Death,override
 ICD-3 (1921-1930),189,Injury by animals (poisoning by venomous animals excepted),injury_poisoning,"Injury, Poisoning and External Causes",high
 ICD-3 (1921-1930),19,Spirochaetosis ictero-haemorrhagica,digestive,Diseases of the Digestive System,medium
 ICD-3 (1921-1930),190,Wounds of war,War,War and War-Related Deaths,override
@@ -648,10 +648,10 @@ ICD-3 (1921-1930),192,Hunger or thirst,other,Other and Unclassified,low
 ICD-3 (1921-1930),193,Excessive cold,other,Other and Unclassified,low
 ICD-3 (1921-1930),194,Excessive heat,other,Other and Unclassified,low
 ICD-3 (1921-1930),195,Lightning,other,Other and Unclassified,low
-ICD-3 (1921-1930),196,Electricity (lightning excepted),Accident,Accidental Death,medium
-ICD-3 (1921-1930),197,Homicide by firearms,eye_ear,Diseases of Eye and Ear,medium
-ICD-3 (1921-1930),198,Homicide by cutting or piercing instruments,Homicide,Homicide and Assault,medium
-ICD-3 (1921-1930),199,Homicide by other means,Homicide,Homicide and Assault,medium
+ICD-3 (1921-1930),196,Electricity (lightning excepted),other,Other and Unclassified,low
+ICD-3 (1921-1930),197,Homicide by firearms,Homicide,Homicide and Assault,override
+ICD-3 (1921-1930),198,Homicide by cutting or piercing instruments,Homicide,Homicide and Assault,override
+ICD-3 (1921-1930),199,Homicide by other means,Homicide,Homicide and Assault,override
 ICD-3 (1921-1930),1a,Typhoid fever,infectious_diseases,Infectious and Parasitic Diseases,high
 ICD-3 (1921-1930),1b,Paratyphoid fever,infectious_diseases,Infectious and Parasitic Diseases,high
 ICD-3 (1921-1930),2,Typhus fever,infectious_diseases,Infectious and Parasitic Diseases,high
@@ -1333,8 +1333,8 @@ ICD-5 (1940-1949),177,Food poisoning,injury_poisoning,"Injury, Poisoning and Ext
 ICD-5 (1940-1949),178,Accidental absorption of poison gas*,injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-5 (1940-1949),179,Other acute accidental poisoning*,injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-5 (1940-1949),18,Tuberculosis of the skin and subcutaneous cellular tissue,infectious_diseases,Infectious and Parasitic Diseases,medium
-ICD-5 (1940-1949),180,Conflagration*,Accident,Accidental Death,medium
-ICD-5 (1940-1949),181,Accidental burns (conflagration excepted)*,Accident,Accidental Death,high
+ICD-5 (1940-1949),180,Conflagration*,other,Other and Unclassified,low
+ICD-5 (1940-1949),181,Accidental burns (conflagration excepted)*,injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-5 (1940-1949),182,Accidental mechanical suffocation*,injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-5 (1940-1949),183,Accidental drowning*,injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-5 (1940-1949),184,Accidental injury by firearms*,injury_poisoning,"Injury, Poisoning and External Causes",high
@@ -6356,30 +6356,30 @@ ICD-8 (1968-1978),8840,Other fall from one level to another - Other fall from on
 ICD-8 (1968-1978),8850,"Fall on same level from slipping, tripping or stumbling - Fall on same level from slipping, tripping or stumbling",injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-8 (1968-1978),8860,"Fall on same level from collision, pushing or shoving by or with other person - Fall on same level from collision, pushing or shoving by or with other person",injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-8 (1968-1978),8870,Other and unspecified fall - Other and unspecified fall,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-8 (1968-1978),8900,"Accident caused by conflagration in private dwelling - Paraffin, petrol, methylated spirits",Accident,Accidental Death,high
-ICD-8 (1968-1978),8901,"Accident caused by conflagration in private dwelling - Match, paper, cigarettes",Accident,Accidental Death,high
-ICD-8 (1968-1978),8902,"Accident caused by conflagration in private dwelling - Coal, ash, solid fuel",Accident,Accidental Death,high
-ICD-8 (1968-1978),8903,Accident caused by conflagration in private dwelling - Gas,Accident,Accidental Death,high
-ICD-8 (1968-1978),8904,"Accident caused by conflagration in private dwelling - Fat, candles",Accident,Accidental Death,high
-ICD-8 (1968-1978),8905,Accident caused by conflagration in private dwelling - Electrical equipment,Accident,Accidental Death,high
-ICD-8 (1968-1978),8906,"Accident caused by conflagration in private dwelling - Bedding, furniture (cause not stated)",Accident,Accidental Death,high
-ICD-8 (1968-1978),8907,"Accident caused by conflagration in private dwelling - Clothes, fabrics (cause not stated)",Accident,Accidental Death,high
-ICD-8 (1968-1978),8908,Accident caused by conflagration in private dwelling - Other specified causes,Accident,Accidental Death,high
-ICD-8 (1968-1978),8909,Accident caused by conflagration in private dwelling - Unspecified,Accident,Accidental Death,high
-ICD-8 (1968-1978),8910,"Accident caused by conflagration in other building or structure - Paraffin, petrol, methylated spirits",Accident,Accidental Death,high
-ICD-8 (1968-1978),8911,"Accident caused by conflagration in other building or structure - Match, paper, cigarettes",Accident,Accidental Death,high
-ICD-8 (1968-1978),8912,"Accident caused by conflagration in other building or structure - Coal, ash, solid fuel",Accident,Accidental Death,high
-ICD-8 (1968-1978),8913,Accident caused by conflagration in other building or structure - Gas,Accident,Accidental Death,high
-ICD-8 (1968-1978),8914,"Accident caused by conflagration in other building or structure - Fat, candles",Accident,Accidental Death,high
-ICD-8 (1968-1978),8915,Accident caused by conflagration in other building or structure - Electrical equipment,Accident,Accidental Death,high
-ICD-8 (1968-1978),8918,Accident caused by conflagration in other building or structure - Other specified causes,Accident,Accidental Death,high
-ICD-8 (1968-1978),8919,Accident caused by conflagration in other building or structure - Unspecified,Accident,Accidental Death,high
-ICD-8 (1968-1978),8920,"Accident caused by conflagration not in building or structure - Paraffin, petrol, methylated spirits",Accident,Accidental Death,high
-ICD-8 (1968-1978),8921,"Accident caused by conflagration not in building or structure - Match, paper, cigarettes",Accident,Accidental Death,high
-ICD-8 (1968-1978),8922,"Accident caused by conflagration not in building or structure - Coal, ash, solid fuel",Accident,Accidental Death,high
-ICD-8 (1968-1978),8925,Accident caused by conflagration not in building or structure - Electrical equipment,Accident,Accidental Death,high
-ICD-8 (1968-1978),8928,Accident caused by conflagration not in building or structure - Other specified causes,Accident,Accidental Death,high
-ICD-8 (1968-1978),8929,Accident caused by conflagration not in building or structure - Unspecified,Accident,Accidental Death,high
+ICD-8 (1968-1978),8900,"Accident caused by conflagration in private dwelling - Paraffin, petrol, methylated spirits",Accident,Accidental Death,medium
+ICD-8 (1968-1978),8901,"Accident caused by conflagration in private dwelling - Match, paper, cigarettes",Accident,Accidental Death,medium
+ICD-8 (1968-1978),8902,"Accident caused by conflagration in private dwelling - Coal, ash, solid fuel",Accident,Accidental Death,medium
+ICD-8 (1968-1978),8903,Accident caused by conflagration in private dwelling - Gas,Accident,Accidental Death,medium
+ICD-8 (1968-1978),8904,"Accident caused by conflagration in private dwelling - Fat, candles",Accident,Accidental Death,medium
+ICD-8 (1968-1978),8905,Accident caused by conflagration in private dwelling - Electrical equipment,Accident,Accidental Death,medium
+ICD-8 (1968-1978),8906,"Accident caused by conflagration in private dwelling - Bedding, furniture (cause not stated)",Accident,Accidental Death,medium
+ICD-8 (1968-1978),8907,"Accident caused by conflagration in private dwelling - Clothes, fabrics (cause not stated)",Accident,Accidental Death,medium
+ICD-8 (1968-1978),8908,Accident caused by conflagration in private dwelling - Other specified causes,Accident,Accidental Death,medium
+ICD-8 (1968-1978),8909,Accident caused by conflagration in private dwelling - Unspecified,Accident,Accidental Death,medium
+ICD-8 (1968-1978),8910,"Accident caused by conflagration in other building or structure - Paraffin, petrol, methylated spirits",Accident,Accidental Death,medium
+ICD-8 (1968-1978),8911,"Accident caused by conflagration in other building or structure - Match, paper, cigarettes",Accident,Accidental Death,medium
+ICD-8 (1968-1978),8912,"Accident caused by conflagration in other building or structure - Coal, ash, solid fuel",Accident,Accidental Death,medium
+ICD-8 (1968-1978),8913,Accident caused by conflagration in other building or structure - Gas,Accident,Accidental Death,medium
+ICD-8 (1968-1978),8914,"Accident caused by conflagration in other building or structure - Fat, candles",Accident,Accidental Death,medium
+ICD-8 (1968-1978),8915,Accident caused by conflagration in other building or structure - Electrical equipment,Accident,Accidental Death,medium
+ICD-8 (1968-1978),8918,Accident caused by conflagration in other building or structure - Other specified causes,Accident,Accidental Death,medium
+ICD-8 (1968-1978),8919,Accident caused by conflagration in other building or structure - Unspecified,Accident,Accidental Death,medium
+ICD-8 (1968-1978),8920,"Accident caused by conflagration not in building or structure - Paraffin, petrol, methylated spirits",Accident,Accidental Death,medium
+ICD-8 (1968-1978),8921,"Accident caused by conflagration not in building or structure - Match, paper, cigarettes",Accident,Accidental Death,medium
+ICD-8 (1968-1978),8922,"Accident caused by conflagration not in building or structure - Coal, ash, solid fuel",Accident,Accidental Death,medium
+ICD-8 (1968-1978),8925,Accident caused by conflagration not in building or structure - Electrical equipment,Accident,Accidental Death,medium
+ICD-8 (1968-1978),8928,Accident caused by conflagration not in building or structure - Other specified causes,Accident,Accidental Death,medium
+ICD-8 (1968-1978),8929,Accident caused by conflagration not in building or structure - Unspecified,Accident,Accidental Death,medium
 ICD-8 (1968-1978),8930,"Accident caused by ignition of clothing - Paraffin, petrol, methylated spirits",Accident,Accidental Death,medium
 ICD-8 (1968-1978),8931,"Accident caused by ignition of clothing - Match, paper, cigarettes",Accident,Accidental Death,medium
 ICD-8 (1968-1978),8932,"Accident caused by ignition of clothing - Coal, ash, solid fuel",Accident,Accidental Death,medium
@@ -6515,27 +6515,27 @@ ICD-8 (1968-1978),9460,Late effect of other accidents - Late effect of other acc
 ICD-8 (1968-1978),9470,Late effect of surgical operation - Late effect of surgical operation,other,Other and Unclassified,low
 ICD-8 (1968-1978),9480,Late effect of irradiation - Late effect of irradiation,other,Other and Unclassified,low
 ICD-8 (1968-1978),9490,Late effect of other surgical and medical procedures - Late effect of other surgical and medical procedures,other,Other and Unclassified,low
-ICD-8 (1968-1978),9500,Suicide and self inflicted poisoning by solid or liquid substances - Suicide and self inflicted poisoning by solid or liquid substances,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-8 (1968-1978),9510,Suicide and self inflicted poisoning by gases in domestic use - Suicide and self inflicted poisoning by gases in domestic use,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-8 (1968-1978),9520,Suicide and self inflicted poisoning by other gases - Suicide and self inflicted poisoning by other gases,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-8 (1968-1978),9530,"Suicide and self inflicted injury by hanging, strangulation and suffocation - Suicide and self inflicted injury by hanging, strangulation and suffocation",injury_poisoning,"Injury, Poisoning and External Causes",high
-ICD-8 (1968-1978),9540,Suicide and self inflicted injury by submersion (drowning) - Suicide and self inflicted injury by submersion (drowning),injury_poisoning,"Injury, Poisoning and External Causes",high
-ICD-8 (1968-1978),9550,Suicide and self inflicted injury by firearms and explosives - Suicide and self inflicted injury by firearms and explosives,injury_poisoning,"Injury, Poisoning and External Causes",high
-ICD-8 (1968-1978),9560,Suicide and self inflicted injury by cutting and piercing instruments - Suicide and self inflicted injury by cutting and piercing instruments,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-8 (1968-1978),9570,Suicide and self inflicted injury by jumping from high place - Suicide and self inflicted injury by jumping from high place,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-8 (1968-1978),9580,Suicide and self inflicted injury by other and unspecified means - Suicide and self inflicted injury by other and unspecified means,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-8 (1968-1978),9590,Late effect of self-inflicted injury - Late effect of self-inflicted injury,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-8 (1968-1978),9600,"Fight, brawl, rape - Fight, brawl, rape",other,Other and Unclassified,low
-ICD-8 (1968-1978),9610,"Assault by corrosive or caustic substance, except poisoning - Assault by corrosive or caustic substance, except poisoning",injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-8 (1968-1978),9620,Assault by poisoning - Assault by poisoning,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-8 (1968-1978),9630,Assault by hanging and strangulation - Assault by hanging and strangulation,Homicide,Homicide and Assault,medium
-ICD-8 (1968-1978),9640,Assault by submersion (drowning) - Assault by submersion (drowning),injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-8 (1968-1978),9650,Assault by firearms and explosives - Assault by firearms and explosives,eye_ear,Diseases of Eye and Ear,medium
-ICD-8 (1968-1978),9660,Assault by cutting and piercing instruments - Assault by cutting and piercing instruments,Homicide,Homicide and Assault,medium
-ICD-8 (1968-1978),9670,Assault by pushing from high place - Assault by pushing from high place,Homicide,Homicide and Assault,medium
-ICD-8 (1968-1978),9680,Assault by other and unspecified means - Assault by other and unspecified means,Homicide,Homicide and Assault,medium
-ICD-8 (1968-1978),9690,Late effect of injury purposely inflicted by other person - Late effect of injury purposely inflicted by other person,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-8 (1968-1978),9700,Injury due to legal intervention by firearms - Injury due to legal intervention by firearms,injury_poisoning,"Injury, Poisoning and External Causes",high
+ICD-8 (1968-1978),9500,Suicide and self inflicted poisoning by solid or liquid substances - Suicide and self inflicted poisoning by solid or liquid substances,Suicide,Suicide and Self-Inflicted Injury,override
+ICD-8 (1968-1978),9510,Suicide and self inflicted poisoning by gases in domestic use - Suicide and self inflicted poisoning by gases in domestic use,Suicide,Suicide and Self-Inflicted Injury,override
+ICD-8 (1968-1978),9520,Suicide and self inflicted poisoning by other gases - Suicide and self inflicted poisoning by other gases,Suicide,Suicide and Self-Inflicted Injury,override
+ICD-8 (1968-1978),9530,"Suicide and self inflicted injury by hanging, strangulation and suffocation - Suicide and self inflicted injury by hanging, strangulation and suffocation",Suicide,Suicide and Self-Inflicted Injury,override
+ICD-8 (1968-1978),9540,Suicide and self inflicted injury by submersion (drowning) - Suicide and self inflicted injury by submersion (drowning),Suicide,Suicide and Self-Inflicted Injury,override
+ICD-8 (1968-1978),9550,Suicide and self inflicted injury by firearms and explosives - Suicide and self inflicted injury by firearms and explosives,Suicide,Suicide and Self-Inflicted Injury,override
+ICD-8 (1968-1978),9560,Suicide and self inflicted injury by cutting and piercing instruments - Suicide and self inflicted injury by cutting and piercing instruments,Suicide,Suicide and Self-Inflicted Injury,override
+ICD-8 (1968-1978),9570,Suicide and self inflicted injury by jumping from high place - Suicide and self inflicted injury by jumping from high place,Suicide,Suicide and Self-Inflicted Injury,override
+ICD-8 (1968-1978),9580,Suicide and self inflicted injury by other and unspecified means - Suicide and self inflicted injury by other and unspecified means,Suicide,Suicide and Self-Inflicted Injury,override
+ICD-8 (1968-1978),9590,Late effect of self-inflicted injury - Late effect of self-inflicted injury,Suicide,Suicide and Self-Inflicted Injury,override
+ICD-8 (1968-1978),9600,"Fight, brawl, rape - Fight, brawl, rape",Homicide,Homicide and Assault,override
+ICD-8 (1968-1978),9610,"Assault by corrosive or caustic substance, except poisoning - Assault by corrosive or caustic substance, except poisoning",Homicide,Homicide and Assault,override
+ICD-8 (1968-1978),9620,Assault by poisoning - Assault by poisoning,Homicide,Homicide and Assault,override
+ICD-8 (1968-1978),9630,Assault by hanging and strangulation - Assault by hanging and strangulation,Homicide,Homicide and Assault,override
+ICD-8 (1968-1978),9640,Assault by submersion (drowning) - Assault by submersion (drowning),Homicide,Homicide and Assault,override
+ICD-8 (1968-1978),9650,Assault by firearms and explosives - Assault by firearms and explosives,Homicide,Homicide and Assault,override
+ICD-8 (1968-1978),9660,Assault by cutting and piercing instruments - Assault by cutting and piercing instruments,Homicide,Homicide and Assault,override
+ICD-8 (1968-1978),9670,Assault by pushing from high place - Assault by pushing from high place,Homicide,Homicide and Assault,override
+ICD-8 (1968-1978),9680,Assault by other and unspecified means - Assault by other and unspecified means,Homicide,Homicide and Assault,override
+ICD-8 (1968-1978),9690,Late effect of injury purposely inflicted by other person - Late effect of injury purposely inflicted by other person,Homicide,Homicide and Assault,override
+ICD-8 (1968-1978),9700,Injury due to legal intervention by firearms - Injury due to legal intervention by firearms,Homicide,Homicide and Assault,override
 ICD-8 (1968-1978),9800,"Poisoning by solid or liquid substances, undetermined whether accidental or purposely inflicted - Poisoning by solid or liquid substances, undetermined whether accidental or purposely inflicted",injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-8 (1968-1978),9810,"Poisoning by gases in domestic use, undetermined whether accidental or purposely inflicted - Poisoning by gases in domestic use, undetermined whether accidental or purposely inflicted",injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-8 (1968-1978),9820,"Poisoning by other gases, undetermined whether accidental or purposely inflicted - Poisoning by other gases, undetermined whether accidental or purposely inflicted",injury_poisoning,"Injury, Poisoning and External Causes",medium
@@ -6546,10 +6546,10 @@ ICD-8 (1968-1978),9860,"Injury by cutting and piercing instruments, undetermined
 ICD-8 (1968-1978),9870,"Falling from high place, undetermined whether accidental or purposely inflicted - Falling from high place, undetermined whether accidental or purposely inflicted",injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-8 (1968-1978),9880,"Injury by other and unspecified means, undetermined whether accidental or purposely inflicted - Injury by other and unspecified means, undetermined whether accidental or purposely inflicted",injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-8 (1968-1978),9890,"Late effect of injury, undetermined whether accidental or purposely inflicted - Late effect of injury, undetermined whether accidental or purposely inflicted",injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-8 (1968-1978),9900,Injury due to war operations by fires and conflagrations - Injury due to war operations by fires and conflagrations,injury_poisoning,"Injury, Poisoning and External Causes",high
-ICD-8 (1968-1978),9910,Injury due to war operations by bullets and fragments - Injury due to war operations by bullets and fragments,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-8 (1968-1978),9930,Injury due to war operations by other explosion - Injury due to war operations by other explosion,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-8 (1968-1978),9940,Injury due to war operations by destruction of aircraft - Injury due to war operations by destruction of aircraft,injury_poisoning,"Injury, Poisoning and External Causes",medium
+ICD-8 (1968-1978),9900,Injury due to war operations by fires and conflagrations - Injury due to war operations by fires and conflagrations,War,War and War-Related Deaths,override
+ICD-8 (1968-1978),9910,Injury due to war operations by bullets and fragments - Injury due to war operations by bullets and fragments,War,War and War-Related Deaths,override
+ICD-8 (1968-1978),9930,Injury due to war operations by other explosion - Injury due to war operations by other explosion,War,War and War-Related Deaths,override
+ICD-8 (1968-1978),9940,Injury due to war operations by destruction of aircraft - Injury due to war operations by destruction of aircraft,War,War and War-Related Deaths,override
 ICD-8 (1968-1978),9990,Late effect of injury due to war operations - Late effect of injury due to war operations,War,War and War-Related Deaths,override
 ICD-9a (1979-1984),19,,,,
 ICD-9a (1979-1984),20,,,,
@@ -9242,18 +9242,18 @@ ICD-9a (1979-1984),8860,"Fall on same level from collision, pushing or shoving, 
 ICD-9a (1979-1984),8869,"Fall on same level from collision, pushing or shoving, by or with other person - Other and unspecified",injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-9a (1979-1984),8870,"Fracture, cause unspecified - Fracture, cause unspecified",injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-9a (1979-1984),8880,Other and unspecified fall - Other and unspecified fall,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-9a (1979-1984),8900,Conflagration in private dwelling - Explosion caused by conflagration,Accident,Accidental Death,medium
-ICD-9a (1979-1984),8901,Conflagration in private dwelling - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,Accident,Accidental Death,medium
-ICD-9a (1979-1984),8902,Conflagration in private dwelling - Other smoke and fumes from conflagration,Accident,Accidental Death,medium
+ICD-9a (1979-1984),8900,Conflagration in private dwelling - Explosion caused by conflagration,other,Other and Unclassified,low
+ICD-9a (1979-1984),8901,Conflagration in private dwelling - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,other,Other and Unclassified,low
+ICD-9a (1979-1984),8902,Conflagration in private dwelling - Other smoke and fumes from conflagration,other,Other and Unclassified,low
 ICD-9a (1979-1984),8903,Conflagration in private dwelling - Burning caused by conflagration,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-9a (1979-1984),8908,Conflagration in private dwelling - Other accident resulting from conflagration,Accident,Accidental Death,high
-ICD-9a (1979-1984),8909,Conflagration in private dwelling - Unspecified,Accident,Accidental Death,medium
-ICD-9a (1979-1984),8910,Conflagration in other and unspecified building or structure - Explosion caused by conflagration,Accident,Accidental Death,medium
-ICD-9a (1979-1984),8912,Conflagration in other and unspecified building or structure - Other smoke and fumes from conflagration,Accident,Accidental Death,medium
+ICD-9a (1979-1984),8908,Conflagration in private dwelling - Other accident resulting from conflagration,Accident,Accidental Death,medium
+ICD-9a (1979-1984),8909,Conflagration in private dwelling - Unspecified,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+ICD-9a (1979-1984),8910,Conflagration in other and unspecified building or structure - Explosion caused by conflagration,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+ICD-9a (1979-1984),8912,Conflagration in other and unspecified building or structure - Other smoke and fumes from conflagration,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
 ICD-9a (1979-1984),8913,Conflagration in other and unspecified building or structure - Burning caused by conflagration,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-9a (1979-1984),8918,Conflagration in other and unspecified building or structure - Other accident resulting from conflagration,Accident,Accidental Death,high
-ICD-9a (1979-1984),8919,Conflagration in other and unspecified building or structure - Unspecified,Accident,Accidental Death,medium
-ICD-9a (1979-1984),8920,Conflagration not in building or structure - Conflagration not in building or structure,Accident,Accidental Death,medium
+ICD-9a (1979-1984),8918,Conflagration in other and unspecified building or structure - Other accident resulting from conflagration,Accident,Accidental Death,medium
+ICD-9a (1979-1984),8919,Conflagration in other and unspecified building or structure - Unspecified,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+ICD-9a (1979-1984),8920,Conflagration not in building or structure - Conflagration not in building or structure,other,Other and Unclassified,low
 ICD-9a (1979-1984),8930,Accident caused by ignition of clothing - From controlled fire in private dwelling,injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-9a (1979-1984),8931,Accident caused by ignition of clothing - From controlled fire in other building or structure,injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-9a (1979-1984),8932,Accident caused by ignition of clothing - From controlled fire not in building or structure,injury_poisoning,"Injury, Poisoning and External Causes",medium
@@ -12361,19 +12361,19 @@ ICD-9b (1985-1993),8860,"Fall on same level from collision, pushing or shoving, 
 ICD-9b (1985-1993),8869,"Fall on same level from collision, pushing or shoving, by or with other person - Other and unspecified",injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-9b (1985-1993),8870,"Fracture, cause unspecified - Fracture, cause unspecified",injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-9b (1985-1993),8880,Other and unspecified fall - Other and unspecified fall,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-9b (1985-1993),8900,Conflagration in private dwelling - Explosion caused by conflagration,Accident,Accidental Death,medium
-ICD-9b (1985-1993),8901,Conflagration in private dwelling - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,Accident,Accidental Death,medium
-ICD-9b (1985-1993),8902,Conflagration in private dwelling - Other smoke and fumes from conflagration,Accident,Accidental Death,medium
+ICD-9b (1985-1993),8900,Conflagration in private dwelling - Explosion caused by conflagration,other,Other and Unclassified,low
+ICD-9b (1985-1993),8901,Conflagration in private dwelling - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,other,Other and Unclassified,low
+ICD-9b (1985-1993),8902,Conflagration in private dwelling - Other smoke and fumes from conflagration,other,Other and Unclassified,low
 ICD-9b (1985-1993),8903,Conflagration in private dwelling - Burning caused by conflagration,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-9b (1985-1993),8908,Conflagration in private dwelling - Other accident resulting from conflagration,Accident,Accidental Death,high
-ICD-9b (1985-1993),8909,Conflagration in private dwelling - Unspecified,Accident,Accidental Death,medium
-ICD-9b (1985-1993),8910,Conflagration in other and unspecified building or structure - Explosion caused by conflagration,Accident,Accidental Death,medium
-ICD-9b (1985-1993),8911,Conflagration in other and unspecified building or structure - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,Accident,Accidental Death,medium
-ICD-9b (1985-1993),8912,Conflagration in other and unspecified building or structure - Other smoke and fumes from conflagration,Accident,Accidental Death,medium
+ICD-9b (1985-1993),8908,Conflagration in private dwelling - Other accident resulting from conflagration,Accident,Accidental Death,medium
+ICD-9b (1985-1993),8909,Conflagration in private dwelling - Unspecified,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+ICD-9b (1985-1993),8910,Conflagration in other and unspecified building or structure - Explosion caused by conflagration,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+ICD-9b (1985-1993),8911,Conflagration in other and unspecified building or structure - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+ICD-9b (1985-1993),8912,Conflagration in other and unspecified building or structure - Other smoke and fumes from conflagration,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
 ICD-9b (1985-1993),8913,Conflagration in other and unspecified building or structure - Burning caused by conflagration,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-9b (1985-1993),8918,Conflagration in other and unspecified building or structure - Other accident resulting from conflagration,Accident,Accidental Death,high
-ICD-9b (1985-1993),8919,Conflagration in other and unspecified building or structure - Unspecified,Accident,Accidental Death,medium
-ICD-9b (1985-1993),8920,Conflagration not in building or structure - Conflagration not in building or structure,Accident,Accidental Death,medium
+ICD-9b (1985-1993),8918,Conflagration in other and unspecified building or structure - Other accident resulting from conflagration,Accident,Accidental Death,medium
+ICD-9b (1985-1993),8919,Conflagration in other and unspecified building or structure - Unspecified,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+ICD-9b (1985-1993),8920,Conflagration not in building or structure - Conflagration not in building or structure,other,Other and Unclassified,low
 ICD-9b (1985-1993),8930,Accident caused by ignition of clothing - From controlled fire in private dwelling,injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-9b (1985-1993),8931,Accident caused by ignition of clothing - From controlled fire in other building or structure,injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-9b (1985-1993),8932,Accident caused by ignition of clothing - From controlled fire not in building or structure,injury_poisoning,"Injury, Poisoning and External Causes",medium
@@ -15028,17 +15028,17 @@ ICD-9c (1994-2000),8860,"Fall on same level from collision, pushing or shoving, 
 ICD-9c (1994-2000),8869,"Fall on same level from collision, pushing or shoving, by or with other person - Other and unspecified",injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-9c (1994-2000),8870,"Fracture, cause unspecified - Fracture, cause unspecified",injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-9c (1994-2000),8880,Other and unspecified fall - Other and unspecified fall,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-9c (1994-2000),8900,Conflagration in private dwelling - Explosion caused by conflagration,Accident,Accidental Death,medium
-ICD-9c (1994-2000),8901,Conflagration in private dwelling - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,Accident,Accidental Death,medium
-ICD-9c (1994-2000),8902,Conflagration in private dwelling - Other smoke and fumes from conflagration,Accident,Accidental Death,medium
+ICD-9c (1994-2000),8900,Conflagration in private dwelling - Explosion caused by conflagration,other,Other and Unclassified,low
+ICD-9c (1994-2000),8901,Conflagration in private dwelling - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,other,Other and Unclassified,low
+ICD-9c (1994-2000),8902,Conflagration in private dwelling - Other smoke and fumes from conflagration,other,Other and Unclassified,low
 ICD-9c (1994-2000),8903,Conflagration in private dwelling - Burning caused by conflagration,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-9c (1994-2000),8908,Conflagration in private dwelling - Other accident resulting from conflagration,Accident,Accidental Death,high
-ICD-9c (1994-2000),8909,Conflagration in private dwelling - Unspecified,Accident,Accidental Death,medium
-ICD-9c (1994-2000),8911,Conflagration in other and unspecified building or structure - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,Accident,Accidental Death,medium
-ICD-9c (1994-2000),8912,Conflagration in other and unspecified building or structure - Other smoke and fumes from conflagration,Accident,Accidental Death,medium
+ICD-9c (1994-2000),8908,Conflagration in private dwelling - Other accident resulting from conflagration,Accident,Accidental Death,medium
+ICD-9c (1994-2000),8909,Conflagration in private dwelling - Unspecified,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+ICD-9c (1994-2000),8911,Conflagration in other and unspecified building or structure - Fumes from combustion of polyvinylchloride [PVC] and similar material in conflagration,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+ICD-9c (1994-2000),8912,Conflagration in other and unspecified building or structure - Other smoke and fumes from conflagration,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
 ICD-9c (1994-2000),8913,Conflagration in other and unspecified building or structure - Burning caused by conflagration,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-9c (1994-2000),8919,Conflagration in other and unspecified building or structure - Unspecified,Accident,Accidental Death,medium
-ICD-9c (1994-2000),8920,Conflagration not in building or structure - Conflagration not in building or structure,Accident,Accidental Death,medium
+ICD-9c (1994-2000),8919,Conflagration in other and unspecified building or structure - Unspecified,ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
+ICD-9c (1994-2000),8920,Conflagration not in building or structure - Conflagration not in building or structure,other,Other and Unclassified,low
 ICD-9c (1994-2000),8930,Accident caused by ignition of clothing - From controlled fire in private dwelling,injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-9c (1994-2000),8931,Accident caused by ignition of clothing - From controlled fire in other building or structure,injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-9c (1994-2000),8932,Accident caused by ignition of clothing - From controlled fire not in building or structure,injury_poisoning,"Injury, Poisoning and External Causes",medium

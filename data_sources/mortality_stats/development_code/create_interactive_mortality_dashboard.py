@@ -8,15 +8,16 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import numpy as np
 from pathlib import Path
+import zipfile
 
 # Paths
 BASE_DIR = Path(__file__).parent.parent
 REPO_ROOT = BASE_DIR.parent.parent
 OUTPUT_DIR = REPO_ROOT / "generated_charts"
-# Prefer rebuilt harmonized file from archive, fallback to previous comprehensive harmonized
-PREFERRED = BASE_DIR / "uk_mortality_by_cause_1901_2000_harmonized.csv"
-FALLBACK = BASE_DIR / "uk_mortality_comprehensive_1901_2025_harmonized.csv"
-DATA_FILE = PREFERRED if PREFERRED.exists() else FALLBACK
+# Prefer rebuilt harmonized file from archive (ZIP), then CSV; final fallback: comprehensive harmonized CSV
+PREFERRED_ZIP = BASE_DIR / "uk_mortality_by_cause_1901_2000_harmonized.zip"
+PREFERRED_CSV = BASE_DIR / "uk_mortality_by_cause_1901_2000_harmonized.csv"
+FALLBACK_CSV = BASE_DIR / "uk_mortality_comprehensive_1901_2025_harmonized.csv"
 
 # UK population estimates (approximations for rate calculation)
 # Source: ONS historical population data
@@ -53,10 +54,35 @@ def interpolate_population(year):
     return POPULATION_ESTIMATES[years[-1]]
 
 
+def _read_csv_from_zip(zip_path: Path, inner_name: str = None) -> pd.DataFrame:
+    """Read a single CSV from a zip file. If inner_name is None, use the first .csv inside."""
+    with zipfile.ZipFile(zip_path, 'r') as zf:
+        name = inner_name
+        if name is None:
+            # choose the first csv entry
+            candidates = [n for n in zf.namelist() if n.lower().endswith('.csv')]
+            if not candidates:
+                raise FileNotFoundError(f"No CSV found inside {zip_path}")
+            name = candidates[0]
+        with zf.open(name) as f:
+            return pd.read_csv(f)
+
+
 def load_and_prepare_data():
     """Load mortality data and calculate rates per 100k."""
     print("Loading data...")
-    df = pd.read_csv(DATA_FILE)
+    # Loading preference: ZIP (preferred), then CSV, then comprehensive fallback
+    if PREFERRED_ZIP.exists():
+        df = _read_csv_from_zip(PREFERRED_ZIP)
+    elif PREFERRED_CSV.exists():
+        df = pd.read_csv(PREFERRED_CSV)
+    elif FALLBACK_CSV.exists():
+        df = pd.read_csv(FALLBACK_CSV)
+    else:
+        raise FileNotFoundError(
+            "No harmonized dataset found. Expected one of: "
+            f"{PREFERRED_ZIP.name}, {PREFERRED_CSV.name}, {FALLBACK_CSV.name}"
+        )
 
     # Calculate population for each year
     df["population"] = df["year"].apply(interpolate_population)
