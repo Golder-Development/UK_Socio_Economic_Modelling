@@ -463,6 +463,55 @@ HARMONIZED_CATEGORIES = {
             "executions of civilians by belligerent armies"
         ],
     },
+    "Suicide": {
+        "name": "Suicide and Self-Inflicted Injury",
+        "keywords": [
+            "suicide",
+        ],
+    },
+    "Accident": {
+        "name": "Accidental Death",
+        "keywords": [
+            "accident",
+        ],
+    },
+    "Homicide": {
+        "name": "Homicide and Assault",
+        "keywords": [
+            "homicide",
+            "violence",
+            "assault",
+            "weapon",
+        ],
+    },
+    "Legal Drugs": {
+        "name": "Legal Drug-Related Deaths",
+        "keywords": [
+            "tobacco",
+            "alcohol",
+            "alcohol dependence syndrome",
+            "alcoholism",
+            "alcoholic psychoses",
+        ],
+    },
+    "Drugs": {
+        "name": "Drug-Related Deaths",
+        "keywords": [
+            "overdose",
+            "drug dependence",
+            'opium',
+            "drug psychoses",
+            "nonedependent abuse of drugs"
+        ],
+    },
+    "War": {
+        "name": "War and War-Related Deaths",
+        "keywords": [
+            "battle",
+            "war ",
+        ],
+    },
+
     "ill_defined": {
         "name": "Symptoms, Signs and Ill-Defined Conditions",
         "keywords": [

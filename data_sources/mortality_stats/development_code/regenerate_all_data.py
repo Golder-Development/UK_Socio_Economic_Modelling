@@ -36,7 +36,11 @@ def get_parent_dir():
 
 
 def run_script(script_name, description, verbose=False):
+<<<<<<< HEAD
     """Run a Python script within development_code and report status."""
+=======
+    """Run a Python script and report status."""
+>>>>>>> 4fa00e8f3ec7f689d6bcf43568e2fdba6c8bbd6a
     script_path = get_script_dir() / script_name
     
     print(f"\n{'='*70}")
@@ -75,6 +79,7 @@ def run_script(script_name, description, verbose=False):
         print(f"❌ Exception running {script_name}: {e}")
         return False
 
+<<<<<<< HEAD
 
 def run_parent_script(script_rel_path, description, verbose=False):
     """Run a Python script located in the parent mortality_stats directory."""
@@ -112,6 +117,8 @@ def run_parent_script(script_rel_path, description, verbose=False):
         print(f"❌ Exception running {script_path.name}: {e}")
         return False
 
+=======
+>>>>>>> 4fa00e8f3ec7f689d6bcf43568e2fdba6c8bbd6a
 def summarize_harmonized_output():
     """Print a quick summary of the harmonized output to verify categories."""
     try:

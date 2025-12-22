@@ -426,3 +426,4 @@ code,icd_version,harmonized_category,harmonized_category_name,classification_con
 191,ICD-3 (1921-1930),War,War and War-Related Deaths,override
 25(3),ICD-3 (1921-1930),infectious_diseases,Infectious and Parasitic Diseases,override
 42(2),ICD-3 (1921-1930),infectious_diseases,Infectious and Parasitic Diseases,override
+9740,ICD-9c (1994-2000),Homicide,Homicide and Assault,override
