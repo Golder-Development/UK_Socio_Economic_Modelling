@@ -7,6 +7,7 @@ code,icd_version,harmonized_category,harmonized_category_name,classification_con
 1880.0,ICD-1 (1901-1910),War,War and War-Related Deaths,override
 1890.0,ICD-1 (1901-1910),Homicide,Homicide and Assault,override
 1900.0,ICD-1 (1901-1910),Suicide,Suicide and Self-Inflicted Injury,override
+1910.0,ICD-1 (1901-1910),Homicide,Homicide and Assault,override
 590.0,ICD-1 (1901-1910),Drugs,Drug-Related Deaths,override
 113B,ICD-2 (1911-1920),Legal Drugs,Legal Drug-Related Deaths,override
 155,ICD-2 (1911-1920),Suicide,Suicide and Self-Inflicted Injury,override
@@ -31,7 +32,9 @@ code,icd_version,harmonized_category,harmonized_category_name,classification_con
 124(a),ICD-4 (1931-1939),Legal Drugs,Legal Drug-Related Deaths,override
 124a,ICD-5 (1940-1949),Legal Drugs,Legal Drug-Related Deaths,override
 77,ICD-5 (1940-1949),Legal Drugs,Legal Drug-Related Deaths,override
+196,ICD-5 (1940-1949),War,War and War-Related Deaths,override
 197,ICD-5 (1940-1949),War,War and War-Related Deaths,override
+197,ICD-5 (1940-1949),Homicide,Homicide and Assault,override
 9650,ICD-6 (1950-1957),War,War and War-Related Deaths,override
 3070,ICD-6 (1950-1957),Legal Drugs,Legal Drug-Related Deaths,override
 9700,ICD-6 (1950-1957),Suicide,Suicide and Self-Inflicted Injury,override

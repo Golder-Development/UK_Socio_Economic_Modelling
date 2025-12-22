@@ -78,8 +78,9 @@ def main():
     # Normalize cause codes to align with description code formats per ICD version
     def normalize_code(val, version):
         s = str(val).strip()
-        if version.startswith("ICD-1"):
-            # ICD-1 descriptions use integers with trailing .0 (e.g., 10.0, 20.0)
+
+        if version.startswith(("ICD-1", "ICD-2", "ICD-3", "ICD-4", "ICD-5")):
+            # ICD-1 to ICD-5: integer codes are stored with a trailing .0 in source definitions
             try:
                 f = float(s)
                 if f.is_integer():
@@ -87,7 +88,8 @@ def main():
                 return s
             except ValueError:
                 return s
-        elif version.startswith(("ICD-6", "ICD-7", "ICD-8", "ICD-9")):
+
+        if version.startswith(("ICD-6", "ICD-7", "ICD-8", "ICD-9")):
             # ICD-6 onwards use zero-padded codes: 10.0 → "0010", 1000.0 → "1000"
             try:
                 f = float(s)
@@ -99,7 +101,8 @@ def main():
                 return s
             except ValueError:
                 return s
-        # ICD-2 through ICD-5 use simple integer or alphanumeric codes
+
+        # Fallback: leave string as-is for unexpected versions
         return s
 
     df['cause'] = df.apply(lambda r: normalize_code(r['cause'], r['icd_version']), axis=1)
@@ -112,6 +115,9 @@ def main():
     
     # Merge with year-aware matching (code + ICD version)
     logger.info("Merging descriptions (year-aware)...")
+    # Drop any existing cause_description to avoid duplicate-name DataFrame results
+    if 'cause_description' in df.columns:
+        df = df.drop(columns=['cause_description'])
     df = df.merge(
         desc_df[['code', 'icd_version', 'description']],
         left_on=['cause', 'icd_version'],
@@ -121,8 +127,8 @@ def main():
     df = df.rename(columns={'description': 'cause_description'})
     df = df.drop(columns=['code'], errors='ignore')
     
-    matched = df['cause_description'].notna().sum()
-    total = len(df)
+    matched = int(df['cause_description'].notna().sum())
+    total = int(len(df))
     match_rate = (matched / total) * 100
     logger.info(f"Description match rate: {matched:,} / {total:,} ({match_rate:.1f}%)")
     
