@@ -7,6 +7,7 @@ import xlrd
 import pandas as pd
 from pathlib import Path
 import logging
+import sys
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
@@ -14,7 +15,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 DATA_DIR = Path(__file__).parent
-ONS_DOWNLOADS = DATA_DIR / "ons_downloads" / "extracted"
+# Correct location for ONS extracted Excel files is the parent mortality_stats folder
+ONS_DOWNLOADS = DATA_DIR.parent / "ons_downloads" / "extracted"
 
 
 def extract_descriptions_from_xls(filepath):
@@ -209,15 +211,31 @@ def build_code_description_mapping():
 
 
 def main():
+    # If an existing mapping is present, skip rebuild (idempotent prerequisite)
+    # Write outputs to parent mortality_stats folder so downstream scripts find them
+    output_file = DATA_DIR.parent / "icd_code_descriptions.csv"
+    simplified_output = DATA_DIR.parent / "icd_code_descriptions_simplified.csv"
+    if output_file.exists() and simplified_output.exists():
+        try:
+            existing = pd.read_csv(output_file)
+            if not existing.empty:
+                logger.info(
+                    f"Existing code descriptions found ({len(existing):,} rows). Skipping rebuild."
+                )
+                sys.exit(0)
+        except Exception:
+            # If unreadable, continue to rebuild
+            pass
+
     # Build the mapping
     descriptions_df = build_code_description_mapping()
 
     if descriptions_df.empty:
-        logger.error("Failed to build description mapping")
-        return
+        logger.error("Failed to build description mapping (no input files found)")
+        # Fail hard so orchestrator reports the step as failed
+        sys.exit(1)
 
     # Save to CSV
-    output_file = DATA_DIR / "icd_code_descriptions.csv"
     descriptions_df.to_csv(output_file, index=False)
     logger.info(f"\n✓ Saved code descriptions to: {output_file}")
 
@@ -226,7 +244,6 @@ def main():
     simplified = descriptions_df.sort_values(
         "source_file", ascending=False
     ).drop_duplicates(subset=["code"], keep="first")
-    simplified_output = DATA_DIR / "icd_code_descriptions_simplified.csv"
     simplified[["code", "description"]].to_csv(simplified_output, index=False)
     logger.info(f"✓ Saved simplified mapping to: {simplified_output}")
     logger.info(f"  ({len(simplified):,} unique codes)")
