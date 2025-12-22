@@ -21,7 +21,7 @@ accident,Accidental Death,2840,"accident, conflagration, lightening, electricity
 homicide,Homicide and Assault,400,"homicide, violence, assault, weapon, hit, struck, kicked by another person, external causes - intentionalexecution, violent deaths of unstated nature"
 legal_drugs,Legal Drug-Related Deaths,169,"tobacco, alcohol, alcohol dependence syndrome, alcoholism, alcoholic psychoses, nicotine, alcoholic liver disease"
 drugs,Drug-Related Deaths,63,"overdose, drug dependence, opium, drug psychoses, nonedependent abuse of drugs"
-war,War and Conflict-Related Deaths,476,"battle, war , executions of civilians by belligerent armies, terrorism, war operations"
+war,War and War-Related Deaths,476,"battle, war , executions of civilians by belligerent armies, terrorism, war operations"
 suicide,Suicide and Self-Inflicted Injury,54,"suicide, self-inflicted, self harm, intentional self-harm by jumping from a high place"
 ill_defined,"Symptoms, Signs and Ill-Defined Conditions",5871,"symptom, sign, ill-defined, unknown, unspecified, senility, old age, debility, sudden death, found dead"
 other,Other and Unclassified,18200,

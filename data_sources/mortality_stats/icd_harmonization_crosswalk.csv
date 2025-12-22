@@ -5703,7 +5703,7 @@ ICD-2 (1911-1920),182.0,,Homicide,Homicide and Assault,override
 ICD-2 (1911-1920),183.0,,Homicide,Homicide and Assault,override
 ICD-2 (1911-1920),184.0,,Homicide,Homicide and Assault,override
 ICD-2 (1911-1920),185.0,,injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-2 (1911-1920),186.0,,Homicide,Homicide and Assault,override
+ICD-2 (1911-1920),186.0,,War,War and War-Related Deaths,override
 ICD-2 (1911-1920),187.0,,accident,Accidental Death,medium
 ICD-2 (1911-1920),188A,Syncope (>1 & <70),other,Other and Unclassified,low
 ICD-2 (1911-1920),188B,Sudden death (not otherwise def.),ill_defined,"Symptoms, Signs and Ill-Defined Conditions",medium
@@ -9867,12 +9867,12 @@ ICD-7 (1958-1967),9810,Assault by firearms and explosive - Assault by firearms a
 ICD-7 (1958-1967),9820,Assault by cutting and piercing instruments - Assault by cutting and piercing instruments,Homicide,Homicide and Assault,override
 ICD-7 (1958-1967),9830,Assault by other means - Assault by other means,Homicide,Homicide and Assault,override
 ICD-7 (1958-1967),9850,Execution - Execution,other,Other and Unclassified,low
-ICD-7 (1958-1967),9900,Injury due to war operations by gas and chemicals - Injury due to war operations by gas and chemicals,war,War and Conflict-Related Deaths,high
-ICD-7 (1958-1967),9910,Injury due to war operations by gunshot - Injury due to war operations by gunshot,war,War and Conflict-Related Deaths,high
-ICD-7 (1958-1967),9920,Injury due to war operations by grenade and land mine - Injury due to war operations by grenade and land mine,war,War and Conflict-Related Deaths,high
-ICD-7 (1958-1967),9970,Injury due to war operations by aircraft destruction - Injury due to war operations by aircraft destruction,war,War and Conflict-Related Deaths,high
-ICD-7 (1958-1967),9980,Injury due to war operations by other and unspecified means - Injury due to war operations by other and unspecified means,war,War and Conflict-Related Deaths,high
-ICD-7 (1958-1967),9990,Injury due to war operations but occurring after cessation of hostilities - Injury due to war operations but occurring after cessation of hostilities,war,War and Conflict-Related Deaths,high
+ICD-7 (1958-1967),9900,Injury due to war operations by gas and chemicals - Injury due to war operations by gas and chemicals,war,War and War-Related Deaths,high
+ICD-7 (1958-1967),9910,Injury due to war operations by gunshot - Injury due to war operations by gunshot,war,War and War-Related Deaths,high
+ICD-7 (1958-1967),9920,Injury due to war operations by grenade and land mine - Injury due to war operations by grenade and land mine,war,War and War-Related Deaths,high
+ICD-7 (1958-1967),9970,Injury due to war operations by aircraft destruction - Injury due to war operations by aircraft destruction,war,War and War-Related Deaths,high
+ICD-7 (1958-1967),9980,Injury due to war operations by other and unspecified means - Injury due to war operations by other and unspecified means,war,War and War-Related Deaths,high
+ICD-7 (1958-1967),9990,Injury due to war operations but occurring after cessation of hostilities - Injury due to war operations but occurring after cessation of hostilities,war,War and War-Related Deaths,high
 ICD-8 (1968-1978),10,Typhoid fever - Typhoid fever,infectious_diseases,Infectious and Parasitic Diseases,high
 ICD-8 (1968-1978),21,Paratyphoid fever - Paratyphoid fever B,infectious_diseases,Infectious and Parasitic Diseases,high
 ICD-8 (1968-1978),29,"Paratyphoid fever - Paratyphoid fever, unspecified",infectious_diseases,Infectious and Parasitic Diseases,high
@@ -18002,7 +18002,7 @@ ICD-9b (1985-1993),9888,"Injury by other or unspecified means, undetermined whet
 ICD-9b (1985-1993),9889,"Injury by other or unspecified means, undetermined whether accidentally or purposely inflicted - Unspecified means",injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-9b (1985-1993),9890,"Late effects of injury, undetermined whether accidentally or purposely inflicted - Late effects of injury, undetermined whether accidentally or purposely inflicted",injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-9b (1985-1993),9909,Injury due to war operations by fires and conflagrations - From other and unspecified sources,injury_poisoning,"Injury, Poisoning and External Causes",high
-ICD-9b (1985-1993),9940,Injury due to war operations by destruction of aircraft - Injury due to war operations by destruction of aircraft,war,War and Conflict-Related Deaths,high
+ICD-9b (1985-1993),9940,Injury due to war operations by destruction of aircraft - Injury due to war operations by destruction of aircraft,war,War and War-Related Deaths,high
 ICD-9b (1985-1993),9950,Injury due to war operations by other and unspecified forms of conventional warfare - Injury due to war operations by other and unspecified forms of conventional warfare,War,War and War-Related Deaths,override
 ICD-9b (1985-1993),9972,"Injury due to war operations by other forms of unconventional warfare - Gases, fumes and chemicals",War,War and War-Related Deaths,override
 ICD-9b (1985-1993),9990,Late effects of injury due to war operations - Late effects of injury due to war operations,War,War and War-Related Deaths,override
@@ -20732,4 +20732,4 @@ ICD-9c (1994-2000),9885,"Injury by other or unspecified means, undetermined whet
 ICD-9c (1994-2000),9888,"Injury by other or unspecified means, undetermined whether accidentally or purposely inflicted - Other specified means",injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-9c (1994-2000),9889,"Injury by other or unspecified means, undetermined whether accidentally or purposely inflicted - Unspecified means",injury_poisoning,"Injury, Poisoning and External Causes",medium
 ICD-9c (1994-2000),9890,"Late effects of injury, undetermined whether accidentally or purposely inflicted - Late effects of injury, undetermined whether accidentally or purposely inflicted",injury_poisoning,"Injury, Poisoning and External Causes",medium
-ICD-9c (1994-2000),9940,Injury due to war operations by destruction of aircraft - Injury due to war operations by destruction of aircraft,war,War and Conflict-Related Deaths,high
+ICD-9c (1994-2000),9940,Injury due to war operations by destruction of aircraft - Injury due to war operations by destruction of aircraft,war,War and War-Related Deaths,high

@@ -24,7 +24,7 @@ code,icd_version,harmonized_category,harmonized_category_name,classification_con
 182,ICD-2 (1911-1920),Homicide,Homicide and Assault,override
 183,ICD-2 (1911-1920),Homicide,Homicide and Assault,override
 184,ICD-2 (1911-1920),Homicide,Homicide and Assault,override
-186,ICD-2 (1911-1920),Homicide,Homicide and Assault,override
+186,ICD-2 (1911-1920),War,War and War-Related Deaths,override
 56,ICD-2 (1911-1920),Legal Drugs,Legal Drug-Related Deaths,override
 190,ICD-3 (1921-1930),War,War and War-Related Deaths,override
 122a,ICD-3 (1921-1930),Legal Drugs,Legal Drug-Related Deaths,override
@@ -483,8 +483,6 @@ code,icd_version,harmonized_category,harmonized_category_name,classification_con
 197,ICD-3 (1921-1930),Homicide,Homicide and Assault,override
 198,ICD-3 (1921-1930),Homicide,Homicide and Assault,override
 199,ICD-3 (1921-1930),Homicide,Homicide and Assault,override
-# ICD-10 Overrides (2001+)
-# Intentional self-harm (Suicide) - X60-X84
 X60,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
 X61,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
 X62,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override

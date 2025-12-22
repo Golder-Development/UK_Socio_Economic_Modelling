@@ -487,7 +487,7 @@ HARMONIZED_CATEGORIES = {
         ],
     },
     "war": {
-        "name": "War and Conflict-Related Deaths",
+        "name": "War and War-Related Deaths",
         "keywords": [
             "battle",
             "war ",
