@@ -1,0 +1,55 @@
+{
+  "icd_versions": [
+    { "name": "ICD-1", "label": "ICD-1 (1901-1910)", "start_year": 1901, "end_year": 1910 },
+    { "name": "ICD-2", "label": "ICD-2 (1911-1920)", "start_year": 1911, "end_year": 1920 },
+    { "name": "ICD-3", "label": "ICD-3 (1921-1930)", "start_year": 1921, "end_year": 1930 },
+    { "name": "ICD-4", "label": "ICD-4 (1931-1939)", "start_year": 1931, "end_year": 1939 },
+    { "name": "ICD-5", "label": "ICD-5 (1940-1949)", "start_year": 1940, "end_year": 1949 },
+    { "name": "ICD-6", "label": "ICD-6 (1950-1957)", "start_year": 1950, "end_year": 1957 },
+    { "name": "ICD-7", "label": "ICD-7 (1958-1967)", "start_year": 1958, "end_year": 1967 },
+    { "name": "ICD-8", "label": "ICD-8 (1968-1978)", "start_year": 1968, "end_year": 1978 },
+    { "name": "ICD-9a", "label": "ICD-9a (1979-1984)", "start_year": 1979, "end_year": 1984 },
+    { "name": "ICD-9b", "label": "ICD-9b (1985-1993)", "start_year": 1985, "end_year": 1993 },
+    { "name": "ICD-9c", "label": "ICD-9c (1994-2000)", "start_year": 1994, "end_year": 2000 },
+    { "name": "ICD-10", "label": "ICD-10 (2001-)", "start_year": 2001, "end_year": null }
+  ],
+  "additional_sources": [
+    {
+      "name": "compiled_mortality_2001_2019",
+      "path": "downloaded_sourcefiles/compiled_mortality_2001_2019.csv",
+      "format": "csv",
+      "icd_version": "ICD-10",
+      "year_column": "year",
+      "death_column": "deaths",
+      "sex_column": "sex",
+      "age_column": "age",
+      "cause_column": "cause",
+      "notes": "Existing compiled CSV; keep for backwards compatibility"
+    },
+    {
+      "name": "compiled_mortality_21c_2017",
+      "path": "downloaded_sourcefiles/compiled_mortality_21c_2017.csv",
+      "format": "csv",
+      "icd_version": "ICD-10",
+      "year_column": "year",
+      "death_column": "deaths",
+      "sex_column": "sex",
+      "age_column": "age",
+      "cause_column": "cause",
+      "notes": "Existing compiled CSV; keep for backwards compatibility"
+    },
+    {
+      "name": "post_2017_placeholder",
+      "path": "downloaded_sourcefiles/post_2017.xlsx",
+      "format": "excel",
+      "sheets": ["Data"],
+      "icd_version": "ICD-10",
+      "year_column": "year",
+      "death_column": "deaths",
+      "sex_column": "sex",
+      "age_column": "age",
+      "cause_column": "cause",
+      "notes": "Add future post-2017 data here; multiple sheets allowed"
+    }
+  ]
+}

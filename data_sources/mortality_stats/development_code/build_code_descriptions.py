@@ -9,6 +9,14 @@ from pathlib import Path
 import logging
 import sys
 
+# Import ICD-10 reference helper
+try:
+    from icd10_reference import get_icd10_description
+except ImportError:
+    # Fallback if import fails
+    def get_icd10_description(code):
+        return f'ICD-10 {code}'
+
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
@@ -17,6 +25,7 @@ logger = logging.getLogger(__name__)
 DATA_DIR = Path(__file__).parent
 # Correct location for ONS extracted Excel files is the parent mortality_stats folder
 ONS_DOWNLOADS = DATA_DIR.parent / "ons_downloads" / "extracted"
+DOWNLOADED_SOURCES = DATA_DIR / "downloaded_sourcefiles"
 
 
 def extract_descriptions_from_xls(filepath):
@@ -147,6 +156,55 @@ def standardize_description_columns(df, source_file):
     return df
 
 
+def extract_icd10_codes_from_data():
+    """Extract unique ICD-10 codes from 21st century mortality data and create basic descriptions."""
+    logger.info("\nExtracting ICD-10 codes from 21st century data...")
+    
+    # Try to load the compiled CSV with ICD-10 codes
+    icd10_files = [
+        DOWNLOADED_SOURCES / "compiled_mortality_21c_2017.csv",
+        DATA_DIR / "compiled_mortality_2001_2019.csv",
+    ]
+    
+    all_codes = set()
+    for filepath in icd10_files:
+        if filepath.exists():
+            try:
+                df = pd.read_csv(filepath, low_memory=False)
+                if 'ICD-10' in df.columns:
+                    codes = df['ICD-10'].dropna().astype(str).str.strip()
+                    all_codes.update(codes.unique())
+                    logger.info(f"  Found {len(codes.unique())} unique ICD-10 codes in {filepath.name}")
+                elif 'icd-10' in df.columns:
+                    codes = df['icd-10'].dropna().astype(str).str.strip()
+                    all_codes.update(codes.unique())
+                    logger.info(f"  Found {len(codes.unique())} unique ICD-10 codes in {filepath.name}")
+            except Exception as e:
+                logger.warning(f"  Could not read {filepath.name}: {e}")
+    
+    if not all_codes:
+        logger.warning("No ICD-10 codes found in data files")
+        return pd.DataFrame()
+    
+    # Create basic descriptions (code as description for now)
+    # In production, these would be looked up from an ICD-10 reference
+    icd10_data = []
+    for code in sorted(all_codes):
+        if code and code != 'nan':
+            # Use reference lookup for descriptions
+            description = get_icd10_description(code)
+            icd10_data.append({
+                'code': code,
+                'description': description,
+                'source_file': 'extracted_from_21c_data',
+                'icd_version': 'ICD-10 (2001-)'
+            })
+    
+    df = pd.DataFrame(icd10_data)
+    logger.info(f"  Created {len(df)} ICD-10 code entries")
+    return df
+
+
 def build_code_description_mapping():
     """Build comprehensive code-to-description mapping from all ICD files"""
     logger.info("=" * 80)
@@ -189,6 +247,11 @@ def build_code_description_mapping():
                 # Add period info
                 df["icd_version"] = period
                 all_descriptions.append(df)
+
+    # Extract ICD-10 codes from modern data
+    icd10_df = extract_icd10_codes_from_data()
+    if not icd10_df.empty:
+        all_descriptions.append(icd10_df)
 
     if not all_descriptions:
         logger.error("No descriptions extracted!")

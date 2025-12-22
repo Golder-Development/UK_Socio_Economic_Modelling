@@ -41,7 +41,10 @@ ONS_DOWNLOADS = DATA_DIR / "ons_downloads" / "extracted"
 
 
 def add_cause_descriptions(df):
-    """Add cause descriptions to dataframe if 'cause' column exists"""
+    """
+    Add cause descriptions to dataframe if 'cause' column exists.
+    Preserves existing ICD10 descriptions for modern data (2001+).
+    """
     if 'cause' not in df.columns:
         return df
 
@@ -75,6 +78,15 @@ def add_cause_descriptions(df):
         # Rename description column
         if 'description' in df_copy.columns:
             df_copy = df_copy.rename(columns={'description': 'cause_description'})
+
+        # For ICD-10 data (2001+), prefer the ICD10 descriptions if available
+        if 'icd10_description' in df_copy.columns and 'cause_description' in df_copy.columns:
+            # Keep ICD10 descriptions where they exist (they're more specific)
+            mask = df_copy['icd10_description'].notna()
+            df_copy.loc[mask, 'cause_description'] = df_copy.loc[mask, 'icd10_description']
+            # Drop the icd10_description column as we've merged it into cause_description
+            df_copy = df_copy.drop(columns=['icd10_description'])
+            logger.debug(f"Preserved {mask.sum()} ICD-10 descriptions in cause_description")
 
         # Reorder columns to put description right after cause
         cols = df_copy.columns.tolist()
@@ -309,7 +321,9 @@ def standardize_historical_columns(df):
         'CAUSE': 'cause',
         'Cause of Death': 'cause',
         'ICD Code': 'cause',
-        'ICD-10': 'icd10',
+        'ICD-10': 'cause',
+        'ICD-10 Code': 'cause',
+        'ICD_10': 'cause',
         'ICD Code Code': 'cause',
         'ICD_1': 'icd_code',
         'ICD_': 'icd_code',
@@ -355,6 +369,53 @@ def standardize_historical_columns(df):
     return df
 
 
+def load_icd10_codes_mapping():
+    """Load ICD-10 code descriptions from Excel file"""
+    logger.info("Loading ICD-10 code descriptions...")
+    
+    icd10_path = ONS_DOWNLOADS / "ICD10_codes.xlsx"
+    
+    if not icd10_path.exists():
+        logger.warning(f"ICD-10 codes file not found: {icd10_path}")
+        return {}
+    
+    try:
+        # Try to load from the first sheet
+        df = pd.read_excel(icd10_path, sheet_name=0)
+        
+        # Look for ICD-10 code and description columns
+        icd_col = None
+        desc_col = None
+        
+        for col in df.columns:
+            col_lower = str(col).lower()
+            if 'icd' in col_lower and '10' in col_lower:
+                icd_col = col
+            elif 'description' in col_lower:
+                desc_col = col
+        
+        if icd_col is None or desc_col is None:
+            logger.warning(f"Could not find ICD-10 and Description columns in {icd10_path.name}")
+            # Try with actual column names
+            if 'ICD-10' in df.columns and 'Description2' in df.columns:
+                icd_col = 'ICD-10'
+                desc_col = 'Description2'
+            else:
+                return {}
+        
+        # Create mapping dictionary
+        mapping = dict(zip(
+            df[icd_col].astype(str).str.strip(),
+            df[desc_col].astype(str).str.strip()
+        ))
+        
+        logger.info(f"  ✓ Loaded {len(mapping)} ICD-10 code descriptions")
+        return mapping
+    except Exception as e:
+        logger.error(f"Failed to load ICD-10 codes: {e}")
+        return {}
+
+
 def load_existing_2001_2025_data():
     """Load existing compiled data for 2001-2025"""
     logger.info("\n" + "=" * 70)
@@ -362,9 +423,13 @@ def load_existing_2001_2025_data():
     logger.info("=" * 70)
 
     dfs = []
+    
+    # Load ICD-10 code descriptions for use with new data
+    icd10_mapping = load_icd10_codes_mapping()
 
-    # Try to load compiled_mortality files
+    # Try to load compiled_mortality files from ons_downloads/extracted
     compiled_files = [
+        ONS_DOWNLOADS / "compiled_mortality_2001_2019.csv",
         DATA_DIR / "downloaded_sourcefiles" / "compiled_mortality_2001_2019.csv",
         DATA_DIR / "downloaded_sourcefiles" / "compiled_mortality_21c_2017.csv",
     ]
@@ -387,6 +452,12 @@ def load_existing_2001_2025_data():
                     df['year'] = pd.to_numeric(df['yr'], errors='coerce')
                 else:
                     df['year'] = pd.to_numeric(df['year'], errors='coerce')
+
+                # Add ICD-10 code descriptions if available
+                if icd10_mapping and ('icd-10' in df.columns or 'icd_10' in df.columns):
+                    icd_col = 'icd-10' if 'icd-10' in df.columns else 'icd_10'
+                    df['icd10_description'] = df[icd_col].astype(str).str.strip().map(icd10_mapping)
+                    logger.debug(f"  Added ICD-10 descriptions to {(df['icd10_description'].notna()).sum()} records")
 
                 logger.info(f"  ✓ Loaded {len(df):,} rows, year range: {df['year'].min():.0f}-{df['year'].max():.0f}")
                 dfs.append(df)
@@ -448,6 +519,40 @@ def standardize_mortality_data(df):
         logger.warning("Missing deaths column")
         return pd.DataFrame()
 
+def standardize_mortality_data(df):
+    """
+    Standardize mortality data into a consistent format
+    Output: year, cause, sex, age, deaths, [icd10_description]
+    """
+    if df.empty:
+        return df
+
+    logger.info("\nStandardizing mortality data format...")
+
+    # Create a working copy
+    df = df.copy()
+
+    # Normalize column names to lowercase
+    df.columns = df.columns.str.lower().str.strip()
+
+    # Handle year column - might be 'yr' or 'year'
+    if 'yr' in df.columns:
+        df['year'] = pd.to_numeric(df['yr'], errors='coerce')
+    elif 'year' in df.columns:
+        df['year'] = pd.to_numeric(df['year'], errors='coerce')
+    else:
+        logger.warning("Missing year column")
+        return pd.DataFrame()
+
+    # Handle deaths column - might be 'ndths', 'deaths', etc.
+    deaths_cols = [c for c in df.columns if 'ndth' in c or 'death' in c or 'count' in c]
+    if deaths_cols:
+        deaths_col = deaths_cols[0]
+        df['deaths'] = pd.to_numeric(df[deaths_col], errors='coerce')
+    else:
+        logger.warning("Missing deaths column")
+        return pd.DataFrame()
+
     # Handle sex column
     if 'sex' in df.columns:
         df['sex'] = df['sex'].fillna('All').astype(str).str.strip().str.lower()
@@ -477,7 +582,8 @@ def standardize_mortality_data(df):
         df['age'] = 'All ages'
 
     # Handle cause column - look for any ICD code columns and take the first non-null per row
-    cause_candidates = [c for c in df.columns if 'icd' in c]
+    # Exclude description columns from this search
+    cause_candidates = [c for c in df.columns if 'icd' in c and 'description' not in c]
     if cause_candidates:
         # Build a combined series from the first non-null across ICD columns
         combined = df[cause_candidates[0]]
@@ -491,8 +597,11 @@ def standardize_mortality_data(df):
     else:
         df['cause'] = 'All causes'
 
-    # Select standard columns
+    # Select standard columns (keep icd10_description if present)
     standard_cols = ['year', 'cause', 'sex', 'age', 'deaths']
+    if 'icd10_description' in df.columns:
+        standard_cols.append('icd10_description')
+    
     extra_cols = [
         c for c in df.columns
         if c not in standard_cols
@@ -527,6 +636,10 @@ def aggregate_to_summary(df):
 
     # Group by available dimensions
     group_cols = [c for c in ['year', 'cause', 'sex', 'age'] if c in df.columns]
+    
+    # Include icd10_description if present (preserve ICD-10 descriptions through aggregation)
+    if 'icd10_description' in df.columns:
+        group_cols.append('icd10_description')
 
     if len(group_cols) > 0:
         summary = df.groupby(group_cols, as_index=False, dropna=False)['deaths'].sum()

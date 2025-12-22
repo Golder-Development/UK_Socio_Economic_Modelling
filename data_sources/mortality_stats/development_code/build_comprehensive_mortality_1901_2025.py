@@ -24,6 +24,7 @@ Outputs:
 import pandas as pd
 import logging
 from pathlib import Path
+import json
 import warnings
 
 warnings.filterwarnings("ignore")
@@ -37,6 +38,25 @@ import zipfile
 import io
 DATA_DIR = Path(__file__).parent
 ONS_DOWNLOADS = DATA_DIR / "ons_downloads" / "extracted"
+CONFIG_PATH = DATA_DIR / "mortality_source_config.json"
+
+
+def load_source_config():
+    """Load optional JSON config describing ICD versions and extra sources."""
+    if not CONFIG_PATH.exists():
+        logger.info("No mortality_source_config.json found; using built-in defaults")
+        return {}
+    try:
+        with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+            config = json.load(f)
+        logger.info("Loaded mortality source config")
+        return config
+    except Exception as exc:
+        logger.warning(f"Could not load config {CONFIG_PATH.name}: {exc}")
+        return {}
+
+
+CONFIG = load_source_config()
 
 
 def add_cause_descriptions(df):
@@ -263,61 +283,154 @@ def standardize_historical_columns(df):
     return df
 
 
-def load_existing_2001_2025_data():
-    """Load existing compiled data for 2001-2025"""
-    logger.info("\n" + "=" * 70)
-    logger.info("PROCESSING EXISTING DATA (2001-2025)")
-    logger.info("=" * 70)
-
-    dfs = []
-
-    # Try to load compiled_mortality files
-    compiled_files = [
-        DATA_DIR / "downloaded_sourcefiles" / "compiled_mortality_2001_2019.csv",
-        DATA_DIR / "downloaded_sourcefiles" / "compiled_mortality_21c_2017.csv",
+def _default_compiled_sources():
+    """Fallback sources when config is absent."""
+    return [
+        {
+            "name": "compiled_mortality_2001_2019",
+            "path": "downloaded_sourcefiles/compiled_mortality_2001_2019.csv",
+            "format": "csv",
+            "icd_version": "ICD-10",
+            "year_column": "year",
+            "death_column": "deaths",
+            "sex_column": "sex",
+            "age_column": "age",
+            "cause_column": "cause",
+        },
+        {
+            "name": "compiled_mortality_21c_2017",
+            "path": "downloaded_sourcefiles/compiled_mortality_21c_2017.csv",
+            "format": "csv",
+            "icd_version": "ICD-10",
+            "year_column": "year",
+            "death_column": "deaths",
+            "sex_column": "sex",
+            "age_column": "age",
+            "cause_column": "cause",
+        },
     ]
 
-    for filepath in compiled_files:
-        if filepath.exists():
-            try:
-                logger.info(f"Loading {filepath.name}")
-                df = pd.read_csv(filepath, low_memory=False)
 
-                # Standardize column names for this file
-                df.columns = df.columns.str.lower().str.strip()
+def _prepare_configured_dataframe(df: pd.DataFrame, spec: dict) -> pd.DataFrame:
+    """Rename columns per config and attach metadata before standardization."""
+    df = df.copy()
+    df.columns = df.columns.str.lower().str.strip()
 
-                # Ensure we have year column
-                if "yr" not in df.columns and "year" not in df.columns:
-                    logger.warning(f"  No year column found in {filepath.name}")
-                    continue
+    rename_map = {}
+    column_keys = {
+        "year": "year_column",
+        "deaths": "death_column",
+        "sex": "sex_column",
+        "age": "age_column",
+        "cause": "cause_column",
+    }
+    for target, cfg_key in column_keys.items():
+        source_col = spec.get(cfg_key)
+        if source_col:
+            col_lower = source_col.lower()
+            if col_lower in df.columns:
+                rename_map[col_lower] = target
+    if rename_map:
+        df = df.rename(columns=rename_map)
 
-                if "yr" in df.columns:
-                    df["year"] = pd.to_numeric(df["yr"], errors="coerce")
-                else:
-                    df["year"] = pd.to_numeric(df["year"], errors="coerce")
+    # Attach optional metadata columns to carry forward
+    if "icd_version" in spec:
+        df["icd_version"] = spec["icd_version"]
+    if "source_name" in spec:
+        df["source_name"] = spec["source_name"]
+    else:
+        df["source_name"] = spec.get("name", "configured_source")
 
-                logger.info(
-                    f"  ✓ Loaded {len(df):,} rows, year range: {df['year'].min():.0f}-{df['year'].max():.0f}"
-                )
-                dfs.append(df)
-            except Exception as e:
-                logger.error(f"Failed to load {filepath.name}: {e}")
+    # Optional year filtering from config
+    start_year = spec.get("start_year")
+    end_year = spec.get("end_year")
+    if start_year or end_year:
+        year_col = "year" if "year" in df.columns else spec.get("year_column")
+        if year_col and year_col in df.columns:
+            df[year_col] = pd.to_numeric(df[year_col], errors="coerce")
+            if start_year:
+                df = df[df[year_col] >= start_year]
+            if end_year:
+                df = df[df[year_col] <= end_year]
 
-    if dfs:
-        combined = pd.concat(dfs, ignore_index=True, sort=False)
-        # Remove duplicates by year, sex, age, cause if they exist
-        dup_cols = ["year"] + [
-            c for c in ["sex", "age", "icd-10", "icd_1"] if c in combined.columns
-        ]
-        dup_cols = [c for c in dup_cols if c in combined.columns]
-        if len(dup_cols) > 1:
-            combined = combined.drop_duplicates(subset=dup_cols, keep="first")
+    return df
+
+
+def _load_configured_source(spec: dict) -> pd.DataFrame:
+    """Load a single source defined in config (csv or excel, multi-sheet)."""
+    path = DATA_DIR / spec.get("path", "")
+    if not path.exists():
+        logger.warning(f"Configured source not found: {path}")
+        return pd.DataFrame()
+
+    fmt = spec.get("format", "csv").lower()
+    dfs = []
+
+    try:
+        if fmt == "excel":
+            xls = pd.ExcelFile(path)
+            target_sheets = spec.get("sheets")
+            if not target_sheets:
+                target_sheets = [
+                    s
+                    for s in xls.sheet_names
+                    if s.lower() not in ["metadata", "description", "correction notice"]
+                ]
+            for sheet in target_sheets:
+                try:
+                    sheet_df = pd.read_excel(path, sheet_name=sheet)
+                    if not sheet_df.empty:
+                        sheet_df["_sheet"] = sheet
+                        dfs.append(sheet_df)
+                except Exception as exc:
+                    logger.warning(f"  Skipping sheet {sheet}: {exc}")
+        else:
+            dfs.append(pd.read_csv(path, low_memory=False))
+    except Exception as exc:
+        logger.error(f"Failed to load {path.name}: {exc}")
+        return pd.DataFrame()
+
+    if not dfs:
+        logger.warning(f"No data loaded from {path}")
+        return pd.DataFrame()
+
+    prepared = []
+    for df in dfs:
+        df = _prepare_configured_dataframe(df, spec)
+        df = standardize_mortality_data(df)
+        if not df.empty:
+            prepared.append(df)
+    if prepared:
+        combined = pd.concat(prepared, ignore_index=True, sort=False)
         logger.info(
-            f"Combined existing data: {len(combined):,} rows, year range: {combined['year'].min():.0f}-{combined['year'].max():.0f}"
+            f"Loaded {len(combined):,} rows from {path.name} (sheets: {len(dfs)})"
         )
         return combined
 
-    logger.warning("No existing 2001-2025 data found")
+    return pd.DataFrame()
+
+
+def load_existing_2001_2025_data(config):
+    """Load configured data for 2001+ (or any additional sources)."""
+    logger.info("\n" + "=" * 70)
+    logger.info("PROCESSING CONFIGURED MODERN/ADDITIONAL DATA")
+    logger.info("=" * 70)
+
+    sources = config.get("additional_sources") or _default_compiled_sources()
+    dfs = []
+    for spec in sources:
+        df = _load_configured_source(spec)
+        if not df.empty:
+            dfs.append(df)
+
+    if dfs:
+        combined = pd.concat(dfs, ignore_index=True, sort=False)
+        logger.info(
+            f"Combined configured data: {len(combined):,} rows, year range: {combined['year'].min():.0f}-{combined['year'].max():.0f}"
+        )
+        return combined
+
+    logger.warning("No configured modern/additional data found")
     return pd.DataFrame()
 
 
@@ -488,8 +601,8 @@ def main():
     historical = standardize_historical_columns(historical)
     historical = standardize_mortality_data(historical)
 
-    # Load existing 2001-2025 data
-    existing = load_existing_2001_2025_data()
+    # Load existing/configured modern data (e.g., 2001+, future years)
+    existing = load_existing_2001_2025_data(CONFIG)
 
     if not existing.empty:
         # Standardize existing data

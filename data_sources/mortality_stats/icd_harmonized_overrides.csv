@@ -483,7 +483,77 @@ code,icd_version,harmonized_category,harmonized_category_name,classification_con
 197,ICD-3 (1921-1930),Homicide,Homicide and Assault,override
 198,ICD-3 (1921-1930),Homicide,Homicide and Assault,override
 199,ICD-3 (1921-1930),Homicide,Homicide and Assault,override
-
-
-
+# ICD-10 Overrides (2001+)
+# Intentional self-harm (Suicide) - X60-X84
+X60,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X61,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X62,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X63,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X64,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X65,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X66,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X67,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X68,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X69,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X70,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X71,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X72,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X73,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X74,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X75,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X76,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X77,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X78,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X79,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X80,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X81,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X82,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X83,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+X84,ICD-10 (2001-),Suicide,Suicide and Self-Inflicted Injury,override
+# Accidental drug poisoning - X40-X44
+X40,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+X41,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+X42,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+X43,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+X44,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+# Intentional drug poisoning (suicide) - X60-X64 already covered above as Suicide
+# Assault/Homicide - X85-Y09
+X85,ICD-10 (2001-),Homicide,Homicide and Assault,override
+X86,ICD-10 (2001-),Homicide,Homicide and Assault,override
+X87,ICD-10 (2001-),Homicide,Homicide and Assault,override
+X88,ICD-10 (2001-),Homicide,Homicide and Assault,override
+X89,ICD-10 (2001-),Homicide,Homicide and Assault,override
+X90,ICD-10 (2001-),Homicide,Homicide and Assault,override
+X91,ICD-10 (2001-),Homicide,Homicide and Assault,override
+X92,ICD-10 (2001-),Homicide,Homicide and Assault,override
+X93,ICD-10 (2001-),Homicide,Homicide and Assault,override
+X94,ICD-10 (2001-),Homicide,Homicide and Assault,override
+X95,ICD-10 (2001-),Homicide,Homicide and Assault,override
+X96,ICD-10 (2001-),Homicide,Homicide and Assault,override
+X97,ICD-10 (2001-),Homicide,Homicide and Assault,override
+X98,ICD-10 (2001-),Homicide,Homicide and Assault,override
+X99,ICD-10 (2001-),Homicide,Homicide and Assault,override
+Y00,ICD-10 (2001-),Homicide,Homicide and Assault,override
+Y01,ICD-10 (2001-),Homicide,Homicide and Assault,override
+Y02,ICD-10 (2001-),Homicide,Homicide and Assault,override
+Y03,ICD-10 (2001-),Homicide,Homicide and Assault,override
+Y04,ICD-10 (2001-),Homicide,Homicide and Assault,override
+Y05,ICD-10 (2001-),Homicide,Homicide and Assault,override
+Y06,ICD-10 (2001-),Homicide,Homicide and Assault,override
+Y07,ICD-10 (2001-),Homicide,Homicide and Assault,override
+Y08,ICD-10 (2001-),Homicide,Homicide and Assault,override
+Y09,ICD-10 (2001-),Homicide,Homicide and Assault,override
+# War and combat operations - Y36
+Y36,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y360,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y361,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y362,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y363,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y364,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y365,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y366,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y367,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y368,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y369,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y891,ICD-10 (2001-),War,War and War-Related Deaths,override
 

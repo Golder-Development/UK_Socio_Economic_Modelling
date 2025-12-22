@@ -14,10 +14,16 @@ import zipfile
 BASE_DIR = Path(__file__).parent.parent
 REPO_ROOT = BASE_DIR.parent.parent
 OUTPUT_DIR = REPO_ROOT / "generated_charts"
-# Prefer rebuilt harmonized file from archive (ZIP), then CSV; final fallback: comprehensive harmonized CSV
+# Prefer rebuilt harmonized file from archive (ZIP), then CSV
+# If harmonized data stops at 2000, we will merge in modern 2001-2017 data
+# from the comprehensive by-cause export to keep dashboards complete.
 PREFERRED_ZIP = BASE_DIR / "uk_mortality_by_cause_1901_2000_harmonized.zip"
 PREFERRED_CSV = BASE_DIR / "uk_mortality_by_cause_1901_2000_harmonized.csv"
-FALLBACK_CSV = BASE_DIR / "uk_mortality_comprehensive_1901_2025_harmonized.csv"
+HARM_FALLBACK_CSV = BASE_DIR / "uk_mortality_comprehensive_1901_2025_harmonized.csv"
+
+# Comprehensive (unharmonized) by-cause data used to add 2001-2017 rows
+COMPREHENSIVE_BY_CAUSE_ZIP = BASE_DIR / "uk_mortality_by_cause_1901_2025.zip"
+COMPREHENSIVE_BY_CAUSE_INNER = "uk_mortality_by_cause_1901_2025.csv"
 
 # UK population estimates (approximations for rate calculation)
 # Source: ONS historical population data
@@ -68,21 +74,72 @@ def _read_csv_from_zip(zip_path: Path, inner_name: str = None) -> pd.DataFrame:
             return pd.read_csv(f)
 
 
-def load_and_prepare_data():
-    """Load mortality data and calculate rates per 100k."""
-    print("Loading data...")
-    # Loading preference: ZIP (preferred), then CSV, then comprehensive fallback
-    if PREFERRED_ZIP.exists():
-        df = _read_csv_from_zip(PREFERRED_ZIP)
-    elif PREFERRED_CSV.exists():
-        df = pd.read_csv(PREFERRED_CSV)
-    elif FALLBACK_CSV.exists():
-        df = pd.read_csv(FALLBACK_CSV)
-    else:
-        raise FileNotFoundError(
-            "No harmonized dataset found. Expected one of: "
-            f"{PREFERRED_ZIP.name}, {PREFERRED_CSV.name}, {FALLBACK_CSV.name}"
+def _ensure_harmonized_columns(df: pd.DataFrame) -> pd.DataFrame:
+    """Create harmonized_category fields if they are missing (e.g., for modern ICD-10 data)."""
+    df = df.copy()
+    if 'harmonized_category_name' not in df.columns:
+        # Use descriptive cause text if available; otherwise fall back to cause code
+        if 'cause_description' in df.columns:
+            df['harmonized_category_name'] = df['cause_description']
+        else:
+            df['harmonized_category_name'] = df.get('cause', pd.NA)
+    if 'harmonized_category' not in df.columns:
+        df['harmonized_category'] = (
+            df['harmonized_category_name']
+            .astype(str)
+            .str.lower()
+            .str.replace('[^a-z0-9]+', '-', regex=True)
+            .str.strip('-')
         )
+    return df
+
+
+def load_and_prepare_data():
+    """Load mortality data, merging modern ICD-10 rows if harmonized data stops at 2000."""
+    print("Loading data...")
+
+    harmonized_df = None
+    source_used = None
+
+    # 1) Load harmonized (historical) data if available
+    if PREFERRED_ZIP.exists():
+        harmonized_df = _read_csv_from_zip(PREFERRED_ZIP)
+        source_used = PREFERRED_ZIP.name
+    elif PREFERRED_CSV.exists():
+        harmonized_df = pd.read_csv(PREFERRED_CSV)
+        source_used = PREFERRED_CSV.name
+    elif HARM_FALLBACK_CSV.exists():
+        harmonized_df = pd.read_csv(HARM_FALLBACK_CSV)
+        source_used = HARM_FALLBACK_CSV.name
+
+    # 2) Optionally load comprehensive by-cause (includes 2001-2017) if needed
+    modern_df = None
+    if COMPREHENSIVE_BY_CAUSE_ZIP.exists():
+        modern_df = _read_csv_from_zip(COMPREHENSIVE_BY_CAUSE_ZIP, COMPREHENSIVE_BY_CAUSE_INNER)
+        modern_df = _ensure_harmonized_columns(modern_df)
+
+    if harmonized_df is None and modern_df is None:
+        raise FileNotFoundError(
+            "No mortality dataset found. Expected harmonized (1901-2000) or comprehensive by-cause (1901-2025)."
+        )
+
+    # If harmonized data stops before modern years, append modern rows
+    dfs_to_concat = []
+    if harmonized_df is not None:
+        dfs_to_concat.append(harmonized_df)
+    if modern_df is not None:
+        # Only add modern rows not already present in harmonized data
+        if harmonized_df is not None:
+            max_harm_year = harmonized_df["year"].max()
+            modern_subset = modern_df[modern_df["year"] > max_harm_year]
+        else:
+            modern_subset = modern_df
+        dfs_to_concat.append(modern_subset)
+
+    df = pd.concat(dfs_to_concat, ignore_index=True, sort=False)
+
+    # Ensure harmonized columns exist
+    df = _ensure_harmonized_columns(df)
 
     # Calculate population for each year
     df["population"] = df["year"].apply(interpolate_population)
@@ -97,6 +154,10 @@ def load_and_prepare_data():
     print(f"Loaded {len(df):,} rows")
     print(f"Year range: {df['year'].min()}-{df['year'].max()}")
     print(f"Categories: {df['harmonized_category_name'].nunique()}")
+    if source_used:
+        print(f"Base source: {source_used}")
+    if modern_df is not None:
+        print("Modern data merged (ICD-10)")
 
     return df
 

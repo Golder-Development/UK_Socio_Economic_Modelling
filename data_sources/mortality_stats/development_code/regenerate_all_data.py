@@ -3,10 +3,15 @@
 Regenerate all harmonized mortality data following the recommended workflow.
 
 This script orchestrates the complete data regeneration pipeline:
-1. Generate harmonized categories from keywords
-2. Rebuild harmonized dataset from archive with override support
-3. Generate audit crosswalk for review
-4. Create interactive Plotly dashboards
+1. Generate comprehensive mortality database (config-driven sources, no hard-coded end year)
+2. Generate harmonized categories from keywords
+3. Rebuild harmonized dataset from archive with override support
+4. Generate audit crosswalk for review
+5. Create interactive Plotly dashboards
+
+Data sources:
+- Historical mortality: 1901-2000 (ICD-1 through ICD-9c archives)
+- Modern mortality: 2001+ (compiled CSV + ICD10 code descriptions + optional config extras)
 
 Usage:
     python regenerate_all_data.py [--verbose] [--skip-rebuild] [--skip-dashboards]
@@ -327,7 +332,7 @@ Examples:
     print(f"\nOutput files written to: {parent_dir}")
     print("\nKey outputs:")
     print("  - icd_harmonized_categories.csv (mapping from build step 1)")
-    print("  - uk_mortality_by_cause_1901_2000_harmonized.csv (from step 2)")
+    print("  - uk_mortality_by_cause_1901_2000_harmonized.csv (from step 2; includes modern years if present)")
     print("  - icd_harmonization_crosswalk.csv (from step 3)")
     print("  - generated_charts/*.html (from step 4)")
     

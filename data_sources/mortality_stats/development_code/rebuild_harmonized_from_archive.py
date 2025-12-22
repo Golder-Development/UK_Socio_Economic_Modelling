@@ -8,6 +8,7 @@ import pandas as pd
 from pathlib import Path
 import logging
 import zipfile
+import json
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -20,9 +21,10 @@ SOURCE_INNER = "uk_mortality_by_cause_1901_2025.csv"
 DESC_FILE = BASE_DIR / "icd_code_descriptions.csv"
 HARMONIZED_MAP = BASE_DIR / "icd_harmonized_categories.csv"
 OVERRIDES_FILE = BASE_DIR / "icd_harmonized_overrides.csv"
+CONFIG_PATH = Path(__file__).parent / "mortality_source_config.json"
 
-# ICD version year ranges
-ICD_YEAR_RANGES = {
+# ICD version year ranges (configurable via mortality_source_config.json)
+DEFAULT_ICD_YEAR_RANGES = {
     "ICD-1 (1901-1910)": (1901, 1910),
     "ICD-2 (1911-1920)": (1911, 1920),
     "ICD-3 (1921-1930)": (1921, 1930),
@@ -34,14 +36,42 @@ ICD_YEAR_RANGES = {
     "ICD-9a (1979-1984)": (1979, 1984),
     "ICD-9b (1985-1993)": (1985, 1993),
     "ICD-9c (1994-2000)": (1994, 2000),
+    "ICD-10 (2001-9999)": (2001, 9999),
 }
 
 
+def load_icd_year_ranges():
+    """Load ICD year ranges from config if available."""
+    if not CONFIG_PATH.exists():
+        return DEFAULT_ICD_YEAR_RANGES
+    try:
+        with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+            config = json.load(f)
+        ranges = {}
+        for entry in config.get("icd_versions", []):
+            name = entry.get("label") or entry.get("name")
+            start = entry.get("start_year")
+            end = entry.get("end_year") if entry.get("end_year") is not None else 9999
+            if name and start:
+                ranges[name] = (int(start), int(end))
+        return ranges or DEFAULT_ICD_YEAR_RANGES
+    except Exception as exc:
+        logger.warning(f"Could not parse ICD ranges from config: {exc}")
+        return DEFAULT_ICD_YEAR_RANGES
+
+
+ICD_YEAR_RANGES = load_icd_year_ranges()
+
+
 def get_icd_version_for_year(year):
-    """Determine ICD version based on year."""
+    """Determine ICD version based on year (configurable)."""
     for version, (start, end) in ICD_YEAR_RANGES.items():
         if start <= year <= end:
             return version
+    # Fallback to latest range if year exceeds config
+    if ICD_YEAR_RANGES:
+        latest_version = max(ICD_YEAR_RANGES.items(), key=lambda kv: kv[1][0])[0]
+        return latest_version
     return None
 
 
@@ -62,11 +92,11 @@ def main():
     # Filter cause rows only if present (prefer by-cause file)
     if 'cause' in df.columns:
         df = df[df['cause'].notna()]
-    # Limit to years covered by harmonization mappings (<= 2000)
-    df = df[df["year"] <= 2000].copy()
     logger.info(f"Loaded {len(df):,} rows ({df['year'].min()}-{df['year'].max()})")
     logger.info(f"Unique causes by decade:")
-    for year in [1901, 1911, 1921, 1931, 1941, 1951, 1961, 1971, 1981, 1991]:
+    decade_start = int(df['year'].min())
+    decade_end = int(df['year'].max())
+    for year in range(decade_start, decade_end + 1, 10):
         subset = df[df['year']==year]
         if len(subset) > 0:
             logger.info(f"  {year}: {subset['cause'].nunique()} unique causes")
@@ -195,6 +225,23 @@ def main():
             df[col] = df[col].fillna(df[default_col])
             df = df.drop(columns=[default_col], errors='ignore')
     df = df.drop(columns=['code'], errors='ignore')
+
+    # Fallback: if still missing, try code-only match (ignoring icd_version label differences)
+    if df['harmonized_category'].isna().any():
+        fallback_map = harm_df[['code', 'harmonized_category', 'harmonized_category_name', 'classification_confidence']].drop_duplicates('code')
+        df = df.merge(
+            fallback_map,
+            left_on='cause',
+            right_on='code',
+            how='left',
+            suffixes=(None, '_fallback')
+        )
+        for col in ['harmonized_category', 'harmonized_category_name', 'classification_confidence']:
+            fb_col = f"{col}_fallback"
+            if fb_col in df.columns:
+                df[col] = df[col].fillna(df[fb_col])
+                df = df.drop(columns=[fb_col], errors='ignore')
+        df = df.drop(columns=['code'], errors='ignore')
 
     harm_matched = df['harmonized_category'].notna().sum()
     harm_rate = (harm_matched / total) * 100
