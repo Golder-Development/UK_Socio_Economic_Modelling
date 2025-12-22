@@ -33,6 +33,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+import zipfile
+import io
 DATA_DIR = Path(__file__).parent
 ONS_DOWNLOADS = DATA_DIR / "ons_downloads" / "extracted"
 
@@ -520,9 +522,15 @@ def main():
     logger.info("\n" + "=" * 70)
     logger.info("SAVING OUTPUTS")
     logger.info("=" * 70)
+    
+    def _write_df_to_zip(df: pd.DataFrame, zip_path: Path, inner_csv_name: str):
+        """Write a DataFrame to a zip file containing a single CSV."""
+        csv_bytes = df.to_csv(index=False).encode("utf-8")
+        with zipfile.ZipFile(zip_path, mode="w", compression=zipfile.ZIP_DEFLATED) as zf:
+            zf.writestr(inner_csv_name, csv_bytes)
 
-    output_comprehensive = DATA_DIR / "uk_mortality_comprehensive_1901_2025.csv"
-    output_by_cause = DATA_DIR / "uk_mortality_by_cause_1901_2025.csv"
+    output_comprehensive_zip = DATA_DIR / "uk_mortality_comprehensive_1901_2025.zip"
+    output_by_cause_zip = DATA_DIR / "uk_mortality_by_cause_1901_2025.zip"
     output_yearly = DATA_DIR / "uk_mortality_yearly_totals_1901_2025.csv"
 
     # Save comprehensive dataset
@@ -532,10 +540,14 @@ def main():
     # Add descriptions to data before saving
     all_data_with_desc = add_cause_descriptions(all_data)
 
-    # Save comprehensive by all dimensions
-    all_data_with_desc.to_csv(output_comprehensive, index=False)
+    # Save comprehensive by all dimensions (zipped CSV)
+    _write_df_to_zip(
+        all_data_with_desc,
+        output_comprehensive_zip,
+        "uk_mortality_comprehensive_1901_2025.csv",
+    )
     logger.info(
-        f"✓ Saved comprehensive data: {output_comprehensive.name} ({len(all_data_with_desc)} records)"
+        f"✓ Saved comprehensive data: {output_comprehensive_zip.name} ({len(all_data_with_desc)} records)"
     )
 
     # Save by cause (filter to only where cause is defined)
@@ -544,9 +556,13 @@ def main():
             all_data_with_desc["cause"] != "All causes"
         ].copy()
         if not by_cause.empty:
-            by_cause.to_csv(output_by_cause, index=False)
+            _write_df_to_zip(
+                by_cause,
+                output_by_cause_zip,
+                "uk_mortality_by_cause_1901_2025.csv",
+            )
             logger.info(
-                f"✓ Saved by cause: {output_by_cause.name} ({len(by_cause)} records)"
+                f"✓ Saved by cause: {output_by_cause_zip.name} ({len(by_cause)} records)"
             )
 
     # Print summary statistics

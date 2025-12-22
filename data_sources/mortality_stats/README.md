@@ -1,5 +1,20 @@
 # UK Mortality Statistics - Complete Dataset Summary
 
+## Historical ICD Imports (1901–2000)
+
+Some historical ONS Excel files spread a single era across multiple worksheets. The importer now merges all relevant worksheets for each ICD era to ensure complete coverage:
+
+- ICD2–IC6: Each era spans 2 worksheets; both are read and concatenated.
+- ICD7–IC9: Each era spans 3 worksheets; all three are read and concatenated.
+
+Implementation details:
+
+- The loader in `data_sources/mortality_stats/build_comprehensive_mortality_1901_2025.py` detects header rows even when they vary across sheets, normalizes the `year` column, and filters plausible year ranges before merging.
+- Non‑data sheets like `metadata`, `description`, `correction notice`, `contents`, and `readme` are excluded.
+- Excel dependencies: `.xls` files require `xlrd` and `.xlsx` files require `openpyxl` (added in `requirements/ons.txt`).
+
+Outputs from the comprehensive builder include consolidated historical rows per era, later standardized and aggregated into yearly totals and cause-level tables for 1901–2025.
+
 ## ✅ What You Now Have
 
 ### 1. **Total Deaths by Year: 2001-2025** (25 years)
@@ -121,14 +136,43 @@ circulatory = causes[causes['icd10_chapter'] == 'I'].sort_values('year')
 
 ## 🚀 Running the Analysis
 
-To regenerate or update these files:
+### Running the Comprehensive Builder (1901–2025)
+
+This generates consolidated historical + modern outputs:
+
+- `uk_mortality_comprehensive_1901_2025.zip` (contains `uk_mortality_comprehensive_1901_2025.csv`)
+- `uk_mortality_by_cause_1901_2025.zip` (contains `uk_mortality_by_cause_1901_2025.csv`)
+- `uk_mortality_yearly_totals_1901_2025.csv`
+
+Steps (Windows, PowerShell):
 
 ```powershell
-cd data_sources/mortality_stats/development_code
-python analyze_comprehensive_mortality.py
+# Activate project venv (if present)
+& H:/VScode/UK_Socio_Economic_Modelling/.venv/Scripts/Activate.ps1
+
+# Install dependencies (includes xlrd/openpyxl for Excel)
+pip install -r requirements.txt
+
+# Run the comprehensive builder
+python data_sources/mortality_stats/build_comprehensive_mortality_1901_2025.py
 ```
 
-To fetch fresh API data (useful if new years released):
+Outputs are saved in `data_sources/mortality_stats/`.
+To use the zipped files directly in Python:
+
+```python
+import zipfile, pandas as pd
+from pathlib import Path
+
+zip_path = Path('data_sources/mortality_stats/uk_mortality_by_cause_1901_2025.zip')
+with zipfile.ZipFile(zip_path) as zf:
+ with zf.open('uk_mortality_by_cause_1901_2025.csv') as f:
+  df = pd.read_csv(f)
+```
+
+### Fetch fresh API data (optional)
+
+Use these scripts if newer weekly/annual ONS releases become available for 2001–2025:
 
 ```powershell
 cd data_sources/mortality_stats/development_code

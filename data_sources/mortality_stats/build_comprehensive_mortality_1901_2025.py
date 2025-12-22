@@ -25,6 +25,8 @@ import pandas as pd
 import logging
 from pathlib import Path
 import warnings
+import zipfile
+import io
 
 warnings.filterwarnings('ignore')
 
@@ -95,37 +97,123 @@ def add_cause_descriptions(df):
         return df
 
 
+def _detect_header_row(df_like):
+    """Attempt to detect the header row index in a DataFrame read with header=None."""
+    try:
+        # search first 25 rows for any cell containing year keywords
+        max_rows = min(25, len(df_like))
+        year_keywords = ['year', 'yr', 'year of death']
+        for i in range(max_rows):
+            row_vals = df_like.iloc[i].astype(str).str.lower().tolist()
+            if any(any(kw in val for kw in year_keywords) for val in row_vals):
+                return i
+        return None
+    except Exception:
+        return None
+
+
+def _clean_and_filter_years(df, year_range=None):
+    """Normalize year column and filter plausible rows."""
+    # unify columns to lowercase for detection, robust to non-string names
+    df.columns = df.columns.map(lambda x: str(x).strip())
+    lower_cols = pd.Index([str(c).lower() for c in df.columns])
+
+    # choose a year column
+    year_col = None
+    for candidate in ['year', 'yr', 'year of death']:
+        if candidate in lower_cols.tolist():
+            year_col = df.columns[lower_cols.tolist().index(candidate)]
+            break
+
+    if year_col is None:
+        # if first column looks like a year, use it
+        first_col = df.columns[0]
+        years = pd.to_numeric(df[first_col], errors='coerce')
+        plausible = years.between(1800, 2100)
+        if plausible.sum() > 5:  # at least a few plausible year values
+            year_col = first_col
+
+    if year_col is None:
+        return pd.DataFrame()
+
+    df['year'] = pd.to_numeric(df[year_col], errors='coerce')
+
+    # filter by plausible year range
+    df = df[df['year'].between(1800, 2100)]
+    if year_range and isinstance(year_range, tuple) and len(year_range) == 2:
+        df = df[df['year'].between(year_range[0], year_range[1])]
+
+    # drop header/footer noise rows
+    df = df.dropna(subset=['year'])
+
+    return df
+
+
 def load_icd_file(xlsx_path, year_range=None):
-    """Load ICD files - data is in a sheet with year in a column"""
+    """Load ICD files reliably, merging all relevant sheets (2+ for ICD2–ICD6, 3+ for ICD7+)."""
     logger.info(f"Loading {xlsx_path.name}")
 
     xls = pd.ExcelFile(xlsx_path)
     dfs = []
 
-    # Try different sheet names that contain data
-    data_sheets = [s for s in xls.sheet_names if s.lower() not in ['metadata', 'description', 'correction notice']]
+    # Exclude known non-data sheets
+    excluded = {'metadata', 'description', 'correction notice', 'contents', 'readme'}
+    data_sheets = [s for s in xls.sheet_names if str(s).lower().strip() not in excluded]
+    
+    logger.debug(f"  Found {len(data_sheets)} data sheets: {data_sheets}")
 
     for sheet_name in data_sheets:
         try:
+            # First attempt: standard parse with inferred header
             df = pd.read_excel(xlsx_path, sheet_name=sheet_name)
-            if df.empty or len(df) < 2:
+            if df is not None and len(df) > 0:
+                # detect year columns in a case-insensitive way
+                year_cols = [c for c in df.columns if isinstance(c, str) and ('yr' in c.lower() or 'year' in c.lower())]
+                if year_cols:
+                    parsed = _clean_and_filter_years(df, year_range)
+                    if not parsed.empty:
+                        logger.debug(f"  ✓ Parsed sheet '{sheet_name}' via default header; rows: {len(parsed)}")
+                        dfs.append(parsed)
+                        continue
+
+            # Second attempt: read without headers and detect header row
+            df_no_header = pd.read_excel(xlsx_path, sheet_name=sheet_name, header=None)
+            header_row = _detect_header_row(df_no_header)
+            if header_row is not None:
+                df2 = pd.read_excel(xlsx_path, sheet_name=sheet_name, header=header_row)
+                parsed2 = _clean_and_filter_years(df2, year_range)
+                if not parsed2.empty:
+                    logger.debug(
+                        "  ✓ Parsed sheet '%s' via header row %s; rows: %d",
+                        sheet_name,
+                        header_row,
+                        len(parsed2),
+                    )
+                    dfs.append(parsed2)
+                    continue
+
+            # Final attempt: heuristic on first column years from headerless read
+            parsed3 = _clean_and_filter_years(df_no_header, year_range)
+            if not parsed3.empty:
+                logger.debug(f"  ✓ Parsed sheet '{sheet_name}' via headerless heuristic; rows: {len(parsed3)}")
+                dfs.append(parsed3)
                 continue
 
-            # Check if this sheet has year column
-            year_cols = [c for c in df.columns if 'yr' in c.lower() or 'year' in c.lower()]
-            if year_cols:
-                logger.debug(f"  Found data sheet: {sheet_name}, year column: {year_cols[0]}")
-                dfs.append(df)
-            else:
-                logger.debug(f"  Skipping sheet {sheet_name} - no year column")
-                continue
+            logger.debug(f"  Skipping sheet '{sheet_name}' — unable to detect year column")
 
         except Exception as e:
             logger.warning(f"Error reading sheet {sheet_name}: {e}")
             continue
 
     if dfs:
-        return pd.concat(dfs, ignore_index=True)
+        combined = pd.concat(dfs, ignore_index=True, sort=False)
+        logger.debug(f"  Combined {len(combined)} rows from {len(dfs)} sheets")
+        logger.debug(f"  Columns available: {list(combined.columns)}")
+        logger.debug(f"  Sample data:\n{combined.head(3)}")
+        
+        # NO deduplication at this stage - preserve all granular data
+        # Deduplication will happen later during aggregation if needed
+        return combined
     return pd.DataFrame()
 
 
@@ -240,12 +328,28 @@ def standardize_historical_columns(df):
     # Rename columns
     df.rename(columns=column_mapping, inplace=True)
 
+    # Coalesce duplicate standard columns (e.g., 'yr' and 'year' both → 'year')
+    for name in ['year', 'sex', 'age', 'deaths', 'cause']:
+        try:
+            same_cols = [c for c in df.columns if c == name]
+            if len(same_cols) > 1:
+                combined = df[same_cols].bfill(axis=1).ffill(axis=1).iloc[:, 0]
+                # Drop duplicate occurrences for this name, keep first
+                dup_mask = (pd.Index(df.columns) == name) & pd.Index(df.columns).duplicated(keep='first')
+                df = df.loc[:, ~dup_mask]
+                df[name] = combined
+        except Exception:
+            pass
+
     # Ensure year column exists
     if 'year' not in df.columns:
         logger.warning("Year column not found!")
 
     # Remove completely empty columns
     df.dropna(axis=1, how='all', inplace=True)
+
+    # Finally, drop any remaining duplicate columns defensively
+    df = df.loc[:, ~df.columns.duplicated(keep='first')]
 
     logger.info(f"Standardized columns: {list(df.columns)}")
     return df
@@ -296,7 +400,14 @@ def load_existing_2001_2025_data():
         dup_cols = [c for c in dup_cols if c in combined.columns]
         if len(dup_cols) > 1:
             combined = combined.drop_duplicates(subset=dup_cols, keep='first')
-        logger.info(f"Combined existing data: {len(combined):,} rows, year range: {combined['year'].min():.0f}-{combined['year'].max():.0f}")
+        min_year = combined['year'].min()
+        max_year = combined['year'].max()
+        logger.info(
+            "Combined existing data: %s rows, year range: %s-%s",
+            f"{len(combined):,}",
+            f"{min_year:.0f}",
+            f"{max_year:.0f}",
+        )
         return combined
 
     logger.warning("No existing 2001-2025 data found")
@@ -365,11 +476,16 @@ def standardize_mortality_data(df):
     else:
         df['age'] = 'All ages'
 
-    # Handle cause column - look for ICD codes first
+    # Handle cause column - look for any ICD code columns and take the first non-null per row
     cause_candidates = [c for c in df.columns if 'icd' in c]
     if cause_candidates:
-        icd_col = cause_candidates[0]
-        df['cause'] = df[icd_col].fillna(df.get('cause', 'Unknown')).astype(str).str.strip()
+        # Build a combined series from the first non-null across ICD columns
+        combined = df[cause_candidates[0]]
+        for c in cause_candidates[1:]:
+            combined = combined.combine_first(df[c])
+        if 'cause' in df.columns:
+            combined = combined.combine_first(df['cause'])
+        df['cause'] = combined.astype(str).str.strip()
     elif 'cause' in df.columns:
         df['cause'] = df['cause'].fillna('Unknown').astype(str).str.strip()
     else:
@@ -377,7 +493,12 @@ def standardize_mortality_data(df):
 
     # Select standard columns
     standard_cols = ['year', 'cause', 'sex', 'age', 'deaths']
-    keep_cols = standard_cols + [c for c in df.columns if c not in standard_cols and c not in cause_candidates + ['yr', deaths_col] if deaths_cols]
+    extra_cols = [
+        c for c in df.columns
+        if c not in standard_cols
+        and (not deaths_cols or c not in (cause_candidates + ['yr', deaths_cols[0]]))
+    ]
+    keep_cols = [c for c in (standard_cols + extra_cols) if c in df.columns]
     keep_cols = [c for c in keep_cols if c in df.columns]
     df = df[keep_cols]
 
@@ -491,9 +612,15 @@ def main():
     logger.info("\n" + "=" * 70)
     logger.info("SAVING OUTPUTS")
     logger.info("=" * 70)
+    
+    def _write_df_to_zip(df: pd.DataFrame, zip_path: Path, inner_csv_name: str):
+        """Write a DataFrame to a zip file containing a single CSV."""
+        csv_bytes = df.to_csv(index=False).encode("utf-8")
+        with zipfile.ZipFile(zip_path, mode="w", compression=zipfile.ZIP_DEFLATED) as zf:
+            zf.writestr(inner_csv_name, csv_bytes)
 
-    output_comprehensive = DATA_DIR / "uk_mortality_comprehensive_1901_2025.csv"
-    output_by_cause = DATA_DIR / "uk_mortality_by_cause_1901_2025.csv"
+    output_comprehensive_zip = DATA_DIR / "uk_mortality_comprehensive_1901_2025.zip"
+    output_by_cause_zip = DATA_DIR / "uk_mortality_by_cause_1901_2025.zip"
     output_yearly = DATA_DIR / "uk_mortality_yearly_totals_1901_2025.csv"
 
     # Save comprehensive dataset
@@ -503,16 +630,24 @@ def main():
     # Add descriptions to data before saving
     all_data_with_desc = add_cause_descriptions(all_data)
 
-    # Save comprehensive by all dimensions
-    all_data_with_desc.to_csv(output_comprehensive, index=False)
-    logger.info(f"✓ Saved comprehensive data: {output_comprehensive.name} ({len(all_data_with_desc)} records)")
+    # Save comprehensive by all dimensions (zipped CSV)
+    _write_df_to_zip(
+        all_data_with_desc,
+        output_comprehensive_zip,
+        "uk_mortality_comprehensive_1901_2025.csv",
+    )
+    logger.info(f"✓ Saved comprehensive data: {output_comprehensive_zip.name} ({len(all_data_with_desc)} records)")
 
     # Save by cause (filter to only where cause is defined)
     if 'cause' in all_data_with_desc.columns:
         by_cause = all_data_with_desc[all_data_with_desc['cause'] != 'All causes'].copy()
         if not by_cause.empty:
-            by_cause.to_csv(output_by_cause, index=False)
-            logger.info(f"✓ Saved by cause: {output_by_cause.name} ({len(by_cause)} records)")
+            _write_df_to_zip(
+                by_cause,
+                output_by_cause_zip,
+                "uk_mortality_by_cause_1901_2025.csv",
+            )
+            logger.info(f"✓ Saved by cause: {output_by_cause_zip.name} ({len(by_cause)} records)")
 
     # Print sUmmary statistics
     logger.info("\n" + "=" * 70)
@@ -520,14 +655,14 @@ def main():
     logger.info("=" * 70)
 
     if 'year' in yearly.columns:
-        logger.info(f"\nYearly Data (1901-2025):")
+        logger.info("\nYearly Data (1901-2025):")
         logger.info(f"  Total years: {len(yearly)}")
         logger.info(f"  Year range: {yearly['year'].min():.0f} - {yearly['year'].max():.0f}")
         logger.info(f"  Total deaths across all years: {yearly['total_deaths'].sum():,.0f}")
         logger.info(f"  Average annual deaths: {yearly['total_deaths'].mean():,.0f}")
 
         # Show sample years
-        logger.info(f"\n  Sample years:")
+        logger.info("\n  Sample years:")
         sample_years = [int(yearly['year'].min()), 1950, 2000, 2020, int(yearly['year'].max())]
         sample_years = [y for y in sample_years if y in yearly['year'].values]
         for year in sample_years:

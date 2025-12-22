@@ -7,13 +7,16 @@ This script uses the archived comprehensive file which has proper ICD codes thro
 import pandas as pd
 from pathlib import Path
 import logging
+import zipfile
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 BASE_DIR = Path(__file__).parent.parent
 ARCHIVE_DIR = BASE_DIR / "development_code" / "archive_csv"
-SOURCE_FILE = ARCHIVE_DIR / "uk_mortality_comprehensive_1901_2019.csv"
+# Use freshly built comprehensive by-cause dataset (preferred over archived CSV)
+SOURCE_ZIP = BASE_DIR / "uk_mortality_by_cause_1901_2025.zip"
+SOURCE_INNER = "uk_mortality_by_cause_1901_2025.csv"
 DESC_FILE = BASE_DIR / "icd_code_descriptions.csv"
 HARMONIZED_MAP = BASE_DIR / "icd_harmonized_categories.csv"
 OVERRIDES_FILE = BASE_DIR / "icd_harmonized_overrides.csv"
@@ -44,16 +47,26 @@ def get_icd_version_for_year(year):
 
 def main():
     logger.info("Starting rebuild of harmonized mortality data...")
-    logger.info(f"Source: {SOURCE_FILE}")
+    src_display = SOURCE_ZIP if SOURCE_ZIP.exists() else (BASE_DIR / SOURCE_INNER)
+    logger.info(f"Source: {src_display}")
     
     # Load source data
     logger.info("Loading source mortality data...")
-    df = pd.read_csv(SOURCE_FILE)
+    if SOURCE_ZIP.exists():
+        with zipfile.ZipFile(SOURCE_ZIP, 'r') as zf:
+            with zf.open(SOURCE_INNER) as f:
+                df = pd.read_csv(f)
+    else:
+        # Fallback to CSV if zip not found
+        df = pd.read_csv(BASE_DIR / SOURCE_INNER)
+    # Filter cause rows only if present (prefer by-cause file)
+    if 'cause' in df.columns:
+        df = df[df['cause'].notna()]
     # Limit to years covered by harmonization mappings (<= 2000)
     df = df[df["year"] <= 2000].copy()
     logger.info(f"Loaded {len(df):,} rows ({df['year'].min()}-{df['year'].max()})")
     logger.info(f"Unique causes by decade:")
-    for year in [1901, 1911, 1921, 1931, 1941, 1951, 1961, 1971, 1981, 1991, 2001, 2011]:
+    for year in [1901, 1911, 1921, 1931, 1941, 1951, 1961, 1971, 1981, 1991]:
         subset = df[df['year']==year]
         if len(subset) > 0:
             logger.info(f"  {year}: {subset['cause'].nunique()} unique causes")
@@ -64,12 +77,29 @@ def main():
     
     # Normalize cause codes to align with description code formats per ICD version
     def normalize_code(val, version):
-        s = str(val)
+        s = str(val).strip()
         if version.startswith("ICD-1"):
-            # ICD-1 codes are like 10.0, 20.0 in descriptions; archived uses integers
-            # Append .0 for pure integer codes
-            return f"{int(s)}.0"
-        # Other ICD versions already use alphanumeric codes (e.g., 100A, 3A)
+            # ICD-1 descriptions use integers with trailing .0 (e.g., 10.0, 20.0)
+            try:
+                f = float(s)
+                if f.is_integer():
+                    return f"{int(f)}.0"
+                return s
+            except ValueError:
+                return s
+        elif version.startswith(("ICD-6", "ICD-7", "ICD-8", "ICD-9")):
+            # ICD-6 onwards use zero-padded codes: 10.0 → "0010", 1000.0 → "1000"
+            try:
+                f = float(s)
+                if f.is_integer():
+                    code_int = int(f)
+                    # Pad to 4 digits for most codes, but preserve longer codes
+                    return str(code_int).zfill(4) if code_int < 10000 else str(code_int)
+                # Handle codes like "100A" that may already be strings
+                return s
+            except ValueError:
+                return s
+        # ICD-2 through ICD-5 use simple integer or alphanumeric codes
         return s
 
     df['cause'] = df.apply(lambda r: normalize_code(r['cause'], r['icd_version']), axis=1)
@@ -106,13 +136,23 @@ def main():
     overrides_df = None
     if OVERRIDES_FILE.exists():
         logger.info(f"Loading overrides from: {OVERRIDES_FILE}")
-        overrides_df = pd.read_csv(OVERRIDES_FILE)
+        # Support commented example rows; ignore lines starting with '#'
+        overrides_df = pd.read_csv(OVERRIDES_FILE, comment='#')
         overrides_df['code'] = overrides_df['code'].astype(str)
         logger.info(f"Loaded {len(overrides_df):,} override rows")
 
+    # Ensure target columns exist before applying overrides/defaults
+    for col in ['harmonized_category', 'harmonized_category_name', 'classification_confidence']:
+        if col not in df.columns:
+            df[col] = pd.NA
+
     # First apply overrides if present
-    if overrides_df is not None:
+    if overrides_df is not None and len(overrides_df) > 0:
         logger.info("Applying overrides (year-aware)...")
+        # Normalize override codes too
+        overrides_df['code'] = overrides_df.apply(
+            lambda r: normalize_code(r['code'], r['icd_version']), axis=1
+        )
         df = df.merge(
             overrides_df[['code', 'icd_version', 'harmonized_category', 'harmonized_category_name', 'classification_confidence']],
             left_on=['cause', 'icd_version'],
@@ -120,24 +160,48 @@ def main():
             how='left',
             suffixes=(None, '_override')
         )
-        # If override exists, take its values
+        # If override exists, take its values - only for columns that have _override version
+        override_matched = 0
         for col in ['harmonized_category', 'harmonized_category_name', 'classification_confidence']:
-            df[col] = df[f"{col}_override"].combine_first(df[col])
-        df = df.drop(columns=[c for c in df.columns if c.endswith('_override')] + ['code'], errors='ignore')
+            override_col = f"{col}_override"
+            if override_col in df.columns:
+                override_matched += df[override_col].notna().sum()
+                df[col] = df[override_col].combine_first(df[col])
+                df = df.drop(columns=[override_col], errors='ignore')
+        if override_matched > 0:
+            logger.info(f"Overrides applied to {override_matched // 3:,} rows")
+        df = df.drop(columns=['code'] if 'code' in df.columns else [], errors='ignore')
 
     # Then apply default mapping for remaining rows
     logger.info("Merging harmonized categories (defaults, year-aware)...")
+    # Merge defaults unconditionally, then fill only missing values
     df = df.merge(
         harm_df[['code', 'icd_version', 'harmonized_category', 'harmonized_category_name', 'classification_confidence']],
         left_on=['cause', 'icd_version'],
         right_on=['code', 'icd_version'],
-        how='left'
+        how='left',
+        suffixes=(None, '_default')
     )
+    # Use defaults for any columns that are still NaN
+    for col in ['harmonized_category', 'harmonized_category_name', 'classification_confidence']:
+        default_col = f"{col}_default"
+        if default_col in df.columns:
+            df[col] = df[col].fillna(df[default_col])
+            df = df.drop(columns=[default_col], errors='ignore')
     df = df.drop(columns=['code'], errors='ignore')
 
     harm_matched = df['harmonized_category'].notna().sum()
     harm_rate = (harm_matched / total) * 100
     logger.info(f"Harmonization match rate: {harm_matched:,} / {total:,} ({harm_rate:.1f}%)")
+    
+    # Show match rate by decade
+    logger.info("\nMatch rates by decade:")
+    for decade_start in [1901, 1911, 1921, 1931, 1941, 1951, 1961, 1971, 1981, 1991]:
+        decade_df = df[df['year'].between(decade_start, decade_start + 9)]
+        if len(decade_df) > 0:
+            matched = decade_df['harmonized_category'].notna().sum()
+            rate = (matched / len(decade_df)) * 100
+            logger.info(f"  {decade_start}s: {matched:,}/{len(decade_df):,} ({rate:.1f}%)")
     
     # Reorder columns
     final_cols = ['year', 'cause', 'cause_description', 'harmonized_category', 
@@ -145,10 +209,11 @@ def main():
     df = df[final_cols]
     
     # Save output
-    output_file = BASE_DIR / "uk_mortality_by_cause_1901_2000_harmonized.csv"
-    logger.info(f"\nSaving to: {output_file}")
-    df.to_csv(output_file, index=False)
-    logger.info(f"✅ Saved {len(df):,} rows")
+    output_zip = BASE_DIR / "uk_mortality_by_cause_1901_2000_harmonized.zip"
+    logger.info(f"\nSaving to: {output_zip}")
+    with zipfile.ZipFile(output_zip, mode='w', compression=zipfile.ZIP_DEFLATED) as zf:
+        zf.writestr("uk_mortality_by_cause_1901_2000_harmonized.csv", df.to_csv(index=False))
+    logger.info(f"✅ Saved {len(df):,} rows (zipped)")
     
     # Show sample stats
     logger.info("\n📊 Final Statistics:")

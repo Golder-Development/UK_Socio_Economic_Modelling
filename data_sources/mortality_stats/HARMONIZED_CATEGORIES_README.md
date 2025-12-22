@@ -26,7 +26,7 @@ Specific conditions were classified differently:
 
 ### The Solution: Harmonized Categories
 
-We create **19 broad disease categories** that:
+We create **24 broad disease categories** that:
 
 - ✅ Work consistently across all time periods
 - ✅ Map to similar concepts in medical classification
@@ -35,7 +35,7 @@ We create **19 broad disease categories** that:
 
 ## Harmonized Categories
 
-### The 19 Standard Categories
+### The 24 Standard Categories
 
 1. **Infectious and Parasitic Diseases** - All infections, fevers, parasitic diseases
 2. **Neoplasms (Cancers and Tumors)** - All malignant and benign growths
@@ -48,14 +48,19 @@ We create **19 broad disease categories** that:
 9. **Diseases of the Respiratory System** - Lungs, bronchitis, pneumonia
 10. **Diseases of the Digestive System** - Stomach, intestines, liver
 11. **Diseases of the Skin** - Dermatological conditions
-12. **Diseases of Musculoskeletal System** - Bones, joints, arthritis
+12. **Diseases of Musculoskeletal System and Connective Tissue** - Bones, joints, arthritis
 13. **Diseases of the Genitourinary System** - Kidneys, reproductive organs
 14. **Pregnancy, Childbirth and Puerperium** - Maternal health conditions
 15. **Conditions Originating in Perinatal Period** - Newborn conditions
-16. **Congenital Malformations** - Birth defects, chromosomal abnormalities
-17. **Injury, Poisoning and External Causes** - Accidents, violence, poisoning
-18. **Symptoms, Signs and Ill-Defined Conditions** - Unknown or unclear causes
-19. **Other and Unclassified** - Catch-all for unmatched codes
+16. **Congenital Malformations and Chromosomal Abnormalities** - Birth defects
+17. **Injury, Poisoning and External Causes** - Accidents, poisoning (general)
+18. **Suicide and Self-Inflicted Injury** - Suicide deaths
+19. **Accidental Death** - Accidents (specific category)
+20. **Homicide and Assault** - Violence, homicide
+21. **Drug-Related Deaths** - Overdose, drug dependence deaths
+22. **War and War-Related Deaths** - Wartime deaths and related impacts
+23. **Symptoms, Signs and Ill-Defined Conditions** - Unknown or unclear causes
+24. **Other and Unclassified** - Catch-all for unmatched codes
 
 ## Files Generated
 
@@ -68,7 +73,7 @@ We create **19 broad disease categories** that:
 
 2. **`harmonized_categories_summary.csv`** - Category reference
    - Columns: `category_id`, `category_name`, `code_count`, `example_keywords`
-   - 19 rows (one per harmonized category)
+   - 24 rows (one per harmonized category)
    - Quick reference guide
 
 ### Mortality Data with Harmonized Categories
@@ -217,6 +222,42 @@ print(age_pattern)
    - 17.8% of codes had low confidence (no keyword matches)
    - Manual review recommended for critical analyses
 
+## Customizing Classifications
+
+### Override Mechanism
+
+For fine-grained control over specific code assignments, use `icd_harmonized_overrides.csv`:
+
+**File**: `icd_harmonized_overrides.csv`
+**Location**: `data_sources/mortality_stats/`
+**Columns**: `code, icd_version, harmonized_category, harmonized_category_name, classification_confidence`
+
+Overrides take **highest precedence** when harmonization is rebuilt. Use this when:
+
+- A code is misclassified by the keyword system
+- You need year-specific handling (same code, different category by ICD version)
+- You're auditing/correcting the automatic mapping
+
+**Example override row:**
+
+```csv
+100A,ICD-2 (1911-1920),digestive,Diseases of the Digestive System,override
+```
+
+### Review Crosswalk
+
+Generate an audit table showing all old→new mappings:
+
+```bash
+cd data_sources/mortality_stats/development_code
+python build_crosstab_icd_harmonization.py
+```
+
+Outputs: `icd_harmonization_crosswalk.csv`
+
+- Shows `icd_version`, `cause`, `cause_description` → harmonized category mappings
+- Useful for spotting systematic errors or patterns
+
 ## Script Reference
 
 Note: Development scripts are located in `data_sources/mortality_stats/development_code`. Run the following commands from that folder, or prefix paths accordingly.
@@ -238,7 +279,7 @@ python build_harmonized_categories.py
 **Creates:**
 
 - `icd_harmonized_categories.csv` (24,561 mappings)
-- `harmonized_categories_summary.csv` (19 categories)
+- `harmonized_categories_summary.csv` (24 categories)
 
 ### 2. Apply to Mortality Data
 

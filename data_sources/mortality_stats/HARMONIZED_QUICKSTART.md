@@ -53,7 +53,7 @@ year_2000.groupby('harmonized_category_name')['deaths'].sum().plot(kind='bar')
 - Medical accuracy for clinical research
 - Granular condition tracking
 
-## Quick Reference: 19 Categories
+## Quick Reference: 24 Categories
 
 | Short Code | Category Name |
 |------------|---------------|
@@ -68,12 +68,17 @@ year_2000.groupby('harmonized_category_name')['deaths'].sum().plot(kind='bar')
 | respiratory | Diseases of the Respiratory System |
 | digestive | Diseases of the Digestive System |
 | skin | Diseases of the Skin |
-| musculoskeletal | Diseases of Musculoskeletal System |
+| musculoskeletal | Diseases of Musculoskeletal System and Connective Tissue |
 | genitourinary | Diseases of the Genitourinary System |
 | pregnancy_childbirth | Pregnancy, Childbirth and Puerperium |
 | perinatal | Conditions Originating in Perinatal Period |
-| congenital | Congenital Malformations |
+| congenital | Congenital Malformations and Chromosomal Abnormalities |
 | injury_poisoning | Injury, Poisoning and External Causes |
+| Suicide | Suicide and Self-Inflicted Injury |
+| Accident | Accidental Death |
+| Homicide | Homicide and Assault |
+| Drugs | Drug-Related Deaths |
+| War | War and War-Related Deaths |
 | ill_defined | Symptoms, Signs and Ill-Defined Conditions |
 | other | Other and Unclassified |
 
@@ -112,28 +117,44 @@ by_sex.plot(kind='barh', title='Deaths by Category and Sex')
 - Unmatched rows are mostly "Unknown" cause codes
 - Year-aware: Code meanings don't cross periods
 
-## Need More Detail?
+## Customizing Classifications
 
-- **Full documentation**: See `HARMONIZED_CATEGORIES_README.md`
-- **Technical details**: See `ICD_DESCRIPTIONS_README.md`  
-- **Examples**: Run `demonstrate_harmonized_system.py` (in `development_code`)
+### Option 1: Direct Overrides (Recommended for Quick Fixes)
 
-## Rebuild the System
+Edit `icd_harmonized_overrides.csv` to assign specific codes to categories:
 
-If you need to adjust categories:
+```csv
+code,icd_version,harmonized_category,harmonized_category_name,classification_confidence
+100A,ICD-2 (1911-1920),digestive,Diseases of the Digestive System,override
+3A,ICD-2 (1911-1920),infectious_diseases,Infectious and Parasitic Diseases,override
+```
 
+Then rebuild:
 ```bash
 cd data_sources/mortality_stats/development_code
-# 1. Edit keyword lists in build_harmonized_categories.py
-# 2. Rebuild mappings
-python build_harmonized_categories.py
-
-# 3. Apply to mortality data
-python add_harmonized_categories_to_mortality.py
-
-# 4. Verify results
-python demonstrate_harmonized_system.py
+python rebuild_harmonized_from_archive.py
+python create_interactive_mortality_dashboard.py
 ```
+
+### Option 2: Adjust Keyword Rules (For Systematic Refinement)
+
+Edit `HARMONIZED_CATEGORIES` dict in `development_code/build_harmonized_categories.py` to add/remove keywords, then regenerate all mappings:
+
+```bash
+python build_harmonized_categories.py
+python rebuild_harmonized_from_archive.py
+python create_interactive_mortality_dashboard.py
+```
+
+### Review Your Mappings
+
+Generate a crosswalk table to audit code→category assignments:
+
+```bash
+python build_crosstab_icd_harmonization.py
+```
+
+Outputs: `icd_harmonization_crosswalk.csv` with columns: icd_version, cause, cause_description, harmonized_category_name, classification_confidence
 
 ---
 
