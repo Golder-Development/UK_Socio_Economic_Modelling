@@ -141,32 +141,41 @@ def main():
     logger.info("Loading code descriptions...")
     desc_df = pd.read_csv(DESC_FILE)
     desc_df['code'] = desc_df['code'].astype(str)
-    logger.info(f"Loaded {len(desc_df):,} code descriptions")
+    # Ensure unique description per (code, icd_version) to avoid many-to-many merges
+    desc_df = desc_df[['code', 'icd_version', 'description']].drop_duplicates(subset=['code', 'icd_version'])
+    logger.info(f"Loaded {len(desc_df):,} code descriptions (deduplicated by code+version)")
     
     # Merge with year-aware matching (code + ICD version)
     logger.info("Merging descriptions (year-aware)...")
     # Drop any existing cause_description to avoid duplicate-name DataFrame results
     if 'cause_description' in df.columns:
         df = df.drop(columns=['cause_description'])
+    before_rows = len(df)
     df = df.merge(
         desc_df[['code', 'icd_version', 'description']],
         left_on=['cause', 'icd_version'],
         right_on=['code', 'icd_version'],
-        how='left'
+        how='left',
+        validate='many_to_one'
     )
     df = df.rename(columns={'description': 'cause_description'})
     df = df.drop(columns=['code'], errors='ignore')
-    
+    after_rows = len(df)
+    if after_rows != before_rows:
+        logger.warning(f"Description merge changed row count: {before_rows:,} -> {after_rows:,}. This should not happen.")
     matched = int(df['cause_description'].notna().sum())
-    total = int(len(df))
-    match_rate = (matched / total) * 100
-    logger.info(f"Description match rate: {matched:,} / {total:,} ({match_rate:.1f}%)")
+    total_rows = int(len(df))
+    match_rate = (matched / total_rows) * 100
+    logger.info(f"Description match rate: {matched:,} / {total_rows:,} ({match_rate:.1f}%)")
     
     # Load harmonized categories
     logger.info("\nLoading harmonized categories...")
     harm_df = pd.read_csv(HARMONIZED_MAP)
     harm_df['code'] = harm_df['code'].astype(str)
-    logger.info(f"Loaded {len(harm_df):,} harmonized mappings")
+    # Deduplicate mapping to one row per (code, icd_version) to avoid many-to-many merge explosions
+    harm_df = harm_df[['code', 'icd_version', 'harmonized_category', 'harmonized_category_name', 'classification_confidence']]
+    harm_df = harm_df.drop_duplicates(subset=['code', 'icd_version'])
+    logger.info(f"Loaded {len(harm_df):,} harmonized mappings (deduplicated by code+version)")
 
     # Load optional overrides (highest precedence)
     overrides_df = None
@@ -175,7 +184,10 @@ def main():
         # Support commented example rows; ignore lines starting with '#'
         overrides_df = pd.read_csv(OVERRIDES_FILE, comment='#')
         overrides_df['code'] = overrides_df['code'].astype(str)
-        logger.info(f"Loaded {len(overrides_df):,} override rows")
+        # Deduplicate overrides to a single row per (code, icd_version)
+        overrides_df = overrides_df[['code', 'icd_version', 'harmonized_category', 'harmonized_category_name', 'classification_confidence']]
+        overrides_df = overrides_df.drop_duplicates(subset=['code', 'icd_version'])
+        logger.info(f"Loaded {len(overrides_df):,} override rows (deduplicated by code+version)")
 
     # Ensure target columns exist before applying overrides/defaults
     for col in ['harmonized_category', 'harmonized_category_name', 'classification_confidence']:
@@ -189,12 +201,14 @@ def main():
         overrides_df['code'] = overrides_df.apply(
             lambda r: normalize_code(r['code'], r['icd_version']), axis=1
         )
+        pre_rows = len(df)
         df = df.merge(
             overrides_df[['code', 'icd_version', 'harmonized_category', 'harmonized_category_name', 'classification_confidence']],
             left_on=['cause', 'icd_version'],
             right_on=['code', 'icd_version'],
             how='left',
-            suffixes=(None, '_override')
+            suffixes=(None, '_override'),
+            validate='many_to_one'
         )
         # If override exists, take its values - only for columns that have _override version
         override_matched = 0
@@ -207,16 +221,21 @@ def main():
         if override_matched > 0:
             logger.info(f"Overrides applied to {override_matched // 3:,} rows")
         df = df.drop(columns=['code'] if 'code' in df.columns else [], errors='ignore')
+        post_rows = len(df)
+        if post_rows != pre_rows:
+            logger.warning(f"Override merge changed row count: {pre_rows:,} -> {post_rows:,}. This should not happen.")
 
     # Then apply default mapping for remaining rows
     logger.info("Merging harmonized categories (defaults, year-aware)...")
     # Merge defaults unconditionally, then fill only missing values
+    pre_rows = len(df)
     df = df.merge(
         harm_df[['code', 'icd_version', 'harmonized_category', 'harmonized_category_name', 'classification_confidence']],
         left_on=['cause', 'icd_version'],
         right_on=['code', 'icd_version'],
         how='left',
-        suffixes=(None, '_default')
+        suffixes=(None, '_default'),
+        validate='many_to_one'
     )
     # Use defaults for any columns that are still NaN
     for col in ['harmonized_category', 'harmonized_category_name', 'classification_confidence']:
@@ -225,16 +244,21 @@ def main():
             df[col] = df[col].fillna(df[default_col])
             df = df.drop(columns=[default_col], errors='ignore')
     df = df.drop(columns=['code'], errors='ignore')
+    post_rows = len(df)
+    if post_rows != pre_rows:
+        logger.warning(f"Default mapping merge changed row count: {pre_rows:,} -> {post_rows:,}. This should not happen.")
 
     # Fallback: if still missing, try code-only match (ignoring icd_version label differences)
     if df['harmonized_category'].isna().any():
         fallback_map = harm_df[['code', 'harmonized_category', 'harmonized_category_name', 'classification_confidence']].drop_duplicates('code')
+        pre_rows_fb = len(df)
         df = df.merge(
             fallback_map,
             left_on='cause',
             right_on='code',
             how='left',
-            suffixes=(None, '_fallback')
+            suffixes=(None, '_fallback'),
+            validate='many_to_one'
         )
         for col in ['harmonized_category', 'harmonized_category_name', 'classification_confidence']:
             fb_col = f"{col}_fallback"
@@ -242,15 +266,25 @@ def main():
                 df[col] = df[col].fillna(df[fb_col])
                 df = df.drop(columns=[fb_col], errors='ignore')
         df = df.drop(columns=['code'], errors='ignore')
+        post_rows_fb = len(df)
+        if post_rows_fb != pre_rows_fb:
+            logger.warning(f"Fallback merge changed row count: {pre_rows_fb:,} -> {post_rows_fb:,}. This should not happen.")
 
     harm_matched = df['harmonized_category'].notna().sum()
-    harm_rate = (harm_matched / total) * 100
-    logger.info(f"Harmonization match rate: {harm_matched:,} / {total:,} ({harm_rate:.1f}%)")
+    total_rows = len(df)
+    harm_rate = (harm_matched / total_rows) * 100
+    logger.info(f"Harmonization match rate: {harm_matched:,} / {total_rows:,} ({harm_rate:.1f}%)")
     
     # Show match rate by decade
     logger.info("\nMatch rates by decade:")
-    for decade_start in [1901, 1911, 1921, 1931, 1941, 1951, 1961, 1971, 1981, 1991]:
-        decade_df = df[df['year'].between(decade_start, decade_start + 9)]
+    min_year = int(df['year'].min())
+    max_year = int(df['year'].max())
+    # Align decade starts to years ending in '1' (e.g., 1901, 1911, ...)
+    align_r = 1
+    start_decade = min_year + ((align_r - (min_year % 10)) % 10)
+    for decade_start in range(start_decade, max_year + 1, 10):
+        decade_end = min(decade_start + 9, max_year)
+        decade_df = df[df['year'].between(decade_start, decade_end)]
         if len(decade_df) > 0:
             matched = decade_df['harmonized_category'].notna().sum()
             rate = (matched / len(decade_df)) * 100

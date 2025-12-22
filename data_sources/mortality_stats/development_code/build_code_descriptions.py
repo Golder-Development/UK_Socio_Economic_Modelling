@@ -248,10 +248,56 @@ def build_code_description_mapping():
                 df["icd_version"] = period
                 all_descriptions.append(df)
 
-    # Extract ICD-10 codes from modern data
-    icd10_df = extract_icd10_codes_from_data()
-    if not icd10_df.empty:
-        all_descriptions.append(icd10_df)
+    # Prefer authoritative ICD-10 descriptions from ICD10_codes.xlsx (sheet 1)
+    def extract_icd10_descriptions_from_reference() -> pd.DataFrame:
+        ref_path = ONS_DOWNLOADS / "ICD10_codes.xlsx"
+        if not ref_path.exists():
+            logger.warning(f"ICD10 reference not found: {ref_path}")
+            return pd.DataFrame()
+        try:
+            # Read first sheet (sheet 1)
+            df = pd.read_excel(ref_path, sheet_name=0)
+            # Normalize columns
+            df.columns = df.columns.str.strip().str.lower()
+            # Identify code column
+            code_col = None
+            for c in df.columns:
+                if "code" in c or "icd-10" in c or "icd10" in c:
+                    code_col = c
+                    break
+            # Identify description column
+            desc_col = None
+            for c in df.columns:
+                if "description" in c or "title" in c or "label" in c:
+                    desc_col = c
+                    break
+            if not code_col or not desc_col:
+                logger.warning("ICD10 reference sheet missing code/description columns")
+                return pd.DataFrame()
+            out = pd.DataFrame({
+                "code": df[code_col].astype(str).str.strip().str.upper(),
+                "description": df[desc_col].astype(str).str.strip(),
+                # Ensure this source is prioritized in simplified mapping
+                "source_file": "zzzzzz_ICD10_codes.xlsx",
+            })
+            # Drop empties
+            out = out[(out["code"] != "") & (out["code"] != "nan")]
+            # Add icd_version
+            out["icd_version"] = "ICD-10 (2001-)"
+            logger.info(f"Loaded {len(out):,} ICD-10 descriptions from reference")
+            return out
+        except Exception as exc:
+            logger.error(f"Failed to read ICD10 reference: {exc}")
+            return pd.DataFrame()
+
+    icd10_ref = extract_icd10_descriptions_from_reference()
+    if not icd10_ref.empty:
+        all_descriptions.append(icd10_ref)
+    else:
+        # Fallback: extract ICD-10 codes from modern data and use heuristic descriptions
+        icd10_df = extract_icd10_codes_from_data()
+        if not icd10_df.empty:
+            all_descriptions.append(icd10_df)
 
     if not all_descriptions:
         logger.error("No descriptions extracted!")
@@ -304,9 +350,12 @@ def main():
 
     # Create a simplified mapping (just code -> description, using most recent)
     # For codes that appear in multiple ICD versions, keep the most recent
+    # Prefer ICD-10 reference rows when duplicates exist
+    # Sort keys: prioritize icd_version=='ICD-10 (2001-)', then by source_file desc
+    descriptions_df["_is_icd10"] = descriptions_df["icd_version"].eq("ICD-10 (2001-)")
     simplified = descriptions_df.sort_values(
-        "source_file", ascending=False
-    ).drop_duplicates(subset=["code"], keep="first")
+        by=["_is_icd10", "source_file"], ascending=[False, False]
+    ).drop_duplicates(subset=["code"], keep="first").drop(columns=["_is_icd10"], errors="ignore")
     simplified[["code", "description"]].to_csv(simplified_output, index=False)
     logger.info(f"✓ Saved simplified mapping to: {simplified_output}")
     logger.info(f"  ({len(simplified):,} unique codes)")

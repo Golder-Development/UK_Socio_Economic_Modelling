@@ -1,76 +1,10 @@
 code,icd_version,harmonized_category,harmonized_category_name,classification_confidence,notes
-1130.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Other diseases of blood vessels
-1390.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Diseases of spleen
-1400.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Other diseases of lymphatic system
-1440.0,ICD-1 (1901-1910),other,Other and Unclassified,override,"REVIEW NEEDED - Original: Chronic Bright's disease, albuminuria"
-1450.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Calculus (not biliary)
-1520.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Disorders of menstruation
-1530.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Other diseases of generative and mammary organs
-1590.0,ICD-1 (1901-1910),other,Other and Unclassified,override,"REVIEW NEEDED - Original: Caries, necrosis"
-1610.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Other diseases of locomotor system
 1660.0,ICD-1 (1901-1910),ill_defined,"Symptoms, Signs and Ill-Defined Conditions",override,"REVIEW NEEDED - Original: Atrophy, debility"
 1670.0,ICD-1 (1901-1910),ill_defined,"Symptoms, Signs and Ill-Defined Conditions",override,REVIEW NEEDED - Original: Old age
-1680.0,ICD-1 (1901-1910),other,Other and Unclassified,override,"REVIEW NEEDED - Original: Dropsy, ascites, anasarca"
-170.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Pyrexia (origin uncertain)
 1720.0,ICD-1 (1901-1910),ill_defined,"Symptoms, Signs and Ill-Defined Conditions",override,REVIEW NEEDED - Original: Sudden death (cause unascertained)
 1730.0,ICD-1 (1901-1910),ill_defined,"Symptoms, Signs and Ill-Defined Conditions",override,REVIEW NEEDED - Original: Other ill-defined causes
 1740.0,ICD-1 (1901-1910),ill_defined,"Symptoms, Signs and Ill-Defined Conditions",override,REVIEW NEEDED - Original: Causes not specified
-1741.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Other specified diseases
-1750.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Mines and quarries
-1760.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Vehicles and horses
-1780.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Building operations
-1790.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Machinery
-1860.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Weather agencies
 1870.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Otherwise or not stated
-230.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Dysentry
-310.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Phlegmasia alba dolens
-440.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Phagedaena
-450.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Other infective processes
-470.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Phthisis (not otherwise def.)
-500.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Tabes mesenterica
-510.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Lupus
-520.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Tubercle of other organs
-540.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Scrofula
-560.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Starvation
-810.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Want of breast milk
-820.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Teething
-910.0,ICD-1 (1901-1910),other,Other and Unclassified,override,REVIEW NEEDED - Original: Locomotor ataxy
-920.0,ICD-1 (1901-1910),other,Other and Unclassified,override,"REVIEW NEEDED - Original: Paraplegia, diseases of cord"
-970.0,ICD-1 (1901-1910),other,Other and Unclassified,override,"REVIEW NEEDED - Original: Epistaxis, diseases of nose"
-A410,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Other sepsis (A410)
-A411,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Other sepsis (A411)
-A412,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Other sepsis (A412)
-A413,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Other sepsis (A413)
-A414,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Other sepsis (A414)
-A415,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Other sepsis (A415)
-A418,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Other sepsis (A418)
-A419,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Other sepsis (A419)
-B200,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B200)
-B201,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B201)
-B202,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B202)
-B203,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B203)
-B204,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B204)
-B205,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B205)
-B206,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B206)
-B207,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B207)
-B208,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B208)
-B209,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B209)
-B210,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B210)
-B211,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B211)
-B212,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B212)
-B213,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B213)
-B217,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B217)
-B218,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B218)
-B219,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B219)
-B220,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B220)
-B222,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B222)
-B227,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B227)
-B231,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B231)
-B232,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B232)
-B238,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: HIV disease (B238)
-B24,ICD-10 (2001-),ill_defined,"Symptoms, Signs and Ill-Defined Conditions",override,REVIEW NEEDED - Original: Unspecified HIV disease
-D000,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Diseases of blood/immune/endocrine (D000)
-D001,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Diseases of blood/immune/endocrine (D001)
 D002,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Diseases of blood/immune/endocrine (D002)
 D010,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Diseases of blood/immune/endocrine (D010)
 D012,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Diseases of blood/immune/endocrine (D012)
@@ -373,15 +307,7 @@ E785,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Origin
 E786,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Disorders of lipoprotein metabolism (E786)
 E788,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Disorders of lipoprotein metabolism (E788)
 E789,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Disorders of lipoprotein metabolism (E789)
-F320,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Depressive episode (F320)
-F321,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Depressive episode (F321)
-F322,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Depressive episode (F322)
-F323,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Depressive episode (F323)
-F328,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Depressive episode (F328)
-F329,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Depressive episode (F329)
-F332,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Recurrent depressive disorder (F332)
-F333,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Recurrent depressive disorder (F333)
-F339,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Recurrent depressive disorder (F339)
+
 G300,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Alzheimer disease (G300)
 G301,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Alzheimer disease (G301)
 G308,ICD-10 (2001-),other,Other and Unclassified,override,REVIEW NEEDED - Original: Alzheimer disease (G308)

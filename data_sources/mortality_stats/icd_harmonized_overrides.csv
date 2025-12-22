@@ -556,4 +556,189 @@ Y367,ICD-10 (2001-),War,War and War-Related Deaths,override
 Y368,ICD-10 (2001-),War,War and War-Related Deaths,override
 Y369,ICD-10 (2001-),War,War and War-Related Deaths,override
 Y891,ICD-10 (2001-),War,War and War-Related Deaths,override
+1520.0,ICD-1 (1901-1910),genitourinary,Diseases of the Genitourinary System,override
+1530.0,ICD-1 (1901-1910),genitourinary,Diseases of the Genitourinary System,override
+1610.0,ICD-1 (1901-1910),musculoskeletal,Diseases of Musculoskeletal System and Connective Tissue,override
+1440.0,ICD-1 (1901-1910),endocrine_metabolic,"Endocrine, Nutritional and Metabolic Diseases",override
+1400.0,ICD-1 (1901-1910),infectious_diseases,Infectious and Parasitic Diseases,override
+1680.0,ICD-1 (1901-1910),endocrine_metabolic,"Endocrine, Nutritional and Metabolic Diseases",override
+170.0,ICD-1 (1901-1910),ill_defined,"Symptoms, Signs and Ill-Defined Conditions",override
+1590.0,ICD-1 (1901-1910),ill_defined,"Symptoms, Signs and Ill-Defined Conditions",override
+1450.0,ICD-1 (1901-1910),ill_defined,"Symptoms, Signs and Ill-Defined Conditions",override
+1390.0,ICD-1 (1901-1910),ill_defined,"Symptoms, Signs and Ill-Defined Conditions",override
+1130.0,ICD-1 (1901-1910),blood_immune,Blood and Immune System Disorders,override
+1741.0,ICD-1 (1901-1910),Accident,Accidental Death,override
+1750.0,ICD-1 (1901-1910),Accident,Accidental Death,override
+1760.0,ICD-1 (1901-1910),Accident,Accidental Death,override
+1780.0,ICD-1 (1901-1910),Accident,Accidental Death,override
+1790.0,ICD-1 (1901-1910),Accident,Accidental Death,override
+1860.0,ICD-1 (1901-1910),Accident,Accidental Death,override
+510.0,ICD-1 (1901-1910),blood_immune,Blood and Immune System Disorders,override
+520.0,ICD-1 (1901-1910),neoplasms,Neoplasms (Cancers and Tumors),override
+540.0,ICD-1 (1901-1910),respiratory,Diseases of the Respiratory System,override
+560.0,ICD-1 (1901-1910),social_issues,Social Issues Affecting Health,override
+810.0,ICD-1 (1901-1910),perinatal,Conditions Originating in Perinatal Period,override
+820.0,ICD-1 (1901-1910),perinatal,Conditions Originating in Perinatal Period,override
+230.0,ICD-1 (1901-1910),digestive,Diseases of the Digestive System,override
+310.0,ICD-1 (1901-1910),circulatory,Diseases of the Circulatory System,override
+440.0,ICD-1 (1901-1910),skin,Diseases of the Skin,override
+450.0,ICD-1 (1901-1910),infectious_diseases,Infectious and Parasitic Diseases,override
+470.0,ICD-1 (1901-1910),infectious_diseases,Infectious and Parasitic Diseases,override
+500.0,ICD-1 (1901-1910),digestive,Diseases of the Digestive System,override
+910.0,ICD-1 (1901-1910),musculoskeletal,Diseases of Musculoskeletal System and Connective Tissue,override
+920.0,ICD-1 (1901-1910),musculoskeletal,Diseases of Musculoskeletal System and Connective Tissue,override
+970.0,ICD-1 (1901-1910),ill_defined,"Symptoms, Signs and Ill-Defined Conditions",override
+A410,ICD-10 (2001-),infectious_diseases,Infectious and Parasitic Diseases,override
+A411,ICD-10 (2001-),infectious_diseases,Infectious and Parasitic Diseases,override
+A412,ICD-10 (2001-),infectious_diseases,Infectious and Parasitic Diseases,override
+A413,ICD-10 (2001-),infectious_diseases,Infectious and Parasitic Diseases,override
+A414,ICD-10 (2001-),infectious_diseases,Infectious and Parasitic Diseases,override
+A415,ICD-10 (2001-),infectious_diseases,Infectious and Parasitic Diseases,override
+A418,ICD-10 (2001-),infectious_diseases,Infectious and Parasitic Diseases,override
+A419,ICD-10 (2001-),infectious_diseases,Infectious and Parasitic Diseases,override
+B200,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B201,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B202,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B203,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B204,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B205,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B206,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B207,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B208,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B209,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B210,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B211,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B212,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B213,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B217,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B218,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B219,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B220,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B222,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B227,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B231,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B232,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B238,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+B24,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+D000,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+D001,ICD-10 (2001-),blood_immune,Blood and Immune System Disorders,override
+F320,ICD-10 (2001-),mental_behavioral,Mental and Behavioral Disorders,override
+F321,ICD-10 (2001-),mental_behavioral,Mental and Behavioral Disorders,override
+F322,ICD-10 (2001-),mental_behavioral,Mental and Behavioral Disorders,override
+F323,ICD-10 (2001-),mental_behavioral,Mental and Behavioral Disorders,override
+F328,ICD-10 (2001-),mental_behavioral,Mental and Behavioral Disorders,override
+F329,ICD-10 (2001-),mental_behavioral,Mental and Behavioral Disorders,override
+F332,ICD-10 (2001-),mental_behavioral,Mental and Behavioral Disorders,override
+F333,ICD-10 (2001-),mental_behavioral,Mental and Behavioral Disorders,override
+F339,ICD-10 (2001-),mental_behavioral,Mental and Behavioral Disorders,override
+F102,ICD-10 (2001-),Legal Drugs,Legal Drug-Related Deaths,override
+F103,ICD-10 (2001-),Legal Drugs,Legal Drug-Related Deaths,override
+F104,ICD-10 (2001-),Legal Drugs,Legal Drug-Related Deaths,override
+F106,ICD-10 (2001-),Legal Drugs,Legal Drug-Related Deaths,override
+F107,ICD-10 (2001-),Legal Drugs,Legal Drug-Related Deaths,override
+F109,ICD-10 (2001-),Legal Drugs,Legal Drug-Related Deaths,override
+F110,ICD-10 (2001-),Legal Drugs,Legal Drug-Related Deaths,override
+F111,ICD-10 (2001-),Legal Drugs,Legal Drug-Related Deaths,override
+F112,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F119,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F121,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F122,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F123,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F125,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F129,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F131,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F132,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F133,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F139,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F140,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F141,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F142,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F149,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F151,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F152,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F155,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F159,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F161,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F172,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F177,ICD-10 (2001-),Legal Drugs,Legal Drug-Related Deaths,override
+F179,ICD-10 (2001-),Legal Drugs,Legal Drug-Related Deaths,override
+F181,ICD-10 (2001-),Legal Drugs,Legal Drug-Related Deaths,override
+F182,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F189,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F190,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F191,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F192,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F193,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F195,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F197,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F199,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+F200,ICD-10 (2001-),Drugs,Drug-Related Deaths,override
+Y381,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y400,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y401,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y404,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y408,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y409,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y410,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y412,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y418,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y420,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y427,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y428,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y431,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y433,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y440,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y442,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y445,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y447,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y450,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y451,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y452,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y453,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y455,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y458,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y459,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y462,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y466,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y471,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y474,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y480,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y481,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y482,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y483,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y484,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y492,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y493,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y494,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y495,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y496,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y517,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y520,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y521,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y524,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y525,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y536,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y546,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y548,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y551,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y560,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y564,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y566,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y570,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y575,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y576,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y578,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y579,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y599,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y600,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y601,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y602,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y603,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y604,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y605,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y606,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y607,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y608,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y609,ICD-10 (2001-),War,War and War-Related Deaths,override
+Y614,ICD-10 (2001-),War,War and War-Related Deaths,override
 

@@ -32,6 +32,7 @@ HARMONIZED_CATEGORIES = {
             "pox",
             "plague",
             "cholera",
+            "sepsis",
             "typhus",
             "typhoid",
             "malaria",
@@ -117,6 +118,8 @@ HARMONIZED_CATEGORIES = {
             "disseminated sclerosis",
             "multiple sclerosis",
             "pemphigus",
+            "hiv",
+            "blood/immunce/endocrine",
         ],
     },
     "endocrine_metabolic": {
@@ -158,6 +161,9 @@ HARMONIZED_CATEGORIES = {
             "anxiety",
             "intellectual disability",
             "idiocy,imbecility"
+            "depressive episode",
+            "recurrent depressive disorder",
+            "Alzheimer disease",
         ],
     },
     "nervous_system": {
@@ -184,6 +190,7 @@ HARMONIZED_CATEGORIES = {
             "tabes dorsalis",
             "locomotor ataxia",
             "chorea",
+            "status epilepticus",
         ],
     },
     "eye_ear": {
@@ -231,6 +238,7 @@ HARMONIZED_CATEGORIES = {
             "aortic and mitral valve disease",
             "other diseases of the arteries",
             "other diseases of the circulatory system",
+            "diseases of the circulatory system",
         ],
     },
     "respiratory": {
@@ -289,6 +297,8 @@ HARMONIZED_CATEGORIES = {
             "colitis",
             "ankylostomiasis",
             "biliary calculi",
+            "crohn disease",
+            "cholelithiasis",
         ],
     },
     "skin": {
@@ -321,6 +331,7 @@ HARMONIZED_CATEGORIES = {
             "spinal",
             "scoliosis",
             "dorsopathy",
+            "diseases of musculoskeletal system"
         ],
     },
     "genitourinary": {
@@ -362,6 +373,7 @@ HARMONIZED_CATEGORIES = {
             "obstetric",
             "icterus neonatorum",
             "diseases of the umbilicus",
+            "eclampsia",
         ],
     },
     "perinatal": {
@@ -377,6 +389,7 @@ HARMONIZED_CATEGORIES = {
             "congenital",
             "cretinism",
             "congenital hypothyroidism",
+            "sudden infant death syndrome",
         ],
     },
     "congenital": {
@@ -409,33 +422,49 @@ HARMONIZED_CATEGORIES = {
             "railway",
             "fire",
             "vaccinia*",
+            "vaccinia",
+            "Attack by venomous animals",
         ],
     },
-    "Suicide": {
-        "name": "Suicide and Self-Inflicted Injury",
+    "social_issues": {
+        "name": "Social Issues Affecting Health",
         "keywords": [
-            "suicide",
+            "starvation",
+            "want of breast milk",
+            "Hunger or thirst",
+            "excessive cold",
+            "excessive heat",
+            "exposure",
         ],
     },
-    "Accident": {
+    "accident": {
         "name": "Accidental Death",
         "keywords": [
             "accident",
             "conflagration",
             "lightening",
             "electricity",
+            "pedestrian injured in collision with pedal cycle",
+            "cataclysm",
+            "Collisions with",
+            "Collisions with tram",
+            "Collisions with train",
         ],
     },
-    "Homicide": {
+    "homicide": {
         "name": "Homicide and Assault",
         "keywords": [
             "homicide",
             "violence",
             "assault",
             "weapon",
+            "hit, struck, kicked by another person",
+            "external causes - intentional"
+            "execution",
+            "violent deaths of unstated nature",
         ],
     },
-    "Legal Drugs": {
+    "legal_drugs": {
         "name": "Legal Drug-Related Deaths",
         "keywords": [
             "tobacco",
@@ -443,9 +472,11 @@ HARMONIZED_CATEGORIES = {
             "alcohol dependence syndrome",
             "alcoholism",
             "alcoholic psychoses",
+            "nicotine",
+            "alcoholic liver disease",
         ],
     },
-    "Drugs": {
+    "drugs": {
         "name": "Drug-Related Deaths",
         "keywords": [
             "overdose",
@@ -455,63 +486,25 @@ HARMONIZED_CATEGORIES = {
             "nonedependent abuse of drugs"
         ],
     },
-    "War": {
-        "name": "War and War-Related Deaths",
+    "war": {
+        "name": "War and Conflict-Related Deaths",
         "keywords": [
             "battle",
             "war ",
-            "executions of civilians by belligerent armies"
+            "executions of civilians by belligerent armies",
+            "terrorism",
+            "war operations",
         ],
     },
-    "Suicide": {
+    "suicide": {
         "name": "Suicide and Self-Inflicted Injury",
         "keywords": [
             "suicide",
+            "self-inflicted",
+            "self harm",
+            "intentional self-harm by jumping from a high place",
         ],
     },
-    "Accident": {
-        "name": "Accidental Death",
-        "keywords": [
-            "accident",
-        ],
-    },
-    "Homicide": {
-        "name": "Homicide and Assault",
-        "keywords": [
-            "homicide",
-            "violence",
-            "assault",
-            "weapon",
-        ],
-    },
-    "Legal Drugs": {
-        "name": "Legal Drug-Related Deaths",
-        "keywords": [
-            "tobacco",
-            "alcohol",
-            "alcohol dependence syndrome",
-            "alcoholism",
-            "alcoholic psychoses",
-        ],
-    },
-    "Drugs": {
-        "name": "Drug-Related Deaths",
-        "keywords": [
-            "overdose",
-            "drug dependence",
-            'opium',
-            "drug psychoses",
-            "nonedependent abuse of drugs"
-        ],
-    },
-    "War": {
-        "name": "War and War-Related Deaths",
-        "keywords": [
-            "battle",
-            "war ",
-        ],
-    },
-
     "ill_defined": {
         "name": "Symptoms, Signs and Ill-Defined Conditions",
         "keywords": [
@@ -525,6 +518,8 @@ HARMONIZED_CATEGORIES = {
             "debility",
             "sudden death",
             "found dead",
+            "external causes - undetermined",
+            "cause not specified",
         ],
     },
     "other": {
