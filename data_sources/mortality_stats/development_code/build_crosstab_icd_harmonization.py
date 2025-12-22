@@ -5,14 +5,37 @@ Outputs CSV at the mortality_stats folder.
 
 import pandas as pd
 from pathlib import Path
+import zipfile
 
 BASE_DIR = Path(__file__).parent.parent
-SOURCE = BASE_DIR / "uk_mortality_by_cause_1901_2000_harmonized.csv"
+SOURCE_ZIP = BASE_DIR / "uk_mortality_by_cause_1901_2000_harmonized.zip"
+SOURCE_CSV = BASE_DIR / "uk_mortality_by_cause_1901_2000_harmonized.csv"
 OUT = BASE_DIR / "icd_harmonization_crosswalk.csv"
 
 
+def _read_csv_from_zip(zip_path: Path, inner_name: str | None = None) -> pd.DataFrame:
+    """Read a CSV from a zip file; if inner_name is None, use the first .csv inside."""
+    with zipfile.ZipFile(zip_path, 'r') as zf:
+        name = inner_name
+        if name is None:
+            csvs = [n for n in zf.namelist() if n.lower().endswith('.csv')]
+            if not csvs:
+                raise FileNotFoundError(f"No CSV found inside {zip_path}")
+            name = csvs[0]
+        with zf.open(name) as f:
+            return pd.read_csv(f)
+
+
 def main():
-    df = pd.read_csv(SOURCE)
+    # Prefer ZIP source (policy), fallback to CSV if present
+    if SOURCE_ZIP.exists():
+        df = _read_csv_from_zip(SOURCE_ZIP)
+    elif SOURCE_CSV.exists():
+        df = pd.read_csv(SOURCE_CSV)
+    else:
+        raise FileNotFoundError(
+            f"No harmonized source found: {SOURCE_ZIP} or {SOURCE_CSV}"
+        )
     cols = [
         "icd_version",
         "cause",
