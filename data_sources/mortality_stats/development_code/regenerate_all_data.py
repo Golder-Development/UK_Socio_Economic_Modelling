@@ -364,6 +364,14 @@ Examples:
             steps_failed += 1
         else:
             steps_completed += 1
+            if not run_script(
+                "create_age_group_mortality_dashboard.py",
+                "Create age-group mortality dashboards",
+                args.verbose,
+            ):
+                steps_failed += 1
+            else:
+                steps_completed += 1
             # STEP 5: Update index.md Generated Charts section at repo root
             run_repo_script(
                 "sl_core/utils/update_generated_charts_section.py",

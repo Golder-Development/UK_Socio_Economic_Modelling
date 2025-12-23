@@ -15,40 +15,71 @@ Implementation details:
 
 Outputs from the comprehensive builder include consolidated historical rows per era, later standardized and aggregated into yearly totals and cause-level tables for 1901–2025.
 
+## 📊 Mortality Rates per 100,000 — Key Update
+
+Recent improvements now provide **age-group-specific mortality rates** using the harmonized population estimates. This prevents misinterpretation of rates that combine different age cohorts.
+
+### Three complementary datasets
+
+1. **`uk_mortality_rates_per_100k_by_cause.csv`**  
+   - **Denominator:** Age-group population (e.g., 0-4 age group only)
+   - **Column:** `mortality_rate_per_100k_age_group_population`
+   - **Use case:** Compare mortality from different causes *within the same age group*
+   - **Example:** "Infectious disease deaths per 100k of the 0-4 age group"
+
+2. **`uk_mortality_rates_per_100k_by_age_group.csv`** *(NEW)*  
+   - **Denominator:** Age-group population (all causes combined)
+   - **Column:** `mortality_rate_per_100k_age_group_population`
+   - **Use case:** Compare mortality *across age groups*
+   - **Example:** "Total deaths per 100k in the 85+ age group vs. 0-4 age group"
+
+3. **`uk_mortality_rates_per_100k_yearly_totals.csv`**  
+   - **Denominator:** Total population (all ages, all causes)
+   - **Column:** `mortality_rate_per_100k_total_population`
+   - **Use case:** High-level annual trends in overall population mortality
+   - **Example:** "Overall mortality in 2000 was 1,031.6 per 100,000 (all ages)"
+
+**⚠️ Critical:** Each file includes explicit column names (`mortality_rate_per_100k_age_group_population`, `mortality_rate_per_100k_total_population`) to avoid confusion about which denominator was used.
+
+---
+
 ## ✅ What You Now Have
 
-### 1. **Total Deaths by Year: 2001-2025** (25 years)
+### 1. **Total Deaths by Year: 1901-2000** (100 years)
 
-**File:** `uk_mortality_comprehensive.csv`
+**File:** `uk_mortality_comprehensive_1901_2025_harmonized.csv` (merged with population)
 
 ```text
-Year Range: 2001 - 2025
-Total Records: 25 years
+Year Range: 1901 - 2000
+Total Records: 37,897 (cause/sex/age breakdown)
 Coverage: 100% complete for this period
-Data Quality: Multiple sources merged with deduplication
+Data Quality: Historical ICD harmonized + modern harmonization
 ```
 
-**Key Statistics:**
+### 2. **Deaths by Age Group & Cause (Harmonized): 1901-2000**
 
-- **Lowest:** 2011 with 484,391 deaths
-- **Highest:** 2020 with 614,114 deaths (COVID-19 spike)
-- **Average:** ~535,000 deaths/year
-- **Recent:** 2025 shows 502,553 (note: partial year data)
+**File:** `uk_mortality_rates_per_100k_by_cause.csv`
 
-### 2. **Deaths by Cause (ICD-10): 2001-2017** (17 years)
+- 29,452 records combining cause, sex, and age-group denominators
+- Rates calculated using the harmonized 10-age-group system (0-4, 5-14, …, 85+)
+- Column: `mortality_rate_per_100k_age_group_population` ← **explicitly labelled**
 
-**File:** `uk_mortality_by_cause.csv`
+### 3. **Deaths by Age Group (All Causes): 1901-2000** *(NEW)*
 
-**Includes breakdown by ICD-10 chapter:**
+**File:** `uk_mortality_rates_per_100k_by_age_group.csv`
 
-- **I: Circulatory system** - ~420,000 deaths/year (largest cause)
-- **C: Cancer/Neoplasms** - ~270,000 deaths/year
-- **J: Respiratory system** - ~135,000 deaths/year
-- **F: Mental/Behavioural** - ~29,000 deaths/year
-- **G: Nervous system** - ~29,000 deaths/year
-- Plus 17 other categories
+- 2,000 records (1901-2000 × 10 age groups × 2 sexes)
+- Aggregated across all causes for each age group
+- Column: `mortality_rate_per_100k_age_group_population` ← **explicitly labelled**
+- Shows dramatic variation: e.g., 85+ male rate ~18,824 per 100k in 2000 vs. 0-4 males ~4,948
 
-**Data available for:** A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, V, W, X, Y, Z
+### 4. **Yearly Total Mortality (All Ages, All Causes): 1901-2000**
+
+**File:** `uk_mortality_rates_per_100k_yearly_totals.csv`
+
+- 100 records (1901-2000)
+- Column: `mortality_rate_per_100k_total_population` ← **explicitly labelled**
+- Shows overall trend: 1691.4 per 100k in 1901 → 1031.6 in 2000 (historical improvement)
 
 ---
 
@@ -56,8 +87,8 @@ Data Quality: Multiple sources merged with deduplication
 
 | Source | Years | Type | Status |
 |--------|-------|------|--------|
-| compiled_mortality_2001_2019.csv | 2001-2017 | Detailed ICD-10 codes | ✅ Local |
-| compiled_mortality_21c_2017.csv | 2001-2017 | Detailed ICD-10 codes | ✅ Local |
+| uk_mortality_comprehensive_1901_2025_harmonized.csv | 1901-2000 | Harmonized cause/sex/age | ✅ Local |
+| uk_population_harmonized_age_groups.csv | 1901-2016 | Population by age group & sex | ✅ Local |
 | ONS API - 2010-19 edition | 2010-2019 | Weekly totals aggregated | ✅ Merged |
 | ONS API - COVID-19 edition | 2020-2023 | Weekly totals aggregated | ✅ Merged |
 | ONS API - 2024 & 2025 editions | 2024-2025 | Weekly totals aggregated | ✅ Merged |
@@ -66,22 +97,91 @@ Data Quality: Multiple sources merged with deduplication
 
 ## 📈 Usage Examples
 
-### Analyze trends over 25 years
+### Compare mortality across age groups (same year)
 
 ```python
 import pandas as pd
 
-df = pd.read_csv('uk_mortality_comprehensive.csv')
+df = pd.read_csv('uk_mortality_rates_per_100k_by_age_group.csv')
 
-# Year-on-year change
-df['yoy_change'] = df['total_deaths'].pct_change() * 100
+# Get 2000 data by age group
+year_2000 = df[df['year'] == 2000]
+males_by_age = year_2000[year_2000['sex'] == 'Male'].sort_values('mortality_rate_per_100k_age_group_population')
 
-# Pre-COVID vs COVID era
-pre_covid_avg = df[df['year'] < 2020]['total_deaths'].mean()
-covid_avg = df[df['year'] >= 2020]['total_deaths'].mean()
-print(f"Pre-COVID avg: {pre_covid_avg:,.0f}")
-print(f"COVID era avg: {covid_avg:,.0f}")
-print(f"Increase: {(covid_avg/pre_covid_avg - 1)*100:.1f}%")
+# Clear label: these are per 100k of *each age group*
+print("Male mortality rates per 100,000 (of age-group population):")
+for _, row in males_by_age.iterrows():
+    print(f"  {row['age_group']}: {row['mortality_rate_per_100k_age_group_population']:.1f}")
+# Output shows: 0-4 → 4,948; 5-14 → 125; ...; 85+ → 18,824
+```
+
+### Compare causes within an age group
+
+```python
+by_cause = pd.read_csv('uk_mortality_rates_per_100k_by_cause.csv')
+
+# Infectious disease in 0-4 age group, 2000
+subset = by_cause[(by_cause['year'] == 2000) & 
+                  (by_cause['age_group'] == '0-4')]
+top_causes = subset.nlargest(5, 'mortality_rate_per_100k_age_group_population')
+
+# Again: explicitly per 100k of the 0-4 age group
+for _, row in top_causes.iterrows():
+    print(f"{row['cause']}: {row['mortality_rate_per_100k_age_group_population']:.1f} per 100k (0-4 population)")
+```
+
+### Overall population trend
+
+```python
+yearly = pd.read_csv('uk_mortality_rates_per_100k_yearly_totals.csv')
+
+# Plot overall rate over time
+# This uses total population as denominator (all ages combined)
+print(f"Overall mortality in 1901: {yearly.loc[yearly['year'] == 1901, 'mortality_rate_per_100k_total_population'].values[0]:.1f} per 100k")
+print(f"Overall mortality in 2000: {yearly.loc[yearly['year'] == 2000, 'mortality_rate_per_100k_total_population'].values[0]:.1f} per 100k")
+print("Note: denominator is total population (all ages combined)")
+```
+
+---
+
+## ⚠️ **Denominator Clarity Guide**
+
+To avoid mixing apples and oranges, **always check which rate column you're using**:
+
+| File | Rate Column | Denominator | Use When | Example |
+|------|------------|-------------|----------|---------|
+| by_cause | `mortality_rate_per_100k_age_group_population` | Population of that age group | Comparing causes within an age group | "Is TB deadlier than malaria in 85+ year-olds?" |
+| by_age_group | `mortality_rate_per_100k_age_group_population` | Population of that age group | Comparing age groups to each other | "Are elderly (85+) 5× deadlier than children (0-4)?" |
+| yearly_totals | `mortality_rate_per_100k_total_population` | Total population (all ages) | Long-term population-wide trends | "Has population mortality improved since 1901?" |
+
+**Incorrect comparison example:**  
+❌ *"In 2000, cause X had rate 500 per 100k (85+ age group) while cause Y had rate 50 per 100k (0-4 age group)"*  
+→ These are incomparable denominators!
+
+**Correct comparison:**  
+✅ *"In 2000, cause X had rate 500 per 100k of 85+ population, and cause Y had rate 50 per 100k of 0-4 population"*  
+→ Now the denominator is explicit and comparison is valid within each age group.
+
+---
+
+## 📈 Usage Examples — Original
+
+### Analyze trends (long-term population mortality)
+
+```python
+import pandas as pd
+
+df = pd.read_csv('uk_mortality_rates_per_100k_yearly_totals.csv')
+
+# Year-on-year change in overall population mortality
+df['yoy_change'] = df['mortality_rate_per_100k_total_population'].pct_change() * 100
+
+# Pre-2000 vs 2000
+pre_2000_avg = df[df['year'] < 2000]['mortality_rate_per_100k_total_population'].mean()
+year_2000 = df[df['year'] == 2000]['mortality_rate_per_100k_total_population'].values[0]
+print(f"Average (1901-1999): {pre_2000_avg:.1f} per 100,000 (total population)")
+print(f"Year 2000: {year_2000:.1f} per 100,000 (total population)")
+print(f"Improvement: {(1 - year_2000/pre_2000_avg)*100:.1f}%")
 ```
 
 ### Compare causes of death

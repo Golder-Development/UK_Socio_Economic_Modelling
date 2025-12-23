@@ -72,12 +72,15 @@ Explore the published outputs hosted via GitHub Pages:
 <!-- GENERATED_CHARTS_START -->
 ### Mortality Dashboards
 
+- Mortality Dashboard Age Group By Sex: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_age_group_by_sex.html>
+- Mortality Dashboard Age Groups: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_age_groups.html>
 - Mortality Dashboard — Old OAPs (85+): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_age_old_oaps.html>
 - Mortality Dashboard — Older Adults (35–64): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_age_older_adults.html>
 - Mortality Dashboard — Preschool (≤5): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_age_preschool.html>
 - Mortality Dashboard — School Age (6–19): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_age_school.html>
 - Mortality Dashboard — Young Adults (20–34): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_age_young_adults.html>
 - Mortality Dashboard — Young OAPs (65–84): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_age_young_oaps.html>
+- Mortality Dashboard By Age Group: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_by_age_group.html>
 - Mortality Dashboard — Drilldown: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_drilldown.html>
 - Mortality Dashboard — Filtered: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_filtered.html>
 - Mortality Dashboard — Interactive: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_interactive.html>
