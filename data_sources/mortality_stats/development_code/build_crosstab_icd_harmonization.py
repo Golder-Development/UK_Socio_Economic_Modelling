@@ -8,8 +8,8 @@ from pathlib import Path
 import zipfile
 
 BASE_DIR = Path(__file__).parent.parent
-SOURCE_ZIP = BASE_DIR / "uk_mortality_by_cause_1901_2000_harmonized.zip"
-SOURCE_CSV = BASE_DIR / "uk_mortality_by_cause_1901_2000_harmonized.csv"
+SOURCE_ZIP = BASE_DIR / "uk_mortality_by_cause_1901_onwards.zip"
+SOURCE_CSV = BASE_DIR / "uk_mortality_by_cause_1901_onwards.csv"
 OUT = BASE_DIR / "icd_harmonization_crosswalk.csv"
 
 

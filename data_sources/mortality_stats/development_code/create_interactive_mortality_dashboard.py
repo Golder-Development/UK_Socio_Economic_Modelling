@@ -17,8 +17,8 @@ OUTPUT_DIR = REPO_ROOT / "generated_charts"
 # Prefer rebuilt harmonized file from archive (ZIP), then CSV
 # If harmonized data stops at 2000, we will merge in modern 2001-2017 data
 # from the comprehensive by-cause export to keep dashboards complete.
-PREFERRED_ZIP = BASE_DIR / "uk_mortality_by_cause_1901_2000_harmonized.zip"
-PREFERRED_CSV = BASE_DIR / "uk_mortality_by_cause_1901_2000_harmonized.csv"
+PREFERRED_ZIP = BASE_DIR / "uk_mortality_by_cause_1901_onwards.zip"
+PREFERRED_CSV = BASE_DIR / "uk_mortality_by_cause_1901_onwards.csv"
 HARM_FALLBACK_CSV = BASE_DIR / "uk_mortality_comprehensive_1901_2025_harmonized.csv"
 
 # Comprehensive (unharmonized) by-cause data used to add 2001-2017 rows
@@ -210,7 +210,7 @@ def create_dashboard(df):
             "method": "update",
             "args": [
                 {"visible": [True] * len(categories)},
-                {"title": "UK Mortality Rates per 100k (All Categories)"},
+                {"title.text": "UK Mortality Rates per 100k (All Categories)"},
             ],
         }
     ]
@@ -224,7 +224,7 @@ def create_dashboard(df):
                 "method": "update",
                 "args": [
                     {"visible": visible},
-                    {"title": f"UK Mortality Rates per 100k - {category}"},
+                    {"title.text": f"UK Mortality Rates per 100k - {category}"},
                 ],
             }
         )
@@ -232,15 +232,17 @@ def create_dashboard(df):
     # Update layout with dropdown menus
     fig.update_layout(
         title={
-            "text": "UK Mortality Rates per 100,000 Population (1901-2025)<br>"
+            "text": "<b>UK Mortality Rates per 100,000 Population (1901-2025)</b><br>"
             "<sub>Interactive Dashboard - Filter by Category, Age, and Sex</sub>",
             "x": 0.5,
             "xanchor": "center",
+                    "font": {"size": 24, "color": "#1f1f1f"},
         },
         xaxis_title="Year",
         yaxis_title="Deaths per 100,000 Population",
         hovermode="closest",
         template="plotly_white",
+        margin=dict(t=160),
         height=700,
         updatemenus=[
             {
@@ -250,7 +252,7 @@ def create_dashboard(df):
                 "showactive": True,
                 "x": 0.01,
                 "xanchor": "left",
-                "y": 1.15,
+                "y": 1.06,
                 "yanchor": "top",
                 "bgcolor": "#f0f0f0",
                 "bordercolor": "#333",
@@ -262,7 +264,7 @@ def create_dashboard(df):
                 "text": "Select Category:",
                 "showarrow": False,
                 "x": 0.01,
-                "y": 1.18,
+                "y": 1.08,
                 "xref": "paper",
                 "yref": "paper",
                 "align": "left",
@@ -381,8 +383,9 @@ def create_drilldown_dashboard(df):
 
     fig.update_layout(
         title={
-            "text": "UK Mortality Dashboard with Sub-Category Drill-Down<br>"
+            "text": "<b>UK Mortality Dashboard with Sub-Category Drill-Down</b><br>"
             "<sub>Top panel: Harmonized categories | Bottom panel: Top 10 causes within category</sub>",
+                        "font": {"size": 24, "color": "#1f1f1f"},
             "x": 0.5,
             "xanchor": "center",
         },
@@ -399,7 +402,7 @@ def create_drilldown_dashboard(df):
 
 
 def create_age_sex_filtered_dashboard(df):
-    """Create dashboard with age and sex filtering."""
+    """Create dashboard with age and sex filtering, plus stacked/unstacked toggle."""
     print("Building age/sex filtered dashboard...")
 
     # Prepare aggregated data
@@ -430,6 +433,7 @@ def create_age_sex_filtered_dashboard(df):
         overall_data["deaths"] / overall_data["population"]
     ) * 100000
 
+    # UNSTACKED MODE (default): Line chart with one line per category
     for category in categories:
         cat_data = overall_data[overall_data["harmonized_category_name"] == category]
         fig.add_trace(
@@ -439,50 +443,108 @@ def create_age_sex_filtered_dashboard(df):
                 mode="lines+markers",
                 name=category,
                 visible=True,
+                stackgroup=None,  # Unstacked
             )
         )
 
-    # Create dropdown menus
-    category_buttons = [{"label": "All", "method": "restyle", "args": ["visible", True]}]
+    # STACKED MODE: Bar chart with stacked bars per category
+    for category in categories:
+        cat_data = overall_data[overall_data["harmonized_category_name"] == category]
+        fig.add_trace(
+            go.Bar(
+                x=cat_data["year"],
+                y=cat_data["rate_per_100k"],
+                name=category,
+                visible=False,
+            )
+        )
+
+    # Create category filter buttons (affects both unstacked and stacked)
+    category_buttons = [{"label": "All", "method": "restyle", "args": ["visible", [True] * len(categories) + [False] * len(categories)]}]
 
     for i, category in enumerate(categories):
-        visible = [j == i for j in range(len(categories))]
+        visible_unstacked = [j == i for j in range(len(categories))] + [False] * len(categories)
+        visible_stacked = [False] * len(categories) + [j == i for j in range(len(categories))]
         category_buttons.append(
-            {"label": category, "method": "restyle", "args": ["visible", visible]}
+            {"label": category, "method": "restyle", "args": ["visible", visible_unstacked]}
         )
+    
+    # Create stacked/unstacked toggle buttons
+    stack_buttons = [
+        {
+            "label": "Unstacked (Lines)",
+            "method": "update",
+            "args": [
+                {"visible": [True] * len(categories) + [False] * len(categories)},
+                {"title.text": "UK Mortality Rates Dashboard — Category Filter (Unstacked)<br><sub>Deaths per 100,000 population; line view for trend comparison</sub>"}
+            ]
+        },
+        {
+            "label": "Stacked (Area)",
+            "method": "update",
+            "args": [
+                {"visible": [False] * len(categories) + [True] * len(categories)},
+                {"title.text": "UK Mortality Rates Dashboard — Category Filter (Stacked)<br><sub>Deaths per 100,000 population; stacked view for composition analysis</sub>"}
+            ]
+        }
+    ]
 
     fig.update_layout(
         title={
-            "text": "UK Mortality Rates Dashboard — Category Filter<br>"
-            "<sub>Deaths per 100,000 population; category filtering only</sub>",
+            "text": "<b>UK Mortality Rates Dashboard — Age/Sex Filtered</b><br>"
+            "<sub>Deaths per 100,000 population with stacked/unstacked view toggle</sub>",
+                        "font": {"size": 24, "color": "#1f1f1f"},
             "x": 0.5,
             "xanchor": "center",
         },
         xaxis_title="Year",
         yaxis_title="Deaths per 100,000",
+            barmode="stack",  # Stack bars for stacked view
         height=700,
         template="plotly_white",
+        margin=dict(t=160),
         updatemenus=[
             {
-                "buttons": category_buttons,
+                "buttons": stack_buttons,
                 "direction": "down",
                 "pad": {"r": 10, "t": 10},
                 "showactive": True,
                 "x": 0.01,
                 "xanchor": "left",
-                "y": 1.12,
+                "y": 1.06,
+                "yanchor": "top",
+            },
+            {
+                "buttons": category_buttons,
+                "direction": "down",
+                "pad": {"r": 10, "t": 10},
+                "showactive": True,
+                "x": 0.15,
+                "xanchor": "left",
+                "y": 1.06,
                 "yanchor": "top",
             }
         ],
         annotations=[
             {
-                "text": "Category Filter:",
+                "text": "View Mode:",
                 "showarrow": False,
                 "x": 0.01,
-                "y": 1.15,
+                "y": 1.08,
                 "xref": "paper",
                 "yref": "paper",
                 "align": "left",
+                "font": {"size": 11},
+            },
+            {
+                "text": "Category Filter:",
+                "showarrow": False,
+                "x": 0.15,
+                "y": 1.08,
+                "xref": "paper",
+                "yref": "paper",
+                "align": "left",
+                "font": {"size": 11},
             }
         ],
     )
@@ -546,7 +608,8 @@ def create_subset_dashboard(df: pd.DataFrame, subset_name: str, mask: pd.Series)
 
     fig = go.Figure()
 
-    # Add traces (default metric: per 100k)
+    # Add traces (default metric: per 100k) - dual sets for view toggle
+    # Lines (unstacked)
     for i, cat in enumerate(categories):
         fig.add_trace(
             go.Scatter(
@@ -558,39 +621,55 @@ def create_subset_dashboard(df: pd.DataFrame, subset_name: str, mask: pd.Series)
                 visible=True,
             )
         )
+    # Bars (stacked)
+    for i, cat in enumerate(categories):
+        fig.add_trace(
+            go.Bar(
+                x=years,
+                y=y100k[i],
+                name=cat,
+                visible=False,
+            )
+        )
 
-    # Category dropdown
+    # Helpers
+    n = len(categories)
+    all_lines = [True] * n + [False] * n
+    all_bars = [False] * n + [True] * n
+
+    # Category dropdown (affects current view mode defaulting to lines)
     cat_buttons = [
         {
             "label": "All Categories",
             "method": "update",
             "args": [
-                {"visible": [True] * len(categories)},
-                {"title": f"{subset_name} — All Categories"},
+                {"visible": all_lines},
+                {"title.text": f"{subset_name} — All Categories (Unstacked)"},
             ],
         }
     ]
     for i, cat in enumerate(categories):
-        vis = [False] * len(categories)
-        vis[i] = True
+        vis_lines = [False] * n
+        vis_lines[i] = True
+        vis = vis_lines + [False] * n
         cat_buttons.append(
             {
                 "label": cat,
                 "method": "update",
                 "args": [
                     {"visible": vis},
-                    {"title": f"{subset_name} — {cat}"},
+                    {"title.text": f"{subset_name} — {cat} (Unstacked)"},
                 ],
             }
         )
 
-    # Metric toggle: update all traces' y arrays in place
+    # Metric toggle: update all traces' y arrays (lines + bars)
     metric_buttons = [
         {
             "label": "Deaths per 100k",
             "method": "update",
             "args": [
-                {"y": y100k},
+                {"y": y100k + y100k},
                 {"yaxis": {"title": "Deaths per 100,000"}},
             ],
         },
@@ -598,7 +677,7 @@ def create_subset_dashboard(df: pd.DataFrame, subset_name: str, mask: pd.Series)
             "label": "Deaths per 10k",
             "method": "update",
             "args": [
-                {"y": y10k},
+                {"y": y10k + y10k},
                 {"yaxis": {"title": "Deaths per 10,000"}},
             ],
         },
@@ -606,15 +685,36 @@ def create_subset_dashboard(df: pd.DataFrame, subset_name: str, mask: pd.Series)
             "label": "Actual deaths",
             "method": "update",
             "args": [
-                {"y": yabs},
+                {"y": yabs + yabs},
                 {"yaxis": {"title": "Deaths (count)"}},
+            ],
+        },
+    ]
+
+    # View mode toggle: lines vs stacked bars
+    view_buttons = [
+        {
+            "label": "Unstacked (Lines)",
+            "method": "update",
+            "args": [
+                {"visible": all_lines},
+                {"title.text": f"UK Mortality — {subset_name} (Unstacked)"},
+            ],
+        },
+        {
+            "label": "Stacked (Area)",
+            "method": "update",
+            "args": [
+                {"visible": all_bars},
+                {"title.text": f"UK Mortality — {subset_name} (Stacked)"},
             ],
         },
     ]
 
     fig.update_layout(
         title={
-            "text": f"UK Mortality — {subset_name}<br><sub>Select a category and metric. Rates use total population denominator.</sub>",
+            "text": f"<b>UK Mortality Dashboard — {subset_name}</b><br><sub>Select category, metric, and view mode. Interactive controls below.</sub>",
+                        "font": {"size": 24, "color": "#1f1f1f"},
             "x": 0.5,
             "xanchor": "center",
         },
@@ -623,15 +723,30 @@ def create_subset_dashboard(df: pd.DataFrame, subset_name: str, mask: pd.Series)
         template="plotly_white",
         height=700,
         hovermode="closest",
+        barmode="stack",
+        margin=dict(t=160),
         updatemenus=[
             {
-                "buttons": cat_buttons,
+                "buttons": view_buttons,
                 "direction": "down",
                 "pad": {"r": 10, "t": 10},
                 "showactive": True,
                 "x": 0.01,
                 "xanchor": "left",
-                "y": 1.15,
+                "y": 1.06,
+                "yanchor": "top",
+                "bgcolor": "#f0f0f0",
+                "bordercolor": "#333",
+                "borderwidth": 1,
+            },
+            {
+                "buttons": cat_buttons,
+                "direction": "down",
+                "pad": {"r": 10, "t": 10},
+                "showactive": True,
+                "x": 0.22,
+                "xanchor": "left",
+                "y": 1.06,
                 "yanchor": "top",
                 "bgcolor": "#f0f0f0",
                 "bordercolor": "#333",
@@ -642,9 +757,9 @@ def create_subset_dashboard(df: pd.DataFrame, subset_name: str, mask: pd.Series)
                 "direction": "right",
                 "pad": {"r": 10, "t": 10},
                 "showactive": True,
-                "x": 0.5,
-                "xanchor": "center",
-                "y": 1.15,
+                "x": 0.60,
+                "xanchor": "left",
+                "y": 1.06,
                 "yanchor": "top",
                 "bgcolor": "#f8f8f8",
                 "bordercolor": "#333",
@@ -652,8 +767,9 @@ def create_subset_dashboard(df: pd.DataFrame, subset_name: str, mask: pd.Series)
             },
         ],
         annotations=[
-            {"text": "Category:", "showarrow": False, "x": 0.01, "y": 1.19, "xref": "paper", "yref": "paper"},
-            {"text": "Metric:", "showarrow": False, "x": 0.5, "y": 1.19, "xref": "paper", "yref": "paper", "xanchor": "center"},
+            {"text": "View:", "showarrow": False, "x": 0.01, "y": 1.08, "xref": "paper", "yref": "paper"},
+            {"text": "Category:", "showarrow": False, "x": 0.22, "y": 1.08, "xref": "paper", "yref": "paper"},
+            {"text": "Metric:", "showarrow": False, "x": 0.60, "y": 1.08, "xref": "paper", "yref": "paper", "xanchor": "left"},
         ],
     )
 
@@ -713,13 +829,37 @@ def main():
     # Create subset dashboards (separate outputs)
     print("\n4. Creating subset dashboards...")
 
+    # Use age_start column from harmonized data (already standardized)
+    # If not present, extract it
+    if 'age_start' not in df.columns:
+        def extract_age_start(age_str):
+            """Extract starting age from age range strings."""
+            if pd.isna(age_str):
+                return None
+            s = str(age_str).strip()
+            if s == '<1':
+                return 0
+            if s == '85+':
+                return 85
+            if '-' in s:
+                try:
+                    return int(s.split('-')[0].replace('T', ''))
+                except (ValueError, IndexError):
+                    return None
+            try:
+                return int(s.replace('T', ''))
+            except ValueError:
+                return None
+        df['age_start'] = df['age'].apply(extract_age_start)
+
+    # Age-based subsets: <=5, 6-19, 20-34, 35-64, 65-84, 85+
     subsets = [
-        ("Women (sex=2)", df["sex"].astype(str).isin(["2", 2]), "mortality_dashboard_filtered_women.html"),
-        ("Men (sex=1)", df["sex"].astype(str).isin(["1", 1]), "mortality_dashboard_filtered_men.html"),
-        ("Children (age ≤ 18)", pd.to_numeric(df["age"], errors="coerce") <= 18, "mortality_dashboard_filtered_children.html"),
-        ("OAPs (age ≥ 65)", pd.to_numeric(df["age"], errors="coerce") >= 65, "mortality_dashboard_filtered_oaps.html"),
-        ("Working Age (19–64)", (pd.to_numeric(df["age"], errors="coerce") > 18) & (pd.to_numeric(df["age"], errors="coerce") < 65), "mortality_dashboard_filtered_working_age.html"),
-        ("Adults under 30 (19–30)", (pd.to_numeric(df["age"], errors="coerce") > 18) & (pd.to_numeric(df["age"], errors="coerce") <= 30), "mortality_dashboard_filtered_adults_under_30.html"),
+        ("Preschool (<=5)", df['age_start'] <= 5, "mortality_dashboard_age_preschool.html"),
+        ("School Age (6-19)", (df['age_start'] >= 6) & (df['age_start'] <= 19), "mortality_dashboard_age_school.html"),
+        ("Young Adults (20-34)", (df['age_start'] >= 20) & (df['age_start'] <= 34), "mortality_dashboard_age_young_adults.html"),
+        ("Older Adults (35-64)", (df['age_start'] >= 35) & (df['age_start'] <= 64), "mortality_dashboard_age_older_adults.html"),
+        ("Young OAPs (65-84)", (df['age_start'] >= 65) & (df['age_start'] <= 84), "mortality_dashboard_age_young_oaps.html"),
+        ("Old OAPs (85+)", df['age_start'] >= 85, "mortality_dashboard_age_old_oaps.html"),
     ]
 
     for title, mask, filename in subsets:

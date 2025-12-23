@@ -35,3 +35,28 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Local development sandbox (kept out of the repo)
+local_dev/
+local_dev/**
+
+# Ignore most development_code content; keep essential regeneration scripts tracked
+data_sources/mortality_stats/development_code/**
+!data_sources/mortality_stats/development_code/regenerate_all_data.py
+!data_sources/mortality_stats/development_code/create_interactive_mortality_dashboard.py
+!data_sources/mortality_stats/development_code/build_code_descriptions.py
+!data_sources/mortality_stats/development_code/build_harmonized_categories.py
+!data_sources/mortality_stats/development_code/rebuild_harmonized_from_archive.py
+!data_sources/mortality_stats/development_code/build_crosstab_icd_harmonization.py
+!data_sources/mortality_stats/development_code/mortality_source_config.json
+!data_sources/mortality_stats/development_code/validate_harmonized_categories.py
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Temporary/extracted input caches
+data_sources/mortality_stats/development_code/archive_csv/
+data_sources/mortality_stats/development_code/downloaded_sourcefiles/
+data_sources/mortality_stats/development_code/extract_*/

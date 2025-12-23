@@ -2,7 +2,7 @@
 
 ## The Complete Data File
 
-**File**: `uk_mortality_by_cause_1901_2025_harmonized.csv`
+**File**: `uk_mortality_by_cause_1901_onwards_harmonized.csv` (compressed as `.zip`)
 
 **Columns**:
 
@@ -22,7 +22,7 @@
 import pandas as pd
 
 # Load the data
-df = pd.read_csv('uk_mortality_by_cause_1901_2025_harmonized.csv')
+df = pd.read_csv('uk_mortality_by_cause_1901_onwards_harmonized.csv')
 
 # Example 1: Total deaths by category
 category_totals = df.groupby('harmonized_category_name')['deaths'].sum()
@@ -53,8 +53,9 @@ year_2000.groupby('harmonized_category_name')['deaths'].sum().plot(kind='bar')
 - Medical accuracy for clinical research
 - Granular condition tracking
 
-## Quick Reference: 24 Categories
+## Quick Reference: 26 Categories
 
+| Short Code | Category Name |
 | Short Code | Category Name |
 |------------|---------------|
 | infectious_diseases | Infectious and Parasitic Diseases |
@@ -74,11 +75,13 @@ year_2000.groupby('harmonized_category_name')['deaths'].sum().plot(kind='bar')
 | perinatal | Conditions Originating in Perinatal Period |
 | congenital | Congenital Malformations and Chromosomal Abnormalities |
 | injury_poisoning | Injury, Poisoning and External Causes |
-| Suicide | Suicide and Self-Inflicted Injury |
-| Accident | Accidental Death |
-| Homicide | Homicide and Assault |
-| Drugs | Drug-Related Deaths |
-| War | War and War-Related Deaths |
+| social_issues | Social Issues Affecting Health |
+| accident | Accidental Death |
+| homicide | Homicide and Assault |
+| legal_drugs | Legal Drug-Related Deaths |
+| drugs | Drug-Related Deaths |
+| war | War and War-Related Deaths |
+| suicide | Suicide and Self-Inflicted Injury |
 | ill_defined | Symptoms, Signs and Ill-Defined Conditions |
 | other | Other and Unclassified |
 

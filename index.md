@@ -72,14 +72,14 @@ Explore the published outputs hosted via GitHub Pages:
 <!-- GENERATED_CHARTS_START -->
 ### Mortality Dashboards
 
+- Mortality Dashboard — Old OAPs (85+): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_age_old_oaps.html>
+- Mortality Dashboard — Older Adults (35–64): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_age_older_adults.html>
+- Mortality Dashboard — Preschool (≤5): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_age_preschool.html>
+- Mortality Dashboard — School Age (6–19): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_age_school.html>
+- Mortality Dashboard — Young Adults (20–34): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_age_young_adults.html>
+- Mortality Dashboard — Young OAPs (65–84): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_age_young_oaps.html>
 - Mortality Dashboard — Drilldown: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_drilldown.html>
 - Mortality Dashboard — Filtered: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_filtered.html>
-- Mortality Dashboard Filtered Adults Under 30: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_filtered_adults_under_30.html>
-- Mortality Dashboard Filtered Children: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_filtered_children.html>
-- Mortality Dashboard Filtered Men: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_filtered_men.html>
-- Mortality Dashboard Filtered Oaps: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_filtered_oaps.html>
-- Mortality Dashboard Filtered Women: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_filtered_women.html>
-- Mortality Dashboard Filtered Working Age: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_filtered_working_age.html>
 - Mortality Dashboard — Interactive: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/mortality_dashboard_interactive.html>
 
 ### Political Mind Maps

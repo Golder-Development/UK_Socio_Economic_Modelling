@@ -9,13 +9,13 @@
 
 1. Harmonized cause-of-death dataset
 
-- File: `uk_mortality_by_cause_1901_2025_harmonized.csv`
+- File: `uk_mortality_by_cause_1901_onwards_harmonized.csv` (stored as `.zip` due to size)
 - Columns: year, cause (original ICD code), cause_description, harmonized_category, harmonized_category_name, classification_confidence, sex, age, deaths
 - Notes: Harmonization aligns cause categories across ICD versions; year-aware mapping prevents cross-period confusion.
 
 1. Comprehensive harmonized dataset
 
-- File: `uk_mortality_comprehensive_1901_2025_harmonized.csv`
+- File: `uk_mortality_comprehensive_1901_onwards_harmonized.csv` (stored as `.zip` due to size)
 - Purpose: Wider coverage variant including harmonized causes; use alongside the main harmonized file for broader analyses.
 
 1. Rates and summaries

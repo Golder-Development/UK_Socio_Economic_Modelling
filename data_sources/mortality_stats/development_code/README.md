@@ -7,10 +7,15 @@ This folder contains development scripts, utilities, and work-in-progress items 
 - Key scripts:
   - `add_descriptions_year_aware.py` — Adds ICD code descriptions to datasets with year-aware matching.
   - `build_code_descriptions.py` — Extracts ICD code→description mappings from ONS Excel files.
-  - `build_harmonized_categories.py` — Generates 24-category harmonized mapping from descriptions (includes Suicide, Accident, Homicide, Drugs, and War categories).
+  - `build_harmonized_categories.py` — Generates 26-category harmonized mapping from descriptions (includes Suicide, Accident, Homicide, Drug-related, Legal Drug-related, Social Issues, and War categories).
   - `rebuild_harmonized_from_archive.py` — Rebuilds harmonized dataset from archived comprehensive file with override support (NEW - primary recommended method).
   - `build_crosstab_icd_harmonization.py` — Generates audit crosswalk table to review code→category mappings (NEW).
-  - `create_interactive_mortality_dashboard.py` — Generates three Plotly interactive dashboards with filtering and drill-down (UPDATED).
+  - `create_interactive_mortality_dashboard.py` — Generates multiple Plotly interactive dashboards:
+    - Main dashboard with harmonized category dropdown
+    - Drill-down view showing sub-category detail
+    - Filtered dashboard with category selection only (population totals)
+    - Six demographic subsets: Women, Men, Children (≤18), OAPs (≥65), Working Age (19–64), Adults under 30 (19–30)
+    - Each subset includes metric toggle: per 100k, per 10k, or actual deaths
   - `add_harmonized_categories_to_mortality.py` — Legacy method - applies harmonized categories without replacing original ICD codes.
   - `build_comprehensive_mortality_1901_2025.py` — Build pipeline for comprehensive outputs.
   - Plus supporting scripts (verification, checks, examination utilities).
@@ -28,7 +33,7 @@ This folder contains development scripts, utilities, and work-in-progress items 
 - Main artefacts include:
   - `icd_code_descriptions.csv`, `icd_harmonized_categories.csv`
   - `uk_mortality_by_cause_1901_2025_with_descriptions.csv`
-  - `uk_mortality_by_cause_1901_2025_harmonized.csv`
+  - `uk_mortality_by_cause_1901_onwards_harmonized.csv`
   - Comprehensive variants under the same folder.
 
 ## How to Run (Windows / PowerShell)

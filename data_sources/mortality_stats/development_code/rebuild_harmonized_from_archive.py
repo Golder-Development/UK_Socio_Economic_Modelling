@@ -295,11 +295,40 @@ def main():
                   'harmonized_category_name', 'classification_confidence', 'sex', 'age', 'deaths']
     df = df[final_cols]
     
+    # Add age_start standardization for filtering
+    # Extract numeric starting age from age range strings like "01-04", "05-09", "85+", "<1"
+    def extract_age_start(age_str):
+        """Extract starting age from age range strings."""
+        if pd.isna(age_str):
+            return None
+        s = str(age_str).strip()
+        if s == '<1':
+            return 0
+        if s == '85+':
+            return 85
+        if '-' in s:
+            try:
+                return int(s.split('-')[0].replace('T', ''))
+            except (ValueError, IndexError):
+                return None
+        try:
+            return int(s.replace('T', ''))
+        except ValueError:
+            return None
+    
+    df['age_start'] = df['age'].apply(extract_age_start)
+    # Move age_start after age in column order
+    cols = df.columns.tolist()
+    cols.remove('age_start')
+    age_idx = cols.index('age')
+    cols.insert(age_idx + 1, 'age_start')
+    df = df[cols]
+    
     # Save output as ZIP (large files are zipped by policy)
-    output_zip = BASE_DIR / "uk_mortality_by_cause_1901_2000_harmonized.zip"
+    output_zip = BASE_DIR / "uk_mortality_by_cause_1901_onwards.zip"
     logger.info(f"\nSaving ZIP to: {output_zip}")
     with zipfile.ZipFile(output_zip, mode='w', compression=zipfile.ZIP_DEFLATED) as zf:
-        zf.writestr("uk_mortality_by_cause_1901_2000_harmonized.csv", df.to_csv(index=False))
+        zf.writestr("uk_mortality_by_cause_1901_onwards.csv", df.to_csv(index=False))
     logger.info(f"✅ Saved {len(df):,} rows (zipped)")
     
     # Show sample stats

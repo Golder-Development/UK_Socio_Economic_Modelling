@@ -26,7 +26,7 @@ Specific conditions were classified differently:
 
 ### The Solution: Harmonized Categories
 
-We create **24 broad disease categories** that:
+We create **26 broad disease categories** that:
 
 - ✅ Work consistently across all time periods
 - ✅ Map to similar concepts in medical classification
@@ -35,33 +35,36 @@ We create **24 broad disease categories** that:
 
 ## Harmonized Categories
 
-### The 24 Standard Categories
+### The 26 Standard Categories
 
-1. **Infectious and Parasitic Diseases** - All infections, fevers, parasitic diseases
-2. **Neoplasms (Cancers and Tumors)** - All malignant and benign growths
-3. **Blood and Immune System Disorders** - Anemia, hemophilia, immune conditions
-4. **Endocrine, Nutritional and Metabolic Diseases** - Diabetes, malnutrition, thyroid
-5. **Mental and Behavioral Disorders** - Mental illness, alcoholism, drug dependence
-6. **Diseases of the Nervous System** - Brain, epilepsy, paralysis, stroke effects
-7. **Diseases of Eye and Ear** - Vision, hearing, related conditions
-8. **Diseases of the Circulatory System** - Heart, blood vessels, stroke
-9. **Diseases of the Respiratory System** - Lungs, bronchitis, pneumonia
-10. **Diseases of the Digestive System** - Stomach, intestines, liver
-11. **Diseases of the Skin** - Dermatological conditions
-12. **Diseases of Musculoskeletal System and Connective Tissue** - Bones, joints, arthritis
-13. **Diseases of the Genitourinary System** - Kidneys, reproductive organs
-14. **Pregnancy, Childbirth and Puerperium** - Maternal health conditions
-15. **Conditions Originating in Perinatal Period** - Newborn conditions
-16. **Congenital Malformations and Chromosomal Abnormalities** - Birth defects
-17. **Injury, Poisoning and External Causes** - Accidents, poisoning (general)
-18. **Suicide and Self-Inflicted Injury** - Suicide deaths
-19. **Accidental Death** - Accidents (specific category)
-20. **Homicide and Assault** - Violence, homicide
-21. **Drug-Related Deaths** - Overdose, drug dependence deaths
-22. **War and War-Related Deaths** - Wartime deaths and related impacts
-23. **Symptoms, Signs and Ill-Defined Conditions** - Unknown or unclear causes
-24. **Other and Unclassified** - Catch-all for unmatched codes
-25. **Legal Drug-Related Deaths** - Tobacco and Alcohol related deaths
+<!-- CATEGORY_LIST_START -->
+1. **Infectious and Parasitic Diseases** (`infectious_diseases`)
+2. **Neoplasms (Cancers and Tumors)** (`neoplasms`)
+3. **Blood and Immune System Disorders** (`blood_immune`)
+4. **Endocrine, Nutritional and Metabolic Diseases** (`endocrine_metabolic`)
+5. **Mental and Behavioral Disorders** (`mental_behavioral`)
+6. **Diseases of the Nervous System** (`nervous_system`)
+7. **Diseases of Eye and Ear** (`eye_ear`)
+8. **Diseases of the Circulatory System** (`circulatory`)
+9. **Diseases of the Respiratory System** (`respiratory`)
+10. **Diseases of the Digestive System** (`digestive`)
+11. **Diseases of the Skin** (`skin`)
+12. **Diseases of Musculoskeletal System and Connective Tissue** (`musculoskeletal`)
+13. **Diseases of the Genitourinary System** (`genitourinary`)
+14. **Pregnancy, Childbirth and Puerperium** (`pregnancy_childbirth`)
+15. **Conditions Originating in Perinatal Period** (`perinatal`)
+16. **Congenital Malformations and Chromosomal Abnormalities** (`congenital`)
+17. **Injury, Poisoning and External Causes** (`injury_poisoning`)
+18. **Social Issues Affecting Health** (`social_issues`)
+19. **Accidental Death** (`accident`)
+20. **Homicide and Assault** (`homicide`)
+21. **Legal Drug-Related Deaths** (`legal_drugs`)
+22. **Drug-Related Deaths** (`drugs`)
+23. **War and War-Related Deaths** (`war`)
+24. **Suicide and Self-Inflicted Injury** (`suicide`)
+25. **Symptoms, Signs and Ill-Defined Conditions** (`ill_defined`)
+26. **Other and Unclassified** (`other`)
+<!-- CATEGORY_LIST_END -->
 
 ## Files Generated
 
@@ -74,12 +77,12 @@ We create **24 broad disease categories** that:
 
 2. **`harmonized_categories_summary.csv`** - Category reference
    - Columns: `category_id`, `category_name`, `code_count`, `example_keywords`
-   - 24 rows (one per harmonized category)
+   - 26 rows (one per harmonized category)
    - Quick reference guide
 
 ### Mortality Data with Harmonized Categories
 
-3. **`uk_mortality_by_cause_1901_2025_harmonized.csv`** - Main analysis file
+1. **`uk_mortality_by_cause_1901_onwards_harmonized.csv`** - Main analysis file (stored as `.zip`)
 
    - Original columns: `year`, `cause`, `cause_description`, `sex`, `age`, `deaths`
    - **Added columns**:
@@ -87,7 +90,7 @@ We create **24 broad disease categories** that:
      - `harmonized_category_name` - full name (e.g., "Infectious and Parasitic Diseases")
      - `classification_confidence` - high/medium/low confidence in classification
 
-4. **`uk_mortality_comprehensive_1901_2025_harmonized.csv`** - Same structure
+2. **`uk_mortality_comprehensive_1901_onwards_harmonized.csv`** - Same structure (stored as `.zip`)
 
 ## How Classification Works
 
@@ -129,7 +132,7 @@ The harmonized system maintains year-aware matching:
 ```python
 import pandas as pd
 
-df = pd.read_csv('uk_mortality_by_cause_1901_2025_harmonized.csv')
+df = pd.read_csv('uk_mortality_by_cause_1901_onwards_harmonized.csv')
 
 # Compare infectious diseases vs cancer over 100 years
 trends = df.groupby(['year', 'harmonized_category_name'])['deaths'].sum()
@@ -298,8 +301,8 @@ python add_harmonized_categories_to_mortality.py
 
 **Creates:**
 
-- `uk_mortality_by_cause_1901_2025_harmonized.csv`
-- `uk_mortality_comprehensive_1901_2025_harmonized.csv`
+- `uk_mortality_by_cause_1901_onwards_harmonized.csv` (stored as `.zip`)
+- `uk_mortality_comprehensive_1901_onwards_harmonized.csv` (stored as `.zip`)
 
 ### 3. Demonstration
 

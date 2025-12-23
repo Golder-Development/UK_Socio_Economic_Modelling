@@ -18,6 +18,12 @@ SPECIAL_NAMES = {
     "mortality_dashboard_drilldown.html": "Mortality Dashboard — Drilldown",
     "political_posts_mindmap.html": "Political Posts Mind Map — 2D",
     "political_posts_mindmap_3d.html": "Political Posts Mind Map — 3D",
+    "mortality_dashboard_age_preschool.html": "Mortality Dashboard — Preschool (≤5)",
+    "mortality_dashboard_age_school.html": "Mortality Dashboard — School Age (6–19)",
+    "mortality_dashboard_age_young_adults.html": "Mortality Dashboard — Young Adults (20–34)",
+    "mortality_dashboard_age_older_adults.html": "Mortality Dashboard — Older Adults (35–64)",
+    "mortality_dashboard_age_young_oaps.html": "Mortality Dashboard — Young OAPs (65–84)",
+    "mortality_dashboard_age_old_oaps.html": "Mortality Dashboard — Old OAPs (85+)",
 }
 
 

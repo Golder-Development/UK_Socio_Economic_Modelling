@@ -41,7 +41,7 @@ mortality_stats/
 │   ├── build_comprehensive_mortality_1901_2025.py     (Extended version)
 │   ├── add_descriptions_year_aware.py                 (Descriptions, year-aware)
 │   ├── build_code_descriptions.py                     (Extract ICD descriptions)
-   │   ├── build_harmonized_categories.py                 (Generate 24 categories)
+   │   ├── build_harmonized_categories.py                 (Generate 26 categories)
 │   ├── rebuild_harmonized_from_archive.py             (NEW: Rebuild with overrides)
 │   ├── build_crosstab_icd_harmonization.py            (NEW: Audit crosswalk)
 │   ├── create_interactive_mortality_dashboard.py      (NEW: Generate Plotly dashboards)

@@ -166,8 +166,8 @@ def summarize_harmonized_output():
         import pandas as pd
         import zipfile
         parent = get_parent_dir()
-        csv_path = parent / "uk_mortality_by_cause_1901_2000_harmonized.csv"
-        zip_path = parent / "uk_mortality_by_cause_1901_2000_harmonized.zip"
+        csv_path = parent / "uk_mortality_by_cause_1901_onwards.csv"
+        zip_path = parent / "uk_mortality_by_cause_1901_onwards.zip"
 
         if csv_path.exists():
             df = pd.read_csv(csv_path)
@@ -314,13 +314,19 @@ Examples:
         )
     if not run_script(
         "build_harmonized_categories.py",
-        "Generate 23-category harmonized mapping from keywords",
+        "Generate 26-category harmonized mapping from keywords",
         args.verbose
     ):
         steps_failed += 1
     else:
         steps_completed += 1
         summarize_mapping_file()
+        # Validate after generation
+        run_script(
+            "validate_harmonized_categories.py",
+            "Validate harmonized categories against documentation",
+            args.verbose,
+        )
     
     # STEP 2: Rebuild harmonized dataset
     if args.skip_rebuild:
@@ -381,7 +387,7 @@ Examples:
     print(f"\nOutput files written to: {parent_dir}")
     print("\nKey outputs:")
     print("  - icd_harmonized_categories.csv (mapping from build step 1)")
-    print("  - uk_mortality_by_cause_1901_2000_harmonized.csv (from step 2; includes modern years if present)")
+    print("  - uk_mortality_by_cause_1901_onwards.csv (from step 2; includes modern years if present)")
     print("  - icd_harmonization_crosswalk.csv (from step 3)")
     print("  - generated_charts/*.html (from step 4)")
     print("  - index.md (links refreshed after dashboards)")

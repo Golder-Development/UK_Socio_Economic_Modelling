@@ -184,6 +184,17 @@ If you’re unsure whether something fits, opening an **Issue** for discussion f
 
 ---
 
+## 🛠️ Development Demarcation
+
+To keep the repository clean and reproducible, there is a clear separation between the tracked regeneration pipeline and a local-only sandbox:
+
+* Tracked pipeline: essential scripts in [data_sources/mortality_stats/development_code](data_sources/mortality_stats/development_code) regenerate data and dashboards from a clean clone.
+* Local sandbox: helpers and ad-hoc tools live under [local_dev/tools](local_dev/tools) and are ignored by Git.
+
+See the detailed guidelines in [CONTRIBUTING.md](CONTRIBUTING.md) for what belongs where, how to run the pipeline, and commit hygiene.
+
+---
+
 ## 📣 Following the work
 
 If you’d like to follow ongoing thinking, updates, and related discussion, you can find me here:
