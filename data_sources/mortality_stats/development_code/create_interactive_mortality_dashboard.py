@@ -554,6 +554,234 @@ def create_age_sex_filtered_dashboard(df):
     return fig
 
 
+def create_age_group_dashboard(df):
+    """Create dashboard showing mortality by age group with stacked/unstacked toggle and metric selection."""
+    print("Building age group dashboard...")
+
+    # Define age groups
+    def categorize_age(age_str):
+        """Map age ranges to standard demographic groups."""
+        if pd.isna(age_str):
+            return "Unknown"
+        
+        age_str = str(age_str).strip().replace('T', '')
+        
+        # Handle special cases
+        if age_str == '<1' or age_str == '00' or age_str == '0':
+            return "0-4"
+        if age_str in ['85+', '80+', '90+']:
+            return "85+"
+        
+        # Extract starting age from range (e.g., "01-04" -> 1, "25-29" -> 25)
+        try:
+            if '-' in age_str:
+                start_age = int(age_str.split('-')[0])
+            else:
+                start_age = int(age_str)
+            
+            # Categorize based on starting age
+            if start_age <= 4:
+                return "0-4"
+            elif start_age <= 14:
+                return "5-14"
+            elif start_age <= 24:
+                return "15-24"
+            elif start_age <= 34:
+                return "25-34"
+            elif start_age <= 44:
+                return "35-44"
+            elif start_age <= 54:
+                return "45-54"
+            elif start_age <= 64:
+                return "55-64"
+            elif start_age <= 74:
+                return "65-74"
+            elif start_age <= 84:
+                return "75-84"
+            else:
+                return "85+"
+        except (ValueError, IndexError):
+            return "Unknown"
+
+    # Add age_group column
+    df_with_groups = df.copy()
+    df_with_groups["age_group"] = df_with_groups["age"].apply(categorize_age)
+
+    # Aggregate by year and age group
+    agg_data = (
+        df_with_groups.groupby(["year", "age_group"])
+        .agg({"deaths": "sum", "population": "first"})
+        .reset_index()
+    )
+    agg_data["rate_per_100k"] = (agg_data["deaths"] / agg_data["population"]) * 100000
+    agg_data["rate_per_10k"] = (agg_data["deaths"] / agg_data["population"]) * 10000
+
+    # Get unique age groups in logical order
+    age_group_order = ["0-4", "5-14", "15-24", "25-34", "35-44", "45-54", "55-64", "65-74", "75-84", "85+", "Unknown"]
+    age_groups = [ag for ag in age_group_order if ag in agg_data["age_group"].unique()]
+
+    # Create figure with multiple traces
+    fig = go.Figure()
+
+    # UNSTACKED MODE (default): Line chart with one line per age group
+    for age_group in age_groups:
+        ag_data = agg_data[agg_data["age_group"] == age_group].sort_values("year")
+        fig.add_trace(
+            go.Scatter(
+                x=ag_data["year"],
+                y=ag_data["rate_per_100k"],
+                mode="lines+markers",
+                name=age_group,
+                visible=True,
+                stackgroup=None,  # Unstacked
+                customdata=list(zip(
+                    ag_data["rate_per_10k"],
+                    ag_data["deaths"]
+                )),
+            )
+        )
+
+    # STACKED MODE: Bar chart with stacked bars per age group
+    for age_group in age_groups:
+        ag_data = agg_data[agg_data["age_group"] == age_group].sort_values("year")
+        fig.add_trace(
+            go.Bar(
+                x=ag_data["year"],
+                y=ag_data["rate_per_100k"],
+                name=age_group,
+                visible=False,
+                customdata=list(zip(
+                    ag_data["rate_per_10k"],
+                    ag_data["deaths"]
+                )),
+            )
+        )
+
+    # Create view toggle buttons (unstacked/stacked)
+    view_buttons = [
+        {
+            "label": "Unstacked (Lines)",
+            "method": "update",
+            "args": [
+                {"visible": [True] * len(age_groups) + [False] * len(age_groups)},
+                {"title.text": "<b>UK Mortality by Age Group — Unstacked View</b><br><sub>Deaths per 100,000 population; line view for trend comparison</sub>"}
+            ]
+        },
+        {
+            "label": "Stacked (Area)",
+            "method": "update",
+            "args": [
+                {"visible": [False] * len(age_groups) + [True] * len(age_groups)},
+                {"title.text": "<b>UK Mortality by Age Group — Stacked View</b><br><sub>Deaths per 100,000 population; stacked view for composition analysis</sub>"}
+            ]
+        }
+    ]
+
+    # Create age group filter buttons
+    age_group_buttons = [
+        {
+            "label": "All",
+            "method": "restyle",
+            "args": ["visible", [True] * len(age_groups) + [False] * len(age_groups)]
+        }
+    ]
+
+    for i, age_group in enumerate(age_groups):
+        visible_unstacked = [j == i for j in range(len(age_groups))] + [False] * len(age_groups)
+        age_group_buttons.append(
+            {"label": age_group, "method": "restyle", "args": ["visible", visible_unstacked]}
+        )
+
+    # Create metric toggle buttons
+    metric_buttons = []
+    for metric_name, y_field_idx in [("Per 100k", 0), ("Per 10k", 1), ("Actual Deaths", 2)]:
+        if metric_name == "Per 100k":
+            # Default: use y directly (already rate_per_100k)
+            metric_buttons.append({
+                "label": metric_name,
+                "method": "restyle",
+                "args": ["y", [agg_data[agg_data["age_group"] == ag].sort_values("year")["rate_per_100k"].tolist() for ag in age_groups] * 2]
+            })
+        elif metric_name == "Per 10k":
+            metric_buttons.append({
+                "label": metric_name,
+                "method": "restyle",
+                "args": ["y", [agg_data[agg_data["age_group"] == ag].sort_values("year")["rate_per_10k"].tolist() for ag in age_groups] * 2]
+            })
+        else:  # Actual Deaths
+            metric_buttons.append({
+                "label": metric_name,
+                "method": "restyle",
+                "args": ["y", [agg_data[agg_data["age_group"] == ag].sort_values("year")["deaths"].tolist() for ag in age_groups] * 2]
+            })
+
+    fig.update_layout(
+        title={
+            "text": "<b>UK Mortality by Age Group — Unstacked View</b><br>"
+            "<sub>Deaths per 100,000 population; line view for trend comparison</sub>",
+            "font": {"size": 24, "color": "#1f1f1f"},
+            "x": 0.5,
+            "xanchor": "center",
+        },
+        xaxis_title="Year",
+        yaxis_title="Deaths per 100,000",
+        barmode="stack",  # Stack bars for stacked view
+        height=700,
+        template="plotly_white",
+        margin=dict(t=160),
+        updatemenus=[
+            {
+                "buttons": view_buttons,
+                "direction": "down",
+                "pad": {"r": 10, "t": 10},
+                "showactive": True,
+                "x": 0.01,
+                "xanchor": "left",
+                "y": 1.06,
+                "yanchor": "top",
+                "bgcolor": "#e8e8e8",
+                "bordercolor": "#333",
+                "borderwidth": 1,
+            },
+            {
+                "buttons": age_group_buttons,
+                "direction": "down",
+                "pad": {"r": 10, "t": 10},
+                "showactive": True,
+                "x": 0.22,
+                "xanchor": "left",
+                "y": 1.06,
+                "yanchor": "top",
+                "bgcolor": "#f0f0f0",
+                "bordercolor": "#333",
+                "borderwidth": 1,
+            },
+            {
+                "buttons": metric_buttons,
+                "direction": "right",
+                "pad": {"r": 10, "t": 10},
+                "showactive": True,
+                "x": 0.60,
+                "xanchor": "left",
+                "y": 1.06,
+                "yanchor": "top",
+                "bgcolor": "#f8f8f8",
+                "bordercolor": "#333",
+                "borderwidth": 1,
+            },
+        ],
+        annotations=[
+            {"text": "View:", "showarrow": False, "x": 0.01, "y": 1.08, "xref": "paper", "yref": "paper"},
+            {"text": "Age Group:", "showarrow": False, "x": 0.22, "y": 1.08, "xref": "paper", "yref": "paper"},
+            {"text": "Metric:", "showarrow": False, "x": 0.60, "y": 1.08, "xref": "paper", "yref": "paper", "xanchor": "left"},
+        ],
+    )
+
+    fig.update_xaxes(rangeslider_visible=True)
+
+    return fig
+
+
 def _build_subset_time_series(df_subset: pd.DataFrame):
     """Aggregate subset by year and category and prepare metric arrays for Plotly updates."""
     # Aggregate
@@ -794,6 +1022,10 @@ def main():
     print("3. Creating age/sex filtered dashboard...")
     fig3 = create_age_sex_filtered_dashboard(df)
 
+    # Create age group dashboard
+    print("4. Creating age group dashboard...")
+    fig4 = create_age_group_dashboard(df)
+
     # Save main dashboard
     output_main = OUTPUT_DIR / "mortality_dashboard_interactive.html"
     print(f"\nSaving main dashboard to: {output_main}")
@@ -826,8 +1058,16 @@ def main():
         config={"displayModeBar": True},
     )
 
+    # Save age group dashboard
+    output_age_groups = OUTPUT_DIR / "mortality_dashboard_age_groups.html"
+    print(f"Saving age group dashboard to: {output_age_groups}")
+    fig4.write_html(
+        output_age_groups,
+        config={"displayModeBar": True},
+    )
+
     # Create subset dashboards (separate outputs)
-    print("\n4. Creating subset dashboards...")
+    print("\n5. Creating subset dashboards...")
 
     # Use age_start column from harmonized data (already standardized)
     # If not present, extract it
@@ -875,7 +1115,8 @@ def main():
     print(f"   - Main: {output_main.name}")
     print(f"   - Drill-down: {output_drilldown.name}")
     print(f"   - Filtered: {output_filtered.name}")
-    print("   - Subsets: women, men, children, oaps, working_age, adults_under_30")
+    print(f"   - Age Groups: {output_age_groups.name}")
+    print("   - Subsets: preschool, school, young_adults, older_adults, young_oaps, old_oaps")
 
 
 if __name__ == "__main__":
