@@ -453,8 +453,8 @@ def create_age_sex_filtered_dashboard(df):
 
     fig.update_layout(
         title={
-            "text": "UK Mortality Rates Dashboard - Interactive Filters<br>"
-            "<sub>Deaths per 100,000 population with category, age, and sex filtering</sub>",
+            "text": "UK Mortality Rates Dashboard — Category Filter<br>"
+            "<sub>Deaths per 100,000 population; category filtering only</sub>",
             "x": 0.5,
             "xanchor": "center",
         },
@@ -489,6 +489,175 @@ def create_age_sex_filtered_dashboard(df):
 
     fig.update_xaxes(rangeslider_visible=True)
 
+    return fig
+
+
+def _build_subset_time_series(df_subset: pd.DataFrame):
+    """Aggregate subset by year and category and prepare metric arrays for Plotly updates."""
+    # Aggregate
+    agg = (
+        df_subset.groupby(["year", "harmonized_category_name"]).agg({"deaths": "sum", "population": "first"}).reset_index()
+    )
+    # Metrics
+    agg["rate_per_100k"] = (agg["deaths"] / agg["population"]) * 100000
+    agg["rate_per_10k"] = (agg["deaths"] / agg["population"]) * 10000
+
+    categories = sorted(agg["harmonized_category_name"].unique())
+
+    # Build per-category series for each metric
+    years_sorted = sorted(agg["year"].unique())
+    y_per_100k = []
+    y_per_10k = []
+    y_deaths = []
+    for cat in categories:
+        cat_df = agg[agg["harmonized_category_name"] == cat].sort_values("year")
+        # Ensure alignment to full year range
+        cat_df = cat_df.set_index("year").reindex(years_sorted)
+        y_per_100k.append(cat_df["rate_per_100k"].tolist())
+        y_per_10k.append(cat_df["rate_per_10k"].tolist())
+        y_deaths.append(cat_df["deaths"].tolist())
+
+    return {
+        "years": years_sorted,
+        "categories": categories,
+        "y_per_100k": y_per_100k,
+        "y_per_10k": y_per_10k,
+        "y_deaths": y_deaths,
+    }
+
+
+def create_subset_dashboard(df: pd.DataFrame, subset_name: str, mask: pd.Series):
+    """
+    Create a compact dashboard for a specific subset with:
+    - Category dropdown (25 harmonized codes)
+    - Metric toggle: per 100k, per 10k, actual deaths
+
+    Note: Rates use total population estimates as denominator.
+    """
+    print(f"Building subset dashboard: {subset_name} ...")
+    df_sub = df.loc[mask].copy()
+    prep = _build_subset_time_series(df_sub)
+
+    years = prep["years"]
+    categories = prep["categories"]
+    y100k = prep["y_per_100k"]
+    y10k = prep["y_per_10k"]
+    yabs = prep["y_deaths"]
+
+    fig = go.Figure()
+
+    # Add traces (default metric: per 100k)
+    for i, cat in enumerate(categories):
+        fig.add_trace(
+            go.Scatter(
+                x=years,
+                y=y100k[i],
+                mode="lines+markers",
+                name=cat,
+                hovertemplate="<b>%{fullData.name}</b><br>Year: %{x}<br>Value: %{y:.2f}<extra></extra>",
+                visible=True,
+            )
+        )
+
+    # Category dropdown
+    cat_buttons = [
+        {
+            "label": "All Categories",
+            "method": "update",
+            "args": [
+                {"visible": [True] * len(categories)},
+                {"title": f"{subset_name} — All Categories"},
+            ],
+        }
+    ]
+    for i, cat in enumerate(categories):
+        vis = [False] * len(categories)
+        vis[i] = True
+        cat_buttons.append(
+            {
+                "label": cat,
+                "method": "update",
+                "args": [
+                    {"visible": vis},
+                    {"title": f"{subset_name} — {cat}"},
+                ],
+            }
+        )
+
+    # Metric toggle: update all traces' y arrays in place
+    metric_buttons = [
+        {
+            "label": "Deaths per 100k",
+            "method": "update",
+            "args": [
+                {"y": y100k},
+                {"yaxis": {"title": "Deaths per 100,000"}},
+            ],
+        },
+        {
+            "label": "Deaths per 10k",
+            "method": "update",
+            "args": [
+                {"y": y10k},
+                {"yaxis": {"title": "Deaths per 10,000"}},
+            ],
+        },
+        {
+            "label": "Actual deaths",
+            "method": "update",
+            "args": [
+                {"y": yabs},
+                {"yaxis": {"title": "Deaths (count)"}},
+            ],
+        },
+    ]
+
+    fig.update_layout(
+        title={
+            "text": f"UK Mortality — {subset_name}<br><sub>Select a category and metric. Rates use total population denominator.</sub>",
+            "x": 0.5,
+            "xanchor": "center",
+        },
+        xaxis_title="Year",
+        yaxis_title="Deaths per 100,000",
+        template="plotly_white",
+        height=700,
+        hovermode="closest",
+        updatemenus=[
+            {
+                "buttons": cat_buttons,
+                "direction": "down",
+                "pad": {"r": 10, "t": 10},
+                "showactive": True,
+                "x": 0.01,
+                "xanchor": "left",
+                "y": 1.15,
+                "yanchor": "top",
+                "bgcolor": "#f0f0f0",
+                "bordercolor": "#333",
+                "borderwidth": 1,
+            },
+            {
+                "buttons": metric_buttons,
+                "direction": "right",
+                "pad": {"r": 10, "t": 10},
+                "showactive": True,
+                "x": 0.5,
+                "xanchor": "center",
+                "y": 1.15,
+                "yanchor": "top",
+                "bgcolor": "#f8f8f8",
+                "bordercolor": "#333",
+                "borderwidth": 1,
+            },
+        ],
+        annotations=[
+            {"text": "Category:", "showarrow": False, "x": 0.01, "y": 1.19, "xref": "paper", "yref": "paper"},
+            {"text": "Metric:", "showarrow": False, "x": 0.5, "y": 1.19, "xref": "paper", "yref": "paper", "xanchor": "center"},
+        ],
+    )
+
+    fig.update_xaxes(rangeslider_visible=True)
     return fig
 
 
@@ -541,10 +710,32 @@ def main():
         config={"displayModeBar": True},
     )
 
+    # Create subset dashboards (separate outputs)
+    print("\n4. Creating subset dashboards...")
+
+    subsets = [
+        ("Women (sex=2)", df["sex"].astype(str).isin(["2", 2]), "mortality_dashboard_filtered_women.html"),
+        ("Men (sex=1)", df["sex"].astype(str).isin(["1", 1]), "mortality_dashboard_filtered_men.html"),
+        ("Children (age ≤ 18)", pd.to_numeric(df["age"], errors="coerce") <= 18, "mortality_dashboard_filtered_children.html"),
+        ("OAPs (age ≥ 65)", pd.to_numeric(df["age"], errors="coerce") >= 65, "mortality_dashboard_filtered_oaps.html"),
+        ("Working Age (19–64)", (pd.to_numeric(df["age"], errors="coerce") > 18) & (pd.to_numeric(df["age"], errors="coerce") < 65), "mortality_dashboard_filtered_working_age.html"),
+        ("Adults under 30 (19–30)", (pd.to_numeric(df["age"], errors="coerce") > 18) & (pd.to_numeric(df["age"], errors="coerce") <= 30), "mortality_dashboard_filtered_adults_under_30.html"),
+    ]
+
+    for title, mask, filename in subsets:
+        try:
+            fig_sub = create_subset_dashboard(df, title, mask)
+            out_path = OUTPUT_DIR / filename
+            print(f"Saving subset dashboard to: {out_path}")
+            fig_sub.write_html(out_path, config={"displayModeBar": True})
+        except Exception as e:
+            print(f"Warning: failed to build subset '{title}': {e}")
+
     print("\n[SUCCESS] All dashboards created successfully!")
     print(f"   - Main: {output_main.name}")
     print(f"   - Drill-down: {output_drilldown.name}")
     print(f"   - Filtered: {output_filtered.name}")
+    print("   - Subsets: women, men, children, oaps, working_age, adults_under_30")
 
 
 if __name__ == "__main__":

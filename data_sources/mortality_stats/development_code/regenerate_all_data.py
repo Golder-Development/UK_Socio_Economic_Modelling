@@ -40,6 +40,12 @@ def get_parent_dir():
     return get_script_dir().parent
 
 
+def get_repo_root():
+    """Get the repository root directory from development_code/ path."""
+    # development_code -> mortality_stats -> data_sources -> repo root
+    return get_parent_dir().parent.parent
+
+
 def run_script(script_name, description, verbose=False):
     """Run a Python script within development_code and report status."""
     script_path = get_script_dir() / script_name
@@ -90,6 +96,43 @@ def run_parent_script(script_rel_path, description, verbose=False):
     print(f"Running: {script_path}")
     if not script_path.exists():
         print(f"❌ ERROR: Script not found: {script_path}")
+        return False
+
+
+def run_repo_script(script_rel_path, description, verbose=False):
+    """Run a Python script located at the repository root (relative path)."""
+    script_path = get_repo_root() / script_rel_path
+    print(f"\n{'='*70}")
+    print(f"STEP: {description}")
+    print(f"{'='*70}")
+    print(f"Running: {script_path}")
+    if not script_path.exists():
+        print(f"⚠️  Script not found (skipping): {script_path}")
+        return False
+    try:
+        result = subprocess.run(
+            [sys.executable, str(script_path)],
+            cwd=str(get_repo_root()),
+            capture_output=not verbose,
+            text=True,
+            check=False,
+        )
+        if result.returncode == 0:
+            print(f"✅ {description} completed successfully")
+            if verbose and result.stdout:
+                print(result.stdout)
+            return True
+        else:
+            print(f"⚠️  {description} returned exit code {result.returncode}")
+            if result.stderr:
+                print("Error output:")
+                print(result.stderr)
+            if result.stdout:
+                print("Standard output:")
+                print(result.stdout)
+            return False
+    except Exception as e:
+        print(f"⚠️  Exception running {script_rel_path}: {e}")
         return False
     try:
         result = subprocess.run(
@@ -315,6 +358,12 @@ Examples:
             steps_failed += 1
         else:
             steps_completed += 1
+            # STEP 5: Update index.md Generated Charts section at repo root
+            run_repo_script(
+                "sl_core/utils/update_generated_charts_section.py",
+                "Update Generated Charts links in index.md",
+                args.verbose,
+            )
     
     # Summary
     print("\n" + "="*70)
@@ -335,6 +384,7 @@ Examples:
     print("  - uk_mortality_by_cause_1901_2000_harmonized.csv (from step 2; includes modern years if present)")
     print("  - icd_harmonization_crosswalk.csv (from step 3)")
     print("  - generated_charts/*.html (from step 4)")
+    print("  - index.md (links refreshed after dashboards)")
     
     print("\nNext steps:")
     print("  1. Review icd_harmonization_crosswalk.csv to audit mappings")
