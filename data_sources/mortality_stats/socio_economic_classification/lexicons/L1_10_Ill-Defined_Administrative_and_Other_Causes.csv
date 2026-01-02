@@ -1,0 +1,14 @@
+term,weight,match_type,source,notes
+ill defined,8,phrase,core,
+cause unknown,9,phrase,core,
+unknown cause,9,phrase,core,
+found dead,9,phrase,core,
+not specified,4,phrase,weak,
+observation,7,token,admin,
+symptom,5,token,admin,
+otherwise or not stated,8,phrase,admin,Historical administrative category for unspecified causes
+sudden death,9,phrase,core,Unexplained sudden death
+cause unascertained,9,phrase,core,Cause could not be determined
+lack of care,7,phrase,core,Care not provided or inadequate
+observation without need for further medical care,9,phrase,admin,Administrative observation category
+pyrexia of unknown origin,9,phrase,core,Fever of unknown origin

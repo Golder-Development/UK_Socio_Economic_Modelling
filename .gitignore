@@ -40,6 +40,10 @@ Thumbs.db
 local_dev/
 local_dev/**
 
+# Large generated CSV files (use ZIP versions instead)
+data_sources/mortality_stats/uk_mortality_by_cause_1901_onwards_L1.csv
+data_sources/mortality_stats/uk_mortality_by_cause_1901_onwards_compiled.csv
+
 # Ignore most development_code content; keep essential regeneration scripts tracked
 data_sources/mortality_stats/development_code/**
 !data_sources/mortality_stats/development_code/regenerate_all_data.py

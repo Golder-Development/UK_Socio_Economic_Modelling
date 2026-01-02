@@ -1,0 +1,10 @@
+term,weight,match_type,source,notes
+violence,8,token,core,
+homicide,9,token,core,
+murder,9,token,core,
+assault,8,token,core,
+war,8,token,core,
+battle,8,token,core,
+execution,9,token,core,
+killed by,8,phrase,core,
+weapons and instruments,8,phrase,core,Violence involving weapons or instruments

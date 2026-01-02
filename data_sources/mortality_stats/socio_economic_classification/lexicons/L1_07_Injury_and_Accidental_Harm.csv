@@ -1,0 +1,29 @@
+term,weight,match_type,source,notes
+accident,7,token,core,
+injury,7,token,core,
+fracture,7,token,core,
+fall,7,token,core,
+burn,7,token,core,
+scald,7,token,core,
+drowning,7,token,core,
+railway,6,token,context,
+machinery,6,token,context,
+suffocation,7,token,accidental,Asphyxiation/choking
+falls,7,token,accidental,Fall-related injuries
+weather agencies,6,token,environmental,Historical term for weather-related harm
+"poisons, poisonous vapours",8,phrase,toxic,Accidental poisoning/toxic exposure
+mines and quarries,6,phrase,occupational,Mining and quarry accidents
+vehicles,7,token,accidental,Vehicle-related injuries
+quarries,6,token,occupational,Quarry-related accidents
+building operations,6,phrase,occupational,Construction-related accidents
+burns and scalds,8,phrase,accidental,Severe burn or scald injuries
+weather,6,token,environmental,Weather-related harm
+poisons,6,token,toxic,Poisoning incidents
+poisonous vapours,7,phrase,toxic,Poisonous gas/vapour exposure
+other chronic poisonings,7,phrase,toxic,Chronic poisoning exposure
+conflagration,7,token,accidental,Large fire causing harm
+deleterious gases,7,phrase,toxic,Harmful gas exposure
+"venomous animals",7,phrase,toxic,Bites and stings from venomous creatures
+"accidental poisoning",8,phrase,toxic,Unintentional toxic exposure
+"poisonous gases",7,phrase,toxic,Toxic gas exposure
+accidental,7,token,core,Unintentional harm or injury

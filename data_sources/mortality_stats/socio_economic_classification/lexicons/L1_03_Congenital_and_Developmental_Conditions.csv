@@ -1,0 +1,13 @@
+term,weight,match_type,source,notes
+congenital,9,token,core,
+malformation,8,token,core,
+deformity,8,token,core,
+spina bifida,9,phrase,condition,
+cleft palate,9,phrase,condition,
+harelip,9,token,condition,
+clubfoot,9,token,condition,
+hydrocephalus,8,token,condition,
+haemophilia,8,token,genetic,
+idiocy,7,token,condition,Historical term for severe intellectual disability
+imbecility,7,token,condition,Historical term for intellectual disability
+cretinism,8,token,condition,Congenital hypothyroidism-related developmental disorder

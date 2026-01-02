@@ -1,0 +1,116 @@
+term,weight,match_type,source,notes
+chronic,5,token,core,
+degeneration,6,token,core,
+carcinoma,8,token,disease,
+cancer,8,token,disease,
+sarcoma,8,token,disease,
+diabetes,8,token,disease,
+cirrhosis,7,token,disease,
+arthritis,6,token,disease,
+gout,6,token,disease,
+"diseases of bones",6,phrase,disease,Bone diseases
+"diseases of joints",6,phrase,disease,Joint diseases
+Other diseases of .*,7,regex,chronic,Catch-all pattern for chronic disease descriptions
+hernia,6,token,disease,
+intestinal obstruction,7,phrase,disease,
+gall bladder,6,phrase,disease,
+digestive system,5,phrase,disease,
+diseases of oesophagus,6,phrase,disease,Oesophageal diseases
+spleen,6,token,disease,
+lymphatic system,6,phrase,disease,
+supra renal capsules,6,phrase,disease,
+diseases of eyes & annexa,6,phrase,disease,Eye and adnexa diseases
+thyroid body,6,phrase,disease,Thyroid gland reference
+diseases of thyroid body,7,phrase,disease,Thyroid diseases
+calculus,6,token,disease,
+tumour (not malignant),6,phrase,disease,
+tumour (non malignant),6,phrase,disease,
+angioma,6,token,disease,Benign vascular tumor
+adenoma,6,token,disease,Benign glandular tumor
+"other tumours (situation undefined)",6,phrase,disease,Tumors of undefined nature/location
+amputations,6,token,disease,History of limb amputation
+ulceration,6,token,disease,
+varicose veins,6,phrase,disease,
+embolism,7,token,disease,
+thrombosis,7,token,disease,
+peritonitis (not puerperal),7,phrase,disease,
+phlebitis,6,token,disease,
+"Anaemia, leucocythaemia",7,phrase,disease,Blood disorders
+anemia,7,token,disease,Blood disorder (anaemia spelling)
+leucocythaemia,7,token,disease,Blood cancer (old spelling)
+leuchaemia,7,token,disease,Leukemia (old spelling)
+lymphadenoma,7,token,disease,Lymph node neoplasm
+chlorosis,6,token,disease,Iron deficiency anemia (historical term)
+exophthalmic goitre,7,phrase,disease,Graves' disease/hyperthyroidism
+addison's disease,7,phrase,disease,Adrenal insufficiency
+chorea,6,token,disease,Neurological movement disorder
+softening of brain,7,phrase,disease,Cerebral degeneration
+general paralysis of insane,7,phrase,disease,Neurosyphilis/dementia paralytica
+insanity,6,token,disease,Mental illness
+mental alienation,6,phrase,disease,Mental illness (historical term)
+hysteria,6,token,disease,Historical neurosis term
+epilepsy,7,token,disease,Seizure disorder
+convulsions,6,token,disease,Seizures
+locomotor ataxy,7,phrase,disease,Tabes dorsalis/spinal cord disease
+"Paraplegia, diseases of cord",7,phrase,disease,Spinal cord disorders
+diseases of the spinal cord,7,phrase,disease,Spinal cord diseases
+"Neuritis, peripheral, polyneuritis",7,phrase,disease,Peripheral nerve inflammation
+neuritis,6,token,disease,Nerve inflammation
+neuralgia,6,token,disease,Nerve pain
+sciatica,6,token,disease,Sciatic nerve pain
+hypertrophy of heart,7,phrase,disease,Cardiac enlargement
+dilation of heart,7,phrase,disease,Cardiac chamber enlargement
+acute myocarditis,7,phrase,disease,Acute heart muscle inflammation
+myocarditis,7,token,disease,Heart muscle inflammation
+"Syncope, heart disease",7,phrase,disease,Heart-related loss of consciousness
+valvular disease,7,phrase,disease,Heart valve disease
+"endocarditis (not infective)",7,phrase,disease,Non-infective endocardial inflammation
+pericarditis,7,token,disease,Pericardial inflammation
+angina pectoris,7,phrase,disease,Chest pain/ischemia
+"heart disease (not spec.)",6,phrase,disease,Unspecified heart disease
+functional disease of heart,6,phrase,disease,Functional cardiac disorder
+other organic disease of heart,6,phrase,disease,Organic heart disease
+syncope,6,token,disease,Loss of consciousness
+apoplexy,8,token,disease,Stroke/cerebrovascular accident
+hemiplegia,7,token,disease,Paralysis of one side of body
+aneurysm,7,token,disease,Blood vessel dilation/rupture
+arterial sclerosis,7,phrase,disease,Arterial hardening/atherosclerosis
+phimosis,6,token,disease,Penile foreskin constriction
+gastric ulcer,7,phrase,disease,Stomach ulcer
+gastritis,6,token,disease,Stomach inflammation
+gastric catarrh,6,phrase,disease,Stomach inflammation/mucous membrane condition
+gastro-enteritis,6,phrase,disease,Gastrointestinal inflammation
+dyspepsia,6,token,disease,Indigestion
+enteritis,6,token,disease,Intestinal inflammation
+colic - over 2yrs old,6,phrase,disease,Colic outside infant age range
+appendicitis,7,token,disease,Appendix inflammation
+perityphlitis,7,token,disease,Inflammation around cecum/appendix region
+dropsy,7,token,disease,Edema/historical term for fluid accumulation
+ascities,7,token,disease,Ascites/fluid in abdomen (historic spelling)
+anasarca,7,token,disease,Generalized edema
+ulcer,6,token,disease,Non-specific ulcer
+bed-sore,6,token,disease,Pressure ulcer/decubitus
+tumour,6,token,disease,Unspecified tumour (non-malignant/ambiguous)
+abscess,6,token,disease,Pus-filled infection
+haemorrhage,7,token,disease,Bleeding
+epistaxis,6,token,disease,Nosebleed
+atrophy,6,token,disease,Tissue wasting
+pemphigus,7,token,disease,Autoimmune blistering skin disease
+eczema,6,token,disease,Inflammatory skin condition
+debility,6,token,disease,General weakness/frailty
+phthisis,7,token,disease,Wasting disease (when not specified as tuberculosis)
+"phthisis (not def. as t.b.)",8,phrase,disease,Wasting disease explicitly not tuberculosis
+disorders of .*,6,regex,disease,Generic disorders-of pattern
+"Diseases of bladder and of prostate",7,phrase,disease,Urinary/prostate disorders
+"nephritis (unqualified)",7,phrase,disease,Unspecified nephritis
+uraemia,7,token,disease,Uremia/renal failure complication
+chyluria,6,token,disease,Chyle in urine
+bright's disease,7,phrase,disease,Historical chronic nephritis
+"calculi of urinary passages",6,phrase,disease,Urinary tract stones
+calculi,6,token,disease,Stones/renal or urinary calculi
+
+
+"fatty heart",7,phrase,disease,Fatty degeneration of heart
+"dilatation of heart (cause unspecified)",7,phrase,disease,Heart chamber enlargement without specified cause
+"heart disease (undefined)",7,phrase,disease,Unspecified cardiac disease
+"heart failure (age 1–70)",7,phrase,disease,Heart failure in age range 1-70 years

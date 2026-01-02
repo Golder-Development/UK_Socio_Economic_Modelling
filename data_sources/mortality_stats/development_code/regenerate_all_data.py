@@ -49,16 +49,16 @@ def get_repo_root():
 def run_script(script_name, description, verbose=False):
     """Run a Python script within development_code and report status."""
     script_path = get_script_dir() / script_name
-    
+
     print(f"\n{'='*70}")
     print(f"STEP: {description}")
     print(f"{'='*70}")
     print(f"Running: {script_path.name}")
-    
+
     if not script_path.exists():
         print(f"❌ ERROR: Script not found: {script_path}")
         return False
-    
+
     try:
         result = subprocess.run(
             [sys.executable, str(script_path)],
@@ -67,7 +67,7 @@ def run_script(script_name, description, verbose=False):
             text=True,
             check=False
         )
-        
+
         if result.returncode == 0:
             print(f"✅ {description} completed successfully")
             if verbose and result.stdout:

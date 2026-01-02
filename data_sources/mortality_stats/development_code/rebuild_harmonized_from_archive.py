@@ -291,8 +291,11 @@ def main():
             logger.info(f"  {decade_start}s: {matched:,}/{len(decade_df):,} ({rate:.1f}%)")
     
     # Reorder columns
-    final_cols = ['year', 'cause', 'cause_description', 'harmonized_category', 
-                  'harmonized_category_name', 'classification_confidence', 'sex', 'age', 'deaths']
+    final_cols = ['year', 'cause', 'cause_description', 
+                  'harmonized_category', 'harmonized_category_name', 'classification_confidence',
+                  'sex', 'age', 'deaths']
+    # Only include columns that exist
+    final_cols = [col for col in final_cols if col in df.columns]
     df = df[final_cols]
     
     # Add age_start standardization for filtering
@@ -336,7 +339,7 @@ def main():
     logger.info(f"Year range: {df['year'].min()}-{df['year'].max()}")
     logger.info(f"Harmonized categories: {df['harmonized_category_name'].nunique()}")
     logger.info(f"Unique causes: {df['cause'].nunique()}")
-    logger.info("\nTop 5 categories by deaths:")
+    logger.info("\nTop 5 harmonized categories by deaths:")
     top_cats = df.groupby('harmonized_category_name')['deaths'].sum().nlargest(5)
     for cat, deaths in top_cats.items():
         logger.info(f"  {cat}: {deaths:,}")

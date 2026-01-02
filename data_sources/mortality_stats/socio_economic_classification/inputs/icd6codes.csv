@@ -1,0 +1,2061 @@
+﻿icdcode,Group 1,Group 2
+0010,Respiratory tuberculosis with mention of occupational disease of lung,Respiratory tuberculosis with mention of occupational disease of lung
+0020,Pulmonary tuberculosis,Pulmonary tuberculosis
+0030,Pleural tuberculosis,Pleurisy specified as tuberculous
+0031,Pleural tuberculosis,Pleurisy with effusion without mention of cause
+0040,Primary tuberculosis complex with symptoms,Primary tuberculosis complex with symptoms
+0050,Tracheobronchial glandular tuberculosis with symptoms,Tracheobronchial glandular tuberculosis with symptoms
+0060,Radiological evidence suggestive of active respiratory tuberculosis not classifiable elsewhere,Radiological evidence suggestive of active respiratory tuberculosis not classifiable elsewhere
+0070,Other respiratory tuberculosis,Other respiratory tuberculosis
+0080,"Tuberculosis, unspecified site","Tuberculosis, unspecified site"
+0100,Tuberculosis of meninges and central nervous system,Tuberculosis of meninges and central nervous system
+0110,"Tuberculosis of intestines, peritoneum, and mesenteric glands","Tuberculosis of intestines, peritoneum, and mesenteric glands"
+0120,"Tuberculosis of bones and joints, active or unspecified",Active or unspecified tuberculosis of vertebral column
+0121,"Tuberculosis of bones and joints, active or unspecified",Active or unspecified tuberculosis of hip
+0122,"Tuberculosis of bones and joints, active or unspecified",Active or unspecified tuberculosis of knee
+0123,"Tuberculosis of bones and joints, active or unspecified",Active or unspecified tuberculosis of other and unspecified bones and joints
+0130,Late effects of tuberculosis of bones and joints,Late effects of tuberculosis of vertebral column
+0131,Late effects of tuberculosis of bones and joints,Late effects of tuberculosis of hip
+0132,Late effects of tuberculosis of bones and joints,Late effects of tuberculosis of knee
+0133,Late effects of tuberculosis of bones and joints,Late effects of tuberculosis of other and unspecified bones and joints
+0140,Tuberculosis of skin and subcutaneous cellular tissue,Primary tuberculosis of skin
+0141,Tuberculosis of skin and subcutaneous cellular tissue,Erythema nodosum specified as tuberculosus
+0142,Tuberculosis of skin and subcutaneous cellular tissue,Lupus
+0143,Tuberculosis of skin and subcutaneous cellular tissue,Other tuberculosis of skin and subcutaneous cellular tissue
+0150,Tuberculosis of lymphatic system,Tuberculosis of lymphatic system
+0160,Tuberculosis of genito-urinary system,Tuberculosis of genito-urinary system
+0170,Tuberculosis of adrenal glands,Tuberculosis of adrenal glands
+0180,Tuberculosis of other organs,Tuberculosis of eye
+0181,Tuberculosis of other organs,Tuberculosis of ear
+0182,Tuberculosis of other organs,Other
+0190,Disseminated tuberculosis,Acute miliary tuberculosis specified as non pulmonary
+0191,Disseminated tuberculosis,"Acute miliary tuberculosis, unspecified"
+0192,Disseminated tuberculosis,Other forms of disseminated tuberculosis
+0200,Congenital syphilis,Interstitial keratitis
+0201,Congenital syphilis,Juvenile neurosphilis
+0202,Congenital syphilis,Other congenital syphilis
+0210,Early syphilis,"Primary syphilis, except extragenital chancre"
+0211,Early syphilis,Extragenital chancre
+0212,Early syphilis,Secondary syphilis
+0213,Early syphilis,"Early syphilis, relapse following treatment"
+0214,Early syphilis,"Early syphilis, unspecified stage"
+0220,Aneurysm of aorta,Aneurysm of aorta
+0230,Other cardiovascular syphilis,Other cardiovascular syphilis
+0240,Tabes dorsalis,Tabes dorsalis
+0250,General paralysis of insane,General paralysis of insane
+0260,Other syphilis of central nervous system,Other syphilis of central nervous system
+0270,Other forms of late syphilis,Other forms of late syphilis
+0280,Latent syphilis,Early latent
+0281,Latent syphilis,Late latent
+0282,Latent syphilis,Unspecified
+0290,"Syphilis, unqualified","Syphilis, unqualified"
+0300,Acute or unspecified gonorrhoea,Acute or unspecified gonorrhoea
+0310,Chronic gonococcal infection of genito-urinary system,Chronic gonococcal infection of genito-urinary system
+0320,Gonococcal infection of joint,Gonococcal infection of joint
+0330,Gonococcal infection of eye,Gonococcal infection of eye
+0340,Gonococcal infection of other sites,Gonococcal infection of other sites
+0350,Late effects of gonococcal infection,Late effects of gonococcal infection
+0360,Chancroid,Chancroid
+0370,Lymphogranuloma venereum,Lymphogranuloma venereum
+0380,"Granuloma inguinale, venereal","Granuloma inguinale, venereal"
+0390,Other and unspecified venereal diseases,Other and unspecified venereal diseases
+0400,Typhoid fever,Typhoid fever
+0410,Paratyphoid fever,Paratyphoid fever
+0420,Other Salmonella infections,Without mention of food as vehicle of infection
+0421,Other Salmonella infections,With food as vehicle of infection
+0430,Cholera,Cholera
+0440,Brucellosis (undulant fever),Brucellosis (undulant fever)
+0450,Bacillary dysentery,Flexner-Boyd group
+0451,Bacillary dysentery,Schmitz
+0452,Bacillary dysentery,Shiga
+0453,Bacillary dysentery,Sonne
+0454,Bacillary dysentery,"Bacillary, other and unspecified"
+0460,Amoebiasis,Without mention of liver abscess
+0461,Amoebiasis,With liver abscess
+0470,Other protozoal dysentery,Other protozoal dysentery
+0480,Unspecified forms of dysentery,Unspecified forms of dysentery
+0490,Food poisoning (infection and intoxication),Staphylococcal
+0491,Food poisoning (infection and intoxication),Botulism
+0492,Food poisoning (infection and intoxication),Unspecified
+0500,Scarlet fever,Scarlet fever
+0510,Streptococcal sore throat,Streptococcal sore throat
+0520,Erysipelas,Erysipelas
+0530,Septicaemia and pyaemia,Streptococcus
+0531,Septicaemia and pyaemia,Staphylococcus
+0532,Septicaemia and pyaemia,Pneumococcus
+0533,Septicaemia and pyaemia,Other specified organism
+0534,Septicaemia and pyaemia,Organism unspecified
+0540,Bacterial toxaemia,Bacterial toxaemia
+0550,Diphtheria,Diphtheria
+0560,Whooping cough,Without mention of pneumonia
+0561,Whooping cough,With pneumonia
+0570,Meningococcal infections,Meningococcal meningitis
+0571,Meningococcal infections,Acute and unspecified meningococcaemia
+0572,Meningococcal infections,Chronic meningococcaemia
+0573,Meningococcal infections,Other forms of meningococcal infection
+0580,Plague,Bubonic
+0581,Plague,Pneumonic
+0582,Plague,Other
+0590,Tularaemia,Tularaemia
+0600,Leprosy,Lepromatous Leprosy
+0601,Leprosy,Neuroleprosy
+0602,Leprosy,Mixed
+0603,Leprosy,Unspecified
+0610,Tetanus,Tetanus
+0620,Anthrax,Anthrax
+0630,Gas gangrene,Gas gangrene
+0640,Other bacterial diseases,Epidemic arthritic erythema
+0641,Other bacterial diseases,Rat-bite fever due to Streptobacillus moniliformis
+0642,Other bacterial diseases,Glanders
+0643,Other bacterial diseases,Melioidosis
+0644,Other bacterial diseases,Other
+0700,Vincent's infection,Vincent's infection
+0710,Relapsing fever,Louse-borne
+0711,Relapsing fever,Tick-borne
+0712,Relapsing fever,Unspecified
+0720,Leptospirosis,Leptospirosis icterohaemorrhagica (Weil's disease)
+0730,Yaws,Yaws
+0740,Other spirochaetal and leptospirochaetal infections,Rat-bite fever due to Spirochaeta morsus muris (Sodoku)
+0741,Other spirochaetal and leptospirochaetal infections,Other
+0800,Acute poliomyelitis,Specified as bulbar or polio-encephalitis
+0801,Acute poliomyelitis,With other paralysis
+0802,Acute poliomyelitis,Specified as nonparalytic
+0803,Acute poliomyelitis,Unspecified
+0810,Late effects of acute poliomyelitis,Late effects of acute poliomyelitis
+0820,Acute infectious encephalitis,Acute infectious encephalitis
+0830,Late effects of acute infectious encephalitis,Postencephalitic Parkinsonism
+0831,Late effects of acute infectious encephalitis,Postencephalitic personality and character disorders
+0832,Late effects of acute infectious encephalitis,Postencephalitic psychosis
+0833,Late effects of acute infectious encephalitis,Other postencephalitic conditions
+0840,Smallpox,Smallpox
+0850,Measles,Without mention of pneumonia
+0851,Measles,With pneumonia
+0860,Rubella (German measles),Rubella (German measles)
+0870,Chickenpox,Chickenpox
+0880,Herpes zoster,Herpes zoster
+0890,Mumps,Mumps
+0900,Dengue,Dengue
+0910,Yellow fever,Yellow fever
+0920,Infectious hepatitis,Infectious hepatitis
+0930,Glandular fever (infectious mononucleosis),Glandular fever (infectious mononucleosis)
+0940,Rabies,Rabies
+0950,Trachoma,Trachoma
+0960,Other diseases attributable to viruses,Herpes febrilis
+0961,Other diseases attributable to viruses,Infectious keratoconjunctivitis
+0962,Other diseases attributable to viruses,Psittacosis and ornithosis
+0963,Other diseases attributable to viruses,Cowpox
+0964,Other diseases attributable to viruses,Epidemic hiccough
+0965,Other diseases attributable to viruses,Epidemic myalgia (Bornholm disease)
+0966,Other diseases attributable to viruses,Foot and mouth disease
+0967,Other diseases attributable to viruses,Sandfly fever
+0968,Other diseases attributable to viruses,Rift Valley fever
+0969,Other diseases attributable to viruses,Other
+1000,Louse-borne epidemic typhus,Louse-borne epidemic typhys
+1010,Flea-borne endemic typhus (murine),Flea-borne endemic typhus (murine)
+1020,"Brill's disease, not specified as louse-or flea-borne typhus","Brill's disease, not specified as louse-or flea-borne typhus"
+1030,"Tabardillo (Mexican typhus), not specified as louse- or flea-borne","Tabardillo (Mexican typhus), not specified as louse- or flea-borne"
+1040,Tick-borne typhus,Tick-borne typhus
+1050,Mite-borne typhus,Mite-borne typhus
+1060,Wolhynian fever (trench fever),Wolhynian fever (trench fever)
+1070,"Typhus, unspecified","Typhus, unspecified"
+1080,Other rickettsial diseases,Other rickettsial diseases
+1100,Vivax malaria (benign tertian),Vivax malaria (benign tertian)
+1110,Malariae malaria (quartan),Malariae malaria (quartan)
+1120,Falciparum malaria (malignant tertian),Falciparum malaria (malignant tertian)
+1130,Ovale malaria,Ovale malaria
+1140,Mixed malarial infections,Mixed malarial infections
+1150,Blackwater fever,Blackwater fever
+1160,Other and unspecified forms of malaria,Other and unspecified forms of malaria
+1170,Recurrent induced malaria,Recurrent induced malaria
+1200,Leishmaniasis,Visceral (Kala-azar)
+1201,Leishmaniasis,Cutaneous (Oriental sore)
+1202,Leishmaniasis,Mucocutaneous (American)
+1203,Leishmaniasis,Unspecified
+1210,Trypanosomiasis,African (sleeping sickness)
+1211,Trypanosomiasis,South American (Chagas' disease)
+1212,Trypanosomiasis,Other
+1220,Other protozoal diseases,Coccidiosis
+1221,Other protozoal diseases,Toxoplasmosis
+1222,Other protozoal diseases,Other
+1230,Schistosomiasis,Vesical (S.haematobium)
+1231,Schistosomiasis,Intestinal (S.Mansoni)
+1232,Schistosomiasis,Pulmonary (S.japonicum)
+1233,Schistosomiasis,Other and unspecified schistosomiasis
+1240,Other trematode infestation,Clonorchiasis
+1241,Other trematode infestation,Paragonimiasis
+1242,Other trematode infestation,Other
+1250,Hydatid disease,Hydatid disease
+1260,Other cestode infestation,Other cestode infestation
+1270,Filariasis,Filariasis
+1280,Trichiniasis,Trichiniasis
+1290,Ankylostomiasis,Ankylostomiasis
+1300,"Infestation with worms of other, mixed and unspecified type",Ascariasis
+1301,"Infestation with worms of other, mixed and unspecified type",Oxyuriasis
+1302,"Infestation with worms of other, mixed and unspecified type",Mixed intestinal helminth infestation
+1303,"Infestation with worms of other, mixed and unspecified type",Other
+1310,Dermatophytosis,Dermatophytosis
+1320,Actinomycosis,Actinomycosis
+1330,Coccidioidomycosis,Coccidioidomycosis
+1340,Other fungus infections,Blastomycosis
+1341,Other fungus infections,Cryptococcosis (torulosis)
+1342,Other fungus infections,Histoplasmosis
+1343,Other fungus infections,Moniliasis
+1344,Other fungus infections,Sporotrichosis
+1345,Other fungus infections,Other
+1350,Scabies,Scabies
+1360,Pediculosis,Pediculosis
+1370,Other arthropod infestation,Other arthropod infestation
+1380,Other infective and parasitic diseases,Sarcoid of Boeck
+1381,Other infective and parasitic diseases,Other
+1400,Malignant neoplasm of lip,Malignant neoplasm of lip
+1410,Malignant neoplasm of tongue,Malignant neoplasm of tongue
+1420,Malignant neoplasm of salivary gland,Mixed salivary gland tumour
+1421,Malignant neoplasm of salivary gland,Other
+1430,Malignant neoplasm of floor of mouth,Malignant neoplasm of floor of mouth
+1440,Malignant neoplasm of other parts of mouth and mouth unspecified,Malignant neoplasm of other parts of mouth and mouth unspecified
+1450,Malignant neoplasm of oral mesopharynx,Malignant neoplasm of oral mesopharynx
+1460,Malignant neoplasm of nasopharynx,Malignant neoplasm of nasopharynx
+1470,Malignant neoplasm of hypopharynx,Malignant neoplasm of hypopharynx
+1480,"Malignant neoplasm of pharynx, unspecified","Malignant neoplasm of pharynx, unspecified"
+1500,Malignant neoplasm of oesophagus,Malignant neoplasm of oesophagus
+1510,Malignant neoplasm of stomach,Malignant neoplasm of stomach
+1520,"Malignant neoplasm of small intestine, including duodenum","Malignant neoplasm of small intestine, including duodenum"
+1530,"Malignant neoplasm of large intestine, except rectum","Malignant neoplasm of large intestine, except rectum"
+1540,Malignant neoplasm of rectum,Malignant neoplasm of rectum
+1550,Malignant neoplasm of biliary passages and of liver (stated to be primary site),Malignant neoplasm of biliary passages and of liver (stated to be primary site)
+1560,Malignant neoplasm of liver (secondary and unspecified),Malignant neoplasm of liver (secondary and unspecified)
+1570,Malignant neoplasm of pancreas,Malignant neoplasm of pancreas
+1580,Malignant neoplasm of peritoneum,Malignant neoplasm of peritoneum
+1590,Malignant neoplasm of unspec. digestive organs,Malignant neoplasm of unspec. digestive organs
+1600,"Malignant neoplasm of nose, nasal cavities, middle ear, and accessory sinuses","Malignant neoplasm of nose, nasal cavities, middle ear, and accessory sinuses"
+1610,Malignant neoplasm of larynx,Malignant neoplasm of larynx
+1620,"Malignant neoplasm of trachea, and of bronchus and lung specified as primary","Malignant neoplasm of trachea, and of bronchus and lung specified as primary"
+1630,"Malignant neoplasm of lung and of bronchus, unspecified as to whether primary or secondary","Malignant neoplasm of lung  and of bronchus, unspecified as to whether primary or secondary"
+1640,Malignant neoplasm of mediastinum,Malignant neoplasm of mediastinum
+1650,Malignant neoplasm of thoracic organs (sec.),Malignant neoplasm of thoracic organs (sec.)
+1700,Malignant neoplasm of breast,Malignant neoplasm of breast
+1710,Malignant neoplasm of cervix uteri,Malignant neoplasm of cervix uteri
+1720,Malignant neoplasm of corpus uteri,Malignant neoplasm of corpus uteri
+1730,"Malignant neoplasm of other parts of uterus, inc. chorionepithelioma","Malignant neoplasm of other parts of uterus, inc. chorionepithelioma"
+1740,"Malignant neoplasm of uterus, unspecified","Malignant neoplasm of uterus, unspecified"
+1750,"Malignant neoplasm of ovary, fallopian tube, and broad ligament","Malignant neoplasm of ovary, fallopian tube, and broad ligament"
+1760,Malignant neoplasm of other and unspec. female genital organs,Malignant neoplasm of other and unspec. female genital organs
+1770,Malignant neoplasm of prostate,Malignant neoplasm of prostate
+1780,Malignant neoplasm of testis,Malignant neoplasm of testis
+1790,Malignant neoplasm of other and unspec. male genital organs,Malignant neoplasm of other and unspec. male genital organs
+1800,Malignant neoplasm of kidney,Malignant neoplasm of kidney
+1810,Malignant neoplasm of bladder and other urinary organs,Malignant neoplasm of bladder and other urinary organs
+1900,Malignant melanoma of skin,Malignant melanoma of skin
+1910,Other malignant neoplasm of skin,Other malignant neoplasm of skin
+1920,Malignant neoplasm of eye,Malignant neoplasm of eye
+1930,Malignant neoplasm of brain and other parts of nervous system,Malignant neoplasm of brain and other parts of nervous system
+1940,Malignant neoplasm of thyroid gland,Malignant neoplasm of thyroid gland
+1950,Malignant neoplasm of other endocrine glands,Malignant neoplasm of other endocrine glands
+1960,Malignant neoplasm of bone (incl. jaw bone),Malignant neoplasm of bone (incl. jaw bone)
+1970,Malignant neoplasm of connective tissue,Malignant neoplasm of connective tissue
+1980,Secondary and unspec. malignant neoplasm of lymph nodes,Secondary and unspec. malignant neoplasm of lymph nodes
+1990,Malignant neoplasm of other and unspecified sites,Malignant neoplasm of other and unspecified sites
+2000,Lymphosarcoma and reticulosarcoma,Reticulum cell sarcoma
+2001,Lymphosarcoma and reticulosarcoma,Lymphosarcoma
+2002,Lymphosarcoma and reticulosarcoma,Other primary malignant neoplasm of lymphoid tissue
+2010,Hodgkin's disease,Hodgkin's disease
+2020,Other forms of lymphoma (reticulosis),Giant follicular lymphoma (Brill-Symmer's disease)
+2021,Other forms of lymphoma (reticulosis),Other
+2030,Multiple myeloma (plasmocytoma),Multiple myeloma (plasmocytoma)
+2040,Leukaemia and aleukaemia,Lymphatic leukaemia
+2041,Leukaemia and aleukaemia,Myeloid leukaemia
+2042,Leukaemia and aleukaemia,Monocytic leukaemia
+2043,Leukaemia and aleukaemia,"Acute leukaemia, unspec.type"
+2044,Leukaemia and aleukaemia,Other and unspecified leukaemia
+2050,Mycosis fungoides,Mycosis fungoides
+2100,Benign neoplasm of buccal cavity and pharynx,Benign neoplasm of buccal cavity and pharynx
+2110,Benign neoplasm of other parts of digestive system,Benign neoplasm of other parts of digestive system
+2120,Benign neoplasm of respiratory system,Benign neoplasm of respiratory system
+2130,Benign neoplasm of breast,Benign neoplasm of breast
+2140,Uterine fibromyoma,Uterine fibromyoma
+2150,Other benign neoplasm of uterus,Other benign neoplasm of uterus
+2160,Benign neoplasm of ovary,Benign neoplasm of ovary
+2170,Benign neoplasm of other female genital organs,Benign neoplasm of other female genital organs
+2180,Benign neoplasm of male genital organs,Benign neoplasm of male genital organs
+2190,Benign neoplasm of kidney and other urinary organs,Benign neoplasm of kidney and other urinary organs
+2200,Benign melanoma of skin,Benign melanoma of skin
+2210,Pilonidal cyst,Pilonidal cyst
+2220,Other benign neoplasm of skin,Other benign neoplasm of skin
+2230,Benign neoplasm of brain and other parts of nervous system,Benign neoplasm of brain and other parts of nervous system
+2240,Benign neoplasm of endocrine glands,Benign neoplasm of endocrine glands
+2250,Benign neoplasm of bone and cartilage,Benign neoplasm of bone and cartilage
+2260,Lipoma,Lipoma
+2270,Other benign neoplasm of muscular and connective tissue,Other benign neoplasm of muscular and connective tissue
+2280,Haemangioma and lymphangioma,Haemangioma and lymphangioma
+2290,Benign neoplasm of other and unspecified organs and tissues,Benign neoplasm of other and unspecified organs and tissues
+2300,Neoplasm of unspecified nature of digestive organs,Neoplasm of unspecified nature of digestive organs
+2310,Neoplasm of unspecified nature of respiratory organs,Neoplasm of unspecified nature of respiratory organs
+2320,Neoplasm of unspecified nature of breast,Neoplasm of unspecified nature of breast
+2330,Neoplasm of unspecified nature of uterus,Neoplasm of unspecified nature of uterus
+2340,Neoplasm of unspecified nature of ovary,Neoplasm of unspecified nature of ovary
+2350,Neoplasm of unspecified nature of other female genital organs,Neoplasm of unspecified nature of other female genital organs
+2360,Neoplasm of unspecified nature of other genito-urinary organs,Neoplasm of unspecified nature of other genito-urinary organs
+2370,Neoplasm of unspecified nature of brain and other parts of nervous system,Neoplasm of unspecified nature of brain and other parts of nervous system
+2380,Neoplasm of unspecified nature of skin and musculo-skeletal system,Neoplasm of unspecified nature of skin and musculo-skeletal system
+2390,Neoplasm of unspecified nature of other and unspecified organs,Neoplasm of unspecified nature of other and unspecified organs
+2400,Hay fever,Hay fever
+2410,Asthma,Asthma
+2420,Angioneurotic oedema,Angioneurotic oedema
+2430,Urticaria,Urticaria
+2440,Allergic eczema,Allergic eczema
+2450,Other allergic disorders,Other allergic disorders
+2500,Simple goitre,Simple goitre
+2510,Non-toxic nodular goitre,Non-toxic nodular goitre
+2520,Thyrotoxicosis with or without goitre,Toxic diffuse goitre
+2521,Thyrotoxicosis with or without goitre,Toxic nodular goitre
+2530,Myxoedema and cretinism,Myxoedema and cretinism
+2540,Other diseases of thyroid gland,Other diseases of thyroid gland
+2600,Diabetes mellitus,Diabetes mellitus
+2700,Disorders of pancreatic internal secretion other than diabetes mellitus,Disorders of pancreatic internal secretion other than diabetes mellitus
+2710,Diseases of parathyroid gland,Hyperparathyroidism
+2711,Diseases of parathyroid gland,Hypoparathyroidism
+2712,Diseases of parathyroid gland,Other and unspecified
+2720,Diseases of pituitary gland,Diseases of pituitary gland
+2730,Diseases of thymus gland,Diseases of thymus gland
+2740,Diseases of adrenal glands,Diseases of adrenal glands
+2750,Ovarian dysfunction,Ovarian dysfunction
+2760,Testicular dysfunction,Testicular dysfunction
+2770,Polyglandular dysfunction and other diseases of endocrine glands,Polyglandular dysfunction and other diseases of endocrine glands
+2800,Beriberi,Beriberi
+2810,Pellagra,Pellagra
+2820,Scurvy,Scurvy
+2830,Active rickets,Active rickets
+2840,Late effects of rickets,Late effects of rickets
+2850,Osteomalacia,Osteomalacia
+2860,Other avitaminoses and nutritional deficiency states,Steatorrhoea and sprue
+2861,Other avitaminoses and nutritional deficiency states,Vitamin A deficiency
+2862,Other avitaminoses and nutritional deficiency states,"Vitamin B deficiency, except beriberi and pellagra"
+2863,Other avitaminoses and nutritional deficiency states,"Vitamin C deficiency, except scurvy"
+2864,Other avitaminoses and nutritional deficiency states,"Vitamin D deficiency, except rickets and of osteomalacia"
+2865,Other avitaminoses and nutritional deficiency states,"Malnutrition, unqualified"
+2866,Other avitaminoses and nutritional deficiency states,Other and multiple deficiency states
+2870,"Obesity, not specified as of endocrine origin","Obesity, not specified as of endocrine origin"
+2880,Gout,Gout
+2890,Other metabolic diseases,Lipidosis (disturbance of lipid metabolism)
+2891,Other metabolic diseases,Amyloidosis
+2892,Other metabolic diseases,Other
+2900,Pernicious and other hyperchromic anaemias,Pernicious anaemia
+2901,Pernicious and other hyperchromic anaemias,Subacute combined degeneration of spinal cord
+2902,Pernicious and other hyperchromic anaemias,Other hyperchromic anaemias
+2910,Iron deficiency anaemias (hypochromic anaemias),Iron deficiency anaemias (hypochromic anaemias)
+2920,Other anaemias of specified type,Familial acholuric jaundice
+2921,Other anaemias of specified type,Acute haemolytic anaemia
+2922,Other anaemias of specified type,Other haemolytic anaemias
+2923,Other anaemias of specified type,Leuko-erythroblastic anaemia
+2924,Other anaemias of specified type,Aplastic anaemia
+2925,Other anaemias of specified type,Non-regenerative anaemia
+2926,Other anaemias of specified type,Sickle cell anaemia
+2927,Other anaemias of specified type,Other specified anaemias
+2930,Anaemia of unspecified type,Anaemia of unspecified type
+2940,Polycythaemia,Polycythaemia
+2950,Haemophilia,Haemophilia
+2960,Purpura and other haemorrhagic conditions,Purpura and other haemorrhagic conditions
+2970,Agranulocytosis,Agranulocytosis
+2980,Diseases of spleen,Hepatolienal fibrosis
+2981,Diseases of spleen,Other
+2990,Other diseases of blood and blood-forming organs,Other diseases of blood and blood-forming organs
+3000,Schizophrenic disorders (dementia praecox),Simple type
+3001,Schizophrenic disorders (dementia praecox),Hebephrenic type
+3002,Schizophrenic disorders (dementia praecox),Catatonic type
+3003,Schizophrenic disorders (dementia praecox),Paranoid type
+3004,Schizophrenic disorders (dementia praecox),Acute schizophrenic reaction
+3005,Schizophrenic disorders (dementia praecox),Latent schizophrenia
+3006,Schizophrenic disorders (dementia praecox),Schizo-affective psychosis
+3007,Schizophrenic disorders (dementia praecox),Other and unspecified
+3010,Manic-depressive reaction,Manic and circular
+3011,Manic-depressive reaction,Depressive
+3012,Manic-depressive reaction,Other
+3020,Involutional melancholia,Involutional melancholia
+3030,Paranoia and paranoid states,Paranoia and paranoid states
+3040,Senile psychosis,Senile psychosis
+3050,Presenile psychosis,Presenile psychosis
+3060,Psychosis with cerebral arteriosclerosis,Psychosis with cerebral arteriosclerosis
+3070,Alcoholic psychosis,Alcoholic psychosis
+3080,Psychosis of other demonstrable etiology,Resulting from brain tumour
+3081,Psychosis of other demonstrable etiology,Resulting from epilepsy and other convulsive disorders
+3082,Psychosis of other demonstrable etiology,Other
+3090,Other and unspecified psychoses,Other and unspecified psychoses
+3100,Anxiety reaction without mention of somatic symptoms,Anxiety reaction without mention of somatic symptoms
+3110,Hysterical reaction without mention of anxiety reaction,Hysterical reaction without mention of anxiety reaction
+3120,Phobic reaction,Phobic reaction
+3130,Obsessive-compulsive reaction,Obsessive-compulsive reaction
+3140,Neurotic-depressive reaction,Neurotic-depressive reaction
+3150,Psychoneurosis with somatic symptoms (somatization reaction) affecting circulatory system,Neurocirculatory asthenia
+3151,Psychoneurosis with somatic symptoms (somatization reaction) affecting circulatory system,Other heart manifestations specified as of psychogenic origin
+3152,Psychoneurosis with somatic symptoms (somatization reaction) affecting circulatory system,Other circulatory manifestations of psychogenic origin
+3160,Psychoneurosis with somatic symptoms (somatization reaction) affecting digestive system,Mucous colitis specified as of psychogenic origin
+3161,Psychoneurosis with somatic symptoms (somatization reaction) affecting digestive system,Irritability of colon specified as of psychogenic origin
+3162,Psychoneurosis with somatic symptoms (somatization reaction) affecting digestive system,Gastric neuroses
+3163,Psychoneurosis with somatic symptoms (somatization reaction) affecting digestive system,Other digestive manifestations specified as of psychogenic origin
+3170,Psychoneurosis with somatic symptoms (somatization reactions) affecting other systems,Psychogenic reactions affecting respiratory system
+3171,Psychoneurosis with somatic symptoms (somatization reactions) affecting other systems,Psychogenic reactions affecting genito-urinary system
+3172,Psychoneurosis with somatic symptoms (somatization reactions) affecting other systems,Pruritus of psychogenic origin
+3173,Psychoneurosis with somatic symptoms (somatization reactions) affecting other systems,Other cutaneous neuroses
+3174,Psychoneurosis with somatic symptoms (somatization reactions) affecting other systems,Psychogenic reactions affecting musculoskeletal system
+3175,Psychoneurosis with somatic symptoms (somatization reactions) affecting other systems,Psychogenic reactions affecting other systems
+3180,"Psychoneurotic disorders, other, mixed, and unspecified types",Hypochrondriacal reaction
+3181,"Psychoneurotic disorders, other, mixed, and unspecified types",Depersonalisation
+3182,"Psychoneurotic disorders, other, mixed, and unspecified types",Occupational neurosis
+3183,"Psychoneurotic disorders, other, mixed, and unspecified types",Asthenic reaction
+3184,"Psychoneurotic disorders, other, mixed, and unspecified types",Mixed
+3185,"Psychoneurotic disorders, other, mixed, and unspecified types",Of other unspecified types
+3200,Pathological personality,Schizoid personality
+3201,Pathological personality,Paranoid personality
+3202,Pathological personality,Cyclothymic personality
+3203,Pathological personality,Inadequate personality
+3204,Pathological personality,Antisocial personality
+3205,Pathological personality,Asocial personality
+3206,Pathological personality,Sexual deviation
+3207,Pathological personality,Other and unspecified
+3210,Immature personality,Emotional instability
+3211,Immature personality,Passive dependency
+3212,Immature personality,Aggressiveness
+3213,Immature personality,Enuresis characterizing immature personality
+3214,Immature personality,Other symptomatic habits except speech impediments
+3215,Immature personality,Other and unspecified
+3220,Alcoholism,Acute
+3221,Alcoholism,Chronic
+3222,Alcoholism,Unspecified
+3230,Other drug addiction,Other drug addiction
+3240,Primary childhood behaviour disorders,Primary childhood behaviour disorders
+3250,Mental deficiency,Idiocy
+3251,Mental deficiency,Imbecility
+3252,Mental deficiency,Moron
+3253,Mental deficiency,Borderline intelligence
+3254,Mental deficiency,Mongolism
+3255,Mental deficiency,Other and unspecified types
+3260,"Other and unspecified character, behaviour, and intelligence disorders",Specifc learning defects
+3261,"Other and unspecified character, behaviour, and intelligence disorders",Stammering and stuttering of nonorganic origin
+3262,"Other and unspecified character, behaviour, and intelligence disorders",Other speech impediments of non-organic origin
+3263,"Other and unspecified character, behaviour, and intelligence disorders",Acute situational maladjustment
+3264,"Other and unspecified character, behaviour, and intelligence disorders",Other and unspecified
+3300,Subarachnoid haemorrhage,Subarachnoid haemorrhage
+3310,Cerebral haemorrhage,Cerebral haemorrhage
+3320,Cerebral embolism and thrombosis,Cerebral embolism and thrombosis
+3330,Spasm of cerebral arteries,Spasm of cerebral arteries
+3340,Other and ill-defined vascular lesions affecting central nervous system,Other and ill-defined vascular lesions affecting central nervous system
+3400,"Meningitis, except meningococcal and tuberculous",H.influenzae
+3401,"Meningitis, except meningococcal and tuberculous",Pneumococcus
+3402,"Meningitis, except meningococcal and tuberculous",Due to other specified organism
+3403,"Meningitis, except meningococcal and tuberculous",Unspecified cause
+3410,Phlebitis and thrombophlebitis of intracranial venous sinuses,Phlebitis and thrombophlebitis of intracranial venous sinuses
+3420,Intracranial and intraspinal abscess,Intracranial and intraspinal abscess
+3430,"Encephalitis, myelitis, and encephalomyelitis (except acute infectious)","Encephalitis, myelitis, and encephalomyelitis (except acute infectious)"
+3440,Late effects of intracranial abscess or pyogenic infection,Late effects of intracranial abscess or pyogenic infection
+3450,Multiple sclerosis,Multiple sclerosis
+3500,Paralysis agitans,Paralysis agitans
+3510,Cerebral spastic infantile paralysis,Cerebral spastic infantile paralysis
+3520,Other cerebral paralysis,Other cerebral paralysis
+3530,Epilepsy,Petit mal
+3531,Epilepsy,Grand mal
+3532,Epilepsy,Status epilepticus
+3533,Epilepsy,Other and unspecified
+3540,Migraine,Migraine
+3550,Other diseases of brain,Other diseases of brain
+3560,Motor neurone disease and muscular atrophy,Progressive muscular atrophy
+3561,Motor neurone disease and muscular atrophy,Amyotrophic lateral sclerosis
+3562,Motor neurone disease and muscular atrophy,Spinal type of muscular atrophy
+3563,Motor neurone disease and muscular atrophy,Other and unspecified manifestations
+3570,Other diseases of spinal cord,Other diseases of spinal cord
+3600,Facial paralysis,Facial paralysis
+3610,Trigeminal neuralgia,Trigeminal neuralgia
+3620,Brachial neuritis,Brachial neuritis
+3630,Sciatica,Sciatica
+3640,Polyneuritis and polyradiculitis,Polyneuritis and polyradiculitis
+3650,Erythroedema polyneuritica,Erythroedema polyneuritica
+3660,Other and unspecified forms of neuralgia and neuritis,Other and unspecified forms of neuralgia and neuritis
+3670,Other diseases of cranial nerves,Other diseases of cranial nerves
+3680,Other diseases of peripheral nerves except autonomic,Other diseases of peripheral nerves except autonomic
+3690,Diseases of peripheral autonomic nervous system,Diseases of peripheral autonomic nervous system
+3700,Conjunctivitis and ophthalmia,Conjunctivitis and ophthalmia
+3710,Blepharitis,Blepharitis
+3720,Hordeolum (stye),Hordeolum (stye)
+3730,Iritis,Iritis
+3740,Keratitis,Keratitis
+3750,Choroiditis,Choroiditis
+3760,Other inflammation of uveal tract,Other inflammation of uveal tract
+3770,Inflammation of optic nerve and retina,Inflammation of optic nerve and retina
+3780,Inflammation of lachrymal glands and ducts,Inflammation of lachrymal glands and ducts
+3790,Other inflammatory diseases of eye,Other inflammatory diseases of eye
+3800,Refractive errors,Refractive errors
+3810,Corneal ulcer,Corneal ulcer
+3820,Corneal opacity,Corneal opacity
+3830,Pterygium,Pterygium
+3840,Strabismus,Strabismus
+3850,Cataract,Cataract
+3860,Detachment of retina,Detachment of retina
+3870,Glaucoma,Glaucoma
+3880,Other diseases of eye,Other diseases of eye
+3890,Blindness,"Blindness, both eyes, specifically defined"
+3891,Blindness,"Blindness, both eyes, not specifically defined"
+3892,Blindness,"Blindness, one eye, specifically defined"
+3893,Blindness,"Blindness, one eye, not specifically defined"
+3900,Otitis externa,Otitis externa
+3910,Otitis media without mention of mastoiditis,Acute
+3911,Otitis media without mention of mastoiditis,Chronic
+3912,Otitis media without mention of mastoiditis,Unspecified
+3920,Otitis media with mastoiditis,Acute
+3921,Otitis media with mastoiditis,Chronic
+3922,Otitis media with mastoiditis,Unspecified
+3930,Mastoiditis without mention of otitis media,Acute
+3931,Mastoiditis without mention of otitis media,Chronic
+3932,Mastoiditis without mention of otitis media,Unspecified
+3940,Other inflammatory diseases of ear,Other inflammatory diseases of ear
+3950,Meniere's disease,Meniere's disease
+3960,Other diseases of ear and mastoid process,Other diseases of ear and mastoid process
+3970,Deaf mutism,Deaf mutism
+3980,Other deafness,"Deafness, both ears"
+3981,Other deafness,"Deafness, one ear, and partial deafness in other"
+3982,Other deafness,"Deafness, one ear"
+3983,Other deafness,"Impairment of hearing, one or both ears"
+4000,Rheumatic fever without mention of heart involvement,Rheumatic fever without mention of heart involvement
+4010,Rheumatic fever with heart involvement,Active rheumatic pericarditis
+4011,Rheumatic fever with heart involvement,Active rheumatic endocarditis
+4012,Rheumatic fever with heart involvement,Active rheumatic myocarditis
+4013,Rheumatic fever with heart involvement,Active rheumatic fever with other and multiple types of heart involvement
+4020,Chorea,Without mention of heart involvement
+4021,Chorea,With heart involvement
+4100,Diseases of mitral valve,Diseases of mitral valve
+4110,Diseases of aortic valve specified as rheumatic,Diseases of aortic valve specified as rheumatic
+4120,Diseases of tricuspid valve,Diseases of tricuspid valve
+4130,Diseases of pulmonary valve specified as rheumatic,Diseases of pulmonary valve specified as rheumatic
+4140,Other endocarditis specified as rheumatic,Other endocarditis specified as rheumatic
+4150,Other myocarditis specified as rheumatic,Other myocarditis specified as rheumatic
+4160,Other heart disease specified as rheumatic,Other heart disease specified as rheumatic
+4200,"Arteriosclerotic heart disease, including coronary disease",Arteriosclerotic heart disease so described
+4201,"Arteriosclerotic heart disease, including coronary disease",Heart disease specified as involving coronary arteries
+4202,"Arteriosclerotic heart disease, including coronary disease",Angina pectoris without mention of coronary disease
+4210,Chronic endocarditis not specified as rheumatic,"Of mitral valve, specified as non-rheumatic"
+4211,Chronic endocarditis not specified as rheumatic,"Of aortic valve, not specified as rheumatic"
+4212,Chronic endocarditis not specified as rheumatic,"Of  tricuspid valve, specified as non-rheumatic"
+4213,Chronic endocarditis not specified as rheumatic,"Of pulmonary valve, not specified as rheumatic"
+4214,Chronic endocarditis not specified as rheumatic,"Other ill-defined, not specified as rheumatic"
+4220,Other myocardial degeneration,Fatty degeneration
+4221,Other myocardial degeneration,With arteriosclerosis
+4222,Other myocardial degeneration,Other
+4300,Acute and subacute endocarditis,Acute and subacute bacterial endocarditis
+4301,Acute and subacute endocarditis,Other acute endocarditis
+4310,Acute myocarditis not specified as rheumatic,Acute myocarditis not specified as rheumatic
+4320,Acute pericarditis specified as non-rheumatic,Acute pericarditis specified as non-rheumatic
+4330,Functional disease of heart,Heart block
+4331,Functional disease of heart,Other disorders of heart rhythm
+4332,Functional disease of heart,Other functional diseases of heart
+4340,Other and unspecified diseases of heart,Kyphoscoliotic heart disease
+4341,Other and unspecified diseases of heart,Congestive heart failure
+4342,Other and unspecified diseases of heart,Left ventricular failure
+4343,Other and unspecified diseases of heart,Other and unspecified diseases of heart
+4400,Essential benign hypertension with heart disease,Essential benign hypertension with heart disease
+4410,Essential malignant hypertension with heart disease,Essential malignant hypertension with heart disease
+4420,Hypertensive heart disease with arteriolar nephrosclerosis,Hypertensive heart disease with arteriolar nephrosclerosis
+4430,Other and unspecified hypertensive heart disease,Other and unspecified hypertensive heart disease
+4440,Essential benign hypertension without mention of heart,Essential benign hypertension without mention of heart
+4450,Essential malignant hypertension without mention of heart,Essential malignant hypertension without mention of heart
+4460,Hypertension with arteriolar nephrosclerosis without mention of heart,Hypertension with arteriolar nephrosclerosis without mention of heart
+4470,Other hypertensive disease without mention of heart,Other hypertensive disease without mention of heart
+4500,General arteriosclerosis,Without mention of gangrene
+4501,General arteriosclerosis,With gangrene
+4510,"Aortic aneurysm, specified as nonsyphilitic, and dissecting aneurysm","Aortic aneurysm, specified as nonsyphilitic, and dissecting aneurysm"
+4520,"Other aneurysm, except of heart and aorta","Other aneurysm, except of heart and aorta"
+4530,Peripheral vascular disease,Raynaud's disease
+4531,Peripheral vascular disease,Thrombo-angiitis obliterans
+4532,Peripheral vascular disease,Chilblains
+4533,Peripheral vascular disease,Other
+4540,Arterial embolism and thrombosis,Arterial embolism and thrombosis
+4550,Gangrene of unspecified cause,Gangrene of unspecified cause
+4560,Other diseases of arteries,Other diseases of arteries
+4600,Varicose veins of lower extremities,Varicose veins of lower extremities
+4610,Haemorrhoids,Haemorrhoids
+4620,Varicose veins of other specified sites,Varicocele
+4621,Varicose veins of other specified sites,Varicose veins of oesophagus
+4622,Varicose veins of other specified sites,Other
+4630,Phlebitis and thrombophlebitis of lower extremities,Phlebitis and thrombophlebitis of lower extremities
+4640,Phlebitis and thrombophlebitis of other sites,Phlebitis and thrombophlebitis of other sites
+4650,Pulmonary embolism and infarction,Pulmonary embolism and infarction
+4660,Other venous embolism and thrombosis,Other venous embolism and thrombosis
+4670,Other diseases of circulatory system,Hypotension
+4671,Other diseases of circulatory system,Diseases of capillaries
+4672,Other diseases of circulatory system,Other and unspecified circulatory diseases
+4680,Certain diseases of lymph nodes and lymph channels,Chronic lymphadenitis
+4681,Certain diseases of lymph nodes and lymph channels,Non-specific mesenteric lymphadenitis
+4682,Certain diseases of lymph nodes and lymph channels,"Lymphadenitis, unqualified"
+4683,Certain diseases of lymph nodes and lymph channels,Non-infective diseases of lymphatic channels
+4700,Acute nasopharyngitis (common cold),Acute nasopharyngitis (common cold)
+4710,Acute sinusitis,Acute sinusitis
+4720,Acute pharyngitis,"Sore throat, unqualified"
+4721,Acute pharyngitis,Other
+4730,Acute tonsillitis,Acute tonsillitis
+4740,Acute laryngitis and tracheitis,Acute laryngitis and tracheitis
+4750,Acute upper respiratory infection of multiple or unspecified sites,Acute upper respiratory infection of multiple or unspecified sites
+4800,Influenza with pneumonia,Influenza with pneumonia
+4810,"Influenza with other respiratory manifestations, and influenza unqualified",Without mention of respiratory complications
+4820,"Influenza with digestive manifestations, but without respiratory symptoms","Influenza with digestive manifestations, but without respiratory symptoms"
+4830,"Influenza with nervous manifestations, but without digestive or respiratory symptoms","Influenza with nervous manifestations, but without digestive or respiratory symptoms"
+4900,Lobar pneumonia,Lobar pneumonia
+4910,Bronchopneumonia,Bronchopneumonia
+4920,Primary atypical pneumonia,Primary atypical pneumonia
+4930,"Pneumonia, other and unspecified","Pneumonia, other and unspecified"
+5000,Acute bronchitis,Acute bronchitis
+5010,"Bronchitis, unqualified","Bronchitis, unqualified"
+5020,Chronic bronchitis,Bronchitis with emphysema
+5021,Chronic bronchitis,Other
+5100,Hypertrophy of tonsils and adenoids,Without mention of tonsillectomy or adenoidectomy
+5101,Hypertrophy of tonsils and adenoids,With tonsillectomy or adenoidectomy
+5110,Peritonsillar abscess (quinsy),Peritonsillar abscess (quinsy)
+5120,Chronic pharyngitis and nasopharyngitis,Chronic pharyngitis
+5121,Chronic pharyngitis and nasopharyngitis,Chronic nasopharyngitis
+5130,Chronic sinusitis,Chronic sinusitis
+5140,Deflected nasal septum,Deflected nasal septum
+5150,Nasal polyp,Nasal polyp
+5160,Chronic laryngitis,Chronic laryngitis
+5170,Other diseases of upper respiratory tract,Other diseases of upper respiratory tract
+5180,Empyema,Empyema
+5190,Pleurisy,Without mention of effusion or tuberculosis
+5191,Pleurisy,With effusion with mention of a bacterial cause other than tuberculosis
+5192,Pleurisy,"Other specified forms of effusion, except tuberculosis"
+5200,Spontaneous pneumothorax,Spontaneous pneumothorax
+5210,Abscess of lung,Abscess of lung
+5220,Pulmonary congestion and hypostasis,Pulmonary congestion and hypostasis
+5230,Pneumoconiosis due to silica and silicates (occupational),Silicosis
+5231,Pneumoconiosis due to silica and silicates (occupational),Anthracosilicosis
+5232,Pneumoconiosis due to silica and silicates (occupational),Asbestosis
+5233,Pneumoconiosis due to silica and silicates (occupational),"Other, including pneumoconiosis unspecified"
+5240,Other specified pneumoconiosis and pulmonary fibrosis of occupational origin,Other specified pneumoconiosis and pulmonary fibrosis of occupational origin
+5250,Other chronic interstitial pneumonia,Other chronic interstitial pneumonia
+5260,Bronchiectasis,Bronchiectasis
+5270,Other diseases of lung and pleural cavity,Pulmonary collapse (1 year and over)
+5271,Other diseases of lung and pleural cavity,Emphysema without mention of bronchitis
+5272,Other diseases of lung and pleural cavity,Other
+5300,Dental caries,"Dental caries, unqualified"
+5301,Dental caries,With pulp exposure
+5302,Dental caries,With periapical abscess
+5303,Dental caries,Other
+5310,Abscesses of supporting structures of teeth,Periocoronal
+5311,Abscesses of supporting structures of teeth,Periodontal (parietal)
+5312,Abscesses of supporting structures of teeth,"Other, and unspecifed"
+5320,Other inflammatory diseases of supporting structures of teeth,"Gingivitis, except ulcerative"
+5321,Other inflammatory diseases of supporting structures of teeth,"Peridontitis (pyorrhoea, inflammatory)"
+5322,Other inflammatory diseases of supporting structures of teeth,"Peridontitis (pyorrhoea, degenerative)"
+5323,Other inflammatory diseases of supporting structures of teeth,Other
+5330,"Disorders of occlusion, eruption, and tooth development",Malocclusion
+5331,"Disorders of occlusion, eruption, and tooth development",Disorders of first dentition
+5332,"Disorders of occlusion, eruption, and tooth development",Impacted teeth
+5333,"Disorders of occlusion, eruption, and tooth development",Unerupted teeth
+5334,"Disorders of occlusion, eruption, and tooth development",Partially erupted teeth
+5335,"Disorders of occlusion, eruption, and tooth development",Congenital anomalies of teeth
+5336,"Disorders of occlusion, eruption, and tooth development",Chronic dental fluorosis
+5337,"Disorders of occlusion, eruption, and tooth development",Other
+5340,Toothache from unspecified cause,Toothache from unspecified cause
+5350,Other diseases of teeth and supporting structure,Other diseases of teeth and supporting structure
+5360,Stomatitis,Stomatitis
+5370,Diseases of salivary glands,Diseases of salivary glands
+5380,Other diseases of buccal cavity,Other diseases of buccal cavity
+5390,Diseases of oesophagus,Functional disorders of oesophagus
+5391,Diseases of oesophagus,Other
+5400,Ulcer of stomach,Without mention of perforation
+5401,Ulcer of stomach,With perforation
+5410,Ulcer of duodenum,Without mention of perforation
+5411,Ulcer of duodenum,With perforation
+5420,Gastrojejunal ulcer,Without mention of perforation
+5421,Gastrojejunal ulcer,With perforation
+5430,Gastritis and duodenitis,Gastritis and duodenitis
+5440,Disorders of function of stomach,Disorders of gastric secretion
+5441,Disorders of function of stomach,Disorders of gastric motility
+5442,Disorders of function of stomach,Other
+5450,Other diseases of stomach and duodenum,Other diseases of stomach and duodenum
+5500,Acute appendicitis,Without mention of peritonitis
+5501,Acute appendicitis,With peritonitis
+5510,"Appendicitis, unqualified","Appendicitis, unqualified"
+5520,Other appendicitis,Other appendicitis
+5530,Other diseases of appendix,Other diseases of appendix
+5600,Hernia of abdominal cavity without mention of obstruction,Inguinal
+5601,Hernia of abdominal cavity without mention of obstruction,Femoral
+5602,Hernia of abdominal cavity without mention of obstruction,Umbilical
+5603,Hernia of abdominal cavity without mention of obstruction,Ventral (incisional)
+5604,Hernia of abdominal cavity without mention of obstruction,Other specified site
+5605,Hernia of abdominal cavity without mention of obstruction,Unspecified site
+5610,Hernia of abdominal cavity with obstruction,Inguinal
+5611,Hernia of abdominal cavity with obstruction,Femoral
+5612,Hernia of abdominal cavity with obstruction,Umbilical
+5613,Hernia of abdominal cavity with obstruction,Ventral (incisional)
+5614,Hernia of abdominal cavity with obstruction,Other specified site
+5615,Hernia of abdominal cavity with obstruction,Unspecified site
+5700,Intestinal obstruction without mention of hernia,Intussusception
+5701,Intestinal obstruction without mention of hernia,Paralytic ileus
+5702,Intestinal obstruction without mention of hernia,Mesenteric infarction
+5703,Intestinal obstruction without mention of hernia,Volvulus
+5704,Intestinal obstruction without mention of hernia,Impaction of intestine
+5705,Intestinal obstruction without mention of hernia,Other
+5710,"Gastro-enteritis and colitis, except ulcerative, age 4 weeks and over",Ages between 4 weeks and 2 years
+5711,"Gastro-enteritis and colitis, except ulcerative, age 4 weeks and over",Ages 2 years and over
+5720,Chronic enteritis and ulcerative colitis,Regional enteritis
+5721,Chronic enteritis and ulcerative colitis,Diverticulitis
+5722,Chronic enteritis and ulcerative colitis,Ulcerative colitis
+5723,Chronic enteritis and ulcerative colitis,Other
+5730,Functional disorders of intestines,Constipation
+5731,Functional disorders of intestines,Mucous colitis
+5732,Functional disorders of intestines,Irritability of colon
+5733,Functional disorders of intestines,Other
+5740,Anal fissure and fistula,Anal fissure and fistula
+5750,Abscess of anal and rectal regions,Abscess of anal and rectal regions
+5760,Peritonitis,Peritonitis
+5770,Peritoneal adhesion,Peritoneal adhesion
+5780,Other diseases of intestines and peritoneum,Other diseases of intestines and peritoneum
+5800,Acute and subacute yellow atrophy of liver,Acute and subacute yellow atrophy of liver
+5810,Cirrhosis of liver,Without mention of alcoholism
+5811,Cirrhosis of liver,With alcoholism
+5820,Suppurative hepatitis and liver abscess,Suppurative hepatitis and liver abscess
+5830,Other diseases of liver,Other diseases of liver
+5840,Cholelithiasis,Cholelithiasis
+5850,Cholecystitis without mention of calculi,Cholecystitis without mention of calculi
+5860,Other diseases of gallbladder and biliary ducts,Other diseases of gallbladder and biliary ducts
+5870,Diseases of pancreas,Acute pancreatitis
+5871,Diseases of pancreas,Chronic pancreatitis
+5872,Diseases of pancreas,Other diseases of pancreas
+5900,Acute nephritis,Acute nephritis
+5910,"Nephritis with oedema, including nephrosis","Nephritis with oedema, including nephrosis"
+5920,Chronic nephritis,Chronic nephritis
+5930,Nephritis not specified as acute or chronic,Nephritis not specified as acute or chronic
+5940,Other renal sclerosis,Other renal sclerosis
+6000,Infections of kidney,"Pyelitis, pyelocystitis, and pyelonephritis"
+6001,Infections of kidney,Abscess of kidney and perirenal tissue
+6002,Infections of kidney,Other
+6010,Hydronephrosis,Hydronephrosis
+6020,Calculi of kidney and ureter,Calculi of kidney and ureter
+6030,Other diseases of kidney and ureter,Other diseases of kidney and ureter
+6040,Calculi of other parts of urinary system,Calculi of other parts of urinary system
+6050,Cystitis,Cystitis
+6060,Other diseases of bladder,Other diseases of bladder
+6070,Urethritis (nonvenereal),Urethritis (nonvenereal)
+6080,Stricture of urethra,Stricture of urethra
+6090,Other diseases of urethra,Other diseases of urethra
+6100,Hyperplasia of prostate,Hyperplasia of prostate
+6110,Prostatitis,Prostatitis
+6120,Other diseases of prostate,Other diseases of prostate
+6130,Hydrocele,Hydrocele
+6140,Orchitis and epididymitis,Orchitis and epididymitis
+6150,Redundant prepuce and phimosis,Redundant prepuce and phimosis
+6160,"Sterility, male","Sterility, male"
+6170,Other diseases of male genital organs,Other diseases of male genital organs
+6200,Chronic cystic disease of breast,Chronic cystic disease of breast
+6210,Other diseases of breast,Acute mastitis not associated with lactation
+6211,Other diseases of breast,Hypertrophy of breast
+6212,Other diseases of breast,Other
+6220,Acute salpingitis and oophoritis,Acute salpingitis and oophoritis
+6230,Chronic salpingitis and oophoritis,Chronic salpingitis and oophoritis
+6240,"Salpingitis and oophoritis, unqualified","Salpingitis and oophoritis, unqualified"
+6250,Other diseases of ovary and Fallopian tube,Other diseases of ovary and Fallopian tube
+6260,Diseases of parametrium and pelvic peritoneum (female),Diseases of parametrium and pelvic peritoneum (female)
+6300,"Infective disease of uterus, vagina, and vulva",Cervicitis
+6301,"Infective disease of uterus, vagina, and vulva",Other infective diseases of uterus
+6302,"Infective disease of uterus, vagina, and vulva",Vaginitis and vulvitis
+6310,Utero vaginal prolapse,Utero vaginal prolapse
+6320,Malposition of uterus,Malposition of uterus
+6330,Other diseases of uterus,Other diseases of uterus
+6340,Disorders of menstruation,Disorders of menstruation
+6350,Menopausal symptoms,Menopausal symptoms
+6360,"Sterility, female","Sterility, female"
+6370,Other diseases of female genital organs,Leukorrhoea
+6371,Other diseases of female genital organs,Other
+6400,Pyelitis and pyelonephritis of pregnancy,Pyelitis and pyelonephritis of pregnancy
+6410,Other infections of genito-urinary tract during pregnancy,Other infections of genito-urinary tract during pregnancy
+6420,Toxaemias of pregnancy,Hypertensive disease arising during pregnancy
+6421,Toxaemias of pregnancy,Renal disease arising during pregnancy
+6422,Toxaemias of pregnancy,Pre-eclampsia of pregnancy
+6423,Toxaemias of pregnancy,Eclampsia of pregnancy
+6424,Toxaemias of pregnancy,Hyperemesis gravidarum
+6425,Toxaemias of pregnancy,Other
+6430,Placenta praevia,Placenta praevia
+6440,Other haemorrhage of pregnancy,Other haemorrhage of pregnancy
+6450,Ectopic pregnancy,Without mention of sepsis
+6451,Ectopic pregnancy,With sepsis
+6460,Anaemia of pregnancy,Anaemia of pregnancy
+6470,Pregnancy with malposition of foetus in uterus,Pregnancy with malposition of foetus in uterus
+6480,Other complications arising from pregnancy,Threatened abortion
+6481,Other complications arising from pregnancy,Hydatidiform mole
+6482,Other complications arising from pregnancy,Placental abnormalities not classified elsewhere
+6483,Other complications arising from pregnancy,Other
+6490,Pregnancy associated with other conditions,Pregnancy associated with other conditions
+6500,Abortion without mention of sepsis or toxaemia,Spontaneous or unspecified
+6501,Abortion without mention of sepsis or toxaemia,Induced for medical or legal indications
+6502,Abortion without mention of sepsis or toxaemia,Induced for other reasons
+6503,Abortion without mention of sepsis or toxaemia,Other
+6510,Abortion with sepsis,Spontaneous or unspecified
+6511,Abortion with sepsis,Induced for medical or legal indications
+6512,Abortion with sepsis,Induced for other reasons
+6513,Abortion with sepsis,Other
+6520,"Abortion with toxaemia, without mention of sepsis",Spontaneous or unspecified
+6521,"Abortion with toxaemia, without mention of sepsis",Induced for medical or legal indications
+6522,"Abortion with toxaemia, without mention of sepsis",Induced for other reasons
+6523,"Abortion with toxaemia, without mention of sepsis",Other
+6600,Delivery without complication,Spontaneous
+6601,Delivery without complication,Manipulation without instruments
+6602,Delivery without complication,"Forceps (only), low and unspecified"
+6603,Delivery without complication,"Forceps (only), mid and high"
+6604,Delivery without complication,"Other surgical or instrumental, except Caesarian section"
+6605,Delivery without complication,Caesarian section
+6606,Delivery without complication,Unspecified type of delivery
+6607,Delivery without complication,Delivered before admission
+6700,Delivery complicated by placenta praevia or antepartum haemorrhage,Spontaneous
+6701,Delivery complicated by placenta praevia or antepartum haemorrhage,Manipulation without instruments
+6702,Delivery complicated by placenta praevia or antepartum haemorrhage,"Forceps (only), low and unspecified"
+6703,Delivery complicated by placenta praevia or antepartum haemorrhage,"Forceps (only), mid and high"
+6704,Delivery complicated by placenta praevia or antepartum haemorrhage,"Other surgical or instrumental, except Caesarian section"
+6705,Delivery complicated by placenta praevia or antepartum haemorrhage,Caesarian section
+6706,Delivery complicated by placenta praevia or antepartum haemorrhage,Unspecified type of delivery
+6707,Delivery complicated by placenta praevia or antepartum haemorrhage,Delivered before admission
+6710,Delivery complicated by retained placenta,Spontaneous
+6711,Delivery complicated by retained placenta,Manipulation without instruments
+6712,Delivery complicated by retained placenta,"Forceps (only), low and unspecified"
+6713,Delivery complicated by retained placenta,"Forceps (only), mid and high"
+6714,Delivery complicated by retained placenta,"Other surgical or instrumental, except Caesarian section"
+6715,Delivery complicated by retained placenta,Caesarian section
+6716,Delivery complicated by retained placenta,Unspecified type of delivery
+6717,Delivery complicated by retained placenta,Delivered before admission
+6720,Delivery complicated by other postpartum haemorrhage,Spontaneous
+6721,Delivery complicated by other postpartum haemorrhage,Manipulation without instruments
+6722,Delivery complicated by other postpartum haemorrhage,"Forceps (only), low and unspecified"
+6723,Delivery complicated by other postpartum haemorrhage,"Forceps (only), mid and high"
+6724,Delivery complicated by other postpartum haemorrhage,"Other surgical or instrumental, except Caesarian section"
+6725,Delivery complicated by other postpartum haemorrhage,Caesarian section
+6726,Delivery complicated by other postpartum haemorrhage,Unspecified type of delivery
+6727,Delivery complicated by other postpartum haemorrhage,Delivered before admission
+6730,Delivery complicated by abnormality of bony pelvis,Spontaneous
+6731,Delivery complicated by abnormality of bony pelvis,Manipulation without instruments
+6732,Delivery complicated by abnormality of bony pelvis,"Forceps (only), low and unspecified"
+6733,Delivery complicated by abnormality of bony pelvis,"Forceps (only), mid and high"
+6734,Delivery complicated by abnormality of bony pelvis,"Other surgical or instrumental, except Caesarian section"
+6735,Delivery complicated by abnormality of bony pelvis,Caesarian section
+6736,Delivery complicated by abnormality of bony pelvis,Unspecified type of delivery
+6737,Delivery complicated by abnormality of bony pelvis,Delivered before admission
+6740,Delivery complicated by disproportion or malposition of foetus,Spontaneous
+6741,Delivery complicated by disproportion or malposition of foetus,Manipulation without instruments
+6742,Delivery complicated by disproportion or malposition of foetus,"Forceps (only), low and unspecified"
+6743,Delivery complicated by disproportion or malposition of foetus,"Forceps (only), mid and high"
+6744,Delivery complicated by disproportion or malposition of foetus,"Other surgical or instrumental, except Caesarian section"
+6745,Delivery complicated by disproportion or malposition of foetus,Caesarian section
+6746,Delivery complicated by disproportion or malposition of foetus,Unspecified type of delivery
+6747,Delivery complicated by disproportion or malposition of foetus,Delivered before admission
+6750,Delivery complicated by prolonged labour of other origin,Spontaneous
+6751,Delivery complicated by prolonged labour of other origin,Manipulation without instruments
+6752,Delivery complicated by prolonged labour of other origin,"Forceps (only), low and unspecified"
+6753,Delivery complicated by prolonged labour of other origin,"Forceps (only), mid and high"
+6754,Delivery complicated by prolonged labour of other origin,"Other surgical or instrumental, except Caesarian section"
+6755,Delivery complicated by prolonged labour of other origin,Caesarian section
+6756,Delivery complicated by prolonged labour of other origin,Unspecified type of delivery
+6757,Delivery complicated by prolonged labour of other origin,Delivered before admission
+6760,"Delivery with laceration of perineum, without mention of other laceration",Spontaneous
+6761,"Delivery with laceration of perineum, without mention of other laceration",Manipulation without instruments
+6762,"Delivery with laceration of perineum, without mention of other laceration","Forceps (only), low and unspecified"
+6763,"Delivery with laceration of perineum, without mention of other laceration","Forceps (only), mid and high"
+6764,"Delivery with laceration of perineum, without mention of other laceration","Other surgical or instrumental, except Caesarian section"
+6765,"Delivery with laceration of perineum, without mention of other laceration",Caesarian section
+6766,"Delivery with laceration of perineum, without mention of other laceration",Unspecified type of delivery
+6767,"Delivery with laceration of perineum, without mention of other laceration",Delivered before admission
+6770,Delivery with other trauma,Spontaneous
+6771,Delivery with other trauma,Manipulation without instruments
+6772,Delivery with other trauma,"Forceps (only), low and unspecified"
+6773,Delivery with other trauma,"Forceps (only), mid and high"
+6774,Delivery with other trauma,"Other surgical or instrumental, except Caesarian section"
+6775,Delivery with other trauma,Caesarian section
+6776,Delivery with other trauma,Unspecified type of delivery
+6777,Delivery with other trauma,Delivered before admission
+6780,Delivery with other complications of childbirth,Spontaneous
+6781,Delivery with other complications of childbirth,Manipulation without instruments
+6782,Delivery with other complications of childbirth,"Forceps (only), low and unspecified"
+6783,Delivery with other complications of childbirth,"Forceps (only), mid and high"
+6784,Delivery with other complications of childbirth,"Other surgical or instrumental, except Caesarian section"
+6785,Delivery with other complications of childbirth,Caesarian section
+6786,Delivery with other complications of childbirth,Unspecified type of delivery
+6787,Delivery with other complications of childbirth,Delivered before admission
+6800,Puerperal urinary infection without other sepsis,Puerperal urinary infection without other sepsis
+6810,Sepsis of childbirth and the puerperium,Sepsis of childbirth and the puerperium
+6820,Puerperal phlebitis and thrombosis,Puerperal phlebitis and thrombosis
+6830,Pyrexia of unknown origin during the puerperium,Pyrexia of unknown origin during the puerperium
+6840,Puerperal pulmonary embolism,Puerperal pulmonary embolism
+6850,Puerperal eclampsia,Puerperal eclampsia
+6860,Other forms of puerperal toxaemia,Other forms of puerperal toxaemia
+6870,Cerebral haemorrhage in the puerperum,Cerebral haemorrhage in the puerperum
+6880,Other and unspecified complications of the puerperium,Anaemia of puerperium
+6881,Other and unspecified complications of the puerperium,Puerperal psychosis
+6882,Other and unspecified complications of the puerperium,Sudden death from unknown cause in the puerperium
+6883,Other and unspecified complications of the puerperium,Other
+6890,Mastitis and other disorders of lactation,Mastitis and other disorders of lactation
+6900,Boil and carbuncle,Of face
+6901,Boil and carbuncle,Of neck
+6902,Boil and carbuncle,Of trunk
+6903,Boil and carbuncle,Of upper arm and forearm
+6904,Boil and carbuncle,Of hand
+6905,Boil and carbuncle,Of buttock
+6906,Boil and carbuncle,Of other parts of lower extremity
+6907,Boil and carbuncle,Of other and multiple sites
+6908,Boil and carbuncle,Of unspecified site
+6910,Cellulitis of finger and toe,Cellulitis of finger and toe
+6920,Other cellulitis and abscess without mention of lymphangitis,Of head and neck
+6921,Other cellulitis and abscess without mention of lymphangitis,Of trunk
+6922,Other cellulitis and abscess without mention of lymphangitis,Of upper arm and forearm
+6923,Other cellulitis and abscess without mention of lymphangitis,"Of hand, except fingers"
+6924,Other cellulitis and abscess without mention of lymphangitis,Of leg
+6925,Other cellulitis and abscess without mention of lymphangitis,"Of foot, except toes"
+6926,Other cellulitis and abscess without mention of lymphangitis,"Of other multiple, and unspecified sites"
+6930,Other cellulitis and abscess with lymphangitis,Of head and neck
+6931,Other cellulitis and abscess with lymphangitis,Of trunk
+6932,Other cellulitis and abscess with lymphangitis,Of upper arm and forearm
+6933,Other cellulitis and abscess with lymphangitis,"Of hand, except fingers"
+6934,Other cellulitis and abscess with lymphangitis,Of leg
+6935,Other cellulitis and abscess with lymphangitis,"Of foot, except toes"
+6936,Other cellulitis and abscess with lymphangitis,"Of other multiple, and unspecified sites"
+6940,Acute lymphadenitis,Acute lymphadenitis
+6950,Impetigo,Impetigo
+6960,Infectious warts,Infectious warts
+6970,Molluscum contagiosum,Molluscum contagiosum
+6980,Other local infections of skin and subcutaneous tissue,Other local infections of skin and subcutaneous tissue
+7000,Seborrhoeic dermatitis,Seborrhoeic dermatitis
+7010,Eczema,Eczema
+7020,Occupational dermatitis,Due to plants
+7021,Occupational dermatitis,Due to oils and greases
+7022,Occupational dermatitis,Due to solvents
+7023,Occupational dermatitis,Due to drugs
+7024,Occupational dermatitis,Due to other chemicals
+7025,Occupational dermatitis,Due to radiation
+7026,Occupational dermatitis,Other
+7030,Other dermatitis,Due to plants
+7031,Other dermatitis,Due to oils and greases
+7032,Other dermatitis,Due to solvents
+7033,Other dermatitis,Due to drugs
+7034,Other dermatitis,Due to other chemicals
+7035,Other dermatitis,Due to radiation
+7036,Other dermatitis,Due to other specified agents
+7037,Other dermatitis,Unqualified
+7040,Pemphigus,Dermatitis herpetiformis
+7041,Pemphigus,Other
+7050,Erythematous conditions,Toxic erythema
+7051,Erythematous conditions,Erythema multiforme (erythema iris)
+7052,Erythematous conditions,Erythema nodosum
+7053,Erythematous conditions,Rosacea
+7054,Erythematous conditions,Lupus erythematosus
+7055,Erythematous conditions,Other and unqualified
+7060,Psoriasis and similar disorders,Psoriasis
+7061,Psoriasis and similar disorders,Parapsoriasis
+7062,Psoriasis and similar disorders,Pityriasis rosea
+7063,Psoriasis and similar disorders,Other and unspecified pityriasis
+7064,Psoriasis and similar disorders,Other
+7070,Lichen planus,Lichen planus
+7080,Pruritus and related conditions,Pruritis ani
+7081,Pruritus and related conditions,Pruritis of genital organs
+7082,Pruritus and related conditions,Prurigo
+7083,Pruritus and related conditions,Lichenification and lichen simplex chronicus
+7084,Pruritus and related conditions,Dermatitis factitia (artefacta)
+7085,Pruritus and related conditions,Other pruritic conditions
+7090,Corns and callosities,Corns and callosities
+7100,Other hypertrophic and atrophic conditions of skin,Scleroderma and dermatomyositis
+7101,Other hypertrophic and atrophic conditions of skin,Keratoderma
+7102,Other hypertrophic and atrophic conditions of skin,Hereditary oedema of legs (Milroy's disease)
+7103,Other hypertrophic and atrophic conditions of skin,Striae atrophicae
+7104,Other hypertrophic and atrophic conditions of skin,Keloid scar
+7105,Other hypertrophic and atrophic conditions of skin,Other hypertrophic and atrophic conditions of the skin
+7110,Other dermatoses,Other dermatoses
+7120,Diseases of nail,Diseases of nail
+7130,Diseases of hair and hair follicles,Diseases of hair and hair follicles
+7140,Diseases of sweat and sebaceous glands,Diseases of sweat glands
+7141,Diseases of sweat and sebaceous glands,Acne
+7142,Diseases of sweat and sebaceous glands,Other diseases of sebaceous glands
+7150,Chronic ulcer of skin,Chronic ulcer of skin
+7160,Other diseases of skin,Other diseases of skin
+7200,Acute arthritis due to pyogenic organisms,Acute arthritis due to pyogenic organisms
+7210,Acute nonpyogenic arthritis,Acute nonpyogenic arthritis
+7220,Rheumatoid arthritis and allied conditions,Rheumatoid arthritis
+7221,Rheumatoid arthritis and allied conditions,Spondylitis ankylopoietica
+7222,Rheumatoid arthritis and allied conditions,Chronic rheumatoid nodular fibrositis
+7230,Osteo-arthritis (arthrosis) and allied conditions,Osteo-arthritis (arthrosis)
+7231,Osteo-arthritis (arthrosis) and allied conditions,Spondylitis osteo-arthritica (spondylarthrosis)
+7232,Osteo-arthritis (arthrosis) and allied conditions,Adult osteochondrosis of spine
+7240,Other specified forms of arthritis,Other specified forms of arthritis
+7250,"Arthritis, unspecified","Arthritis, unspecified"
+7260,Muscular rheumatism,Lumbago
+7261,Muscular rheumatism,Myofibrosis of humeroscapular region
+7262,Muscular rheumatism,"Torticollis not specified as congenital, psychogenic, or traumatic"
+7263,Muscular rheumatism,"Other muscular rheumatism, fibrositis, and myalgia"
+7270,"Rheumatism, unspecified","Rheumatism, unspecified"
+7300,Osteomyelitis and periostitis,Acute osteomyelitis
+7301,Osteomyelitis and periostitis,Chronic osteomyelitis
+7302,Osteomyelitis and periostitis,Unspecified osteomyelitis
+7303,Osteomyelitis and periostitis,Periostitis without mention of osteomyelitis
+7310,Osteitis deformans,Osteitis deformans
+7320,Osteochondrosis,Osteochondrosis
+7330,Other diseases of bone,Other diseases of bone
+7340,Internal derangement of knee joint,Internal derangement of knee joint
+7350,Displacement of intervertebral disc,Displacement of intervertebral disc
+7360,Affection of sacro-iliac joint,Affection of sacro-iliac joint
+7370,Ankylosis of joint,Of spine
+7371,Ankylosis of joint,Of shoulder
+7372,Ankylosis of joint,Of elbow
+7373,Ankylosis of joint,Of wrist
+7374,Ankylosis of joint,Of finger
+7375,Ankylosis of joint,Of hip
+7376,Ankylosis of joint,Of knee
+7377,Ankylosis of joint,Of ankle
+7378,Ankylosis of joint,Of other and multiple sites
+7379,Ankylosis of joint,Of unspecified site
+7380,Other diseases of joint,Other diseases of joint
+7400,Bunion,Bunion
+7410,"Synovitis, bursitis, and tenosynovitis without mention of occupational origin","Synovitis, bursitis, and tenosynovitis without mention of occupational origin"
+7420,"Synovitis, bursitis, and tenosynovitis of occupational origin","Synovitis, bursitis, and tenosynovitis of occupational origin"
+7430,Infective myositis and other inflammatory diseases of tendon and fascia,Infective myositis and other inflammatory diseases of tendon and fascia
+7440,"Other diseases of muscle, tendon and fascia",Myasthenia gravis
+7441,"Other diseases of muscle, tendon and fascia",Inborn defect of muscle
+7442,"Other diseases of muscle, tendon and fascia",Other
+7450,Curvature of spine,Curvature of spine
+7460,Flat foot,Flat foot
+7470,Hallux valgus and varus,Hallux valgus and varus
+7480,Clubfoot,Clubfoot
+7490,Other deformities,Other deformities
+7500,Monstrosity,Monstrosity
+7510,Spina bifida and meningocele,Spina bifida and meningocele
+7520,Congenital hydrocephalus,Congenital hydrocephalus
+7530,Other congenital malformations of nervous system and sense organs,Congenital cataract
+7531,Other congenital malformations of nervous system and sense organs,Other
+7540,Congenital malformations of circulatory system,Tetrology of Fallot
+7541,Congenital malformations of circulatory system,Patent ductus arteriosus (Botalli)
+7542,Congenital malformations of circulatory system,Interventricular septal defect
+7543,Congenital malformations of circulatory system,Interauricular septal defect
+7544,Congenital malformations of circulatory system,Other and unspecified malformations of heart
+7545,Congenital malformations of circulatory system,Coarctation of aorta
+7546,Congenital malformations of circulatory system,Other circulatory malformations
+7550,Cleft palate and harelip,Cleft palate and harelip
+7560,Congenital malformations of digestive system,Congenital hypertrophic pyloric stenosis
+7561,Congenital malformations of digestive system,Imperforate anus
+7562,Congenital malformations of digestive system,Other
+7570,Congenital malformations of genito-urinary system,Undescended testicle
+7571,Congenital malformations of genito-urinary system,Polycystic disease of kidney
+7572,Congenital malformations of genito-urinary system,Congenital malformations of external genital organs
+7573,Congenital malformations of genito-urinary system,Other
+7580,Congenital malformations of bone and joint,Congenital dislocation of hip
+7581,Congenital malformations of bone and joint,Chondrodystrophy
+7582,Congenital malformations of bone and joint,Congenital malformations of skull
+7583,Congenital malformations of bone and joint,Brittle bones
+7584,Congenital malformations of bone and joint,Cervical rib
+7585,Congenital malformations of bone and joint,Congenital abnormalities of lumbosacral region
+7586,Congenital malformations of bone and joint,Other congenital malformations of bone and joint
+7590,"Other and unspecified congenital malformations, not elsewhere classified",Of respiratory system
+7591,"Other and unspecified congenital malformations, not elsewhere classified",Of skin
+7592,"Other and unspecified congenital malformations, not elsewhere classified",Of muscle
+7593,"Other and unspecified congenital malformations, not elsewhere classified",Other and unspecified
+7600,Intracranial and spinal injury at birth,Without mention of immaturity
+7605,Intracranial and spinal injury at birth,With immaturity
+7610,Other birth injury,Without mention of immaturity
+7615,Other birth injury,With immaturity
+7620,Postnatal asphyxia and atelectasis,Without mention of immaturity
+7625,Postnatal asphyxia and atelectasis,With immaturity
+7630,Pneumonia of newborn,Without mention of immaturity
+7635,Pneumonia of newborn,With immaturity
+7640,Diarrhoea of newborn,Without mention of immaturity
+7645,Diarrhoea of newborn,With immaturity
+7650,Ophthalmia neonatorum,Without mention of immaturity
+7655,Ophthalmia neonatorum,With immaturity
+7660,Pemphigus neonatorum,Without mention of immaturity
+7665,Pemphigus neonatorum,With immaturity
+7670,Umbilical sepsis,Without mention of immaturity
+7675,Umbilical sepsis,With immaturity
+7680,Other sepsis of newborn,Without mention of immaturity
+7685,Other sepsis of newborn,With immaturity
+7690,Neonatal disorders arising from maternal toxaemia,"Attributed to ""toxaemia of pregnancy"", without mention of immaturity"
+7691,Neonatal disorders arising from maternal toxaemia,"Attributed to maternal diabetes, without mention of immaturity"
+7692,Neonatal disorders arising from maternal toxaemia,"Attributed to maternal rubella, without mention of immaturity"
+7693,Neonatal disorders arising from maternal toxaemia,"Attributed to toxoplasmosis, without mention of immaturity"
+7694,Neonatal disorders arising from maternal toxaemia,"Attributed to other or unspecified maternal toxoemia, without mention of immaturity"
+7695,Neonatal disorders arising from maternal toxaemia,"Attributed to ""toxaemia of pregnancy"", with immaturity"
+7696,Neonatal disorders arising from maternal toxaemia,"Attributed to maternal diabetes, with immaturity"
+7697,Neonatal disorders arising from maternal toxaemia,"Attributed to maternal rubella, with immaturity"
+7698,Neonatal disorders arising from maternal toxaemia,"Attributed to toxoplasmosis, with immaturity"
+7699,Neonatal disorders arising from maternal toxaemia,"Attributed to other or unspecified maternal toxoemia, with immaturity"
+7700,Haemolytic disease of newborn (erythroblastosis),"Erythroblastosis, without mention of nervous affection or immaturity"
+7701,Haemolytic disease of newborn (erythroblastosis),"Kernicterus, without mention of immaturity"
+7702,Haemolytic disease of newborn (erythroblastosis),"Erythroblastosis with disorder of liver other than icterus gravis, without mention of immaturity"
+7705,Haemolytic disease of newborn (erythroblastosis),"Erythroblastosis, without mention of nervous affection but with immaturity"
+7706,Haemolytic disease of newborn (erythroblastosis),Kernicterus with immaturity
+7707,Haemolytic disease of newborn (erythroblastosis),"Erythroblastosis with disorder of liver other than icterus gravis, with immaturity"
+7710,Haemorrhagic disease of newborn,Without mention of immaturity
+7715,Haemorrhagic disease of newborn,With immaturity
+7720,Nutritional maladjustment,Without mention of immaturity
+7725,Nutritional maladjustment,With immaturity
+7730,Ill-defined diseases peculiar to early infancy,Without mention of immaturity
+7735,Ill-defined diseases peculiar to early infancy,With immaturity
+7740,Immaturity with mention of any other subsidiary condition,Immaturity with mention of any other subsidiary condition
+7750,Immaturity subsidiary to some other cause,Immaturity subsidiary to some other cause
+7760,Immaturity unqualified,Immaturity unqualified
+7800,Certain symptoms referable to nervous system and special senses,Coma and stupor
+7801,Certain symptoms referable to nervous system and special senses,Delirium
+7802,Certain symptoms referable to nervous system and special senses,Convulsions
+7803,Certain symptoms referable to nervous system and special senses,Jacksonian epilepsy
+7804,Certain symptoms referable to nervous system and special senses,Abnormal involuntary movement
+7805,Certain symptoms referable to nervous system and special senses,Disturbance of co-ordination
+7806,Certain symptoms referable to nervous system and special senses,Vertigo
+7807,Certain symptoms referable to nervous system and special senses,Disturbance of sleep
+7808,Certain symptoms referable to nervous system and special senses,Disturbance of memory
+7809,Certain symptoms referable to nervous system and special senses,Meningismus
+7810,Other symptoms referable to nervous system and special senses,Disturbance of vision except defective sight
+7811,Other symptoms referable to nervous system and special senses,Oculomotor disturbance
+7812,Other symptoms referable to nervous system and special senses,Photophobia
+7813,Other symptoms referable to nervous system and special senses,Disturbance of hearing except deafness
+7814,Other symptoms referable to nervous system and special senses,"Disturbance of cranial nerves except optic, oculomotor, and auditory"
+7815,Other symptoms referable to nervous system and special senses,Stammering and stuttering
+7816,Other symptoms referable to nervous system and special senses,"Other disturbance of speech, including alexia and agraphia"
+7817,Other symptoms referable to nervous system and special senses,Other disturbance of sensation
+7818,Other symptoms referable to nervous system and special senses,Encephalopathy
+7819,Other symptoms referable to nervous system and special senses,Hallucinations
+7820,Symptoms referable to cardiovascular and lymphatic system,Precordial pain
+7821,Symptoms referable to cardiovascular and lymphatic system,Palpitations
+7822,Symptoms referable to cardiovascular and lymphatic system,Tachycardia
+7823,Symptoms referable to cardiovascular and lymphatic system,Pallor and cyanosis (not of newborn)
+7824,Symptoms referable to cardiovascular and lymphatic system,"Acute heart failure, undefined"
+7825,Symptoms referable to cardiovascular and lymphatic system,Syncope or collapse
+7826,Symptoms referable to cardiovascular and lymphatic system,Oedema and dropsy (not of newborn)
+7827,Symptoms referable to cardiovascular and lymphatic system,Enlargement of lymph node
+7828,Symptoms referable to cardiovascular and lymphatic system,Splenomegaly
+7829,Symptoms referable to cardiovascular and lymphatic system,Shock without mention of trauma
+7830,Symptoms referable to respiratory system,Epistaxis
+7831,Symptoms referable to respiratory system,Haemoptysis
+7832,Symptoms referable to respiratory system,Dyspnoea
+7833,Symptoms referable to respiratory system,Cough
+7834,Symptoms referable to respiratory system,Excess of sputum
+7835,Symptoms referable to respiratory system,Change in voice
+7836,Symptoms referable to respiratory system,Stridor
+7837,Symptoms referable to respiratory system,Pain in chest
+7840,Symptoms referable to upper gastro-intestinal tract,Anorexia
+7841,Symptoms referable to upper gastro-intestinal tract,Nausea and vomiting
+7842,Symptoms referable to upper gastro-intestinal tract,Pylorospasm
+7843,Symptoms referable to upper gastro-intestinal tract,Heartburn
+7844,Symptoms referable to upper gastro-intestinal tract,Dysphagia
+7845,Symptoms referable to upper gastro-intestinal tract,Haematemesis
+7846,Symptoms referable to upper gastro-intestinal tract,Excessive salivation
+7847,Symptoms referable to upper gastro-intestinal tract,Hiccough
+7848,Symptoms referable to upper gastro-intestinal tract,Eructation
+7850,Symptoms referable to abdomen and lower gastro-intestinal system,Abdominal swelling (not referable to any particular organ)
+7851,Symptoms referable to abdomen and lower gastro-intestinal system,Hepatomegaly
+7852,Symptoms referable to abdomen and lower gastro-intestinal system,Jaundice
+7853,Symptoms referable to abdomen and lower gastro-intestinal system,Ascites
+7854,Symptoms referable to abdomen and lower gastro-intestinal system,Flatulence
+7855,Symptoms referable to abdomen and lower gastro-intestinal system,Abdominal pain
+7856,Symptoms referable to abdomen and lower gastro-intestinal system,"Diarrhoea, age 2 years and over"
+7857,Symptoms referable to abdomen and lower gastro-intestinal system,Incontinence of faeces
+7858,Symptoms referable to abdomen and lower gastro-intestinal system,Melaena (age 1 year and over)
+7859,Symptoms referable to abdomen and lower gastro-intestinal system,Visible peristalsis
+7860,Symptoms referable to genito-urinary system,Pain referable to urinary system
+7861,Symptoms referable to genito-urinary system,Retention of urine
+7862,Symptoms referable to genito-urinary system,Incontinence of urine
+7863,Symptoms referable to genito-urinary system,Frequency of micturition
+7864,Symptoms referable to genito-urinary system,Polyuria
+7865,Symptoms referable to genito-urinary system,"Oliguria, anuria (not of newborn)"
+7866,Symptoms referable to genito-urinary system,Priapism
+7867,Symptoms referable to genito-urinary system,"Pain referable to genital organs, including dyspareunia"
+7870,Symptoms referable to limbs and back,"Transient paralysis of limb, cause unknown"
+7871,Symptoms referable to limbs and back,Pain in limb
+7872,Symptoms referable to limbs and back,Swelling of limb
+7873,Symptoms referable to limbs and back,Pain in joint
+7874,Symptoms referable to limbs and back,Swelling of joint
+7875,Symptoms referable to limbs and back,Pain in back
+7876,Symptoms referable to limbs and back,Difficulty in walking
+7877,Symptoms referable to limbs and back,Abnormality of gait
+7880,Other general symptoms,Dehydration
+7881,Other general symptoms,Excessive sweating
+7882,Other general symptoms,Rash
+7883,Other general symptoms,Subcutaneous nodules
+7884,Other general symptoms,Loss of weight
+7885,Other general symptoms,Tetany
+7886,Other general symptoms,Acidosis
+7887,Other general symptoms,Alkalosis
+7888,Other general symptoms,Pyrexia of unknown origin
+7889,Other general symptoms,Other specified symptoms not classifiable elsewhere
+7890,Abnormal urinary constituents of unspecified cause,"Albuminuria, unqualified"
+7891,Abnormal urinary constituents of unspecified cause,"Albuminuria, orthostatic"
+7892,Abnormal urinary constituents of unspecified cause,Pyuria and bacteriuria
+7893,Abnormal urinary constituents of unspecified cause,Chyluria
+7894,Abnormal urinary constituents of unspecified cause,Haematuria
+7895,Abnormal urinary constituents of unspecified cause,Haemoglobinuria
+7896,Abnormal urinary constituents of unspecified cause,Glycosuria
+7897,Abnormal urinary constituents of unspecified cause,Acetonuria
+7900,Nervousness and debility,Nervousness
+7901,Nervousness and debility,Debility and undue fatigue
+7902,Nervousness and debility,Depression
+7910,Headache,Headache
+7920,Uraemia unqualified,Uraemia unqualified
+7930,"Observation, without need for further medical care",Mental
+7931,"Observation, without need for further medical care",Other specified
+7932,"Observation, without need for further medical care",Unspecified
+7940,Senility without mention of psychosis,Senility without mention of psychosis
+7950,Ill-defined and unknown causes of morbidity and mortality,Other ill-defined conditions
+7951,Ill-defined and unknown causes of morbidity and mortality,Malingering
+7952,Ill-defined and unknown causes of morbidity and mortality,Sudden death (cause unknown)
+7953,Ill-defined and unknown causes of morbidity and mortality,Found dead (cause unknown)
+7954,Ill-defined and unknown causes of morbidity and mortality,Died without sign of disease
+7955,Ill-defined and unknown causes of morbidity and mortality,"Other, unknown and unspecified causes"
+8000,Railway accident involving railroad employee,Railway accident involving railroad employee
+8010,Railway accident involving passenger,Railway accident involving passenger
+8020,Railway accident involving other and unspecified person,Railway accident involving other and unspecified person
+8100,Motor vehicle traffic accident involving collision with railway train,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8101,Motor vehicle traffic accident involving collision with railway train,Accident involving goods transport vehicle and passenger motor vehicle
+8102,Motor vehicle traffic accident involving collision with railway train,Accident involving goods transport vehicle and motor bus
+8103,Motor vehicle traffic accident involving collision with railway train,Accident involving goods transport vehicle and unspecified motor vehicle
+8104,Motor vehicle traffic accident involving collision with railway train,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8105,Motor vehicle traffic accident involving collision with railway train,Accident involving passenger motor vehicle and motor bus
+8106,Motor vehicle traffic accident involving collision with railway train,Accident involving passenger motor vehicle and unspecified motor vehicle
+8107,Motor vehicle traffic accident involving collision with railway train,"Accident involving motor bus(es), but no other motor vehicle"
+8108,Motor vehicle traffic accident involving collision with railway train,Accident involving motor bus and unspecified motor vehicle
+8109,Motor vehicle traffic accident involving collision with railway train,Accident involving unspecified motor vehicles
+8110,Motor vehicle traffic accident involving collision with street car,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8111,Motor vehicle traffic accident involving collision with street car,Accident involving goods transport vehicle and passenger motor vehicle
+8112,Motor vehicle traffic accident involving collision with street car,Accident involving goods transport vehicle and motor bus
+8113,Motor vehicle traffic accident involving collision with street car,Accident involving goods transport vehicle and unspecified motor vehicle
+8114,Motor vehicle traffic accident involving collision with street car,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8115,Motor vehicle traffic accident involving collision with street car,Accident involving passenger motor vehicle and motor bus
+8116,Motor vehicle traffic accident involving collision with street car,Accident involving passenger motor vehicle and unspecified motor vehicle
+8117,Motor vehicle traffic accident involving collision with street car,"Accident involving motor bus(es), but no other motor vehicle"
+8118,Motor vehicle traffic accident involving collision with street car,Accident involving motor bus and unspecified motor vehicle
+8119,Motor vehicle traffic accident involving collision with street car,Accident involving unspecified motor vehicles
+8120,Motor vehicle traffic accident to pedestrian,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8121,Motor vehicle traffic accident to pedestrian,Accident involving goods transport vehicle and passenger motor vehicle
+8122,Motor vehicle traffic accident to pedestrian,Accident involving goods transport vehicle and motor bus
+8123,Motor vehicle traffic accident to pedestrian,Accident involving goods transport vehicle and unspecified motor vehicle
+8124,Motor vehicle traffic accident to pedestrian,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8125,Motor vehicle traffic accident to pedestrian,Accident involving passenger motor vehicle and motor bus
+8126,Motor vehicle traffic accident to pedestrian,Accident involving passenger motor vehicle and unspecified motor vehicle
+8127,Motor vehicle traffic accident to pedestrian,"Accident involving motor bus(es), but no other motor vehicle"
+8128,Motor vehicle traffic accident to pedestrian,Accident involving motor bus and unspecified motor vehicle
+8129,Motor vehicle traffic accident to pedestrian,Accident involving unspecified motor vehicles
+8130,Motor vehicle traffic accident to pedal cyclist,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8131,Motor vehicle traffic accident to pedal cyclist,Accident involving goods transport vehicle and passenger motor vehicle
+8132,Motor vehicle traffic accident to pedal cyclist,Accident involving goods transport vehicle and motor bus
+8133,Motor vehicle traffic accident to pedal cyclist,Accident involving goods transport vehicle and unspecified motor vehicle
+8134,Motor vehicle traffic accident to pedal cyclist,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8135,Motor vehicle traffic accident to pedal cyclist,Accident involving passenger motor vehicle and motor bus
+8136,Motor vehicle traffic accident to pedal cyclist,Accident involving passenger motor vehicle and unspecified motor vehicle
+8137,Motor vehicle traffic accident to pedal cyclist,"Accident involving motor bus(es), but no other motor vehicle"
+8138,Motor vehicle traffic accident to pedal cyclist,Accident involving motor bus and unspecified motor vehicle
+8139,Motor vehicle traffic accident to pedal cyclist,Accident involving unspecified motor vehicles
+8140,"Motor vehicle traffic accident to rider or passenger of motorcycle, in collision with non-motor vehicle or object","Accident involving goods transport vehicle(s), but no other motor vehicle"
+8141,"Motor vehicle traffic accident to rider or passenger of motorcycle, in collision with non-motor vehicle or object",Accident involving goods transport vehicle and passenger motor vehicle
+8142,"Motor vehicle traffic accident to rider or passenger of motorcycle, in collision with non-motor vehicle or object",Accident involving goods transport vehicle and motor bus
+8143,"Motor vehicle traffic accident to rider or passenger of motorcycle, in collision with non-motor vehicle or object",Accident involving goods transport vehicle and unspecified motor vehicle
+8144,"Motor vehicle traffic accident to rider or passenger of motorcycle, in collision with non-motor vehicle or object","Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8145,"Motor vehicle traffic accident to rider or passenger of motorcycle, in collision with non-motor vehicle or object",Accident involving passenger motor vehicle and motor bus
+8146,"Motor vehicle traffic accident to rider or passenger of motorcycle, in collision with non-motor vehicle or object",Accident involving passenger motor vehicle and unspecified motor vehicle
+8147,"Motor vehicle traffic accident to rider or passenger of motorcycle, in collision with non-motor vehicle or object","Accident involving motor bus(es), but no other motor vehicle"
+8148,"Motor vehicle traffic accident to rider or passenger of motorcycle, in collision with non-motor vehicle or object",Accident involving motor bus and unspecified motor vehicle
+8149,"Motor vehicle traffic accident to rider or passenger of motorcycle, in collision with non-motor vehicle or object",Accident involving unspecified motor vehicles
+8150,Motor vehicle traffic accident to rider or passenger of motorcycle in collison with other motor vehicle,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8151,Motor vehicle traffic accident to rider or passenger of motorcycle in collison with other motor vehicle,Accident involving goods transport vehicle and passenger motor vehicle
+8152,Motor vehicle traffic accident to rider or passenger of motorcycle in collison with other motor vehicle,Accident involving goods transport vehicle and motor bus
+8153,Motor vehicle traffic accident to rider or passenger of motorcycle in collison with other motor vehicle,Accident involving goods transport vehicle and unspecified motor vehicle
+8154,Motor vehicle traffic accident to rider or passenger of motorcycle in collison with other motor vehicle,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8155,Motor vehicle traffic accident to rider or passenger of motorcycle in collison with other motor vehicle,Accident involving passenger motor vehicle and motor bus
+8156,Motor vehicle traffic accident to rider or passenger of motorcycle in collison with other motor vehicle,Accident involving passenger motor vehicle and unspecified motor vehicle
+8157,Motor vehicle traffic accident to rider or passenger of motorcycle in collison with other motor vehicle,"Accident involving motor bus(es), but no other motor vehicle"
+8158,Motor vehicle traffic accident to rider or passenger of motorcycle in collison with other motor vehicle,Accident involving motor bus and unspecified motor vehicle
+8159,Motor vehicle traffic accident to rider or passenger of motorcycle in collison with other motor vehicle,Accident involving unspecified motor vehicles
+8160,Other motor vehicle traffic accident involving two or more motor vehicles,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8161,Other motor vehicle traffic accident involving two or more motor vehicles,Accident involving goods transport vehicle and passenger motor vehicle
+8162,Other motor vehicle traffic accident involving two or more motor vehicles,Accident involving goods transport vehicle and motor bus
+8163,Other motor vehicle traffic accident involving two or more motor vehicles,Accident involving goods transport vehicle and unspecified motor vehicle
+8164,Other motor vehicle traffic accident involving two or more motor vehicles,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8165,Other motor vehicle traffic accident involving two or more motor vehicles,Accident involving passenger motor vehicle and motor bus
+8166,Other motor vehicle traffic accident involving two or more motor vehicles,Accident involving passenger motor vehicle and unspecified motor vehicle
+8167,Other motor vehicle traffic accident involving two or more motor vehicles,"Accident involving motor bus(es), but no other motor vehicle"
+8168,Other motor vehicle traffic accident involving two or more motor vehicles,Accident involving motor bus and unspecified motor vehicle
+8169,Other motor vehicle traffic accident involving two or more motor vehicles,Accident involving unspecified motor vehicles
+8170,Motor vehicle traffic accident to occupant of motor vehicle in collision with pedestrian or pedal cycle,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8171,Motor vehicle traffic accident to occupant of motor vehicle in collision with pedestrian or pedal cycle,Accident involving goods transport vehicle and passenger motor vehicle
+8172,Motor vehicle traffic accident to occupant of motor vehicle in collision with pedestrian or pedal cycle,Accident involving goods transport vehicle and motor bus
+8173,Motor vehicle traffic accident to occupant of motor vehicle in collision with pedestrian or pedal cycle,Accident involving goods transport vehicle and unspecified motor vehicle
+8174,Motor vehicle traffic accident to occupant of motor vehicle in collision with pedestrian or pedal cycle,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8175,Motor vehicle traffic accident to occupant of motor vehicle in collision with pedestrian or pedal cycle,Accident involving passenger motor vehicle and motor bus
+8176,Motor vehicle traffic accident to occupant of motor vehicle in collision with pedestrian or pedal cycle,Accident involving passenger motor vehicle and unspecified motor vehicle
+8177,Motor vehicle traffic accident to occupant of motor vehicle in collision with pedestrian or pedal cycle,"Accident involving motor bus(es), but no other motor vehicle"
+8178,Motor vehicle traffic accident to occupant of motor vehicle in collision with pedestrian or pedal cycle,Accident involving motor bus and unspecified motor vehicle
+8179,Motor vehicle traffic accident to occupant of motor vehicle in collision with pedestrian or pedal cycle,Accident involving unspecified motor vehicles
+8180,Motor vehicle traffic accident involving collision with animal or animal-drawn vehicle,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8181,Motor vehicle traffic accident involving collision with animal or animal-drawn vehicle,Accident involving goods transport vehicle and passenger motor vehicle
+8182,Motor vehicle traffic accident involving collision with animal or animal-drawn vehicle,Accident involving goods transport vehicle and motor bus
+8183,Motor vehicle traffic accident involving collision with animal or animal-drawn vehicle,Accident involving goods transport vehicle and unspecified motor vehicle
+8184,Motor vehicle traffic accident involving collision with animal or animal-drawn vehicle,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8185,Motor vehicle traffic accident involving collision with animal or animal-drawn vehicle,Accident involving passenger motor vehicle and motor bus
+8186,Motor vehicle traffic accident involving collision with animal or animal-drawn vehicle,Accident involving passenger motor vehicle and unspecified motor vehicle
+8187,Motor vehicle traffic accident involving collision with animal or animal-drawn vehicle,"Accident involving motor bus(es), but no other motor vehicle"
+8188,Motor vehicle traffic accident involving collision with animal or animal-drawn vehicle,Accident involving motor bus and unspecified motor vehicle
+8189,Motor vehicle traffic accident involving collision with animal or animal-drawn vehicle,Accident involving unspecified motor vehicles
+8190,Motor vehicle traffic accident involving collision with fixed or unspecified object,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8191,Motor vehicle traffic accident involving collision with fixed or unspecified object,Accident involving goods transport vehicle and passenger motor vehicle
+8192,Motor vehicle traffic accident involving collision with fixed or unspecified object,Accident involving goods transport vehicle and motor bus
+8193,Motor vehicle traffic accident involving collision with fixed or unspecified object,Accident involving goods transport vehicle and unspecified motor vehicle
+8194,Motor vehicle traffic accident involving collision with fixed or unspecified object,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8195,Motor vehicle traffic accident involving collision with fixed or unspecified object,Accident involving passenger motor vehicle and motor bus
+8196,Motor vehicle traffic accident involving collision with fixed or unspecified object,Accident involving passenger motor vehicle and unspecified motor vehicle
+8197,Motor vehicle traffic accident involving collision with fixed or unspecified object,"Accident involving motor bus(es), but no other motor vehicle"
+8198,Motor vehicle traffic accident involving collision with fixed or unspecified object,Accident involving motor bus and unspecified motor vehicle
+8199,Motor vehicle traffic accident involving collision with fixed or unspecified object,Accident involving unspecified motor vehicles
+8200,Motor vehicle traffic accident while boarding and alighting,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8201,Motor vehicle traffic accident while boarding and alighting,Accident involving goods transport vehicle and passenger motor vehicle
+8202,Motor vehicle traffic accident while boarding and alighting,Accident involving goods transport vehicle and motor bus
+8203,Motor vehicle traffic accident while boarding and alighting,Accident involving goods transport vehicle and unspecified motor vehicle
+8204,Motor vehicle traffic accident while boarding and alighting,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8205,Motor vehicle traffic accident while boarding and alighting,Accident involving passenger motor vehicle and motor bus
+8206,Motor vehicle traffic accident while boarding and alighting,Accident involving passenger motor vehicle and unspecified motor vehicle
+8207,Motor vehicle traffic accident while boarding and alighting,"Accident involving motor bus(es), but no other motor vehicle"
+8208,Motor vehicle traffic accident while boarding and alighting,Accident involving motor bus and unspecified motor vehicle
+8209,Motor vehicle traffic accident while boarding and alighting,Accident involving unspecified motor vehicles
+8210,Motor vehicle traffic accident to rider of motorcycle not involving collsion,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8211,Motor vehicle traffic accident to rider of motorcycle not involving collsion,Accident involving goods transport vehicle and passenger motor vehicle
+8212,Motor vehicle traffic accident to rider of motorcycle not involving collsion,Accident involving goods transport vehicle and motor bus
+8213,Motor vehicle traffic accident to rider of motorcycle not involving collsion,Accident involving goods transport vehicle and unspecified motor vehicle
+8214,Motor vehicle traffic accident to rider of motorcycle not involving collsion,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8215,Motor vehicle traffic accident to rider of motorcycle not involving collsion,Accident involving passenger motor vehicle and motor bus
+8216,Motor vehicle traffic accident to rider of motorcycle not involving collsion,Accident involving passenger motor vehicle and unspecified motor vehicle
+8217,Motor vehicle traffic accident to rider of motorcycle not involving collsion,"Accident involving motor bus(es), but no other motor vehicle"
+8218,Motor vehicle traffic accident to rider of motorcycle not involving collsion,Accident involving motor bus and unspecified motor vehicle
+8219,Motor vehicle traffic accident to rider of motorcycle not involving collsion,Accident involving unspecified motor vehicles
+8220,Motor vehicle traffic accident involving overturning in roadway,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8221,Motor vehicle traffic accident involving overturning in roadway,Accident involving goods transport vehicle and passenger motor vehicle
+8222,Motor vehicle traffic accident involving overturning in roadway,Accident involving goods transport vehicle and motor bus
+8223,Motor vehicle traffic accident involving overturning in roadway,Accident involving goods transport vehicle and unspecified motor vehicle
+8224,Motor vehicle traffic accident involving overturning in roadway,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8225,Motor vehicle traffic accident involving overturning in roadway,Accident involving passenger motor vehicle and motor bus
+8226,Motor vehicle traffic accident involving overturning in roadway,Accident involving passenger motor vehicle and unspecified motor vehicle
+8227,Motor vehicle traffic accident involving overturning in roadway,"Accident involving motor bus(es), but no other motor vehicle"
+8228,Motor vehicle traffic accident involving overturning in roadway,Accident involving motor bus and unspecified motor vehicle
+8229,Motor vehicle traffic accident involving overturning in roadway,Accident involving unspecified motor vehicles
+8230,Motor vehicle traffic accident involving running off roadway,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8231,Motor vehicle traffic accident involving running off roadway,Accident involving goods transport vehicle and passenger motor vehicle
+8232,Motor vehicle traffic accident involving running off roadway,Accident involving goods transport vehicle and motor bus
+8233,Motor vehicle traffic accident involving running off roadway,Accident involving goods transport vehicle and unspecified motor vehicle
+8234,Motor vehicle traffic accident involving running off roadway,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8235,Motor vehicle traffic accident involving running off roadway,Accident involving passenger motor vehicle and motor bus
+8236,Motor vehicle traffic accident involving running off roadway,Accident involving passenger motor vehicle and unspecified motor vehicle
+8237,Motor vehicle traffic accident involving running off roadway,"Accident involving motor bus(es), but no other motor vehicle"
+8238,Motor vehicle traffic accident involving running off roadway,Accident involving motor bus and unspecified motor vehicle
+8239,Motor vehicle traffic accident involving running off roadway,Accident involving unspecified motor vehicles
+8240,Other non-collision motor vehicle traffic accident,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8241,Other non-collision motor vehicle traffic accident,Accident involving goods transport vehicle and passenger motor vehicle
+8242,Other non-collision motor vehicle traffic accident,Accident involving goods transport vehicle and motor bus
+8243,Other non-collision motor vehicle traffic accident,Accident involving goods transport vehicle and unspecified motor vehicle
+8244,Other non-collision motor vehicle traffic accident,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8245,Other non-collision motor vehicle traffic accident,Accident involving passenger motor vehicle and motor bus
+8246,Other non-collision motor vehicle traffic accident,Accident involving passenger motor vehicle and unspecified motor vehicle
+8247,Other non-collision motor vehicle traffic accident,"Accident involving motor bus(es), but no other motor vehicle"
+8248,Other non-collision motor vehicle traffic accident,Accident involving motor bus and unspecified motor vehicle
+8249,Other non-collision motor vehicle traffic accident,Accident involving unspecified motor vehicles
+8250,Motor vehicle traffic accident of unspecified nature,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8251,Motor vehicle traffic accident of unspecified nature,Accident involving goods transport vehicle and passenger motor vehicle
+8252,Motor vehicle traffic accident of unspecified nature,Accident involving goods transport vehicle and motor bus
+8253,Motor vehicle traffic accident of unspecified nature,Accident involving goods transport vehicle and unspecified motor vehicle
+8254,Motor vehicle traffic accident of unspecified nature,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8255,Motor vehicle traffic accident of unspecified nature,Accident involving passenger motor vehicle and motor bus
+8256,Motor vehicle traffic accident of unspecified nature,Accident involving passenger motor vehicle and unspecified motor vehicle
+8257,Motor vehicle traffic accident of unspecified nature,"Accident involving motor bus(es), but no other motor vehicle"
+8258,Motor vehicle traffic accident of unspecified nature,Accident involving motor bus and unspecified motor vehicle
+8259,Motor vehicle traffic accident of unspecified nature,Accident involving unspecified motor vehicles
+8300,Motor vehicle non-traffic accident to pedestrian,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8301,Motor vehicle non-traffic accident to pedestrian,Accident involving goods transport vehicle and passenger motor vehicle
+8302,Motor vehicle non-traffic accident to pedestrian,Accident involving goods transport vehicle and motor bus
+8303,Motor vehicle non-traffic accident to pedestrian,Accident involving goods transport vehicle and unspecified motor vehicle
+8304,Motor vehicle non-traffic accident to pedestrian,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8305,Motor vehicle non-traffic accident to pedestrian,Accident involving passenger motor vehicle and motor bus
+8306,Motor vehicle non-traffic accident to pedestrian,Accident involving passenger motor vehicle and unspecified motor vehicle
+8307,Motor vehicle non-traffic accident to pedestrian,"Accident involving motor bus(es), but no other motor vehicle"
+8308,Motor vehicle non-traffic accident to pedestrian,Accident involving motor bus and unspecified motor vehicle
+8309,Motor vehicle non-traffic accident to pedestrian,Accident involving unspecified motor vehicles
+8310,Motor vehicle non-traffic accident to pedal cyclist,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8311,Motor vehicle non-traffic accident to pedal cyclist,Accident involving goods transport vehicle and passenger motor vehicle
+8312,Motor vehicle non-traffic accident to pedal cyclist,Accident involving goods transport vehicle and motor bus
+8313,Motor vehicle non-traffic accident to pedal cyclist,Accident involving goods transport vehicle and unspecified motor vehicle
+8314,Motor vehicle non-traffic accident to pedal cyclist,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8315,Motor vehicle non-traffic accident to pedal cyclist,Accident involving passenger motor vehicle and motor bus
+8316,Motor vehicle non-traffic accident to pedal cyclist,Accident involving passenger motor vehicle and unspecified motor vehicle
+8317,Motor vehicle non-traffic accident to pedal cyclist,"Accident involving motor bus(es), but no other motor vehicle"
+8318,Motor vehicle non-traffic accident to pedal cyclist,Accident involving motor bus and unspecified motor vehicle
+8319,Motor vehicle non-traffic accident to pedal cyclist,Accident involving unspecified motor vehicles
+8320,Motor vehicle non-traffic accident to rider or passenger of motorcycle,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8321,Motor vehicle non-traffic accident to rider or passenger of motorcycle,Accident involving goods transport vehicle and passenger motor vehicle
+8322,Motor vehicle non-traffic accident to rider or passenger of motorcycle,Accident involving goods transport vehicle and motor bus
+8323,Motor vehicle non-traffic accident to rider or passenger of motorcycle,Accident involving goods transport vehicle and unspecified motor vehicle
+8324,Motor vehicle non-traffic accident to rider or passenger of motorcycle,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8325,Motor vehicle non-traffic accident to rider or passenger of motorcycle,Accident involving passenger motor vehicle and motor bus
+8326,Motor vehicle non-traffic accident to rider or passenger of motorcycle,Accident involving passenger motor vehicle and unspecified motor vehicle
+8327,Motor vehicle non-traffic accident to rider or passenger of motorcycle,"Accident involving motor bus(es), but no other motor vehicle"
+8328,Motor vehicle non-traffic accident to rider or passenger of motorcycle,Accident involving motor bus and unspecified motor vehicle
+8329,Motor vehicle non-traffic accident to rider or passenger of motorcycle,Accident involving unspecified motor vehicles
+8330,Other motor vehicle non-traffic accident involving two or more motor vehicles,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8331,Other motor vehicle non-traffic accident involving two or more motor vehicles,Accident involving goods transport vehicle and passenger motor vehicle
+8332,Other motor vehicle non-traffic accident involving two or more motor vehicles,Accident involving goods transport vehicle and motor bus
+8333,Other motor vehicle non-traffic accident involving two or more motor vehicles,Accident involving goods transport vehicle and unspecified motor vehicle
+8334,Other motor vehicle non-traffic accident involving two or more motor vehicles,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8335,Other motor vehicle non-traffic accident involving two or more motor vehicles,Accident involving passenger motor vehicle and motor bus
+8336,Other motor vehicle non-traffic accident involving two or more motor vehicles,Accident involving passenger motor vehicle and unspecified motor vehicle
+8337,Other motor vehicle non-traffic accident involving two or more motor vehicles,"Accident involving motor bus(es), but no other motor vehicle"
+8338,Other motor vehicle non-traffic accident involving two or more motor vehicles,Accident involving motor bus and unspecified motor vehicle
+8339,Other motor vehicle non-traffic accident involving two or more motor vehicles,Accident involving unspecified motor vehicles
+8340,Motor vehicle non-traffic accident while boarding and alighting,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8341,Motor vehicle non-traffic accident while boarding and alighting,Accident involving goods transport vehicle and passenger motor vehicle
+8342,Motor vehicle non-traffic accident while boarding and alighting,Accident involving goods transport vehicle and motor bus
+8343,Motor vehicle non-traffic accident while boarding and alighting,Accident involving goods transport vehicle and unspecified motor vehicle
+8344,Motor vehicle non-traffic accident while boarding and alighting,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8345,Motor vehicle non-traffic accident while boarding and alighting,Accident involving passenger motor vehicle and motor bus
+8346,Motor vehicle non-traffic accident while boarding and alighting,Accident involving passenger motor vehicle and unspecified motor vehicle
+8347,Motor vehicle non-traffic accident while boarding and alighting,"Accident involving motor bus(es), but no other motor vehicle"
+8348,Motor vehicle non-traffic accident while boarding and alighting,Accident involving motor bus and unspecified motor vehicle
+8349,Motor vehicle non-traffic accident while boarding and alighting,Accident involving unspecified motor vehicles
+8350,Motor vehicle non-traffic accident of other and unspecified nature,"Accident involving goods transport vehicle(s), but no other motor vehicle"
+8351,Motor vehicle non-traffic accident of other and unspecified nature,Accident involving goods transport vehicle and passenger motor vehicle
+8352,Motor vehicle non-traffic accident of other and unspecified nature,Accident involving goods transport vehicle and motor bus
+8353,Motor vehicle non-traffic accident of other and unspecified nature,Accident involving goods transport vehicle and unspecified motor vehicle
+8354,Motor vehicle non-traffic accident of other and unspecified nature,"Accident involving passenger motor vehicle(s), but no other motor vehicle"
+8355,Motor vehicle non-traffic accident of other and unspecified nature,Accident involving passenger motor vehicle and motor bus
+8356,Motor vehicle non-traffic accident of other and unspecified nature,Accident involving passenger motor vehicle and unspecified motor vehicle
+8357,Motor vehicle non-traffic accident of other and unspecified nature,"Accident involving motor bus(es), but no other motor vehicle"
+8358,Motor vehicle non-traffic accident of other and unspecified nature,Accident involving motor bus and unspecified motor vehicle
+8359,Motor vehicle non-traffic accident of other and unspecified nature,Accident involving unspecified motor vehicles
+8400,Street car accident to pedestrian,Street car accident to pedestrian
+8410,"Other street car accident, except collision with motor vehicle","Other street car accident, except collision with motor vehicle"
+8420,Accident to pedestrian caused by pedal cycle,Accident to pedestrian caused by pedal cycle
+8430,Accident to rider of pedal cycle not involving collision with motor vehicle,Accident to rider of pedal cycle not involving collision with motor vehicle
+8440,Accident to pedestrian caused by other non-motor road vehicle,Accident to pedestrian caused by other non-motor road vehicle
+8450,Other non-motor road vehicle accidents,Other non-motor road vehicle accidents
+8500,Submersion of occupant of small boat,Submersion of occupant of small boat
+8510,Other water transport injury by submersion,Other water transport injury by submersion
+8520,Fall on stairs and ladders in water transport,Fall on stairs and ladders in water transport
+8530,Other falls from one level to another in water transport,Other falls from one level to another in water transport
+8540,Falls on same level in water transport,Falls on same level in water transport
+8550,Unspecified falls in water transport,Unspecified falls in water transport
+8560,Machinery accident in water transport,Machinery accident in water transport
+8570,Other specific accidents in water transport,Other specific accidents in water transport
+8580,Water transport accident of unspecified cause,Water transport accident of unspecified cause
+8600,Accident to personnel in military aircraft,Accident to personnel in military aircraft
+8610,"Injury to occupant by accident to commercial ""transport"" aircraft","Injury to occupant by accident to commercial ""transport"" aircraft"
+8620,"Other injury in commercial ""transport"" aircraft","Other injury in commercial ""transport"" aircraft"
+8630,Injury to occupant by accident to other aircraft,Injury to occupant by accident to other aircraft
+8640,Aircraft accident at airfield to person not in aircraft,Aircraft accident at airfield to person not in aircraft
+8650,Aircraft accident elsewhere to person not in aircraft,Aircraft accident elsewhere to person not in aircraft
+8660,Other and unspecified aircraft accidents,Other and unspecified aircraft accidents
+8700,Accidental poisoning by morphine and other opium derivaties,Home (including home premises and any noninstitutional place of residence)
+8701,Accidental poisoning by morphine and other opium derivaties,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8702,Accidental poisoning by morphine and other opium derivaties,Mine and quarry
+8703,Accidental poisoning by morphine and other opium derivaties,Industrial place and premises
+8704,Accidental poisoning by morphine and other opium derivaties,Place for recreation and sport
+8705,Accidental poisoning by morphine and other opium derivaties,Street and highway
+8706,Accidental poisoning by morphine and other opium derivaties,Public building
+8707,Accidental poisoning by morphine and other opium derivaties,Resident institution
+8708,Accidental poisoning by morphine and other opium derivaties,Other specified places
+8709,Accidental poisoning by morphine and other opium derivaties,Place not specified
+8710,Accidental poisoning by barbituric acid and deriviatives,Home (including home premises and any noninstitutional place of residence)
+8711,Accidental poisoning by barbituric acid and deriviatives,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8712,Accidental poisoning by barbituric acid and deriviatives,Mine and quarry
+8713,Accidental poisoning by barbituric acid and deriviatives,Industrial place and premises
+8714,Accidental poisoning by barbituric acid and deriviatives,Place for recreation and sport
+8715,Accidental poisoning by barbituric acid and deriviatives,Street and highway
+8716,Accidental poisoning by barbituric acid and deriviatives,Public building
+8717,Accidental poisoning by barbituric acid and deriviatives,Resident institution
+8718,Accidental poisoning by barbituric acid and deriviatives,Other specified places
+8719,Accidental poisoning by barbituric acid and deriviatives,Place not specified
+8720,Accidental poisoning by aspirin and salicylates,Home (including home premises and any noninstitutional place of residence)
+8721,Accidental poisoning by aspirin and salicylates,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8722,Accidental poisoning by aspirin and salicylates,Mine and quarry
+8723,Accidental poisoning by aspirin and salicylates,Industrial place and premises
+8724,Accidental poisoning by aspirin and salicylates,Place for recreation and sport
+8725,Accidental poisoning by aspirin and salicylates,Street and highway
+8726,Accidental poisoning by aspirin and salicylates,Public building
+8727,Accidental poisoning by aspirin and salicylates,Resident institution
+8728,Accidental poisoning by aspirin and salicylates,Other specified places
+8729,Accidental poisoning by aspirin and salicylates,Place not specified
+8730,Accidental poisoning by bromides,Home (including home premises and any noninstitutional place of residence)
+8731,Accidental poisoning by bromides,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8732,Accidental poisoning by bromides,Mine and quarry
+8733,Accidental poisoning by bromides,Industrial place and premises
+8734,Accidental poisoning by bromides,Place for recreation and sport
+8735,Accidental poisoning by bromides,Street and highway
+8736,Accidental poisoning by bromides,Public building
+8737,Accidental poisoning by bromides,Resident institution
+8738,Accidental poisoning by bromides,Other specified places
+8739,Accidental poisoning by bromides,Place not specified
+8740,Accidental poisoning by other analgesic and soporific drugs,Home (including home premises and any noninstitutional place of residence)
+8741,Accidental poisoning by other analgesic and soporific drugs,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8742,Accidental poisoning by other analgesic and soporific drugs,Mine and quarry
+8743,Accidental poisoning by other analgesic and soporific drugs,Industrial place and premises
+8744,Accidental poisoning by other analgesic and soporific drugs,Place for recreation and sport
+8745,Accidental poisoning by other analgesic and soporific drugs,Street and highway
+8746,Accidental poisoning by other analgesic and soporific drugs,Public building
+8747,Accidental poisoning by other analgesic and soporific drugs,Resident institution
+8748,Accidental poisoning by other analgesic and soporific drugs,Other specified places
+8749,Accidental poisoning by other analgesic and soporific drugs,Place not specified
+8750,Accidental poisoning by sulfonamides,Home (including home premises and any noninstitutional place of residence)
+8751,Accidental poisoning by sulfonamides,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8752,Accidental poisoning by sulfonamides,Mine and quarry
+8753,Accidental poisoning by sulfonamides,Industrial place and premises
+8754,Accidental poisoning by sulfonamides,Place for recreation and sport
+8755,Accidental poisoning by sulfonamides,Street and highway
+8756,Accidental poisoning by sulfonamides,Public building
+8757,Accidental poisoning by sulfonamides,Resident institution
+8758,Accidental poisoning by sulfonamides,Other specified places
+8759,Accidental poisoning by sulfonamides,Place not specified
+8760,Accidental poisoning by strychnine,Home (including home premises and any noninstitutional place of residence)
+8761,Accidental poisoning by strychnine,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8762,Accidental poisoning by strychnine,Mine and quarry
+8763,Accidental poisoning by strychnine,Industrial place and premises
+8764,Accidental poisoning by strychnine,Place for recreation and sport
+8765,Accidental poisoning by strychnine,Street and highway
+8766,Accidental poisoning by strychnine,Public building
+8767,Accidental poisoning by strychnine,Resident institution
+8768,Accidental poisoning by strychnine,Other specified places
+8769,Accidental poisoning by strychnine,Place not specified
+8770,"Accidental poisoning by belladonna, hyoscine and atropine",Home (including home premises and any noninstitutional place of residence)
+8771,"Accidental poisoning by belladonna, hyoscine and atropine","Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8772,"Accidental poisoning by belladonna, hyoscine and atropine",Mine and quarry
+8773,"Accidental poisoning by belladonna, hyoscine and atropine",Industrial place and premises
+8774,"Accidental poisoning by belladonna, hyoscine and atropine",Place for recreation and sport
+8775,"Accidental poisoning by belladonna, hyoscine and atropine",Street and highway
+8776,"Accidental poisoning by belladonna, hyoscine and atropine",Public building
+8777,"Accidental poisoning by belladonna, hyoscine and atropine",Resident institution
+8778,"Accidental poisoning by belladonna, hyoscine and atropine",Other specified places
+8779,"Accidental poisoning by belladonna, hyoscine and atropine",Place not specified
+8780,Accidental poisoning by other and unspecified drugs,Home (including home premises and any noninstitutional place of residence)
+8781,Accidental poisoning by other and unspecified drugs,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8782,Accidental poisoning by other and unspecified drugs,Mine and quarry
+8783,Accidental poisoning by other and unspecified drugs,Industrial place and premises
+8784,Accidental poisoning by other and unspecified drugs,Place for recreation and sport
+8785,Accidental poisoning by other and unspecified drugs,Street and highway
+8786,Accidental poisoning by other and unspecified drugs,Public building
+8787,Accidental poisoning by other and unspecified drugs,Resident institution
+8788,Accidental poisoning by other and unspecified drugs,Other specified places
+8789,Accidental poisoning by other and unspecified drugs,Place not specified
+8790,Accidental poisoning by noxious foodstuffs,Home (including home premises and any noninstitutional place of residence)
+8791,Accidental poisoning by noxious foodstuffs,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8792,Accidental poisoning by noxious foodstuffs,Mine and quarry
+8793,Accidental poisoning by noxious foodstuffs,Industrial place and premises
+8794,Accidental poisoning by noxious foodstuffs,Place for recreation and sport
+8795,Accidental poisoning by noxious foodstuffs,Street and highway
+8796,Accidental poisoning by noxious foodstuffs,Public building
+8797,Accidental poisoning by noxious foodstuffs,Resident institution
+8798,Accidental poisoning by noxious foodstuffs,Other specified places
+8799,Accidental poisoning by noxious foodstuffs,Place not specified
+8800,Accidental poisoning by alcohol,Home (including home premises and any noninstitutional place of residence)
+8801,Accidental poisoning by alcohol,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8802,Accidental poisoning by alcohol,Mine and quarry
+8803,Accidental poisoning by alcohol,Industrial place and premises
+8804,Accidental poisoning by alcohol,Place for recreation and sport
+8805,Accidental poisoning by alcohol,Street and highway
+8806,Accidental poisoning by alcohol,Public building
+8807,Accidental poisoning by alcohol,Resident institution
+8808,Accidental poisoning by alcohol,Other specified places
+8809,Accidental poisoning by alcohol,Place not specified
+8810,Accidental poisoning by petroleum products,Home (including home premises and any noninstitutional place of residence)
+8811,Accidental poisoning by petroleum products,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8812,Accidental poisoning by petroleum products,Mine and quarry
+8813,Accidental poisoning by petroleum products,Industrial place and premises
+8814,Accidental poisoning by petroleum products,Place for recreation and sport
+8815,Accidental poisoning by petroleum products,Street and highway
+8816,Accidental poisoning by petroleum products,Public building
+8817,Accidental poisoning by petroleum products,Resident institution
+8818,Accidental poisoning by petroleum products,Other specified places
+8819,Accidental poisoning by petroleum products,Place not specified
+8820,Accidental poisoning by industrial solvents,Home (including home premises and any noninstitutional place of residence)
+8821,Accidental poisoning by industrial solvents,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8822,Accidental poisoning by industrial solvents,Mine and quarry
+8823,Accidental poisoning by industrial solvents,Industrial place and premises
+8824,Accidental poisoning by industrial solvents,Place for recreation and sport
+8825,Accidental poisoning by industrial solvents,Street and highway
+8826,Accidental poisoning by industrial solvents,Public building
+8827,Accidental poisoning by industrial solvents,Resident institution
+8828,Accidental poisoning by industrial solvents,Other specified places
+8829,Accidental poisoning by industrial solvents,Place not specified
+8830,"Accidental poisoning by corrosive aromatics, acids, and caustic alkalis",Home (including home premises and any noninstitutional place of residence)
+8831,"Accidental poisoning by corrosive aromatics, acids, and caustic alkalis","Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8832,"Accidental poisoning by corrosive aromatics, acids, and caustic alkalis",Mine and quarry
+8833,"Accidental poisoning by corrosive aromatics, acids, and caustic alkalis",Industrial place and premises
+8834,"Accidental poisoning by corrosive aromatics, acids, and caustic alkalis",Place for recreation and sport
+8835,"Accidental poisoning by corrosive aromatics, acids, and caustic alkalis",Street and highway
+8836,"Accidental poisoning by corrosive aromatics, acids, and caustic alkalis",Public building
+8837,"Accidental poisoning by corrosive aromatics, acids, and caustic alkalis",Resident institution
+8838,"Accidental poisoning by corrosive aromatics, acids, and caustic alkalis",Other specified places
+8839,"Accidental poisoning by corrosive aromatics, acids, and caustic alkalis",Place not specified
+8840,Accidental poisoning by mercury and its compounds,Home (including home premises and any noninstitutional place of residence)
+8841,Accidental poisoning by mercury and its compounds,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8842,Accidental poisoning by mercury and its compounds,Mine and quarry
+8843,Accidental poisoning by mercury and its compounds,Industrial place and premises
+8844,Accidental poisoning by mercury and its compounds,Place for recreation and sport
+8845,Accidental poisoning by mercury and its compounds,Street and highway
+8846,Accidental poisoning by mercury and its compounds,Public building
+8847,Accidental poisoning by mercury and its compounds,Resident institution
+8848,Accidental poisoning by mercury and its compounds,Other specified places
+8849,Accidental poisoning by mercury and its compounds,Place not specified
+8850,Accidental poisoning by lead and its compounds,Home (including home premises and any noninstitutional place of residence)
+8851,Accidental poisoning by lead and its compounds,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8852,Accidental poisoning by lead and its compounds,Mine and quarry
+8853,Accidental poisoning by lead and its compounds,Industrial place and premises
+8854,Accidental poisoning by lead and its compounds,Place for recreation and sport
+8855,Accidental poisoning by lead and its compounds,Street and highway
+8856,Accidental poisoning by lead and its compounds,Public building
+8857,Accidental poisoning by lead and its compounds,Resident institution
+8858,Accidental poisoning by lead and its compounds,Other specified places
+8859,Accidental poisoning by lead and its compounds,Place not specified
+8860,"Accidental poisoning by arsenic and antimony, and their compounds",Home (including home premises and any noninstitutional place of residence)
+8861,"Accidental poisoning by arsenic and antimony, and their compounds","Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8862,"Accidental poisoning by arsenic and antimony, and their compounds",Mine and quarry
+8863,"Accidental poisoning by arsenic and antimony, and their compounds",Industrial place and premises
+8864,"Accidental poisoning by arsenic and antimony, and their compounds",Place for recreation and sport
+8865,"Accidental poisoning by arsenic and antimony, and their compounds",Street and highway
+8866,"Accidental poisoning by arsenic and antimony, and their compounds",Public building
+8867,"Accidental poisoning by arsenic and antimony, and their compounds",Resident institution
+8868,"Accidental poisoning by arsenic and antimony, and their compounds",Other specified places
+8869,"Accidental poisoning by arsenic and antimony, and their compounds",Place not specified
+8870,Accidental poisoning by fluorides,Home (including home premises and any noninstitutional place of residence)
+8871,Accidental poisoning by fluorides,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8872,Accidental poisoning by fluorides,Mine and quarry
+8873,Accidental poisoning by fluorides,Industrial place and premises
+8874,Accidental poisoning by fluorides,Place for recreation and sport
+8875,Accidental poisoning by fluorides,Street and highway
+8876,Accidental poisoning by fluorides,Public building
+8877,Accidental poisoning by fluorides,Resident institution
+8878,Accidental poisoning by fluorides,Other specified places
+8879,Accidental poisoning by fluorides,Place not specified
+8880,Accidental poisoning by other and unspecified solid and liquid substances,Home (including home premises and any noninstitutional place of residence)
+8881,Accidental poisoning by other and unspecified solid and liquid substances,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8882,Accidental poisoning by other and unspecified solid and liquid substances,Mine and quarry
+8883,Accidental poisoning by other and unspecified solid and liquid substances,Industrial place and premises
+8884,Accidental poisoning by other and unspecified solid and liquid substances,Place for recreation and sport
+8885,Accidental poisoning by other and unspecified solid and liquid substances,Street and highway
+8886,Accidental poisoning by other and unspecified solid and liquid substances,Public building
+8887,Accidental poisoning by other and unspecified solid and liquid substances,Resident institution
+8888,Accidental poisoning by other and unspecified solid and liquid substances,Other specified places
+8889,Accidental poisoning by other and unspecified solid and liquid substances,Place not specified
+8900,Accidental poisoning by utility (illuminating) gas,Home (including home premises and any noninstitutional place of residence)
+8901,Accidental poisoning by utility (illuminating) gas,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8902,Accidental poisoning by utility (illuminating) gas,Mine and quarry
+8903,Accidental poisoning by utility (illuminating) gas,Industrial place and premises
+8904,Accidental poisoning by utility (illuminating) gas,Place for recreation and sport
+8905,Accidental poisoning by utility (illuminating) gas,Street and highway
+8906,Accidental poisoning by utility (illuminating) gas,Public building
+8907,Accidental poisoning by utility (illuminating) gas,Resident institution
+8908,Accidental poisoning by utility (illuminating) gas,Other specified places
+8909,Accidental poisoning by utility (illuminating) gas,Place not specified
+8910,Accidental poisoning by motor vehicle exhaust gas,Home (including home premises and any noninstitutional place of residence)
+8911,Accidental poisoning by motor vehicle exhaust gas,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8912,Accidental poisoning by motor vehicle exhaust gas,Mine and quarry
+8913,Accidental poisoning by motor vehicle exhaust gas,Industrial place and premises
+8914,Accidental poisoning by motor vehicle exhaust gas,Place for recreation and sport
+8915,Accidental poisoning by motor vehicle exhaust gas,Street and highway
+8916,Accidental poisoning by motor vehicle exhaust gas,Public building
+8917,Accidental poisoning by motor vehicle exhaust gas,Resident institution
+8918,Accidental poisoning by motor vehicle exhaust gas,Other specified places
+8919,Accidental poisoning by motor vehicle exhaust gas,Place not specified
+8920,Accidental poisoning by other carbon monoxide gas,Home (including home premises and any noninstitutional place of residence)
+8921,Accidental poisoning by other carbon monoxide gas,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8922,Accidental poisoning by other carbon monoxide gas,Mine and quarry
+8923,Accidental poisoning by other carbon monoxide gas,Industrial place and premises
+8924,Accidental poisoning by other carbon monoxide gas,Place for recreation and sport
+8925,Accidental poisoning by other carbon monoxide gas,Street and highway
+8926,Accidental poisoning by other carbon monoxide gas,Public building
+8927,Accidental poisoning by other carbon monoxide gas,Resident institution
+8928,Accidental poisoning by other carbon monoxide gas,Other specified places
+8929,Accidental poisoning by other carbon monoxide gas,Place not specified
+8930,Accidental poisoning by cyanide gas,Home (including home premises and any noninstitutional place of residence)
+8931,Accidental poisoning by cyanide gas,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8932,Accidental poisoning by cyanide gas,Mine and quarry
+8933,Accidental poisoning by cyanide gas,Industrial place and premises
+8934,Accidental poisoning by cyanide gas,Place for recreation and sport
+8935,Accidental poisoning by cyanide gas,Street and highway
+8936,Accidental poisoning by cyanide gas,Public building
+8937,Accidental poisoning by cyanide gas,Resident institution
+8938,Accidental poisoning by cyanide gas,Other specified places
+8939,Accidental poisoning by cyanide gas,Place not specified
+8940,Accidental poisoning by other specified gases and vapours,Home (including home premises and any noninstitutional place of residence)
+8941,Accidental poisoning by other specified gases and vapours,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8942,Accidental poisoning by other specified gases and vapours,Mine and quarry
+8943,Accidental poisoning by other specified gases and vapours,Industrial place and premises
+8944,Accidental poisoning by other specified gases and vapours,Place for recreation and sport
+8945,Accidental poisoning by other specified gases and vapours,Street and highway
+8946,Accidental poisoning by other specified gases and vapours,Public building
+8947,Accidental poisoning by other specified gases and vapours,Resident institution
+8948,Accidental poisoning by other specified gases and vapours,Other specified places
+8949,Accidental poisoning by other specified gases and vapours,Place not specified
+8950,Accidental poisoning by unspecified gases and vapours,Home (including home premises and any noninstitutional place of residence)
+8951,Accidental poisoning by unspecified gases and vapours,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+8952,Accidental poisoning by unspecified gases and vapours,Mine and quarry
+8953,Accidental poisoning by unspecified gases and vapours,Industrial place and premises
+8954,Accidental poisoning by unspecified gases and vapours,Place for recreation and sport
+8955,Accidental poisoning by unspecified gases and vapours,Street and highway
+8956,Accidental poisoning by unspecified gases and vapours,Public building
+8957,Accidental poisoning by unspecified gases and vapours,Resident institution
+8958,Accidental poisoning by unspecified gases and vapours,Other specified places
+8959,Accidental poisoning by unspecified gases and vapours,Place not specified
+9000,Fall on stairs,Home (including home premises and any noninstitutional place of residence)
+9001,Fall on stairs,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9002,Fall on stairs,Mine and quarry
+9003,Fall on stairs,Industrial place and premises
+9004,Fall on stairs,Place for recreation and sport
+9005,Fall on stairs,Street and highway
+9006,Fall on stairs,Public building
+9007,Fall on stairs,Resident institution
+9008,Fall on stairs,Other specified places
+9009,Fall on stairs,Place not specified
+9010,Fall from ladders,Home (including home premises and any noninstitutional place of residence)
+9011,Fall from ladders,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9012,Fall from ladders,Mine and quarry
+9013,Fall from ladders,Industrial place and premises
+9014,Fall from ladders,Place for recreation and sport
+9015,Fall from ladders,Street and highway
+9016,Fall from ladders,Public building
+9017,Fall from ladders,Resident institution
+9018,Fall from ladders,Other specified places
+9019,Fall from ladders,Place not specified
+9020,Other falls from one level to another,Home (including home premises and any noninstitutional place of residence)
+9021,Other falls from one level to another,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9022,Other falls from one level to another,Mine and quarry
+9023,Other falls from one level to another,Industrial place and premises
+9024,Other falls from one level to another,Place for recreation and sport
+9025,Other falls from one level to another,Street and highway
+9026,Other falls from one level to another,Public building
+9027,Other falls from one level to another,Resident institution
+9028,Other falls from one level to another,Other specified places
+9029,Other falls from one level to another,Place not specified
+9030,Fall on same level,Home (including home premises and any noninstitutional place of residence)
+9031,Fall on same level,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9032,Fall on same level,Mine and quarry
+9033,Fall on same level,Industrial place and premises
+9034,Fall on same level,Place for recreation and sport
+9035,Fall on same level,Street and highway
+9036,Fall on same level,Public building
+9037,Fall on same level,Resident institution
+9038,Fall on same level,Other specified places
+9039,Fall on same level,Place not specified
+9040,Unspecified falls,Home (including home premises and any noninstitutional place of residence)
+9041,Unspecified falls,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9042,Unspecified falls,Mine and quarry
+9043,Unspecified falls,Industrial place and premises
+9044,Unspecified falls,Place for recreation and sport
+9045,Unspecified falls,Street and highway
+9046,Unspecified falls,Public building
+9047,Unspecified falls,Resident institution
+9048,Unspecified falls,Other specified places
+9049,Unspecified falls,Place not specified
+9100,Blow from falling on object,Home (including home premises and any noninstitutional place of residence)
+9101,Blow from falling on object,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9102,Blow from falling on object,Mine and quarry
+9103,Blow from falling on object,Industrial place and premises
+9104,Blow from falling on object,Place for recreation and sport
+9105,Blow from falling on object,Street and highway
+9106,Blow from falling on object,Public building
+9107,Blow from falling on object,Resident institution
+9108,Blow from falling on object,Other specified places
+9109,Blow from falling on object,Place not specified
+9110,Accident caused by vehicle,Home (including home premises and any noninstitutional place of residence)
+9111,Accident caused by vehicle,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9112,Accident caused by vehicle,Mine and quarry
+9113,Accident caused by vehicle,Industrial place and premises
+9114,Accident caused by vehicle,Place for recreation and sport
+9115,Accident caused by vehicle,Street and highway
+9116,Accident caused by vehicle,Public building
+9117,Accident caused by vehicle,Resident institution
+9118,Accident caused by vehicle,Other specified places
+9119,Accident caused by vehicle,Place not specified
+9120,Accident caused by machinery,Home (including home premises and any noninstitutional place of residence)
+9121,Accident caused by machinery,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9122,Accident caused by machinery,Mine and quarry
+9123,Accident caused by machinery,Industrial place and premises
+9124,Accident caused by machinery,Place for recreation and sport
+9125,Accident caused by machinery,Street and highway
+9126,Accident caused by machinery,Public building
+9127,Accident caused by machinery,Resident institution
+9128,Accident caused by machinery,Other specified places
+9129,Accident caused by machinery,Place not specified
+9130,Accident caused by cutting and piercing instruments,Home (including home premises and any noninstitutional place of residence)
+9131,Accident caused by cutting and piercing instruments,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9132,Accident caused by cutting and piercing instruments,Mine and quarry
+9133,Accident caused by cutting and piercing instruments,Industrial place and premises
+9134,Accident caused by cutting and piercing instruments,Place for recreation and sport
+9135,Accident caused by cutting and piercing instruments,Street and highway
+9136,Accident caused by cutting and piercing instruments,Public building
+9137,Accident caused by cutting and piercing instruments,Resident institution
+9138,Accident caused by cutting and piercing instruments,Other specified places
+9139,Accident caused by cutting and piercing instruments,Place not specified
+9140,Accident caused by electric current,Home (including home premises and any noninstitutional place of residence)
+9141,Accident caused by electric current,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9142,Accident caused by electric current,Mine and quarry
+9143,Accident caused by electric current,Industrial place and premises
+9144,Accident caused by electric current,Place for recreation and sport
+9145,Accident caused by electric current,Street and highway
+9146,Accident caused by electric current,Public building
+9147,Accident caused by electric current,Resident institution
+9148,Accident caused by electric current,Other specified places
+9149,Accident caused by electric current,Place not specified
+9150,Accident caused by explosion of pressure vessel,Home (including home premises and any noninstitutional place of residence)
+9151,Accident caused by explosion of pressure vessel,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9152,Accident caused by explosion of pressure vessel,Mine and quarry
+9153,Accident caused by explosion of pressure vessel,Industrial place and premises
+9154,Accident caused by explosion of pressure vessel,Place for recreation and sport
+9155,Accident caused by explosion of pressure vessel,Street and highway
+9156,Accident caused by explosion of pressure vessel,Public building
+9157,Accident caused by explosion of pressure vessel,Resident institution
+9158,Accident caused by explosion of pressure vessel,Other specified places
+9159,Accident caused by explosion of pressure vessel,Place not specified
+9160,Accident caused by fire and explosion of combustible material,Home (including home premises and any noninstitutional place of residence)
+9161,Accident caused by fire and explosion of combustible material,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9162,Accident caused by fire and explosion of combustible material,Mine and quarry
+9163,Accident caused by fire and explosion of combustible material,Industrial place and premises
+9164,Accident caused by fire and explosion of combustible material,Place for recreation and sport
+9165,Accident caused by fire and explosion of combustible material,Street and highway
+9166,Accident caused by fire and explosion of combustible material,Public building
+9167,Accident caused by fire and explosion of combustible material,Resident institution
+9168,Accident caused by fire and explosion of combustible material,Other specified places
+9169,Accident caused by fire and explosion of combustible material,Place not specified
+9170,"Accident caused by hot substance, corrosive liquid, and steam",Home (including home premises and any noninstitutional place of residence)
+9171,"Accident caused by hot substance, corrosive liquid, and steam","Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9172,"Accident caused by hot substance, corrosive liquid, and steam",Mine and quarry
+9173,"Accident caused by hot substance, corrosive liquid, and steam",Industrial place and premises
+9174,"Accident caused by hot substance, corrosive liquid, and steam",Place for recreation and sport
+9175,"Accident caused by hot substance, corrosive liquid, and steam",Street and highway
+9176,"Accident caused by hot substance, corrosive liquid, and steam",Public building
+9177,"Accident caused by hot substance, corrosive liquid, and steam",Resident institution
+9178,"Accident caused by hot substance, corrosive liquid, and steam",Other specified places
+9179,"Accident caused by hot substance, corrosive liquid, and steam",Place not specified
+9180,Accident caused by radiation,Home (including home premises and any noninstitutional place of residence)
+9181,Accident caused by radiation,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9182,Accident caused by radiation,Mine and quarry
+9183,Accident caused by radiation,Industrial place and premises
+9184,Accident caused by radiation,Place for recreation and sport
+9185,Accident caused by radiation,Street and highway
+9186,Accident caused by radiation,Public building
+9187,Accident caused by radiation,Resident institution
+9188,Accident caused by radiation,Other specified places
+9189,Accident caused by radiation,Place not specified
+9190,Accident caused by firearm,Home (including home premises and any noninstitutional place of residence)
+9191,Accident caused by firearm,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9192,Accident caused by firearm,Mine and quarry
+9193,Accident caused by firearm,Industrial place and premises
+9194,Accident caused by firearm,Place for recreation and sport
+9195,Accident caused by firearm,Street and highway
+9196,Accident caused by firearm,Public building
+9197,Accident caused by firearm,Resident institution
+9198,Accident caused by firearm,Other specified places
+9199,Accident caused by firearm,Place not specified
+9200,Foreign body entering eye and adnexa,Home (including home premises and any noninstitutional place of residence)
+9201,Foreign body entering eye and adnexa,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9202,Foreign body entering eye and adnexa,Mine and quarry
+9203,Foreign body entering eye and adnexa,Industrial place and premises
+9204,Foreign body entering eye and adnexa,Place for recreation and sport
+9205,Foreign body entering eye and adnexa,Street and highway
+9206,Foreign body entering eye and adnexa,Public building
+9207,Foreign body entering eye and adnexa,Resident institution
+9208,Foreign body entering eye and adnexa,Other specified places
+9209,Foreign body entering eye and adnexa,Place not specified
+9210,Inhalation and ingestion of food causing obstruction or suffocation,Home (including home premises and any noninstitutional place of residence)
+9211,Inhalation and ingestion of food causing obstruction or suffocation,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9212,Inhalation and ingestion of food causing obstruction or suffocation,Mine and quarry
+9213,Inhalation and ingestion of food causing obstruction or suffocation,Industrial place and premises
+9214,Inhalation and ingestion of food causing obstruction or suffocation,Place for recreation and sport
+9215,Inhalation and ingestion of food causing obstruction or suffocation,Street and highway
+9216,Inhalation and ingestion of food causing obstruction or suffocation,Public building
+9217,Inhalation and ingestion of food causing obstruction or suffocation,Resident institution
+9218,Inhalation and ingestion of food causing obstruction or suffocation,Other specified places
+9219,Inhalation and ingestion of food causing obstruction or suffocation,Place not specified
+9220,Inhalation and ingestion of other object causing obstruction or suffocation,Home (including home premises and any noninstitutional place of residence)
+9221,Inhalation and ingestion of other object causing obstruction or suffocation,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9222,Inhalation and ingestion of other object causing obstruction or suffocation,Mine and quarry
+9223,Inhalation and ingestion of other object causing obstruction or suffocation,Industrial place and premises
+9224,Inhalation and ingestion of other object causing obstruction or suffocation,Place for recreation and sport
+9225,Inhalation and ingestion of other object causing obstruction or suffocation,Street and highway
+9226,Inhalation and ingestion of other object causing obstruction or suffocation,Public building
+9227,Inhalation and ingestion of other object causing obstruction or suffocation,Resident institution
+9228,Inhalation and ingestion of other object causing obstruction or suffocation,Other specified places
+9229,Inhalation and ingestion of other object causing obstruction or suffocation,Place not specified
+9230,Foreign body entering other orifice,Home (including home premises and any noninstitutional place of residence)
+9231,Foreign body entering other orifice,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9232,Foreign body entering other orifice,Mine and quarry
+9233,Foreign body entering other orifice,Industrial place and premises
+9234,Foreign body entering other orifice,Place for recreation and sport
+9235,Foreign body entering other orifice,Street and highway
+9236,Foreign body entering other orifice,Public building
+9237,Foreign body entering other orifice,Resident institution
+9238,Foreign body entering other orifice,Other specified places
+9239,Foreign body entering other orifice,Place not specified
+9240,Accidental mechanical suffocation in bed and cradle,Home (including home premises and any noninstitutional place of residence)
+9241,Accidental mechanical suffocation in bed and cradle,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9242,Accidental mechanical suffocation in bed and cradle,Mine and quarry
+9243,Accidental mechanical suffocation in bed and cradle,Industrial place and premises
+9244,Accidental mechanical suffocation in bed and cradle,Place for recreation and sport
+9245,Accidental mechanical suffocation in bed and cradle,Street and highway
+9246,Accidental mechanical suffocation in bed and cradle,Public building
+9247,Accidental mechanical suffocation in bed and cradle,Resident institution
+9248,Accidental mechanical suffocation in bed and cradle,Other specified places
+9249,Accidental mechanical suffocation in bed and cradle,Place not specified
+9250,Accidental mechanical suffocation in other and unspecified circumstances,Home (including home premises and any noninstitutional place of residence)
+9251,Accidental mechanical suffocation in other and unspecified circumstances,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9252,Accidental mechanical suffocation in other and unspecified circumstances,Mine and quarry
+9253,Accidental mechanical suffocation in other and unspecified circumstances,Industrial place and premises
+9254,Accidental mechanical suffocation in other and unspecified circumstances,Place for recreation and sport
+9255,Accidental mechanical suffocation in other and unspecified circumstances,Street and highway
+9256,Accidental mechanical suffocation in other and unspecified circumstances,Public building
+9257,Accidental mechanical suffocation in other and unspecified circumstances,Resident institution
+9258,Accidental mechanical suffocation in other and unspecified circumstances,Other specified places
+9259,Accidental mechanical suffocation in other and unspecified circumstances,Place not specified
+9260,Lack of care of infants under 1 year of age,Home (including home premises and any noninstitutional place of residence)
+9261,Lack of care of infants under 1 year of age,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9262,Lack of care of infants under 1 year of age,Mine and quarry
+9263,Lack of care of infants under 1 year of age,Industrial place and premises
+9264,Lack of care of infants under 1 year of age,Place for recreation and sport
+9265,Lack of care of infants under 1 year of age,Street and highway
+9266,Lack of care of infants under 1 year of age,Public building
+9267,Lack of care of infants under 1 year of age,Resident institution
+9268,Lack of care of infants under 1 year of age,Other specified places
+9269,Lack of care of infants under 1 year of age,Place not specified
+9270,Accidents caused by bites and stings of venomous animals and insects,Home (including home premises and any noninstitutional place of residence)
+9271,Accidents caused by bites and stings of venomous animals and insects,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9272,Accidents caused by bites and stings of venomous animals and insects,Mine and quarry
+9273,Accidents caused by bites and stings of venomous animals and insects,Industrial place and premises
+9274,Accidents caused by bites and stings of venomous animals and insects,Place for recreation and sport
+9275,Accidents caused by bites and stings of venomous animals and insects,Street and highway
+9276,Accidents caused by bites and stings of venomous animals and insects,Public building
+9277,Accidents caused by bites and stings of venomous animals and insects,Resident institution
+9278,Accidents caused by bites and stings of venomous animals and insects,Other specified places
+9279,Accidents caused by bites and stings of venomous animals and insects,Place not specified
+9280,Other accidents caused by animals,Home (including home premises and any noninstitutional place of residence)
+9281,Other accidents caused by animals,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9282,Other accidents caused by animals,Mine and quarry
+9283,Other accidents caused by animals,Industrial place and premises
+9284,Other accidents caused by animals,Place for recreation and sport
+9285,Other accidents caused by animals,Street and highway
+9286,Other accidents caused by animals,Public building
+9287,Other accidents caused by animals,Resident institution
+9288,Other accidents caused by animals,Other specified places
+9289,Other accidents caused by animals,Place not specified
+9290,Accidental drowning and submersion,Home (including home premises and any noninstitutional place of residence)
+9291,Accidental drowning and submersion,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9292,Accidental drowning and submersion,Mine and quarry
+9293,Accidental drowning and submersion,Industrial place and premises
+9294,Accidental drowning and submersion,Place for recreation and sport
+9295,Accidental drowning and submersion,Street and highway
+9296,Accidental drowning and submersion,Public building
+9297,Accidental drowning and submersion,Resident institution
+9298,Accidental drowning and submersion,Other specified places
+9299,Accidental drowning and submersion,Place not specified
+9300,High and low air pressure,Home (including home premises and any noninstitutional place of residence)
+9301,High and low air pressure,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9302,High and low air pressure,Mine and quarry
+9303,High and low air pressure,Industrial place and premises
+9304,High and low air pressure,Place for recreation and sport
+9305,High and low air pressure,Street and highway
+9306,High and low air pressure,Public building
+9307,High and low air pressure,Resident institution
+9308,High and low air pressure,Other specified places
+9309,High and low air pressure,Place not specified
+9310,Excessive heat and insolation,Home (including home premises and any noninstitutional place of residence)
+9311,Excessive heat and insolation,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9312,Excessive heat and insolation,Mine and quarry
+9313,Excessive heat and insolation,Industrial place and premises
+9314,Excessive heat and insolation,Place for recreation and sport
+9315,Excessive heat and insolation,Street and highway
+9316,Excessive heat and insolation,Public building
+9317,Excessive heat and insolation,Resident institution
+9318,Excessive heat and insolation,Other specified places
+9319,Excessive heat and insolation,Place not specified
+9320,Excessive cold,Home (including home premises and any noninstitutional place of residence)
+9321,Excessive cold,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9322,Excessive cold,Mine and quarry
+9323,Excessive cold,Industrial place and premises
+9324,Excessive cold,Place for recreation and sport
+9325,Excessive cold,Street and highway
+9326,Excessive cold,Public building
+9327,Excessive cold,Resident institution
+9328,Excessive cold,Other specified places
+9329,Excessive cold,Place not specified
+9330,"Hunger, thirst, and exposure",Home (including home premises and any noninstitutional place of residence)
+9331,"Hunger, thirst, and exposure","Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9332,"Hunger, thirst, and exposure",Mine and quarry
+9333,"Hunger, thirst, and exposure",Industrial place and premises
+9334,"Hunger, thirst, and exposure",Place for recreation and sport
+9335,"Hunger, thirst, and exposure",Street and highway
+9336,"Hunger, thirst, and exposure",Public building
+9337,"Hunger, thirst, and exposure",Resident institution
+9338,"Hunger, thirst, and exposure",Other specified places
+9339,"Hunger, thirst, and exposure",Place not specified
+9340,Cataclysm,Home (including home premises and any noninstitutional place of residence)
+9341,Cataclysm,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9342,Cataclysm,Mine and quarry
+9343,Cataclysm,Industrial place and premises
+9344,Cataclysm,Place for recreation and sport
+9345,Cataclysm,Street and highway
+9346,Cataclysm,Public building
+9347,Cataclysm,Resident institution
+9348,Cataclysm,Other specified places
+9349,Cataclysm,Place not specified
+9350,Lightning,Home (including home premises and any noninstitutional place of residence)
+9351,Lightning,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9352,Lightning,Mine and quarry
+9353,Lightning,Industrial place and premises
+9354,Lightning,Place for recreation and sport
+9355,Lightning,Street and highway
+9356,Lightning,Public building
+9357,Lightning,Resident institution
+9358,Lightning,Other specified places
+9359,Lightning,Place not specified
+9360,Other and unspecified accidents,Home (including home premises and any noninstitutional place of residence)
+9361,Other and unspecified accidents,"Farm (including buildings and land under cultivation, but excluding farm home and home premises)"
+9362,Other and unspecified accidents,Mine and quarry
+9363,Other and unspecified accidents,Industrial place and premises
+9364,Other and unspecified accidents,Place for recreation and sport
+9365,Other and unspecified accidents,Street and highway
+9366,Other and unspecified accidents,Public building
+9367,Other and unspecified accidents,Resident institution
+9368,Other and unspecified accidents,Other specified places
+9369,Other and unspecified accidents,Place not specified
+9400,Generalized vaccinia following vaccination,Generalized vaccinia following vaccination
+9410,Postvaccinal encephalitis,Postvaccinal encephalitis
+9420,Other complications of smallpox vaccination,Other complications of smallpox vaccination
+9430,Post-immunization jaundice and hepatitis,Post-immunization jaundice and hepatitis
+9440,Other complications of prophylactic inoculation,Other complications of prophylactic inoculation
+9450,Complications of anaesthesia for non-therapeutic purpose,Complications of anaesthesia for non-therapeutic purpose
+9460,Other complications due to non-therapeutic medical and surgical procedures,Other complications due to non-therapeutic medical and surgical procedures
+9500,Therapeutic misadventure in surgical treatment,Therapeutic misadventure in surgical treatment
+9510,Therapeutic misadventure in infusion or transfusion,Therapeutic misadventure in infusion or transfusion
+9520,Therapeutic misadventure in local applications,Therapeutic misadventure in local applications
+9530,Therapeutic misadventure in administration of drugs and biologicals,Therapeutic misadventure in administration of drugs and biologicals
+9540,Therapeutic misadventure in anaesthesia,Therapeutic misadventure in anaesthesia
+9550,Other and unspecified therapeutic misadventure,Other and unspecified therapeutic misadventure
+9560,Late complication in surgical operation,Late complication in surgical operation
+9570,Late complication of amputation stump,Late complication of amputation stump
+9580,Late complication of irradiation,Late complication of irradiation
+9590,Late complications of other forms of treatment,Late complications of other forms of treatment
+9600,Late effect of motor vehicle accident,Late effect of motor vehicle accident
+9610,Late effect of accidental poisoning,Late effect of accidental poisoning
+9620,Late effect of other accidental injury,Late effect of other accidental injury
+9630,Late effect of self-inflicted injury,Late effect of self-inflicted injury
+9640,Late effect of injury purposely inflicted by another person (not in war),Late effect of injury purposely inflicted by another person (not in war)
+9650,Late effect of injuries due to war operations,Late effect of injuries due to war operations
+9700,Suicide and self-inflicted poisoning by analgesic and soporific substances,Suicide and self-inflicted poisoning by analgesic and soporific substances
+9710,Suicide and self-inflicted poisoning by other solid and liquid substances,Suicide and self-inflicted poisoning by other solid and liquid substances
+9720,Suicide and self-inflicted poisoning by gases in domestic use,Suicide and self-inflicted poisoning by gases in domestic use
+9730,Suicide and self-inflicted poisoning by other gases,Suicide and self-inflicted poisoning by other gases
+9740,Suicide and self-inflicted injury by hanging and strangulation,Suicide and self-inflicted injury by hanging and strangulation
+9750,Suicide and self-inflicted injury by submersion (drowning),Suicide and self-inflicted injury by submersion (drowning)
+9760,Suicide and self-inflicted injury by firearms and explosives,Suicide and self-inflicted injury by firearms and explosives
+9770,Suicide and self-inflicted by cutting and piercing instruments,Suicide and self-inflicted by cutting and piercing instruments
+9780,Suicide and self-inflicted injury by jumping from high place,Suicide and self-inflicted injury by jumping from high place
+9790,Suicide and self-inflicted by other and unspecified means,Suicide and self-inflicted by other and unspecified means
+9800,Non-accidental poisoning by another person,Non-accidental poisoning by another person
+9810,Assault by firearm and explosive,Assault by firearm and explosive
+9820,Assault by cutting and piercing instruments,Assault by cutting and piercing instruments
+9830,Assault by other means,Assault by other means
+9840,Injury by intervention of police,Injury by intervention of police
+9850,Execution,Execution
+9900,Injury due to war operations by gas and chemicals,Injury due to war operations by gas and chemicals
+9910,Injury due to war operations by gunshot,Injury due to war operations by gunshot
+9920,Injury due to war operations by grenade and land mine,Injury due to war operations by grenade and land mine
+9930,Injury due to war operations by bomb,Injury due to war operations by bomb
+9940,"Injury due to war operations by marine mine, depth charge, and torpedo","Injury due to war operations by marine mine, depth charge, and torpedo"
+9950,Injury due to war operations by explosion of artillery shell,Injury due to war operations by explosion of artillery shell
+9960,Injury due to war operations by explosion of undetermined origin,Injury due to war operations by explosion of undetermined origin
+9970,Injury due to war operations by aircraft destruction,Injury due to war operations by aircraft destruction
+9980,Injury due to war operations by other and unspecified means,Injury due to war operations by other and unspecified means
+9990,Injury due to war operations but occurring after cessation of hostilities,Injury due to war operations but occurring after cessation of hostilities
+4811,"Influenza with other respiratory manifestations, and influenza unqualified",With mention of respiratory complications

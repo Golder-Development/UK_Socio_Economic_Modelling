@@ -162,7 +162,8 @@ def _clean_and_filter_years(df, year_range=None):
 
 
 def load_icd_file(xlsx_path, year_range=None):
-    """Load ICD files reliably, merging all relevant sheets (2+ for ICD2–ICD6, 3+ for ICD7+)."""
+    """Load ICD files reliably, merging all relevant sheets (2+ for ICD2–ICD6, 3+ for ICD7+).
+    Preserves ICD codes in their original format (including alphanumeric like '100A')."""
     logger.info(f"Loading {xlsx_path.name}")
 
     xls = pd.ExcelFile(xlsx_path)
@@ -176,7 +177,7 @@ def load_icd_file(xlsx_path, year_range=None):
 
     for sheet_name in data_sheets:
         try:
-            # First attempt: standard parse with inferred header
+            # First attempt: standard parse with inferred header (NO dtype to preserve original format)
             df = pd.read_excel(xlsx_path, sheet_name=sheet_name)
             if df is not None and len(df) > 0:
                 # detect year columns in a case-insensitive way
@@ -591,7 +592,18 @@ def standardize_mortality_data(df):
             combined = combined.combine_first(df[c])
         if 'cause' in df.columns:
             combined = combined.combine_first(df['cause'])
-        df['cause'] = combined.astype(str).str.strip()
+        
+        # Convert to string carefully to preserve alphanumeric codes and remove .0 from pure numbers
+        def clean_code(val):
+            if pd.isna(val):
+                return 'Unknown'
+            s = str(val).strip()
+            # Remove trailing .0 from numeric strings (e.g., '100.0' -> '100')
+            if s.endswith('.0') and s[:-2].replace('-', '').isdigit():
+                return s[:-2]
+            return s
+        
+        df['cause'] = combined.apply(clean_code)
     elif 'cause' in df.columns:
         df['cause'] = df['cause'].fillna('Unknown').astype(str).str.strip()
     else:
@@ -740,20 +752,24 @@ def main():
     yearly.to_csv(output_yearly, index=False)
     logger.info(f"✓ Saved yearly totals: {output_yearly.name} ({len(yearly)} records)")
 
-    # Add descriptions to data before saving
-    all_data_with_desc = add_cause_descriptions(all_data)
+    # DO NOT add descriptions here - preserve raw ICD codes
+    # Descriptions will be added later with proper ICD version filtering during classification
+    logger.info("Skipping description merge to preserve original ICD codes from source files")
 
-    # Save comprehensive by all dimensions (zipped CSV)
+    # Save comprehensive by all dimensions (zipped CSV) - WITHOUT descriptions to preserve raw codes
+    # Descriptions will be added later with proper ICD version filtering during classification step
     _write_df_to_zip(
-        all_data_with_desc,
+        all_data,  # Use original data without description merge to preserve exact codes
         output_comprehensive_zip,
         "uk_mortality_comprehensive_1901_2025.csv",
     )
-    logger.info(f"✓ Saved comprehensive data: {output_comprehensive_zip.name} ({len(all_data_with_desc)} records)")
+    logger.info(f"✓ Saved comprehensive data: {output_comprehensive_zip.name} ({len(all_data)} records)")
+    logger.warning("NOTE: Descriptions NOT added to preserve original ICD codes")
+    logger.warning("      Descriptions will be added later with proper ICD version filtering")
 
-    # Save by cause (filter to only where cause is defined)
-    if 'cause' in all_data_with_desc.columns:
-        by_cause = all_data_with_desc[all_data_with_desc['cause'] != 'All causes'].copy()
+    # Save by cause (filter to only where cause is defined) - also without descriptions
+    if 'cause' in all_data.columns:
+        by_cause = all_data[all_data['cause'] != 'All causes'].copy()
         if not by_cause.empty:
             _write_df_to_zip(
                 by_cause,

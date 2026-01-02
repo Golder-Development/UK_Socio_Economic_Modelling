@@ -1,0 +1,30 @@
+term,weight,match_type,source,notes
+maternal,7,token,core,
+puerperal,9,token,core,
+pregnancy,8,token,core,
+childbirth,8,token,core,
+delivery,8,token,core,
+abortion,8,token,core,
+ectopic,8,token,core,
+stillbirth,9,token,core,
+newborn,9,token,core,
+neonatal,9,token,core,
+infancy,8,token,core,
+immaturity,9,token,core,
+at birth,9,phrase,core,
+early infancy,9,phrase,core,
+teething,6,token,early-life,Early childhood mortality
+want of breast milk,8,phrase,early-life,Nutritional deficiency in infancy
+not puerperal,-50,phrase,exclusion,Explicit exclusion of puerperal
+non-puerperal,-50,phrase,exclusion,Explicit exclusion of puerperal
+5yrs and over,-50,phrase,exclusion,Explicit exclusion when age outside early-life
+other infantile convulsions,8,phrase,early-life,Infantile convulsions category
+under 2yrs old,9,phrase,early-life,Explicit early-life age range
+menorrhagia,8,token,core,Heavy menstrual bleeding
+diseases of umbilicus,8,phrase,early-life,Neonatal umbilical conditions
+premature birth,9,phrase,early-life,Prematurity
+croup,7,token,early-life,Respiratory infection in young children
+placenta praevia,9,phrase,core,Placenta covers cervical os
+"placenta praevia, flooding",9,phrase,core,Placenta praevia with haemorrhage
+
+

@@ -1,0 +1,6 @@
+term,weight,match_type,source,notes
+old age,9,phrase,core,
+senility,9,token,core,
+senile,8,token,core,
+senile decay,9,phrase,core,
+age related,7,phrase,core,

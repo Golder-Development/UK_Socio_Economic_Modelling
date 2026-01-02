@@ -1,0 +1,318 @@
+﻿icdcode,description
+1,Enteric fever
+2,Typhus
+3A,Relapsing fever
+3B,Mediterranean fever
+4,Malaria
+5,Small-pox
+6,Measles
+7,Scarlet fever
+8,Whooping cough
+9A,Diphtheria
+9B,Membranous laryngitis
+9C,Croup
+10,Influenza
+11,Miliary fever
+12,Asiatic cholera
+13,Cholera nostras
+14,Dysentery
+15,Plague
+16,Yellow fever
+17,Leprosy
+18,Erysipelas
+19A,Mumps
+19B,German measles
+19C,Varicella
+19D,Other epidemic diseases
+20A,Pyaemia
+20B,Septicaemia
+20C,Vaccinia
+21,Glanders
+22,Anthrax (Splenic fever)
+23,Rabies
+24,Tetanus
+25A,Actinomycosis
+25B,Other mycoses
+26,Pellagra
+27,Beri-beri
+28A,Pulmonary tuberculosis
+28B,Phthisis (not def. as t.b.)
+29A,Acute phthisis
+29B,Acute miliary t.b.
+30,Tuberculous meningitis
+31A,Tabes mesenterica
+31B,Other peritoneal & intestinal tubercle
+32,T.b. of spinal column
+33,T.b. of joints
+34A,Lupus
+34B,Scrofula
+34C,T.b. of other organs
+35,Disseminated t.b.
+36A,Rickets
+36B,Other forms of bone softening
+37,Syphilis
+38A,Soft chancre
+38B,Gonococcus infection
+38C,Purulent ophthalmia
+39,Cancer of buccal cavity
+40,"Cancer of stomach, liver, etc"
+41,"Cancer of peritoneum, intestines & rectum"
+42,Cancer of female genital organs
+43,Cancer of breast
+44,Cancer of skin
+45,Cancer of other or unspecified organs
+46A,Angioma
+46B,Adenoma
+46C,Other tumours (situation undefined)
+47,Rheumatic fever
+48A,Chronic rheumatism
+48B,Osteo-arthritis
+48C,Gout
+49,Scurvy
+50,Diabetes
+51,Exophthalmic goitre
+52,Addison's disease
+53A,Leucocythaemia (Leuchaemia)
+53B,Lymphadenoma
+54,"Anaemia, Chlorosis"
+55A,Diabetes insipidus
+55B,Purpura
+55C,Haemophilia
+55D,Other general diseases
+56,Alcoholism (acute or chronic)
+57A,Occupational lead poisoning
+57B,Non-occupational lead poisoning
+58,Other chronic occupational poisonings
+59,Other chronic poisonings
+60,Encephalitis
+61A,Cerebro-spinal fever
+61B,Posterior basal meningitis
+61C,"Meningitis, other forms"
+62,Locomotor ataxy
+63A,"Diseases of the spinal cord formerly classed to ""Other nervous affections"""
+63B,Poliomyelitis
+63C,Other diseases of the spinal cord
+64A,Apoplexy
+64B,Serious apoplexy & oedema of brain
+64C,Cerebral congestion
+64D,Cerebral atheroma
+64E,Cerebral haemorrhage
+65,Softening of brain
+66A,Hemiplegia
+66B,Paraplegia
+66C,Other forms of paralysis
+67,General paralysis of insane
+68,Other forms of mental alienation
+69,Epilepsy
+70A,Epileptiform convulsions (5yrs and over)
+70B,Other convulsions (non-puerperal; 5yrs and over)
+71A,Convulsions with teething
+71B,Other infantile convulsions (<5yrs.)
+72,Chorea
+73A,"Hysteria, neuralgia, sciatica"
+73B,Neuritis
+74A,"Idiocy, imbecility"
+74B,Cretinism
+74C,Cerebral tumour
+74D,Other diseases of nervous system
+75,Diseases of eyes & annexa
+76A,Mastoid disease
+76B,Other diseases of ears
+77,Pericarditis
+78A,Acute myocarditis
+78B,Infective endocarditis
+78C,Other acute endocarditis
+79A,Valvular disease
+79B,Fatty degeneration of heart
+79C,Other organic disease of heart
+80,Angina pectoris
+81A,Aneurysm
+81B,Arterial sclerosis
+81C,Other diseases of arteries
+82A,Cerebral embolism and thrombosis
+82B,Other embolism & thrombosis
+83A,Phlebitis
+83B,Varix
+83C,Pylephlebitis
+83D,Variocele
+84A,Status lymphaticus
+84B,Other diseases of lymphatic system
+85A,Functional disease of heart
+85B,Epistaxis
+85C,Other diseases of circulatory system
+86,Diseases of the nasal fossae
+87A,Laryngismus stridulus
+87B,Laryngitis
+87C,Other diseases of larynx
+88,Diseases of thyroid body
+89&90A,"Bronchiectasis, bronchial catarrh, etc."
+89&90B,Other bronchitis
+91,Broncho-pneumonia
+92A,Lobar pneumonia
+92B,Pneumonia (type not stated)
+93A,Empyema
+93B,Other pleurisy
+94A,Pulmonary apoplexy & infarction
+94B,Pulmonary oedema & congestion
+94C,Hypostatic pneumonia
+94D,Collapse of lung (> 3 mths.)
+95,Gangrene of lung
+96,Asthma
+97,Pulmonary emphysema
+98A,Fibroid disease of lung
+98B,Other diseases of respiratory system
+99A,Diseases of teeth & gums
+99B,"Thrush, Aphthous stomatitis"
+99C,Parotitis
+99D,Other diseases of mouth & annexa
+100A,Tonsillitis
+100B,Ludwig's angina
+100C,Other diseases of pharynx
+101,Diseases of oesophagus
+102,Perforating ulcer of stomach
+103A,Inflammation of stomach
+103B,Other diseases of stomach
+104A,Infective enteritis
+104B,Diarrhoea - not returned as infective - under 2yrs old
+104C,Enteritis - not returned as infective - under 2yrs old
+104D,Gastro-enteritis - not returned as infective - under 2yrs old
+104E,Dyspepsia - under 2yrs old
+104F,Colic - under 2yrs old
+104G,Ulceration of intestines - under 2yrs old
+104H,Duodenal ulcer - under 2yrs old
+105A,Infective enteritis - over 2yrs old
+105B,Diarrhoea - not returned as infective - over 2yrs old
+105C,Enteritis - not returned as infective - over 2yrs old
+105D,Gastro-enteritis - not returned as infective - over 2yrs old
+105E,Dyspepsia - under 2yrs old
+105F,Colic - over 2yrs old
+105G,Ulceration of intestines - over 2yrs old
+105H,Duodenal ulcer - over 2yrs old
+106,Ankylostomiasis
+107,Other intestinal parasites
+108,Appendicitis
+109A,Hernia
+109B,Intestinal obstruction
+110,Other diseases of intestines
+111,Acute yellow atrophy of liver
+112,Hydatid of liver
+113A,Cirrhosis of liver (not alcoholic)
+113B,Cirrhosis of liver (alcoholic)
+113C,"Diseases formerly classed to ""Other diseases of liver & gall bladder"""
+114,Biliary calculi
+115,Other diseases of liver
+116A,Infarction of spleen
+116B,Other diseases of spleen
+117,Peritonitis (cause unstated)
+118A,"Abdominal abscess, sub phrenic abscess"
+118B,Other diseases of digestive system
+119,Acute nephritis
+120A,Bright's disease (as 1901 list)
+120B,"Nephritis (unqualified), >10yrs & uraemia"
+121,Chyluria
+122A,Abscess of kidney
+122B,Cystic disease
+122C,Suppression of urine
+122D,Other diseases of kidney & annexa
+123,Calculi of urinary passages
+124,Diseases of bladder
+125A,Perineal abscess
+125B,"Other diseases of urethra, etc."
+126,Diseases of prostate
+127,Non-veneral diseases of male genital organs
+128A,Menorrhagia
+128B,Other uterine haemorrhage
+129,Uterine tumour (non-cancerous)
+130A,Disorders of menstruation (not menorrhagia)
+130B,Other diseases of uterus
+131,"Ovarian cyst, tumour (non-cancerous)"
+132A,Diseases of ovary (ex.ovarian tumour)
+132B,Other diseases of female genital organs
+133,Non-puerperal diseases of breast (non-cancerous)
+134A,Abortion
+134B,Haemorrhage of pregnancy
+134C,Uncontrollable vomitting
+134D,Ectopic gestation
+134E,Other accidents of pregnancy
+135,Puerperal haemorrhage
+136,Other accidents of childbirth
+137,Puerperal fever
+138A,Puerperal nephritis and uraemia
+138B,Puerperal albuminuria & Bright's disease
+138C,Puerperal convulsions
+139A,Puerperal phlegmasia alba dolens & phlebitis
+139B,Puerperal embolism & sudden death
+140,Puerperal insanity
+141,Puerperal diseases of breast
+142A,Senile gangrene
+142B,"Noma, Gangrene of mouth"
+142C,Noma pudendi
+142D,Other gangrene
+143,"Carbuncle, boil"
+144A,Phlegmon
+144B,Acute abscess
+145A,"Ulcer, bedsore"
+145B,Eczema
+145C,Pemphigus
+145D,Other diseases of integumentary system
+146,Diseases of bones
+147,Diseases of joints
+148,Amputations
+149,Other diseases of locomotor system
+150A,Congenital hydrocephalus
+150B,Phimosis
+150C,Congenital malformation of heart
+150D,Other congenital malformations
+151A,Premature birth
+151B,"Infantile atrophy, debility and marasmus"
+151C,Icterus neonatorum
+151D,Sclerema and oedema neonatorum
+151E,Want of breast milk
+152A,"Diseases of umbilicus, etc."
+152B,Atelectasis
+152C,Injuries at birth
+152D,Cyanosis neonatorum
+153,Lack of care
+154A,Senile dementia
+154B,Senile decay
+155,Suicide by poison
+156,Suicide by asphyxia
+157,Suicide by hanging or strangulation
+158,Suicide by drowning
+159,Suicide by firearms
+160,Suicide by cutting or piercing instruments
+161,Suicide by jumping from high place
+162,Suicide by crushing
+163,Other suicides
+164,Food poisoning
+165,Other acute poisonings
+166,Conflagration
+167,Burns (not conflagration)
+168,Absorption of deleterious gases (not conflagration)
+169,Accidental drowning
+170,Injury by firearms
+171,Injury by cutting or piercing instruments
+172,Injury by fall
+173,Injury in mines & quarries
+174,Injury by machines
+175,"Injury by other crushing (vehicles, railways, landslides, &c)"
+176,Injury by animals
+177,Starvation
+178,Excessive cold
+179,Effects of heat
+180,Lightning
+181,Electricity (not lightning)
+182,Homicide by firearms
+183,Homicide by cutting or piercing instruments
+184,Homicide by other means
+185,Fractures (cause not specified)
+186,Other violence
+187,Dropsy
+188A,Syncope (>1 & <70)
+188B,Sudden death (not otherwise def.)
+189A,Heart failure (>1 & <70)
+189B,"Atrophy, debility, marasmus (>1 & <70)"
+189C,Teething
+189D,Pyrexia
+189E,Other ill-defined deaths
+189F,Cause not specified

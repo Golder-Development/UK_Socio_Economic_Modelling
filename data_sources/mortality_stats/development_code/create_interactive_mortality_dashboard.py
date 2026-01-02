@@ -14,9 +14,10 @@ import zipfile
 BASE_DIR = Path(__file__).parent.parent
 REPO_ROOT = BASE_DIR.parent.parent
 OUTPUT_DIR = REPO_ROOT / "generated_charts"
-# Prefer rebuilt harmonized file from archive (ZIP), then CSV
-# If harmonized data stops at 2000, we will merge in modern 2001-2017 data
-# from the comprehensive by-cause export to keep dashboards complete.
+# Prefer the new L1-classified file first, then fall back to old harmonized files
+# L1 file contains lexicon-based socio-economic classifications (L1_01 through L1_10)
+PREFERRED_L1_ZIP = BASE_DIR / "uk_mortality_by_cause_1901_onwards_L1.zip"
+PREFERRED_L1_CSV = BASE_DIR / "uk_mortality_by_cause_1901_onwards_L1.csv"
 PREFERRED_ZIP = BASE_DIR / "uk_mortality_by_cause_1901_onwards.zip"
 PREFERRED_CSV = BASE_DIR / "uk_mortality_by_cause_1901_onwards.csv"
 HARM_FALLBACK_CSV = BASE_DIR / "uk_mortality_comprehensive_1901_2025_harmonized.csv"
@@ -91,18 +92,33 @@ def _ensure_harmonized_columns(df: pd.DataFrame) -> pd.DataFrame:
             .str.replace('[^a-z0-9]+', '-', regex=True)
             .str.strip('-')
         )
+    # Ensure cause_description exists for later use (for drill-downs, etc.)
+    if 'cause_description' not in df.columns:
+        # If we don't have cause_description but have L1 category name, use that for now
+        if 'harmonized_category_name' in df.columns:
+            df['cause_description'] = df['harmonized_category_name']
+        else:
+            df['cause_description'] = df.get('cause', 'Unknown')
     return df
 
 
 def load_and_prepare_data():
-    """Load mortality data, merging modern ICD-10 rows if harmonized data stops at 2000."""
+    """Load mortality data, preferring L1-classified file, then merging modern ICD-10 rows if needed."""
     print("Loading data...")
 
     harmonized_df = None
     source_used = None
 
-    # 1) Load harmonized (historical) data if available
-    if PREFERRED_ZIP.exists():
+    # 1) Load L1-classified data first (preferred), then harmonized (historical) data if available
+    if PREFERRED_L1_ZIP.exists():
+        harmonized_df = _read_csv_from_zip(PREFERRED_L1_ZIP)
+        source_used = PREFERRED_L1_ZIP.name
+        print(f"Using L1-classified file: {source_used}")
+    elif PREFERRED_L1_CSV.exists():
+        harmonized_df = pd.read_csv(PREFERRED_L1_CSV)
+        source_used = PREFERRED_L1_CSV.name
+        print(f"Using L1-classified file: {source_used}")
+    elif PREFERRED_ZIP.exists():
         harmonized_df = _read_csv_from_zip(PREFERRED_ZIP)
         source_used = PREFERRED_ZIP.name
     elif PREFERRED_CSV.exists():

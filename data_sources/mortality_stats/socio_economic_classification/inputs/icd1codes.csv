@@ -1,0 +1,193 @@
+﻿CODE,DESCRIPTION
+10,Small pox - vaccinated
+20,Small pox - not vaccinated
+30,Small pox - doubtful
+40,Cow-pox and other effects of vaccination
+50,Chicken - pox
+60,Measles (morbilli)
+70,German measles
+80,Scarlet fever
+90,Typhus
+100,Plague
+110,Relapsing fever
+120,Influenza
+130,Whooping cough
+140,Mumps
+150,Diphtheria
+160,Cerebro-spinal fever
+170,Pyrexia (origin uncertain)
+180,Enteric fever
+190,Asiatic cholera
+200,Diarrhoea due to food
+210,"Infective enteritis, epidemic diarrhoea"
+220,Diarrhoea (not otherwise defined)
+230,Dysentry
+240,Tetanus
+250,Malaria
+260,"Rabies, hydrophobia"
+270,Glanders
+280,Anthrax (splenic fever)
+290,Syphilis
+300,Gonorrhoea
+310,Phlegmasia alba dolens
+320,Puerperal septicaemia/septic intoxication
+330,Puerperal pyaemia
+340,Puerperal fever (not otherwise def.)
+350,Infective endocarditis
+360,Pneumonia - lobar
+370,Pneumonia - epidemic
+380,Pneumonia - broncho
+390,Pneumonia - not def.
+400,Erysipelas
+410,"Septicaemia, septic intoxication (not puerperal)"
+420,Pyaemia (not puerperal)
+430,"Phlegmon, carbuncle (not anthrax)"
+440,Phagedaena
+450,Other infective processes
+460,Pulmonary tuberculosis (tuberculous phthisis)
+470,Phthisis (not otherwise def.)
+480,Tuberculous meningitis
+490,Tuberculous peritonitis
+500,Tabes mesenterica
+510,Lupus
+520,Tubercle of other organs
+530,General tuberculosis
+540,Scrofula
+550,Parasitic diseases
+560,Starvation
+570,Scurvy
+580,Alcoholism/delirium tremens
+590,"Opium, morphia habit"
+600,Industrial poisoning by lead
+610,Industrial poisoning by phosphorus
+620,Industrial poisoning by arsenic & other metals
+630,"Rheumatic fever, acute rheumatism"
+640,Rheumatism of heart
+650,Chronic rheumatism
+660,"Rheumatoid arthritis, rheumatic gout"
+670,Gout
+680,Carcinoma
+690,Sarcoma
+700,"Cancer, malignant disease (n.o.d.)"
+710,Rickets
+720,Purpura
+730,"Haemophilia, haemorrhagic diathesis"
+740,"Anaemia, leucocythaemia"
+750,Diabetes mellitus
+760,Premature birth
+770,Congenital hydrocephalus
+780,Other congenital defects
+790,Injury at birth
+800,Atelectasis
+810,Want of breast milk
+820,Teething
+830,"Meningitis, brain inflammation"
+840,Softening of brain
+850,General paralysis of insane
+860,Insanity (not puerperal)
+870,Chorea
+880,Epilepsy
+890,Convulsions
+900,Laryngismus stridulus
+910,Locomotor ataxy
+920,"Paraplegia, diseases of cord"
+930,"Neuritis, peripheral, polyneuritis"
+940,Brain tumour (not specific)
+950,Other diseases of nervous system
+960,"Otitis, mastoid disease"
+970,"Epistaxis, diseases of nose"
+980,"Ophthalmia, eye diseases"
+990,"Valvular disease, endocarditis (not infective)"
+1000,Pericarditis
+1010,Angina pectoris
+1020,Fatty degeneration of heart
+1030,Hypertrophy of heart
+1040,Dilation of heart
+1050,"Syncope, heart disease (not spec.)"
+1060,"Cerebral haemorrhage, cerebral embolism"
+1070,"Apoplexy, hemiplegia"
+1080,Aneurysm
+1090,Senile gangrene
+1100,"Embolism, thrombosis (not cerebral)"
+1110,Phlebitis
+1120,Varicose veins
+1130,Other diseases of blood vessels
+1140,Laryngitis
+1150,Membranous laryngitis (not diphtheritic)
+1160,Croup (not spasmodic nor membranous)
+1170,Other diseases of larynx and trachea
+1180,Bronchitis
+1190,"Emphysema, asthma"
+1200,Pleurisy
+1210,Fibroid disease of lung
+1220,Other diseases of respiratory system
+1230,"Tonsillitis, quinsy"
+1240,"Diseases of mouth, pharynx, oesophagus (not spec.)"
+1250,Gastric ulcer
+1260,"Gastritis, gastric catarrh"
+1270,Other diseases of stomach (not malignant)
+1280,Ulceration of intestines
+1290,Enteritis (not epidemic)
+1300,Gastro-enteritis
+1310,"Appendicitis, perityphlitis"
+1320,Hernia
+1330,Intestinal obstruction
+1340,Other diseases of intestines
+1350,Peritonitis (not puerperal)
+1360,Cirrhosis of liver
+1370,Other diseases of liver and gall bladder
+1380,Other diseases of digestive system
+1390,Diseases of spleen
+1400,Other diseases of lymphatic system
+1410,Diseases of thyroid body
+1420,Diseases of supra renal capsules
+1430,"Acute nephritis, uraemia"
+1440,"Chronic Bright's disease, albuminuria"
+1450,Calculus (not biliary)
+1460,Diseases of bladder and of prostate
+1470,Other diseases of urinary system
+1480,Ovarian tumour (not malignant)
+1490,Other diseases of ovary
+1500,Uterine tumour (not malignant)
+1510,Other diseases of uterus and vagina
+1520,Disorders of menstruation
+1530,Other diseases of generative and mammary organs
+1540,"Abortion, miscarriage"
+1550,Puerperal mania
+1560,Puerperal convulsions
+1570,"Placenta praevia, flooding"
+1580,Other accidents of pregnancy and childbirth
+1590,"Caries, necrosis"
+1600,"Arthritis, periostitis"
+1610,Other diseases of locomotor system
+1620,"Ulcer, bed-sore"
+1630,Eczema
+1640,Pemphigus
+1650,Other diseases of the skin
+1660,"Atrophy, debility"
+1670,Old age
+1680,"Dropsy, ascites, anasarca"
+1690,Tumour
+1700,Abscess
+1710,Haemorrhage
+1720,Sudden death (cause unascertained)
+1730,Other ill-defined causes
+1740,Causes not specified
+1741,Other specified diseases
+1750,Mines and quarries
+1760,Vehicles and horses
+1770,"Ships, boats, docks (not drowning)"
+1780,Building operations
+1790,Machinery
+1800,Weapons and instruments
+1810,Burns and scalds
+1820,"Poisons, poisonous vapours"
+1830,Drowning
+1840,Suffocation
+1850,Falls
+1860,Weather agencies
+1870,Otherwise or not stated
+1880,Battle
+1890,Homicide
+1900,Suicide
+1910,Execution

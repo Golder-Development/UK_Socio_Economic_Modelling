@@ -1,0 +1,1127 @@
+cause,icd_version,cause_description,level1_code,level1_name
+10.0,ICD-1 (1901-1910),Small pox - vaccinated,,
+100.0,ICD-1 (1901-1910),Plague,,
+1000.0,ICD-1 (1901-1910),Pericarditis,,
+1010.0,ICD-1 (1901-1910),Angina pectoris,,
+1020.0,ICD-1 (1901-1910),Fatty degeneration of heart,,
+1030.0,ICD-1 (1901-1910),Hypertrophy of heart,,
+1040.0,ICD-1 (1901-1910),Dilation of heart,,
+1050.0,ICD-1 (1901-1910),"Syncope, heart disease (not spec.)",,
+1060.0,ICD-1 (1901-1910),"Cerebral haemorrhage, cerebral embolism",,
+1070.0,ICD-1 (1901-1910),"Apoplexy, hemiplegia",,
+1080.0,ICD-1 (1901-1910),Aneurysm,,
+1090.0,ICD-1 (1901-1910),Senile gangrene,,
+110.0,ICD-1 (1901-1910),Relapsing fever,,
+1100.0,ICD-1 (1901-1910),"Embolism, thrombosis (not cerebral)",,
+1110.0,ICD-1 (1901-1910),Phlebitis,,
+1120.0,ICD-1 (1901-1910),Varicose veins,,
+1130.0,ICD-1 (1901-1910),Other diseases of blood vessels,,
+1140.0,ICD-1 (1901-1910),Laryngitis,,
+1150.0,ICD-1 (1901-1910),Membranous laryngitis (not diphtheritic),,
+1160.0,ICD-1 (1901-1910),Croup (not spasmodic nor membranous),,
+1170.0,ICD-1 (1901-1910),Other diseases of larynx and trachea,,
+1180.0,ICD-1 (1901-1910),Bronchitis,,
+1190.0,ICD-1 (1901-1910),"Emphysema, asthma",,
+120.0,ICD-1 (1901-1910),Influenza,,
+1200.0,ICD-1 (1901-1910),Pleurisy,,
+1210.0,ICD-1 (1901-1910),Fibroid disease of lung,,
+1220.0,ICD-1 (1901-1910),Other diseases of respiratory system,,
+1230.0,ICD-1 (1901-1910),"Tonsillitis, quinsy",,
+1240.0,ICD-1 (1901-1910),"Diseases of mouth, pharynx, oesophagus (not spec.)",,
+1250.0,ICD-1 (1901-1910),Gastric ulcer,,
+1260.0,ICD-1 (1901-1910),"Gastritis, gastric catarrh",,
+1270.0,ICD-1 (1901-1910),Other diseases of stomach (not malignant),,
+1280.0,ICD-1 (1901-1910),Ulceration of intestines,,
+1290.0,ICD-1 (1901-1910),Enteritis (not epidemic),,
+130.0,ICD-1 (1901-1910),Whooping cough,,
+1300.0,ICD-1 (1901-1910),Gastro-enteritis,,
+1310.0,ICD-1 (1901-1910),"Appendicitis, perityphlitis",,
+1320.0,ICD-1 (1901-1910),Hernia,,
+1330.0,ICD-1 (1901-1910),Intestinal obstruction,,
+1340.0,ICD-1 (1901-1910),Other diseases of intestines,,
+1350.0,ICD-1 (1901-1910),Peritonitis (not puerperal),,
+1360.0,ICD-1 (1901-1910),Cirrhosis of liver,,
+1370.0,ICD-1 (1901-1910),Other diseases of liver and gall bladder,,
+1380.0,ICD-1 (1901-1910),Other diseases of digestive system,,
+1390.0,ICD-1 (1901-1910),Diseases of spleen,,
+140.0,ICD-1 (1901-1910),Mumps,,
+1400.0,ICD-1 (1901-1910),Other diseases of lymphatic system,,
+1410.0,ICD-1 (1901-1910),Diseases of thyroid body,,
+1420.0,ICD-1 (1901-1910),Diseases of supra renal capsules,,
+1430.0,ICD-1 (1901-1910),"Acute nephritis, uraemia",,
+1440.0,ICD-1 (1901-1910),"Chronic Bright's disease, albuminuria",,
+1450.0,ICD-1 (1901-1910),Calculus (not biliary),,
+1460.0,ICD-1 (1901-1910),Diseases of bladder and of prostate,,
+1470.0,ICD-1 (1901-1910),Other diseases of urinary system,,
+1480.0,ICD-1 (1901-1910),Ovarian tumour (not malignant),,
+1490.0,ICD-1 (1901-1910),Other diseases of ovary,,
+150.0,ICD-1 (1901-1910),Diphtheria,,
+1500.0,ICD-1 (1901-1910),Uterine tumour (not malignant),,
+1510.0,ICD-1 (1901-1910),Other diseases of uterus and vagina,,
+1520.0,ICD-1 (1901-1910),Disorders of menstruation,,
+1530.0,ICD-1 (1901-1910),Other diseases of generative and mammary organs,,
+1540.0,ICD-1 (1901-1910),"Abortion, miscarriage",,
+1550.0,ICD-1 (1901-1910),Puerperal mania,,
+1560.0,ICD-1 (1901-1910),Puerperal convulsions,,
+1570.0,ICD-1 (1901-1910),"Placenta praevia, flooding",,
+1580.0,ICD-1 (1901-1910),Other accidents of pregnancy and childbirth,,
+1590.0,ICD-1 (1901-1910),"Caries, necrosis",,
+160.0,ICD-1 (1901-1910),Cerebro-spinal fever,,
+1600.0,ICD-1 (1901-1910),"Arthritis, periostitis",,
+1610.0,ICD-1 (1901-1910),Other diseases of locomotor system,,
+1620.0,ICD-1 (1901-1910),"Ulcer, bed-sore",,
+1630.0,ICD-1 (1901-1910),Eczema,,
+1640.0,ICD-1 (1901-1910),Pemphigus,,
+1650.0,ICD-1 (1901-1910),Other diseases of the skin,,
+1660.0,ICD-1 (1901-1910),"Atrophy, debility",,
+1670.0,ICD-1 (1901-1910),Old age,,
+1680.0,ICD-1 (1901-1910),"Dropsy, ascites, anasarca",,
+1690.0,ICD-1 (1901-1910),Tumour,,
+170.0,ICD-1 (1901-1910),Pyrexia (origin uncertain),,
+1700.0,ICD-1 (1901-1910),Abscess,,
+1710.0,ICD-1 (1901-1910),Haemorrhage,,
+1720.0,ICD-1 (1901-1910),Sudden death (cause unascertained),,
+1730.0,ICD-1 (1901-1910),Other ill-defined causes,,
+1740.0,ICD-1 (1901-1910),Causes not specified,,
+1741.0,ICD-1 (1901-1910),Other specified diseases,,
+1750.0,ICD-1 (1901-1910),Mines and quarries,,
+1760.0,ICD-1 (1901-1910),Vehicles and horses,,
+1770.0,ICD-1 (1901-1910),"Ships, boats, docks (not drowning)",,
+1780.0,ICD-1 (1901-1910),Building operations,,
+1790.0,ICD-1 (1901-1910),Machinery,,
+180.0,ICD-1 (1901-1910),Enteric fever,,
+1800.0,ICD-1 (1901-1910),Weapons and instruments,,
+1810.0,ICD-1 (1901-1910),Burns and scalds,,
+1820.0,ICD-1 (1901-1910),"Poisons, poisonous vapours",,
+1830.0,ICD-1 (1901-1910),Drowning,,
+1840.0,ICD-1 (1901-1910),Suffocation,,
+1850.0,ICD-1 (1901-1910),Falls,,
+1860.0,ICD-1 (1901-1910),Weather agencies,,
+1870.0,ICD-1 (1901-1910),Otherwise or not stated,,
+1880.0,ICD-1 (1901-1910),Battle,,
+1890.0,ICD-1 (1901-1910),Homicide,,
+190.0,ICD-1 (1901-1910),Asiatic cholera,,
+1900.0,ICD-1 (1901-1910),Suicide,,
+1910.0,ICD-1 (1901-1910),Execution,,
+20.0,ICD-1 (1901-1910),Small pox - not vaccinated,,
+200.0,ICD-1 (1901-1910),Diarrhoea due to food,,
+210.0,ICD-1 (1901-1910),"Infective enteritis, epidemic diarrhoea",,
+220.0,ICD-1 (1901-1910),Diarrhoea (not otherwise defined),,
+230.0,ICD-1 (1901-1910),Dysentry,,
+240.0,ICD-1 (1901-1910),Tetanus,,
+250.0,ICD-1 (1901-1910),Malaria,,
+260.0,ICD-1 (1901-1910),"Rabies, hydrophobia",,
+270.0,ICD-1 (1901-1910),Glanders,,
+280.0,ICD-1 (1901-1910),Anthrax (splenic fever),,
+290.0,ICD-1 (1901-1910),Syphilis,,
+30.0,ICD-1 (1901-1910),Small pox - doubtful,,
+300.0,ICD-1 (1901-1910),Gonorrhoea,,
+310.0,ICD-1 (1901-1910),Phlegmasia alba dolens,,
+320.0,ICD-1 (1901-1910),Puerperal septicaemia/septic intoxication,,
+330.0,ICD-1 (1901-1910),Puerperal pyaemia,,
+340.0,ICD-1 (1901-1910),Puerperal fever (not otherwise def.),,
+350.0,ICD-1 (1901-1910),Infective endocarditis,,
+360.0,ICD-1 (1901-1910),Pneumonia - lobar,,
+370.0,ICD-1 (1901-1910),Pneumonia - epidemic,,
+380.0,ICD-1 (1901-1910),Pneumonia - broncho,,
+390.0,ICD-1 (1901-1910),Pneumonia - not def.,,
+40.0,ICD-1 (1901-1910),Cow-pox and other effects of vaccination,,
+400.0,ICD-1 (1901-1910),Erysipelas,,
+410.0,ICD-1 (1901-1910),"Septicaemia, septic intoxication (not puerperal)",,
+420.0,ICD-1 (1901-1910),Pyaemia (not puerperal),,
+430.0,ICD-1 (1901-1910),"Phlegmon, carbuncle (not anthrax)",,
+440.0,ICD-1 (1901-1910),Phagedaena,,
+450.0,ICD-1 (1901-1910),Other infective processes,,
+460.0,ICD-1 (1901-1910),Pulmonary tuberculosis (tuberculous phthisis),,
+470.0,ICD-1 (1901-1910),Phthisis (not otherwise def.),,
+480.0,ICD-1 (1901-1910),Tuberculous meningitis,,
+490.0,ICD-1 (1901-1910),Tuberculous peritonitis,,
+50.0,ICD-1 (1901-1910),Chicken - pox,,
+500.0,ICD-1 (1901-1910),Tabes mesenterica,,
+510.0,ICD-1 (1901-1910),Lupus,,
+520.0,ICD-1 (1901-1910),Tubercle of other organs,,
+530.0,ICD-1 (1901-1910),General tuberculosis,,
+540.0,ICD-1 (1901-1910),Scrofula,,
+550.0,ICD-1 (1901-1910),Parasitic diseases,,
+560.0,ICD-1 (1901-1910),Starvation,,
+570.0,ICD-1 (1901-1910),Scurvy,,
+580.0,ICD-1 (1901-1910),Alcoholism/delirium tremens,,
+590.0,ICD-1 (1901-1910),"Opium, morphia habit",,
+60.0,ICD-1 (1901-1910),Measles (morbilli),,
+600.0,ICD-1 (1901-1910),Industrial poisoning by lead,,
+610.0,ICD-1 (1901-1910),Industrial poisoning by phosphorus,,
+620.0,ICD-1 (1901-1910),Industrial poisoning by arsenic & other metals,,
+630.0,ICD-1 (1901-1910),"Rheumatic fever, acute rheumatism",,
+640.0,ICD-1 (1901-1910),Rheumatism of heart,,
+650.0,ICD-1 (1901-1910),Chronic rheumatism,,
+660.0,ICD-1 (1901-1910),"Rheumatoid arthritis, rheumatic gout",,
+670.0,ICD-1 (1901-1910),Gout,,
+680.0,ICD-1 (1901-1910),Carcinoma,,
+690.0,ICD-1 (1901-1910),Sarcoma,,
+70.0,ICD-1 (1901-1910),German measles,,
+700.0,ICD-1 (1901-1910),"Cancer, malignant disease (n.o.d.)",,
+710.0,ICD-1 (1901-1910),Rickets,,
+720.0,ICD-1 (1901-1910),Purpura,,
+730.0,ICD-1 (1901-1910),"Haemophilia, haemorrhagic diathesis",,
+740.0,ICD-1 (1901-1910),"Anaemia, leucocythaemia",,
+750.0,ICD-1 (1901-1910),Diabetes mellitus,,
+760.0,ICD-1 (1901-1910),Premature birth,,
+770.0,ICD-1 (1901-1910),Congenital hydrocephalus,,
+780.0,ICD-1 (1901-1910),Other congenital defects,,
+790.0,ICD-1 (1901-1910),Injury at birth,,
+80.0,ICD-1 (1901-1910),Scarlet fever,,
+800.0,ICD-1 (1901-1910),Atelectasis,,
+810.0,ICD-1 (1901-1910),Want of breast milk,,
+820.0,ICD-1 (1901-1910),Teething,,
+830.0,ICD-1 (1901-1910),"Meningitis, brain inflammation",,
+840.0,ICD-1 (1901-1910),Softening of brain,,
+850.0,ICD-1 (1901-1910),General paralysis of insane,,
+860.0,ICD-1 (1901-1910),Insanity (not puerperal),,
+870.0,ICD-1 (1901-1910),Chorea,,
+880.0,ICD-1 (1901-1910),Epilepsy,,
+890.0,ICD-1 (1901-1910),Convulsions,,
+90.0,ICD-1 (1901-1910),Typhus,,
+900.0,ICD-1 (1901-1910),Laryngismus stridulus,,
+910.0,ICD-1 (1901-1910),Locomotor ataxy,,
+920.0,ICD-1 (1901-1910),"Paraplegia, diseases of cord",,
+930.0,ICD-1 (1901-1910),"Neuritis, peripheral, polyneuritis",,
+940.0,ICD-1 (1901-1910),Brain tumour (not specific),,
+950.0,ICD-1 (1901-1910),Other diseases of nervous system,,
+960.0,ICD-1 (1901-1910),"Otitis, mastoid disease",,
+970.0,ICD-1 (1901-1910),"Epistaxis, diseases of nose",,
+980.0,ICD-1 (1901-1910),"Ophthalmia, eye diseases",,
+990.0,ICD-1 (1901-1910),"Valvular disease, endocarditis (not infective)",,
+1.0,ICD-2 (1911-1920),,,
+10.0,ICD-2 (1911-1920),,,
+100A,ICD-2 (1911-1920),Tonsillitis,,
+100B,ICD-2 (1911-1920),Ludwig's angina,,
+100C,ICD-2 (1911-1920),Other diseases of pharynx,,
+101.0,ICD-2 (1911-1920),,,
+102.0,ICD-2 (1911-1920),,,
+103A,ICD-2 (1911-1920),Inflammation of stomach,,
+103B,ICD-2 (1911-1920),Other diseases of stomach,,
+104A,ICD-2 (1911-1920),Infective enteritis,,
+104B,ICD-2 (1911-1920),Diarrhoea - not returned as infective - under 2yrs old,,
+104C,ICD-2 (1911-1920),Enteritis - not returned as infective - under 2yrs old,,
+104D,ICD-2 (1911-1920),Gastro-enteritis - not returned as infective - under 2yrs old,,
+104E,ICD-2 (1911-1920),Dyspepsia - under 2yrs old,,
+104F,ICD-2 (1911-1920),Colic - under 2yrs old,,
+104G,ICD-2 (1911-1920),Ulceration of intestines - under 2yrs old,,
+104H,ICD-2 (1911-1920),Duodenal ulcer - under 2yrs old,,
+105A,ICD-2 (1911-1920),Infective enteritis - over 2yrs old,,
+105B,ICD-2 (1911-1920),Diarrhoea - not returned as infective - over 2yrs old,,
+105C,ICD-2 (1911-1920),Enteritis - not returned as infective - over 2yrs old,,
+105D,ICD-2 (1911-1920),Gastro-enteritis - not returned as infective - over 2yrs old,,
+105F,ICD-2 (1911-1920),Colic - over 2yrs old,,
+105G,ICD-2 (1911-1920),Ulceration of intestines - over 2yrs old,,
+105H,ICD-2 (1911-1920),Duodenal ulcer - over 2yrs old,,
+106.0,ICD-2 (1911-1920),,,
+107.0,ICD-2 (1911-1920),,,
+108.0,ICD-2 (1911-1920),,,
+109A,ICD-2 (1911-1920),Hernia,,
+109B,ICD-2 (1911-1920),Intestinal obstruction,,
+110.0,ICD-2 (1911-1920),,,
+111.0,ICD-2 (1911-1920),,,
+112.0,ICD-2 (1911-1920),,,
+113A,ICD-2 (1911-1920),Cirrhosis of liver (not alcoholic),,
+113B,ICD-2 (1911-1920),Cirrhosis of liver (alcoholic),,
+113C,ICD-2 (1911-1920),"Diseases formerly classed to ""Other diseases of liver & gall bladder""",,
+114.0,ICD-2 (1911-1920),,,
+115.0,ICD-2 (1911-1920),,,
+116A,ICD-2 (1911-1920),Infarction of spleen,,
+116B,ICD-2 (1911-1920),Other diseases of spleen,,
+117.0,ICD-2 (1911-1920),,,
+118A,ICD-2 (1911-1920),"Abdominal abscess, sub phrenic abscess",,
+118B,ICD-2 (1911-1920),Other diseases of digestive system,,
+119.0,ICD-2 (1911-1920),,,
+120A,ICD-2 (1911-1920),Bright's disease (as 1901 list),,
+120B,ICD-2 (1911-1920),"Nephritis (unqualified), >10yrs & uraemia",,
+121.0,ICD-2 (1911-1920),,,
+122A,ICD-2 (1911-1920),Abscess of kidney,,
+122B,ICD-2 (1911-1920),Cystic disease,,
+122C,ICD-2 (1911-1920),Suppression of urine,,
+122D,ICD-2 (1911-1920),Other diseases of kidney & annexa,,
+123.0,ICD-2 (1911-1920),,,
+124.0,ICD-2 (1911-1920),,,
+125A,ICD-2 (1911-1920),Perineal abscess,,
+125B,ICD-2 (1911-1920),"Other diseases of urethra, etc.",,
+126.0,ICD-2 (1911-1920),,,
+127.0,ICD-2 (1911-1920),,,
+128A,ICD-2 (1911-1920),Menorrhagia,,
+128B,ICD-2 (1911-1920),Other uterine haemorrhage,,
+129.0,ICD-2 (1911-1920),,,
+13.0,ICD-2 (1911-1920),,,
+130A,ICD-2 (1911-1920),Disorders of menstruation (not menorrhagia),,
+130B,ICD-2 (1911-1920),Other diseases of uterus,,
+131.0,ICD-2 (1911-1920),,,
+132A,ICD-2 (1911-1920),Diseases of ovary (ex.ovarian tumour),,
+132B,ICD-2 (1911-1920),Other diseases of female genital organs,,
+133.0,ICD-2 (1911-1920),,,
+134A,ICD-2 (1911-1920),Abortion,,
+134B,ICD-2 (1911-1920),Haemorrhage of pregnancy,,
+134C,ICD-2 (1911-1920),Uncontrollable vomitting,,
+134D,ICD-2 (1911-1920),Ectopic gestation,,
+134E,ICD-2 (1911-1920),Other accidents of pregnancy,,
+135.0,ICD-2 (1911-1920),,,
+136.0,ICD-2 (1911-1920),,,
+137.0,ICD-2 (1911-1920),,,
+138A,ICD-2 (1911-1920),Puerperal nephritis and uraemia,,
+138B,ICD-2 (1911-1920),Puerperal albuminuria & Bright's disease,,
+138C,ICD-2 (1911-1920),Puerperal convulsions,,
+139A,ICD-2 (1911-1920),Puerperal phlegmasia alba dolens & phlebitis,,
+139B,ICD-2 (1911-1920),Puerperal embolism & sudden death,,
+14.0,ICD-2 (1911-1920),,,
+140.0,ICD-2 (1911-1920),,,
+141.0,ICD-2 (1911-1920),,,
+142A,ICD-2 (1911-1920),Senile gangrene,,
+142B,ICD-2 (1911-1920),"Noma, Gangrene of mouth",,
+142C,ICD-2 (1911-1920),Noma pudendi,,
+142D,ICD-2 (1911-1920),Other gangrene,,
+143.0,ICD-2 (1911-1920),,,
+144A,ICD-2 (1911-1920),Phlegmon,,
+144B,ICD-2 (1911-1920),Acute abscess,,
+145A,ICD-2 (1911-1920),"Ulcer, bedsore",,
+145B,ICD-2 (1911-1920),Eczema,,
+145C,ICD-2 (1911-1920),Pemphigus,,
+145D,ICD-2 (1911-1920),Other diseases of integumentary system,,
+146.0,ICD-2 (1911-1920),,,
+147.0,ICD-2 (1911-1920),,,
+148.0,ICD-2 (1911-1920),,,
+149.0,ICD-2 (1911-1920),,,
+15.0,ICD-2 (1911-1920),,,
+150A,ICD-2 (1911-1920),Congenital hydrocephalus,,
+150B,ICD-2 (1911-1920),Phimosis,,
+150C,ICD-2 (1911-1920),Congenital malformation of heart,,
+150D,ICD-2 (1911-1920),Other congenital malformations,,
+151A,ICD-2 (1911-1920),Premature birth,,
+151B,ICD-2 (1911-1920),"Infantile atrophy, debility and marasmus",,
+151C,ICD-2 (1911-1920),Icterus neonatorum,,
+151D,ICD-2 (1911-1920),Sclerema and oedema neonatorum,,
+151E,ICD-2 (1911-1920),Want of breast milk,,
+152A,ICD-2 (1911-1920),"Diseases of umbilicus, etc.",,
+152B,ICD-2 (1911-1920),Atelectasis,,
+152C,ICD-2 (1911-1920),Injuries at birth,,
+152D,ICD-2 (1911-1920),Cyanosis neonatorum,,
+153.0,ICD-2 (1911-1920),,,
+154A,ICD-2 (1911-1920),Senile dementia,,
+154B,ICD-2 (1911-1920),Senile decay,,
+155.0,ICD-2 (1911-1920),,,
+156.0,ICD-2 (1911-1920),,,
+157.0,ICD-2 (1911-1920),,,
+158.0,ICD-2 (1911-1920),,,
+159.0,ICD-2 (1911-1920),,,
+16.0,ICD-2 (1911-1920),,,
+160.0,ICD-2 (1911-1920),,,
+161.0,ICD-2 (1911-1920),,,
+162.0,ICD-2 (1911-1920),,,
+163.0,ICD-2 (1911-1920),,,
+164.0,ICD-2 (1911-1920),,,
+165.0,ICD-2 (1911-1920),,,
+166.0,ICD-2 (1911-1920),,,
+167.0,ICD-2 (1911-1920),,,
+168.0,ICD-2 (1911-1920),,,
+169.0,ICD-2 (1911-1920),,,
+17.0,ICD-2 (1911-1920),,,
+170.0,ICD-2 (1911-1920),,,
+171.0,ICD-2 (1911-1920),,,
+172.0,ICD-2 (1911-1920),,,
+173.0,ICD-2 (1911-1920),,,
+174.0,ICD-2 (1911-1920),,,
+175.0,ICD-2 (1911-1920),,,
+176.0,ICD-2 (1911-1920),,,
+177.0,ICD-2 (1911-1920),,,
+178.0,ICD-2 (1911-1920),,,
+179.0,ICD-2 (1911-1920),,,
+18.0,ICD-2 (1911-1920),,,
+180.0,ICD-2 (1911-1920),,,
+181.0,ICD-2 (1911-1920),,,
+182.0,ICD-2 (1911-1920),,,
+183.0,ICD-2 (1911-1920),,,
+184.0,ICD-2 (1911-1920),,,
+185.0,ICD-2 (1911-1920),,,
+186.0,ICD-2 (1911-1920),,,
+187.0,ICD-2 (1911-1920),,,
+188A,ICD-2 (1911-1920),Syncope (>1 & <70),,
+188B,ICD-2 (1911-1920),Sudden death (not otherwise def.),,
+189A,ICD-2 (1911-1920),Heart failure (>1 & <70),,
+189B,ICD-2 (1911-1920),"Atrophy, debility, marasmus (>1 & <70)",,
+189C,ICD-2 (1911-1920),Teething,,
+189D,ICD-2 (1911-1920),Pyrexia,,
+189E,ICD-2 (1911-1920),Other ill-defined deaths,,
+189F,ICD-2 (1911-1920),Cause not specified,,
+19A,ICD-2 (1911-1920),Mumps,,
+19B,ICD-2 (1911-1920),German measles,,
+19C,ICD-2 (1911-1920),Varicella,,
+19D,ICD-2 (1911-1920),Other epidemic diseases,,
+2.0,ICD-2 (1911-1920),,,
+20A,ICD-2 (1911-1920),Pyaemia,,
+20B,ICD-2 (1911-1920),Septicaemia,,
+20C,ICD-2 (1911-1920),Vaccinia,,
+21.0,ICD-2 (1911-1920),,,
+22.0,ICD-2 (1911-1920),,,
+23.0,ICD-2 (1911-1920),,,
+24.0,ICD-2 (1911-1920),,,
+25A,ICD-2 (1911-1920),Actinomycosis,,
+25B,ICD-2 (1911-1920),Other mycoses,,
+26.0,ICD-2 (1911-1920),,,
+27.0,ICD-2 (1911-1920),,,
+28A,ICD-2 (1911-1920),Pulmonary tuberculosis,,
+28B,ICD-2 (1911-1920),Phthisis (not def. as t.b.),,
+29A,ICD-2 (1911-1920),Acute phthisis,,
+29B,ICD-2 (1911-1920),Acute miliary t.b.,,
+30.0,ICD-2 (1911-1920),,,
+31A,ICD-2 (1911-1920),Tabes mesenterica,,
+31B,ICD-2 (1911-1920),Other peritoneal & intestinal tubercle,,
+32.0,ICD-2 (1911-1920),,,
+33.0,ICD-2 (1911-1920),,,
+34A,ICD-2 (1911-1920),Lupus,,
+34B,ICD-2 (1911-1920),Scrofula,,
+34C,ICD-2 (1911-1920),T.b. of other organs,,
+35.0,ICD-2 (1911-1920),,,
+36A,ICD-2 (1911-1920),Rickets,,
+36B,ICD-2 (1911-1920),Other forms of bone softening,,
+37.0,ICD-2 (1911-1920),,,
+38A,ICD-2 (1911-1920),Soft chancre,,
+38B,ICD-2 (1911-1920),Gonococcus infection,,
+38C,ICD-2 (1911-1920),Purulent ophthalmia,,
+39.0,ICD-2 (1911-1920),,,
+3A,ICD-2 (1911-1920),Relapsing fever,,
+3B,ICD-2 (1911-1920),Mediterranean fever,,
+4.0,ICD-2 (1911-1920),,,
+40.0,ICD-2 (1911-1920),,,
+41.0,ICD-2 (1911-1920),,,
+42.0,ICD-2 (1911-1920),,,
+43.0,ICD-2 (1911-1920),,,
+44.0,ICD-2 (1911-1920),,,
+45.0,ICD-2 (1911-1920),,,
+46A,ICD-2 (1911-1920),Angioma,,
+46B,ICD-2 (1911-1920),Adenoma,,
+46C,ICD-2 (1911-1920),Other tumours (situation undefined),,
+47.0,ICD-2 (1911-1920),,,
+48A,ICD-2 (1911-1920),Chronic rheumatism,,
+48B,ICD-2 (1911-1920),Osteo-arthritis,,
+48C,ICD-2 (1911-1920),Gout,,
+49.0,ICD-2 (1911-1920),,,
+5.0,ICD-2 (1911-1920),,,
+50.0,ICD-2 (1911-1920),,,
+51.0,ICD-2 (1911-1920),,,
+52.0,ICD-2 (1911-1920),,,
+53A,ICD-2 (1911-1920),Leucocythaemia (Leuchaemia),,
+53B,ICD-2 (1911-1920),Lymphadenoma,,
+54.0,ICD-2 (1911-1920),,,
+55A,ICD-2 (1911-1920),Diabetes insipidus,,
+55B,ICD-2 (1911-1920),Purpura,,
+55C,ICD-2 (1911-1920),Haemophilia,,
+55D,ICD-2 (1911-1920),Other general diseases,,
+56.0,ICD-2 (1911-1920),,,
+57A,ICD-2 (1911-1920),Occupational lead poisoning,,
+57B,ICD-2 (1911-1920),Non-occupational lead poisoning,,
+58.0,ICD-2 (1911-1920),,,
+59.0,ICD-2 (1911-1920),,,
+6.0,ICD-2 (1911-1920),,,
+60.0,ICD-2 (1911-1920),,,
+61A,ICD-2 (1911-1920),Cerebro-spinal fever,,
+61B,ICD-2 (1911-1920),Posterior basal meningitis,,
+61C,ICD-2 (1911-1920),"Meningitis, other forms",,
+62.0,ICD-2 (1911-1920),,,
+63A,ICD-2 (1911-1920),"Diseases of the spinal cord formerly classed to ""Other nervous affections""",,
+63B,ICD-2 (1911-1920),Poliomyelitis,,
+63C,ICD-2 (1911-1920),Other diseases of the spinal cord,,
+64A,ICD-2 (1911-1920),Apoplexy,,
+64B,ICD-2 (1911-1920),Serious apoplexy & oedema of brain,,
+64C,ICD-2 (1911-1920),Cerebral congestion,,
+64D,ICD-2 (1911-1920),Cerebral atheroma,,
+64E,ICD-2 (1911-1920),Cerebral haemorrhage,,
+65.0,ICD-2 (1911-1920),,,
+66A,ICD-2 (1911-1920),Hemiplegia,,
+66B,ICD-2 (1911-1920),Paraplegia,,
+66C,ICD-2 (1911-1920),Other forms of paralysis,,
+67.0,ICD-2 (1911-1920),,,
+68.0,ICD-2 (1911-1920),,,
+69.0,ICD-2 (1911-1920),,,
+7.0,ICD-2 (1911-1920),,,
+70A,ICD-2 (1911-1920),Epileptiform convulsions (5yrs and over),,
+70B,ICD-2 (1911-1920),Other convulsions (non-puerperal; 5yrs and over),,
+71A,ICD-2 (1911-1920),Convulsions with teething,,
+71B,ICD-2 (1911-1920),Other infantile convulsions (<5yrs.),,
+72.0,ICD-2 (1911-1920),,,
+73A,ICD-2 (1911-1920),"Hysteria, neuralgia, sciatica",,
+73B,ICD-2 (1911-1920),Neuritis,,
+74A,ICD-2 (1911-1920),"Idiocy, imbecility",,
+74B,ICD-2 (1911-1920),Cretinism,,
+74C,ICD-2 (1911-1920),Cerebral tumour,,
+74D,ICD-2 (1911-1920),Other diseases of nervous system,,
+75.0,ICD-2 (1911-1920),,,
+76A,ICD-2 (1911-1920),Mastoid disease,,
+76B,ICD-2 (1911-1920),Other diseases of ears,,
+77.0,ICD-2 (1911-1920),,,
+78A,ICD-2 (1911-1920),Acute myocarditis,,
+78B,ICD-2 (1911-1920),Infective endocarditis,,
+78C,ICD-2 (1911-1920),Other acute endocarditis,,
+79A,ICD-2 (1911-1920),Valvular disease,,
+79B,ICD-2 (1911-1920),Fatty degeneration of heart,,
+79C,ICD-2 (1911-1920),Other organic disease of heart,,
+8.0,ICD-2 (1911-1920),,,
+80.0,ICD-2 (1911-1920),,,
+81A,ICD-2 (1911-1920),Aneurysm,,
+81B,ICD-2 (1911-1920),Arterial sclerosis,,
+81C,ICD-2 (1911-1920),Other diseases of arteries,,
+82A,ICD-2 (1911-1920),Cerebral embolism and thrombosis,,
+82B,ICD-2 (1911-1920),Other embolism & thrombosis,,
+83A,ICD-2 (1911-1920),Phlebitis,,
+83B,ICD-2 (1911-1920),Varix,,
+83C,ICD-2 (1911-1920),Pylephlebitis,,
+83D,ICD-2 (1911-1920),Variocele,,
+84A,ICD-2 (1911-1920),Status lymphaticus,,
+84B,ICD-2 (1911-1920),Other diseases of lymphatic system,,
+85A,ICD-2 (1911-1920),Functional disease of heart,,
+85B,ICD-2 (1911-1920),Epistaxis,,
+85C,ICD-2 (1911-1920),Other diseases of circulatory system,,
+86.0,ICD-2 (1911-1920),,,
+87A,ICD-2 (1911-1920),Laryngismus stridulus,,
+87B,ICD-2 (1911-1920),Laryngitis,,
+87C,ICD-2 (1911-1920),Other diseases of larynx,,
+88.0,ICD-2 (1911-1920),,,
+89&90A,ICD-2 (1911-1920),"Bronchiectasis, bronchial catarrh, etc.",,
+89&90B,ICD-2 (1911-1920),Other bronchitis,,
+91.0,ICD-2 (1911-1920),,,
+92A,ICD-2 (1911-1920),Lobar pneumonia,,
+92B,ICD-2 (1911-1920),Pneumonia (type not stated),,
+93A,ICD-2 (1911-1920),Empyema,,
+93B,ICD-2 (1911-1920),Other pleurisy,,
+94A,ICD-2 (1911-1920),Pulmonary apoplexy & infarction,,
+94B,ICD-2 (1911-1920),Pulmonary oedema & congestion,,
+94C,ICD-2 (1911-1920),Hypostatic pneumonia,,
+94D,ICD-2 (1911-1920),Collapse of lung (> 3 mths.),,
+95.0,ICD-2 (1911-1920),,,
+96.0,ICD-2 (1911-1920),,,
+97.0,ICD-2 (1911-1920),,,
+98A,ICD-2 (1911-1920),Fibroid disease of lung,,
+98B,ICD-2 (1911-1920),Other diseases of respiratory system,,
+99A,ICD-2 (1911-1920),Diseases of teeth & gums,,
+99B,ICD-2 (1911-1920),"Thrush, Aphthous stomatitis",,
+99C,ICD-2 (1911-1920),Parotitis,,
+99D,ICD-2 (1911-1920),Other diseases of mouth & annexa,,
+9A,ICD-2 (1911-1920),Diphtheria,,
+9B,ICD-2 (1911-1920),Membranous laryngitis,,
+9C,ICD-2 (1911-1920),Croup,,
+1a,ICD-3 (1921-1930),Typhoid fever,infectious_communicable,Infectious and Communicable Diseases
+1b,ICD-3 (1921-1930),Paratyphoid fever,infectious_communicable,Infectious and Communicable Diseases
+2,ICD-3 (1921-1930),Typhus fever,infectious_communicable,Infectious and Communicable Diseases
+3,ICD-3 (1921-1930),Relapsing fever,infectious_communicable,Infectious and Communicable Diseases
+4,ICD-3 (1921-1930),Mediterranean fever,infectious_communicable,Infectious and Communicable Diseases
+5,ICD-3 (1921-1930),Malaria,infectious_communicable,Infectious and Communicable Diseases
+6,ICD-3 (1921-1930),Small pox,infectious_communicable,Infectious and Communicable Diseases
+7,ICD-3 (1921-1930),Measles,infectious_communicable,Infectious and Communicable Diseases
+8,ICD-3 (1921-1930),Scarlet fever,infectious_communicable,Infectious and Communicable Diseases
+9,ICD-3 (1921-1930),Whooping cough,infectious_communicable,Infectious and Communicable Diseases
+10,ICD-3 (1921-1930),Diphtheria,infectious_communicable,Infectious and Communicable Diseases
+11a(1),ICD-3 (1921-1930),Influenza with pulmonary and pneumonic complications,infectious_communicable,Infectious and Communicable Diseases
+11a(2),ICD-3 (1921-1930),Influenza with other pulmonary complications,infectious_communicable,Infectious and Communicable Diseases
+11b(1),ICD-3 (1921-1930),Influenza with non-pulmonary complications,infectious_communicable,Infectious and Communicable Diseases
+11b(2),ICD-3 (1921-1930),Influenza without stated complications,infectious_communicable,Infectious and Communicable Diseases
+12,ICD-3 (1921-1930),Miliary fever,infectious_communicable,Infectious and Communicable Diseases
+13,ICD-3 (1921-1930),Mumps,infectious_communicable,Infectious and Communicable Diseases
+14,ICD-3 (1921-1930),Asiatic cholera,infectious_communicable,Infectious and Communicable Diseases
+15,ICD-3 (1921-1930),Cholera nostras,infectious_communicable,Infectious and Communicable Diseases
+16a,ICD-3 (1921-1930),Amoebic dysentery,infectious_communicable,Infectious and Communicable Diseases
+16b,ICD-3 (1921-1930),Bacillary dysentery,infectious_communicable,Infectious and Communicable Diseases
+16c,ICD-3 (1921-1930),Other or unspecified dysentery,infectious_communicable,Infectious and Communicable Diseases
+17a,ICD-3 (1921-1930),Bubonic plague,infectious_communicable,Infectious and Communicable Diseases
+17b,ICD-3 (1921-1930),Pneumonic plague,infectious_communicable,Infectious and Communicable Diseases
+17c,ICD-3 (1921-1930),Septicaemic plague,infectious_communicable,Infectious and Communicable Diseases
+17d,ICD-3 (1921-1930),Plague not otherwise defined,infectious_communicable,Infectious and Communicable Diseases
+18,ICD-3 (1921-1930),Yellow fever,infectious_communicable,Infectious and Communicable Diseases
+19,ICD-3 (1921-1930),Spirochaetosis ictero-haemorrhagica,infectious_communicable,Infectious and Communicable Diseases
+20,ICD-3 (1921-1930),Leprosy,infectious_communicable,Infectious and Communicable Diseases
+21,ICD-3 (1921-1930),Erysipelas,chronic_ncd,Chronic Non-Communicable Diseases
+22(1),ICD-3 (1921-1930),Acute poliomyelitis,chronic_ncd,Chronic Non-Communicable Diseases
+22(2),ICD-3 (1921-1930),Acute polioencephalitis,chronic_ncd,Chronic Non-Communicable Diseases
+23,ICD-3 (1921-1930),Encephalitis lethargica,infectious_communicable,Infectious and Communicable Diseases
+24,ICD-3 (1921-1930),Meningococcal meningitis,infectious_communicable,Infectious and Communicable Diseases
+25(1),ICD-3 (1921-1930),German measles,infectious_communicable,Infectious and Communicable Diseases
+25(2),ICD-3 (1921-1930),Varicella,infectious_communicable,Infectious and Communicable Diseases
+25(3),ICD-3 (1921-1930),Other epidemic and endemic diseases,infectious_communicable,Infectious and Communicable Diseases
+26,ICD-3 (1921-1930),Glanders,infectious_communicable,Infectious and Communicable Diseases
+27,ICD-3 (1921-1930),Anthrax,infectious_communicable,Infectious and Communicable Diseases
+28,ICD-3 (1921-1930),Rabies,infectious_communicable,Infectious and Communicable Diseases
+29,ICD-3 (1921-1930),Tetanus,infectious_communicable,Infectious and Communicable Diseases
+30(1),ICD-3 (1921-1930),Actinomycosis,infectious_communicable,Infectious and Communicable Diseases
+30(2),ICD-3 (1921-1930),Other mycoses,infectious_communicable,Infectious and Communicable Diseases
+31,ICD-3 (1921-1930),Tuberculosis of the respiratory system,infectious_communicable,Infectious and Communicable Diseases
+32,ICD-3 (1921-1930),Tuberculosis of the central nervous system,infectious_communicable,Infectious and Communicable Diseases
+33,ICD-3 (1921-1930),Tuberculosis of the intestines and peritoneum,infectious_communicable,Infectious and Communicable Diseases
+34,ICD-3 (1921-1930),Tuberculosis of the vertebral column,infectious_communicable,Infectious and Communicable Diseases
+35,ICD-3 (1921-1930),Tuberculosis of the joints,infectious_communicable,Infectious and Communicable Diseases
+36a,ICD-3 (1921-1930),Tuberculosis of the skin and subcutaneous tissue,infectious_communicable,Infectious and Communicable Diseases
+36b,ICD-3 (1921-1930),Tuberculosis of the bones (vertebral column excepted),infectious_communicable,Infectious and Communicable Diseases
+36c,ICD-3 (1921-1930),Tuberculosis of the lymphatic system (abdominal glands excepted),infectious_communicable,Infectious and Communicable Diseases
+36d,ICD-3 (1921-1930),Tuberculosis of the genito-urinary system,infectious_communicable,Infectious and Communicable Diseases
+36e,ICD-3 (1921-1930),Tuberculosis of other sites,infectious_communicable,Infectious and Communicable Diseases
+37a,ICD-3 (1921-1930),Disseminated tuberculosis acute,infectious_communicable,Infectious and Communicable Diseases
+37b,ICD-3 (1921-1930),Disseminated tuberculosis chronic or unstated,infectious_communicable,Infectious and Communicable Diseases
+38,ICD-3 (1921-1930),Syphilis,infectious_communicable,Infectious and Communicable Diseases
+39,ICD-3 (1921-1930),Soft chancre,infectious_communicable,Infectious and Communicable Diseases
+40(1),ICD-3 (1921-1930),Gonococcal infection (ophthalmia excepted),infectious_communicable,Infectious and Communicable Diseases
+40(2),ICD-3 (1921-1930),Gonorrhoeal or purulent ophthalmia,infectious_communicable,Infectious and Communicable Diseases
+41*,ICD-3 (1921-1930),"Purulent infection, septicaemia",infectious_communicable,Infectious and Communicable Diseases
+42(1),ICD-3 (1921-1930),Vaccinia*,chronic_ncd,Chronic Non-Communicable Diseases
+42(2),ICD-3 (1921-1930),Other infectious diseases,infectious_communicable,Infectious and Communicable Diseases
+43,ICD-3 (1921-1930),Cancer of the buccal cavity,chronic_ncd,Chronic Non-Communicable Diseases
+44,ICD-3 (1921-1930),"Cancer of the pharynx, oesophagus, stomach, liver and annexa",chronic_ncd,Chronic Non-Communicable Diseases
+45,ICD-3 (1921-1930),"Cancer of the peritoneum, intestines and rectum",chronic_ncd,Chronic Non-Communicable Diseases
+46,ICD-3 (1921-1930),Cancer of the female genital organs,chronic_ncd,Chronic Non-Communicable Diseases
+47,ICD-3 (1921-1930),Cancer of the breast,chronic_ncd,Chronic Non-Communicable Diseases
+48,ICD-3 (1921-1930),Cancer of the skin,chronic_ncd,Chronic Non-Communicable Diseases
+49,ICD-3 (1921-1930),Cancer of other or unspecifed organs,chronic_ncd,Chronic Non-Communicable Diseases
+50,ICD-3 (1921-1930),Tumours not malignant (brain and female genital organs excepted),chronic_ncd,Chronic Non-Communicable Diseases
+51,ICD-3 (1921-1930),Rheumatic fever,chronic_ncd,Chronic Non-Communicable Diseases
+52(1),ICD-3 (1921-1930),"Chronic rheumatism, chronic arthritis",chronic_ncd,Chronic Non-Communicable Diseases
+52(2),ICD-3 (1921-1930),"Rheumatoid arthritis, Osteo-arthritis",chronic_ncd,Chronic Non-Communicable Diseases
+52(3),ICD-3 (1921-1930),Gout,chronic_ncd,Chronic Non-Communicable Diseases
+53,ICD-3 (1921-1930),Scurvy,respiratory_environmental,Respiratory and Environmental Disease
+54,ICD-3 (1921-1930),Pellagra,respiratory_environmental,Respiratory and Environmental Disease
+55,ICD-3 (1921-1930),Beri-beri,respiratory_environmental,Respiratory and Environmental Disease
+56,ICD-3 (1921-1930),Rickets,respiratory_environmental,Respiratory and Environmental Disease
+57,ICD-3 (1921-1930),Diabetes,chronic_ncd,Chronic Non-Communicable Diseases
+58a,ICD-3 (1921-1930),Pernicious anaemia,chronic_ncd,Chronic Non-Communicable Diseases
+58b,ICD-3 (1921-1930),Other anaemias and chlorosis,chronic_ncd,Chronic Non-Communicable Diseases
+59,ICD-3 (1921-1930),Diseases of the pituitary gland,chronic_ncd,Chronic Non-Communicable Diseases
+60a,ICD-3 (1921-1930),Exophthalmic goitre,chronic_ncd,Chronic Non-Communicable Diseases
+60b(1),ICD-3 (1921-1930),Myxoedema,chronic_ncd,Chronic Non-Communicable Diseases
+60b(2),ICD-3 (1921-1930),Cretinism,congenital_developmental,Congenital and Developmental Conditions
+60b(3),ICD-3 (1921-1930),Other diseases of the thyroid gland,chronic_ncd,Chronic Non-Communicable Diseases
+61(1),ICD-3 (1921-1930),Tetany,chronic_ncd,Chronic Non-Communicable Diseases
+61(2),ICD-3 (1921-1930),Other diseases of the parathyroid gland,chronic_ncd,Chronic Non-Communicable Diseases
+62,ICD-3 (1921-1930),Diseases of the thymus,chronic_ncd,Chronic Non-Communicable Diseases
+63,ICD-3 (1921-1930),Diseases of the adrenals,chronic_ncd,Chronic Non-Communicable Diseases
+64,ICD-3 (1921-1930),Diseases of the spleen,chronic_ncd,Chronic Non-Communicable Diseases
+65a,ICD-3 (1921-1930),Leukaemia,chronic_ncd,Chronic Non-Communicable Diseases
+65b,ICD-3 (1921-1930),Lymphadenoma,chronic_ncd,Chronic Non-Communicable Diseases
+66,ICD-3 (1921-1930),Alcoholism (acute or chronic),self_harm_substance,Self-Harm and Substance Use
+67(1),ICD-3 (1921-1930),Occupational lead poisoning,respiratory_environmental,Respiratory and Environmental Disease
+67(2),ICD-3 (1921-1930),Other chronic poisoning by mineral substances,injury_accidental,Injury and Accidental Harm
+68,ICD-3 (1921-1930),Chronic poisoning by organic substances,injury_accidental,Injury and Accidental Harm
+69(1),ICD-3 (1921-1930),Purpura,chronic_ncd,Chronic Non-Communicable Diseases
+69(2),ICD-3 (1921-1930),Haemophilia,congenital_developmental,Congenital and Developmental Conditions
+69(3),ICD-3 (1921-1930),Other general diseases,chronic_ncd,Chronic Non-Communicable Diseases
+70(1),ICD-3 (1921-1930),Cerebral abscess,chronic_ncd,Chronic Non-Communicable Diseases
+70(2),ICD-3 (1921-1930),Other encephalitis,infectious_communicable,Infectious and Communicable Diseases
+71,ICD-3 (1921-1930),Meningitis,infectious_communicable,Infectious and Communicable Diseases
+72,ICD-3 (1921-1930),Tabes dorsalis (locomotor ataxy),chronic_ncd,Chronic Non-Communicable Diseases
+73,ICD-3 (1921-1930),Other diseases of the spinal cord,chronic_ncd,Chronic Non-Communicable Diseases
+74a(1),ICD-3 (1921-1930),Cerebral haemorrhage so returned,chronic_ncd,Chronic Non-Communicable Diseases
+74a(2),ICD-3 (1921-1930),Apoplexy (lesion unstated),chronic_ncd,Chronic Non-Communicable Diseases
+74b(1),ICD-3 (1921-1930),Cerebral embolism,chronic_ncd,Chronic Non-Communicable Diseases
+74b(2),ICD-3 (1921-1930),Cerebral thrombosis,chronic_ncd,Chronic Non-Communicable Diseases
+75a,ICD-3 (1921-1930),Hemiplegia,chronic_ncd,Chronic Non-Communicable Diseases
+75b,ICD-3 (1921-1930),Other forms of paralysis,chronic_ncd,Chronic Non-Communicable Diseases
+76,ICD-3 (1921-1930),General paralysis of the insane,chronic_ncd,Chronic Non-Communicable Diseases
+77,ICD-3 (1921-1930),Other forms of insanity,chronic_ncd,Chronic Non-Communicable Diseases
+78,ICD-3 (1921-1930),Epilepsy,chronic_ncd,Chronic Non-Communicable Diseases
+"79,80*",ICD-3 (1921-1930),Convulsions (non-puerperal),maternal_early_life,Maternal and Early-Life Mortality
+81,ICD-3 (1921-1930),Chorea,chronic_ncd,Chronic Non-Communicable Diseases
+82,ICD-3 (1921-1930),Hysteria and neuritis,chronic_ncd,Chronic Non-Communicable Diseases
+83,ICD-3 (1921-1930),Cerebral softening,chronic_ncd,Chronic Non-Communicable Diseases
+84(1),ICD-3 (1921-1930),"Idiocy, Imbecility",congenital_developmental,Congenital and Developmental Conditions
+84(2),ICD-3 (1921-1930),Cerebral tumour,chronic_ncd,Chronic Non-Communicable Diseases
+84(3),ICD-3 (1921-1930),Disseminated sclerosis,chronic_ncd,Chronic Non-Communicable Diseases
+84(4),ICD-3 (1921-1930),Paralysis agitans,chronic_ncd,Chronic Non-Communicable Diseases
+84(5),ICD-3 (1921-1930),Other diseases of the nervous system,chronic_ncd,Chronic Non-Communicable Diseases
+85,ICD-3 (1921-1930),Diseases of the eye and annexa,chronic_ncd,Chronic Non-Communicable Diseases
+86(1),ICD-3 (1921-1930),Diseases of the mastoid sinus,chronic_ncd,Chronic Non-Communicable Diseases
+86(2),ICD-3 (1921-1930),Diseases of the ear,chronic_ncd,Chronic Non-Communicable Diseases
+87,ICD-3 (1921-1930),Pericarditis,chronic_ncd,Chronic Non-Communicable Diseases
+88(1),ICD-3 (1921-1930),Malignant endocarditis,chronic_ncd,Chronic Non-Communicable Diseases
+88(2),ICD-3 (1921-1930),Other acute endocarditis,chronic_ncd,Chronic Non-Communicable Diseases
+88(3),ICD-3 (1921-1930),Acute myocarditis,chronic_ncd,Chronic Non-Communicable Diseases
+89,ICD-3 (1921-1930),Angina pectoris,chronic_ncd,Chronic Non-Communicable Diseases
+90(1),ICD-3 (1921-1930),Aortic valve disease,chronic_ncd,Chronic Non-Communicable Diseases
+90(2),ICD-3 (1921-1930),Mitral valve disease,chronic_ncd,Chronic Non-Communicable Diseases
+90(3),ICD-3 (1921-1930),Aortic and mitral valve disease,chronic_ncd,Chronic Non-Communicable Diseases
+90(4),ICD-3 (1921-1930),Other or unspecified valve disease,chronic_ncd,Chronic Non-Communicable Diseases
+90(5),ICD-3 (1921-1930),Fatty heart,chronic_ncd,Chronic Non-Communicable Diseases
+90(6),ICD-3 (1921-1930),Dilatation of heart (cause unspecified),chronic_ncd,Chronic Non-Communicable Diseases
+90(7),ICD-3 (1921-1930),Other or unspecified myocardial disease,chronic_ncd,Chronic Non-Communicable Diseases
+90(8),ICD-3 (1921-1930),Disordered action of the heart,chronic_ncd,Chronic Non-Communicable Diseases
+90(9),ICD-3 (1921-1930),Heart disease (undefined),chronic_ncd,Chronic Non-Communicable Diseases
+91a,ICD-3 (1921-1930),Aneurysm,chronic_ncd,Chronic Non-Communicable Diseases
+91b(1),ICD-3 (1921-1930),Arterio-sclerosis with cerebral vascular lesion,chronic_ncd,Chronic Non-Communicable Diseases
+91b(2),ICD-3 (1921-1930),Arterio-sclerosis without record of cerebral vascular lesion,chronic_ncd,Chronic Non-Communicable Diseases
+91c,ICD-3 (1921-1930),Other diseases of the arteries,chronic_ncd,Chronic Non-Communicable Diseases
+92,ICD-3 (1921-1930),Embolism and thrombosis (not cerebral),chronic_ncd,Chronic Non-Communicable Diseases
+93,ICD-3 (1921-1930),"Diseases of the veins (varix ,haemorrhoids, phlebitis, etc.)",chronic_ncd,Chronic Non-Communicable Diseases
+94,ICD-3 (1921-1930),"Diseases of the lymphatic system (lymphangitis, etc.)",chronic_ncd,Chronic Non-Communicable Diseases
+95,ICD-3 (1921-1930),Haemorrhage without stated cause,chronic_ncd,Chronic Non-Communicable Diseases
+96,ICD-3 (1921-1930),Other diseases of the circulatory system,chronic_ncd,Chronic Non-Communicable Diseases
+97(1),ICD-3 (1921-1930),Diseases of the nose,chronic_ncd,Chronic Non-Communicable Diseases
+97(2),ICD-3 (1921-1930),Diseases of the accessory nasal sinuses,chronic_ncd,Chronic Non-Communicable Diseases
+98(1),ICD-3 (1921-1930),Laryngismus stridulus,chronic_ncd,Chronic Non-Communicable Diseases
+98(2),ICD-3 (1921-1930),Laryngitis,chronic_ncd,Chronic Non-Communicable Diseases
+98(3),ICD-3 (1921-1930),Other diseases of the larynx,chronic_ncd,Chronic Non-Communicable Diseases
+99a,ICD-3 (1921-1930),Acute bronchitis,respiratory_environmental,Respiratory and Environmental Disease
+99b,ICD-3 (1921-1930),Chronic bronchitis,respiratory_environmental,Respiratory and Environmental Disease
+"99c,99d",ICD-3 (1921-1930),Bronchitis not distinguished as acute or chronic,respiratory_environmental,Respiratory and Environmental Disease
+100,ICD-3 (1921-1930),Broncho-pneumonia,infectious_communicable,Infectious and Communicable Diseases
+101a,ICD-3 (1921-1930),Lobar pneumonia,infectious_communicable,Infectious and Communicable Diseases
+101b,ICD-3 (1921-1930),Pneumonia (not otherwise specified),infectious_communicable,Infectious and Communicable Diseases
+102(1),ICD-3 (1921-1930),Empyema,respiratory_environmental,Respiratory and Environmental Disease
+102(2),ICD-3 (1921-1930),Other pleurisy,respiratory_environmental,Respiratory and Environmental Disease
+103,ICD-3 (1921-1930),Congestion and haemorrhageic infarct of lung,chronic_ncd,Chronic Non-Communicable Diseases
+104,ICD-3 (1921-1930),Gangrene of the lung,chronic_ncd,Chronic Non-Communicable Diseases
+105,ICD-3 (1921-1930),Asthma,chronic_ncd,Chronic Non-Communicable Diseases
+106,ICD-3 (1921-1930),Pulmonary emphysema,chronic_ncd,Chronic Non-Communicable Diseases
+107a,ICD-3 (1921-1930),Chronic interstitial pneumonia incl. occupation diseases of lung,infectious_communicable,Infectious and Communicable Diseases
+107b,ICD-3 (1921-1930),Diseases of the mediastinum,chronic_ncd,Chronic Non-Communicable Diseases
+107c,ICD-3 (1921-1930),Other diseases of the respiratory system,chronic_ncd,Chronic Non-Communicable Diseases
+108(1),ICD-3 (1921-1930),Diseases of the teeth and gums,chronic_ncd,Chronic Non-Communicable Diseases
+108(2),ICD-3 (1921-1930),Ludwig's angina,chronic_ncd,Chronic Non-Communicable Diseases
+108(3),ICD-3 (1921-1930),Other diseases of the buccal cavity and annexa,chronic_ncd,Chronic Non-Communicable Diseases
+109(1),ICD-3 (1921-1930),"Tonsillitis, Adenoid vegetations",chronic_ncd,Chronic Non-Communicable Diseases
+109(2),ICD-3 (1921-1930),Other diseases of the pharynx and tonsils,chronic_ncd,Chronic Non-Communicable Diseases
+110,ICD-3 (1921-1930),Diseases of the oesophagus,chronic_ncd,Chronic Non-Communicable Diseases
+111a,ICD-3 (1921-1930),Ulcer of the stomach,chronic_ncd,Chronic Non-Communicable Diseases
+111b,ICD-3 (1921-1930),Ulcer of the duodenum,chronic_ncd,Chronic Non-Communicable Diseases
+112(1),ICD-3 (1921-1930),Inflamation of the stomach,chronic_ncd,Chronic Non-Communicable Diseases
+112(2),ICD-3 (1921-1930),Other diseases of the stomach,chronic_ncd,Chronic Non-Communicable Diseases
+"113,114(1)",ICD-3 (1921-1930),Ulceration of the intestines,chronic_ncd,Chronic Non-Communicable Diseases
+"113,114(2)",ICD-3 (1921-1930),Colitis,chronic_ncd,Chronic Non-Communicable Diseases
+"113,114(3)",ICD-3 (1921-1930),Other diseases included under diarrhoea and enteritis,chronic_ncd,Chronic Non-Communicable Diseases
+115,ICD-3 (1921-1930),Ankylostomiasis,chronic_ncd,Chronic Non-Communicable Diseases
+116a,ICD-3 (1921-1930),Diseases due to cestodes (hydatids of the liver excepted),chronic_ncd,Chronic Non-Communicable Diseases
+116b,ICD-3 (1921-1930),Diseases due to trematodes,chronic_ncd,Chronic Non-Communicable Diseases
+116c,ICD-3 (1921-1930),Diseases due to nematodes (other than ankylostoma),chronic_ncd,Chronic Non-Communicable Diseases
+116d,ICD-3 (1921-1930),Diseases due to coccidia,chronic_ncd,Chronic Non-Communicable Diseases
+116e,ICD-3 (1921-1930),Diseases due to other specified intestinal parasites,chronic_ncd,Chronic Non-Communicable Diseases
+116f,ICD-3 (1921-1930),Diseases due to undefined intestinal parasites,chronic_ncd,Chronic Non-Communicable Diseases
+117,ICD-3 (1921-1930),Appendicitis,chronic_ncd,Chronic Non-Communicable Diseases
+118a,ICD-3 (1921-1930),Hernia,chronic_ncd,Chronic Non-Communicable Diseases
+118b,ICD-3 (1921-1930),Intestinal obstruction,chronic_ncd,Chronic Non-Communicable Diseases
+119(1),ICD-3 (1921-1930),Intestinal stasis,chronic_ncd,Chronic Non-Communicable Diseases
+119(2),ICD-3 (1921-1930),Other diseases of the intestines,chronic_ncd,Chronic Non-Communicable Diseases
+120,ICD-3 (1921-1930),Acute yellow atrophy of the liver,chronic_ncd,Chronic Non-Communicable Diseases
+121,ICD-3 (1921-1930),Hydatid tumour of the liver,chronic_ncd,Chronic Non-Communicable Diseases
+122a,ICD-3 (1921-1930),Cirrhosis of the liver returned as alcoholic,self_harm_substance,Self-Harm and Substance Use
+122b,ICD-3 (1921-1930),Cirrhosis of the liver not returned as alcoholic,self_harm_substance,Self-Harm and Substance Use
+123,ICD-3 (1921-1930),Biliary calculi,chronic_ncd,Chronic Non-Communicable Diseases
+124,ICD-3 (1921-1930),Other diseases of the liver,chronic_ncd,Chronic Non-Communicable Diseases
+125,ICD-3 (1921-1930),Diseases of the pancreas,chronic_ncd,Chronic Non-Communicable Diseases
+126,ICD-3 (1921-1930),Peritonitis without stated cause,chronic_ncd,Chronic Non-Communicable Diseases
+127,ICD-3 (1921-1930),Other diseases of the digestive system,chronic_ncd,Chronic Non-Communicable Diseases
+128,ICD-3 (1921-1930),Acute nephritis (including unspecified under 10 years of age),chronic_ncd,Chronic Non-Communicable Diseases
+129,ICD-3 (1921-1930),Chronic nephritis (including unspecified over 10 years of age),chronic_ncd,Chronic Non-Communicable Diseases
+130,ICD-3 (1921-1930),Chyluria,chronic_ncd,Chronic Non-Communicable Diseases
+131,ICD-3 (1921-1930),Other diseases of the kidney and annexa,chronic_ncd,Chronic Non-Communicable Diseases
+132,ICD-3 (1921-1930),Calculi of the urinary passages,chronic_ncd,Chronic Non-Communicable Diseases
+133(1),ICD-3 (1921-1930),Cystitis,chronic_ncd,Chronic Non-Communicable Diseases
+133(2),ICD-3 (1921-1930),Other diseases of the bladder,chronic_ncd,Chronic Non-Communicable Diseases
+134a,ICD-3 (1921-1930),Stricture of the urethra,chronic_ncd,Chronic Non-Communicable Diseases
+134b,ICD-3 (1921-1930),"Other diseases of the urethra, etc.",chronic_ncd,Chronic Non-Communicable Diseases
+135,ICD-3 (1921-1930),Diseases of the prostate,chronic_ncd,Chronic Non-Communicable Diseases
+136,ICD-3 (1921-1930),Non-venereal diseases of the male genital organs,infectious_communicable,Infectious and Communicable Diseases
+137,ICD-3 (1921-1930),"Cysts, and other tumours of the ovary not returned as malignant",chronic_ncd,Chronic Non-Communicable Diseases
+138(1),ICD-3 (1921-1930),Salpingitis,chronic_ncd,Chronic Non-Communicable Diseases
+138(2),ICD-3 (1921-1930),Pelvic abscess in females,chronic_ncd,Chronic Non-Communicable Diseases
+139,ICD-3 (1921-1930),Tumours of the uterus not returned as malignant,chronic_ncd,Chronic Non-Communicable Diseases
+140,ICD-3 (1921-1930),Non-puerperal uterine haemorrhage,maternal_early_life,Maternal and Early-Life Mortality
+141(1),ICD-3 (1921-1930),Other diseases of the uterus,chronic_ncd,Chronic Non-Communicable Diseases
+141(2),ICD-3 (1921-1930),Diseases of other female genital organs not under other headings,chronic_ncd,Chronic Non-Communicable Diseases
+142,ICD-3 (1921-1930),Non-puerperal diseases of the breast,maternal_early_life,Maternal and Early-Life Mortality
+143a,ICD-3 (1921-1930),Abortion,maternal_early_life,Maternal and Early-Life Mortality
+143b,ICD-3 (1921-1930),Ectopic gestation,maternal_early_life,Maternal and Early-Life Mortality
+143c,ICD-3 (1921-1930),Other accidents of pregnancy,maternal_early_life,Maternal and Early-Life Mortality
+144,ICD-3 (1921-1930),Puerperal haemorrhage,maternal_early_life,Maternal and Early-Life Mortality
+145,ICD-3 (1921-1930),Other accidents of childbirth,maternal_early_life,Maternal and Early-Life Mortality
+146,ICD-3 (1921-1930),Puerperal sepsis,maternal_early_life,Maternal and Early-Life Mortality
+147(1),ICD-3 (1921-1930),Puerperal phlegmasia alba dolens not returned as septic,maternal_early_life,Maternal and Early-Life Mortality
+147(2),ICD-3 (1921-1930),Puerperal embolism and sudden death,later_life,Later-Life Mortality
+148,ICD-3 (1921-1930),Puerperal albuminuria and convulsions,maternal_early_life,Maternal and Early-Life Mortality
+149,ICD-3 (1921-1930),Childbirth not assignable to other headings (puerperal insanity),maternal_early_life,Maternal and Early-Life Mortality
+150,ICD-3 (1921-1930),Puerperal diseases of the breast,maternal_early_life,Maternal and Early-Life Mortality
+151(1),ICD-3 (1921-1930),Senile gangrene,later_life,Later-Life Mortality
+151(2),ICD-3 (1921-1930),Other gangrene,chronic_ncd,Chronic Non-Communicable Diseases
+152,ICD-3 (1921-1930),"Carbuncle, boil",chronic_ncd,Chronic Non-Communicable Diseases
+153(1),ICD-3 (1921-1930),Cellulitis,chronic_ncd,Chronic Non-Communicable Diseases
+153(2),ICD-3 (1921-1930),Acute abscess,chronic_ncd,Chronic Non-Communicable Diseases
+154(1),ICD-3 (1921-1930),"Ulcer, bedsore",chronic_ncd,Chronic Non-Communicable Diseases
+154(2),ICD-3 (1921-1930),Eczema,chronic_ncd,Chronic Non-Communicable Diseases
+154(3),ICD-3 (1921-1930),Pemphigus,chronic_ncd,Chronic Non-Communicable Diseases
+154(4),ICD-3 (1921-1930),Other diseases of the skin and its annexa,chronic_ncd,Chronic Non-Communicable Diseases
+155(1),ICD-3 (1921-1930),Acute infective osteo-myelitis and periostitis,infectious_communicable,Infectious and Communicable Diseases
+155(2),ICD-3 (1921-1930),Other diseases of the bones,chronic_ncd,Chronic Non-Communicable Diseases
+156,ICD-3 (1921-1930),Diseases of the joints,chronic_ncd,Chronic Non-Communicable Diseases
+157,ICD-3 (1921-1930),Amputations,chronic_ncd,Chronic Non-Communicable Diseases
+158,ICD-3 (1921-1930),Other diseases of the organs of locomotion,chronic_ncd,Chronic Non-Communicable Diseases
+159(1),ICD-3 (1921-1930),Congenital hydrocephalus,congenital_developmental,Congenital and Developmental Conditions
+159(2),ICD-3 (1921-1930),Congenital malformation of heart,congenital_developmental,Congenital and Developmental Conditions
+159(3),ICD-3 (1921-1930),Other congenital malformations,congenital_developmental,Congenital and Developmental Conditions
+160(1),ICD-3 (1921-1930),Congenital debility and sclerema,later_life,Later-Life Mortality
+160(2),ICD-3 (1921-1930),Icterus neonatorum,maternal_early_life,Maternal and Early-Life Mortality
+161(1),ICD-3 (1921-1930),Premature birth,maternal_early_life,Maternal and Early-Life Mortality
+161(2),ICD-3 (1921-1930),Injury at birth,injury_accidental,Injury and Accidental Harm
+162(1),ICD-3 (1921-1930),Diseases of the umbilicus,maternal_early_life,Maternal and Early-Life Mortality
+162(2),ICD-3 (1921-1930),Atelectasis,chronic_ncd,Chronic Non-Communicable Diseases
+162(3),ICD-3 (1921-1930),Other diseases peculiar to early pregnancy,maternal_early_life,Maternal and Early-Life Mortality
+163,ICD-3 (1921-1930),Lack of care,ill_defined_other,Ill-defined / Other
+164(1),ICD-3 (1921-1930),Senile dementia,later_life,Later-Life Mortality
+164(2),ICD-3 (1921-1930),Other forms of senile decay,later_life,Later-Life Mortality
+"165, 166*",ICD-3 (1921-1930),Suicide by solid or liquid poisons and corrosive substances,self_harm_substance,Self-Harm and Substance Use
+167,ICD-3 (1921-1930),Suicide by poisonous gas,self_harm_substance,Self-Harm and Substance Use
+168,ICD-3 (1921-1930),Suicide by hanging or strangulation,self_harm_substance,Self-Harm and Substance Use
+169,ICD-3 (1921-1930),Suicide by drowning,self_harm_substance,Self-Harm and Substance Use
+170,ICD-3 (1921-1930),Suicide by firearms,self_harm_substance,Self-Harm and Substance Use
+171,ICD-3 (1921-1930),Suicide by cutting or piercing instruments,self_harm_substance,Self-Harm and Substance Use
+172,ICD-3 (1921-1930),Suicide by jumping from high place,self_harm_substance,Self-Harm and Substance Use
+173,ICD-3 (1921-1930),Suicide by crushing,self_harm_substance,Self-Harm and Substance Use
+174,ICD-3 (1921-1930),Suicide by other means,self_harm_substance,Self-Harm and Substance Use
+175,ICD-3 (1921-1930),Food poisoning,injury_accidental,Injury and Accidental Harm
+176,ICD-3 (1921-1930),Poisoning by venomous animals,injury_accidental,Injury and Accidental Harm
+177,ICD-3 (1921-1930),Other acute accidental poisoning (not by gas),injury_accidental,Injury and Accidental Harm
+178,ICD-3 (1921-1930),Conflagration,injury_accidental,Injury and Accidental Harm
+179,ICD-3 (1921-1930),Accidental burns (conflagration excepted),injury_accidental,Injury and Accidental Harm
+180,ICD-3 (1921-1930),Accidental mechanical suffocation,injury_accidental,Injury and Accidental Harm
+181,ICD-3 (1921-1930),Accidental absorption of irrespirable or poisonous gas,injury_accidental,Injury and Accidental Harm
+182,ICD-3 (1921-1930),Accidental drowning,injury_accidental,Injury and Accidental Harm
+183,ICD-3 (1921-1930),Accidental injury by firearms,injury_accidental,Injury and Accidental Harm
+184,ICD-3 (1921-1930),Accidental injury by cutting or piercing instruments,injury_accidental,Injury and Accidental Harm
+185,ICD-3 (1921-1930),Accidental injury by fall,injury_accidental,Injury and Accidental Harm
+186,ICD-3 (1921-1930),Accidental injury in mining and quarrying,injury_accidental,Injury and Accidental Harm
+187,ICD-3 (1921-1930),Accidental injury by machinery,injury_accidental,Injury and Accidental Harm
+188,ICD-3 (1921-1930),"Accidental injury by other forms of crushing (road vehicles, etc)",injury_accidental,Injury and Accidental Harm
+189,ICD-3 (1921-1930),Injury by animals (poisoning by venomous animals excepted),injury_accidental,Injury and Accidental Harm
+190,ICD-3 (1921-1930),Wounds of war,violence_conflict,Violence and Conflict
+191,ICD-3 (1921-1930),Execution of civilians by belligerent armies,violence_conflict,Violence and Conflict
+192,ICD-3 (1921-1930),Hunger or thirst,respiratory_environmental,Respiratory and Environmental Disease
+193,ICD-3 (1921-1930),Excessive cold,respiratory_environmental,Respiratory and Environmental Disease
+194,ICD-3 (1921-1930),Excessive heat,respiratory_environmental,Respiratory and Environmental Disease
+195,ICD-3 (1921-1930),Lightning,injury_accidental,Injury and Accidental Harm
+196,ICD-3 (1921-1930),Electricity (lightning excepted),injury_accidental,Injury and Accidental Harm
+197,ICD-3 (1921-1930),Homicide by firearms,violence_conflict,Violence and Conflict
+198,ICD-3 (1921-1930),Homicide by cutting or piercing instruments,violence_conflict,Violence and Conflict
+199,ICD-3 (1921-1930),Homicide by other means,violence_conflict,Violence and Conflict
+201,ICD-3 (1921-1930),Fracture (cause not specified),ill_defined_other,Ill-defined / Other
+202,ICD-3 (1921-1930),Other and unstated forms of accidental violence; Execution,violence_conflict,Violence and Conflict
+203,ICD-3 (1921-1930),"Violent deaths of unstated nature (i.e.accidental, suicidal,etc.) and cause",self_harm_substance,Self-Harm and Substance Use
+204,ICD-3 (1921-1930),Sudden death,later_life,Later-Life Mortality
+205(1),ICD-3 (1921-1930),Heart failure (age 1-70),chronic_ncd,Chronic Non-Communicable Diseases
+205(2),ICD-3 (1921-1930),Other ill-defined causes,ill_defined_other,Ill-defined / Other
+205(3),ICD-3 (1921-1930),Cause not specified,ill_defined_other,Ill-defined / Other
+1.0,ICD-4 (1931-1939),Typhoid fever,,
+10.0,ICD-4 (1931-1939),Diphtheria,,
+100(1),ICD-4 (1931-1939),Varix,,
+100(2),ICD-4 (1931-1939),Other diseases of the veins,,
+101.0,ICD-4 (1931-1939),"Diseases of the lymphatic system (lymphangitis,etc.)",,
+102.0,ICD-4 (1931-1939),Abnormalities of blood pressure,,
+103.0,ICD-4 (1931-1939),Other diseases of the circulatory system,,
+104(1),ICD-4 (1931-1939),Diseases of the nose,,
+104(2),ICD-4 (1931-1939),Diseases of the accessory nasal sinuses,,
+105(1),ICD-4 (1931-1939),Laryngismus stridulus,,
+105(2),ICD-4 (1931-1939),Laryngitis,,
+105(3),ICD-4 (1931-1939),Other diseases of the larynx,,
+106a,ICD-4 (1931-1939),Acute bronchitis,,
+106b,ICD-4 (1931-1939),Chronic bronchitis,,
+106c,ICD-4 (1931-1939),"Bronchitis, not distinguished as acute or chronic",,
+107.0,ICD-4 (1931-1939),Broncho-pneumonia,,
+108.0,ICD-4 (1931-1939),Lobar pneumonia,,
+109.0,ICD-4 (1931-1939),Pneumonia (not otherwise defined),,
+110(1),ICD-4 (1931-1939),Empyema,,
+110(2),ICD-4 (1931-1939),Other pleurisy,,
+111(1),ICD-4 (1931-1939),Hypostatic congestion of lungs,,
+111(2),ICD-4 (1931-1939),"Other congestion and haemorrhagic infarct of lung, etc.",,
+112.0,ICD-4 (1931-1939),Asthma,,
+113.0,ICD-4 (1931-1939),Pulmonary emphysema,,
+114a,ICD-4 (1931-1939),"Chronic interstitial pneumonia, incl. occ. diseases of the lung",,
+114b(1),ICD-4 (1931-1939),Gangrene of the lung,,
+114b(2),ICD-4 (1931-1939),Other diseases of the respiratory system,,
+115(1),ICD-4 (1931-1939),Diseases of the teeth and gums,,
+115(2),ICD-4 (1931-1939),Ludwigs angina,,
+115(3),ICD-4 (1931-1939),Diseases of the tonsils,,
+115(4),ICD-4 (1931-1939),"Other diseases of the buccal cavity, pharynx, etc",,
+116.0,ICD-4 (1931-1939),Diseases of the oesophagus,,
+117a,ICD-4 (1931-1939),Ulcer of the stomach,,
+117b,ICD-4 (1931-1939),Ulcer of the duodenum,,
+118(1),ICD-4 (1931-1939),Inflammation of the stomach,,
+118(2),ICD-4 (1931-1939),Other diseases of the stomach,,
+"119,120a(1)",ICD-4 (1931-1939),Colitis,,
+"119,120a(2)",ICD-4 (1931-1939),Other diarrhoea and enteritis,,
+"119,120b",ICD-4 (1931-1939),Ulceration of intestine,,
+11a(1),ICD-4 (1931-1939),"Influenza with respiratory complications, with pneumonic complications",,
+11a(2),ICD-4 (1931-1939),"Influenza with respiratory complications, with other respiratory complications",,
+11b(1),ICD-4 (1931-1939),"Influenza without respiratory complications, with non-respiratory complications",,
+11b(2),ICD-4 (1931-1939),"Influenza without respiratory complications, without stated complications",,
+121.0,ICD-4 (1931-1939),Appendicitis,,
+122a(1),ICD-4 (1931-1939),Strangulated hernia,,
+122a(2),ICD-4 (1931-1939),Hernia not returned as strangulated,,
+122b,ICD-4 (1931-1939),Intestinal obstruction,,
+123(1),ICD-4 (1931-1939),"Constipation, Intestinal stasis",,
+123(2),ICD-4 (1931-1939),Diverticulitis,,
+123(3),ICD-4 (1931-1939),Other diseases of the intestines,,
+124(a),ICD-4 (1931-1939),Cirrhosis of the liver returned as alcoholic,,
+124b,ICD-4 (1931-1939),Cirrhosis of the liver not returned as alcoholic,,
+125(1),ICD-4 (1931-1939),Acute yellow atrophy,,
+125(2),ICD-4 (1931-1939),Other diseases of the liver,,
+126(1),ICD-4 (1931-1939),Biliary calculi with cholecystitis,,
+126(2),ICD-4 (1931-1939),Biliary calculi without mention of cholecystitis,,
+127(1),ICD-4 (1931-1939),"Cholecystitis, without record of biliary calculi",,
+127(2),ICD-4 (1931-1939),Other diseases of the gall bladder and ducts,,
+128.0,ICD-4 (1931-1939),Diseases of the pancreas,,
+129.0,ICD-4 (1931-1939),"Peritonitis, without stated cause",,
+130.0,ICD-4 (1931-1939),Acute nephritis,,
+131.0,ICD-4 (1931-1939),Chronic nephritis,,
+132.0,ICD-4 (1931-1939),"Nephritis, not stated to be acute or chronic",,
+133a,ICD-4 (1931-1939),Pyelitis,,
+133b,ICD-4 (1931-1939),Other diseases of the kidney and annexa,,
+134a,ICD-4 (1931-1939),Calculi of kidney and ureter,,
+134b,ICD-4 (1931-1939),Calculi of the bladder,,
+134c,ICD-4 (1931-1939),Calculi of unstated site,,
+135a,ICD-4 (1931-1939),Cystitis,,
+135b,ICD-4 (1931-1939),Other diseases of the bladder,,
+136a,ICD-4 (1931-1939),Stricture of the urethra,,
+136b,ICD-4 (1931-1939),"Other diseases of the urethra, etc.",,
+137.0,ICD-4 (1931-1939),Diseases of the prostate,,
+138.0,ICD-4 (1931-1939),Diseases of the male genital organs,,
+139a(1),ICD-4 (1931-1939),Diseases of the ovary,,
+139a(2),ICD-4 (1931-1939),Diseases of the fallopian tubes,,
+139a(3),ICD-4 (1931-1939),Diseases of the parametrium,,
+139b,ICD-4 (1931-1939),Diseases of the uterus,,
+139c,ICD-4 (1931-1939),Diseases of the breasts,,
+139d,ICD-4 (1931-1939),Other diseases of the female genital organs,,
+13a,ICD-4 (1931-1939),Amoebic dysentery,,
+13b,ICD-4 (1931-1939),Bacillary dysentery,,
+13c,ICD-4 (1931-1939),Other or unspecified dysentery,,
+140.0,ICD-4 (1931-1939),Post-abortive sepsis,,
+141(1),ICD-4 (1931-1939),Haemorrhage following abortion,,
+141(2),ICD-4 (1931-1939),Abortion without record of haemorrhage,,
+142.0,ICD-4 (1931-1939),Ectopic gestation,,
+143.0,ICD-4 (1931-1939),Other accidents of pregnancy,,
+144a,ICD-4 (1931-1939),Placenta praevia,,
+144b,ICD-4 (1931-1939),Other puerperal haemorrhage,,
+145a,ICD-4 (1931-1939),Puerperal septicaemia and pyaemia not returned as post-abortion,,
+145b,ICD-4 (1931-1939),Puerperal tetanus not returned as post-abortion,,
+146.0,ICD-4 (1931-1939),Puerperal albuminuria and convulsions,,
+147.0,ICD-4 (1931-1939),Other toxaemias of pregnancy,,
+148a,ICD-4 (1931-1939),Puerperal phlegmasia alba dolens not returned as septic,,
+148b,ICD-4 (1931-1939),Puerperal embolism and sudden death,,
+149.0,ICD-4 (1931-1939),Other accidents of childbirth,,
+15.0,ICD-4 (1931-1939),Erysipelas,,
+150(1),ICD-4 (1931-1939),Puerperal insanity,,
+150(2),ICD-4 (1931-1939),Puerperal diseases of the breasts,,
+150(3),ICD-4 (1931-1939),Childbirth (unqualified),,
+151.0,ICD-4 (1931-1939),"Carbuncle, boil",,
+152(1),ICD-4 (1931-1939),Cellulitis,,
+152(2),ICD-4 (1931-1939),Acute abscess,,
+153.0,ICD-4 (1931-1939),Other diseases of the skin and its annexa,,
+154.0,ICD-4 (1931-1939),Acute infective osteomyelitis and periostitis,,
+155.0,ICD-4 (1931-1939),Other diseases of the bones,,
+156a,ICD-4 (1931-1939),Diseases of the joints,,
+156b,ICD-4 (1931-1939),Diseases of other organs of locomotion,,
+157a,ICD-4 (1931-1939),Congenital hydrocephalus,,
+157b,ICD-4 (1931-1939),Spina bifida and meningocele,,
+157c,ICD-4 (1931-1939),Congenital malformation of heart,,
+157d,ICD-4 (1931-1939),Monstrosities,,
+157e(1),ICD-4 (1931-1939),Congenital pyloric stenosis,,
+157e(2),ICD-4 (1931-1939),"Cleft palate, harelip",,
+157e(3),ICD-4 (1931-1939),Imperforate anus,,
+157e(4),ICD-4 (1931-1939),Other stated congenital malformations,,
+157e(5),ICD-4 (1931-1939),"Congenital malformation, unspecified",,
+158.0,ICD-4 (1931-1939),Congenital debility,,
+159.0,ICD-4 (1931-1939),Premature birth,,
+16(1),ICD-4 (1931-1939),Acute poliomyelitis,,
+16(2),ICD-4 (1931-1939),Acute polioencephalitis,,
+160a,ICD-4 (1931-1939),Injury at birth with mention of Caesarean section,,
+160b,ICD-4 (1931-1939),Injury at birth without mention of Caesarean section,,
+161a,ICD-4 (1931-1939),Atelectasis,,
+161b,ICD-4 (1931-1939),Icterus neonatorum,,
+161c(1),ICD-4 (1931-1939),Diseases of the Umbilicus,,
+161c(2),ICD-4 (1931-1939),Pemphigus neonatorum,,
+161c(3),ICD-4 (1931-1939),Other diseases peculiar to early infancy,,
+162a,ICD-4 (1931-1939),Senile dementia,,
+162b,ICD-4 (1931-1939),Other forms of senile decay,,
+163.0,ICD-4 (1931-1939),Suicide by solid or liquid poisons and corrosive substances,,
+164.0,ICD-4 (1931-1939),Suicide by poisonous gas,,
+165.0,ICD-4 (1931-1939),Suicide by hanging or strangulation,,
+166.0,ICD-4 (1931-1939),Suicide by drowning,,
+167.0,ICD-4 (1931-1939),Suicide by firearms,,
+168.0,ICD-4 (1931-1939),Suicide by cutting or piercing instruments,,
+169.0,ICD-4 (1931-1939),Suicide by jumping from high places,,
+17.0,ICD-4 (1931-1939),Encephalitis lethargica,,
+170.0,ICD-4 (1931-1939),Suicide by crushing,,
+171.0,ICD-4 (1931-1939),Suicide by other means,,
+173.0,ICD-4 (1931-1939),Homicide by firearms,,
+174.0,ICD-4 (1931-1939),Homicide by cutting or piercing instruments,,
+175.0,ICD-4 (1931-1939),Homicide by other means,,
+176.0,ICD-4 (1931-1939),Attack by venomous animals,,
+177.0,ICD-4 (1931-1939),Food poisoning,,
+178.0,ICD-4 (1931-1939),Accidental absorption of irrespirable or poisonous gas,,
+179.0,ICD-4 (1931-1939),Other acute accidental poisoning (not by gas),,
+18.0,ICD-4 (1931-1939),Cerebro-spinal fever,,
+180.0,ICD-4 (1931-1939),Conflagration,,
+181.0,ICD-4 (1931-1939),Accidental burns (conflagration excepted),,
+182.0,ICD-4 (1931-1939),Accidental mechanical suffocation,,
+183.0,ICD-4 (1931-1939),Accidental drowning,,
+184.0,ICD-4 (1931-1939),Accidental injury by firearms,,
+185.0,ICD-4 (1931-1939),Accidental injury by cutting or piercing instruments,,
+186.0,ICD-4 (1931-1939),"Accidental injury by fall, crushing, etc.",,
+187.0,ICD-4 (1931-1939),Cataclysm,,
+188.0,ICD-4 (1931-1939),Injury by animals (poisoning by venomous animals excepted),,
+189.0,ICD-4 (1931-1939),Hunger or thirst,,
+19.0,ICD-4 (1931-1939),Glanders,,
+190.0,ICD-4 (1931-1939),Excessive cold,,
+191.0,ICD-4 (1931-1939),Excessive heat,,
+192.0,ICD-4 (1931-1939),Lightning,,
+193.0,ICD-4 (1931-1939),Electricity (lightning excepted),,
+194(1),ICD-4 (1931-1939),Inattention at birth,,
+194(2),ICD-4 (1931-1939),Other  and unstated forms of accidental violence,,
+195.0,ICD-4 (1931-1939),Violent deaths of unstated nature,,
+196.0,ICD-4 (1931-1939),Wounds of war,,
+198.0,ICD-4 (1931-1939),Execution,,
+199.0,ICD-4 (1931-1939),Sudden death,,
+2.0,ICD-4 (1931-1939),Paratyphoid fevers,,
+20.0,ICD-4 (1931-1939),Anthrax,,
+200(1),ICD-4 (1931-1939),Heart failure,,
+200(2),ICD-4 (1931-1939),Other ill-defined causes,,
+200(3),ICD-4 (1931-1939),Cause not specified,,
+22.0,ICD-4 (1931-1939),Tetanus,,
+23.0,ICD-4 (1931-1939),Tuberculosis of the respiratory system,,
+24.0,ICD-4 (1931-1939),Tuberculosis of the central nervous system,,
+25.0,ICD-4 (1931-1939),Tuberculosis of the intestines and peritoneum,,
+26.0,ICD-4 (1931-1939),Tuberculosis of the vertebral column,,
+27.0,ICD-4 (1931-1939),Tuberculosis of the other bones and joints,,
+28.0,ICD-4 (1931-1939),Tuberculosis of the skin and subcutaneous tissues,,
+29.0,ICD-4 (1931-1939),Tb. of the lymphatic system (abdominal and bronchial glands excepted),,
+30.0,ICD-4 (1931-1939),Tuberculosis of the genito-urinary system,,
+31(1),ICD-4 (1931-1939),Tuberculosis of the adrenals,,
+31(2),ICD-4 (1931-1939),Tuberculosis of other sites,,
+32a,ICD-4 (1931-1939),Acute disseminated tuberculosis,,
+32b,ICD-4 (1931-1939),Chronic disseminated tuberculosis,,
+32c,ICD-4 (1931-1939),Disseminated tuberculosis not distinguished as acute or chronic,,
+33.0,ICD-4 (1931-1939),Leprosy,,
+34a,ICD-4 (1931-1939),Congenital syphilis,,
+"34b,c",ICD-4 (1931-1939),Acquired or unspecified syphilis,,
+35(1),ICD-4 (1931-1939),Gonorrhoeal or purulent ophthalmia,,
+35(2),ICD-4 (1931-1939),Other venereal diseases,,
+36a,ICD-4 (1931-1939),Septicaemia,,
+36b,ICD-4 (1931-1939),Pyaemia,,
+36c,ICD-4 (1931-1939),Gas gangrene,,
+38.0,ICD-4 (1931-1939),Malaria,,
+39.0,ICD-4 (1931-1939),Other diseases due to protozoa,,
+4.0,ICD-4 (1931-1939),Relapsing fever (Spirillum obermeieri),,
+41a,ICD-4 (1931-1939),Hyatid cysts of liver,,
+41b,ICD-4 (1931-1939),Hyatid cysts of other organs,,
+42.0,ICD-4 (1931-1939),Other diseases due to helminths,,
+43(1),ICD-4 (1931-1939),Actinomycosis,,
+43(2),ICD-4 (1931-1939),Other mycoses,,
+44(1),ICD-4 (1931-1939),Vaccinia,,
+44(2),ICD-4 (1931-1939),Other sequelae of vaccination,,
+44(3),ICD-4 (1931-1939),German measles,,
+44(4),ICD-4 (1931-1939),Varicella,,
+44(5),ICD-4 (1931-1939),Mumps,,
+44(6),ICD-4 (1931-1939),Pink disease,,
+44(7),ICD-4 (1931-1939),Other infectious or parasitic diseases,,
+45.0,ICD-4 (1931-1939),Cancer of the buccal cavity and pharynx,,
+46.0,ICD-4 (1931-1939),Cancer of the digestive organs and peritoneum,,
+47.0,ICD-4 (1931-1939),Cancer of the respiratory organs,,
+48.0,ICD-4 (1931-1939),Cancer of the uterus,,
+49.0,ICD-4 (1931-1939),Cancer of the other female genital organs,,
+5.0,ICD-4 (1931-1939),Undulant fever,,
+50.0,ICD-4 (1931-1939),Cancer of the breast,,
+51.0,ICD-4 (1931-1939),Cancer of the male genito-urinary organs,,
+52.0,ICD-4 (1931-1939),Cancer of the skin,,
+53.0,ICD-4 (1931-1939),Cancer of the other or unspecified organs,,
+54a,ICD-4 (1931-1939),Non-malignant tumours of the female genital organs,,
+54b,ICD-4 (1931-1939),Nom-malignant tumours of the other sites,,
+55a,ICD-4 (1931-1939),Tumours of undetermined nature of the female genital organs,,
+55b,ICD-4 (1931-1939),Tumours of undetermined nature of other sites,,
+56.0,ICD-4 (1931-1939),Rheumatic fever,,
+57(1),ICD-4 (1931-1939),Chronic rheumatism,,
+57(2),ICD-4 (1931-1939),"Rheumatoid arthritis, Osteo-arthritis",,
+58.0,ICD-4 (1931-1939),Gout,,
+59.0,ICD-4 (1931-1939),Diabetes,,
+6.0,ICD-4 (1931-1939),Small-pox,,
+60.0,ICD-4 (1931-1939),Scurvy,,
+61.0,ICD-4 (1931-1939),Beri-beri,,
+62.0,ICD-4 (1931-1939),Pelagra,,
+63(1),ICD-4 (1931-1939),Rickets,,
+63(2),ICD-4 (1931-1939),Spinal curvatures of undetermined nature,,
+64.0,ICD-4 (1931-1939),Osteomalacia,,
+65(1),ICD-4 (1931-1939),Infantilism,,
+65(2),ICD-4 (1931-1939),Other diseases of the pituitary gland,,
+66a,ICD-4 (1931-1939),Simple goitre,,
+66b,ICD-4 (1931-1939),Exophthalmic goitre,,
+66c,ICD-4 (1931-1939),"Myxoedema, Cretinism",,
+66d,ICD-4 (1931-1939),Tetany,,
+66e,ICD-4 (1931-1939),Other diseases of the thyroid and parathyroid glands,,
+67.0,ICD-4 (1931-1939),Diseases of the thymus,,
+68.0,ICD-4 (1931-1939),Diseases of the adrenals,,
+69(1),ICD-4 (1931-1939),Amyloid disease of unstated origin,,
+69(2),ICD-4 (1931-1939),Other general diseases,,
+7.0,ICD-4 (1931-1939),Measles,,
+70a,ICD-4 (1931-1939),Purpura,,
+70b,ICD-4 (1931-1939),Haemophilia,,
+71a,ICD-4 (1931-1939),Pernicious anaemia,,
+71b(1),ICD-4 (1931-1939),Splenic anaemia,,
+71b(2),ICD-4 (1931-1939),Other anaemias and chlorosis,,
+72a,ICD-4 (1931-1939),Leukaemia,,
+72b(1),ICD-4 (1931-1939),Aleukaemia (lymphadenoma),,
+72b(2),ICD-4 (1931-1939),Aleukaemia (agranulocytosis),,
+73(1),ICD-4 (1931-1939),Banti's disease,,
+73(2),ICD-4 (1931-1939),Other diseases of the spleen,,
+74.0,ICD-4 (1931-1939),Other diseases of the blood and blood forming organs,,
+75.0,ICD-4 (1931-1939),Alcoholism (acute or chronic),,
+76.0,ICD-4 (1931-1939),Chronic poisoning by other organic substances,,
+77(1),ICD-4 (1931-1939),Occupational lead poisoning,,
+77(2),ICD-4 (1931-1939),Other chronic poisoning by mineral substances,,
+78a,ICD-4 (1931-1939),Cerebral abscess,,
+78b,ICD-4 (1931-1939),Other encephalitis,,
+79.0,ICD-4 (1931-1939),Meningitis,,
+8.0,ICD-4 (1931-1939),Scarlet fever,,
+80.0,ICD-4 (1931-1939),Tabes dorsalis (locomotor ataxy),,
+81(1),ICD-4 (1931-1939),Progressive muscular atrophy,,
+81(2),ICD-4 (1931-1939),Sub-acute combined sclerosis,,
+81(3),ICD-4 (1931-1939),Myelitis of unstated origin,,
+81(4),ICD-4 (1931-1939),Other diseases of the spinal cord,,
+82a(1),ICD-4 (1931-1939),Cerebral haemorrhage so returned,,
+82a(2),ICD-4 (1931-1939),Apoplexy (lesion unstated),,
+82b(1),ICD-4 (1931-1939),Cerebral embolism,,
+82b(2),ICD-4 (1931-1939),Cerebral thrombosis,,
+82b(3),ICD-4 (1931-1939),Cerebral softening,,
+82c(1),ICD-4 (1931-1939),Hemiplegia,,
+82c(2),ICD-4 (1931-1939),Other paralyses of unstated origin,,
+83.0,ICD-4 (1931-1939),General paralysis of the insane,,
+84a,ICD-4 (1931-1939),Dementia praecox,,
+84b,ICD-4 (1931-1939),Other forms of insanity,,
+85.0,ICD-4 (1931-1939),Epilepsy,,
+86.0,ICD-4 (1931-1939),Infantile convulsions (age under 5),,
+87a,ICD-4 (1931-1939),Chorea,,
+87b,ICD-4 (1931-1939),"Neuritis, neuralgia",,
+87c,ICD-4 (1931-1939),Paralysis agitans,,
+87d,ICD-4 (1931-1939),Disseminated sclerosis,,
+87e,ICD-4 (1931-1939),Other diseases of the nervous system,,
+88.0,ICD-4 (1931-1939),Diseases of the eye and annexa,,
+89a,ICD-4 (1931-1939),"Otitis, and other diseases of the middle ear",,
+89b,ICD-4 (1931-1939),Diseases of the mastoid sinus,,
+9.0,ICD-4 (1931-1939),Whooping cough,,
+90.0,ICD-4 (1931-1939),Pericarditis,,
+91(1),ICD-4 (1931-1939),Malignant endocarditis,,
+91(2),ICD-4 (1931-1939),Other acute endocarditis,,
+92(1),ICD-4 (1931-1939),Aortic valve disease,,
+92(2),ICD-4 (1931-1939),Mitral valve disease,,
+92(3),ICD-4 (1931-1939),Aortic and mitral valve disease,,
+92(4),ICD-4 (1931-1939),"Endocarditis, not returned as acute or chronic",,
+92(5),ICD-4 (1931-1939),Other or unspecified valve disease,,
+93a,ICD-4 (1931-1939),Acute myocarditis,,
+93b(1),ICD-4 (1931-1939),Fatty heart,,
+93b(2),ICD-4 (1931-1939),Cardio-vascular degeneration,,
+93b(3),ICD-4 (1931-1939),Other myocardial degeneration,,
+93c,ICD-4 (1931-1939),"Myocarditis, not returned as acute or chronic",,
+94.0,ICD-4 (1931-1939),"Diseases of the coronary arteries, Angina pectoris",,
+95a,ICD-4 (1931-1939),Disordered action of heart,,
+95b(1),ICD-4 (1931-1939),Dilation of heart (cause unspecified),,
+95b(2),ICD-4 (1931-1939),Heart disease (undefined),,
+96.0,ICD-4 (1931-1939),Aneurysm,,
+97(1),ICD-4 (1931-1939),"Arterio-sclerosis, with cerebral haemorrhage",,
+97(2),ICD-4 (1931-1939),Arterio-sclerosis with record of other cerebral vascular lesion,,
+97(3),ICD-4 (1931-1939),Arterio-sclerosis without record of cerebral vascular lesion,,
+98a,ICD-4 (1931-1939),Senile gangrene,,
+98b,ICD-4 (1931-1939),Other gangrene,,
+99.0,ICD-4 (1931-1939),Other diseases of the arteries,,

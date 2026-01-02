@@ -1,0 +1,318 @@
+version,code,description,category_code,category_name,classification_confidence
+ICD-2,1,Enteric fever,L1_01,Infectious and Communicable Diseases,low
+ICD-2,2,Typhus,L1_01,Infectious and Communicable Diseases,low
+ICD-2,3A,Relapsing fever,L1_01,Infectious and Communicable Diseases,low
+ICD-2,3B,Mediterranean fever,L1_01,Infectious and Communicable Diseases,low
+ICD-2,4,Malaria,L1_01,Infectious and Communicable Diseases,low
+ICD-2,5,Small-pox,L1_01,Infectious and Communicable Diseases,low
+ICD-2,6,Measles,L1_01,Infectious and Communicable Diseases,low
+ICD-2,7,Scarlet fever,L1_01,Infectious and Communicable Diseases,low
+ICD-2,8,Whooping cough,L1_01,Infectious and Communicable Diseases,low
+ICD-2,9A,Diphtheria,L1_01,Infectious and Communicable Diseases,low
+ICD-2,9B,Membranous laryngitis,L1_06,Respiratory and Environmental Disease,low
+ICD-2,9C,Croup,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,10,Influenza,L1_01,Infectious and Communicable Diseases,low
+ICD-2,11,Miliary fever,L1_01,Infectious and Communicable Diseases,low
+ICD-2,12,Asiatic cholera,L1_01,Infectious and Communicable Diseases,low
+ICD-2,13,Cholera nostras,L1_01,Infectious and Communicable Diseases,low
+ICD-2,14,Dysentery,L1_01,Infectious and Communicable Diseases,low
+ICD-2,15,Plague,L1_01,Infectious and Communicable Diseases,low
+ICD-2,16,Yellow fever,L1_01,Infectious and Communicable Diseases,low
+ICD-2,17,Leprosy,L1_01,Infectious and Communicable Diseases,low
+ICD-2,18,Erysipelas,L1_01,Infectious and Communicable Diseases,low
+ICD-2,19A,Mumps,L1_01,Infectious and Communicable Diseases,low
+ICD-2,19B,German measles,L1_01,Infectious and Communicable Diseases,low
+ICD-2,19C,Varicella,L1_01,Infectious and Communicable Diseases,low
+ICD-2,19D,Other epidemic diseases,L1_01,Infectious and Communicable Diseases,low
+ICD-2,20A,Pyaemia,L1_01,Infectious and Communicable Diseases,low
+ICD-2,20B,Septicaemia,L1_01,Infectious and Communicable Diseases,low
+ICD-2,20C,Vaccinia,L1_01,Infectious and Communicable Diseases,low
+ICD-2,21,Glanders,L1_01,Infectious and Communicable Diseases,low
+ICD-2,22,Anthrax (Splenic fever),L1_01,Infectious and Communicable Diseases,low
+ICD-2,23,Rabies,L1_01,Infectious and Communicable Diseases,low
+ICD-2,24,Tetanus,L1_01,Infectious and Communicable Diseases,low
+ICD-2,25A,Actinomycosis,L1_01,Infectious and Communicable Diseases,low
+ICD-2,25B,Other mycoses,L1_01,Infectious and Communicable Diseases,low
+ICD-2,26,Pellagra,L1_06,Respiratory and Environmental Disease,low
+ICD-2,27,Beri-beri,L1_01,Infectious and Communicable Diseases,low
+ICD-2,28A,Pulmonary tuberculosis,L1_01,Infectious and Communicable Diseases,low
+ICD-2,28B,Phthisis (not def. as t.b.),L1_05,Chronic Non-Communicable Diseases,medium
+ICD-2,29A,Acute phthisis,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,29B,Acute miliary t.b.,L1_06,Respiratory and Environmental Disease,low
+ICD-2,30,Tuberculous meningitis,L1_01,Infectious and Communicable Diseases,low
+ICD-2,31A,Tabes mesenterica,L1_01,Infectious and Communicable Diseases,low
+ICD-2,31B,Other peritoneal & intestinal tubercle,L1_01,Infectious and Communicable Diseases,low
+ICD-2,32,T.b. of spinal column,L1_01,Infectious and Communicable Diseases,low
+ICD-2,33,T.b. of joints,L1_01,Infectious and Communicable Diseases,low
+ICD-2,34A,Lupus,L1_01,Infectious and Communicable Diseases,low
+ICD-2,34B,Scrofula,L1_06,Respiratory and Environmental Disease,low
+ICD-2,34C,T.b. of other organs,L1_01,Infectious and Communicable Diseases,low
+ICD-2,35,Disseminated t.b.,L1_01,Infectious and Communicable Diseases,low
+ICD-2,36A,Rickets,L1_06,Respiratory and Environmental Disease,low
+ICD-2,36B,Other forms of bone softening,L1_01,Infectious and Communicable Diseases,low
+ICD-2,37,Syphilis,L1_01,Infectious and Communicable Diseases,low
+ICD-2,38A,Soft chancre,L1_01,Infectious and Communicable Diseases,low
+ICD-2,38B,Gonococcus infection,L1_01,Infectious and Communicable Diseases,low
+ICD-2,38C,Purulent ophthalmia,L1_01,Infectious and Communicable Diseases,low
+ICD-2,39,Cancer of buccal cavity,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,40,"Cancer of stomach, liver, etc",L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,41,"Cancer of peritoneum, intestines & rectum",L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,42,Cancer of female genital organs,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,43,Cancer of breast,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,44,Cancer of skin,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,45,Cancer of other or unspecified organs,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,46A,Angioma,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,46B,Adenoma,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,46C,Other tumours (situation undefined),L1_05,Chronic Non-Communicable Diseases,medium
+ICD-2,47,Rheumatic fever,L1_01,Infectious and Communicable Diseases,low
+ICD-2,48A,Chronic rheumatism,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,48B,Osteo-arthritis,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,48C,Gout,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,49,Scurvy,L1_06,Respiratory and Environmental Disease,low
+ICD-2,50,Diabetes,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,51,Exophthalmic goitre,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,52,Addison's disease,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,53A,Leucocythaemia (Leuchaemia),L1_05,Chronic Non-Communicable Diseases,medium
+ICD-2,53B,Lymphadenoma,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,54,"Anaemia, Chlorosis",L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,55A,Diabetes insipidus,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,55B,Purpura,L1_06,Respiratory and Environmental Disease,low
+ICD-2,55C,Haemophilia,L1_03,Congenital and Developmental Conditions,low
+ICD-2,55D,Other general diseases,L1_01,Infectious and Communicable Diseases,low
+ICD-2,56,Alcoholism (acute or chronic),L1_09,Self-Harm and Substance Use,low
+ICD-2,57A,Occupational lead poisoning,L1_06,Respiratory and Environmental Disease,low
+ICD-2,57B,Non-occupational lead poisoning,L1_06,Respiratory and Environmental Disease,low
+ICD-2,58,Other chronic occupational poisonings,L1_06,Respiratory and Environmental Disease,low
+ICD-2,59,Other chronic poisonings,L1_07,Injury and Accidental Harm,low
+ICD-2,60,Encephalitis,L1_01,Infectious and Communicable Diseases,low
+ICD-2,61A,Cerebro-spinal fever,L1_01,Infectious and Communicable Diseases,low
+ICD-2,61B,Posterior basal meningitis,L1_01,Infectious and Communicable Diseases,low
+ICD-2,61C,"Meningitis, other forms",L1_01,Infectious and Communicable Diseases,low
+ICD-2,62,Locomotor ataxy,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,63A,"Diseases of the spinal cord formerly classed to ""Other nervous affections""",L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,63B,Poliomyelitis,L1_01,Infectious and Communicable Diseases,low
+ICD-2,63C,Other diseases of the spinal cord,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-2,64A,Apoplexy,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,64B,Serious apoplexy & oedema of brain,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,64C,Cerebral congestion,L1_01,Infectious and Communicable Diseases,low
+ICD-2,64D,Cerebral atheroma,L1_01,Infectious and Communicable Diseases,low
+ICD-2,64E,Cerebral haemorrhage,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,65,Softening of brain,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,66A,Hemiplegia,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,66B,Paraplegia,L1_01,Infectious and Communicable Diseases,low
+ICD-2,66C,Other forms of paralysis,L1_01,Infectious and Communicable Diseases,low
+ICD-2,67,General paralysis of insane,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,68,Other forms of mental alienation,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,69,Epilepsy,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,70A,Epileptiform convulsions (5yrs and over),L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,70B,Other convulsions (non-puerperal; 5yrs and over),L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,71A,Convulsions with teething,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,71B,Other infantile convulsions (<5yrs.),L1_02,Maternal and Early-Life Mortality,low
+ICD-2,72,Chorea,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,73A,"Hysteria, neuralgia, sciatica",L1_05,Chronic Non-Communicable Diseases,high
+ICD-2,73B,Neuritis,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,74A,"Idiocy, imbecility",L1_03,Congenital and Developmental Conditions,medium
+ICD-2,74B,Cretinism,L1_03,Congenital and Developmental Conditions,low
+ICD-2,74C,Cerebral tumour,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,74D,Other diseases of nervous system,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,75,Diseases of eyes & annexa,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,76A,Mastoid disease,L1_01,Infectious and Communicable Diseases,low
+ICD-2,76B,Other diseases of ears,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,77,Pericarditis,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,78A,Acute myocarditis,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-2,78B,Infective endocarditis,L1_01,Infectious and Communicable Diseases,low
+ICD-2,78C,Other acute endocarditis,L1_01,Infectious and Communicable Diseases,low
+ICD-2,79A,Valvular disease,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,79B,Fatty degeneration of heart,L1_06,Respiratory and Environmental Disease,low
+ICD-2,79C,Other organic disease of heart,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,80,Angina pectoris,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,81A,Aneurysm,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,81B,Arterial sclerosis,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,81C,Other diseases of arteries,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,82A,Cerebral embolism and thrombosis,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-2,82B,Other embolism & thrombosis,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-2,83A,Phlebitis,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,83B,Varix,L1_01,Infectious and Communicable Diseases,low
+ICD-2,83C,Pylephlebitis,L1_01,Infectious and Communicable Diseases,low
+ICD-2,83D,Variocele,L1_01,Infectious and Communicable Diseases,low
+ICD-2,84A,Status lymphaticus,L1_01,Infectious and Communicable Diseases,low
+ICD-2,84B,Other diseases of lymphatic system,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-2,85A,Functional disease of heart,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,85B,Epistaxis,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,85C,Other diseases of circulatory system,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,86,Diseases of the nasal fossae,L1_06,Respiratory and Environmental Disease,low
+ICD-2,87A,Laryngismus stridulus,L1_06,Respiratory and Environmental Disease,low
+ICD-2,87B,Laryngitis,L1_06,Respiratory and Environmental Disease,low
+ICD-2,87C,Other diseases of larynx,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,88,Diseases of thyroid body,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-2,89&90A,"Bronchiectasis, bronchial catarrh, etc.",L1_06,Respiratory and Environmental Disease,medium
+ICD-2,89&90B,Other bronchitis,L1_06,Respiratory and Environmental Disease,low
+ICD-2,91,Broncho-pneumonia,L1_06,Respiratory and Environmental Disease,low
+ICD-2,92A,Lobar pneumonia,L1_06,Respiratory and Environmental Disease,low
+ICD-2,92B,Pneumonia (type not stated),L1_06,Respiratory and Environmental Disease,low
+ICD-2,93A,Empyema,L1_01,Infectious and Communicable Diseases,low
+ICD-2,93B,Other pleurisy,L1_06,Respiratory and Environmental Disease,low
+ICD-2,94A,Pulmonary apoplexy & infarction,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,94B,Pulmonary oedema & congestion,L1_06,Respiratory and Environmental Disease,medium
+ICD-2,94C,Hypostatic pneumonia,L1_06,Respiratory and Environmental Disease,low
+ICD-2,94D,Collapse of lung (> 3 mths.),L1_06,Respiratory and Environmental Disease,low
+ICD-2,95,Gangrene of lung,L1_06,Respiratory and Environmental Disease,low
+ICD-2,96,Asthma,L1_06,Respiratory and Environmental Disease,low
+ICD-2,97,Pulmonary emphysema,L1_06,Respiratory and Environmental Disease,low
+ICD-2,98A,Fibroid disease of lung,L1_06,Respiratory and Environmental Disease,low
+ICD-2,98B,Other diseases of respiratory system,L1_06,Respiratory and Environmental Disease,medium
+ICD-2,99A,Diseases of teeth & gums,L1_06,Respiratory and Environmental Disease,low
+ICD-2,99B,"Thrush, Aphthous stomatitis",L1_01,Infectious and Communicable Diseases,low
+ICD-2,99C,Parotitis,L1_01,Infectious and Communicable Diseases,low
+ICD-2,99D,Other diseases of mouth & annexa,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,100A,Tonsillitis,L1_01,Infectious and Communicable Diseases,low
+ICD-2,100B,Ludwig's angina,L1_01,Infectious and Communicable Diseases,low
+ICD-2,100C,Other diseases of pharynx,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,101,Diseases of oesophagus,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,102,Perforating ulcer of stomach,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,103A,Inflammation of stomach,L1_01,Infectious and Communicable Diseases,low
+ICD-2,103B,Other diseases of stomach,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,104A,Infective enteritis,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,104B,Diarrhoea - not returned as infective - under 2yrs old,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,104C,Enteritis - not returned as infective - under 2yrs old,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,104D,Gastro-enteritis - not returned as infective - under 2yrs old,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-2,104E,Dyspepsia - under 2yrs old,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,104F,Colic - under 2yrs old,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,104G,Ulceration of intestines - under 2yrs old,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,104H,Duodenal ulcer - under 2yrs old,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,105A,Infective enteritis - over 2yrs old,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,105B,Diarrhoea - not returned as infective - over 2yrs old,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,105C,Enteritis - not returned as infective - over 2yrs old,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,105D,Gastro-enteritis - not returned as infective - over 2yrs old,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-2,105E,Dyspepsia - under 2yrs old,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,105F,Colic - over 2yrs old,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,105G,Ulceration of intestines - over 2yrs old,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,105H,Duodenal ulcer - over 2yrs old,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,106,Ankylostomiasis,L1_01,Infectious and Communicable Diseases,low
+ICD-2,107,Other intestinal parasites,L1_01,Infectious and Communicable Diseases,low
+ICD-2,108,Appendicitis,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,109A,Hernia,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,109B,Intestinal obstruction,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,110,Other diseases of intestines,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,111,Acute yellow atrophy of liver,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,112,Hydatid of liver,L1_01,Infectious and Communicable Diseases,low
+ICD-2,113A,Cirrhosis of liver (not alcoholic),L1_09,Self-Harm and Substance Use,low
+ICD-2,113B,Cirrhosis of liver (alcoholic),L1_09,Self-Harm and Substance Use,medium
+ICD-2,113C,"Diseases formerly classed to ""Other diseases of liver & gall bladder""",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-2,114,Biliary calculi,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,115,Other diseases of liver,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,116A,Infarction of spleen,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,116B,Other diseases of spleen,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-2,117,Peritonitis (cause unstated),L1_01,Infectious and Communicable Diseases,low
+ICD-2,118A,"Abdominal abscess, sub phrenic abscess",L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,118B,Other diseases of digestive system,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-2,119,Acute nephritis,L1_01,Infectious and Communicable Diseases,low
+ICD-2,120A,Bright's disease (as 1901 list),L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,120B,"Nephritis (unqualified), >10yrs & uraemia",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-2,121,Chyluria,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,122A,Abscess of kidney,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,122B,Cystic disease,L1_01,Infectious and Communicable Diseases,low
+ICD-2,122C,Suppression of urine,L1_01,Infectious and Communicable Diseases,low
+ICD-2,122D,Other diseases of kidney & annexa,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,123,Calculi of urinary passages,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-2,124,Diseases of bladder,L1_01,Infectious and Communicable Diseases,low
+ICD-2,125A,Perineal abscess,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,125B,"Other diseases of urethra, etc.",L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,126,Diseases of prostate,L1_01,Infectious and Communicable Diseases,low
+ICD-2,127,Non-veneral diseases of male genital organs,L1_01,Infectious and Communicable Diseases,low
+ICD-2,128A,Menorrhagia,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,128B,Other uterine haemorrhage,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,129,Uterine tumour (non-cancerous),L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,130A,Disorders of menstruation (not menorrhagia),L1_02,Maternal and Early-Life Mortality,low
+ICD-2,130B,Other diseases of uterus,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,131,"Ovarian cyst, tumour (non-cancerous)",L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,132A,Diseases of ovary (ex.ovarian tumour),L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,132B,Other diseases of female genital organs,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,133,Non-puerperal diseases of breast (non-cancerous),L1_01,Infectious and Communicable Diseases,low
+ICD-2,134A,Abortion,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,134B,Haemorrhage of pregnancy,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,134C,Uncontrollable vomitting,L1_01,Infectious and Communicable Diseases,low
+ICD-2,134D,Ectopic gestation,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,134E,Other accidents of pregnancy,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,135,Puerperal haemorrhage,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,136,Other accidents of childbirth,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,137,Puerperal fever,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,138A,Puerperal nephritis and uraemia,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,138B,Puerperal albuminuria & Bright's disease,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,138C,Puerperal convulsions,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,139A,Puerperal phlegmasia alba dolens & phlebitis,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,139B,Puerperal embolism & sudden death,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,140,Puerperal insanity,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,141,Puerperal diseases of breast,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,142A,Senile gangrene,L1_04,Later-Life Mortality,low
+ICD-2,142B,"Noma, Gangrene of mouth",L1_01,Infectious and Communicable Diseases,low
+ICD-2,142C,Noma pudendi,L1_01,Infectious and Communicable Diseases,low
+ICD-2,142D,Other gangrene,L1_01,Infectious and Communicable Diseases,low
+ICD-2,143,"Carbuncle, boil",L1_01,Infectious and Communicable Diseases,low
+ICD-2,144A,Phlegmon,L1_01,Infectious and Communicable Diseases,low
+ICD-2,144B,Acute abscess,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,145A,"Ulcer, bedsore",L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,145B,Eczema,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,145C,Pemphigus,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,145D,Other diseases of integumentary system,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,146,Diseases of bones,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,147,Diseases of joints,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,148,Amputations,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,149,Other diseases of locomotor system,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,150A,Congenital hydrocephalus,L1_03,Congenital and Developmental Conditions,medium
+ICD-2,150B,Phimosis,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,150C,Congenital malformation of heart,L1_03,Congenital and Developmental Conditions,medium
+ICD-2,150D,Other congenital malformations,L1_03,Congenital and Developmental Conditions,medium
+ICD-2,151A,Premature birth,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,151B,"Infantile atrophy, debility and marasmus",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-2,151C,Icterus neonatorum,L1_01,Infectious and Communicable Diseases,low
+ICD-2,151D,Sclerema and oedema neonatorum,L1_01,Infectious and Communicable Diseases,low
+ICD-2,151E,Want of breast milk,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,152A,"Diseases of umbilicus, etc.",L1_02,Maternal and Early-Life Mortality,low
+ICD-2,152B,Atelectasis,L1_06,Respiratory and Environmental Disease,low
+ICD-2,152C,Injuries at birth,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,152D,Cyanosis neonatorum,L1_01,Infectious and Communicable Diseases,low
+ICD-2,153,Lack of care,L1_10,"Ill-Defined, Administrative, and Other Causes",low
+ICD-2,154A,Senile dementia,L1_04,Later-Life Mortality,low
+ICD-2,154B,Senile decay,L1_04,Later-Life Mortality,medium
+ICD-2,155,Suicide by poison,L1_09,Self-Harm and Substance Use,low
+ICD-2,156,Suicide by asphyxia,L1_09,Self-Harm and Substance Use,low
+ICD-2,157,Suicide by hanging or strangulation,L1_09,Self-Harm and Substance Use,low
+ICD-2,158,Suicide by drowning,L1_09,Self-Harm and Substance Use,low
+ICD-2,159,Suicide by firearms,L1_09,Self-Harm and Substance Use,low
+ICD-2,160,Suicide by cutting or piercing instruments,L1_09,Self-Harm and Substance Use,low
+ICD-2,161,Suicide by jumping from high place,L1_09,Self-Harm and Substance Use,low
+ICD-2,162,Suicide by crushing,L1_09,Self-Harm and Substance Use,low
+ICD-2,163,Other suicides,L1_09,Self-Harm and Substance Use,low
+ICD-2,164,Food poisoning,L1_01,Infectious and Communicable Diseases,low
+ICD-2,165,Other acute poisonings,L1_01,Infectious and Communicable Diseases,low
+ICD-2,166,Conflagration,L1_07,Injury and Accidental Harm,low
+ICD-2,167,Burns (not conflagration),L1_07,Injury and Accidental Harm,medium
+ICD-2,168,Absorption of deleterious gases (not conflagration),L1_07,Injury and Accidental Harm,medium
+ICD-2,169,Accidental drowning,L1_07,Injury and Accidental Harm,medium
+ICD-2,170,Injury by firearms,L1_07,Injury and Accidental Harm,low
+ICD-2,171,Injury by cutting or piercing instruments,L1_07,Injury and Accidental Harm,low
+ICD-2,172,Injury by fall,L1_07,Injury and Accidental Harm,high
+ICD-2,173,Injury in mines & quarries,L1_07,Injury and Accidental Harm,medium
+ICD-2,174,Injury by machines,L1_07,Injury and Accidental Harm,low
+ICD-2,175,"Injury by other crushing (vehicles, railways, landslides, &c)",L1_07,Injury and Accidental Harm,high
+ICD-2,176,Injury by animals,L1_07,Injury and Accidental Harm,low
+ICD-2,177,Starvation,L1_06,Respiratory and Environmental Disease,low
+ICD-2,178,Excessive cold,L1_01,Infectious and Communicable Diseases,low
+ICD-2,179,Effects of heat,L1_01,Infectious and Communicable Diseases,low
+ICD-2,180,Lightning,L1_01,Infectious and Communicable Diseases,low
+ICD-2,181,Electricity (not lightning),L1_01,Infectious and Communicable Diseases,low
+ICD-2,182,Homicide by firearms,L1_08,Violence and Conflict,low
+ICD-2,183,Homicide by cutting or piercing instruments,L1_08,Violence and Conflict,low
+ICD-2,184,Homicide by other means,L1_08,Violence and Conflict,low
+ICD-2,185,Fractures (cause not specified),L1_07,Injury and Accidental Harm,low
+ICD-2,186,Other violence,L1_08,Violence and Conflict,low
+ICD-2,187,Dropsy,L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,188A,Syncope (>1 & <70),L1_05,Chronic Non-Communicable Diseases,low
+ICD-2,188B,Sudden death (not otherwise def.),L1_10,"Ill-Defined, Administrative, and Other Causes",low
+ICD-2,189A,Heart failure (>1 & <70),L1_01,Infectious and Communicable Diseases,low
+ICD-2,189B,"Atrophy, debility, marasmus (>1 & <70)",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-2,189C,Teething,L1_02,Maternal and Early-Life Mortality,low
+ICD-2,189D,Pyrexia,L1_01,Infectious and Communicable Diseases,low
+ICD-2,189E,Other ill-defined deaths,L1_10,"Ill-Defined, Administrative, and Other Causes",low
+ICD-2,189F,Cause not specified,L1_10,"Ill-Defined, Administrative, and Other Causes",low

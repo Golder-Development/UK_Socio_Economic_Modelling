@@ -1,0 +1,39 @@
+# Re-run diffing with fixed lexicon map
+diff_rows = []
+new_maps = {}
+
+for n, f in best_files.items():
+    path = os.path.join(base_dir, f)
+    old = pd.read_csv(path)
+    old.columns = [c.strip().lower() for c in old.columns]
+    old["icd_version"] = old.get("icd_version", f"ICD-{n}").astype(str)
+    old["icd_code"] = old["icd_code"].astype(str)
+    old["description"] = old["description"].astype(str)
+
+    preds = old["description"].apply(lambda d: score_one(d))
+    old["level1_code_scored"] = preds.apply(lambda x: x[0])
+    old["classification_confidence_scored"] = preds.apply(lambda x: conf(x[1]))
+    old["level1_name_scored"] = old["level1_code_scored"].map(L1)
+
+    out_path = os.path.join(base_dir, f"icd{n}_canonical_mapping_scored.csv")
+    out = old[["icd_version","icd_code","description","level1_code_scored","level1_name_scored","classification_confidence_scored"]].copy()
+    out.rename(columns={
+        "level1_code_scored":"level1_code",
+        "level1_name_scored":"level1_name",
+        "classification_confidence_scored":"classification_confidence"
+    }, inplace=True)
+    out.to_csv(out_path, index=False)
+    new_maps[n] = out_path
+
+    if "level1_code" in old.columns:
+        ch = old[old["level1_code"] != old["level1_code_scored"]].copy()
+        ch["source_file"] = f
+        diff_rows.append(ch[[
+            "icd_version","icd_code","description","level1_code","level1_code_scored","source_file"
+        ]])
+
+diff = pd.concat(diff_rows, ignore_index=True)
+diff_path = os.path.join(base_dir, "lexicon_model_diff_all_icd1_8.csv")
+diff.to_csv(diff_path, index=False)
+
+diff.shape, diff_path

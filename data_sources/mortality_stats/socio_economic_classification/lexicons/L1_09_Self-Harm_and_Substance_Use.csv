@@ -1,0 +1,19 @@
+term,weight,match_type,source,notes
+suicide,9,token,core,
+self inflicted,8,phrase,core,
+self harm,9,phrase,core,Self-harm
+addiction,8,token,substance,
+dependence,8,token,substance,
+alcoholism,9,token,substance,
+"cirrhosis of liver (alcoholic)",9,phrase,substance,Alcohol-related liver disease
+alcoholic,8,token,substance,Alcohol-related context
+drug,6,token,substance,
+morphine,8,token,substance,
+opium,8,token,substance,
+barbitur,8,substring,substance,
+cocaine,8,token,substance,
+amphetamine,8,token,substance,
+mdma,8,token,substance,
+cannabis,8,token,substance,
+tobacco,7,token,substance,
+nicotine,7,token,substance,
