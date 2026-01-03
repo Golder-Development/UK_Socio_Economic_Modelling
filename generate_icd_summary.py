@@ -33,7 +33,7 @@ grouped = df.groupby(['icd_version', 'cause']).agg({
     'deaths': 'sum'
 }).reset_index()
 
-grouped.columns = ['icd_version', 'icd_code', 'cause_description', 'l1_category_code', 'l1_category_name', 
+grouped.columns = ['icd_version', 'icd_code', 'cause_description', 'l1_category_code', 'l1_category_name',
                    'first_year', 'last_year', 'years_active', 'total_deaths']
 
 # Calculate avg deaths per year
@@ -43,9 +43,11 @@ grouped['avg_deaths_per_year'] = grouped['total_deaths'] / grouped['years_active
 pop_file = Path('data_sources/population/uk_population_harmonized_age_groups.csv')
 pop_df = pd.read_csv(pop_file)
 
+
 def get_max_population(first_year, last_year):
     period_pop = pop_df[(pop_df['year'] >= first_year) & (pop_df['year'] <= last_year)]['population'].max()
     return period_pop if pd.notna(period_pop) else pop_df['population'].max()
+
 
 grouped['max_population'] = grouped.apply(
     lambda r: get_max_population(r['first_year'], r['last_year']), axis=1
@@ -64,5 +66,5 @@ print(f"\n✓ Saved: {output_file.name}")
 print(f"  Rows: {len(grouped):,}")
 print(f"  Columns: {len(grouped.columns)}")
 print(f"  ICD versions: {grouped['icd_version'].nunique()}")
-print(f"\nFirst 10 rows:")
+print("\nFirst 10 rows:")
 print(grouped.head(10).to_string(index=False))

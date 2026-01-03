@@ -16,9 +16,9 @@ print(f"Shape: {df.shape}")
 print(f"Columns ({len(df.columns)} total):")
 for i, col in enumerate(df.columns):
     print(f"  {i}: {col}")
-print(f"\nFirst 5 data rows:")
+print("\nFirst 5 data rows:")
 print(df.head())
-print(f"\nLast 5 data rows:")
+print("\nLast 5 data rows:")
 print(df.tail())
 
 # Check the year column

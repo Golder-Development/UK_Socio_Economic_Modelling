@@ -1,0 +1,9 @@
+UNIQUE MEASURES IN PublicFinances1800-2023.CSV (NOT in PUSF)
+================================================================================
+
+1. Retail Prices Index: Long run series: 1800 to 2024: Jan 1974=100
+   CDID: nan
+
+2. Title
+   CDID: nan
+
