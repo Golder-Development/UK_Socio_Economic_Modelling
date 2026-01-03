@@ -1,5 +1,6 @@
 term,weight,match_type,source,notes
 violence,8,token,core,
+"violent deaths of unstated nature",7,phrase,core,Deaths from violence with unspecified cause
 homicide,9,token,core,
 murder,9,token,core,
 assault,8,token,core,

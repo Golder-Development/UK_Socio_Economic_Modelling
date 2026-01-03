@@ -1,0 +1,23 @@
+icd_version,icd_code,cause_description,L1_category,confidence,reason,date_added
+ICD-10,B59,Measles without complication,L1_01,high,Code malformation should be B059,2026-01-03
+ICD-10,Unknown,neonatal unclassified,L1_02,high,NeoNatal,2026-01-03
+ICD-9,1635,Malignant neoplasm of pleura,L1_05,high,Cancer,2026-01-03
+ICD-9,1652,Malignant neoplasm of other and ill-defined sites within the respiratory system and intrathoracic organs,L1_05,high,Cancer,2026-01-03
+ICD-9,1759,Malignant neoplasm of male breast,L1_05,high,Cancer,2026-01-03
+ICD-9,4856,Bronchopneumonia,L1_06,high,Respiratory Disorder,2026-01-03
+ICD-9,5159,Postinflammatory pulmonary fibrosis,L1_06,high,Respiratory Disorder,2026-01-03
+ICD-9,5894,Small kidney of unknown cause,L1_05,high,Chronic Condition,2026-01-03
+ICD-9,7156,Osteoarthrosis and allied disorders,L1_05,high,Chronic Condition,2026-01-03
+ICD-9,8266,Pedal cycle accident,L1_07,high,Accident,2026-01-03
+ICD-9,8267,Pedal cycle accident,L1_07,high,Accident,2026-01-03
+ICD-9,8489,Accidents involving other vehicles not elsewhere classifiable,L1_07,high,Accident,2026-01-03
+ICD-9,8959,Accident caused by controlled fire,L1_07,high,Accident,2026-01-03
+ICD-9,9012,Excessive cold,L1_06,high,Environmental,2026-01-03
+ICD-9,9122,Inhalation and ingestion of other object causing respiratory tract obstruction or suffocation,L1_07,high,Accident,2026-01-03
+ICD-9,9522,Suicide and selfinflicted poisoning by other gases and vapours,L1_09,high,Self Harm Suicide,2026-01-03
+ICD-9,9523,Suicide and selfinflicted poisoning by other gases and vapours,L1_09,high,Self Harm Suicide,2026-01-03
+ICD-9,9603,"Fight, brawl, rape",L1_08,high,Violence,2026-01-03
+ICD-9,9639,Assault by hanging and strangulation,L1_08,high,Violence,2026-01-03
+ICD-9,9825,"Poisoning by other gases, undetermined whether accidentally or purposely inflicted",L1_07,high,Accident,2026-01-03
+ICD-9,9849,"Submersion (drowning), undetermined whether accidentally or purposely inflicted",L1_07,high,Accident,2026-01-03
+ICD-3,41,"Purulent infection, septicaemia",L1_01,high,Infection Code variant,2026-01-03

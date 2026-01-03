@@ -4,15 +4,25 @@ degeneration,6,token,core,
 carcinoma,8,token,disease,
 cancer,8,token,disease,
 sarcoma,8,token,disease,
+malignant neoplasm,8,phrase,disease,Malignant tumor
+malignant,8,token,disease,Malignant neoplasm
+leukaemia,8,token,disease,Blood cancer (preferred spelling)
+lymphosarcoma,8,token,disease,Malignant lymphoma
+hodgkin's disease,8,phrase,disease,Hodgkin lymphoma
+hodgkin's,8,token,disease,Hodgkin lymphoma
+reticulosarcoma,8,token,disease,Malignant reticulo-endothelial neoplasm
 diabetes,8,token,disease,
 cirrhosis,7,token,disease,
 arthritis,6,token,disease,
+lupus,7,token,disease,Systemic lupus erythematosus/autoimmune disease
 gout,6,token,disease,
 "diseases of bones",6,phrase,disease,Bone diseases
 "diseases of joints",6,phrase,disease,Joint diseases
+"Diseases of .*",7,regex,disease,Catch-all for diseases of specific organs/systems
 Other diseases of .*,7,regex,chronic,Catch-all pattern for chronic disease descriptions
 hernia,6,token,disease,
 intestinal obstruction,7,phrase,disease,
+"intestinal stasis",6,phrase,disease,Reduced intestinal motility/impaired bowel movement
 gall bladder,6,phrase,disease,
 digestive system,5,phrase,disease,
 diseases of oesophagus,6,phrase,disease,Oesophageal diseases
@@ -22,15 +32,18 @@ supra renal capsules,6,phrase,disease,
 diseases of eyes & annexa,6,phrase,disease,Eye and adnexa diseases
 thyroid body,6,phrase,disease,Thyroid gland reference
 diseases of thyroid body,7,phrase,disease,Thyroid diseases
+endocrine glands (except thyroid) and related structures,7,phrase,disease,Endocrine gland disorders
 calculus,6,token,disease,
 tumour (not malignant),6,phrase,disease,
 tumour (non malignant),6,phrase,disease,
 angioma,6,token,disease,Benign vascular tumor
 adenoma,6,token,disease,Benign glandular tumor
+benign neoplasm,6,phrase,disease,Non-malignant tumor
 "other tumours (situation undefined)",6,phrase,disease,Tumors of undefined nature/location
 amputations,6,token,disease,History of limb amputation
 ulceration,6,token,disease,
 varicose veins,6,phrase,disease,
+varix,6,token,disease,Enlarged blood vessel/varicose vein
 embolism,7,token,disease,
 thrombosis,7,token,disease,
 peritonitis (not puerperal),7,phrase,disease,
@@ -41,7 +54,14 @@ leucocythaemia,7,token,disease,Blood cancer (old spelling)
 leuchaemia,7,token,disease,Leukemia (old spelling)
 lymphadenoma,7,token,disease,Lymph node neoplasm
 chlorosis,6,token,disease,Iron deficiency anemia (historical term)
+acquired haemolytic anaemias,7,phrase,disease,Acquired haemolytic anemia
+aplastic anaemia,7,phrase,disease,Aplastic anemia
+other and unspecified anaemias,7,phrase,disease,Other/unspecified anemia
+coagulation defects,7,phrase,disease,Bleeding/coagulation disorders
+"hyatid cysts",6,phrase,disease,Parasitic infection from Echinococcus tapeworm
+diseases of white blood cells,7,phrase,disease,Leukocyte disorders
 exophthalmic goitre,7,phrase,disease,Graves' disease/hyperthyroidism
+"simple goitre",6,token,disease,Thyroid enlargement without hyperthyroidism
 addison's disease,7,phrase,disease,Adrenal insufficiency
 chorea,6,token,disease,Neurological movement disorder
 softening of brain,7,phrase,disease,Cerebral degeneration
@@ -49,11 +69,30 @@ general paralysis of insane,7,phrase,disease,Neurosyphilis/dementia paralytica
 insanity,6,token,disease,Mental illness
 mental alienation,6,phrase,disease,Mental illness (historical term)
 hysteria,6,token,disease,Historical neurosis term
+transient organic psychotic conditions,7,phrase,disease,Acute organic psychoses
+other organic psychotic conditions (chronic),7,phrase,disease,Chronic organic psychoses
+schizophrenic psychoses,7,phrase,disease,Schizophrenia spectrum psychoses
+psychoses,6,token,disease,Psychotic disorders general
+"Other General Diseases",6,phrase,disease,General diseases not otherwise specified
+paranoid states,6,phrase,disease,Paranoid psychotic states
+neurotic disorders,6,phrase,disease,Nonpsychotic neurotic disorders
+personality disorders,6,phrase,disease,Personality disorders
+sexual deviations and disorders,6,phrase,disease,Sexual disorders
+physiological malfunction arising from mental factors,6,phrase,disease,Somatic symptoms from mental factors
+acute reaction to stress,7,phrase,disease,Acute stress reaction
+adjustment reaction,6,phrase,disease,Adjustment disorder
+specific nonpsychotic mental disorders following organic brain damage,7,phrase,disease,Nonpsychotic mental disorder due to brain damage
+specific nonpsychotic,6,phrase,disease,Nonpsychotic mental disorder general
+mental disorders,6,phrase,disease,Mental disorder generic
+organic brain damage,6,phrase,disease,Brain damage underlying mental disorder
+depressive disorder,7,phrase,disease,Depressive disorder
+disturbance of conduct not elsewhere classified,6,phrase,disease,Conduct disturbance NEC
 epilepsy,7,token,disease,Seizure disorder
 convulsions,6,token,disease,Seizures
 locomotor ataxy,7,phrase,disease,Tabes dorsalis/spinal cord disease
 "Paraplegia, diseases of cord",7,phrase,disease,Spinal cord disorders
 diseases of the spinal cord,7,phrase,disease,Spinal cord diseases
+"myelitis of unstated origin",7,phrase,disease,Spinal cord inflammation of unknown cause
 "Neuritis, peripheral, polyneuritis",7,phrase,disease,Peripheral nerve inflammation
 neuritis,6,token,disease,Nerve inflammation
 neuralgia,6,token,disease,Nerve pain
@@ -64,24 +103,36 @@ acute myocarditis,7,phrase,disease,Acute heart muscle inflammation
 myocarditis,7,token,disease,Heart muscle inflammation
 "Syncope, heart disease",7,phrase,disease,Heart-related loss of consciousness
 valvular disease,7,phrase,disease,Heart valve disease
+"mitral valve disease",7,phrase,disease,Mitral valve dysfunction/stenosis/regurgitation
 "endocarditis (not infective)",7,phrase,disease,Non-infective endocardial inflammation
 pericarditis,7,token,disease,Pericardial inflammation
 angina pectoris,7,phrase,disease,Chest pain/ischemia
+"heart failure",8,phrase,disease,Cardiac insufficiency/pump failure
+"other or unspecified myocardial disease",7,phrase,disease,Heart muscle disease of unspecified type
 "heart disease (not spec.)",6,phrase,disease,Unspecified heart disease
 functional disease of heart,6,phrase,disease,Functional cardiac disorder
 other organic disease of heart,6,phrase,disease,Organic heart disease
 syncope,6,token,disease,Loss of consciousness
+"disordered action of heart",7,phrase,disease,Irregular/abnormal heart rhythm or function
 apoplexy,8,token,disease,Stroke/cerebrovascular accident
 hemiplegia,7,token,disease,Paralysis of one side of body
+"general paralysis",7,phrase,disease,Generalized paralysis/motor function loss
+"other forms of paralysis",7,phrase,disease,Other types of paralytic conditions
+"other paralyses of unstated origin",7,phrase,disease,Paralysis of unknown etiology
+"Paralysis agitans",8,token,disease,Parkinson's disease/tremor and rigidity
 aneurysm,7,token,disease,Blood vessel dilation/rupture
 arterial sclerosis,7,phrase,disease,Arterial hardening/atherosclerosis
 phimosis,6,token,disease,Penile foreskin constriction
+"stricture of the urethra",7,phrase,disease,Narrowing of the urethra
+"suppression of urine",7,phrase,disease,Absence of urine production/anuria
 gastric ulcer,7,phrase,disease,Stomach ulcer
 gastritis,6,token,disease,Stomach inflammation
 gastric catarrh,6,phrase,disease,Stomach inflammation/mucous membrane condition
 gastro-enteritis,6,phrase,disease,Gastrointestinal inflammation
 dyspepsia,6,token,disease,Indigestion
+"uncontrollable vomitting",7,phrase,disease,Persistent vomiting/hyperemesis
 enteritis,6,token,disease,Intestinal inflammation
+"other peritoneal & intestinal tubercle",7,phrase,disease,Tuberculosis of peritoneum and intestines
 colic - over 2yrs old,6,phrase,disease,Colic outside infant age range
 appendicitis,7,token,disease,Appendix inflammation
 perityphlitis,7,token,disease,Inflammation around cecum/appendix region
@@ -114,3 +165,23 @@ calculi,6,token,disease,Stones/renal or urinary calculi
 "dilatation of heart (cause unspecified)",7,phrase,disease,Heart chamber enlargement without specified cause
 "heart disease (undefined)",7,phrase,disease,Unspecified cardiac disease
 "heart failure (age 1–70)",7,phrase,disease,Heart failure in age range 1-70 years
+"Abnormalities of blood pressure",7,phrase,disease,Blood pressure disorders
+"Cerebral atheroma",7,phrase,disease,Cerebral artery hardening
+"Cerebral congestion",7,phrase,disease,Brain blood vessel congestion
+"Dementia praecox",7,phrase,disease,Early-onset dementia
+"Diarrhoea - not returned as infective - over 2yrs old",7,phrase,disease,Non-infective diarrhea in older children
+"Diseases of bladder",7,phrase,disease,Bladder disorders
+"Diseases of bones",6,phrase,disease,Bone diseases
+osteomalacia,7,token,disease,Bone softening from vitamin D deficiency/adult rickets
+"other forms of bone softening",7,phrase,disease,Other types of bone demineralization
+"Diseases of eyes & annexa",6,phrase,disease,Eye and adnexa diseases
+"Diseases of joints",6,phrase,disease,Joint diseases
+"Diseases of oesophagus",6,phrase,disease,Oesophageal diseases
+"Diseases of other female genital organs not under other headings",7,phrase,disease,Female reproductive system disorders
+"Diseases of other organs of locomotion",6,phrase,disease,Movement/locomotion system disorders
+"Diseases of prostate",7,phrase,disease,Prostate disorders
+"Diseases of the adrenals",6,phrase,disease,Adrenal gland diseases
+"Diseases of the breasts",6,phrase,disease,Breast diseases
+"non-puerperal diseases of the breast",6,phrase,disease,Non-maternal breast diseases
+"non-venereal diseases .*",7,regex,disease,Non-venereal diseases catch-all pattern
+"Diseases of the accessory nasal sinuses",6,phrase,disease,Sinus diseases

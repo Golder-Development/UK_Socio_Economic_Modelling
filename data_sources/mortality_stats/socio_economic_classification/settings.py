@@ -12,6 +12,7 @@ This file contains:
 - Confidence thresholds
 """
 
+import os
 from typing import Dict, List, Tuple
 
 
@@ -47,7 +48,7 @@ TAXONOMY: Dict[str, str] = {
 #         ...
 #     ]
 # }
-# 
+#
 # match_type can be: "token", "phrase", "substring", "regex"
 
 # All hard override terms have been added to their respective lexicons
@@ -133,7 +134,6 @@ HARD_OVERRIDES: Dict[str, List[Tuple[str, str]]] = {}
 HARD_OVERRIDE_EXCLUSIONS: Dict[str, List[Tuple[str, str]]] = {}
 
 
-
 # ============================================================
 # CLASSIFICATION ORDER
 # ============================================================
@@ -203,6 +203,22 @@ DEFAULT_VERSION = "UNK"
 
 
 # ============================================================
+# MULTI-CODE HANDLING
+# ============================================================
+
+# How to handle comma-separated codes (e.g., "79,80*" or "113,114(1)")
+# Options:
+#   "keep_original" - Keep multi-code lines as-is, no splitting
+#   "split_only"    - Split into individual codes, remove original multi-code line (legacy behavior)
+#   "split_and_keep" - Split into individual codes AND keep the original multi-code line
+MULTI_CODE_HANDLING = "split_and_keep"
+
+# Whether to deduplicate codes after splitting
+# If True, removes duplicate (code, description) pairs after splitting
+DEDUPLICATE_CODES = True
+
+
+# ============================================================
 # OUTPUT CONFIGURATION
 # ============================================================
 
@@ -227,6 +243,9 @@ DEFAULT_PATHS = {
     "lexicon_dir": "lexicons",
     "input_csv": "data/input.csv",
     "output_csv": "output/classified.csv",
+    "manual_overrides": os.path.join(
+        os.path.dirname(__file__), "inputs", "manual_overrides.csv"
+    ),
 }
 
 

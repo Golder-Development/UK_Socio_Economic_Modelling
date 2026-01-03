@@ -372,24 +372,72 @@ def split_multi_codes(df: pd.DataFrame, settings: Any) -> pd.DataFrame:
     """
     Split rows with comma-separated codes into multiple rows.
 
+    Behavior is controlled by settings.MULTI_CODE_HANDLING:
+    - "keep_original": No splitting, return dataframe as-is
+    - "split_only": Split multi-codes, remove original (legacy behavior)
+    - "split_and_keep": Split multi-codes AND keep original multi-code line
+
+    If settings.DEDUPLICATE_CODES is True, removes duplicate codes after splitting.
+
     Args:
         df: Input dataframe
-        settings: Settings module containing DEFAULT_COLUMNS
+        settings: Settings module containing DEFAULT_COLUMNS and MULTI_CODE_HANDLING
 
     Returns:
-        Dataframe with one code per row
+        Dataframe with codes split according to configuration
     """
     code_col = settings.DEFAULT_COLUMNS["code"]
-
+    
+    # Get multi-code handling mode (default to split_only for backwards compatibility)
+    handling_mode = getattr(settings, "MULTI_CODE_HANDLING", "split_only")
+    
+    # If keeping original, no splitting needed
+    if handling_mode == "keep_original":
+        return df
+    
     rows = []
     for _, r in df.iterrows():
-        codes = [c.strip() for c in str(r[code_col]).split(",")]
-        for c in codes:
-            rr = r.copy()
-            rr[code_col] = c
-            rows.append(rr)
-
-    return pd.DataFrame(rows)
+        code_str = str(r[code_col])
+        
+        # Check if this is a multi-code (contains comma)
+        if ',' in code_str:
+            codes = [c.strip() for c in code_str.split(",")]
+            
+            # If split_and_keep, add the original multi-code row first
+            if handling_mode == "split_and_keep":
+                rows.append(r.copy())
+            
+            # Add split individual codes
+            for c in codes:
+                rr = r.copy()
+                rr[code_col] = c
+                rows.append(rr)
+        else:
+            # Single code, just add as-is
+            rows.append(r.copy())
+    
+    result_df = pd.DataFrame(rows)
+    
+    # Deduplicate if configured
+    deduplicate = getattr(settings, "DEDUPLICATE_CODES", False)
+    if deduplicate and len(result_df) > 0:
+        # Get description column
+        desc_col = settings.DEFAULT_COLUMNS.get("description", "description")
+        
+        # Create deduplication key from code and description
+        # This preserves codes with different descriptions
+        if desc_col in result_df.columns:
+            before_count = len(result_df)
+            result_df = result_df.drop_duplicates(
+                subset=[code_col, desc_col], 
+                keep='first'
+            ).reset_index(drop=True)
+            after_count = len(result_df)
+            
+            if before_count != after_count:
+                print(f"  Deduplicated: {before_count - after_count} duplicate code(s) removed")
+    
+    return result_df
 
 
 def classify_dataframe(df: pd.DataFrame, lex_dir: str, settings: Any) -> pd.DataFrame:

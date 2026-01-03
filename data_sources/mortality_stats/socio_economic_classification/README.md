@@ -8,6 +8,9 @@ This directory contains **domain-specific configuration** for classifying ICD mo
 socio_economic_classification/
 ├── settings.py                # ICD-specific taxonomy and rules
 ├── classify_mortality.py      # Convenience script for classification
+├── inputs/                    # Input data and overrides
+│   ├── manual_overrides.csv   # Manual classifications for missing codes
+│   └── MANUAL_OVERRIDES_README.md
 └── lexicons/                  # Category-specific term lexicons
     ├── L1_01_Infectious_and_Communicable_Diseases.csv
     ├── L1_02_Maternal_and_Early-Life_Mortality.csv
@@ -29,8 +32,9 @@ The classification logic lives in the centralized, reusable engine:
 UK_Socio_Economic_Modelling/
 └── classifiers/
     └── lexicon_classifier/
-        ├── engine.py       # Domain-agnostic classification engine
-        └── README.md       # Full engine documentation
+        ├── engine.py                      # Domain-agnostic classification engine
+        ├── manual_overrides_handler.py    # Manual overrides system
+        └── README.md                      # Full engine documentation
 ```
 
 See [classifiers/lexicon_classifier/README.md](../../../../classifiers/lexicon_classifier/README.md) for complete engine documentation.
@@ -58,7 +62,9 @@ python classify_mortality.py --input_csv data.csv --lex_dir custom_lexicons/
 - `--output_csv`: Path to output CSV (default: from settings.py)
 - `--version`: Override version for all records (e.g., `ICD-1`, `ICD-8`, `ICD-10`)
   - Overrides any version column in the input file
-  - If not specified, uses version from input CSV or defaults to `UNK`
+  - If not specified, uses version from input CSV or defaults t
+- `--manual_overrides`: Path to manual overrides CSV (default: `inputs/manual_overrides.csv`)
+- `--skip_manual_overrides`: Skip loading manual overrides (useful for testing)o `UNK`
 - `--lex_dir`: Path to lexicon directory (default: `lexicons/`)
 
 ### From Python
@@ -102,6 +108,42 @@ ICD codes are mapped to 10 socio-economic mortality categories:
 | L1_09 | Self-Harm and Substance Use |
 | L1_10 | Ill-Defined, Administrative, and Other Causes |
 
+## Manual Overrides for Missing Codes
+
+The system includes a **Manual Overrides** feature to handle ICD codes that are missing from source data.
+
+**Important**: Manual overrides **FILL MISSING DATA ONLY**. They never replace existing classifications.
+
+### Quick Usage
+
+Manual overrides are automatically loaded from `inputs/manual_overrides.csv`:
+
+```bash
+python classify_mortality.py --input_csv data.csv
+```
+
+To skip manual overrides:
+
+```bash
+python classify_mortality.py --input_csv data.csv --skip_manual_overrides
+```
+
+### When to Use
+
+Use manual overrides when:
+
+- An ICD code appears in mortality data but is missing from source ICD files
+- Historical codes have no descriptions available
+- Administrative codes need pre-classification
+
+**Do NOT use** to override lexicon classifications for existing codes.
+
+### Documentation
+
+- **Quick Start**: [inputs/QUICKSTART.md](inputs/QUICKSTART.md)
+- **Full Documentation**: [inputs/MANUAL_OVERRIDES_README.md](inputs/MANUAL_OVERRIDES_README.md)
+- **File Location**: [inputs/manual_overrides.csv](inputs/manual_overrides.csv)
+
 ### Hard Override Rules
 
 Certain terms **guarantee** classification regardless of lexicon scores:
@@ -141,6 +183,46 @@ TOKEN_MATCH_OPTIONS = {
 Set to `False` for strict token equality.
 
 **Lexicon normalization:** At load time, all lexicon terms are normalized with the same `TEXT_NORMALIZATION` rules applied to input text (lowercasing, punctuation removal, whitespace collapse). This removes punctuation/parenthesis mismatches between lexicon entries and the cleaned input descriptions.
+
+## Input Requirements
+
+Your CSV must contain:
+
+- **Code column**: ICD code identifier (will accept various column names)
+- **Description column**: Text description of the code (optional, can be built from multiple columns)
+- **Version column**: ICD version (optional, defaults to 'UNK')
+
+### Multi-Code Handling
+
+The system can handle comma-separated codes (e.g., `"79,80*"` or `"113,114(1)"`) in three ways:
+
+**Configure via `settings.MULTI_CODE_HANDLING`:**
+
+```python
+# Option 1: Keep multi-codes as-is (no splitting)
+MULTI_CODE_HANDLING = "keep_original"
+
+# Option 2: Split into individual codes, remove original (legacy)
+MULTI_CODE_HANDLING = "split_only"
+
+# Option 3: Split into individual codes AND keep original (default)
+MULTI_CODE_HANDLING = "split_and_keep"
+```
+
+**Example:** Input has code `"79,80*"` with description "Convulsions"
+
+- `keep_original`: Classifies `"79,80*"` once
+- `split_only`: Classifies `79` and `80*` separately (original removed)
+- `split_and_keep`: Classifies `"79,80*"`, `79`, AND `80*` (3 classifications)
+
+**Deduplication:**
+
+```python
+# Remove duplicate (code, description) pairs after splitting
+DEDUPLICATE_CODES = True  # Default
+```
+
+This prevents duplicate classifications if the same code appears in multiple multi-code entries.
 
 ## Input Requirements
 

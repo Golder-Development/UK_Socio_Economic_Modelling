@@ -3,8 +3,8 @@ ICD-7,461,Amoebiasis — With liver abscess,L1_05,Chronic Non-Communicable Disea
 ICD-7,470,Other protozoal dysentery — Other protozoal dysentery,L1_01,Infectious and Communicable Diseases,low
 ICD-7,480,Unspecified forms of dysentery — Unspecified forms of dysentery,L1_01,Infectious and Communicable Diseases,low
 ICD-7,490,Food poisoning (infection and intoxication) — Staphylococcal,L1_01,Infectious and Communicable Diseases,medium
-ICD-7,491,Food poisoning (infection and intoxication) — Botulism,L1_01,Infectious and Communicable Diseases,low
-ICD-7,492,Food poisoning (infection and intoxication) — Unspecified,L1_01,Infectious and Communicable Diseases,low
+ICD-7,491,Food poisoning (infection and intoxication) — Botulism,L1_07,Injury and Accidental Harm,low
+ICD-7,492,Food poisoning (infection and intoxication) — Unspecified,L1_07,Injury and Accidental Harm,low
 ICD-7,500,Scarlet fever — Scarlet fever,L1_01,Infectious and Communicable Diseases,low
 ICD-7,510,Streptococcal sore throat — Streptococcal sore throat,L1_01,Infectious and Communicable Diseases,low
 ICD-7,520,Erysipelas — Erysipelas,L1_01,Infectious and Communicable Diseases,low
@@ -40,12 +40,12 @@ ICD-7,700,Vincent's infection — Vincent's infection,L1_01,Infectious and Commu
 ICD-7,710,Relapsing fever — Louse-borne,L1_01,Infectious and Communicable Diseases,low
 ICD-7,711,Relapsing fever — Tick-borne,L1_01,Infectious and Communicable Diseases,low
 ICD-7,712,Relapsing fever — Unspecified,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1634,Malignant neoplasm of lung — Pleura not specified as primary,L1_10,"Ill-Defined, Administrative, and Other Causes",low
-ICD-7,1651,"Malignant neoplasm of thoracic organs (sec.) — Bronchus, lung",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1652,Malignant neoplasm of thoracic organs (sec.) — Pleura,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1653,"Malignant neoplasm of thoracic organs (sec.) — Other than trachea, bronchus, lung or pleura",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1991,"Malignant neoplasm of other and unspecified sites — No primary stated, not multiple",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1992,"Malignant neoplasm of other and unspecified sites — No primary stated, multiple",L1_01,Infectious and Communicable Diseases,low
+ICD-7,1634,Malignant neoplasm of lung — Pleura not specified as primary,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1651,"Malignant neoplasm of thoracic organs (sec.) — Bronchus, lung",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1652,Malignant neoplasm of thoracic organs (sec.) — Pleura,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1653,"Malignant neoplasm of thoracic organs (sec.) — Other than trachea, bronchus, lung or pleura",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1991,"Malignant neoplasm of other and unspecified sites — No primary stated, not multiple",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1992,"Malignant neoplasm of other and unspecified sites — No primary stated, multiple",L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,590,Tularaemia — Tularaemia,L1_01,Infectious and Communicable Diseases,low
 ICD-7,10,Respiratory tuberculosis with mention of occupational disease of lung — Respiratory tuberculosis with mention of occupational disease of lung,L1_06,Respiratory and Environmental Disease,medium
 ICD-7,20,Pulmonary tuberculosis — Pulmonary tuberculosis,L1_01,Infectious and Communicable Diseases,low
@@ -90,7 +90,7 @@ ICD-7,214,"Early syphilis — Early syphilis, unspecified stage",L1_01,Infectiou
 ICD-7,220,Aneurysm of aorta — Aneurysm of aorta,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,230,Other cardiovascular syphilis — Other cardiovascular syphilis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,240,Tabes dorsalis — Tabes dorsalis,L1_01,Infectious and Communicable Diseases,low
-ICD-7,250,General paralysis of insane — General paralysis of insane,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,250,General paralysis of insane — General paralysis of insane,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,260,Other syphilis of central nervous system — Other syphilis of central nervous system,L1_01,Infectious and Communicable Diseases,low
 ICD-7,270,Other forms of late syphilis — Other forms of late syphilis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,280,Latent syphilis — Early latent,L1_01,Infectious and Communicable Diseases,low
@@ -217,159 +217,159 @@ ICD-7,1360,Pediculosis — Pediculosis,L1_01,Infectious and Communicable Disease
 ICD-7,1370,Other arthropod infestation — Other arthropod infestation,L1_01,Infectious and Communicable Diseases,low
 ICD-7,1380,Other infective and parasitic diseases — Sarcoid of Boeck,L1_01,Infectious and Communicable Diseases,low
 ICD-7,1381,Other infective and parasitic diseases — Other,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1400,Malignant neoplasm of lip — Upper lip,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1401,Malignant neoplasm of lip — Lower lip,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1408,Malignant neoplasm of lip — Both lips,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1409,Malignant neoplasm of lip — Lip unspecified (inc. commissure),L1_01,Infectious and Communicable Diseases,low
-ICD-7,1410,Malignant neoplasm of tongue — Base of tongue,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1417,Malignant neoplasm of tongue — Other specified parts of tongue,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1418,Malignant neoplasm of tongue — Multiple parts,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1419,Malignant neoplasm of tongue — Part unspecified,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1420,Malignant neoplasm of salivary gland — Parotid gland,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1427,Malignant neoplasm of salivary gland — Other salivary gland,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1428,Malignant neoplasm of salivary gland — Multiple salivary glands,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1429,Malignant neoplasm of salivary gland — Gland unspecified,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1430,Malignant neoplasm of floor of mouth — Malignant neoplasm of floor of mouth,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1440,Malignant neoplasm of other parts of mouth and mouth unspecified — Malignant neoplasm of other parts of mouth and mouth unspecified,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1450,Malignant neoplasm of oral mesopharynx — Tonsil (ex. pillars),L1_01,Infectious and Communicable Diseases,low
-ICD-7,1457,Malignant neoplasm of oral mesopharynx — Other specified parts of mesopharynx,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1458,Malignant neoplasm of oral mesopharynx — Multiple parts of mesopharynx,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1459,Malignant neoplasm of oral mesopharynx — Part unspecified,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1460,Malignant neoplasm of nasopharynx — Malignant neoplasm of nasopharynx,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1470,Malignant neoplasm of hypopharynx — Other than pyriform fossa or post cricoid region,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1480,"Malignant neoplasm of pharynx, unspecified — Malignant neoplasm of pharynx, unspecified",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1500,Malignant neoplasm of oesophagus — Malignant neoplasm of oesophagus,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1510,Malignant neoplasm of stomach — Malignant neoplasm of stomach,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1520,"Malignant neoplasm of small intestine, including duodenum — duodenum",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1527,"Malignant neoplasm of small intestine, including duodenum — Other specified parts of small intestine",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1528,"Malignant neoplasm of small intestine, including duodenum — Multiple parts of small intestine",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1529,"Malignant neoplasm of small intestine, including duodenum — part unspec.",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1530,"Malignant neoplasm of large intestine, except rectum — caecum, appendix and ascending colon",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1531,"Malignant neoplasm of large intestine, except rectum — transverse colon, inc. hepatic and splenic flexures",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1532,"Malignant neoplasm of large intestine, except rectum — descending colon",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1533,"Malignant neoplasm of large intestine, except rectum — sigmoid colon",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1537,"Malignant neoplasm of large intestine, except rectum — Multiple parts of large intestine",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1538,"Malignant neoplasm of large intestine, except rectum — large intestine (including colon), part unspec.",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1539,"Malignant neoplasm of large intestine, except rectum — Intestinal tract, part unspec.",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1540,Malignant neoplasm of rectum — Malignant neoplasm of rectum,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1550,Malignant neoplasm of biliary passages and of liver (stated to be primary site) — liver,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1551,Malignant neoplasm of biliary passages and of liver (stated to be primary site) — gallbladder and extrahepatic gall ducts inc. ampulla of Vater,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1558,Malignant neoplasm of biliary passages and of liver (stated to be primary site) — multiple sites,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1560,Malignant neoplasm of liver (secondary and unspecified) — Malignant neoplasm of liver (secondary and unspecified),L1_01,Infectious and Communicable Diseases,low
-ICD-7,1570,Malignant neoplasm of pancreas — Malignant neoplasm of pancreas,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1580,Malignant neoplasm of peritoneum — Malignant neoplasm of peritoneum,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1590,Malignant neoplasm of unspec. digestive organs — Malignant neoplasm of unspec. digestive organs,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1600,"Malignant neoplasm of nose, nasal cavities, middle ear and accessory sinuses — nose(internal) and nasal cavities",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1601,"Malignant neoplasm of nose, nasal cavities, middle ear and accessory sinuses — Eustachian tube and middle ear",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1602,"Malignant neoplasm of nose, nasal cavities, middle ear and accessory sinuses — maxillary sinus",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1607,"Malignant neoplasm of nose, nasal cavities, middle ear and accessory sinuses — other specified sinus (accessory)",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1608,"Malignant neoplasm of nose, nasal cavities, middle ear and accessory sinuses — multiple sites",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1609,"Malignant neoplasm of nose, nasal cavities, middle ear and accessory sinuses — site unspecified",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1610,Malignant neoplasm of larynx — Other than intrinsic or vocal chords,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1620,"Malignant neoplasm of bronchus and trachea, and of lung (primary) — trachea",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1621,"Malignant neoplasm of bronchus and trachea, and of lung (primary) — bronchus and lung",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1622,"Malignant neoplasm of bronchus and trachea, and of lung (primary) — pleura",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1628,"Malignant neoplasm of bronchus and trachea, and of lung (primary) — multiple sites",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1630,"Malignant neoplasm of lung, unspecified as to whether primary or secondary — Malignant neoplasm of lung, unspecified as to whether primary or secondary",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1640,Malignant neoplasm of mediastinum — Malignant neoplasm of mediastinum,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1650,Malignant neoplasm of thoracic organs (sec.) — Trachea,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1700,Malignant neoplasm of breast — Malignant neoplasm of breast,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1710,Malignant neoplasm of cervix uteri — Malignant neoplasm of cervix uteri,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1720,Malignant neoplasm of corpus uteri — Malignant neoplasm of corpus uteri,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1730,"Malignant neoplasm of other parts of uterus, inc. chorionepithelioma — Malignant neoplasm of other parts of uterus, inc. chorionepithelioma",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1740,"Malignant neoplasm of uterus, unspecified — Malignant neoplasm of uterus, unspecified",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1750,"Malignant neoplasm of ovary, fallopian tube, and broad ligament — ovary",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1751,"Malignant neoplasm of ovary, fallopian tube, and broad ligament — fallopian tube and broad ligament",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1758,"Malignant neoplasm of ovary, fallopian tube, and broad ligament — multiple sites",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1759,"Malignant neoplasm of ovary, fallopian tube, and broad ligament — site unspec.",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1760,Malignant neoplasm of other and unspecified female genital organs — vulva,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1761,Malignant neoplasm of other and unspecified female genital organs — vagina,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1767,Malignant neoplasm of other and unspecified female genital organs — other specified sites,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1768,Malignant neoplasm of other and unspecified female genital organs — multiple sites,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1769,Malignant neoplasm of other and unspecified female genital organs — site unspec.,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1770,Malignant neoplasm of prostate — Malignant neoplasm of prostate,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1780,Malignant neoplasm of testis — Malignant neoplasm of testis,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1790,Malignant neoplasm of other and unspecified male genital organs — penis,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1791,Malignant neoplasm of other and unspecified male genital organs — scrotum,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1797,Malignant neoplasm of other and unspecified male genital organs — other specified sites,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1798,Malignant neoplasm of other and unspecified male genital organs — multiple sites,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1799,Malignant neoplasm of other and unspecified male genital organs — site unspecified,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1800,Malignant neoplasm of kidney — Malignant neoplasm of kidney,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1810,Malignant neoplasm of bladder and other urinary organs — bladder,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1817,Malignant neoplasm of bladder and other urinary organs — other urinary organs,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1818,Malignant neoplasm of bladder and other urinary organs — multiple sites,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1900,Malignant melanoma of skin — lips,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1901,"Malignant melanoma of skin — eyelids, including canthi",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1902,Malignant melanoma of skin — ear and external auricular canal,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1903,Malignant melanoma of skin — other and unspecified parts of face,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1904,Malignant melanoma of skin — scalp and neck,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1905,Malignant melanoma of skin — trunk,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1906,Malignant melanoma of skin — upper limb,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1907,Malignant melanoma of skin — lower limb,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1908,Malignant melanoma of skin — multiple sites,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1909,Malignant melanoma of skin — site unspecified,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1910,Other malignant neoplasms of skin — lips,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1911,"Other malignant neoplasms of skin — eyelids, including canthi",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1912,Other malignant neoplasms of skin — ear and external auricular canal,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1913,Other malignant neoplasms of skin — other and unspecified parts of face,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1914,Other malignant neoplasms of skin — scalp and neck,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1915,Other malignant neoplasms of skin — trunk,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1916,Other malignant neoplasms of skin — upper limb,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1917,Other malignant neoplasms of skin — lower limb,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1918,Other malignant neoplasms of skin — multiple sites,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1919,Other malignant neoplasms of skin — site unspecified,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1920,Malignant neoplasm of eye — Malignant neoplasm of eye,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1930,Malignant neoplasm of brain and other parts of nervous system — brain,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1931,Malignant neoplasm of brain and other parts of nervous system — spinal cord,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1932,Malignant neoplasm of brain and other parts of nervous system — meninges,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1933,Malignant neoplasm of brain and other parts of nervous system — peripheral nerves,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1934,Malignant neoplasm of brain and other parts of nervous system — sympathetic nervous system,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1938,Malignant neoplasm of brain and other parts of nervous system — multiple sites,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1939,Malignant neoplasm of brain and other parts of nervous system — site unspecified,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1940,Malignant neoplasm of thyroid gland — Malignant neoplasm of thyroid gland,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1950,Malignant neoplasm of other endocrine glands — suprarenal gland,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1951,Malignant neoplasm of other endocrine glands — parathyroid gland,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1952,Malignant neoplasm of other endocrine glands — thymus,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1953,Malignant neoplasm of other endocrine glands — pituitary gland and craniopharyngeal duct,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1954,Malignant neoplasm of other endocrine glands — pineal gland,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1957,Malignant neoplasm of other endocrine glands — other specified glands,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1960,Malignant neoplasm of bone — bones of skull and face,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1961,Malignant neoplasm of bone — lower jaw bone,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1962,Malignant neoplasm of bone — vertebral column (exluding sacrum and coccyx),L1_01,Infectious and Communicable Diseases,low
-ICD-7,1963,"Malignant neoplasm of bone — ribs, sternum, and clavicle",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1964,"Malignant neoplasm of bone — long bones of upper limb, and scapula",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1965,"Malignant neoplasm of bone — upper limb, short bones",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1966,"Malignant neoplasm of bone — pelvic bones, sacrum, coccyx",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1967,"Malignant neoplasm of bone — lower limb, long bones",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1968,"Malignant neoplasm of bone — lower limb, short bones",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1969,Malignant neoplasm of bone — multiple sites and site unspecified,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1970,"Malignant neoplasm of connective tissue — head, face and neck",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1971,Malignant neoplasm of connective tissue — trunk,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1972,Malignant neoplasm of connective tissue — upper limb (including shoulder),L1_01,Infectious and Communicable Diseases,low
-ICD-7,1973,Malignant neoplasm of connective tissue — lower limb (including hip),L1_01,Infectious and Communicable Diseases,low
-ICD-7,1978,Malignant neoplasm of connective tissue — multiple sites,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1979,Malignant neoplasm of connective tissue — site unspecified,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1980,"Secondary and unspecified malignant neoplasm of lymph nodes — head, face, and neck",L1_01,Infectious and Communicable Diseases,low
-ICD-7,1981,Secondary and unspecified malignant neoplasm of lymph nodes — Intrathoracic,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1982,Secondary and unspecified malignant neoplasm of lymph nodes — Intra-abdominal,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1983,Secondary and unspecified malignant neoplasm of lymph nodes — Axillary and upper limb,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1984,Secondary and unspecified malignant neoplasm of lymph nodes — Inguinal and lower limb,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1987,Secondary and unspecified malignant neoplasm of lymph nodes — other specified sites,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1988,Secondary and unspecified malignant neoplasm of lymph nodes — multiple sites,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1989,Secondary and unspecified malignant neoplasm of lymph nodes — site unspecified,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1990,Malignant neoplasm of other and unspecified sites — Primary site,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2000,Lymphosarcoma and reticulosarcoma — Reticulum-cell sarcoma,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,2001,Lymphosarcoma and reticulosarcoma — Lymphosarcoma,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2002,Lymphosarcoma and reticulosarcoma — Other primary malignant neoplasm of lymphoid tissue,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2010,Hodgkin's disease — Hodgkin's disease,L1_01,Infectious and Communicable Diseases,low
+ICD-7,1400,Malignant neoplasm of lip — Upper lip,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1401,Malignant neoplasm of lip — Lower lip,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1408,Malignant neoplasm of lip — Both lips,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1409,Malignant neoplasm of lip — Lip unspecified (inc. commissure),L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1410,Malignant neoplasm of tongue — Base of tongue,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1417,Malignant neoplasm of tongue — Other specified parts of tongue,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1418,Malignant neoplasm of tongue — Multiple parts,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1419,Malignant neoplasm of tongue — Part unspecified,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1420,Malignant neoplasm of salivary gland — Parotid gland,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1427,Malignant neoplasm of salivary gland — Other salivary gland,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1428,Malignant neoplasm of salivary gland — Multiple salivary glands,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1429,Malignant neoplasm of salivary gland — Gland unspecified,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1430,Malignant neoplasm of floor of mouth — Malignant neoplasm of floor of mouth,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1440,Malignant neoplasm of other parts of mouth and mouth unspecified — Malignant neoplasm of other parts of mouth and mouth unspecified,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1450,Malignant neoplasm of oral mesopharynx — Tonsil (ex. pillars),L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1457,Malignant neoplasm of oral mesopharynx — Other specified parts of mesopharynx,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1458,Malignant neoplasm of oral mesopharynx — Multiple parts of mesopharynx,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1459,Malignant neoplasm of oral mesopharynx — Part unspecified,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1460,Malignant neoplasm of nasopharynx — Malignant neoplasm of nasopharynx,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1470,Malignant neoplasm of hypopharynx — Other than pyriform fossa or post cricoid region,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1480,"Malignant neoplasm of pharynx, unspecified — Malignant neoplasm of pharynx, unspecified",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1500,Malignant neoplasm of oesophagus — Malignant neoplasm of oesophagus,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1510,Malignant neoplasm of stomach — Malignant neoplasm of stomach,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1520,"Malignant neoplasm of small intestine, including duodenum — duodenum",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1527,"Malignant neoplasm of small intestine, including duodenum — Other specified parts of small intestine",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1528,"Malignant neoplasm of small intestine, including duodenum — Multiple parts of small intestine",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1529,"Malignant neoplasm of small intestine, including duodenum — part unspec.",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1530,"Malignant neoplasm of large intestine, except rectum — caecum, appendix and ascending colon",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1531,"Malignant neoplasm of large intestine, except rectum — transverse colon, inc. hepatic and splenic flexures",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1532,"Malignant neoplasm of large intestine, except rectum — descending colon",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1533,"Malignant neoplasm of large intestine, except rectum — sigmoid colon",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1537,"Malignant neoplasm of large intestine, except rectum — Multiple parts of large intestine",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1538,"Malignant neoplasm of large intestine, except rectum — large intestine (including colon), part unspec.",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1539,"Malignant neoplasm of large intestine, except rectum — Intestinal tract, part unspec.",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1540,Malignant neoplasm of rectum — Malignant neoplasm of rectum,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1550,Malignant neoplasm of biliary passages and of liver (stated to be primary site) — liver,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1551,Malignant neoplasm of biliary passages and of liver (stated to be primary site) — gallbladder and extrahepatic gall ducts inc. ampulla of Vater,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1558,Malignant neoplasm of biliary passages and of liver (stated to be primary site) — multiple sites,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1560,Malignant neoplasm of liver (secondary and unspecified) — Malignant neoplasm of liver (secondary and unspecified),L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1570,Malignant neoplasm of pancreas — Malignant neoplasm of pancreas,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1580,Malignant neoplasm of peritoneum — Malignant neoplasm of peritoneum,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1590,Malignant neoplasm of unspec. digestive organs — Malignant neoplasm of unspec. digestive organs,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1600,"Malignant neoplasm of nose, nasal cavities, middle ear and accessory sinuses — nose(internal) and nasal cavities",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1601,"Malignant neoplasm of nose, nasal cavities, middle ear and accessory sinuses — Eustachian tube and middle ear",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1602,"Malignant neoplasm of nose, nasal cavities, middle ear and accessory sinuses — maxillary sinus",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1607,"Malignant neoplasm of nose, nasal cavities, middle ear and accessory sinuses — other specified sinus (accessory)",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1608,"Malignant neoplasm of nose, nasal cavities, middle ear and accessory sinuses — multiple sites",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1609,"Malignant neoplasm of nose, nasal cavities, middle ear and accessory sinuses — site unspecified",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1610,Malignant neoplasm of larynx — Other than intrinsic or vocal chords,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1620,"Malignant neoplasm of bronchus and trachea, and of lung (primary) — trachea",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1621,"Malignant neoplasm of bronchus and trachea, and of lung (primary) — bronchus and lung",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1622,"Malignant neoplasm of bronchus and trachea, and of lung (primary) — pleura",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1628,"Malignant neoplasm of bronchus and trachea, and of lung (primary) — multiple sites",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1630,"Malignant neoplasm of lung, unspecified as to whether primary or secondary — Malignant neoplasm of lung, unspecified as to whether primary or secondary",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1640,Malignant neoplasm of mediastinum — Malignant neoplasm of mediastinum,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1650,Malignant neoplasm of thoracic organs (sec.) — Trachea,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1700,Malignant neoplasm of breast — Malignant neoplasm of breast,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1710,Malignant neoplasm of cervix uteri — Malignant neoplasm of cervix uteri,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1720,Malignant neoplasm of corpus uteri — Malignant neoplasm of corpus uteri,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1730,"Malignant neoplasm of other parts of uterus, inc. chorionepithelioma — Malignant neoplasm of other parts of uterus, inc. chorionepithelioma",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1740,"Malignant neoplasm of uterus, unspecified — Malignant neoplasm of uterus, unspecified",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1750,"Malignant neoplasm of ovary, fallopian tube, and broad ligament — ovary",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1751,"Malignant neoplasm of ovary, fallopian tube, and broad ligament — fallopian tube and broad ligament",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1758,"Malignant neoplasm of ovary, fallopian tube, and broad ligament — multiple sites",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1759,"Malignant neoplasm of ovary, fallopian tube, and broad ligament — site unspec.",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1760,Malignant neoplasm of other and unspecified female genital organs — vulva,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1761,Malignant neoplasm of other and unspecified female genital organs — vagina,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1767,Malignant neoplasm of other and unspecified female genital organs — other specified sites,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1768,Malignant neoplasm of other and unspecified female genital organs — multiple sites,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1769,Malignant neoplasm of other and unspecified female genital organs — site unspec.,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1770,Malignant neoplasm of prostate — Malignant neoplasm of prostate,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1780,Malignant neoplasm of testis — Malignant neoplasm of testis,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1790,Malignant neoplasm of other and unspecified male genital organs — penis,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1791,Malignant neoplasm of other and unspecified male genital organs — scrotum,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1797,Malignant neoplasm of other and unspecified male genital organs — other specified sites,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1798,Malignant neoplasm of other and unspecified male genital organs — multiple sites,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1799,Malignant neoplasm of other and unspecified male genital organs — site unspecified,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1800,Malignant neoplasm of kidney — Malignant neoplasm of kidney,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1810,Malignant neoplasm of bladder and other urinary organs — bladder,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1817,Malignant neoplasm of bladder and other urinary organs — other urinary organs,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1818,Malignant neoplasm of bladder and other urinary organs — multiple sites,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1900,Malignant melanoma of skin — lips,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,1901,"Malignant melanoma of skin — eyelids, including canthi",L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,1902,Malignant melanoma of skin — ear and external auricular canal,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,1903,Malignant melanoma of skin — other and unspecified parts of face,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,1904,Malignant melanoma of skin — scalp and neck,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,1905,Malignant melanoma of skin — trunk,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,1906,Malignant melanoma of skin — upper limb,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,1907,Malignant melanoma of skin — lower limb,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,1908,Malignant melanoma of skin — multiple sites,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,1909,Malignant melanoma of skin — site unspecified,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,1910,Other malignant neoplasms of skin — lips,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1911,"Other malignant neoplasms of skin — eyelids, including canthi",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1912,Other malignant neoplasms of skin — ear and external auricular canal,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1913,Other malignant neoplasms of skin — other and unspecified parts of face,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1914,Other malignant neoplasms of skin — scalp and neck,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1915,Other malignant neoplasms of skin — trunk,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1916,Other malignant neoplasms of skin — upper limb,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1917,Other malignant neoplasms of skin — lower limb,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1918,Other malignant neoplasms of skin — multiple sites,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1919,Other malignant neoplasms of skin — site unspecified,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1920,Malignant neoplasm of eye — Malignant neoplasm of eye,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1930,Malignant neoplasm of brain and other parts of nervous system — brain,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1931,Malignant neoplasm of brain and other parts of nervous system — spinal cord,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1932,Malignant neoplasm of brain and other parts of nervous system — meninges,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1933,Malignant neoplasm of brain and other parts of nervous system — peripheral nerves,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1934,Malignant neoplasm of brain and other parts of nervous system — sympathetic nervous system,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1938,Malignant neoplasm of brain and other parts of nervous system — multiple sites,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1939,Malignant neoplasm of brain and other parts of nervous system — site unspecified,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1940,Malignant neoplasm of thyroid gland — Malignant neoplasm of thyroid gland,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1950,Malignant neoplasm of other endocrine glands — suprarenal gland,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1951,Malignant neoplasm of other endocrine glands — parathyroid gland,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1952,Malignant neoplasm of other endocrine glands — thymus,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1953,Malignant neoplasm of other endocrine glands — pituitary gland and craniopharyngeal duct,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1954,Malignant neoplasm of other endocrine glands — pineal gland,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1957,Malignant neoplasm of other endocrine glands — other specified glands,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1960,Malignant neoplasm of bone — bones of skull and face,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1961,Malignant neoplasm of bone — lower jaw bone,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1962,Malignant neoplasm of bone — vertebral column (exluding sacrum and coccyx),L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1963,"Malignant neoplasm of bone — ribs, sternum, and clavicle",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1964,"Malignant neoplasm of bone — long bones of upper limb, and scapula",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1965,"Malignant neoplasm of bone — upper limb, short bones",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1966,"Malignant neoplasm of bone — pelvic bones, sacrum, coccyx",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1967,"Malignant neoplasm of bone — lower limb, long bones",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1968,"Malignant neoplasm of bone — lower limb, short bones",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1969,Malignant neoplasm of bone — multiple sites and site unspecified,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1970,"Malignant neoplasm of connective tissue — head, face and neck",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1971,Malignant neoplasm of connective tissue — trunk,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1972,Malignant neoplasm of connective tissue — upper limb (including shoulder),L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1973,Malignant neoplasm of connective tissue — lower limb (including hip),L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1978,Malignant neoplasm of connective tissue — multiple sites,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1979,Malignant neoplasm of connective tissue — site unspecified,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1980,"Secondary and unspecified malignant neoplasm of lymph nodes — head, face, and neck",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1981,Secondary and unspecified malignant neoplasm of lymph nodes — Intrathoracic,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1982,Secondary and unspecified malignant neoplasm of lymph nodes — Intra-abdominal,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1983,Secondary and unspecified malignant neoplasm of lymph nodes — Axillary and upper limb,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1984,Secondary and unspecified malignant neoplasm of lymph nodes — Inguinal and lower limb,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1987,Secondary and unspecified malignant neoplasm of lymph nodes — other specified sites,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1988,Secondary and unspecified malignant neoplasm of lymph nodes — multiple sites,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1989,Secondary and unspecified malignant neoplasm of lymph nodes — site unspecified,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1990,Malignant neoplasm of other and unspecified sites — Primary site,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,2000,Lymphosarcoma and reticulosarcoma — Reticulum-cell sarcoma,L1_05,Chronic Non-Communicable Diseases,high
+ICD-7,2001,Lymphosarcoma and reticulosarcoma — Lymphosarcoma,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,2002,Lymphosarcoma and reticulosarcoma — Other primary malignant neoplasm of lymphoid tissue,L1_05,Chronic Non-Communicable Diseases,high
+ICD-7,2010,Hodgkin's disease — Hodgkin's disease,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,2020,Other forms of lymphoma (reticulosis) — Giant follicular lymphoma (Brill-Symmer's disease),L1_01,Infectious and Communicable Diseases,low
 ICD-7,2021,Other forms of lymphoma (reticulosis) — Other,L1_01,Infectious and Communicable Diseases,low
 ICD-7,2030,Multiple myeloma (plasmocytoma) — Multiple myeloma (plasmocytoma),L1_01,Infectious and Communicable Diseases,low
-ICD-7,2040,Leukaemia and aleukaemia — Lymphatic leukaemia,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2041,Leukaemia and aleukaemia — Myeloid leukaemia,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2042,Leukaemia and aleukaemia — Monocytic leukaemia,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2043,Leukaemia and aleukaemia — Acute leukaemia,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2044,Leukaemia and aleukaemia — other and unspecified leukaemia,L1_01,Infectious and Communicable Diseases,low
+ICD-7,2040,Leukaemia and aleukaemia — Lymphatic leukaemia,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2041,Leukaemia and aleukaemia — Myeloid leukaemia,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2042,Leukaemia and aleukaemia — Monocytic leukaemia,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2043,Leukaemia and aleukaemia — Acute leukaemia,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2044,Leukaemia and aleukaemia — other and unspecified leukaemia,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,2050,Mycosis fungoides — Mycosis fungoides,L1_01,Infectious and Communicable Diseases,low
 ICD-7,2060,"Lymphatic System — Head, face and neck",L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,2061,Lymphatic System — Intrathoracic,L1_05,Chronic Non-Communicable Diseases,low
@@ -381,26 +381,26 @@ ICD-7,2068,Lymphatic System — Other specified sites,L1_05,Chronic Non-Communic
 ICD-7,2069,Lymphatic System — Unspecified sites,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,2070,"Haematopoietic system — Bone marrow (including leukosis of lymphocytic, leukocytic, plasmocytic, and monocytic nature)",L1_01,Infectious and Communicable Diseases,low
 ICD-7,2071,Haematopoietic system — Spleen,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,2100,Benign neoplasm of buccal cavity and pharynx — Benign neoplasm of buccal cavity and pharynx,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2110,Benign neoplasm of other parts of digestive system — Benign neoplasm of other parts of digestive system,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2100,Benign neoplasm of buccal cavity and pharynx — Benign neoplasm of buccal cavity and pharynx,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2110,Benign neoplasm of other parts of digestive system — Benign neoplasm of other parts of digestive system,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,2120,Benign neoplasm of respiratory system — Benign neoplasm of respiratory system,L1_06,Respiratory and Environmental Disease,medium
-ICD-7,2130,Benign neoplasm of breast — Benign neoplasm of breast,L1_01,Infectious and Communicable Diseases,low
+ICD-7,2130,Benign neoplasm of breast — Benign neoplasm of breast,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,2140,Uterine fibromyoma — Uterine fibromyoma,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2150,Other benign neoplasm of uterus — Other benign neoplasm of uterus,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2160,Benign neoplasm of ovary — Benign neoplasm of ovary,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2170,Benign neoplasm of other female genital organs — Benign neoplasm of other female genital organs,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2180,Benign neoplasm of male genital organs — Benign neoplasm of male genital organs,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2190,Benign neoplasm of kidney and other urinary organs — Benign neoplasm of kidney and other urinary organs,L1_01,Infectious and Communicable Diseases,low
+ICD-7,2150,Other benign neoplasm of uterus — Other benign neoplasm of uterus,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2160,Benign neoplasm of ovary — Benign neoplasm of ovary,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2170,Benign neoplasm of other female genital organs — Benign neoplasm of other female genital organs,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2180,Benign neoplasm of male genital organs — Benign neoplasm of male genital organs,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2190,Benign neoplasm of kidney and other urinary organs — Benign neoplasm of kidney and other urinary organs,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,2200,Benign melanoma of skin — Benign melanoma of skin,L1_01,Infectious and Communicable Diseases,low
 ICD-7,2210,Pilonidal cyst — Pilonidal cyst,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2220,Other benign neoplasm of skin — Other benign neoplasm of skin,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2230,Benign neoplasm of brain and other parts of nervous system — Benign neoplasm of brain and other parts of nervous system,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2240,Benign neoplasm of endocrine glands — Benign neoplasm of endocrine glands,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2250,Benign neoplasm of bone and cartilage — Benign neoplasm of bone and cartilage,L1_01,Infectious and Communicable Diseases,low
+ICD-7,2220,Other benign neoplasm of skin — Other benign neoplasm of skin,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2230,Benign neoplasm of brain and other parts of nervous system — Benign neoplasm of brain and other parts of nervous system,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2240,Benign neoplasm of endocrine glands — Benign neoplasm of endocrine glands,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2250,Benign neoplasm of bone and cartilage — Benign neoplasm of bone and cartilage,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,2260,Lipoma — Lipoma,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2270,Other benign neoplasm of muscular and connective tissue — Other benign neoplasm of muscular and connective tissue,L1_01,Infectious and Communicable Diseases,low
+ICD-7,2270,Other benign neoplasm of muscular and connective tissue — Other benign neoplasm of muscular and connective tissue,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,2280,Haemangioma and lymphangioma — Haemangioma and lymphangioma,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2290,Benign neoplasm of other and unspecified organs and tissues — Benign neoplasm of other and unspecified organs and tissues,L1_01,Infectious and Communicable Diseases,low
+ICD-7,2290,Benign neoplasm of other and unspecified organs and tissues — Benign neoplasm of other and unspecified organs and tissues,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,2300,Neoplasm of unspecified nature of digestive organs — Neoplasm of unspecified nature of digestive organs,L1_01,Infectious and Communicable Diseases,low
 ICD-7,2310,Neoplasm of unspecified nature of respiratory organs — Neoplasm of unspecified nature of respiratory organs,L1_06,Respiratory and Environmental Disease,low
 ICD-7,2320,Neoplasm of unspecified nature of breast — Neoplasm of unspecified nature of breast,L1_01,Infectious and Communicable Diseases,low
@@ -419,49 +419,49 @@ ICD-7,2440,Allergic eczema — Allergic eczema,L1_05,Chronic Non-Communicable Di
 ICD-7,2450,Other allergic disorders — Other allergic disorders,L1_01,Infectious and Communicable Diseases,low
 ICD-7,2500,Simple goitre — Simple goitre,L1_01,Infectious and Communicable Diseases,low
 ICD-7,2510,Non-toxic nodular goitre — Non-toxic nodular goitre,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2520,Thyrotoxicosis with or without goitre — Toxic diffuse goitre,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2521,Thyrotoxicosis with or without goitre — Toxic nodular goitre,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2530,Myxoedema and cretinism — Myxoedema and cretinism,L1_03,Congenital and Developmental Conditions,low
-ICD-7,2540,Other diseases of thyroid gland — Other diseases of thyroid gland,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2520,Thyrotoxicosis with or without goitre — Toxic diffuse goitre,L1_03,Congenital and Developmental Conditions,low
+ICD-7,2521,Thyrotoxicosis with or without goitre — Toxic nodular goitre,L1_03,Congenital and Developmental Conditions,low
+ICD-7,2530,Myxoedema and cretinism — Myxoedema and cretinism,L1_03,Congenital and Developmental Conditions,medium
+ICD-7,2540,Other diseases of thyroid gland — Other diseases of thyroid gland,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,2600,Diabetes mellitus — Diabetes mellitus,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,2700,Disorders of pancreatic internal secretion other than diabetes mellitus — Disorders of pancreatic internal secretion other than diabetes mellitus,L1_05,Chronic Non-Communicable Diseases,medium
-ICD-7,2710,Diseases of parathyroid gland — Hyperparathyroidism,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2711,Diseases of parathyroid gland — Hypoparathyroidism,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2712,Diseases of parathyroid gland — Other and unspecified,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2720,Diseases of pituitary gland — Diseases of pituitary gland,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2730,Diseases of thymus gland — Diseases of thymus gland,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2740,Diseases of adrenal glands — Diseases of adrenal glands,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2750,Ovarian dysfunction — Ovarian dysfunction,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2760,Testicular dysfunction — Testicular dysfunction,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2770,Polyglandular dysfunction and other diseases of endocrine glands — Polyglandular dysfunction and other diseases of endocrine glands,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2710,Diseases of parathyroid gland — Hyperparathyroidism,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2711,Diseases of parathyroid gland — Hypoparathyroidism,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2712,Diseases of parathyroid gland — Other and unspecified,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2720,Diseases of pituitary gland — Diseases of pituitary gland,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2730,Diseases of thymus gland — Diseases of thymus gland,L1_03,Congenital and Developmental Conditions,low
+ICD-7,2740,Diseases of adrenal glands — Diseases of adrenal glands,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2750,Ovarian dysfunction — Ovarian dysfunction,L1_03,Congenital and Developmental Conditions,low
+ICD-7,2760,Testicular dysfunction — Testicular dysfunction,L1_03,Congenital and Developmental Conditions,low
+ICD-7,2770,Polyglandular dysfunction and other diseases of endocrine glands — Polyglandular dysfunction and other diseases of endocrine glands,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,2800,Beriberi — Beriberi,L1_01,Infectious and Communicable Diseases,low
 ICD-7,2810,Pellagra — Pellagra,L1_06,Respiratory and Environmental Disease,low
 ICD-7,2820,Scurvy — Scurvy,L1_06,Respiratory and Environmental Disease,low
 ICD-7,2830,Active rickets — Active rickets,L1_06,Respiratory and Environmental Disease,low
 ICD-7,2840,Late effects of rickets — Late effects of rickets,L1_06,Respiratory and Environmental Disease,low
-ICD-7,2850,Osteomalacia — Osteomalacia,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2860,Other avitaminoses and nutritional deficiency states — Steatorrhoea and sprue,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2861,Other avitaminoses and nutritional deficiency states — Vitamin A deficiency,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2862,"Other avitaminoses and nutritional deficiency states — Vitamin B deficiency, except beriberi and pellagra",L1_06,Respiratory and Environmental Disease,low
-ICD-7,2863,"Other avitaminoses and nutritional deficiency states — Vitamin C deficiency, except scurvy",L1_06,Respiratory and Environmental Disease,low
-ICD-7,2864,"Other avitaminoses and nutritional deficiency states — Vitamin D deficiency, except rickets and osteomalacia",L1_06,Respiratory and Environmental Disease,low
-ICD-7,2865,"Other avitaminoses and nutritional deficiency states — Malnutrition, unqualified",L1_01,Infectious and Communicable Diseases,low
-ICD-7,2866,Other avitaminoses and nutritional deficiency states — Kwashiorkor (protein Malnutrition),L1_01,Infectious and Communicable Diseases,low
-ICD-7,2867,Other avitaminoses and nutritional deficiency states — other and multiple deficiency states,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2870,"Obesity, not specified as of endocrine origin — Obesity, not specified as of endocrine origin",L1_10,"Ill-Defined, Administrative, and Other Causes",low
+ICD-7,2850,Osteomalacia — Osteomalacia,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2860,Other avitaminoses and nutritional deficiency states — Steatorrhoea and sprue,L1_03,Congenital and Developmental Conditions,low
+ICD-7,2861,Other avitaminoses and nutritional deficiency states — Vitamin A deficiency,L1_03,Congenital and Developmental Conditions,medium
+ICD-7,2862,"Other avitaminoses and nutritional deficiency states — Vitamin B deficiency, except beriberi and pellagra",L1_03,Congenital and Developmental Conditions,low
+ICD-7,2863,"Other avitaminoses and nutritional deficiency states — Vitamin C deficiency, except scurvy",L1_03,Congenital and Developmental Conditions,low
+ICD-7,2864,"Other avitaminoses and nutritional deficiency states — Vitamin D deficiency, except rickets and osteomalacia",L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,2865,"Other avitaminoses and nutritional deficiency states — Malnutrition, unqualified",L1_03,Congenital and Developmental Conditions,medium
+ICD-7,2866,Other avitaminoses and nutritional deficiency states — Kwashiorkor (protein Malnutrition),L1_03,Congenital and Developmental Conditions,high
+ICD-7,2867,Other avitaminoses and nutritional deficiency states — other and multiple deficiency states,L1_03,Congenital and Developmental Conditions,low
+ICD-7,2870,"Obesity, not specified as of endocrine origin — Obesity, not specified as of endocrine origin",L1_03,Congenital and Developmental Conditions,low
 ICD-7,2880,Gout — Gout,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,2890,Other metabolic diseases — Lipidosis (disturbance of lipid metabolism),L1_01,Infectious and Communicable Diseases,low
 ICD-7,2891,Other metabolic diseases — Amyloidosis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,2892,Other metabolic diseases — Other,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2900,Pernicious and other hyperchromic anaemias — Pernicious anaemia,L1_01,Infectious and Communicable Diseases,low
+ICD-7,2900,Pernicious and other hyperchromic anaemias — Pernicious anaemia,L1_03,Congenital and Developmental Conditions,low
 ICD-7,2901,Pernicious and other hyperchromic anaemias — Subacute combined degeneration of spinal cord,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,2902,Pernicious and other hyperchromic anaemias — Other hyperchromic anaemias,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2910,Iron deficiency anaemias (hypochromic anaemias) — Iron deficiency anaemias (hypochromic anaemias),L1_01,Infectious and Communicable Diseases,low
+ICD-7,2910,Iron deficiency anaemias (hypochromic anaemias) — Iron deficiency anaemias (hypochromic anaemias),L1_03,Congenital and Developmental Conditions,medium
 ICD-7,2920,Other anaemias of specified type — Familial acholuric jaundice,L1_01,Infectious and Communicable Diseases,low
 ICD-7,2921,Other anaemias of specified type — Acute haemolytic anaemia,L1_01,Infectious and Communicable Diseases,low
 ICD-7,2922,Other anaemias of specified type — Other haemolytic anaemias,L1_01,Infectious and Communicable Diseases,low
 ICD-7,2923,Other anaemias of specified type — Leuko-erythroblastic anaemia,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2924,Other anaemias of specified type — Aplastic anaemia,L1_01,Infectious and Communicable Diseases,low
+ICD-7,2924,Other anaemias of specified type — Aplastic anaemia,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,2925,Other anaemias of specified type — Non-regenerative anaemia,L1_01,Infectious and Communicable Diseases,low
 ICD-7,2926,Other anaemias of specified type — Sickle cell anaemia,L1_01,Infectious and Communicable Diseases,low
 ICD-7,2927,Other anaemias of specified type — other specified anaemias,L1_01,Infectious and Communicable Diseases,low
@@ -470,22 +470,22 @@ ICD-7,2940,Polycythaemia — Polycythaemia,L1_01,Infectious and Communicable Dis
 ICD-7,2950,Haemophilia — Haemophilia,L1_03,Congenital and Developmental Conditions,low
 ICD-7,2960,Purpura and other haemorrhagic conditions — Purpura and other haemorrhagic conditions,L1_06,Respiratory and Environmental Disease,low
 ICD-7,2970,Agranulocytosis — Agranulocytosis,L1_01,Infectious and Communicable Diseases,low
-ICD-7,2980,Diseases of spleen — Hepatolienal fibrosis,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,2981,Diseases of spleen — Other,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,2990,Other diseases of blood and blood-forming organs — Other diseases of blood and blood-forming organs,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,3000,Schizophrenic disorders (dementia praecox) — Simple type,L1_01,Infectious and Communicable Diseases,low
-ICD-7,3001,Schizophrenic disorders (dementia praecox) — Hebephrenic type,L1_01,Infectious and Communicable Diseases,low
-ICD-7,3002,Schizophrenic disorders (dementia praecox) — Catatonic type,L1_01,Infectious and Communicable Diseases,low
-ICD-7,3003,Schizophrenic disorders (dementia praecox) — Paranoid type,L1_01,Infectious and Communicable Diseases,low
-ICD-7,3004,Schizophrenic disorders (dementia praecox) — Acute schizophrenic reaction,L1_01,Infectious and Communicable Diseases,low
-ICD-7,3005,Schizophrenic disorders (dementia praecox) — Latent schizophrenia,L1_01,Infectious and Communicable Diseases,low
-ICD-7,3006,Schizophrenic disorders (dementia praecox) — Schizo-affective psychosis,L1_01,Infectious and Communicable Diseases,low
-ICD-7,3007,Schizophrenic disorders (dementia praecox) — other and unspecified,L1_01,Infectious and Communicable Diseases,low
+ICD-7,2980,Diseases of spleen — Hepatolienal fibrosis,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,2981,Diseases of spleen — Other,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,2990,Other diseases of blood and blood-forming organs — Other diseases of blood and blood-forming organs,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,3000,Schizophrenic disorders (dementia praecox) — Simple type,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,3001,Schizophrenic disorders (dementia praecox) — Hebephrenic type,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,3002,Schizophrenic disorders (dementia praecox) — Catatonic type,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,3003,Schizophrenic disorders (dementia praecox) — Paranoid type,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,3004,Schizophrenic disorders (dementia praecox) — Acute schizophrenic reaction,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,3005,Schizophrenic disorders (dementia praecox) — Latent schizophrenia,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,3006,Schizophrenic disorders (dementia praecox) — Schizo-affective psychosis,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,3007,Schizophrenic disorders (dementia praecox) — other and unspecified,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3010,Manic-depressive reaction — Manic and circular,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3011,Manic-depressive reaction — Depressive,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3012,Manic-depressive reaction — Other,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3020,Involutional melancholia — Involutional melancholia,L1_01,Infectious and Communicable Diseases,low
-ICD-7,3030,Paranoia and paranoid states — Paranoia and paranoid states,L1_01,Infectious and Communicable Diseases,low
+ICD-7,3030,Paranoia and paranoid states — Paranoia and paranoid states,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3040,Senile psychosis — Senile psychosis,L1_04,Later-Life Mortality,low
 ICD-7,3050,Presenile psychosis — Presenile psychosis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3060,Psychosis with cerebral arteriosclerosis — Psychosis with cerebral arteriosclerosis,L1_01,Infectious and Communicable Diseases,low
@@ -493,7 +493,7 @@ ICD-7,3070,Alcoholic psychosis — Alcoholic psychosis,L1_09,Self-Harm and Subst
 ICD-7,3080,Psychosis of other demonstrable etiology — Resulting from brain tumour,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3081,Psychosis of other demonstrable etiology — Resulting from epilepsy and other convulsive disorders,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3082,Psychosis of other demonstrable etiology — Other,L1_01,Infectious and Communicable Diseases,low
-ICD-7,3090,Other and unspecified psychoses — Other and unspecified psychoses,L1_01,Infectious and Communicable Diseases,low
+ICD-7,3090,Other and unspecified psychoses — Other and unspecified psychoses,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3100,Anxiety reaction without mention of somatic symptoms — Anxiety reaction without mention of somatic symptoms,L1_10,"Ill-Defined, Administrative, and Other Causes",low
 ICD-7,3110,Hysterical reaction without mention of anxiety reaction — Hysterical reaction without mention of anxiety reaction,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3120,Phobic reaction — Phobic reaction,L1_01,Infectious and Communicable Diseases,low
@@ -512,12 +512,12 @@ ICD-7,3172,Psychoneurosis with somatic symptoms (somatization reactions) affecti
 ICD-7,3173,Psychoneurosis with somatic symptoms (somatization reactions) affecting other systems — Other cutaneous neuroses,L1_10,"Ill-Defined, Administrative, and Other Causes",low
 ICD-7,3174,Psychoneurosis with somatic symptoms (somatization reactions) affecting other systems — Psychogenic reactions affecting musculoskeletal system,L1_10,"Ill-Defined, Administrative, and Other Causes",low
 ICD-7,3175,Psychoneurosis with somatic symptoms (somatization reactions) affecting other systems — Psychogenic reactions affecting other systems,L1_10,"Ill-Defined, Administrative, and Other Causes",low
-ICD-7,3180,"Psychoneurotic disorders, other, mixed, and unspecified types — Hypochrondriacal reaction",L1_01,Infectious and Communicable Diseases,low
-ICD-7,3181,"Psychoneurotic disorders, other, mixed, and unspecified types — Depersonalisation",L1_01,Infectious and Communicable Diseases,low
+ICD-7,3180,"Psychoneurotic disorders, other, mixed, and unspecified types — Hypochrondriacal reaction",L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,3181,"Psychoneurotic disorders, other, mixed, and unspecified types — Depersonalisation",L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3182,"Psychoneurotic disorders, other, mixed, and unspecified types — Occupational neurosis",L1_06,Respiratory and Environmental Disease,low
-ICD-7,3183,"Psychoneurotic disorders, other, mixed, and unspecified types — Asthenic reaction",L1_01,Infectious and Communicable Diseases,low
-ICD-7,3184,"Psychoneurotic disorders, other, mixed, and unspecified types — Mixed",L1_01,Infectious and Communicable Diseases,low
-ICD-7,3185,"Psychoneurotic disorders, other, mixed, and unspecified types — Of other unspecified types",L1_01,Infectious and Communicable Diseases,low
+ICD-7,3183,"Psychoneurotic disorders, other, mixed, and unspecified types — Asthenic reaction",L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,3184,"Psychoneurotic disorders, other, mixed, and unspecified types — Mixed",L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,3185,"Psychoneurotic disorders, other, mixed, and unspecified types — Of other unspecified types",L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3200,Pathological personality — Schizoid personality,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3201,Pathological personality — Paranoid personality,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3202,Pathological personality — Cyclothymic personality,L1_01,Infectious and Communicable Diseases,low
@@ -537,12 +537,12 @@ ICD-7,3221,Alcoholism — Chronic,L1_09,Self-Harm and Substance Use,low
 ICD-7,3222,Alcoholism — Unspecified,L1_09,Self-Harm and Substance Use,low
 ICD-7,3230,Other drug addiction — Other drug addiction,L1_09,Self-Harm and Substance Use,medium
 ICD-7,3240,Primary childhood behaviour disorders — Primary childhood behaviour disorders,L1_01,Infectious and Communicable Diseases,low
-ICD-7,3250,Mental deficiency — Idiocy,L1_03,Congenital and Developmental Conditions,low
-ICD-7,3251,Mental deficiency — Imbecility,L1_03,Congenital and Developmental Conditions,low
-ICD-7,3252,Mental deficiency — Moron,L1_01,Infectious and Communicable Diseases,low
-ICD-7,3253,Mental deficiency — Borderline intelligence,L1_01,Infectious and Communicable Diseases,low
-ICD-7,3254,Mental deficiency — Mongolism,L1_01,Infectious and Communicable Diseases,low
-ICD-7,3255,Mental deficiency — Other and unspecified types,L1_01,Infectious and Communicable Diseases,low
+ICD-7,3250,Mental deficiency — Idiocy,L1_03,Congenital and Developmental Conditions,medium
+ICD-7,3251,Mental deficiency — Imbecility,L1_03,Congenital and Developmental Conditions,medium
+ICD-7,3252,Mental deficiency — Moron,L1_03,Congenital and Developmental Conditions,low
+ICD-7,3253,Mental deficiency — Borderline intelligence,L1_03,Congenital and Developmental Conditions,low
+ICD-7,3254,Mental deficiency — Mongolism,L1_03,Congenital and Developmental Conditions,low
+ICD-7,3255,Mental deficiency — Other and unspecified types,L1_03,Congenital and Developmental Conditions,low
 ICD-7,3260,"Other and unspecified character, behaviour, and intelligence disorders — Specifc learning defects",L1_01,Infectious and Communicable Diseases,low
 ICD-7,3261,"Other and unspecified character, behaviour, and intelligence disorders — Stammering and stuttering of non-organic origin",L1_01,Infectious and Communicable Diseases,low
 ICD-7,3262,"Other and unspecified character, behaviour, and intelligence disorders — Other speech impediments of non-organic origin",L1_01,Infectious and Communicable Diseases,low
@@ -570,12 +570,12 @@ ICD-7,3531,Epilepsy — Grand mal,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3532,Epilepsy — Status epilepticus,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3533,Epilepsy — Other and unspecified,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3540,Migraine — Migraine,L1_01,Infectious and Communicable Diseases,low
-ICD-7,3550,Other diseases of brain — Other diseases of brain,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,3550,Other diseases of brain — Other diseases of brain,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,3560,Motor neurone disease and muscular atrophy — Progressive muscular atrophy,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3561,Motor neurone disease and muscular atrophy — Amyotrophic lateral sclerosis,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3562,Motor neurone disease and muscular atrophy — Spinal type of muscular atrophy,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3563,Motor neurone disease and muscular atrophy — Other and unspecified manifestations,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,3570,Other diseases of spinal cord — Other diseases of spinal cord,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,3570,Other diseases of spinal cord — Other diseases of spinal cord,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,3600,Facial paralysis — Facial paralysis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3610,Trigeminal neuralgia — Trigeminal neuralgia,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3620,Brachial neuritis — Brachial neuritis,L1_05,Chronic Non-Communicable Diseases,low
@@ -583,9 +583,9 @@ ICD-7,3630,Sciatica — Sciatica,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3640,Polyneuritis and polyradiculitis — Polyneuritis and polyradiculitis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3650,Erythroedema polyneuritica — Erythroedema polyneuritica,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3660,Other and unspecified forms of neuralgia and neuritis — Other and unspecified forms of neuralgia and neuritis,L1_05,Chronic Non-Communicable Diseases,medium
-ICD-7,3670,Other diseases of cranial nerves — Other diseases of cranial nerves,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,3680,Other diseases of peripheral nerves except autonomic — Other diseases of peripheral nerves except autonomic,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,3690,Diseases of peripheral autonomic nervous system — Diseases of peripheral autonomic nervous system,L1_01,Infectious and Communicable Diseases,low
+ICD-7,3670,Other diseases of cranial nerves — Other diseases of cranial nerves,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,3680,Other diseases of peripheral nerves except autonomic — Other diseases of peripheral nerves except autonomic,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,3690,Diseases of peripheral autonomic nervous system — Diseases of peripheral autonomic nervous system,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3700,Conjunctivitis and ophthalmia — Conjunctivitis and ophthalmia,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3710,Blepharitis — Blepharitis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3720,Hordeolum (stye) — Hordeolum (stye),L1_01,Infectious and Communicable Diseases,low
@@ -595,7 +595,7 @@ ICD-7,3750,Choroiditis — Choroiditis,L1_01,Infectious and Communicable Disease
 ICD-7,3760,Other inflammation of uveal tract — Other inflammation of uveal tract,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3770,Inflammation of optic nerve and retina — Inflammation of optic nerve and retina,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3780,Inflammation of lachrymal glands and ducts — Inflammation of lachrymal glands and ducts,L1_01,Infectious and Communicable Diseases,low
-ICD-7,3790,Other inflammatory diseases of eye — Other inflammatory diseases of eye,L1_01,Infectious and Communicable Diseases,low
+ICD-7,3790,Other inflammatory diseases of eye — Other inflammatory diseases of eye,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3800,Refractive errors — Refractive errors,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3810,Corneal ulcer — Corneal ulcer,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3820,Corneal opacity — Corneal opacity,L1_01,Infectious and Communicable Diseases,low
@@ -604,7 +604,7 @@ ICD-7,3840,Strabismus — Strabismus,L1_01,Infectious and Communicable Diseases,
 ICD-7,3850,Cataract — Cataract,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3860,Detachment of retina — Detachment of retina,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3870,Glaucoma — Glaucoma,L1_01,Infectious and Communicable Diseases,low
-ICD-7,3880,Other diseases of eye — Other diseases of eye,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,3880,Other diseases of eye — Other diseases of eye,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,3890,"Blindness — Blindness, both eyes, specifically defined",L1_01,Infectious and Communicable Diseases,low
 ICD-7,3891,"Blindness — Blindness, both eyes, not specifically defined",L1_01,Infectious and Communicable Diseases,low
 ICD-7,3892,"Blindness — Blindness, one eye, specifically defined",L1_01,Infectious and Communicable Diseases,low
@@ -619,9 +619,9 @@ ICD-7,3922,Otitis media with mastoiditis — Unspecified,L1_01,Infectious and Co
 ICD-7,3930,Mastoiditis without mention of otitis media — Acute,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3931,Mastoiditis without mention of otitis media — Chronic,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3932,Mastoiditis without mention of otitis media — Unspecified,L1_01,Infectious and Communicable Diseases,low
-ICD-7,3940,Other inflammatory diseases of ear — Other inflammatory diseases of ear,L1_01,Infectious and Communicable Diseases,low
+ICD-7,3940,Other inflammatory diseases of ear — Other inflammatory diseases of ear,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,3950,Meniere's disease — Meniere's disease,L1_01,Infectious and Communicable Diseases,low
-ICD-7,3960,Other diseases of ear and mastoid process — Other diseases of ear and mastoid process,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,3960,Other diseases of ear and mastoid process — Other diseases of ear and mastoid process,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,3970,Deaf mutism — Deaf mutism,L1_01,Infectious and Communicable Diseases,low
 ICD-7,3980,"Other deafness — Deafness, both ears",L1_01,Infectious and Communicable Diseases,low
 ICD-7,3981,"Other deafness — Deafness, one ear, and partial deafness in other",L1_01,Infectious and Communicable Diseases,low
@@ -634,10 +634,10 @@ ICD-7,4012,Rheumatic fever with heart involvement — Active rheumatic myocardit
 ICD-7,4013,Rheumatic fever with heart involvement — Active rheumatic fever with other and multiple types of heart involvement,L1_01,Infectious and Communicable Diseases,low
 ICD-7,4020,Chorea — Without mention of heart involvement,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,4021,Chorea — With heart involvement,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,4100,Diseases of mitral valve — Diseases of mitral valve,L1_01,Infectious and Communicable Diseases,low
-ICD-7,4110,Diseases of aortic valve specified as rheumatic — Diseases of aortic valve specified as rheumatic,L1_01,Infectious and Communicable Diseases,low
-ICD-7,4120,Diseases of tricuspid valve — Diseases of tricuspid valve,L1_01,Infectious and Communicable Diseases,low
-ICD-7,4130,Diseases of pulmonary valve specified as rheumatic — Diseases of pulmonary valve specified as rheumatic,L1_01,Infectious and Communicable Diseases,low
+ICD-7,4100,Diseases of mitral valve — Diseases of mitral valve,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,4110,Diseases of aortic valve specified as rheumatic — Diseases of aortic valve specified as rheumatic,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,4120,Diseases of tricuspid valve — Diseases of tricuspid valve,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,4130,Diseases of pulmonary valve specified as rheumatic — Diseases of pulmonary valve specified as rheumatic,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,4140,Other endocarditis specified as rheumatic — Other endocarditis specified as rheumatic,L1_01,Infectious and Communicable Diseases,low
 ICD-7,4150,Other myocarditis specified as rheumatic — Other myocarditis specified as rheumatic,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,4160,Other heart disease specified as rheumatic — Other heart disease specified as rheumatic,L1_01,Infectious and Communicable Diseases,low
@@ -658,18 +658,18 @@ ICD-7,4310,Acute myocarditis not specified as rheumatic — Acute myocarditis no
 ICD-7,4320,Acute pericarditis specified as non-rheumatic — Acute pericarditis specified as non-rheumatic,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,4330,Functional disease of heart — Heart block,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,4331,Functional disease of heart — Other disorders of heart rhythm,L1_05,Chronic Non-Communicable Diseases,medium
-ICD-7,4332,Functional disease of heart — Other functional diseases of heart,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,4340,Other and unspecified diseases of heart — Kyphoscoliotic heart disease,L1_01,Infectious and Communicable Diseases,low
-ICD-7,4341,Other and unspecified diseases of heart — Congestive heart failure,L1_01,Infectious and Communicable Diseases,low
-ICD-7,4342,Other and unspecified diseases of heart — Left ventricular failure,L1_01,Infectious and Communicable Diseases,low
-ICD-7,4343,Other and unspecified diseases of heart — other diseases of heart,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,4344,Other and unspecified diseases of heart — Unspecified diseases of heart,L1_01,Infectious and Communicable Diseases,low
+ICD-7,4332,Functional disease of heart — Other functional diseases of heart,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,4340,Other and unspecified diseases of heart — Kyphoscoliotic heart disease,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,4341,Other and unspecified diseases of heart — Congestive heart failure,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,4342,Other and unspecified diseases of heart — Left ventricular failure,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,4343,Other and unspecified diseases of heart — other diseases of heart,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,4344,Other and unspecified diseases of heart — Unspecified diseases of heart,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,4400,Essential benign hypertensive heart disease — Essential benign hypertensive heart disease,L1_01,Infectious and Communicable Diseases,low
-ICD-7,4410,Essential malignant hypertensive heart disease — Essential malignant hypertensive heart disease,L1_01,Infectious and Communicable Diseases,low
+ICD-7,4410,Essential malignant hypertensive heart disease — Essential malignant hypertensive heart disease,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,4420,Hypertensive heart disease with arteriolar nephrosclerosis — Hypertensive heart disease with arteriolar nephrosclerosis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,4430,Other and unspecified hypertensive heart disease — Other and unspecified hypertensive heart disease,L1_01,Infectious and Communicable Diseases,low
 ICD-7,4440,Essential benign hypertension — Essential benign hypertension,L1_01,Infectious and Communicable Diseases,low
-ICD-7,4450,Essential malignant hypertension — Essential malignant hypertension,L1_01,Infectious and Communicable Diseases,low
+ICD-7,4450,Essential malignant hypertension — Essential malignant hypertension,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,4460,Hypertension with arteriolar nephrosclerosis — Hypertension with arteriolar nephrosclerosis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,4470,Other hypertensive disease without mention of heart — Other hypertensive disease without mention of heart,L1_01,Infectious and Communicable Diseases,low
 ICD-7,4500,General arteriosclerosis — Without mention of gangrene,L1_01,Infectious and Communicable Diseases,low
@@ -682,7 +682,7 @@ ICD-7,4532,Peripheral vascular disease — Chilblains,L1_01,Infectious and Commu
 ICD-7,4533,Peripheral vascular disease — Other,L1_01,Infectious and Communicable Diseases,low
 ICD-7,4540,Arterial embolism and thrombosis — Arterial embolism and thrombosis,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,4550,Gangrene of unspecified cause — Gangrene of unspecified cause,L1_01,Infectious and Communicable Diseases,low
-ICD-7,4560,Other diseases of arteries — Other diseases of arteries,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,4560,Other diseases of arteries — Other diseases of arteries,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,4600,Varicose veins of lower extremities — Varicose veins of lower extremities,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,4610,Haemorrhoids — Haemorrhoids,L1_01,Infectious and Communicable Diseases,low
 ICD-7,4620,Varicose veins of other specified sites — Varicocele,L1_05,Chronic Non-Communicable Diseases,low
@@ -692,13 +692,13 @@ ICD-7,4630,Phlebitis and thrombophlebitis of lower extremities — Phlebitis and
 ICD-7,4640,Phlebitis and thrombophlebitis of other sites — Phlebitis and thrombophlebitis of other sites,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,4650,Pulmonary embolism and infarction — Pulmonary embolism and infarction,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,4660,Other venous embolism and thrombosis — Other venous embolism and thrombosis,L1_05,Chronic Non-Communicable Diseases,medium
-ICD-7,4670,Other diseases of circulatory system — Hypotension,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,4671,Other diseases of circulatory system — Diseases of capillaries,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,4672,Other diseases of circulatory system — Other and unspecified circulatory diseases,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,4680,Certain diseases of lymph nodes and lymph channels — Chronic lymhadenitis,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,4681,Certain diseases of lymph nodes and lymph channels — Non-specific mesenteric lymphadenitis,L1_01,Infectious and Communicable Diseases,low
-ICD-7,4682,"Certain diseases of lymph nodes and lymph channels — Lymphadenitis, unqualified",L1_01,Infectious and Communicable Diseases,low
-ICD-7,4683,Certain diseases of lymph nodes and lymph channels — Non-infective diseases of lymphatic channels,L1_01,Infectious and Communicable Diseases,low
+ICD-7,4670,Other diseases of circulatory system — Hypotension,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,4671,Other diseases of circulatory system — Diseases of capillaries,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,4672,Other diseases of circulatory system — Other and unspecified circulatory diseases,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,4680,Certain diseases of lymph nodes and lymph channels — Chronic lymhadenitis,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,4681,Certain diseases of lymph nodes and lymph channels — Non-specific mesenteric lymphadenitis,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,4682,"Certain diseases of lymph nodes and lymph channels — Lymphadenitis, unqualified",L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,4683,Certain diseases of lymph nodes and lymph channels — Non-infective diseases of lymphatic channels,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,4700,Acute nasopharyngitis (common cold) — Acute nasopharyngitis (common cold),L1_01,Infectious and Communicable Diseases,low
 ICD-7,4710,Acute sinusitis — Acute sinusitis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,4720,"Acute pharyngitis — Sore throat, unqualified",L1_01,Infectious and Communicable Diseases,low
@@ -706,10 +706,10 @@ ICD-7,4721,Acute pharyngitis — Other,L1_01,Infectious and Communicable Disease
 ICD-7,4730,Acute tonsillitis — Acute tonsillitis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,4740,Acute laryngitis and tracheitis — Acute laryngitis and tracheitis,L1_06,Respiratory and Environmental Disease,low
 ICD-7,4750,Acute upper respiratory infection of multiple or unspecified sites — Acute upper respiratory infection of multiple or unspecified sites,L1_06,Respiratory and Environmental Disease,low
-ICD-7,4800,Influenza with pneumonia — Influenza with pneumonia,L1_06,Respiratory and Environmental Disease,low
-ICD-7,4810,"Influenza with other respiratory manifestations, and influenza unqualified — Influenza with other respiratory manifestations, and influenza unqualified",L1_06,Respiratory and Environmental Disease,low
-ICD-7,4820,"Influenza with digestive manifestations, but without respiratory symptoms — Influenza with digestive manifestations, but without respiratory symptoms",L1_06,Respiratory and Environmental Disease,low
-ICD-7,4830,"Influenza with nervous manifestations, but without digestive or respiratory symptoms — Influenza with nervous manifestations, but without digestive or respiratory symptoms",L1_06,Respiratory and Environmental Disease,low
+ICD-7,4800,Influenza with pneumonia — Influenza with pneumonia,L1_06,Respiratory and Environmental Disease,medium
+ICD-7,4810,"Influenza with other respiratory manifestations, and influenza unqualified — Influenza with other respiratory manifestations, and influenza unqualified",L1_06,Respiratory and Environmental Disease,medium
+ICD-7,4820,"Influenza with digestive manifestations, but without respiratory symptoms — Influenza with digestive manifestations, but without respiratory symptoms",L1_06,Respiratory and Environmental Disease,medium
+ICD-7,4830,"Influenza with nervous manifestations, but without digestive or respiratory symptoms — Influenza with nervous manifestations, but without digestive or respiratory symptoms",L1_06,Respiratory and Environmental Disease,medium
 ICD-7,4900,Lobar pneumonia — Lobar pneumonia,L1_06,Respiratory and Environmental Disease,low
 ICD-7,4910,Bronchopneumonia — Bronchopneumonia,L1_01,Infectious and Communicable Diseases,low
 ICD-7,4920,Primary atypical pneumonia — Primary atypical pneumonia,L1_06,Respiratory and Environmental Disease,low
@@ -727,7 +727,7 @@ ICD-7,5130,Chronic sinusitis — Chronic sinusitis,L1_05,Chronic Non-Communicabl
 ICD-7,5140,Deflected nasal septum — Deflected nasal septum,L1_01,Infectious and Communicable Diseases,low
 ICD-7,5150,Nasal polyp — Nasal polyp,L1_01,Infectious and Communicable Diseases,low
 ICD-7,5160,Chronic laryngitis — Chronic laryngitis,L1_06,Respiratory and Environmental Disease,low
-ICD-7,5170,Other diseases of upper respiratory tract — Other diseases of upper respiratory tract,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,5170,Other diseases of upper respiratory tract — Other diseases of upper respiratory tract,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,5180,Empyema — Empyema,L1_01,Infectious and Communicable Diseases,low
 ICD-7,5190,Pleurisy — Without mention of effusion or tuberculosis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,5191,Pleurisy — With effusion with mention of a bacterial cause other than tuberculosis,L1_01,Infectious and Communicable Diseases,low
@@ -742,9 +742,9 @@ ICD-7,5233,"Pneumoconiosis due to silica and silicates (occupational) — Other,
 ICD-7,5240,Other specified pneumoconiosis and pulmonary fibrosis of occupational origin — Other specified pneumoconiosis and pulmonary fibrosis of occupational origin,L1_06,Respiratory and Environmental Disease,low
 ICD-7,5250,Other chronic interstitial pneumonia — Other chronic interstitial pneumonia,L1_06,Respiratory and Environmental Disease,low
 ICD-7,5260,Bronchiectasis — Bronchiectasis,L1_06,Respiratory and Environmental Disease,low
-ICD-7,5270,Other diseases of lung and pleural cavity — Pulmonary collapse (1 year and over),L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,5271,Other diseases of lung and pleural cavity — Emphysema without mention of bronchitis,L1_06,Respiratory and Environmental Disease,medium
-ICD-7,5272,Other diseases of lung and pleural cavity — Other,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,5270,Other diseases of lung and pleural cavity — Pulmonary collapse (1 year and over),L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,5271,Other diseases of lung and pleural cavity — Emphysema without mention of bronchitis,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,5272,Other diseases of lung and pleural cavity — Other,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,5300,"Dental caries — Dental caries, unqualified",L1_06,Respiratory and Environmental Disease,low
 ICD-7,5301,Dental caries — With pulp exposure,L1_06,Respiratory and Environmental Disease,low
 ICD-7,5302,Dental caries — With periapical abscess,L1_05,Chronic Non-Communicable Diseases,low
@@ -752,10 +752,10 @@ ICD-7,5303,Dental caries — Other,L1_06,Respiratory and Environmental Disease,l
 ICD-7,5310,Abscesses of supporting structures of teeth — Periocoronal,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,5311,Abscesses of supporting structures of teeth — Periodontal (parietal),L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,5312,Abscesses of supporting structures of teeth — Other and unspecifed,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,5320,"Other inflammatory diseases of supporting structures of teeth — Gingivitis, except ulcerative",L1_01,Infectious and Communicable Diseases,low
-ICD-7,5321,"Other inflammatory diseases of supporting structures of teeth — Peridontitis (pyorrhoea, inflammatory)",L1_01,Infectious and Communicable Diseases,low
-ICD-7,5322,"Other inflammatory diseases of supporting structures of teeth — Peridontitis (pyorrhoea, degenerative)",L1_01,Infectious and Communicable Diseases,low
-ICD-7,5323,Other inflammatory diseases of supporting structures of teeth — other,L1_01,Infectious and Communicable Diseases,low
+ICD-7,5320,"Other inflammatory diseases of supporting structures of teeth — Gingivitis, except ulcerative",L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,5321,"Other inflammatory diseases of supporting structures of teeth — Peridontitis (pyorrhoea, inflammatory)",L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,5322,"Other inflammatory diseases of supporting structures of teeth — Peridontitis (pyorrhoea, degenerative)",L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,5323,Other inflammatory diseases of supporting structures of teeth — other,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,5330,"Disorders of occlusion, eruption, and tooth development — Malocclusion",L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,5331,"Disorders of occlusion, eruption, and tooth development — Disorders of first dentition",L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,5332,"Disorders of occlusion, eruption, and tooth development — Impacted teeth",L1_05,Chronic Non-Communicable Diseases,low
@@ -765,12 +765,12 @@ ICD-7,5335,"Disorders of occlusion, eruption, and tooth development — Congenit
 ICD-7,5336,"Disorders of occlusion, eruption, and tooth development — Chronic dental fluorosis",L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,5337,"Disorders of occlusion, eruption, and tooth development — Other",L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,5340,Toothache from unspecified cause — Toothache from unspecifed cause,L1_01,Infectious and Communicable Diseases,low
-ICD-7,5350,Other diseases of teeth and supporting structures — Other diseases of teeth and supporting structures,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,5350,Other diseases of teeth and supporting structures — Other diseases of teeth and supporting structures,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,5360,Stomatitis — Stomatitis,L1_01,Infectious and Communicable Diseases,low
-ICD-7,5370,Diseases of salivary glands — Diseases of salivary glands,L1_01,Infectious and Communicable Diseases,low
-ICD-7,5380,Other diseases of buccal cavity — Other diseases of buccal cavity,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,5390,Diseases of oesophagus — Functional disorders of oesophagus,L1_05,Chronic Non-Communicable Diseases,medium
-ICD-7,5391,Diseases of oesophagus — Other,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,5370,Diseases of salivary glands — Diseases of salivary glands,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,5380,Other diseases of buccal cavity — Other diseases of buccal cavity,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,5390,Diseases of oesophagus — Functional disorders of oesophagus,L1_05,Chronic Non-Communicable Diseases,high
+ICD-7,5391,Diseases of oesophagus — Other,L1_05,Chronic Non-Communicable Diseases,high
 ICD-7,5400,Ulcer of stomach — Without mention of perforation,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,5401,Ulcer of stomach — With perforation,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,5410,Ulcer of duodenum — Without mention of perforation,L1_05,Chronic Non-Communicable Diseases,low
@@ -781,12 +781,12 @@ ICD-7,5430,Gastritis and duodenitis — Gastritis and duodenitis,L1_05,Chronic N
 ICD-7,5440,Disorders of function of stomach — Disorders of gastric secretion,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,5441,Disorders of function of stomach — Disorders of gastric motility,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,5442,Disorders of function of stomach — Other,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,5450,Other diseases of stomach and duodenum — Other diseases of stomach and duodenum,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,5450,Other diseases of stomach and duodenum — Other diseases of stomach and duodenum,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,5500,Acute appendicitis — Without mention of peritonitis,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,5501,Acute appendicitis — With peritonitis,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,5510,"Appendicitis, unqualified — Appendicitis, unqualified",L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,5520,Other appendicitis — Other appendicitis,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,5530,Other diseases of appendix — Other diseases of appendix,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,5530,Other diseases of appendix — Other diseases of appendix,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,5600,Hernia of abdominal cavity without mention of obstruction — Inguinal,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,5601,Hernia of abdominal cavity without mention of obstruction — Femoral,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,5602,Hernia of abdominal cavity without mention of obstruction — Umbilical,L1_05,Chronic Non-Communicable Diseases,low
@@ -819,18 +819,18 @@ ICD-7,5740,Anal fissure and fistula — Anal fissure and fistula,L1_01,Infectiou
 ICD-7,5750,Abscess of anal and rectal regions — Abscess of anal and rectal regions,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,5760,Peritonitis — Peritonitis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,5770,Peritoneal adhesion — Peritoneal adhesion,L1_01,Infectious and Communicable Diseases,low
-ICD-7,5780,Other diseases of intestines and peritoneum — Other diseases of intestines and peritoneum,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,5780,Other diseases of intestines and peritoneum — Other diseases of intestines and peritoneum,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,5800,Acute and subacute yellow atrophy of liver — Acute and subacute yellow atrophy of liver,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,5810,Cirrhosis of liver — Without mention of alcoholism,L1_09,Self-Harm and Substance Use,low
 ICD-7,5811,Cirrhosis of liver — With alcoholism,L1_09,Self-Harm and Substance Use,low
 ICD-7,5820,Suppurative hepatitis and liver abscess — Suppurative hepatitis and liver abscess,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,5830,Other diseases of liver — Other diseases of liver,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,5830,Other diseases of liver — Other diseases of liver,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,5840,Cholelithiasis — Cholelithiasis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,5850,"Cholecystitis and cholangitis, without mention of calculi — Cholecystitis and cholangitis, without mention of calculi",L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,5860,Other diseases of gallbladder and biliary ducts — Other diseases of gallbladder and biliary ducts,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,5870,Diseases of pancreas — Acute pancreatitis,L1_01,Infectious and Communicable Diseases,low
-ICD-7,5871,Diseases of pancreas — Chronic pancreatitis,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,5872,Diseases of pancreas — Other diseases of pancreas,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,5860,Other diseases of gallbladder and biliary ducts — Other diseases of gallbladder and biliary ducts,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,5870,Diseases of pancreas — Acute pancreatitis,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,5871,Diseases of pancreas — Chronic pancreatitis,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,5872,Diseases of pancreas — Other diseases of pancreas,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,5900,Acute nephritis — Acute nephritis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,5910,"Nephritis with oedema, including nephrosis — Nephritis with oedema, including nephrosis",L1_01,Infectious and Communicable Diseases,low
 ICD-7,5920,Chronic nephritis — Chronic nephritis,L1_05,Chronic Non-Communicable Diseases,low
@@ -841,41 +841,41 @@ ICD-7,6001,Infections of kidney — Abscess of kidney and perirenal tissue,L1_05
 ICD-7,6002,Infections of kidney — Other,L1_01,Infectious and Communicable Diseases,low
 ICD-7,6010,Hydronephrosis — Hydronephrosis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,6020,Calculi of kidney and ureter — Calculi of kidney and ureter,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,6030,Other diseases of kidney and ureter — Other diseases of kidney and ureter,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,6030,Other diseases of kidney and ureter — Other diseases of kidney and ureter,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,6040,Calculi of other parts of urinary system — Calculi of other parts of urinary system,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,6050,Cystitis — Cystitis,L1_01,Infectious and Communicable Diseases,low
-ICD-7,6060,Other diseases of bladder — Other diseases of bladder,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,6060,Other diseases of bladder — Other diseases of bladder,L1_05,Chronic Non-Communicable Diseases,high
 ICD-7,6070,Urethritis (non-venereal) — Urethritis (non-venereal),L1_01,Infectious and Communicable Diseases,low
 ICD-7,6080,Stricture of urethra — Stricture of urethra,L1_01,Infectious and Communicable Diseases,low
-ICD-7,6090,Other diseases of urethra — Other diseases of urethra,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,6090,Other diseases of urethra — Other diseases of urethra,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,6100,Hyperplasia of prostate — Hyperplasia of prostate,L1_01,Infectious and Communicable Diseases,low
 ICD-7,6110,Prostatitis — Prostatitis,L1_01,Infectious and Communicable Diseases,low
-ICD-7,6120,Other diseases of prostate — Other diseases of prostate,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,6120,Other diseases of prostate — Other diseases of prostate,L1_05,Chronic Non-Communicable Diseases,high
 ICD-7,6130,Hydrocele — Hydrocele,L1_01,Infectious and Communicable Diseases,low
 ICD-7,6140,Orchitis and epididymitis — Orchitis and epididymitis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,6150,Redundant prepuce and phimosis — Redundant prepuce and phimosis,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,6160,"Sterility, male — Sterility, male",L1_01,Infectious and Communicable Diseases,low
-ICD-7,6170,Other diseases of male genital organs — Other diseases of male genital organs,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,6170,Other diseases of male genital organs — Other diseases of male genital organs,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,6200,Chronic cystic disease of breast — Chronic cystic disease of breast,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,6210,Other diseases of breast — Acute mastitis not associated with lactation,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,6211,Other diseases of breast — Hypertrophy of breast,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,6212,Other diseases of breast — Other,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,6210,Other diseases of breast — Acute mastitis not associated with lactation,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,6211,Other diseases of breast — Hypertrophy of breast,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,6212,Other diseases of breast — Other,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,6220,Acute salpingitis and oophoritis — Acute salpingitis and oophoritis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,6230,Chronic salpingitis and oophoritis — Chronic salpingitis and oophoritis,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,6240,"Salpingitis and oophoritis, unqualified — Salpingitis and oophoritis, unqualified",L1_01,Infectious and Communicable Diseases,low
-ICD-7,6250,Other diseases of ovary and Fallopian tube — Other diseases of ovary and Fallopian tube,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,6260,Diseases of parametrium and pelvic peritoneum (female) — Diseases of parametrium and pelvic peritoneum (female),L1_01,Infectious and Communicable Diseases,low
+ICD-7,6250,Other diseases of ovary and Fallopian tube — Other diseases of ovary and Fallopian tube,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,6260,Diseases of parametrium and pelvic peritoneum (female) — Diseases of parametrium and pelvic peritoneum (female),L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,6300,"Infective disease of uterus, vagina, and vulva — Cervicitis",L1_01,Infectious and Communicable Diseases,low
-ICD-7,6301,"Infective disease of uterus, vagina, and vulva — Other infective diseases of uterus",L1_01,Infectious and Communicable Diseases,low
+ICD-7,6301,"Infective disease of uterus, vagina, and vulva — Other infective diseases of uterus",L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,6302,"Infective disease of uterus, vagina, and vulva — Vaginitis and vulvitis",L1_01,Infectious and Communicable Diseases,low
 ICD-7,6310,Utero vaginal prolapse — Utero vaginal prolapse,L1_01,Infectious and Communicable Diseases,low
 ICD-7,6320,Malposition of uterus — Malposition of uterus,L1_01,Infectious and Communicable Diseases,low
-ICD-7,6330,Other diseases of uterus — Other diseases of uterus,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,6330,Other diseases of uterus — Other diseases of uterus,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,6340,Disorders of menstruation — Disorders of menstruation,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,6350,Menopausal symptoms — Menopausal symptoms,L1_10,"Ill-Defined, Administrative, and Other Causes",low
 ICD-7,6360,"Sterility, female — Sterility, female",L1_01,Infectious and Communicable Diseases,low
-ICD-7,6370,Other diseases of female genital organs — Leukorrhoea,L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,6371,Other diseases of female genital organs — Other,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,6370,Other diseases of female genital organs — Leukorrhoea,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,6371,Other diseases of female genital organs — Other,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,6400,Pyelitis and pyelonephritis of pregnancy — Pyelitis and pyelonephritis of pregnancy,L1_02,Maternal and Early-Life Mortality,low
 ICD-7,6410,Other infections of genito-urinary tract during pregnancy — Other infections of genito-urinary tract during pregnancy,L1_02,Maternal and Early-Life Mortality,low
 ICD-7,6420,Toxaemias of pregnancy — Hypertensive disease arising during pregnancy,L1_02,Maternal and Early-Life Mortality,low
@@ -1052,7 +1052,7 @@ ICD-7,7050,Erythematous conditions — Toxic erythema,L1_01,Infectious and Commu
 ICD-7,7051,Erythematous conditions — Erythema multiforme (erythema iris),L1_01,Infectious and Communicable Diseases,low
 ICD-7,7052,Erythematous conditions — Erythema nodosum,L1_01,Infectious and Communicable Diseases,low
 ICD-7,7053,Erythematous conditions — Rosacea,L1_01,Infectious and Communicable Diseases,low
-ICD-7,7054,Erythematous conditions — Lupus erythematosus,L1_01,Infectious and Communicable Diseases,low
+ICD-7,7054,Erythematous conditions — Lupus erythematosus,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,7055,Erythematous conditions — Other and unqualified,L1_01,Infectious and Communicable Diseases,low
 ICD-7,7060,Psoriasis and similar disorders — Psoriasis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,7061,Psoriasis and similar disorders — Parapsoriasis,L1_01,Infectious and Communicable Diseases,low
@@ -1069,18 +1069,18 @@ ICD-7,7085,Pruritus and related conditions — Other pruritic conditions,L1_01,I
 ICD-7,7090,Corns and callosities — Corns and callosities,L1_01,Infectious and Communicable Diseases,low
 ICD-7,7100,Other hypertrophic and atrophic conditions of skin — Schleroderma and dermatomyositis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,7101,Other hypertrophic and atrophic conditions of skin — Keratoderma,L1_01,Infectious and Communicable Diseases,low
-ICD-7,7102,Other hypertrophic and atrophic conditions of skin — Hereditary oedema of legs (Milroy's disease),L1_01,Infectious and Communicable Diseases,low
+ICD-7,7102,Other hypertrophic and atrophic conditions of skin — Hereditary oedema of legs (Milroy's disease),L1_03,Congenital and Developmental Conditions,low
 ICD-7,7103,Other hypertrophic and atrophic conditions of skin — Striae atrophicae,L1_01,Infectious and Communicable Diseases,low
 ICD-7,7104,Other hypertrophic and atrophic conditions of skin — Keloid scar,L1_01,Infectious and Communicable Diseases,low
 ICD-7,7105,Other hypertrophic and atrophic conditions of skin — Other hypertrophic and atrophic conditions of the skin,L1_01,Infectious and Communicable Diseases,low
 ICD-7,7110,Other dermatoses — Other dermatoses,L1_01,Infectious and Communicable Diseases,low
-ICD-7,7120,Diseases of nail — Diseases of nail,L1_01,Infectious and Communicable Diseases,low
-ICD-7,7130,Diseases of hair and hair follicles — Diseases of hair and hair follicles,L1_01,Infectious and Communicable Diseases,low
-ICD-7,7140,Diseases of sweat and sebaceous glands — Diseases of sweat glands,L1_01,Infectious and Communicable Diseases,low
-ICD-7,7141,Diseases of sweat and sebaceous glands — Acne,L1_01,Infectious and Communicable Diseases,low
-ICD-7,7142,Diseases of sweat and sebaceous glands — Other diseases of sebaceous glands,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,7120,Diseases of nail — Diseases of nail,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,7130,Diseases of hair and hair follicles — Diseases of hair and hair follicles,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,7140,Diseases of sweat and sebaceous glands — Diseases of sweat glands,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,7141,Diseases of sweat and sebaceous glands — Acne,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,7142,Diseases of sweat and sebaceous glands — Other diseases of sebaceous glands,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,7150,Chronic ulcer of skin — Chronic ulcer of skin,L1_05,Chronic Non-Communicable Diseases,medium
-ICD-7,7160,Other diseases of skin — Other diseases of skin,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,7160,Other diseases of skin — Other diseases of skin,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,7200,Acute arthritis due to pyogenic organisms — Acute arthritis due to pyogenic organisms,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,7210,Acute nonpyogenic arthritis — Acute nonpyogenic arthritis,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,7220,Rheumatoid arthritis and allied conditions — Rheumatoid arthritis,L1_05,Chronic Non-Communicable Diseases,low
@@ -1102,7 +1102,7 @@ ICD-7,7302,Osteomyelitis and periostitis — Unspecified osteomyelitis,L1_01,Inf
 ICD-7,7303,Osteomyelitis and periostitis — Periostitis without mention of osteomyelitis,L1_01,Infectious and Communicable Diseases,low
 ICD-7,7310,Osteitis deformans — Osteitis deformans,L1_01,Infectious and Communicable Diseases,low
 ICD-7,7320,Osteochondrosis — Osteochondrosis,L1_01,Infectious and Communicable Diseases,low
-ICD-7,7330,Other diseases of bone — Other diseases of bone,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,7330,Other diseases of bone — Other diseases of bone,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,7340,Internal derangement of knee joint — Internal derangement of knee joint,L1_01,Infectious and Communicable Diseases,low
 ICD-7,7350,Displacement of intervertebral disc — Displacement of intervertebral disc,L1_01,Infectious and Communicable Diseases,low
 ICD-7,7360,Affection of sacro-iliac joint — Affection of sacro-iliac joint,L1_01,Infectious and Communicable Diseases,low
@@ -1116,14 +1116,14 @@ ICD-7,7376,Ankylosis of joint — Of knee,L1_01,Infectious and Communicable Dise
 ICD-7,7377,Ankylosis of joint — Of ankle,L1_01,Infectious and Communicable Diseases,low
 ICD-7,7378,Ankylosis of joint — Of other and multiple sites,L1_01,Infectious and Communicable Diseases,low
 ICD-7,7379,Ankylosis of joint — Of unspecified site,L1_01,Infectious and Communicable Diseases,low
-ICD-7,7380,Other diseases of joint — Other diseases of joint,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,7380,Other diseases of joint — Other diseases of joint,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,7400,Bunion — Bunion,L1_01,Infectious and Communicable Diseases,low
 ICD-7,7410,"Synovitis, bursitis, and tenosynovitis without mention of occupational origin — Synovitis, bursitis, and tenosynovitis without mention of occupational origin",L1_06,Respiratory and Environmental Disease,low
 ICD-7,7420,"Synovitis, bursitis, and tenosynovitis of occupational origin — Synovitis, bursitis, and tenosynovitis of occupational origin",L1_06,Respiratory and Environmental Disease,low
-ICD-7,7430,Infective myositis and other inflammatory diseases of tendon and fascia — Infective myositis and other inflammatory diseases of tendon and fascia,L1_01,Infectious and Communicable Diseases,low
-ICD-7,7440,"Other diseases of muscle, tendon and fascia — Myasthenia gravis",L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,7441,"Other diseases of muscle, tendon and fascia — Inborn defect of muscle",L1_05,Chronic Non-Communicable Diseases,low
-ICD-7,7442,"Other diseases of muscle, tendon and fascia — Other",L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,7430,Infective myositis and other inflammatory diseases of tendon and fascia — Infective myositis and other inflammatory diseases of tendon and fascia,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,7440,"Other diseases of muscle, tendon and fascia — Myasthenia gravis",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,7441,"Other diseases of muscle, tendon and fascia — Inborn defect of muscle",L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,7442,"Other diseases of muscle, tendon and fascia — Other",L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,7450,Curvature of spine — Curvature of spine,L1_01,Infectious and Communicable Diseases,low
 ICD-7,7460,Flat foot — Flat foot,L1_01,Infectious and Communicable Diseases,low
 ICD-7,7470,Hallux valgus and varus — Hallux valgus and varus,L1_01,Infectious and Communicable Diseases,low
@@ -1144,7 +1144,7 @@ ICD-7,7546,Congenital malformations of circulatory system — Coarctation of aor
 ICD-7,7547,Congenital malformations of circulatory system — Other circulatory malformations,L1_03,Congenital and Developmental Conditions,medium
 ICD-7,7550,Cleft palate and harelip — Cleft palate and harelip,L1_03,Congenital and Developmental Conditions,high
 ICD-7,7560,Congenital malformations of digestive system — Congenital hypertrophic pyloric stenosis,L1_03,Congenital and Developmental Conditions,medium
-ICD-7,7561,Congenital malformations of digestive system — Imperforate anus,L1_03,Congenital and Developmental Conditions,medium
+ICD-7,7561,Congenital malformations of digestive system — Imperforate anus,L1_03,Congenital and Developmental Conditions,high
 ICD-7,7562,Congenital malformations of digestive system — Other,L1_03,Congenital and Developmental Conditions,medium
 ICD-7,7570,Congenital malformations of genito-urinary system — Undescended testicle,L1_03,Congenital and Developmental Conditions,medium
 ICD-7,7571,Congenital malformations of genito-urinary system — Polycystic disease of kidney,L1_03,Congenital and Developmental Conditions,medium
@@ -1228,7 +1228,7 @@ ICD-7,7820,Symptoms referable to cardiovascular and lymphatic system — Precord
 ICD-7,7821,Symptoms referable to cardiovascular and lymphatic system — Palpitations,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,7822,Symptoms referable to cardiovascular and lymphatic system — Tachycardia,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,7823,Symptoms referable to cardiovascular and lymphatic system — Pallor and cyanosis (not of newborn),L1_02,Maternal and Early-Life Mortality,low
-ICD-7,7824,"Symptoms referable to cardiovascular and lymphatic system — Acute heart failure, undefined",L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,7824,"Symptoms referable to cardiovascular and lymphatic system — Acute heart failure, undefined",L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,7825,Symptoms referable to cardiovascular and lymphatic system — Syncope or collapse,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,7826,Symptoms referable to cardiovascular and lymphatic system — Oedema and dropsy (not of newborn),L1_05,Chronic Non-Communicable Diseases,medium
 ICD-7,7827,Symptoms referable to cardiovascular and lymphatic system — Enlargement of lymph node,L1_05,Chronic Non-Communicable Diseases,low
@@ -1302,7 +1302,7 @@ ICD-7,7902,Nervousness and debility — Depression,L1_05,Chronic Non-Communicabl
 ICD-7,7910,Headache — Headache,L1_01,Infectious and Communicable Diseases,low
 ICD-7,7920,Uraemia — Uraemia,L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,7930,"Observation, without need for further medical care — Mental",L1_10,"Ill-Defined, Administrative, and Other Causes",medium
-ICD-7,7931,"Observation, without need for further medical care — Suspected malignant neoplasm",L1_10,"Ill-Defined, Administrative, and Other Causes",medium
+ICD-7,7931,"Observation, without need for further medical care — Suspected malignant neoplasm",L1_05,Chronic Non-Communicable Diseases,low
 ICD-7,7932,"Observation, without need for further medical care — Other specified",L1_10,"Ill-Defined, Administrative, and Other Causes",medium
 ICD-7,7933,"Observation, without need for further medical care — Unspecified",L1_10,"Ill-Defined, Administrative, and Other Causes",medium
 ICD-7,7940,Senility without mention of psychosis — Senility without mention of psychosis,L1_04,Later-Life Mortality,low
@@ -2107,16 +2107,16 @@ ICD-7,9346,Cataclysm — Public building,L1_01,Infectious and Communicable Disea
 ICD-7,9347,Cataclysm — Resident institution,L1_01,Infectious and Communicable Diseases,low
 ICD-7,9348,Cataclysm — Other specified places,L1_01,Infectious and Communicable Diseases,low
 ICD-7,9349,Cataclysm — Place not specified,L1_10,"Ill-Defined, Administrative, and Other Causes",low
-ICD-7,9350,Lightning — Home (including home premises and any non-institutional place of residence),L1_01,Infectious and Communicable Diseases,low
-ICD-7,9351,"Lightning — Farm (including buildings and land under cultivation, but excluding farm home and home premises)",L1_01,Infectious and Communicable Diseases,low
-ICD-7,9352,Lightning — Mine and quarry,L1_01,Infectious and Communicable Diseases,low
+ICD-7,9350,Lightning — Home (including home premises and any non-institutional place of residence),L1_07,Injury and Accidental Harm,low
+ICD-7,9351,"Lightning — Farm (including buildings and land under cultivation, but excluding farm home and home premises)",L1_07,Injury and Accidental Harm,low
+ICD-7,9352,Lightning — Mine and quarry,L1_07,Injury and Accidental Harm,low
 ICD-7,9353,Lightning — Industrial place and premises,L1_06,Respiratory and Environmental Disease,low
-ICD-7,9354,Lightning — Place for recreation and sport,L1_01,Infectious and Communicable Diseases,low
-ICD-7,9355,Lightning — Street and highway,L1_01,Infectious and Communicable Diseases,low
-ICD-7,9356,Lightning — Public building,L1_01,Infectious and Communicable Diseases,low
-ICD-7,9357,Lightning — Resident institution,L1_01,Infectious and Communicable Diseases,low
-ICD-7,9358,Lightning — Other specified places,L1_01,Infectious and Communicable Diseases,low
-ICD-7,9359,Lightning — Place not specified,L1_10,"Ill-Defined, Administrative, and Other Causes",low
+ICD-7,9354,Lightning — Place for recreation and sport,L1_07,Injury and Accidental Harm,low
+ICD-7,9355,Lightning — Street and highway,L1_07,Injury and Accidental Harm,low
+ICD-7,9356,Lightning — Public building,L1_07,Injury and Accidental Harm,low
+ICD-7,9357,Lightning — Resident institution,L1_07,Injury and Accidental Harm,low
+ICD-7,9358,Lightning — Other specified places,L1_07,Injury and Accidental Harm,low
+ICD-7,9359,Lightning — Place not specified,L1_07,Injury and Accidental Harm,low
 ICD-7,9360,Other and unspecified accidents — Home (including home premises and any non-institutional place of residence),L1_07,Injury and Accidental Harm,low
 ICD-7,9361,"Other and unspecified accidents — Farm (including buildings and land under cultivation, but excluding farm home and home premises)",L1_07,Injury and Accidental Harm,low
 ICD-7,9362,Other and unspecified accidents — Mine and quarry,L1_07,Injury and Accidental Harm,low
@@ -2176,10 +2176,10 @@ ICD-7,9960,Injury due to war operations by explosion of undetermined origin — 
 ICD-7,9970,Injury due to war operations by aircraft destruction — Injury due to war operations by aircraft destruction,L1_08,Violence and Conflict,low
 ICD-7,9980,Injury due to war operations by other and unspecified means — Injury due to war operations by other and unspecified means,L1_08,Violence and Conflict,low
 ICD-7,9990,Injury due to war operations but occurring after cessation of hostilities — Injury due to war operations but occurring after cessation of hostilities,L1_08,Violence and Conflict,low
-ICD-7,4345,Other and unspecified diseases of heart — Other and unspecified diseases of heart,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1471,Malignant neoplasm of hypopharynx — Pyriform fossa,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1472,Malignant neoplasm of hypopharynx — Post cricoid region,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1611,Malignant neoplasm of larynx — Intrinsic or vocal chords; glottis,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1631,Malignant neoplasm of lung — Primary lung or pulmonary,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1632,Malignant neoplasm of lung — Primary pleura,L1_01,Infectious and Communicable Diseases,low
-ICD-7,1633,Malignant neoplasm of lung — Lung or pulmonary not specified as primary,L1_10,"Ill-Defined, Administrative, and Other Causes",low
+ICD-7,4345,Other and unspecified diseases of heart — Other and unspecified diseases of heart,L1_05,Chronic Non-Communicable Diseases,low
+ICD-7,1471,Malignant neoplasm of hypopharynx — Pyriform fossa,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1472,Malignant neoplasm of hypopharynx — Post cricoid region,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1611,Malignant neoplasm of larynx — Intrinsic or vocal chords; glottis,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1631,Malignant neoplasm of lung — Primary lung or pulmonary,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1632,Malignant neoplasm of lung — Primary pleura,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-7,1633,Malignant neoplasm of lung — Lung or pulmonary not specified as primary,L1_05,Chronic Non-Communicable Diseases,medium

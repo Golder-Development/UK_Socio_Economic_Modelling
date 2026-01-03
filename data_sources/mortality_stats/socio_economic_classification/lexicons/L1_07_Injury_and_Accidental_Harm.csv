@@ -18,12 +18,18 @@ quarries,6,token,occupational,Quarry-related accidents
 building operations,6,phrase,occupational,Construction-related accidents
 burns and scalds,8,phrase,accidental,Severe burn or scald injuries
 weather,6,token,environmental,Weather-related harm
+"excessive cold",7,token,environmental,Cold-related injury/hypothermia
+"excessive heat",7,token,environmental,Heat-related injury/heat stroke
 poisons,6,token,toxic,Poisoning incidents
 poisonous vapours,7,phrase,toxic,Poisonous gas/vapour exposure
 other chronic poisonings,7,phrase,toxic,Chronic poisoning exposure
+"food poisoning",7,phrase,toxic,Foodborne illness/contamination
 conflagration,7,token,accidental,Large fire causing harm
 deleterious gases,7,phrase,toxic,Harmful gas exposure
 "venomous animals",7,phrase,toxic,Bites and stings from venomous creatures
+electricity,7,token,accidental,Electrical injury/electrocution
+lightning,7,token,accidental,Lightning strike injury
 "accidental poisoning",8,phrase,toxic,Unintentional toxic exposure
+"other acute poisonings",7,phrase,toxic,Other forms of acute toxic exposure/overdose
 "poisonous gases",7,phrase,toxic,Toxic gas exposure
 accidental,7,token,core,Unintentional harm or injury

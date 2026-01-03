@@ -6,8 +6,40 @@ spina bifida,9,phrase,condition,
 cleft palate,9,phrase,condition,
 harelip,9,token,condition,
 clubfoot,9,token,condition,
+"imperforate anus",9,phrase,condition,Congenital absence of anal opening
+monstrosities,9,token,condition,Severe congenital malformations/developmental anomalies
 hydrocephalus,8,token,condition,
+paraplegia,8,token,condition,Paralysis of lower limbs from congenital spinal anomaly
 haemophilia,8,token,genetic,
 idiocy,7,token,condition,Historical term for severe intellectual disability
 imbecility,7,token,condition,Historical term for intellectual disability
 cretinism,8,token,condition,Congenital hypothyroidism-related developmental disorder
+thyrotoxicosis,7,token,condition,Thyroid overactivity
+hypothyroidism,7,token,condition,Low thyroid function
+myxoedema,8,token,condition,Severe hypothyroidism with skin/tissue thickening
+disorders of the pituitary gland and its hypothalamic control,7,phrase,condition,Endocrine developmental disorders
+disorders of adrenal glands,7,phrase,condition,Endocrine gland disorders
+diseases of thymus gland,7,phrase,condition,Thymus-related developmental disorder
+ovarian dysfunction,7,phrase,condition,Endocrine reproductive disorder
+testicular dysfunction,7,phrase,condition,Endocrine reproductive disorder
+polyglandular dysfunction and related disorders,7,phrase,condition,Multiple endocrine gland disorders
+other endocrine disorders,6,phrase,condition,Other endocrine developmental disorders
+infantilism,7,token,condition,Retarded physical or mental development/failure to mature
+kwashiorkor,8,token,condition,Severe protein-calorie malnutrition
+nutritional marasmus,8,phrase,condition,Severe calorie-protein malnutrition
+malnutrition,7,token,condition,General malnutrition
+other and unspecified protein-calorie malnutrition,7,phrase,condition,Protein-calorie malnutrition unspecified
+vitamin a deficiency,7,phrase,condition,Vitamin A deficiency
+thiamine and niacin deficiency states,7,phrase,condition,B1/B3 deficiency states
+deficiency of b-complex components,7,phrase,condition,B-complex vitamin deficiencies
+deficiency,6,token,condition,Generic deficiency mention
+other nutritional deficiencies,7,phrase,condition,Other nutrient deficiencies
+obesity and other hyperalimentation,7,phrase,condition,Excess nutrition/obesity
+obesity,7,token,condition,Obesity
+hyperalimentation,7,token,condition,Excess intake
+disorders involving the immune mechanism,7,phrase,condition,Immune system disorders
+iron deficiency anaemias,7,phrase,condition,Iron deficiency anemia
+hereditary haemolytic anaemias,7,phrase,condition,Hereditary haemolytic anemia
+"pernicious anaemia",7,phrase,condition,Vitamin B12 deficiency anemia
+"splenic anaemia",7,phrase,condition,Anemia associated with splenomegaly
+hereditary,6,token,condition,Hereditary condition indicator

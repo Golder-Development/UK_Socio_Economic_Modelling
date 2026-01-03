@@ -10,7 +10,7 @@ ICD-1,80,Scarlet fever,L1_01,Infectious and Communicable Diseases,low
 ICD-1,90,Typhus,L1_01,Infectious and Communicable Diseases,low
 ICD-1,100,Plague,L1_01,Infectious and Communicable Diseases,low
 ICD-1,110,Relapsing fever,L1_01,Infectious and Communicable Diseases,low
-ICD-1,120,Influenza,L1_01,Infectious and Communicable Diseases,low
+ICD-1,120,Influenza,L1_06,Respiratory and Environmental Disease,low
 ICD-1,130,Whooping cough,L1_01,Infectious and Communicable Diseases,low
 ICD-1,140,Mumps,L1_01,Infectious and Communicable Diseases,low
 ICD-1,150,Diphtheria,L1_01,Infectious and Communicable Diseases,low
@@ -49,7 +49,7 @@ ICD-1,470,Phthisis (not otherwise def.),L1_05,Chronic Non-Communicable Diseases,
 ICD-1,480,Tuberculous meningitis,L1_01,Infectious and Communicable Diseases,low
 ICD-1,490,Tuberculous peritonitis,L1_01,Infectious and Communicable Diseases,low
 ICD-1,500,Tabes mesenterica,L1_01,Infectious and Communicable Diseases,low
-ICD-1,510,Lupus,L1_01,Infectious and Communicable Diseases,low
+ICD-1,510,Lupus,L1_05,Chronic Non-Communicable Diseases,low
 ICD-1,520,Tubercle of other organs,L1_01,Infectious and Communicable Diseases,low
 ICD-1,530,General tuberculosis,L1_01,Infectious and Communicable Diseases,low
 ICD-1,540,Scrofula,L1_06,Respiratory and Environmental Disease,low
@@ -68,7 +68,7 @@ ICD-1,660,"Rheumatoid arthritis, rheumatic gout",L1_05,Chronic Non-Communicable 
 ICD-1,670,Gout,L1_05,Chronic Non-Communicable Diseases,low
 ICD-1,680,Carcinoma,L1_05,Chronic Non-Communicable Diseases,low
 ICD-1,690,Sarcoma,L1_05,Chronic Non-Communicable Diseases,low
-ICD-1,700,"Cancer, malignant disease (n.o.d.)",L1_05,Chronic Non-Communicable Diseases,low
+ICD-1,700,"Cancer, malignant disease (n.o.d.)",L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,710,Rickets,L1_06,Respiratory and Environmental Disease,low
 ICD-1,720,Purpura,L1_06,Respiratory and Environmental Disease,low
 ICD-1,730,"Haemophilia, haemorrhagic diathesis",L1_03,Congenital and Developmental Conditions,low
@@ -83,19 +83,19 @@ ICD-1,810,Want of breast milk,L1_02,Maternal and Early-Life Mortality,low
 ICD-1,820,Teething,L1_02,Maternal and Early-Life Mortality,low
 ICD-1,830,"Meningitis, brain inflammation",L1_01,Infectious and Communicable Diseases,low
 ICD-1,840,Softening of brain,L1_05,Chronic Non-Communicable Diseases,low
-ICD-1,850,General paralysis of insane,L1_05,Chronic Non-Communicable Diseases,low
+ICD-1,850,General paralysis of insane,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,860,Insanity (not puerperal),L1_05,Chronic Non-Communicable Diseases,low
 ICD-1,870,Chorea,L1_05,Chronic Non-Communicable Diseases,low
 ICD-1,880,Epilepsy,L1_05,Chronic Non-Communicable Diseases,low
 ICD-1,890,Convulsions,L1_05,Chronic Non-Communicable Diseases,low
 ICD-1,900,Laryngismus stridulus,L1_06,Respiratory and Environmental Disease,low
 ICD-1,910,Locomotor ataxy,L1_05,Chronic Non-Communicable Diseases,low
-ICD-1,920,"Paraplegia, diseases of cord",L1_05,Chronic Non-Communicable Diseases,low
+ICD-1,920,"Paraplegia, diseases of cord",L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,930,"Neuritis, peripheral, polyneuritis",L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,940,Brain tumour (not specific),L1_05,Chronic Non-Communicable Diseases,low
-ICD-1,950,Other diseases of nervous system,L1_05,Chronic Non-Communicable Diseases,low
+ICD-1,950,Other diseases of nervous system,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,960,"Otitis, mastoid disease",L1_01,Infectious and Communicable Diseases,low
-ICD-1,970,"Epistaxis, diseases of nose",L1_05,Chronic Non-Communicable Diseases,low
+ICD-1,970,"Epistaxis, diseases of nose",L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,980,"Ophthalmia, eye diseases",L1_01,Infectious and Communicable Diseases,low
 ICD-1,990,"Valvular disease, endocarditis (not infective)",L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,1000,Pericarditis,L1_05,Chronic Non-Communicable Diseases,low
@@ -111,47 +111,47 @@ ICD-1,1090,Senile gangrene,L1_04,Later-Life Mortality,low
 ICD-1,1100,"Embolism, thrombosis (not cerebral)",L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,1110,Phlebitis,L1_05,Chronic Non-Communicable Diseases,low
 ICD-1,1120,Varicose veins,L1_05,Chronic Non-Communicable Diseases,low
-ICD-1,1130,Other diseases of blood vessels,L1_05,Chronic Non-Communicable Diseases,low
+ICD-1,1130,Other diseases of blood vessels,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,1140,Laryngitis,L1_06,Respiratory and Environmental Disease,low
 ICD-1,1150,Membranous laryngitis (not diphtheritic),L1_06,Respiratory and Environmental Disease,low
 ICD-1,1160,Croup (not spasmodic nor membranous),L1_02,Maternal and Early-Life Mortality,low
-ICD-1,1170,Other diseases of larynx and trachea,L1_05,Chronic Non-Communicable Diseases,low
+ICD-1,1170,Other diseases of larynx and trachea,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,1180,Bronchitis,L1_06,Respiratory and Environmental Disease,low
 ICD-1,1190,"Emphysema, asthma",L1_06,Respiratory and Environmental Disease,medium
 ICD-1,1200,Pleurisy,L1_06,Respiratory and Environmental Disease,low
 ICD-1,1210,Fibroid disease of lung,L1_06,Respiratory and Environmental Disease,low
-ICD-1,1220,Other diseases of respiratory system,L1_06,Respiratory and Environmental Disease,medium
+ICD-1,1220,Other diseases of respiratory system,L1_05,Chronic Non-Communicable Diseases,low
 ICD-1,1230,"Tonsillitis, quinsy",L1_01,Infectious and Communicable Diseases,low
-ICD-1,1240,"Diseases of mouth, pharynx, oesophagus (not spec.)",L1_01,Infectious and Communicable Diseases,low
+ICD-1,1240,"Diseases of mouth, pharynx, oesophagus (not spec.)",L1_05,Chronic Non-Communicable Diseases,low
 ICD-1,1250,Gastric ulcer,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,1260,"Gastritis, gastric catarrh",L1_05,Chronic Non-Communicable Diseases,medium
-ICD-1,1270,Other diseases of stomach (not malignant),L1_05,Chronic Non-Communicable Diseases,low
+ICD-1,1270,Other diseases of stomach (not malignant),L1_05,Chronic Non-Communicable Diseases,high
 ICD-1,1280,Ulceration of intestines,L1_05,Chronic Non-Communicable Diseases,low
 ICD-1,1290,Enteritis (not epidemic),L1_01,Infectious and Communicable Diseases,low
 ICD-1,1300,Gastro-enteritis,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,1310,"Appendicitis, perityphlitis",L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,1320,Hernia,L1_05,Chronic Non-Communicable Diseases,low
 ICD-1,1330,Intestinal obstruction,L1_05,Chronic Non-Communicable Diseases,low
-ICD-1,1340,Other diseases of intestines,L1_05,Chronic Non-Communicable Diseases,low
+ICD-1,1340,Other diseases of intestines,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,1350,Peritonitis (not puerperal),L1_05,Chronic Non-Communicable Diseases,low
 ICD-1,1360,Cirrhosis of liver,L1_05,Chronic Non-Communicable Diseases,low
-ICD-1,1370,Other diseases of liver and gall bladder,L1_05,Chronic Non-Communicable Diseases,medium
-ICD-1,1380,Other diseases of digestive system,L1_05,Chronic Non-Communicable Diseases,medium
-ICD-1,1390,Diseases of spleen,L1_05,Chronic Non-Communicable Diseases,low
-ICD-1,1400,Other diseases of lymphatic system,L1_05,Chronic Non-Communicable Diseases,medium
-ICD-1,1410,Diseases of thyroid body,L1_05,Chronic Non-Communicable Diseases,medium
-ICD-1,1420,Diseases of supra renal capsules,L1_05,Chronic Non-Communicable Diseases,low
+ICD-1,1370,Other diseases of liver and gall bladder,L1_05,Chronic Non-Communicable Diseases,high
+ICD-1,1380,Other diseases of digestive system,L1_05,Chronic Non-Communicable Diseases,high
+ICD-1,1390,Diseases of spleen,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-1,1400,Other diseases of lymphatic system,L1_05,Chronic Non-Communicable Diseases,high
+ICD-1,1410,Diseases of thyroid body,L1_05,Chronic Non-Communicable Diseases,high
+ICD-1,1420,Diseases of supra renal capsules,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,1430,"Acute nephritis, uraemia",L1_05,Chronic Non-Communicable Diseases,low
 ICD-1,1440,"Chronic Bright's disease, albuminuria",L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,1450,Calculus (not biliary),L1_05,Chronic Non-Communicable Diseases,low
-ICD-1,1460,Diseases of bladder and of prostate,L1_05,Chronic Non-Communicable Diseases,low
-ICD-1,1470,Other diseases of urinary system,L1_05,Chronic Non-Communicable Diseases,low
-ICD-1,1480,Ovarian tumour (not malignant),L1_05,Chronic Non-Communicable Diseases,medium
-ICD-1,1490,Other diseases of ovary,L1_05,Chronic Non-Communicable Diseases,low
-ICD-1,1500,Uterine tumour (not malignant),L1_05,Chronic Non-Communicable Diseases,medium
-ICD-1,1510,Other diseases of uterus and vagina,L1_05,Chronic Non-Communicable Diseases,low
+ICD-1,1460,Diseases of bladder and of prostate,L1_05,Chronic Non-Communicable Diseases,high
+ICD-1,1470,Other diseases of urinary system,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-1,1480,Ovarian tumour (not malignant),L1_05,Chronic Non-Communicable Diseases,high
+ICD-1,1490,Other diseases of ovary,L1_05,Chronic Non-Communicable Diseases,medium
+ICD-1,1500,Uterine tumour (not malignant),L1_05,Chronic Non-Communicable Diseases,high
+ICD-1,1510,Other diseases of uterus and vagina,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,1520,Disorders of menstruation,L1_05,Chronic Non-Communicable Diseases,low
-ICD-1,1530,Other diseases of generative and mammary organs,L1_05,Chronic Non-Communicable Diseases,low
+ICD-1,1530,Other diseases of generative and mammary organs,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,1540,"Abortion, miscarriage",L1_02,Maternal and Early-Life Mortality,low
 ICD-1,1550,Puerperal mania,L1_02,Maternal and Early-Life Mortality,low
 ICD-1,1560,Puerperal convulsions,L1_02,Maternal and Early-Life Mortality,low
@@ -159,11 +159,11 @@ ICD-1,1570,"Placenta praevia, flooding",L1_02,Maternal and Early-Life Mortality,
 ICD-1,1580,Other accidents of pregnancy and childbirth,L1_02,Maternal and Early-Life Mortality,medium
 ICD-1,1590,"Caries, necrosis",L1_06,Respiratory and Environmental Disease,medium
 ICD-1,1600,"Arthritis, periostitis",L1_05,Chronic Non-Communicable Diseases,low
-ICD-1,1610,Other diseases of locomotor system,L1_05,Chronic Non-Communicable Diseases,low
+ICD-1,1610,Other diseases of locomotor system,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,1620,"Ulcer, bed-sore",L1_05,Chronic Non-Communicable Diseases,low
 ICD-1,1630,Eczema,L1_05,Chronic Non-Communicable Diseases,low
 ICD-1,1640,Pemphigus,L1_05,Chronic Non-Communicable Diseases,low
-ICD-1,1650,Other diseases of the skin,L1_05,Chronic Non-Communicable Diseases,low
+ICD-1,1650,Other diseases of the skin,L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,1660,"Atrophy, debility",L1_05,Chronic Non-Communicable Diseases,medium
 ICD-1,1670,Old age,L1_04,Later-Life Mortality,low
 ICD-1,1680,"Dropsy, ascites, anasarca",L1_05,Chronic Non-Communicable Diseases,medium

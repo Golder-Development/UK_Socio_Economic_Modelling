@@ -19,12 +19,22 @@ not puerperal,-50,phrase,exclusion,Explicit exclusion of puerperal
 non-puerperal,-50,phrase,exclusion,Explicit exclusion of puerperal
 5yrs and over,-50,phrase,exclusion,Explicit exclusion when age outside early-life
 other infantile convulsions,8,phrase,early-life,Infantile convulsions category
+"infantile convulsions (age under 5)",8,phrase,early-life,Seizures in children under 5 years
+"infantile atrophy, debility and marasmus",9,phrase,early-life,Severe malnutrition/wasting in infants
 under 2yrs old,9,phrase,early-life,Explicit early-life age range
+"gastro-enteritis - not returned as infective - under 2yrs old",8,phrase,early-life,Non-infective gastroenteritis in infants
 menorrhagia,8,token,core,Heavy menstrual bleeding
 diseases of umbilicus,8,phrase,early-life,Neonatal umbilical conditions
+"icterus neonatorum",9,phrase,early-life,Neonatal jaundice
 premature birth,9,phrase,early-life,Prematurity
+"post-abortive sepsis",8,phrase,early-life,Infection following abortion
+"sclerema and oedema neonatorum",8,phrase,early-life,Skin hardening and swelling in newborns
+"status lymphaticus",8,phrase,early-life,Unexplained sudden death in infants with lymphatic involvement
 croup,7,token,early-life,Respiratory infection in young children
 placenta praevia,9,phrase,core,Placenta covers cervical os
 "placenta praevia, flooding",9,phrase,core,Placenta praevia with haemorrhage
+specific delays in development,7,phrase,early-life,Developmental delay in childhood
+hyperkinetic syndrome of childhood,7,phrase,early-life,Attention deficit/hyperactivity disorder in childhood
+
 
 

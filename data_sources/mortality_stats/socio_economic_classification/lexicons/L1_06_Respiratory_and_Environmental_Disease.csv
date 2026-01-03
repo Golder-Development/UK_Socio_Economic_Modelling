@@ -4,9 +4,11 @@ pneumonia,7,token,disease,
 bronchitis,7,token,disease,
 asthma,6,token,disease,
 emphysema,7,token,disease,
+influenza,7,token,disease,Respiratory viral infection
 laryngitis,6,token,disease,Larynx inflammation
 laryngismus,6,token,disease,Laryngeal spasm
 "phthisis (not otherwise def.)",7,phrase,disease,Wasting disease/pulmonary tuberculosis
+"pulmonary tuberculosis",7,phrase,disease,Tuberculosis of the lungs
 occupational,7,token,environmental,
 industrial,7,token,environmental,
 non-occupational,-50,token,exclusion,Explicit exclusion of occupational causes
@@ -17,6 +19,7 @@ purpura,6,token,disease,Blood vessel/bleeding disorder
 "diseases of teeth & gums",6,phrase,disease,Dental diseases
 "diseases of the nasal fossae",6,phrase,disease,Nasal cavity diseases
 pellagra,6,token,disease,Niacin deficiency
+"pelagra",6,token,disease,Alternative spelling of pellagra/niacin deficiency
 beri-beri,6,token,disease,Thiamine deficiency
 atelectasis,6,token,disease,Partial lung collapse
 pleurisy,6,token,disease,Pleural inflammation
@@ -24,6 +27,8 @@ fibroid disease of lung,6,phrase,disease,Chronic fibrotic lung condition
 pulmonary oedema & congestion,7,phrase,disease,Pulmonary edema or congestion
 pulmonary oedema,7,phrase,disease,Pulmonary edema
 pulmonary congestion,6,phrase,disease,Pulmonary vascular congestion
+"hypostatic congestion of lungs",7,phrase,disease,Lung congestion from blood pooling/post-mortem effect
+"other congestion and haemorrhagic infarct of lung, etc.",7,phrase,disease,Lung congestion and infarction with bleeding
 collapse of lung,7,phrase,disease,Lung collapse/atelectasis
 gangrene of lung,8,phrase,disease,Necrosis of lung tissue
 bronchiectasis,7,token,disease,Bronchial dilation
@@ -31,7 +36,10 @@ bronchial catarrh,6,phrase,disease,Bronchial mucous membrane inflammation
 scurvy,6,token,disease,Vitamin C deficiency
 scrofula,6,token,disease,Tuberculous lymphadenitis
 acute miliary t.b,7,phrase,disease,Acute miliary tuberculosis
+"disseminated tuberculosis",7,phrase,disease,Widespread tuberculosis infection across multiple organs
 starvation,7,token,environmental,Malnutrition/lack of food
+"hunger or thirst",7,phrase,environmental,Deprivation of food or water/dehydration
+"effects of heat",7,phrase,environmental,Heat-related illness and injury
 fatty degeneration of heart,7,phrase,disease,Cardiac degeneration
 "caries, necrosis",6,phrase,disease,Bone/soft tissue decay noted in respiratory context
 caries,6,token,disease,Bone decay term
