@@ -63,14 +63,30 @@ def standardize_age_group(age_value) -> str:
     if pd.isna(age_value):
         return "Unknown"
 
-    age_str = str(age_value).strip()
+    age_str = str(age_value).strip()  # Strip whitespace
     age_str = age_str.replace("T", "")  # remove potential leading T
 
     # Handle open-ended or special labels
     if age_str in {"<1", "00", "0"}:
         return "0-4"
-    if age_str in {"85+", "80+", "90+"}:
+    
+    # NEONATAL FIX: Map neonatal deaths (2000+) to 0-4 age group
+    # These represent early infant deaths and belong in the 0-4 category
+    if age_str.lower() in {"neonatal", "neonates", "neonate"}:
+        return "0-4"
+    
+    # Handle 85+ and 90+ (truly 85 and above)
+    if age_str in {"85+", "90+"}:
         return "85+"
+    
+    # CRITICAL FIX: 80+ needs special handling
+    # In 1921-1941 source data, "80+" represents ages 80 and above
+    # Since 80-84 falls within our "75-84" harmonized bucket,
+    # we should NOT automatically map 80+ to 85+
+    # Instead, treat it as starting at age 80 and let the normal logic handle it
+    if age_str == "80+":
+        # Map based on start age 80, which falls in 75-84 range
+        return "75-84"
 
     # Extract starting age
     try:

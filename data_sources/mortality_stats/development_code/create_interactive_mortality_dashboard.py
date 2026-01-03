@@ -585,8 +585,15 @@ def create_age_group_dashboard(df):
         # Handle special cases
         if age_str == '<1' or age_str == '00' or age_str == '0':
             return "0-4"
-        if age_str in ['85+', '80+', '90+']:
+        # NEONATAL FIX: Map neonatal deaths (2000+) to 0-4 age group
+        if age_str.lower() in ['neonatal', 'neonates', 'neonate']:
+            return "0-4"
+        # CRITICAL FIX: 85+ and 90+ are truly 85+, but 80+ should map to 75-84
+        # (1921-1941 source data uses 80+ as top category, representing ages 80-84)
+        if age_str in ['85+', '90+']:
             return "85+"
+        if age_str == '80+':
+            return "75-84"
         
         # Extract starting age from range (e.g., "01-04" -> 1, "25-29" -> 25)
         try:

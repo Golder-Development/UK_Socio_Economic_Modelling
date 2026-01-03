@@ -23,8 +23,18 @@ def categorize_age(age_str):
     # Handle special cases
     if age_str == '<1' or age_str == '00' or age_str == '0':
         return "0-4"
-    if age_str in ['85+', '80+', '90+']:
+    
+    # NEONATAL FIX: Map neonatal deaths (2000+) to 0-4 age group
+    if age_str.lower() in ['neonatal', 'neonates', 'neonate']:
+        return "0-4"
+    
+    # 85+ and 90+ truly represent 85 and above
+    if age_str in ['85+', '90+']:
         return "85+"
+    # CRITICAL FIX: 80+ represents ages 80-84, which falls in 75-84 bucket
+    # (Source data from 1921-1941 uses 80+ as the top category)
+    if age_str == '80+':
+        return "75-84"
     
     # Extract starting age from range (e.g., "01-04" -> 1, "25-29" -> 25)
     try:
