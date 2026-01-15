@@ -23,7 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "data_sources" / "p
 from cabinet_post_classifier import classify_post
 
 # --- Configuration ----------------------------------------------------------
-MIN_YEAR = 1966  # Only analyze data from this year onwards
+MIN_YEAR = 1970  # Only analyze data from this year onwards
 
 # Find the most recent cabinet ministers extract
 EXTRACT_BASE_DIR = Path("data_sources/parliament/most recent extract")
@@ -159,12 +159,14 @@ def split_spells_across_parliaments(spells: pd.DataFrame, parls: pd.DataFrame) -
 
 def build_summary(seg: pd.DataFrame, parls: pd.DataFrame) -> pd.DataFrame:
     """One row per Parliament, with both raw counts and normalised measures."""
-    base = parls.copy()
+    # Filter out Parliament 48 (13-day hung parliament) and Parliament 39 (1974 Feb, 224-day snap election)
+    base = parls[(parls["parliament_number"] != 48) & (parls["parliament_number"] != 39)].copy()
     base["parliament_duration_days"] = (base["parliament_end_date"] - base["parliament_start_date"]).dt.days + 1
 
     # Distinct people who served during that Parliament
+    seg_filtered = seg[(seg["parliament_number"] != 48) & (seg["parliament_number"] != 39)]  # Exclude both anomalous parliaments
     people = (
-        seg.groupby("parliament_number")["person_id"]
+        seg_filtered.groupby("parliament_number")["person_id"]
         .nunique()
         .rename("num_secretaries_of_state")
         .reset_index()
@@ -172,7 +174,7 @@ def build_summary(seg: pd.DataFrame, parls: pd.DataFrame) -> pd.DataFrame:
 
     # Tenure distribution inside each Parliament
     tenure = (
-        seg.groupby(["parliament_number", "person_id", "post"])["segment_days"]
+        seg_filtered.groupby(["parliament_number", "person_id", "post"])["segment_days"]
         .sum()
         .reset_index()
     )
@@ -187,10 +189,20 @@ def build_summary(seg: pd.DataFrame, parls: pd.DataFrame) -> pd.DataFrame:
         .reset_index()
     )
 
+    # Get the dominant party for each parliament (most common among segments)
+    party_info = (
+        seg_filtered.groupby("parliament_number")["party"]
+        .apply(lambda x: x.mode()[0] if len(x.mode()) > 0 else "Unknown")
+        .rename("governing_party")
+        .reset_index()
+    )
+
     summary = base.merge(people, on="parliament_number", how="left")
     summary = summary.merge(tenure_stats, on="parliament_number", how="left")
+    summary = summary.merge(party_info, on="parliament_number", how="left")
 
     summary["num_secretaries_of_state"] = summary["num_secretaries_of_state"].fillna(0).astype(int)
+    summary["governing_party"] = summary["governing_party"].fillna("Unknown")
 
     # Normalised churn: distinct SoS per year of Parliament duration
     summary["appointments_per_year"] = summary["num_secretaries_of_state"] / (
@@ -201,20 +213,46 @@ def build_summary(seg: pd.DataFrame, parls: pd.DataFrame) -> pd.DataFrame:
 
 
 def create_churn_chart(summary: pd.DataFrame) -> go.Figure:
-    """Create interactive bar chart of churn by parliament."""
-    # Filter out Parliament 48 (extreme outlier)
-    plot_data = summary[summary["parliament_number"] != 48].copy()
+    """Create interactive bar chart of churn by parliament, colored by party."""
+    # Define party colors (UK politics standard)
+    party_colors = {
+        "Labour": "#E4003B",
+        "Conservative": "#0087DC",
+        "Unknown": "#999999"
+    }
     
-    x_labels = [f"Parliament {int(row['parliament_number'])} ({row['parliament_start_date'].year})" 
-                for _, row in plot_data.iterrows()]
+    # Parliament 48 already filtered in build_summary
+    plot_data = summary.copy()
+    plot_data = plot_data.sort_values("parliament_start_date").reset_index(drop=True)
+    
+    # Create labels, distinguishing multiple parliaments in same year
+    x_labels = []
+    year_counts = {}
+    for _, row in plot_data.iterrows():
+        year = row["parliament_start_date"].year
+        year_counts[year] = year_counts.get(year, 0) + 1
+    
+    year_occurrences = {}
+    for _, row in plot_data.iterrows():
+        year = row["parliament_start_date"].year
+        if year_counts[year] == 1:
+            x_labels.append(f"{year}")
+        else:
+            # Multiple parliaments in same year - add month
+            occurrence = year_occurrences.get(year, 0) + 1
+            year_occurrences[year] = occurrence
+            month = row["parliament_start_date"].strftime("%b")
+            x_labels.append(f"{year}\n({month})")
+    
     y = plot_data["appointments_per_year"]
+    colors = [party_colors.get(party, "#999999") for party in plot_data["governing_party"]]
     
     fig = go.Figure()
     
     fig.add_trace(go.Bar(
         x=x_labels,
         y=y,
-        marker=dict(color='steelblue', line=dict(color='navy', width=1)),
+        marker=dict(color=colors, line=dict(color='navy', width=1)),
         text=[f"{val:.1f}" for val in y],
         textposition='outside',
         hovertemplate='<b>%{x}</b><br>Churn Rate: %{y:.2f} appointees/year<extra></extra>'
@@ -228,29 +266,29 @@ def create_churn_chart(summary: pd.DataFrame) -> go.Figure:
             (plot_data["parliament_end_date"] >= dt)
         ]
         if not matching.empty:
-            parl_year = matching.iloc[0]["parliament_start_date"].year
-            parl_num = int(matching.iloc[0]["parliament_number"])
-            marker_label = f"Parliament {parl_num} ({parl_year})"
-            if marker_label in x_labels:
-                idx = x_labels.index(marker_label)
-                max_y = max(y) * 1.1
-                fig.add_annotation(
-                    x=idx,
-                    y=max_y * 0.95,
-                    text=label,
-                    showarrow=False,
-                    font=dict(size=10, style='italic'),
-                    bgcolor='wheat',
-                    opacity=0.8,
-                    borderpad=4
-                )
+            # Find the index of this parliament in plot_data
+            idx = plot_data.index.get_loc(matching.index[0])
+            max_y = max(y) * 1.1
+            fig.add_annotation(
+                x=idx,
+                y=max_y * 0.95,
+                text=label,
+                showarrow=False,
+                font=dict(size=10, style='italic'),
+                bgcolor='wheat',
+                opacity=0.8,
+                borderpad=4
+            )
+    
+    # Add legend for parties
+    party_legend_html = "<br><strong>Parties:</strong> <span style='color: #0087DC; font-weight: bold;'>Conservative</span> | <span style='color: #E4003B; font-weight: bold;'>Labour</span>"
     
     fig.update_layout(
         title=dict(
-            text=f"Senior Cabinet Churn by Parliament ({MIN_YEAR} onwards)<br><sub>Distinct appointees per year (normalised)</sub>",
+            text=f"Senior Cabinet Churn by Election Year ({MIN_YEAR} onwards)<br><sub>Distinct appointees per year (normalized)</sub>",
             font=dict(size=18)
         ),
-        xaxis=dict(title="Parliament Number (Year)", tickangle=45),
+        xaxis=dict(title="Election Year", tickangle=45),
         yaxis=dict(title="Appointees per year"),
         height=500,
         hovermode='x unified',
@@ -261,29 +299,59 @@ def create_churn_chart(summary: pd.DataFrame) -> go.Figure:
 
 
 def create_tenure_boxplot(seg: pd.DataFrame, parls: pd.DataFrame) -> go.Figure:
-    """Create interactive box plot of tenure distribution."""
+    """Create interactive box plot of tenure distribution, colored by party."""
+    # Define party colors
+    party_colors = {
+        "Labour": "#E4003B",
+        "Conservative": "#0087DC",
+        "Unknown": "#999999"
+    }
+    
     # Filter out Parliament 48
-    seg_filtered = seg[seg["parliament_number"] != 48].copy()
-    parls_filtered = parls[parls["parliament_number"] != 48].copy()
+    seg_filtered = seg[(seg["parliament_number"] != 48) & (seg["parliament_number"] != 39)].copy()
+    parls_filtered = parls[(parls["parliament_number"] != 48) & (parls["parliament_number"] != 39)].copy()
     
     fig = go.Figure()
     
     x_labels = []
+    year_counts = {}
+    for _, p in parls_filtered.iterrows():
+        parl_year = p["parliament_start_date"].year
+        year_counts[parl_year] = year_counts.get(parl_year, 0) + 1
+    
+    year_occurrences = {}
     for _, p in parls_filtered.iterrows():
         parl_num = int(p["parliament_number"])
         parl_year = p["parliament_start_date"].year
         
         tenures = seg_filtered[seg_filtered["parliament_number"] == parl_num]["segment_days"].values
+        party = seg_filtered[seg_filtered["parliament_number"] == parl_num]["party"].mode()
+        governing_party = party[0] if len(party) > 0 else "Unknown"
         
-        label = f"Parliament {parl_num} ({parl_year})"
+        # Create label with month for multiple parliaments in same year
+        if year_counts[parl_year] == 1:
+            label = f"{parl_year}"
+        else:
+            occurrence = year_occurrences.get(parl_year, 0) + 1
+            year_occurrences[parl_year] = occurrence
+            month = p["parliament_start_date"].strftime("%b")
+            label = f"{parl_year}\n({month})"
+        
         x_labels.append(label)
         
         if len(tenures) > 0:
             fig.add_trace(go.Box(
                 y=tenures,
                 name=label,
-                marker=dict(color='lightblue', outliercolor='red'),
-                boxmean=True,
+                marker=dict(
+                    color=party_colors.get(governing_party, "#999999"),
+                    opacity=0.7,
+                    outliercolor='red',
+                    size=8
+                ),
+                boxmean='sd',  # Show mean line with SD
+                line=dict(width=3),  # Bold box outline
+                boxpoints=False,
                 hovertemplate='<b>%{fullData.name}</b><br>Tenure: %{y} days<extra></extra>'
             ))
     
@@ -295,32 +363,29 @@ def create_tenure_boxplot(seg: pd.DataFrame, parls: pd.DataFrame) -> go.Figure:
             (parls_filtered["parliament_end_date"] >= dt)
         ]
         if not matching.empty:
-            parl_year = matching.iloc[0]["parliament_start_date"].year
-            parl_num = int(matching.iloc[0]["parliament_number"])
-            marker_label = f"Parliament {parl_num} ({parl_year})"
-            if marker_label in x_labels:
-                idx = x_labels.index(marker_label)
-                fig.add_annotation(
-                    x=idx,
-                    y=1.0,
-                    yref='paper',
-                    text=label,
-                    showarrow=False,
-                    font=dict(size=10, style='italic'),
-                    bgcolor='wheat',
-                    opacity=0.8,
-                    borderpad=4,
+            # Find the index of this parliament
+            parl_idx = parls_filtered.index.get_loc(matching.index[0])
+            fig.add_annotation(
+                x=parl_idx,
+                y=1.0,
+                yref='paper',
+                text=label,
+                showarrow=False,
+                font=dict(size=10, style='italic'),
+                bgcolor='wheat',
+                opacity=0.8,
+                borderpad=4,
                     yanchor='top'
                 )
     
     fig.update_layout(
         title=dict(
-            text=f"Senior Cabinet Tenure Distribution by Parliament ({MIN_YEAR} onwards)<br><sub>Tenure duration in days</sub>",
+            text=f"Senior Cabinet Tenure Distribution by Election Year ({MIN_YEAR} onwards)<br><sub>Tenure duration in days (solid line=median, dashed line=mean)</sub>",
             font=dict(size=18)
         ),
-        xaxis=dict(title="Parliament Number (Year)", tickangle=45),
+        xaxis=dict(title="Election Year", tickangle=45),
         yaxis=dict(title="Tenure Duration (days)"),
-        height=600,
+        height=700,
         showlegend=False,
         hovermode='x unified'
     )
@@ -412,21 +477,21 @@ def generate_html_report(summary: pd.DataFrame, seg: pd.DataFrame, parls: pd.Dat
         {stats_html}
         
         <div class="chart-container">
-            <h2>1. Cabinet Churn Rate by Parliament</h2>
-            <p>Shows the rate of turnover in senior Cabinet positions, normalized per year. Higher values indicate more frequent changes in senior posts.</p>
+            <h2>1. Cabinet Churn Rate by Election Year</h2>
+            <p>Shows the rate of turnover in senior Cabinet positions, normalized per year. Higher values indicate more frequent changes in senior posts. <strong>Colors indicate the ruling party:</strong> <span style="display: inline-block; width: 20px; height: 20px; background-color: #0087DC; vertical-align: middle; margin: 0 5px;"></span>Conservative | <span style="display: inline-block; width: 20px; height: 20px; background-color: #E4003B; vertical-align: middle; margin: 0 5px;"></span>Labour</p>
             {churn_html}
         </div>
         
         <div class="chart-container">
-            <h2>2. Tenure Duration Distribution by Parliament</h2>
-            <p>Box plots showing the distribution of how long individuals held senior Cabinet posts within each Parliament. The box shows the interquartile range (25th-75th percentile), the line shows the median, and red dots are outliers.</p>
+            <h2>2. Tenure Duration Distribution by Election Year</h2>
+            <p>Box plots showing the distribution of how long individuals held senior Cabinet posts following each general election. <strong>Solid line = median tenure, dashed line = mean tenure.</strong> The box shows the interquartile range (25th-75th percentile), and red dots are outliers. Bar colors indicate the ruling party: <span style="display: inline-block; width: 20px; height: 20px; background-color: #0087DC; vertical-align: middle; margin: 0 5px;"></span>Conservative | <span style="display: inline-block; width: 20px; height: 20px; background-color: #E4003B; vertical-align: middle; margin: 0 5px;"></span>Labour</p>
             {tenure_html}
         </div>
         
         <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 12px;">
             <p><strong>Notes:</strong></p>
             <ul>
-                <li>Parliament 48 (2010-05-06 to 2010-05-18, 12 days) excluded as an outlier from visualizations</li>
+                <li><strong>Excluded parliaments:</strong> Parliament 39 (February 1974, 224 days) and Parliament 48 (May 2010, 13 days hung parliament) are excluded from all visualizations. Both represent unusual electoral circumstances that distort year-normalized churn metrics: Parliament 39 was a snap election following a failed minority government, and Parliament 48 was a hung parliament with no functioning government.</li>
                 <li>Media era markers indicate approximate technological shifts affecting political communication</li>
                 <li>Tenure calculations are per-parliament segments; individuals may serve across multiple parliaments</li>
             </ul>

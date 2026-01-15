@@ -20,7 +20,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from cabinet_post_classifier import classify_post
 
 # --- Configuration ----------------------------------------------------------
-MIN_YEAR = 1966  # Only analyze data from this year onwards
+MIN_YEAR = 1970  # Only analyze data from this year onwards
 
 
 def create_tenure_visualization():

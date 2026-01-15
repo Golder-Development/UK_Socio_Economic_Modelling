@@ -15,7 +15,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from cabinet_post_classifier import classify_post
 
 # --- Configuration ----------------------------------------------------------
-MIN_YEAR = 1966  # Only include data from this year onwards
+MIN_YEAR = 1970  # Only include data from this year onwards
 
 
 def get_government_timeline() -> pd.DataFrame:

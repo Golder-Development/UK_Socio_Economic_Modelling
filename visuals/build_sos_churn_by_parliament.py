@@ -28,7 +28,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "data_sources" / "p
 from cabinet_post_classifier import classify_post
 
 # --- Configuration ----------------------------------------------------------
-MIN_YEAR = 1966  # Only analyze data from this year onwards
+MIN_YEAR = 1970  # Only analyze data from this year onwards
 
 
 # Find the most recent cabinet ministers extract
