@@ -1,0 +1,3 @@
+[submodule "data_sources/dashboard_demo_readonly"]
+	path = data_sources/dashboard_demo_readonly
+	url = https://github.com/Golder-Development/dashboard_demo
