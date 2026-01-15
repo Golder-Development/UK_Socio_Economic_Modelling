@@ -160,7 +160,13 @@ def split_spells_across_parliaments(spells: pd.DataFrame, parls: pd.DataFrame) -
 def build_summary(seg: pd.DataFrame, parls: pd.DataFrame) -> pd.DataFrame:
     """One row per Parliament, with both raw counts and normalised measures."""
     # Filter out Parliament 48 (13-day hung parliament) and Parliament 39 (1974 Feb, 224-day snap election)
+    # Also exclude the current parliament (most recent, still ongoing)
     base = parls[(parls["parliament_number"] != 48) & (parls["parliament_number"] != 39)].copy()
+    
+    # Exclude current parliament (has not completed)
+    today = pd.Timestamp.today().normalize()
+    base = base[base["parliament_end_date"] < today].copy()
+    
     base["parliament_duration_days"] = (base["parliament_end_date"] - base["parliament_start_date"]).dt.days + 1
 
     # Distinct people who served during that Parliament
@@ -285,7 +291,7 @@ def create_churn_chart(summary: pd.DataFrame) -> go.Figure:
     
     fig.update_layout(
         title=dict(
-            text=f"Senior Cabinet Churn by Election Year ({MIN_YEAR} onwards)<br><sub>Distinct appointees per year (normalized)</sub>",
+            text=f"Senior Cabinet Churn by Election Year - Completed Parliaments ({MIN_YEAR} onwards)<br><sub>Distinct appointees per year (normalized)</sub>",
             font=dict(size=18)
         ),
         xaxis=dict(title="Election Year", tickangle=45),
@@ -380,7 +386,7 @@ def create_tenure_boxplot(seg: pd.DataFrame, parls: pd.DataFrame) -> go.Figure:
     
     fig.update_layout(
         title=dict(
-            text=f"Senior Cabinet Tenure Distribution by Election Year ({MIN_YEAR} onwards)<br><sub>Tenure duration in days (solid line=median, dashed line=mean)</sub>",
+            text=f"Tenure Distribution by Election Year - Completed Parliaments ({MIN_YEAR} onwards)<br><sub>Days served in senior Cabinet posts</sub>",
             font=dict(size=18)
         ),
         xaxis=dict(title="Election Year", tickangle=45),
@@ -403,11 +409,11 @@ def generate_html_report(summary: pd.DataFrame, seg: pd.DataFrame, parls: pd.Dat
     # Generate statistics summary
     stats_html = f"""
     <div style="background-color: #f0f0f0; padding: 20px; margin: 20px 0; border-radius: 8px;">
-        <h2>Summary Statistics ({MIN_YEAR} onwards)</h2>
+        <h2>Summary Statistics - Completed Parliaments ({MIN_YEAR} onwards)</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
             <div>
                 <h3>Coverage</h3>
-                <p><strong>Parliaments analyzed:</strong> {len(parls[parls["parliament_number"] != 48])}</p>
+                <p><strong>Completed parliaments analyzed:</strong> {len(parls[parls["parliament_number"] != 48])}</p>
                 <p><strong>Senior posts tracked:</strong> {len(seg)}</p>
                 <p><strong>Unique individuals:</strong> {seg['person_id'].nunique()}</p>
             </div>
@@ -470,28 +476,28 @@ def generate_html_report(summary: pd.DataFrame, seg: pd.DataFrame, parls: pd.Dat
         <div class="metadata">
             <p><strong>Generated:</strong> {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
             <p><strong>Data source:</strong> UK Parliament API via cabinet_ministers.csv</p>
-            <p><strong>Analysis period:</strong> {MIN_YEAR} onwards</p>
+            <p><strong>Analysis period:</strong> {MIN_YEAR} onwards (completed parliaments only)</p>
             <p><strong>Methodology:</strong> Senior Cabinet posts identified via classification rules (Secretaries of State, PM, Chancellor, etc.) in the House of Commons</p>
         </div>
         
         {stats_html}
         
         <div class="chart-container">
-            <h2>1. Cabinet Churn Rate by Election Year</h2>
-            <p>Shows the rate of turnover in senior Cabinet positions, normalized per year. Higher values indicate more frequent changes in senior posts. <strong>Colors indicate the ruling party:</strong> <span style="display: inline-block; width: 20px; height: 20px; background-color: #0087DC; vertical-align: middle; margin: 0 5px;"></span>Conservative | <span style="display: inline-block; width: 20px; height: 20px; background-color: #E4003B; vertical-align: middle; margin: 0 5px;"></span>Labour</p>
+            <h2>1. Cabinet Churn Rate by Election Year (Completed Parliaments)</h2>
+            <p>Shows the rate of turnover in senior Cabinet positions, normalized per year for completed parliaments only. Higher values indicate more frequent changes in senior posts. <strong>Colors indicate the ruling party:</strong> <span style="display: inline-block; width: 20px; height: 20px; background-color: #0087DC; vertical-align: middle; margin: 0 5px;"></span>Conservative | <span style="display: inline-block; width: 20px; height: 20px; background-color: #E4003B; vertical-align: middle; margin: 0 5px;"></span>Labour</p>
             {churn_html}
         </div>
         
         <div class="chart-container">
-            <h2>2. Tenure Duration Distribution by Election Year</h2>
-            <p>Box plots showing the distribution of how long individuals held senior Cabinet posts following each general election. <strong>Solid line = median tenure, dashed line = mean tenure.</strong> The box shows the interquartile range (25th-75th percentile), and red dots are outliers. Bar colors indicate the ruling party: <span style="display: inline-block; width: 20px; height: 20px; background-color: #0087DC; vertical-align: middle; margin: 0 5px;"></span>Conservative | <span style="display: inline-block; width: 20px; height: 20px; background-color: #E4003B; vertical-align: middle; margin: 0 5px;"></span>Labour</p>
+            <h2>2. Tenure Duration Distribution by Election Year (Completed Parliaments)</h2>
+            <p>Box plots showing the distribution of how long individuals held senior Cabinet posts following each general election in completed parliaments. <strong>Solid line = median tenure, dashed line = mean tenure.</strong> The box shows the interquartile range (25th-75th percentile), and red dots are outliers. Bar colors indicate the ruling party: <span style="display: inline-block; width: 20px; height: 20px; background-color: #0087DC; vertical-align: middle; margin: 0 5px;"></span>Conservative | <span style="display: inline-block; width: 20px; height: 20px; background-color: #E4003B; vertical-align: middle; margin: 0 5px;"></span>Labour</p>
             {tenure_html}
         </div>
         
         <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 12px;">
             <p><strong>Notes:</strong></p>
             <ul>
-                <li><strong>Excluded parliaments:</strong> Parliament 39 (February 1974, 224 days) and Parliament 48 (May 2010, 13 days hung parliament) are excluded from all visualizations. Both represent unusual electoral circumstances that distort year-normalized churn metrics: Parliament 39 was a snap election following a failed minority government, and Parliament 48 was a hung parliament with no functioning government.</li>
+                <li><strong>Excluded parliaments:</strong> Parliament 39 (February 1974, 224 days), Parliament 48 (May 2010, 13 days hung parliament), and the current parliament (2024 onwards, still in session). The first two represent unusual electoral circumstances that distort year-normalized churn metrics. The current parliament is excluded because it has not completed its full term, making comparative analysis inappropriate.</li>
                 <li>Media era markers indicate approximate technological shifts affecting political communication</li>
                 <li>Tenure calculations are per-parliament segments; individuals may serve across multiple parliaments</li>
             </ul>
