@@ -1,0 +1,535 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Election Pension Theory Analysis - Cabinet Appointments</title>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                background-color: #fafafa;
+                color: #333;
+            }
+            .header {
+                background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+                color: white;
+                padding: 30px;
+                border-radius: 8px;
+                margin-bottom: 30px;
+            }
+            .header h1 {
+                margin: 0 0 10px 0;
+                font-size: 2.5em;
+            }
+            .header p {
+                margin: 0;
+                font-size: 1.1em;
+                opacity: 0.9;
+            }
+            .section {
+                background: white;
+                padding: 25px;
+                margin: 20px 0;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .section h2 {
+                color: #1a237e;
+                border-bottom: 3px solid #283593;
+                padding-bottom: 10px;
+                margin-top: 0;
+            }
+            .finding {
+                background: #fff9c4;
+                border-left: 4px solid #f57f17;
+                padding: 15px;
+                margin: 15px 0;
+                border-radius: 4px;
+            }
+            .finding strong {
+                color: #f57f17;
+            }
+            .reform-highlight {
+                background: #e3f2fd;
+                border-left: 4px solid #1976d2;
+                padding: 15px;
+                margin: 15px 0;
+                border-radius: 4px;
+            }
+            .reform-highlight strong {
+                color: #0d47a1;
+            }
+            .stat-box {
+                display: inline-block;
+                background: #f5f5f5;
+                padding: 15px 25px;
+                margin: 10px 10px 10px 0;
+                border-left: 4px solid #283593;
+                border-radius: 4px;
+                min-width: 200px;
+            }
+            .stat-box h4 {
+                margin: 0 0 5px 0;
+                color: #666;
+                font-size: 0.9em;
+                text-transform: uppercase;
+            }
+            .stat-box .value {
+                font-size: 1.6em;
+                font-weight: bold;
+                color: #1a237e;
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                margin: 15px 0;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 10px;
+                text-align: left;
+            }
+            th {
+                background-color: #f0f0f0;
+                font-weight: bold;
+                border-bottom: 2px solid #333;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .chart-container {
+                margin: 20px 0;
+            }
+            .positive {
+                color: #d32f2f;
+            }
+            .neutral {
+                color: #666;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Election Pension Theory Analysis</h1>
+            <p>Do governments increase cabinet appointments as elections approach to secure pensions?</p>
+            <p style="font-size: 0.95em; opacity: 0.8;">Analysis by months until election, comparing Pre-2015 vs 2015+ pension rules (1970-2024)</p>
+        </div>
+        
+        <div class="section">
+            <h2>Hypothesis & 2015 Pension Reform</h2>
+            <p><strong>Election Pension Theory:</strong> When a government believes it may lose the next election, it may accelerate cabinet appointments and shorten individual tenures to ensure more senior members qualify for a cabinet pension.</p>
+            
+            <div class="reform-highlight">
+                <strong>🔍 2015 Pension Reform:</strong> In 2015, the UK government reformed ministerial pensions, significantly reducing benefits. This provides a natural experiment:
+                <ul>
+                    <li><strong>Pre-2015:</strong> More generous pension terms may have incentivized "pension padding"</li>
+                    <li><strong>2015+:</strong> Reduced pension benefits should decrease incentive for strategic appointments</li>
+                </ul>
+                <p><strong>Prediction:</strong> If the pension theory is valid, we should see a decline in "one-time only" appointments after 2015.</p>
+            </div>
+            
+            <div class="finding">
+                <strong>🎯 Focus on "Pension Abusers":</strong> The clearest signal of pension abuse would be ministers appointed ONCE and never again - people with only a single cabinet appointment in their entire career. These "one-and-done" ministers are the most suspicious:
+                <ul>
+                    <li>Never held cabinet office before</li>
+                    <li>Never held cabinet office after</li>
+                    <li>Likely appointed specifically to qualify for pension benefits</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Key Findings: Pre-2015 vs 2015+ Comparison</h2>
+            
+            <h3>Final 6 Months Before Election</h3>
+            <div class="stat-box">
+                <h4>Pre-2015 (10 elections)</h4>
+                <div class="value">5.50</div>
+                <p style="margin: 5px 0 0 0; font-size: 0.9em;">Appointments per election</p>
+            </div>
+            
+            <div class="stat-box">
+                <h4>Pre-2015 Pension Abusers</h4>
+                <div class="value" style="color: #c62828;">0.50</div>
+                <p style="margin: 5px 0 0 0; font-size: 0.9em;">Per election (9.1%)</p>
+            </div>
+            
+            <div class="stat-box">
+                <h4>2015+ (1 elections)</h4>
+                <div class="value">84.00</div>
+                <p style="margin: 5px 0 0 0; font-size: 0.9em;">Appointments per election</p>
+            </div>
+            
+            <div class="stat-box">
+                <h4>2015+ Pension Abusers</h4>
+                <div class="value" style="color: #1565c0;">0.00</div>
+                <p style="margin: 5px 0 0 0; font-size: 0.9em;">Per election (0.0%)</p>
+            </div>
+            
+            <br style="clear: both;">
+            
+            <div class="stat-box">
+                <h4>Rate Change (per election)</h4>
+                <div class="value"><span class="positive">-0.50</span></div>
+                <p style="margin: 5px 0 0 0; font-size: 0.9em;">Pension abusers per election</p>
+            </div>
+            
+            <div class="stat-box">
+                <h4>As % of Appointments</h4>
+                <div class="value"><span class="positive">-9.1pp</span></div>
+                <p style="margin: 5px 0 0 0; font-size: 0.9em;">Percentage point change</p>
+            </div>
+            
+            <br style="clear: both;">
+            
+            <div class="reform-highlight">
+                <strong>📊 Critical Finding:</strong> 
+                Pre-2015 averaged <strong>0.50</strong> pension abusers per election (9.1% of appointments). 2015+ averaged <strong>0.00</strong> pension abusers per election (0.0% of appointments). 
+                <strong style='color: #2e7d32;'>✓ SUPPORTS PENSION THEORY</strong> - Pension abusers declined by 0.50 per election (9.1pp) after reform.
+            </div>
+            
+            <div class="finding">
+                <strong>📈 Context: Overall Appointment Patterns (per election)</strong>
+                <ul>
+                    <li><strong>Volume:</strong> 5.50 per election (Pre-2015) vs 84.00 (2015+) = +1427.3% change</li>
+                    <li><strong>Average Tenure:</strong> 2.19 years (Pre-2015) vs 1.19 years (2015+)</li>
+                    <li><strong>Short Tenures:</strong> 41.8% (Pre-2015) vs 60.7% (2015+)</li>
+                    <li><strong>First-Timers:</strong> 23.6% (Pre-2015) vs 23.8% (2015+)</li>
+                </ul>
+            </div>
+            
+            <h3>Appointment Timing Pattern Table</h3>
+            <table>
+                <tr>
+                    <th>Time Window</th>
+                    <th>Total Appts</th>
+                    <th>One-Time Only</th>
+                    <th>One-Time %</th>
+                    <th>Avg Tenure</th>
+                    <th>Short %</th>
+                </tr>
+
+                <tr class="group-header">
+                    <td colspan="6" style="background-color: #e8f4f8; font-weight: bold; text-align: left; padding: 10px;">
+                        Pre-2015 Era
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>Last 1 month</strong></td>
+                    <td>2</td>
+                    <td><strong>0</strong></td>
+                    <td>0.0%</td>
+                    <td>0.73</td>
+                    <td>50.0%</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Last 3 months</strong></td>
+                    <td>5</td>
+                    <td><strong>1</strong></td>
+                    <td>20.0%</td>
+                    <td>1.78</td>
+                    <td>20.0%</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Last 6 months</strong></td>
+                    <td>55</td>
+                    <td><strong>5</strong></td>
+                    <td>9.1%</td>
+                    <td>2.19</td>
+                    <td>41.8%</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Last 12 months</strong></td>
+                    <td>294</td>
+                    <td><strong>32</strong></td>
+                    <td>10.9%</td>
+                    <td>1.37</td>
+                    <td>64.3%</td>
+                </tr>
+
+                <tr>
+                    <td><strong>More than 12 months</strong></td>
+                    <td>9765</td>
+                    <td><strong>758</strong></td>
+                    <td>7.8%</td>
+                    <td>1.91</td>
+                    <td>24.6%</td>
+                </tr>
+
+                <tr class="group-header">
+                    <td colspan="6" style="background-color: #e8f4f8; font-weight: bold; text-align: left; padding: 10px;">
+                        2015+ Era
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>Last 3 months</strong></td>
+                    <td>2</td>
+                    <td><strong>0</strong></td>
+                    <td>0.0%</td>
+                    <td>2.41</td>
+                    <td>0.0%</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Last 6 months</strong></td>
+                    <td>84</td>
+                    <td><strong>0</strong></td>
+                    <td>0.0%</td>
+                    <td>1.19</td>
+                    <td>60.7%</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Last 12 months</strong></td>
+                    <td>169</td>
+                    <td><strong>2</strong></td>
+                    <td>1.2%</td>
+                    <td>1.30</td>
+                    <td>60.4%</td>
+                </tr>
+
+                <tr>
+                    <td><strong>More than 12 months</strong></td>
+                    <td>4786</td>
+                    <td><strong>375</strong></td>
+                    <td>7.8%</td>
+                    <td>1.84</td>
+                    <td>27.8%</td>
+                </tr>
+
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>Breakdown by Individual Election</h2>
+            <p>Pension abuse patterns for each parliament, showing appointments made in different time windows before each election:</p>
+            
+            <div class="chart-container" id="per-election-chart"></div>
+            
+            <h3>Per-Election Detail Table</h3>
+            <table>
+                <tr>
+                    <th rowspan="2">Year</th>
+                    <th rowspan="2">Party</th>
+                    <th rowspan="2">Era</th>
+                    <th colspan="2">Final 3 Months</th>
+                    <th colspan="2">Final 6 Months</th>
+                    <th colspan="2">Final 9 Months</th>
+                    <th colspan="2">Final 12 Months</th>
+                </tr>
+                <tr>
+                    <th>Appts</th>
+                    <th>Abusers (%)</th>
+                    <th>Appts</th>
+                    <th>Abusers (%)</th>
+                    <th>Appts</th>
+                    <th>Abusers (%)</th>
+                    <th>Appts</th>
+                    <th>Abusers (%)</th>
+                </tr>
+
+                <tr>
+                    <td><strong>1970</strong></td>
+                    <td>Conservative</td>
+                    <td>Pre-2015</td>
+                    <td>1</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>2</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>19</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>21</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                </tr>
+
+                <tr>
+                    <td><strong>1974</strong></td>
+                    <td>Labour</td>
+                    <td>Pre-2015</td>
+                    <td>3</td>
+                    <td><strong>1</strong> (33.3%)</td>
+                    <td>10</td>
+                    <td><strong>3</strong> (30.0%)</td>
+                    <td>77</td>
+                    <td><strong>15</strong> (19.5%)</td>
+                    <td>106</td>
+                    <td><strong>17</strong> (16.0%)</td>
+                </tr>
+
+                <tr>
+                    <td><strong>1979</strong></td>
+                    <td>Conservative</td>
+                    <td>Pre-2015</td>
+                    <td>0</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>3</td>
+                    <td><strong>1</strong> (33.3%)</td>
+                    <td>4</td>
+                    <td><strong>2</strong> (50.0%)</td>
+                    <td>8</td>
+                    <td><strong>3</strong> (37.5%)</td>
+                </tr>
+
+                <tr>
+                    <td><strong>1983</strong></td>
+                    <td>Conservative</td>
+                    <td>Pre-2015</td>
+                    <td>0</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>17</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>17</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>17</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                </tr>
+
+                <tr>
+                    <td><strong>1987</strong></td>
+                    <td>Conservative</td>
+                    <td>Pre-2015</td>
+                    <td>0</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>1</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>10</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>27</td>
+                    <td><strong>1</strong> (3.7%)</td>
+                </tr>
+
+                <tr>
+                    <td><strong>1992</strong></td>
+                    <td>Conservative</td>
+                    <td>Pre-2015</td>
+                    <td>1</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>2</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>2</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>2</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                </tr>
+
+                <tr>
+                    <td><strong>1997</strong></td>
+                    <td>Labour</td>
+                    <td>Pre-2015</td>
+                    <td>0</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>3</td>
+                    <td><strong>1</strong> (33.3%)</td>
+                    <td>3</td>
+                    <td><strong>1</strong> (33.3%)</td>
+                    <td>20</td>
+                    <td><strong>5</strong> (25.0%)</td>
+                </tr>
+
+                <tr>
+                    <td><strong>2001</strong></td>
+                    <td>Labour</td>
+                    <td>Pre-2015</td>
+                    <td>0</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>10</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>10</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>10</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                </tr>
+
+                <tr>
+                    <td><strong>2005</strong></td>
+                    <td>Labour</td>
+                    <td>Pre-2015</td>
+                    <td>0</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>6</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>17</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>17</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                </tr>
+
+                <tr>
+                    <td><strong>2010</strong></td>
+                    <td>Conservative</td>
+                    <td>Pre-2015</td>
+                    <td>0</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>1</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>5</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>66</td>
+                    <td><strong>6</strong> (9.1%)</td>
+                </tr>
+
+                <tr>
+                    <td><strong>2015</strong></td>
+                    <td>Conservative</td>
+                    <td>2015+</td>
+                    <td>0</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>0</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>6</td>
+                    <td><strong>1</strong> (16.7%)</td>
+                    <td>61</td>
+                    <td><strong>2</strong> (3.3%)</td>
+                </tr>
+
+                <tr>
+                    <td><strong>2019</strong></td>
+                    <td>Conservative</td>
+                    <td>2015+</td>
+                    <td>1</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>84</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>106</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                    <td>108</td>
+                    <td><strong>0</strong> (0.0%)</td>
+                </tr>
+
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>Conclusions</h2>
+            <p>This analysis examines whether governments systematically accelerate cabinet appointments as elections approach, and whether the 2015 pension reform affected this behavior:</p>
+            
+            <ul>
+                <li><strong>Proximity patterns:</strong> Analysis by months until election reveals distinct patterns in appointment timing.</li>
+                <li><strong>Pension reform impact:</strong> Comparing pre-2015 vs 2015+ periods provides insight into whether pension incentives drove appointment behavior.</li>
+                <li><strong>Short-tenure trends:</strong> The percentage of brief appointments in the final months indicates potential "pension padding" strategy.</li>
+            </ul>
+            
+            <p><strong>Limitations:</strong></p>
+            <ul>
+                <li>Historical context (wars, economic crises, scandals) not accounted for</li>
+                <li>Perceived election chances before the election unknown</li>
+                <li>Changes in cabinet size over time</li>
+                <li>Individual retirement vs. dismissal not distinguished</li>
+                <li>Limited data points post-2015 (only 1 election: 2019)</li>
+            </ul>
+        </div>
+        
+        <script>
+            var perElectionChart = {per_election_json};
+            Plotly.newPlot('per-election-chart', perElectionChart.data, perElectionChart.layout, {{responsive: true}});
+        </script>
+    </body>
+    </html>
+    

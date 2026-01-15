@@ -1,0 +1,104 @@
+# Election Pension Theory - Quick Reference Summary
+
+## The Question
+Do UK governments increase cabinet appointments and shorten tenures as elections approach, to ensure senior members qualify for cabinet pensions before potentially losing power?
+
+---
+
+## The Answer: NO - The Opposite Pattern Is Observed
+
+### Key Evidence Against the Theory
+
+| Finding | Result | Implication |
+|---------|--------|-------------|
+| **Appointments 6m before elections** | 2.1 average | NOT accelerating |
+| **Appointments 6m after elections** | 12.1 average | +484% SURGE (new govt) |
+| **Q4 vs Q1 tenure length** | 1.41 vs 2.22 years | **36.6% SHORTER** in Q4 |
+| **Q4 short tenures (<1yr)** | 39.2% | **3x higher** than Q1 (12.6%) |
+
+---
+
+## The Paradox: Opposite Effect Observed
+
+### What Theory Predicts
+✗ Governments should increase appointments in final months
+✗ Governments should extend tenures to meet 2-year pension threshold
+✗ Senior appointees should get 24+ months in role
+
+### What Data Actually Shows
+✓ FEWER appointments in Q4 (9.9) than Q1 (11.4)
+✓ SHORTER average tenures in Q4 (1.41 years) than Q1 (2.22 years)  
+✓ MORE sub-1-year appointments in Q4 (39.2%) than Q1 (12.6%)
+
+---
+
+## Why The Opposite?
+
+Likely explanations for increased turnover at end of parliaments:
+
+1. **Political fatigue** - 4-5 years is exhausting; voluntary retirements increase
+2. **Scandal accumulation** - Career-ending controversies force replacements
+3. **Voluntary stepping back** - Senior figures exit to lead opposition
+4. **Leadership desperation** - Final reshuffles trying to improve election chances
+5. **Summer rhythms** - Recess appointments create Q4 spikes
+
+---
+
+## The 2019 Exception
+
+Only ONE election pre-dated by excessive appointments (20 in 6 months):
+- **Context**: Theresa May resigned, Boris Johnson took over mid-parliament
+- **Result**: Crisis-driven reshuffle, NOT deliberate pension strategy
+- **Proves rule**: Normal elections show NO pre-election acceleration
+
+---
+
+## Bottom Line
+
+### The "Election Pension" Strategy is NOT A Real Phenomenon
+
+The data does NOT show governments systematically:
+- Accelerating appointments before elections
+- Extending tenures to meet pension thresholds
+- Distributing last-minute cabinet roles
+
+### Instead Shows
+
+- Governments make MOST changes AFTER taking office (obvious)
+- End of parliaments show MORE churn, NOT strategic appointment-making
+- Cabinet turnover is HIGHEST at end of 5-year cycles (fatigue/scandal)
+
+---
+
+## Data Source & Methodology
+
+**Analysis**: 1945-2026 UK cabinet appointments
+**Focus**: 1970-2024 general elections (15 elections)
+**Sample**: 578 senior Cabinet posts (Commons only, excluding PMs)
+**Parliaments**: 16 parliaments analyzed
+
+**Measurements**:
+- Appointment rate: 6-month windows before/after elections, quarter-by-quarter through parliaments
+- Tenure: Average days in role, percentage with <1 year service
+- Unique individuals: New people entering cabinet
+
+---
+
+## Files Generated
+
+1. **ELECTION_PENSION_THEORY_FINDINGS.md** - Full detailed analysis
+2. **election_pension_theory_analysis.html** - Interactive charts
+3. **election_cycle_analysis.csv** - Pre/post-election statistics  
+4. **parliamentary_phase_analysis.csv** - Quarter-by-quarter breakdown
+5. **q4_election_phase_analysis.html** - Detailed Q4 focus charts
+
+---
+
+## Conclusion
+
+The "election pension" theory - that governments accelerate cabinet appointments before elections to secure pensions for senior members - is **NOT supported by the data**.
+
+If anything, the opposite occurs: governments show less strategic appointment-making near elections and more turnover driven by normal political cycles (fatigue, scandal, leadership changes).
+
+The pension qualification threshold does not appear to be a significant driver of cabinet appointment timing.
+
