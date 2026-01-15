@@ -1,14 +1,11 @@
 """
-Build a one-row-per-Parliament summary table of Secretary of State churn,
-using cabinet_ministers.csv (unfiltered) as input.
+Build a whisker/box plot showing the spread of Secretary of State tenure periods
+across parliaments, with outliers displayed.
 
 Outputs:
-- data/parliamentary_churn_summary.csv
-- outputs/sos_churn_bar.png
+- data/sos_tenure_boxplot.jpg
 
-Assumptions:
-- "Secretary of State" is identified by substring match in the 'post' field.
-- Parliament start/end dates are fetched from Parliament's "parliament periods" endpoint.
+Uses the same cabinet_ministers data and filtering as build_sos_churn_by_parliament.py
 """
 
 from __future__ import annotations
@@ -34,10 +31,8 @@ MIN_YEAR = 1966  # Only analyze data from this year onwards
 # Find the most recent cabinet ministers extract
 EXTRACT_BASE_DIR = Path("data_sources/parliament/most recent extract")
 if EXTRACT_BASE_DIR.exists():
-    # Use symlinked most recent extract folder if it exists
     INPUT_CSV = EXTRACT_BASE_DIR / "cabinet_ministers.csv"
 else:
-    # Fallback to timestamped extract (adjust timestamp as needed)
     INPUT_CSV = Path("data_sources/parliament/extract_20260115_125959/cabinet_ministers.csv")
 
 OUTPUT_DIR = Path("data_sources/parliament/most recent output")
@@ -46,25 +41,13 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 PARLIAMENT_PERIODS_URL = "https://electionresults.parliament.uk/parliament-periods"
 
-MEDIA_MARKERS: List[Tuple[str, str]] = [
-    ("1978-01-01", "Radio"),
-    ("1989-01-01", "TV (Commons)"),
-    ("2000-06-07", "Rolling news"),
-    ("2010-05-18", "Clip/social"),
-]
-
 
 def load_cabinet_ministers(path: Path) -> pd.DataFrame:
     df = pd.read_csv(path)
     df["start_date"] = pd.to_datetime(df["start_date"])
     df["end_date"] = pd.to_datetime(df["end_date"], errors="coerce")
-
-    # If end_date missing (currently serving), treat as "today" for calculations
     df["end_date"] = df["end_date"].fillna(pd.Timestamp.today().normalize())
-
-    # Useful derived column for distinct person label
     df["person_name"] = (df["given_name"].fillna("") + " " + df["family_name"].fillna("")).str.strip()
-
     return df
 
 
@@ -86,25 +69,16 @@ def filter_secretaries_of_state(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def fetch_parliament_periods() -> pd.DataFrame:
-    """
-    Fetch and parse Parliament periods (numbered parliaments with start/end dates).
-    Caches locally to avoid repeated API calls.
-
-    The endpoint returns HTML with recent parliaments only. We supplement with 
-    historical parliament data from 1945-2010.
-    """
-    # Check if cached data exists
+    """Fetch and cache parliament periods."""
     if PARLIAMENTS_CACHE.exists():
         print(f"Loading cached parliament periods from: {PARLIAMENTS_CACHE}")
         with open(PARLIAMENTS_CACHE, "r") as f:
             data = json.load(f)
         parls = pd.DataFrame(data)
-        # Re-convert date columns
         parls["parliament_start_date"] = pd.to_datetime(parls["parliament_start_date"])
         parls["parliament_end_date"] = pd.to_datetime(parls["parliament_end_date"])
         return parls
 
-    # Fetch from API if not cached (only gets recent parliaments)
     print("Fetching parliament periods from API...")
     resp = requests.get(PARLIAMENT_PERIODS_URL, timeout=30)
     resp.raise_for_status()
@@ -113,14 +87,9 @@ def fetch_parliament_periods() -> pd.DataFrame:
     if not tables:
         raise RuntimeError("No tables found on parliament periods page.")
 
-    # The first table on that page is the periods list.
     parls = tables[0].copy()
-
-    # Expected columns include something like: parliament_period, summoned_on, dissolved_on
-    # Normalise names:
     parls.columns = [str(c).strip().lower().replace(" ", "_") for c in parls.columns]
 
-    # Identify likely columns
     if "parliament_period" in parls.columns:
         period_col = "parliament_period"
     elif "period" in parls.columns:
@@ -146,12 +115,9 @@ def fetch_parliament_periods() -> pd.DataFrame:
         raise RuntimeError(f"Could not find date columns in parliament periods table. Columns: {parls.columns.tolist()}")
 
     parls["parliament_start_date"] = pd.to_datetime(parls[start_col])
-    # Some entries have '-' for current Parliament end date
     parls["parliament_end_date"] = pd.to_datetime(parls[end_col], errors="coerce")
     parls["parliament_end_date"] = parls["parliament_end_date"].fillna(pd.Timestamp.today().normalize())
 
-    # Extract an integer parliament number if possible
-    # period_col might be "59th Parliament" or similar
     if period_col:
         parls["parliament_number"] = (
             parls[period_col].astype(str).str.extract(r"(\d+)", expand=False).astype(float).astype("Int64")
@@ -162,8 +128,7 @@ def fetch_parliament_periods() -> pd.DataFrame:
     keep = ["parliament_number", "parliament_start_date", "parliament_end_date"]
     parls = parls[keep].sort_values("parliament_start_date").reset_index(drop=True)
 
-    # Add historical parliaments (1945-2010) from known UK election dates
-    # Parliament numbers: 31-54 (1945-2010)
+    # Add historical parliaments (1945-2010)
     historical_data = [
         (31, "1945-07-05", "1950-02-23"),
         (32, "1950-02-23", "1951-10-25"),
@@ -182,7 +147,7 @@ def fetch_parliament_periods() -> pd.DataFrame:
         (45, "1997-04-17", "2001-06-07"),
         (46, "2001-06-07", "2005-05-05"),
         (47, "2005-05-05", "2010-05-06"),
-        (48, "2010-05-06", "2010-05-18"),  # Brief parliament before May 2010 parliament 55
+        (48, "2010-05-06", "2010-05-18"),
     ]
 
     hist_df = pd.DataFrame(historical_data, columns=["parliament_number", "parliament_start_date", "parliament_end_date"])
@@ -190,32 +155,17 @@ def fetch_parliament_periods() -> pd.DataFrame:
     hist_df["parliament_end_date"] = pd.to_datetime(hist_df["parliament_end_date"])
     hist_df["parliament_number"] = hist_df["parliament_number"].astype("Int64")
 
-    # Combine historical and recent data
     parls = pd.concat([hist_df, parls], ignore_index=True)
     parls = parls.sort_values("parliament_start_date").reset_index(drop=True)
-
-    parls["parliament_duration_days"] = (
-        parls["parliament_end_date"] - parls["parliament_start_date"]
-    ).dt.days + 1
-
-    # Cache to JSON
-    print(f"Caching parliament periods to: {PARLIAMENTS_CACHE}")
-    parls_json = parls.copy()
-    parls_json["parliament_start_date"] = parls_json["parliament_start_date"].astype(str)
-    parls_json["parliament_end_date"] = parls_json["parliament_end_date"].astype(str)
-    parls_json.to_json(PARLIAMENTS_CACHE, orient="records", indent=2)
 
     return parls
 
 
 def split_spells_across_parliaments(spells: pd.DataFrame, parls: pd.DataFrame) -> pd.DataFrame:
-    """
-    For each SoS spell, create per-Parliament segments based on overlap.
-    """
+    """For each SoS spell, create per-Parliament segments based on overlap."""
     out_rows = []
     print(f"\nSoS spells to match: {len(spells)}")
     print(f"Parliament periods: {len(parls)}")
-    print(f"Parliament date range: {parls['parliament_start_date'].min()} to {parls['parliament_end_date'].max()}")
 
     for _, r in spells.iterrows():
         rs = r["start_date"]
@@ -247,124 +197,69 @@ def split_spells_across_parliaments(spells: pd.DataFrame, parls: pd.DataFrame) -
     return result
 
 
-def build_summary(seg: pd.DataFrame, parls: pd.DataFrame) -> pd.DataFrame:
-    """
-    One row per Parliament, with both raw counts and normalised measures.
-    """
-    base = parls.copy()
-
-    # Distinct people who served as SoS during that Parliament
-    people = (
-        seg.groupby("parliament_number")["person_id"]
-        .nunique()
-        .rename("num_secretaries_of_state")
-        .reset_index()
-    )
-
-    # Departments count (approx: use 'post' text as a proxy for department name)
-    # If your data has a department field in future, swap it in here.
-    departments = (
-        seg.assign(department_guess=seg["post"].astype(str))
-        .groupby("parliament_number")["department_guess"]
-        .nunique()
-        .rename("num_departments")
-        .reset_index()
-    )
-
-    # Tenure distribution inside each Parliament (per person/post segments summed)
-    tenure = (
-        seg.groupby(["parliament_number", "person_id", "post"])["segment_days"]
-        .sum()
-        .reset_index()
-    )
-
-    tenure_stats = (
-        tenure.groupby("parliament_number")["segment_days"]
-        .agg(
-            median_tenure_days="median",
-            min_tenure_days="min",
-            max_tenure_days="max",
-        )
-        .reset_index()
-    )
-
-    summary = base.merge(people, on="parliament_number", how="left")
-    summary = summary.merge(departments, on="parliament_number", how="left")
-    summary = summary.merge(tenure_stats, on="parliament_number", how="left")
-
-    summary["num_secretaries_of_state"] = summary["num_secretaries_of_state"].fillna(0).astype(int)
-    summary["num_departments"] = summary["num_departments"].fillna(0).astype(int)
-
-    # Normalised churn: distinct SoS per year of Parliament duration
-    summary["appointments_per_year"] = summary["num_secretaries_of_state"] / (
-        summary["parliament_duration_days"] / 365.25
-    )
-
-    def media_era(dt: pd.Timestamp) -> str:
-        y = dt.year
-        if y < 1978:
-            return "pre_radio"
-        if y < 1989:
-            return "radio"
-        if y < 2000:
-            return "tv"
-        if y < 2010:
-            return "rolling_news"
-        return "social_clip"
-
-    summary["media_era_flag"] = summary["parliament_start_date"].apply(media_era)
-
-    return summary.sort_values("parliament_start_date").reset_index(drop=True)
-
-
-def plot_bar(summary: pd.DataFrame) -> Path:
-    # Filter out Parliament 48 (extreme outlier from very short duration)
-    # and use categorical x-axis for better visibility
-    plot_data = summary[summary["parliament_number"] != 48].copy()
+def plot_tenure_boxplot(seg: pd.DataFrame, parls: pd.DataFrame) -> Path:
+    """Create a box plot showing tenure distribution per parliament."""
+    # Filter out Parliament 48 (extreme outlier)
+    seg_filtered = seg[seg["parliament_number"] != 48].copy()
+    parls_filtered = parls[parls["parliament_number"] != 48].copy()
     
-    x = plot_data["parliament_number"].astype(str)
-    y = plot_data["appointments_per_year"]
-
-    fig, ax = plt.subplots(figsize=(16, 6))
-    bars = ax.bar(x, y, width=0.7, color="steelblue", edgecolor="navy", alpha=0.7)
-
-    ax.set_title("Secretary of State churn by Parliament (distinct appointees per year)")
-    ax.set_xlabel("Parliament number")
-    ax.set_ylabel("Distinct Secretaries of State per year (normalised)")
+    # Prepare data for plotting
+    plot_data = []
+    x_labels = []
+    
+    for _, p in parls_filtered.iterrows():
+        parl_num = int(p["parliament_number"])
+        parl_year = p["parliament_start_date"].year
+        
+        # Get all tenure segments for this parliament
+        tenures = seg_filtered[seg_filtered["parliament_number"] == parl_num]["segment_days"].values
+        
+        if len(tenures) > 0:
+            plot_data.append(tenures)
+            x_labels.append(f"{parl_year}\n(P{parl_num})")
+        else:
+            # Still include parliament even if no data, for continuity
+            plot_data.append([])
+            x_labels.append(f"{parl_year}\n(P{parl_num})")
+    
+    # Create the box plot
+    fig, ax = plt.subplots(figsize=(20, 8))
+    
+    bp = ax.boxplot(
+        plot_data,
+        labels=x_labels,
+        patch_artist=True,
+        showfliers=True,  # Show outliers
+        widths=0.6
+    )
+    
+    # Customize box plot appearance
+    for patch in bp['boxes']:
+        patch.set_facecolor('lightblue')
+        patch.set_alpha(0.7)
+    
+    for whisker in bp['whiskers']:
+        whisker.set(linewidth=1.5, color='navy')
+    
+    for cap in bp['caps']:
+        cap.set(linewidth=1.5, color='navy')
+    
+    for median in bp['medians']:
+        median.set(linewidth=2.5, color='red')
+    
+    for flier in bp['fliers']:
+        flier.set(marker='o', markerfacecolor='red', markersize=5, alpha=0.6)
+    
+    ax.set_title("Secretary of State Tenure Distribution by Parliament", fontsize=16, fontweight='bold')
+    ax.set_xlabel("Parliament (Year)", fontsize=12)
+    ax.set_ylabel("Tenure Duration (days)", fontsize=12)
+    ax.grid(True, axis='y', alpha=0.3, linestyle='--')
     
     # Rotate x-axis labels for readability
-    ax.tick_params(axis="x", rotation=45)
+    plt.setp(ax.xaxis.get_majorticklabels(), rotation=45, ha='right')
     
-    # Add value labels on top of bars for clarity
-    for bar, val in zip(bars, y):
-        height = bar.get_height()
-        ax.text(bar.get_x() + bar.get_width()/2., height,
-                f'{val:.1f}', ha='center', va='bottom', fontsize=8)
-    
-    # Add media era markers
-    full_summary = summary[summary["parliament_number"] != 48]
-    max_y = ax.get_ylim()[1]
-    
-    for d_str, label in MEDIA_MARKERS:
-        dt = pd.to_datetime(d_str)
-        # Find parliaments that include this date
-        matching = full_summary[
-            (full_summary["parliament_start_date"] <= dt) & 
-            (full_summary["parliament_end_date"] >= dt)
-        ]
-        if not matching.empty:
-            parl_num = str(int(matching.iloc[0]["parliament_number"]))
-            # Find the position of this parliament in x
-            try:
-                idx = list(x).index(parl_num)
-                ax.text(idx, max_y * 0.95, label, ha='center', va='top', 
-                       fontsize=9, style='italic', bbox=dict(boxstyle='round', 
-                       facecolor='wheat', alpha=0.5))
-            except ValueError:
-                pass
-
     fig.tight_layout()
-    out = OUTPUT_DIR / "sos_churn_bar.jpg"
+    out = OUTPUT_DIR / "sos_tenure_boxplot.jpg"
     fig.savefig(out, dpi=200, format='jpg', bbox_inches='tight')
     plt.close(fig)
     return out
@@ -384,20 +279,14 @@ def main() -> None:
 
     seg = split_spells_across_parliaments(sos, parls)
 
-    summary = build_summary(seg, parls)
-    print(f"\nSummary rows: {len(summary)}")
-    print(f"Summary parliament numbers: {summary['parliament_number'].tolist()}\n")
+    out_jpg = plot_tenure_boxplot(seg, parls)
 
-    out_csv = OUTPUT_DIR / "parliamentary_churn_summary.csv"
-    summary.to_csv(out_csv, index=False)
-
-    out_jpg = plot_bar(summary)
-
-    print(f"\nWrote: {out_csv}")
-    print(f"Wrote: {out_jpg}")
-    print(f"\nRows (parliaments): {len(summary)}")
-    print("Summary data:")
-    print(summary[['parliament_number', 'parliament_start_date', 'num_secretaries_of_state', 'appointments_per_year']].to_string(index=False))
+    print(f"\nWrote: {out_jpg}")
+    print(f"\nTenure statistics:")
+    print(f"  Mean tenure: {seg['segment_days'].mean():.1f} days")
+    print(f"  Median tenure: {seg['segment_days'].median():.1f} days")
+    print(f"  Min tenure: {seg['segment_days'].min()} days")
+    print(f"  Max tenure: {seg['segment_days'].max()} days")
 
 
 if __name__ == "__main__":

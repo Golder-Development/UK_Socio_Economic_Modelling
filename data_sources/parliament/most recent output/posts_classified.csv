@@ -1,0 +1,757 @@
+Post,Count,First Year Used,Last Year Used,category,is_senior,match_rule,reason
+Parliamentary and Financial Secretary to the Admiralty,1,1950,1950,ambiguous,False,regex:\bfinancial secretary\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Civil Lord of the Admiralty,1,1957,1957,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Ministry of Labour),1,1959,1959,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Parliamentary-Under Secretary (Colonial Office) (The Colonies),1,1960,1960,ambiguous,False,default,No rule matched; review/override if needed.
+Minister (Ministry of Housing and Local Government) and for Welsh Affairs,1,1962,1962,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Foreign Office),1,1963,1963,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Board of Trade) (Shipping),1,1964,1964,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Ministry of Defence) (Air Services),1,1964,1964,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Ministry of Defence) (Army),1,1964,1964,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Commonwealth Office),1,1966,1966,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister (Foreign and Commonwealth Office) (Disarmament),1,1967,1967,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Commonwealth Relations Office),1,1967,1967,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Ministry of Social Security),1,1967,1967,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister (Ministry of Power),1,1968,1968,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Department of Economic Affairs),1,1968,1968,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister (Ministry of Housing and Local Government) (Sport),1,1969,1969,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Ministry of Defence) (Defence Administration),1,1969,1969,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister (Department of Environment) (Transport Industries),1,1970,1970,ambiguous,False,default,No rule matched; review/override if needed.
+Minister (Ministry of Housing and Local Government),1,1970,1970,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Department of Employment and Productivity),1,1970,1970,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister (Aerospace & Shipping) (Trade and Industry),1,1972,1972,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Trade & Consumer Affairs),1,1972,1972,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister (Department of Environment) (Planning & Local Government),1,1974,1974,ambiguous,False,default,No rule matched; review/override if needed.
+Minister (Department of Environment) (Sport),1,1974,1974,ambiguous,False,default,No rule matched; review/override if needed.
+Minister (Department of Health and Social Security) (Social Security),1,1976,1976,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Privy Council Office),1,1976,1976,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Trade),1,1979,1979,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Trade),1,1981,1981,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Health and Social Security) (Social Security and Disabled),1,1984,1984,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister (Department of Environment) (Environment, Countryside and Planning)",1,1986,1986,ambiguous,False,default,No rule matched; review/override if needed.
+Minister (Department of Environment) (Housing and Planning),1,1987,1987,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Department of Environment) (Planning),1,1988,1988,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Lord Advocate (Law Officers),1,1989,1989,ambiguous,False,default,No rule matched; review/override if needed.
+Minister (Department of Environment) (Housing),1,1990,1990,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Department for Transport) (Public Transport),1,1990,1990,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Environment) (Housing and Planning),1,1990,1990,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Transport) (Railways and Roads),1,1992,1992,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Education),1,1994,1994,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister (Department of Environment) (Construction),1,1995,1995,ambiguous,False,default,No rule matched; review/override if needed.
+Minister (Department of Social Security) (Disabled),1,1995,1995,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Department of National Heritage),1,1995,1995,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister (Department of Social Security) (Welfare Reform),1,1997,1997,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Competitiveness),1,1997,1997,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Environment, Transport and the Regions) (Environment)",1,1997,1997,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Environment, Transport and the Regions) (Local Government)",1,1997,1997,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department of National Heritage/Department for Culture, Media and Sport)",1,1997,1997,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Education and Employment) (School Standards),1,1998,1998,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Master of the Horse (HM Household),1,1999,1999,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Department for Education and Employment) (New Deal and for Women),1,1999,1999,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Health) (Health),1,1999,1999,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Small Business),1,1999,1999,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister (Department for Environment, Food and Rural Affairs) (Environment)",1,2001,2001,ambiguous,False,default,No rule matched; review/override if needed.
+Minister (Department for Work and Pensions) (Work),1,2001,2001,ambiguous,False,default,No rule matched; review/override if needed.
+Minister (Home Office) (Asylum & Immigration),1,2001,2001,ambiguous,False,default,No rule matched; review/override if needed.
+Minister (Home Office) (Police and Crime Reduction),1,2001,2001,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Cabinet Office) and Deputy Minister for Women,1,2001,2001,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Culture, Media and Sport) (Sport)",1,2001,2001,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Environment, Food and Rural Affairs) (Rural Affairs)",1,2001,2001,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department of Transport, Local Government and Regions) (Housing & Planning)",1,2001,2001,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department of Transport, Local Government and Regions) (Local Government)",1,2001,2001,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department of Transport, Local Government and Regions) (Transport)",1,2001,2001,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Employment Relations, Industry & the Regions)",1,2001,2001,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Energy and Construction),1,2001,2001,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Home Office) (Prisons),1,2001,2001,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Home Office) (Citizenship, Immigration and Counter-Terrorism)",1,2002,2002,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Home Office) (Criminal Justice System),1,2002,2002,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister (without Portfolio),1,2003,2003,ambiguous,False,default,No rule matched; review/override if needed.
+"Minister of State (Department for Culture, Media and Sport) (Tourism)",1,2003,2003,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Environment, Food and Rural Affairs) (Climate Change and Environment)",1,2003,2003,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Education and Skills) (Children),1,2003,2003,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Home Office) (Criminal Justice and Offender Management),1,2003,2003,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Industry and the Regions) and Deputy Minister (Women),1,2003,2003,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Middle East),1,2003,2003,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Education and Skills) (School Standards),1,2004,2004,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Home Office) (Citizenship, Immigration and Nationality)",1,2004,2004,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister (Department for Culture, Media and Sport) (Media and Tourism)",1,2005,2005,ambiguous,False,default,No rule matched; review/override if needed.
+"Minister of State (Department for Culture, Media and Sport) (Culture)",1,2005,2005,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Constitutional Affairs),1,2005,2005,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Health) (NHS Delivery),1,2005,2005,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Health) (Quality and Patient Safety),1,2005,2005,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Education and Skills) (Children, Young People and Families)",1,2005,2005,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Culture, Media and Sport) (Creative Industries & Tourism)",1,2006,2006,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Environment, Food and Rural Affairs) (Climate Change and the Environment)",1,2006,2006,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Environment, Food and Rural Affairs) (Local Environment, Marine and Animal Welfare)",1,2006,2006,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Environment, Food and Rural Affairs) (Sustainable Farming and Food)",1,2006,2006,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Communities and Local Government) (Housing and Planning),1,2006,2006,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Communities and Local Government) (Local Government and Community Cohesion),1,2006,2006,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Health) (Delivery and Quality),1,2006,2006,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Science and Innovation),1,2006,2006,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Trade and Industry) (Trade, Investment and Foreign Affairs) (also in the Foreign and Commonwealth Office)",1,2006,2006,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State  (Ministry of Defence) (Defence Equipment and Support),1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Africa, Asia and the UN)",1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Cabinet Office) (Olympics and Paymaster General),1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Enterprise and Regulatory Reform) (Competitiveness)",1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Enterprise and Regulatory Reform) (Employment Relations and Postal Affairs)",1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Enterprise and Regulatory Reform) (Energy)",1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Enterprise and Regulatory Reform) (Trade Promotion and Investment)",1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Children, Schools and Families) (Children and Youth Justice) (and Minister for the North West)",1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Culture, Media and Sport) (Culture, Creative Industries and Tourism)",1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Environment, Food and Rural Affairs) (Environment)",1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Environment, Food and Rural Affairs) (Sustainable Farming, Food and Animal Welfare)",1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Innovation, Universities and Skills) (Lifelong Learning, Further and Higher Education)",1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Communities and Local Government) (Local Government),1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Foreign and Commonwealth Office) (also in the Department of Business, Enterprise and Regulatory Reform)",1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Government Equalities Office),1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Home Office) (Borders and Immigration),1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Home Office) (Crime Reduction),1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Home Office) (Immigration and Asylum),1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Home Office) (Security, Counter-terrorism, Crime and Policing)",1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Ministry of Defence) (Defence Equipment and Support) (also Department of Business, Enterprise and Regulatory Reform)",1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Regional Affairs) (East of England),1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Regional Affairs) (North East),1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Regional Affairs) (South East),1,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Special Envoy for Forestry,1,2007,2007,ambiguous,False,default,No rule matched; review/override if needed.
+"Financial Secretary (HM Treasury) (also in the Department for Business, Innovation and Skills)",1,2008,2008,ambiguous,False,regex:\bfinancial secretary\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Enterprise and Regulatory Reform) (Trade, Investment and Consumer Affairs) (also Department for International Development)",1,2008,2008,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Environment, Food and Rural Affairs) (Sustainable Development, Climate Change Adaptation and Air Quality) (also in the Department for Energy and Climate Change)",1,2008,2008,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Innovation, Universities and Skills) (Higher Education & Intellectual Property)",1,2008,2008,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Work and Pensions) (Employment and  Welfare Reform),1,2008,2008,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Work and Pensions) (Pensions Reform) and Minister (Yorkshire and the Humber),1,2008,2008,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Home Office) (Borders and Immigration) (also in HM Treasury),1,2008,2008,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Home Office) (Policing, Crime & Security)",1,2008,2008,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister (Cabinet Office) (Also Minister for Olympics and Paymaster General),1,2009,2009,ambiguous,False,regex:\bpaymaster general\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Africa and UN),1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Cabinet Office) (Third Sector),1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Enterprise and Regulatory Reform) (UK Trade and Investment) (also Foreign and Commonwealth Office)",1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Innovation and Skills) (Further Education, Skills, Apprenticeships and Consumer Affairs)  (also Department for Children, Schools and Families)",1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Innovation and Skills) (Higher Education and Intellectual Property)",1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Innovation and Skills) (Regional Economic Development and Co-ordination); (also in the Department for Communities and Local Government)",1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Innovation and Skills) (Science and Innovation)  (also in the Ministry of Defence)",1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Innovation and Skills) (Trade, Investment and Small Business) (also in the Foreign and Commonwealth Office)",1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Children, Schools and Families) (Children, Young People and Families)",1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Children, Schools and Families) (also Department for Business, Innovation and Skills)",1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Communities and Local Government) (Local Government) (also in the Department for Business, Innovation and Skills)",1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Culture, Media and Sport) (Culture and Tourism)",1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Foreign and Commonwealth Office) (UK Trade and Investment) (also in the Department for Business, Innovation and Skills)",1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Government Equalities Office) (also in the Ministry of Justice),1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Home Office) (Crime and Policing),1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Ministry of Defence) (also in the Department for Business, Innovation and Skills)",1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Ministry of Justice) (also in Government Equalities Office),1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Regional Affairs) (East Midlands),1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Regional Affairs) (North West),1,2009,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Lords Spokesperson (Attorney General's Office),1,2010,2010,ambiguous,False,regex:\battorney general\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Lords Spokesperson (Department for Transport),1,2010,2010,ambiguous,False,default,No rule matched; review/override if needed.
+Lords Spokesperson (Home Office) (Equalities and Women's Issues),1,2010,2010,ambiguous,False,default,No rule matched; review/override if needed.
+Lords Spokesperson (Scotland Office),1,2010,2010,ambiguous,False,default,No rule matched; review/override if needed.
+Lords Spokesperson (Wales Office),1,2010,2010,ambiguous,False,default,No rule matched; review/override if needed.
+Minister for Government Policy (Cabinet Office),1,2010,2010,ambiguous,False,regex:\bminister for\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Innovation and Skills) (Further Education, Skills and Lifelong Learning) (also in the Department for Education)",1,2010,2010,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Communities and Local Government) (Decentralisation and Cities) (also in the Department for Business, Innovation and Skills)",1,2010,2010,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Education) (Children and Families),1,2010,2010,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Foreign and Commonwealth Office) (European issues and NATO),1,2010,2010,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Foreign and Commonwealth Office) (International Energy Policy),1,2010,2010,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Innovation and Skills) (Decentralisation and Cities) (also in the Department for Communities and Local Government)",1,2011,2011,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Cabinet Office) (Jointly with the Department for Education),1,2012,2012,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Education) (Jointly with the Cabinet Office),1,2012,2012,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Senior Minister of State (Department for Communities and Local Government) (Faith and Communities) (also in the Foreign and Commonwealth Office),1,2012,2012,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Senior Minister of State (Foreign and Commonwealth Office) (Jointly with the Department for Communities and Local Government),1,2012,2012,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Innovation and Skills) (Jointly with Department of Energy and Climate Change)",1,2013,2013,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department of Energy and Climate Change) (Jointly with Department for Business, Innovation and Skills)",1,2013,2013,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister for Equality,1,2014,2014,ambiguous,False,regex:\bminister for\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister for Faith,1,2014,2014,ambiguous,False,regex:\bminister for\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Cabinet Office) (Head of the Number 10 Policy Unit),1,2014,2014,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Work and Pensions) (Disabled People),1,2014,2014,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Home Office) (Security and Immigration),1,2014,2014,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State for Culture and the Digital Economy (Jointly with Department for Business, Innovation and Skills)",1,2014,2014,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State for Culture and the Digital Economy (Jointly with Department for Culture Media and Sport),1,2014,2014,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister for Equalities (Department for Education),1,2015,2015,ambiguous,False,regex:\bminister for\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Work and Pensions) (Pensions),1,2015,2015,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Work and Pensions) (Welfare Reform),1,2015,2015,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Ministry of Defence) (Defence Procurement),1,2015,2015,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Parliamentary Under Secretary for Department for Communities and Local Government (Jointly with Home Office and Department for International Development),1,2015,2015,ambiguous,False,default,No rule matched; review/override if needed.
+Parliamentary Under Secretary for Department for International Development (Jointly with Home Office and Department for Communities and Local Government),1,2015,2015,ambiguous,False,default,No rule matched; review/override if needed.
+Parliamentary Under Secretary for Home Office (Jointly with Department for Communities and Local Government and Department for International Development),1,2015,2015,ambiguous,False,default,No rule matched; review/override if needed.
+Commercial Secretary (Minister of State) (HM Treasury),1,2016,2016,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Lords Spokesperson (Department for Education) (Higher Education),1,2016,2016,ambiguous,False,default,No rule matched; review/override if needed.
+Lords Spokesperson (Home Office),1,2016,2016,ambiguous,False,default,No rule matched; review/override if needed.
+Lords Spokesperson (Ministry of Justice),1,2016,2016,ambiguous,False,default,No rule matched; review/override if needed.
+"Minister of State (Department for Communities and Local Government) (Housing, Planning and London)",1,2016,2016,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Culture, Media and Sport) (Digital Policy)",1,2016,2016,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Education) (Apprenticeships and Skills),1,2016,2016,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Home Office) (Policing and the Fire Service),1,2016,2016,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for International Trade) (and Minister for London),1,2017,2017,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister for Equalities (Department for International Development),1,2018,2018,ambiguous,False,regex:\bminister for\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Business, Energy and Industrial Strategy) (Higher Education)",1,2018,2018,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (International Trade),1,2018,2018,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Treasury) (City),1,2018,2018,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Cabinet Office) (jointly with the Ministry of Housing, Communities and Local Government)",1,2019,2019,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Energy and Industrial Strategy) (Jointly with the Department for Education)",1,2019,2019,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister for Afghan resettlement,1,2021,2021,ambiguous,False,regex:\bminister for\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Education) (Higher and Further Education),1,2021,2021,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Foreign, Commonwealth and Development Office) (jointly with Department for Levelling Up, Housing and Communities)",1,2021,2021,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister on Leave (Attorney General),1,2021,2021,ambiguous,False,regex:\battorney general\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Foreign, Commonwealth and Development Office) (Minister for Development and Africa)",1,2022,2022,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Minister for Brexit Opportunities and Government Efficiency),1,2022,2022,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Minister for Climate),1,2022,2022,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Minister for Illegal Migration),1,2023,2023,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Minister for Legal Migration and Delivery),1,2023,2023,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister on Leave (Minister of State),1,2023,2023,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Development),1,2024,2024,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Minister for Women and Equalities),1,2024,2024,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister (Department of Health),2,1960,1998,ambiguous,False,default,No rule matched; review/override if needed.
+Postmaster General (Post Office),2,1964,1968,ambiguous,False,default,No rule matched; review/override if needed.
+Treasurer of Her Majesty's Household (HM Household),2,1966,1987,ambiguous,False,default,No rule matched; review/override if needed.
+Minister (Foreign and Commonwealth Office) (Overseas Development),2,1967,1976,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Ministry of Defence) (Defence Equipment),2,1967,1968,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister (Ministry of Transport),2,1969,1970,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Department of Environment),2,1970,1974,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Ministry of Posts and Telecommunications),2,1972,1974,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister for Transport,2,1974,1975,ambiguous,False,regex:\bminister for\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Prices and Consumer Protection),2,1974,1976,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Consumer Affairs),2,1979,1982,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Solicitor-General Scotland,2,1979,1982,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Industry & Information Technology),2,1983,1984,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister (Privy Council Office) (Arts),2,1985,1990,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Department of Health and Social Security) (Health),2,1986,1988,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Energy),2,1992,2005,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Ministry of Defence) (Armed Services),2,1993,1994,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Energy and Industry),2,1994,1996,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Environment, Transport and the Regions) (The Regions)",2,1997,1999,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Scottish Office) (Education and Industry),2,1997,1998,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Advocate General for Scotland (Scotland Office),2,1999,1999,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Energy and Competitiveness in Europe),2,1999,2001,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Lord Chamberlain (HM Household),2,2000,2006,ambiguous,False,default,No rule matched; review/override if needed.
+Lords in Waiting (Whips),2,2000,2003,ambiguous,False,default,No rule matched; review/override if needed.
+"Minister of State (Department for Culture, Media and Sport) (Arts)",2,2001,2003,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Education and Skills) (Schools),2,2001,2002,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (e-Commerce & Competitiveness),2,2001,2002,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Home Office) (Policing, Security and Community Safety)",2,2003,2006,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Foreign and Commonwealth Office) (Trade) (also Department of Trade and Industry),2,2004,2005,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Education and Skills) (Schools and 14-19 Learners),2,2005,2006,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Home Office) (Immigration, Citizenship and Nationality)",2,2005,2006,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Industry and the Regions),2,2005,2006,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Work and Pensions) (Pensions Reform),2,2006,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Health) (NHS Reform),2,2006,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Enterprise and Regulatory Reform) (Business and Regulatory Reform)",2,2007,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Children, Schools and Families) (Schools and Learners)",2,2007,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Innovation, Universities and Skills) (Science and Innovation)",2,2007,2008,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Work and Pensions) (Employment and Welfare Reform),2,2007,2008,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Regional Affairs) (London),2,2007,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Regional Affairs) (South West),2,2007,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Regional Affairs) (West Midlands),2,2007,2008,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Regional Affairs) (Yorkshire and the Humber),2,2007,2008,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Environment, Food and Rural Affairs) (Farming and the Environment)",2,2008,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (HM Treasury) (also in the Home Office),2,2008,2008,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Innovation and Skills)",2,2009,2014,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Lords Spokesperson (Department for International Development),2,2010,2011,ambiguous,False,default,No rule matched; review/override if needed.
+Lords Spokesperson (Northern Ireland Office),2,2010,2012,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Department for Transport) (Rail and Aviation),2,2010,2012,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Foreign and Commonwealth Office) (South East Asia/Far East, India and Nepal, Latin America, Falklands, Australasia and Pacific, Commonwealth)",2,2010,2012,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Home Office) (Policing) (Jointly with the Ministry of Justice),2,2010,2012,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Lords Spokesperson (Department for Work and Pensions),2,2012,2013,ambiguous,False,default,No rule matched; review/override if needed.
+"Minister of State (Department for Business, Innovation and Skills) (Jointly with the Department for Education)",2,2013,2014,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Work and Pensions) (Cabinet),2,2014,2015,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State for Portsmouth,2,2014,2014,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Financial Secretary to the Treasury and Paymaster General,2,2017,2019,ambiguous,False,regex:\bfinancial secretary\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Business, Energy and Industrial Strategy) (Energy and Clean Growth)",2,2017,2021,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Digital, Culture, Media and Sport) (Digital Policy)",2,2017,2018,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister for Equalities,2,2020,2022,ambiguous,False,regex:\bminister for\b,Often Cabinet-adjacent but not consistently senior; review/override.
+COP26 President (Cabinet Office),2,2021,2022,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Cabinet Office) (Attends Cabinet),2,2022,2022,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Cabinet Office) (Minister for Veterans' Affairs),2,2022,2022,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Foreign, Commonwealth and Development Office) (Minister for Development)",2,2022,2022,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Minister for Europe),2,2022,2024,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Minister for Housing),2,2022,2023,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Lords Spokesperson (Equalities),2,2023,2024,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Department for Business and Trade) (jointly with the Cabinet Office),2,2023,2024,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Ministry of Aviation),3,1962,1965,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Ministry of Public Building and Works),3,1966,1970,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Welsh Office),3,1966,1987,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Ministry for the Arts),3,1973,1990,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Environment) (Housing),3,1983,1989,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister (Department of Environment) (Local Government),3,1990,1993,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Department for Education and Employment),3,1995,1997,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Trade and Industry) (Trade) (also Foreign and Commonwealth Office),3,2003,2005,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Advocate General for Scotland,3,2006,2015,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Department of Communities and Local Government) (Housing),3,2007,2008,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Communities and Local Government) (Housing),3,2009,2012,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Commercial Secretary (HM Treasury),3,2010,2015,ambiguous,False,default,No rule matched; review/override if needed.
+"Minister of State (Department for Business, Innovation and Skills) (Business and Enterprise)",3,2010,2015,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Innovation and Skills) (Universities and Science)",3,2010,2015,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Education) (Jointly with the Department for Business, Innovation and Skills)",3,2010,2014,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Lords Spokesperson (Women & Equalities),3,2012,2014,ambiguous,False,default,No rule matched; review/override if needed.
+Minister for Women,3,2014,2018,ambiguous,False,regex:\bminister for\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Communities and Local Government),3,2014,2017,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Energy and Industrial Strategy) (Universities and Science) (Joint with the Department for Education)",3,2016,2019,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Exiting the European Union),3,2016,2017,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for International Development) (Joint with the Foreign and Commonwealth Office),3,2017,2018,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Paymaster General,3,2020,2022,ambiguous,False,regex:\bpaymaster general\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Board of Trade),4,1957,1968,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Ministry of Overseas Development),4,1966,1977,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Ministry of Technology),4,1966,1970,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Ministry of Housing and Local Government),4,1967,1970,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister (Department of Environment) (Housing & Construction),4,1970,1979,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Civil Service Department),4,1974,1981,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister (Department of Environment) (Environment and Countryside),4,1989,1994,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Scotland Office),4,1995,2007,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Health) (Public Health),4,1997,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Education and Skills) (Lifelong Learning, Further and Higher Education)",4,2001,2005,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Work and Pensions) (Work),4,2003,2006,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Health) (Health Services),4,2003,2010,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Lords Spokesperson (Cabinet Office),4,2010,2017,ambiguous,False,default,No rule matched; review/override if needed.
+"Lords Spokesperson (Department for Culture, Media and Sport)",4,2010,2013,ambiguous,False,default,No rule matched; review/override if needed.
+"Lords Spokesperson (Department of Business, Innovation and Skills)",4,2011,2014,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Foreign and Commonwealth Office) (Trade and Investment),4,2011,2016,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Solicitor-General,5,1970,1992,ambiguous,False,default,No rule matched; review/override if needed.
+Solicitor General (Law Officers),5,1974,2005,ambiguous,False,regex:\bsolicitor general\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Health and Social Security) (Social Security),5,1979,1987,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Foreign and Commonwealth Office) (Overseas Development),5,1979,1989,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Ministry of Defence) (Minister for the Armed Forces),5,1983,2024,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Second Church Estates Commissioner,5,1987,2020,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Department of Social Security),5,1988,1999,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Environment, Transport and the Regions)",5,1997,1999,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Ministry of Justice) (jointly with Home Office),5,2010,2022,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Innovation and Skills) (Trade and Investment)",5,2011,2016,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (London),5,2018,2021,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister for Intergovernmental Relations,5,2021,2025,ambiguous,False,regex:\bminister for\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Business and Trade),5,2023,2025,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Energy Security and Net Zero),5,2023,2025,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Education and Science),6,1964,1990,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Attorney General (Law Officers),6,1974,2001,ambiguous,False,regex:\battorney general\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Home Office) (Immigration),6,2010,2022,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Culture, Media and Sport)",6,2012,2025,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Digital, Culture, Media and Sport)",6,2019,2022,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Health and Social Security),7,1957,1985,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Environment) (Local Government),7,1979,1989,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Home Office) (Security),7,2010,2025,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Paymaster General and Minister for the Cabinet Office,7,2010,2024,ambiguous,False,regex:\bpaymaster general\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Foreign and Commonwealth Office) (Joint with the Department for International Development),7,2017,2020,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Levelling Up, Housing and Communities)",7,2021,2024,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Science, Innovation and Technology)",7,2023,2025,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Scottish Office),8,1967,1999,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Energy),8,1974,1996,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Industry),8,1974,1981,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Europe),8,1997,2009,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Energy and Climate Change),8,2008,2015,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+President of the Board of Trade,9,1947,2025,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Ministry of Defence) (Procurement),9,1971,1997,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Lords in Waiting (HM Household),9,2001,2009,ambiguous,False,default,No rule matched; review/override if needed.
+Attorney General,9,2007,2022,ambiguous,False,regex:\battorney general\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Comptroller (HM Household),10,1954,1986,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Department of Employment),10,1970,1994,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for International Development),10,2003,2020,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Business, Energy and Industrial Strategy)",10,2016,2022,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for International Trade),10,2016,2022,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Housing, Communities and Local Government)",10,2018,2025,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister for Women and Equalities,11,2010,2024,ambiguous,False,regex:\bminister for\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Department for Environment, Food and Rural Affairs)",11,2010,2025,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Health),12,1982,2016,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Foreign, Commonwealth and Development Office)",12,2020,2024,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+"Minister of State (Ministry of Agriculture, Fisheries and Food)",13,1974,1999,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Cabinet Office),13,1997,2025,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Solicitor General (Attorney General's Office),13,2007,2025,ambiguous,False,regex:\battorney general\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (HM Treasury),14,1969,2020,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Foreign Secretary,15,1974,2025,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Education),15,2010,2024,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Health and Social Care),15,2018,2024,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Exchequer Secretary (HM Treasury),17,1996,2024,ambiguous,False,default,No rule matched; review/override if needed.
+Paymaster General (HM Treasury),18,1968,2019,ambiguous,False,regex:\bpaymaster general\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department of Trade and Industry),18,1970,1999,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Ministry of Justice),18,2007,2022,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Vice-Chamberlain (HM Household),20,1964,2019,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Department for Work and Pensions),26,1999,2025,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Home Secretary,27,1965,2025,ambiguous,False,default,No rule matched; review/override if needed.
+Minister of State (Ministry of Defence),28,1972,2025,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Department for Transport),29,1979,2022,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Economic Secretary (HM Treasury),34,1947,2024,ambiguous,False,regex:\beconomic secretary\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Financial Secretary (HM Treasury),36,1950,2024,ambiguous,False,regex:\bfinancial secretary\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Northern Ireland Office),39,1972,2022,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Foreign and Commonwealth Office),43,1972,2019,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Minister of State (Home Office),47,1969,2025,ambiguous,False,regex:\bminister of state\b,Often Cabinet-adjacent but not consistently senior; review/override.
+Parliamentary Secretary (Ministry of Works),1,1945,1945,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Ministry of Food),1,1950,1950,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Deputy Chief Whip,1,1952,1952,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (War Office),1,1957,1957,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Colonial Office),1,1958,1958,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary and Financial Secretary (War Office),1,1958,1958,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Department of Health),1,1962,1962,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Air Ministry),1,1962,1962,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Assistant Postmaster General (Post Office),1,1963,1963,non_senior,False,regex:\bassistant\b(?!\s*secretary of state),Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Education and Science) (Sport),1,1964,1964,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Lord Commissioner (Whip),1,1966,1966,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Ministry of Technology),1,1966,1966,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Deputy Chief Whip and Lords Commissioner,1,1967,1967,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Joint Parliamentary Secretary (Ministry of Technology),1,1967,1967,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Commonwealth Office),1,1967,1967,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Ministry of Power),1,1967,1967,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Department of Health and Social Security),1,1970,1970,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Ministry of Public Building and Works),1,1970,1970,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Ministry of Housing and Local Government) (Sport),1,1970,1970,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Treasurer of Her Majesty's Household and Deputy Chief Whip,1,1970,1970,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Agriculture and Fisheries),1,1972,1972,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Trade and Industry) (Aerospace & Shipping),1,1972,1972,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Trade and Industry) (Industrial Development),1,1972,1972,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Law Officers),1,1974,1974,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Health and Social Security) (Disablement),1,1974,1974,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Prices and Consumer Protection),1,1974,1974,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Ministry of Defence) (Air),1,1979,1979,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Privy Council Office),1,1990,1990,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Assistant Whip (Law Officers),1,1995,1995,non_senior,False,regex:\bassistant whip\b,Matches a junior/whip/non-senior pattern.
+Lords Chief Whip (HM Household),1,1997,1997,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of National Heritage) (Arts),1,1997,1997,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department of National Heritage/Department for Culture, Media and Sport)) (Sport)",1,1997,1997,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Social Security) (Women),1,1997,1997,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Northern Ireland Office) (Environment and Agriculture),1,1997,1997,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Culture, Media and Sport) (Tourism)",1,1998,1998,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Education and Employment) (Employment and Equal Opportunities),1,1998,1998,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Trade and Industry) (Science and Innovation),1,1998,1998,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of National Heritage) (Sport),1,1999,1999,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Lord in Waiting (Whip),1,2001,2001,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Home office),1,2001,2001,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Northern Ireland Office),1,2001,2001,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Culture, Media and Sport) (Women and Equalities) (Jointly with the Ministry of Justice)",1,2001,2001,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Education and Skills) (Early Years and School Standards),1,2001,2001,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Education and Skills) (Skills and Vocational Education),1,2001,2001,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Trade and Industry) (Competition, Consumers and Markets)",1,2001,2001,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Trade and Industry) (Small Business),1,2001,2001,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Home Office) (Criminal Justice System IT),1,2002,2002,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Home Office) (Minister for Prisons and Probation),1,2002,2002,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Constitutional Affairs) (Scotland),1,2003,2003,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Constitutional Affairs) (also in Wales Office),1,2003,2003,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Culture, Media and Sport) (Media and Heritage)",1,2003,2003,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Environment, Food and Rural Affairs) (Food, Farming and Sustainable Energy)",1,2003,2003,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Environment, Food and Rural Affairs) (Local Environment, Marine and Animal Welfare)",1,2003,2003,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Work and Pensions) (Sure Start, Early Years and Childcare) (also Department for Education and Science)",1,2003,2003,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Health) (Community Care),1,2003,2003,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Trade and Industry) (Employment Relations and Consumer Affairs),1,2003,2003,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Education and Skills) (Children and Families),1,2005,2005,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Education and Skills) (Skills),1,2005,2005,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Environment, Food and Rural Affairs) (Farming, Food and Sustainable Energy)",1,2005,2005,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Environment, Food and Rural Affairs) (Rural Affairs, Landscape and Biodiversity)",1,2005,2005,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Trade and Industry) (Delivery and Efficiency),1,2005,2005,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Trade and Industry) (Science and Innovation),1,2005,2005,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Trade and Industry) (Women and Equality),1,2005,2005,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Communities and Local Government) (Women and Equality),1,2006,2006,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Education and Skills) (Children, Young People and Families)",1,2006,2006,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Environment, Food and Rural Affairs) (Biodiversity, Landscape and Rural Affairs)",1,2006,2006,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Employment Relations & Postal Services),1,2006,2006,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Trade and Industry) (Energy),1,2006,2006,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Business, Enterprise and Regulatory Reform) (Trade and Consumer Affairs) (also Department for International Development)",1,2007,2007,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Culture, Media and Sport) (Sport)",1,2007,2007,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Environment, Food and Rural Affairs) (Climate Change, Biodiversity and Waste)",1,2007,2007,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Environment, Food and Rural Affairs) (Marine, Landscape and Rural Affairs)",1,2007,2007,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Innovation, Universities and Skills) (Intellectual Property and Quality)",1,2007,2007,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Innovation, Universities and Skills) (Skills)",1,2007,2007,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Work and Pensions) (also in the Department for Communities and Local Government),1,2007,2007,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Health) (Health Services),1,2007,2007,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Home Office) (Security and Counter-terrorism),1,2007,2007,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Regional Affairs) (East Midlands),1,2007,2007,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary(Department for International Development) (Trade Policy) (also Business, Enterprise and Regulatory Reform)",1,2007,2007,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Chief Whip (House of Lords),1,2008,2008,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Government Equalities office) (also in the Ministry of Justice),1,2008,2008,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Business, Enterprise and Regulatory Reform) (Communications, Technology and Broadcasting) (also Department for Culture, Media and Sport)",1,2008,2008,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Business, Enterprise and Regulatory Reform) (Economic and Business) (also HM Treasury)",1,2008,2008,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Culture, Media and Sport) (Communications, Technology, and Broadcasting) (also in the Department for Business, Enterprise and Regulatory Reform)",1,2008,2008,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Culture, Media and Sport) (Culture, Creative Industries and Tourism)",1,2008,2008,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Environment, Food and Rural Affairs) (Marine and Natural Environment)",1,2008,2008,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Innovation, Universities and Skills)",1,2008,2008,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Innovation, Universities and Skills) (Further Education)",1,2008,2008,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Innovation, Universities and Skills) (Skills & Apprenticeships)",1,2008,2008,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Energy and Climate Change),1,2008,2008,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Ministry of Defence) (Defence Equipment and Support),1,2008,2008,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Ministry of Defence) (International Defence and Security) (also in Foreign and Commonwealth Office),1,2008,2008,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Cabinet Office) (Young Citizens and Youth Engagement),1,2009,2009,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Government Equalities Office),1,2009,2009,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Defence and Security) (also in the Ministry of Defence),1,2009,2009,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Business, Innovation and Skills) (Business and Regulatory Reform)",1,2009,2009,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Business, Innovation and Skills) (Communications, Technology and Broadcasting) (also the Department for Culture, Media and Sport)",1,2009,2009,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Business, Innovation and Skills) (Digital Britain) (also HM Treasury)",1,2009,2009,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Children, Schools and Families) (14-19 Reform and Apprenticeships)",1,2009,2009,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Children, Schools and Families) (Schools)",1,2009,2009,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Communities and Local Government) (also in Department for Work and Pensions),1,2009,2009,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Culture, Media and Sport) (Communications, Technology and Broadcasting) (also in the Department for Business, Innovation and Skills)",1,2009,2009,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Culture, Media and Sport) (Creative Industries)",1,2009,2009,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Culture, Media and Sport) (Culture and Tourism)",1,2009,2009,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Environment, Food and Rural Affairs) (Rural Affairs and Environment)",1,2009,2009,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Environment, Food and Rural Affairs) (and Deputy Chief Whip)",1,2009,2009,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Europe),1,2009,2009,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Home Office) (Identity) (also Lord in Waiting),1,2009,2009,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Business, Innovation and Skills) (Culture, Communications and Creative Industries) (jointly with the Department for Culture, Media and Sport)",1,2010,2010,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Culture, Media and Sport) (Sport and the Olympics)",1,2010,2010,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Transport) (Regional and Local Transport),1,2010,2010,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Work and Pensions) (Welfare Reform),1,2010,2010,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Ministry of Justice) (Prisons and Probation),1,2010,2010,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Lords Spokesperson (HM Treasury) (Whip),1,2012,2012,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Education) (Jointly with the Department for Business, Innovation and Skills)",1,2012,2012,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Ministry of Justice) (Jointly with the Department for Culture, Media and Sport)",1,2012,2012,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Wales Office) (Jointly as a paid Lord Commissioner of HM Treasury (Whip) - House of Commons),1,2012,2012,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Cabinet Office) (Head of the Number 10 Policy Unit),1,2013,2013,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Communities and Local Government) (Local Government),1,2015,2015,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Culture, Media and Sport) (Internet Safety and Security) (Unpaid)",1,2015,2015,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Health) (NHS Productivity),1,2015,2015,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Home Office) (Countering Extremism),1,2015,2015,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Home Office) (Internet Safety and Security) (Unpaid),1,2015,2015,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Government Whip,1,2019,2019,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Environment, Food and Rural Affairs) (jointly with the Department for International Development)",1,2019,2019,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Scotland Office) (jointly with the Northern Ireland Office),1,2019,2019,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for International Trade) (Minister for Equalities),1,2022,2022,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (HM Treasury),1,2023,2023,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+"Captain of the King's Bodyguard of the Yeomen of the Guard (HM Household) (Deputy Chief Whip, House of Lords)",1,2024,2024,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Dominions Office),2,1945,1946,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Board of Trade) (Overseas Trade),2,1947,1947,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Ministry of Pensions and Insurance),2,1960,1961,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Commonwealth Relations Office),2,1961,1962,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Foreign Office),2,1961,1967,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Trade and Industry) (Aerospace),2,1971,1972,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Ministry of Overseas Development),2,1974,1977,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Foreign and Commonwealth Office) (Overseas Development),2,1979,1982,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of National Heritage),2,1992,1993,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Culture, Media and Sport) (Arts)",2,1997,1998,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Deputy Chief Whip and Treasurer of HM Household,2,2001,2003,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Education and Skills),2,2001,2002,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Education and Skills) (Sure Start, Early Years and Childcare) (also Department for Work and Pensions)",2,2003,2004,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Education and Skills) (Schools),2,2004,2005,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Health) (Care Services),2,2005,2006,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Cabinet Office) (Third Sector),2,2007,2008,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Children, Schools and Families) (Children, Young People and Families)",2,2007,2008,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Children, Schools and Families) (Schools and Learners)",2,2007,2008,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Government Equalities Office),2,2007,2010,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Home Office) (Crime Reduction),2,2007,2008,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Home Office) (Identity),2,2007,2009,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Business, Innovation and Skills)",2,2012,2014,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for International Trade) (Minister for Women),2,2020,2022,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Foreign and Commonwealth Office) (Joint with the Department for International Development),2,2020,2020,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Ministry of Aviation),3,1959,1970,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Ministry of Power),3,1962,1966,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Employment and Productivity),3,1968,1970,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Treasurer of HM Household (Deputy Chief Whip),3,1974,1998,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Privy Council Office),3,1999,2002,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department of Transport, Local Government and Regions)",3,2001,2001,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Ministry of Labour),4,1959,1967,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Economic Affairs),4,1964,1967,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Ministry of Technology),4,1969,1970,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Civil Service Department),4,1970,1974,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Transport) (Roads and Motoring),4,1981,2010,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Ministry of Defence) (Armed Forces),4,1981,1988,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Duchy of Lancaster Office),4,1992,1995,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Cabinet Office),4,2005,2017,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Business, Innovation and Skills) (Intellectual Property)",4,2010,2014,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Board of Trade),5,1955,1970,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Ministry of Housing and Local Government),5,1955,1970,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Ministry of Defence) (Air Force),5,1964,1976,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Ministry of Defence) (Royal Navy),5,1968,1979,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Ministry of Defence) (Veterans),5,2000,2008,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Energy and Climate Change),5,2009,2015,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Business, Innovation and Skills) (Employment Relations, Consumer and Postal Affairs)",5,2010,2014,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Environment) (Sport),6,1970,1990,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Ministry of Agriculture, Fisheries and Food)",6,1979,1989,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Constitutional Affairs),6,2003,2006,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Ministry of Transport),7,1947,1979,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Secretary (Ministry of Agriculture, Fisheries and Food)",7,1972,1997,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Trade),7,1974,1997,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Captain of the Queen's Bodyguard of the Yeomen of the Guard (HM Household) (Deputy Chief Whip, House of Lords)",7,1995,2016,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Ministry of Defence) (Army),8,1965,1981,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Environment, Transport and the Regions)",8,1997,2001,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Communities and Local Government) (Planning),8,2006,2012,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Comptroller (HM Household) (Whip, House of Commons)",8,2015,2024,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Exiting the European Union),8,2016,2019,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for International Trade),8,2016,2022,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Culture, Media and Sport)",9,2010,2017,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Ministry of Defence) (Procurement),10,1981,2007,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary to the Treasury and Chief Whip,10,2008,2022,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Deputy Chief Whip and Treasurer,11,1955,1997,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Education and Employment),11,1995,1999,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Comptroller (HM Household) (Deputy Chief Whip, House of Commons)",12,1979,2016,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Housing, Communities and Local Government)",12,2018,2024,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Industry),13,1970,1982,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Scotland Office),13,2002,2022,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Foreign, Commonwealth and Development Office)",13,2020,2025,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Health and Social Security),14,1970,1986,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Digital, Culture, Media and Sport)",14,2017,2022,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Welsh Office),15,1966,1998,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Social Security),15,1988,1999,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Treasurer of HM Household (Deputy Chief Whip, House of Commons)",15,2007,2024,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+"Captain of the Honourable Corps of Gentlemen-at-Arms (HM Household) (Chief Whip, House of Lords)",16,1958,2024,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Energy),16,1974,1990,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for International Development),16,1997,2019,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Communities and Local Government),16,2006,2017,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Health and Social Care),16,2018,2024,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Business, Energy and Industrial Strategy)",19,2016,2022,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Parliamentary Under-Secretary (Department for Environment, Food and Rural Affairs)",21,2001,2024,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary to the Treasury (Chief Whip),22,1955,2025,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Education and Science),22,1969,1993,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Trade and Industry),22,1970,1999,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Wales Office),22,1997,2025,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Ministry of Defence),23,1971,2024,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Government Whip, Lord Commissioner of HM Treasury",23,2020,2025,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Employment),25,1970,1994,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+"Vice Chamberlain (HM Household) (Whip, House of Commons)",26,1981,2025,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Education),26,1992,2024,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Baroness in Waiting (HM Household) (Whip),26,2002,2024,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Secretary (Cabinet Office),27,1994,2024,non_senior,False,regex:\bparliamentary secretary\b,Matches a junior/whip/non-senior pattern.
+Lord in Waiting (HM Household) (Whip),29,1988,2025,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Ministry of Justice),29,2007,2024,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Scottish Office),31,1959,1997,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Environment),32,1970,1997,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Foreign and Commonwealth Office),33,1968,2020,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department of Health),34,1984,2017,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Work and Pensions),36,2001,2024,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Northern Ireland Office),42,1972,2024,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Home Office),43,1961,2024,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Assistant Whip,49,2018,2024,non_senior,False,regex:\bassistant whip\b,Matches a junior/whip/non-senior pattern.
+Parliamentary Under-Secretary (Department for Transport),51,1976,2025,non_senior,False,regex:\bparliamentary under-?secretary\b,Matches a junior/whip/non-senior pattern.
+Lord Commissioner (HM Treasury) (Whip),167,1951,2022,non_senior,False,regex:\bwhip\b,Matches a junior/whip/non-senior pattern.
+Assistant Whip (HM Treasury),233,1951,2018,non_senior,False,regex:\bassistant whip\b,Matches a junior/whip/non-senior pattern.
+Secretary of State for Commonwealth Relations,1,1964,1964,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Land and Natural Resources,1,1964,1964,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Economic Affairs,1,1967,1967,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Minister of State (Office of the Secretary of State for Local Government and Regional Planning),1,1969,1969,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Minister without Portfolio and Deputy Leader of the House of Commons,1,1969,1969,senior,True,contains:minister without portfolio,Senior Cabinet post.
+Secretary of State for Technology,1,1970,1970,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Overseas Development,1,1975,1975,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Social Services,1,1976,1976,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+"Leader of the House of Commons, Minister for the Arts and Chancellor of the Duchy of Lancaster",1,1979,1979,senior,True,contains:chancellor of the duchy of lancaster,Senior Cabinet post.
+Lord Privy Seal and Deputy Foreign Secretary,1,1979,1979,senior,True,contains:lord privy seal,Senior Cabinet post (historically).
+Leader of the House of Commons,1,1982,1982,senior,True,contains:leader of the house of commons,Senior Cabinet post.
+Lord Privy Seal (Privy Council Office),1,1983,1983,senior,True,contains:lord privy seal,Senior Cabinet post (historically).
+Lord Privy Seal and Leader of the House of Commons,1,1987,1987,senior,True,contains:lord privy seal,Senior Cabinet post (historically).
+Chancellor of the Duchy of Lancaster and Minister (Trade),1,1988,1988,senior,True,contains:chancellor of the duchy of lancaster,Senior Cabinet post.
+Chancellor of the Duchy of Lancaster and Minister (Public Service & Science),1,1994,1994,senior,True,contains:chancellor of the duchy of lancaster,Senior Cabinet post.
+Chancellor of the Duchy of Lancaster and Minister (Public Service),1,1995,1995,senior,True,contains:chancellor of the duchy of lancaster,Senior Cabinet post.
+First Secretary of State and Deputy Prime Minister,1,1995,1995,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Parliamentary Under Secretary of State (Department of National Heritage) (Broadcasting and Tourism),1,1995,1995,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+"Deputy Prime Minister and Secretary of State for Environment, Transport and the Regions",1,1997,1997,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Secretary of State for Social Security and Minister for Women,1,1997,1997,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Chancellor of the Duchy of Lancaster and Minister (Cabinet Office),1,1998,1998,senior,True,contains:chancellor of the duchy of lancaster,Senior Cabinet post.
+Minister of State (Lord Chancellor's Department),1,1998,1998,senior,True,contains:lord chancellor,Lord Chancellor is senior Cabinet.
+Minister for Trade and Investment and Deputy Leader of the House of Lords (also Department of Trade and Industry),1,2001,2001,senior,True,contains:leader of the house of lords,Senior Cabinet post.
+Minister of State (Trade and Investment) Deputy Leader of the House of Lords (also FCO),1,2001,2001,senior,True,contains:leader of the house of lords,Senior Cabinet post.
+Secretary of State for Trade and Industry and Minister for Women and e-Minister in Cabinet,1,2001,2001,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+"Secretary of State for Transport, Local Government and Regions",1,2001,2001,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Deputy Prime Minister and Secretary of State for Local Government and the Regions,1,2002,2002,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Minister (Office of the Deputy Prime Minister) (Housing & Planning),1,2002,2002,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Minister (Office of the Deputy Prime Minister) (Social Exclusion and Deputy Minister for Women),1,2002,2002,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Minister of State (Office of the Deputy Prime Minister) (Local and Regional Government),1,2002,2002,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Minister without Portfolio and Labour Party Chair,1,2002,2002,senior,True,contains:minister without portfolio,Senior Cabinet post.
+Deputy Leader of the House of Commons (Privy Council Office),1,2003,2003,senior,True,contains:leader of the house of commons,Senior Cabinet post.
+Minister (Office of the Deputy Prime Minister) (Regeneration and Regional Development),1,2003,2003,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Minister of State (Cabinet Office) and Chancellor of the Duchy of Lancaster,1,2003,2003,senior,True,contains:chancellor of the duchy of lancaster,Senior Cabinet post.
+Parliamentary Under-Secretary (Office of the Deputy Prime Minister) (Local and Regional Government),1,2003,2003,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Parliamentary Under-Secretary (Office of the Deputy Prime Minister) (Regeneration and Regional Developement),1,2003,2003,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Secretary of State for Constitutional Affairs and Lord Chancellor,1,2003,2003,senior,True,contains:lord chancellor,Lord Chancellor is senior Cabinet.
+Chancellor of the Duchy of Lancaster (Cabinet Office),1,2005,2005,senior,True,contains:chancellor of the duchy of lancaster,Senior Cabinet post.
+Minister (Office of the Deputy Prime Minister) (Communities and Local Government),1,2005,2005,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Minister (Office of the Deputy Prime Minister) (London),1,2005,2005,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Minister of State (Office of the Deputy Prime Minister) (Local Government),1,2005,2005,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Minister (Cabinet Office) and Minister (Social Exclusion) and Chancellor of the Duchy of Lancaster,1,2006,2006,senior,True,contains:chancellor of the duchy of lancaster,Senior Cabinet post.
+Minister without Portfolio (Cabinet Office) and Labour Party Chair,1,2006,2006,senior,True,contains:minister without portfolio,Senior Cabinet post.
+Secretary of State for Communities and Local Government (and Women and Equalities),1,2006,2006,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Minister (Cabinet Office) and Chancellor of the Duchy of Lancaster,1,2007,2007,senior,True,contains:chancellor of the duchy of lancaster,Senior Cabinet post.
+Prime Minister's Special Representative to Cyprus,1,2007,2007,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+"Secretary of State for Children, Schools and Families",1,2007,2007,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+"Secretary of State for Innovation, Universities and Skills",1,2007,2007,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+"Parliamentary Under-Secretary of State (Department for Business, Innovation and Skills) (Postal Affairs and Employment Relations) (also Lord in Waiting)",1,2009,2009,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+First Secretary of State and Leader of the House of Commons,1,2014,2014,senior,True,contains:leader of the house of commons,Senior Cabinet post.
+Minister for Government Policy and Chancellor of the Duchy of Lancaster,1,2014,2014,senior,True,contains:chancellor of the duchy of lancaster,Senior Cabinet post.
+Parliamentary Under-Secretary of State (Department for Education) (Women and Equalities),1,2014,2014,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Chancellor of the Exchequer and First Secretary of State,1,2015,2015,senior,True,contains:chancellor of the exchequer,Chancellor is senior Cabinet.
+Parliamentary Under-Secretary of State (Department for Communities and Local Government) (Northern Powerhouse),1,2015,2015,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Parliamentary Under-Secretary of State (Department for Work and Pensions) (Disabled People),1,2015,2015,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+First Secretary of State and Minister for the Cabinet Office,1,2017,2017,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Parliamentary Under Secretary of State (Ministry of Justice) (and Assistant Government Whip),1,2021,2021,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Parliamentary Secretary (Minister for Policy and Head of the Prime Minister’s Policy Unit),1,2022,2022,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Minister on Leave (Secretary of State),1,2023,2023,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Parliamentary Under Secretary of State (Department for Business and Trade) (Minister for Equalities),1,2023,2023,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Parliamentary Under Secretary of State (Department for Business and Trade) (Minister for Women),1,2023,2023,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State in the Cabinet Office,1,2023,2023,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Prime Minister and First Lord of the Treasury,1,2024,2024,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Minister of State (Chief Secretary to the Prime Minister),1,2025,2025,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Lord Privy Seal,2,1960,1981,senior,True,contains:lord privy seal,Senior Cabinet post (historically).
+Secretary of State for the Air Ministry,2,1960,1962,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Public Building and Works,2,1962,1969,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Prices and Consumer Protection,2,1974,1976,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Lord Chancellor,2,1987,1997,senior,True,contains:lord chancellor,Lord Chancellor is senior Cabinet.
+Secretary of State for Education and Employment,2,1995,1997,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Deputy Prime Minister and First Secretary of State,2,2001,2006,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Minister of State (Office of the Deputy Prime Minister) (Housing and Planning),2,2003,2005,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Leader of the House of Lords and Lord President of the Council (Privy Council Office),2,2007,2008,senior,True,contains:lord president of the council,Senior Cabinet post.
+"Secretary of State for Business, Enterprise and Regulatory Reform",2,2007,2008,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Lord Commissioner (HM Treasury) (Whip) (Jointly as unpaid Parliamentary Under Secretary of State at the Wales Office),2,2012,2022,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+"Parliamentary Under-Secretary of State (Culture, Media and Sport) (Women and Equalities) (jointly with the Department for Business, Innovation and Skills)",2,2012,2013,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Parliamentary Under-Secretary of State (jointly with the Ministry of Defence),2,2019,2021,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Minister of State (Cabinet Office) (Minister without Portfolio),2,2021,2022,senior,True,contains:minister without portfolio,Senior Cabinet post.
+"Parliamentary Under Secretary of State (Foreign, Commonwealth and Development Office) (Minister for Equalities)",2,2021,2022,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+"Parliamentary Under Secretary of State (Department for Culture, Media and Sport)",2,2023,2024,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Parliamentary Under-Secretary of State (Department for Education) (Equalities),2,2024,2024,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Trade and Industry,3,1972,2006,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Lord President of the Council (Privy Council Office),3,1982,2010,senior,True,contains:lord president of the council,Senior Cabinet post.
+Parliamentary Under-Secretary (Lord Chancellor's Department),3,1995,1999,senior,True,contains:lord chancellor,Lord Chancellor is senior Cabinet.
+Parliamentary Under-Secretary (Office of the Deputy Prime Minister),3,2002,2005,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Minister for the Cabinet Office and Chancellor of the Duchy of Lancaster,3,2008,2021,senior,True,contains:chancellor of the duchy of lancaster,Senior Cabinet post.
+Leader of the House of Lords and Chancellor of the Duchy of Lancaster,3,2009,2013,senior,True,contains:chancellor of the duchy of lancaster,Senior Cabinet post.
+Foreign Secretary and First Secretary of State,3,2010,2020,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Foreign and Commonwealth Affairs,3,2014,2018,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Exiting the European Union,3,2016,2018,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+"Prime Minister, First Lord of the Treasury, Minister for the Civil Service, and Minister for the Union",3,2019,2022,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Secretary of State for Business and Trade,3,2023,2025,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Energy Security and Net Zero,3,2023,2024,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Lord President of the Council and Leader of the House Lords (Privy Council Office),4,1970,1981,senior,True,contains:lord president of the council,Senior Cabinet post.
+Secretary of State for Health and Social Security,4,1970,1987,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Industry,4,1974,1981,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+"Deputy Prime Minister, Lord President of the Council (Cabinet Office) (with Special Responsibility for Political and Constitutional Reform)",4,1979,2010,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Lord President of the Council and Leader of the House of Lords (Privy Council Office),4,1983,2003,senior,True,contains:lord president of the council,Senior Cabinet post.
+Secretary of State for Social Security,4,1988,1998,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Minister without Portfolio,4,1994,2001,senior,True,contains:minister without portfolio,Senior Cabinet post.
+"Secretary of State for Business, Innovation and Skills",4,1997,2015,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Education and Skills,4,2001,2006,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Energy and Climate Change,4,2008,2015,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Parliamentary Secretary and Deputy Leader of the House of Commons,4,2009,2015,senior,True,contains:leader of the house of commons,Senior Cabinet post.
+Secretary of State for International Trade and President of the Board of Trade,4,2016,2022,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Parliamentary Under Secretary of State (Ministry of Justice) (jointly with Home Office),4,2021,2023,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Parliamentary Under Secretary of State (Department for Business and Trade),4,2023,2024,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Parliamentary Under Secretary of State (Department for Energy Security and Net Zero),4,2023,2024,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+"Parliamentary Under Secretary of State (Department for Science, Innovation and Technology)",4,2023,2024,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for National Heritage,5,1992,1997,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Communities and Local Government,5,2007,2016,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+"Secretary of State for Levelling Up, Housing and Communities",5,2021,2024,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+"Secretary of State for Science, Innovation and Technology",5,2023,2025,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Scottish Office,6,1976,1997,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Leader of the House of Lords and Lord Privy Seal,6,1997,2024,senior,True,contains:lord privy seal,Senior Cabinet post (historically).
+Leader of the House of Commons and Lord Privy Seal,6,2003,2012,senior,True,contains:lord privy seal,Senior Cabinet post (historically).
+"Secretary of State for Business, Energy and Industrial Strategy",6,2016,2022,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Deputy Prime Minister,6,2021,2025,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Secretary of State for Energy,7,1974,1989,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+"Secretary of State for Digital, Culture, Media and Sport",7,2017,2022,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+"Secretary of State for Housing, Communities and Local Government",7,2018,2025,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Deputy Leader of the House of Commons,8,1968,2022,senior,True,contains:leader of the house of commons,Senior Cabinet post.
+"Secretary of State for Agriculture, Fisheries and Food",8,1970,1995,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Lord President of the Council and Leader of the House of Commons (Privy Council Office),8,1976,2003,senior,True,contains:lord president of the council,Senior Cabinet post.
+Parliamentary Secretary (Lord Chancellor's Department),8,1992,2002,senior,True,contains:lord chancellor,Lord Chancellor is senior Cabinet.
+Secretary of State for Health and Social Care,8,2018,2024,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+"Prime Minister, First Lord of the Treasury and Minister for the Civil Service",10,1964,2016,senior,True,contains:prime minister,Prime Minister is senior Cabinet by definition.
+Lord President of the Council and Leader of the House of Commons,10,1988,2025,senior,True,contains:lord president of the council,Senior Cabinet post.
+"Parliamentary Under Secretary of State (Department for Levelling Up, Housing and Communities)",10,2021,2023,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Education and Science,11,1970,1994,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for International Development,11,1997,2020,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Education,11,2010,2024,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Environment,12,1970,1993,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Trade,12,1974,1998,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Health,12,1988,2012,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+"Secretary of State for Culture, Media and Sport",12,1997,2024,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Scotland,12,1999,2024,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Lord Privy Seal and Leader of the House of Lords,13,1964,2001,senior,True,contains:lord privy seal,Senior Cabinet post (historically).
+Secretary of State for Employment,13,1972,1994,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+"Secretary of State for Environment, Food and Rural Affairs",14,2001,2024,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Lord Chancellor and Secretary of State for Justice,15,2007,2025,senior,True,contains:lord chancellor,Lord Chancellor is senior Cabinet.
+Deputy Leader of the House of Lords,16,1967,2024,senior,True,contains:leader of the house of lords,Senior Cabinet post.
+Minister without Portfolio (Cabinet Office),17,2010,2024,senior,True,contains:minister without portfolio,Senior Cabinet post.
+Chancellor of the Exchequer,18,1964,2024,senior,True,contains:chancellor of the exchequer,Chancellor is senior Cabinet.
+Secretary of State for Work and Pensions,19,2001,2025,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Chancellor of the Duchy of Lancaster,21,1970,2025,senior,True,contains:chancellor of the duchy of lancaster,Senior Cabinet post.
+Secretary of State for Wales,22,1968,2024,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Northern Ireland,25,1972,2024,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Transport,25,1976,2024,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Secretary of State for Defence,26,1964,2024,senior,True,contains:secretary of state,Secretary of State is senior Cabinet by definition.
+Chief Secretary to the Treasury,37,1970,2025,senior,True,contains:chief secretary to the treasury,Usually Cabinet-level; treat as senior.

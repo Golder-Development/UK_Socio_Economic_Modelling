@@ -13,6 +13,14 @@ import plotly.graph_objects as go
 from pathlib import Path
 from datetime import datetime
 import numpy as np
+import sys
+
+# Import classification logic
+sys.path.insert(0, str(Path(__file__).parent))
+from cabinet_post_classifier import classify_post
+
+# --- Configuration ----------------------------------------------------------
+MIN_YEAR = 1966  # Only analyze data from this year onwards
 
 
 def create_tenure_visualization():
@@ -45,7 +53,19 @@ def create_tenure_visualization():
     # Remove rows with missing tenure or parliament data
     df_clean = df.dropna(subset=['tenure_length_days', 'parliament_length_days', 'parliament_start_date'])
     
-    print(f"Total records: {len(df_clean)}")
+    # Filter to MIN_YEAR onwards
+    df_clean = df_clean[df_clean['parliament_year'] >= MIN_YEAR].reset_index(drop=True)
+    print(f"Filtering to {MIN_YEAR} onwards")
+    
+    # Apply classification to identify senior posts
+    print("Classifying posts...")
+    classifications = df_clean['post'].apply(lambda p: classify_post(p, {}))
+    df_clean['is_senior'] = classifications.apply(lambda c: c.is_senior)
+    df_clean['post_category'] = classifications.apply(lambda c: c.category)
+    
+    print(f"Total records after filtering: {len(df_clean)}")
+    print(f"  Senior posts: {df_clean['is_senior'].sum()}")
+    print(f"  Non-senior posts: {(~df_clean['is_senior']).sum()}")
     print(f"Parliament sessions: {df_clean['parliament_label'].nunique()}")
     print(f"Parties: {df_clean['party'].unique()}")
     

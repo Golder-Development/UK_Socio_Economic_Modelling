@@ -8,6 +8,14 @@ import pandas as pd
 import pdpy
 from pathlib import Path
 from datetime import datetime
+import sys
+
+# Import classification logic
+sys.path.insert(0, str(Path(__file__).parent))
+from cabinet_post_classifier import classify_post
+
+# --- Configuration ----------------------------------------------------------
+MIN_YEAR = 1966  # Only include data from this year onwards
 
 
 def get_government_timeline() -> pd.DataFrame:
@@ -355,7 +363,22 @@ def get_cabinet_ministers_datafile(
     # Sort by date
     cabinet_df = cabinet_df.sort_values('start_date', na_position='last')
     
+    # Filter to MIN_YEAR onwards
+    cabinet_df['start_date_dt'] = pd.to_datetime(cabinet_df['start_date'])
+    pre_filter_count = len(cabinet_df)
+    cabinet_df = cabinet_df[cabinet_df['start_date_dt'].dt.year >= MIN_YEAR].reset_index(drop=True)
+    cabinet_df = cabinet_df.drop(columns=['start_date_dt'])
+    print(f"\nFiltered to {MIN_YEAR} onwards: {len(cabinet_df)} records (removed {pre_filter_count - len(cabinet_df)})")
+    
+    # Apply classification to posts
+    print("Classifying posts...")
+    classifications = cabinet_df['post'].apply(lambda p: classify_post(p, {}))
+    cabinet_df['post_category'] = classifications.apply(lambda c: c.category)
+    cabinet_df['is_senior'] = classifications.apply(lambda c: c.is_senior)
+    
     print(f"\nTotal cabinet roles found: {len(cabinet_df)}")
+    print(f"  Senior posts: {cabinet_df['is_senior'].sum()}")
+    print(f"  Non-senior posts: {(~cabinet_df['is_senior']).sum()}")
     print(f"\nColumns: {list(cabinet_df.columns)}")
     
     if len(cabinet_df) > 0:
