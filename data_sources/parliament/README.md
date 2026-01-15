@@ -157,3 +157,16 @@ Use pdpy.reset_api_url to reset the package to use the live version of the API:
 
 pdpy.reset_api_url()
 You can check the currently set API url with pdpy.get_api_url().
+
+---
+
+## Related Projects
+
+This parliament data folder is part of the UK Socio-Economic Modelling project and works with government minister data and analysis.
+
+**Related Repository**: [dashboard_demo](https://github.com/Golder-Development/dashboard_demo)
+- Broader parliamentary analysis including all MPs and Lords
+- Additional utilities for member and parliament data processing
+- Visualization dashboards for parliamentary analysis
+
+See [RELATED_REPOSITORIES.md](RELATED_REPOSITORIES.md) for detailed information on how these projects relate and how to maintain them separately while referencing each other's work.

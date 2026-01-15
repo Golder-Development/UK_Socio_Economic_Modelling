@@ -212,6 +212,9 @@ def infer_cluster_names(posts: List[Dict[str, Any]], clusters: Dict[int, int]) -
     """Infer human-readable cluster names from common tags and content."""
     from collections import Counter
     
+    # Tags to exclude from cluster names (low variation)
+    exclude_patterns = ["let's rethink", "uk politics", "lets rethink", "political budgets"]
+    
     cluster_posts = {}
     for p in posts:
         c = clusters[p["post_id"]]
@@ -225,10 +228,13 @@ def infer_cluster_names(posts: List[Dict[str, Any]], clusters: Dict[int, int]) -
         tag_counter = Counter()
         for p in group:
             tag_counter.update(p["tags"])
-        # get top 2-3 tags
-        top_tags = [t for t, _ in tag_counter.most_common(3)]
+        # get top tags, filtering out common low-variation ones
+        top_tags = [
+            t for t, _ in tag_counter.most_common(10)
+            if not any(excl in t.lower() for excl in exclude_patterns)
+        ][:2]
         if top_tags:
-            names[c] = " / ".join(top_tags[:2])
+            names[c] = " / ".join(top_tags)
         else:
             names[c] = f"Group {c}"
     

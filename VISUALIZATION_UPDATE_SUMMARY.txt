@@ -1,0 +1,99 @@
+"""
+Summary of updates to the visualization script.
+"""
+
+print("""
+╔════════════════════════════════════════════════════════════════════════════════╗
+║             UPDATED VISUALIZATION - COMMONS/LORDS FILTER ADDED                 ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+NEW FILE GENERATED:
+──────────────────
+  Location: generated_charts/cabinet_ministers_tenure_parliament_20260115_132049.html
+  Size: 6.00 MB
+  Type: Interactive Plotly scatter plot with dual filters
+
+WHAT'S NEW:
+──────────
+
+1. TWO INDEPENDENT DROPDOWN FILTERS:
+   
+   Left Filter (Grey background): "Filter by Parliament"
+   • "All Parliaments" - View all appointments
+   • Individual parliament sessions (1945, 1950, 1951, ..., 2019)
+   • Select specific parliaments to focus analysis
+   
+   Right Filter (Blue background): "Filter by House"
+   • "Both" - Show Commons and Lords appointments
+   • "Commons" - Show only House of Commons appointments
+   • "Lords" - Show only House of Lords appointments
+
+2. ENHANCED DATA VISUALIZATION:
+   
+   Circle Markers (●) = House of Commons (89% of data)
+   Diamond Markers (◆) = House of Lords (11% of data)
+   
+   Commons Markers: More opaque (opacity 0.7)
+   Lords Markers: More transparent (opacity 0.5)
+   
+   This allows easy visual distinction between the two houses.
+
+3. UPDATED LEGEND:
+   • Each party now shows both "(Commons)" and "(Lords)" entries
+   • Example: "Conservative (Commons)" and "Conservative (Lords)"
+   • Click to toggle visibility of specific house-party combinations
+
+4. IMPROVED HOVER TOOLTIPS:
+   • Now includes "House: [Commons/Lords]" field
+   • Makes it clear which house the minister served in
+
+5. UPDATED STATISTICS:
+   
+   House Distribution:
+   • Commons: 3,313 appointments (88.5%)
+   • Lords: 432 appointments (11.5%)
+
+USING THE NEW FILTERS:
+─────────────────────
+
+SCENARIO 1: Compare Commons and Lords for a specific parliament
+   1. Select parliament from left dropdown (e.g., "1997 (1997-05-01)")
+   2. Click parties in legend to isolate specific ones
+   3. House filter remains on "Both" by default
+
+SCENARIO 2: Analyze only Commons appointments across all parliaments
+   1. Keep left filter on "All Parliaments"
+   2. Select "Commons" from right dropdown
+   3. View all Commons-only data
+
+SCENARIO 3: Compare Lords appointments across different parliaments
+   1. Select "Lords" from right dropdown
+   2. Use left dropdown to switch between different parliaments
+   3. See how Lords appointments varied across parliamentary sessions
+
+SCENARIO 4: Focus on a specific parliament's Commons ministers
+   1. Select parliament from left dropdown
+   2. Select "Commons" from right dropdown
+   3. Get focused view of Commons-only appointments for that period
+
+VISUAL INDICATORS:
+──────────────────
+• Circle (●) = Commons minister
+• Diamond (◆) = Lords minister
+• Color = Political party
+• Opacity = House (brighter=Commons, dimmer=Lords)
+• Position = Parliament duration (X) vs Tenure (Y)
+
+HOW TO GENERATE A NEW VISUALIZATION:
+───────────────────────────────────
+
+Run: python data_sources/parliament/create_tenure_visualization.py
+
+This will create a fresh visualization with:
+• Updated parliament data
+• New timestamp
+• Both filtering dropdowns (Parliament + House)
+• Latest summary statistics
+
+═════════════════════════════════════════════════════════════════════════════════
+""")
