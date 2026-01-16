@@ -18,29 +18,29 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 
 def create_summary_dashboard(donations_df):
     """Create a comprehensive summary dashboard"""
-    
+
     # Map column names
     donation_amount_col = 'Value'  # Amount column
     donor_col = 'CleanedDonorName'  # Donor column
     party_col = 'CleanedRegulatedEntityName'  # Party/recipient column
     date_col = 'AcceptedDate'  # Date column
     type_col = 'DonationType'  # Donation type column
-    
+
     # Summary statistics
     total_donations = donations_df[donation_amount_col].sum()
     avg_donation = donations_df[donation_amount_col].mean()
     num_donors = donations_df[donor_col].nunique()
     num_donations = len(donations_df)
-    
+
     # By donation type
     by_type = donations_df.groupby(type_col)[donation_amount_col].agg(['sum', 'count']).sort_values('sum', ascending=False)
-    
+
     # By party
     by_party = donations_df.groupby(party_col)[donation_amount_col].sum().sort_values(ascending=False).head(15)
-    
+
     # Top donors
     top_donors = donations_df.groupby(donor_col)[donation_amount_col].sum().sort_values(ascending=False).head(10)
-    
+
     # Create visualizations
     fig = make_subplots(
         rows=3, cols=2,
@@ -60,7 +60,7 @@ def create_summary_dashboard(donations_df):
         vertical_spacing=0.12,
         horizontal_spacing=0.12
     )
-    
+
     # 1. Total by Party (Bar)
     fig.add_trace(
         go.Bar(
@@ -72,7 +72,7 @@ def create_summary_dashboard(donations_df):
         ),
         row=1, col=1
     )
-    
+
     # 2. By Donation Type (Pie)
     type_colors = {
         'Cash': '#4CAF50',
@@ -92,7 +92,7 @@ def create_summary_dashboard(donations_df):
         ),
         row=1, col=2
     )
-    
+
     # 3. Top 10 Donors (Bar)
     fig.add_trace(
         go.Bar(
@@ -105,12 +105,12 @@ def create_summary_dashboard(donations_df):
         ),
         row=2, col=1
     )
-    
+
     # 4. Monthly Trend (Line)
     donations_df[date_col] = pd.to_datetime(donations_df[date_col], errors='coerce')
     monthly = donations_df.set_index(date_col).groupby(pd.Grouper(freq='M'))[donation_amount_col].sum()
     monthly = monthly[monthly > 0]  # Remove zero values
-    
+
     if len(monthly) > 0:
         fig.add_trace(
             go.Scatter(
@@ -124,7 +124,7 @@ def create_summary_dashboard(donations_df):
             ),
             row=2, col=2
         )
-    
+
     # 5. Donor Count by Party (Bar)
     donor_count = donations_df.groupby(party_col)[donor_col].nunique().sort_values(ascending=False).head(15)
     fig.add_trace(
@@ -137,7 +137,7 @@ def create_summary_dashboard(donations_df):
         ),
         row=3, col=1
     )
-    
+
     # 6. Average Donation by Type (Bar)
     avg_by_type = donations_df.groupby(type_col)[donation_amount_col].mean().sort_values(ascending=False)
     fig.add_trace(
@@ -150,7 +150,7 @@ def create_summary_dashboard(donations_df):
         ),
         row=3, col=2
     )
-    
+ 
     # Update layout
     fig.update_layout(
         title_text="<b>UK Political Donations - Summary Dashboard</b><br><sub>Comprehensive analysis of all donations</sub>",
@@ -173,10 +173,10 @@ def create_summary_dashboard(donations_df):
     fig.update_yaxes(title_text="Count", row=3, col=1)
     fig.update_xaxes(title_text="Donation Type", row=3, col=2)
     fig.update_yaxes(title_text="Average (GBP)", row=3, col=2)
-    
+
     # Generate HTML with styling
     chart_html = fig.to_html(include_plotlyjs='cdn')
-    
+
     # Prepare body content
     body_content = """
     <div class="section">
@@ -253,7 +253,7 @@ def create_summary_dashboard(donations_df):
         avg_donation=format_currency(avg_donation),
         visualization=chart_html
     )
-    
+
     # Use formatting reference to generate styled HTML
     styled_html = get_political_donations_styled_html(
         title="UK Political Donations - Summary Dashboard",
@@ -261,13 +261,14 @@ def create_summary_dashboard(donations_df):
         body_content=body_content,
         include_legend=True
     )
-    
+
     output_path = OUTPUT_DIR / 'political_donations_summary_dashboard.html'
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(styled_html)
-    
+
     print(f"✓ Summary dashboard created: {output_path}")
     return output_path
+
 
 def load_donations_data():
     """Load political donations data"""
@@ -278,7 +279,7 @@ def load_donations_data():
             Path(__file__).parent.parent / 'data_sources' / 'political_donations.csv',
             Path(__file__).parent.parent / 'generated_charts' / 'political_donations.csv',
         ]
-        
+
         for path in potential_paths:
             if path.exists():
                 print(f"  Loading data from: {path}")
@@ -290,17 +291,18 @@ def load_donations_data():
                     df.rename(columns={'Date': 'donation_date'}, inplace=True)
                     df['donation_date'] = pd.to_datetime(df['donation_date'])
                 return df
-        
+
         print("⚠ Political donations data file not found")
         return None
     except Exception as e:
         print(f"⚠ Error loading donations data: {e}")
         return None
 
+
 if __name__ == '__main__':
     print("Loading political donations data...")
     donations_df = load_donations_data()
-    
+
     if donations_df is not None and len(donations_df) > 0:
         print("Creating summary dashboard...")
         create_summary_dashboard(donations_df)

@@ -63,8 +63,8 @@
         
         .chart-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
             margin-top: 20px;
         }
         
@@ -83,6 +83,12 @@
             transform: translateY(-4px);
             box-shadow: 0 8px 16px rgba(0,0,0,0.1);
             border-color: #3f51b5;
+        }
+
+        .chart-card.disabled {
+            opacity: 0.55;
+            pointer-events: none;
+            border-style: dashed;
         }
         
         .chart-card h3 {
@@ -120,6 +126,11 @@
             background: #e8f5e9;
             color: #388e3c;
         }
+
+        .badge-data {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
         
         footer {
             background: #f5f5f5;
@@ -155,131 +166,270 @@
                         <p>Interactive comparison of donations across all major UK political parties with time period filtering.</p>
                         <span class="badge badge-interactive">Interactive</span>
                     </a>
-                    
                     <a href="donations_donor_type_analysis.html" class="chart-card">
                         <h3>Donor Type Analysis</h3>
                         <p>Breakdown of donation types including Cash, Non-Cash, Sponsorship, Public Funds, and Bequests.</p>
                         <span class="badge badge-analysis">Analysis</span>
                     </a>
-                    
                     <a href="donations_time_analysis.html" class="chart-card">
                         <h3>Temporal Donation Patterns</h3>
                         <p>Monthly donation trends and donor activity over time with interactive range slider.</p>
                         <span class="badge badge-interactive">Interactive</span>
                     </a>
-                    
                     <a href="donations_party_heatmap.html" class="chart-card">
                         <h3>Party Comparison Heatmap</h3>
                         <p>Normalized metrics comparing total value, average donation, donor counts, and cash percentages.</p>
                         <span class="badge badge-summary">Summary</span>
                     </a>
                 </div>
-                
+
                 <h3 style="margin-top: 30px; color: #666;">Party-Specific Dashboards</h3>
                 <div class="chart-grid">
                     <a href="donations_by_party_conservative_and_unionist_party.html" class="chart-card">
                         <h3>Conservative Party</h3>
                         <p>Detailed donation analysis for the Conservative and Unionist Party.</p>
+                        <span class="badge badge-analysis">Analysis</span>
                     </a>
-                    
                     <a href="donations_by_party_labour_party.html" class="chart-card">
                         <h3>Labour Party</h3>
                         <p>Detailed donation analysis for the Labour Party.</p>
+                        <span class="badge badge-analysis">Analysis</span>
                     </a>
-                    
                     <a href="donations_by_party_liberal_democrats.html" class="chart-card">
                         <h3>Liberal Democrats</h3>
                         <p>Detailed donation analysis for the Liberal Democrats.</p>
+                        <span class="badge badge-analysis">Analysis</span>
                     </a>
-                    
-                    <a href="donations_by_party_scottish_national_party_snp.html" class="chart-card">
-                        <h3>SNP</h3>
-                        <p>Detailed donation analysis for the Scottish National Party.</p>
+                    <a href="#" class="chart-card disabled">
+                        <h3>Scottish National Party (SNP)</h3>
+                        <p>Detailed donation analysis for the Scottish National Party. Report forthcoming.</p>
+                        <span class="badge badge-summary">Coming Soon</span>
                     </a>
-                    
                     <a href="donations_by_party_green_party.html" class="chart-card">
                         <h3>Green Party</h3>
                         <p>Detailed donation analysis for the Green Party.</p>
+                        <span class="badge badge-analysis">Analysis</span>
                     </a>
-                    
                     <a href="donations_by_party_reform_uk.html" class="chart-card">
                         <h3>Reform UK</h3>
                         <p>Detailed donation analysis for Reform UK.</p>
+                        <span class="badge badge-analysis">Analysis</span>
+                    </a>
+                    <a href="donations_by_party_democratic_unionist_party_dup.html" class="chart-card">
+                        <h3>Democratic Unionist Party (DUP)</h3>
+                        <p>Donation analysis for the Democratic Unionist Party.</p>
+                        <span class="badge badge-analysis">Analysis</span>
+                    </a>
+                    <a href="donations_by_party_plaid_cymru_-_the_party_of_wales.html" class="chart-card">
+                        <h3>Plaid Cymru</h3>
+                        <p>Donation analysis for Plaid Cymru – The Party of Wales.</p>
+                        <span class="badge badge-analysis">Analysis</span>
                     </a>
                 </div>
             </div>
-            
+
             <div class="section">
                 <h2>🏛️ Cabinet & Parliamentary Analysis</h2>
                 <div class="chart-grid">
                     <a href="cabinet_churn_report.html" class="chart-card">
-                        <h3>Cabinet Churn Report</h3>
-                        <p>Analysis of ministerial turnover patterns and cabinet stability over time.</p>
+                        <h3>Cabinet Churn & Tenure</h3>
+                        <p>Analysis of senior Cabinet position turnover and tenure length across parliaments (1966 onwards).</p>
                         <span class="badge badge-analysis">Analysis</span>
                     </a>
-                    
                     <a href="individual_cabinet_analysis.html" class="chart-card">
-                        <h3>Individual Cabinet Tenure</h3>
-                        <p>Detailed analysis of individual ministerial careers and appointment patterns.</p>
+                        <h3>Individual Cabinet Analysis</h3>
+                        <p>Career trajectories and tenure categorization for individual cabinet members.</p>
                         <span class="badge badge-analysis">Analysis</span>
                     </a>
-                    
+                    <a href="cabinet_ministers_tenure_parliament_20260115_132049.html" class="chart-card">
+                        <h3>Cabinet Tenure by Parliament</h3>
+                        <p>Scatter plot visualization of cabinet ministers' tenure versus parliament duration.</p>
+                        <span class="badge badge-interactive">Interactive</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🗳️ Election & Pension Analysis</h2>
+                <div class="chart-grid">
                     <a href="election_pension_theory_analysis.html" class="chart-card">
-                        <h3>Election-Pension Theory</h3>
-                        <p>Investigation of pre-election appointment patterns and pension eligibility.</p>
+                        <h3>Election Pension Theory</h3>
+                        <p>Do governments increase appointments near elections to qualify more members for pensions?</p>
                         <span class="badge badge-analysis">Analysis</span>
                     </a>
-                    
-                    <a href="pension_reform_impact.html" class="chart-card">
-                        <h3>2015 Pension Reform Impact</h3>
-                        <p>Analysis of how the 2015 pension reform affected cabinet turnover patterns.</p>
-                        <span class="badge badge-analysis">Analysis</span>
-                    </a>
-                    
                     <a href="final_year_pension_analysis.html" class="chart-card">
-                        <h3>Final Year Appointment Analysis</h3>
-                        <p>Cabinet appointments in the final year before elections across different parliaments.</p>
+                        <h3>Final Year Pension Analysis</h3>
+                        <p>Cabinet appointment patterns in the final year before elections.</p>
+                        <span class="badge badge-analysis">Analysis</span>
+                    </a>
+                    <a href="pension_reform_impact.html" class="chart-card">
+                        <h3>Pension Reform Impact</h3>
+                        <p>Comparison of pre-2015 defined benefit vs post-2015 defined contribution cabinet turnover.</p>
                         <span class="badge badge-analysis">Analysis</span>
                     </a>
                 </div>
             </div>
-            
+
             <div class="section">
-                <h2>📈 Mortality & Demographics</h2>
+                <h2>📈 Mortality Dashboards</h2>
                 <div class="chart-grid">
-                    <a href="mortality_dashboard_interactive.html" class="chart-card">
-                        <h3>Interactive Mortality Dashboard</h3>
-                        <p>Comprehensive mortality statistics with interactive filtering and age group analysis.</p>
+                    <a href="mortality_dashboard_age_group_by_sex.html" class="chart-card">
+                        <h3>By Age Group & Sex</h3>
+                        <p>Mortality trends broken down by age group and sex.</p>
                         <span class="badge badge-interactive">Interactive</span>
                     </a>
-                    
-                    <a href="mortality_dashboard_filtered.html" class="chart-card">
-                        <h3>Filtered Mortality Analysis</h3>
-                        <p>Pre-filtered mortality data focusing on key demographic segments.</p>
+                    <a href="mortality_dashboard_age_groups.html" class="chart-card">
+                        <h3>Age Groups Overview</h3>
+                        <p>Overview of mortality patterns across different age groups.</p>
+                        <span class="badge badge-analysis">Analysis</span>
+                    </a>
+                    <a href="mortality_dashboard_age_old_oaps.html" class="chart-card">
+                        <h3>Old OAPs (85+)</h3>
+                        <p>Mortality analysis for the 85+ population.</p>
                         <span class="badge badge-summary">Summary</span>
                     </a>
-                    
-                    <a href="mortality_dashboard_age_groups.html" class="chart-card">
-                        <h3>Age Group Mortality</h3>
-                        <p>Mortality patterns across different age cohorts and time periods.</p>
+                    <a href="mortality_dashboard_age_older_adults.html" class="chart-card">
+                        <h3>Older Adults (35–64)</h3>
+                        <p>Mortality trends for older adults aged 35–64.</p>
                         <span class="badge badge-analysis">Analysis</span>
+                    </a>
+                    <a href="mortality_dashboard_age_preschool.html" class="chart-card">
+                        <h3>Preschool (≤5)</h3>
+                        <p>Mortality analysis for preschool-age children (≤5 years).</p>
+                        <span class="badge badge-summary">Summary</span>
+                    </a>
+                    <a href="mortality_dashboard_age_school.html" class="chart-card">
+                        <h3>School Age (6–19)</h3>
+                        <p>Mortality trends for school-age children (6–19).</p>
+                        <span class="badge badge-analysis">Analysis</span>
+                    </a>
+                    <a href="mortality_dashboard_age_young_adults.html" class="chart-card">
+                        <h3>Young Adults (20–34)</h3>
+                        <p>Mortality analysis for young adults (20–34).</p>
+                        <span class="badge badge-analysis">Analysis</span>
+                    </a>
+                    <a href="mortality_dashboard_age_young_oaps.html" class="chart-card">
+                        <h3>Young OAPs (65–84)</h3>
+                        <p>Mortality trends for younger elderly (65–84).</p>
+                        <span class="badge badge-analysis">Analysis</span>
+                    </a>
+                    <a href="mortality_dashboard_by_age_group.html" class="chart-card">
+                        <h3>By Age Group</h3>
+                        <p>Comparative mortality visualization across all age groups.</p>
+                        <span class="badge badge-analysis">Analysis</span>
+                    </a>
+                    <a href="mortality_dashboard_drilldown.html" class="chart-card">
+                        <h3>Drilldown Dashboard</h3>
+                        <p>Interactive drilldown dashboard for exploring mortality data in detail.</p>
+                        <span class="badge badge-interactive">Interactive</span>
+                    </a>
+                    <a href="mortality_dashboard_filtered.html" class="chart-card">
+                        <h3>Filtered Dashboard</h3>
+                        <p>Filtered mortality dashboard with customizable parameters.</p>
+                        <span class="badge badge-summary">Summary</span>
+                    </a>
+                    <a href="mortality_dashboard_interactive.html" class="chart-card">
+                        <h3>Interactive Dashboard</h3>
+                        <p>Full interactive mortality exploration dashboard.</p>
+                        <span class="badge badge-interactive">Interactive</span>
                     </a>
                 </div>
             </div>
-            
+
             <div class="section">
-                <h2>🗺️ Network Visualizations</h2>
+                <h2>🗺️ Political Visualization</h2>
                 <div class="chart-grid">
                     <a href="political_posts_mindmap.html" class="chart-card">
-                        <h3>Political Posts Mind Map</h3>
-                        <p>Interactive network visualization of political positions and relationships.</p>
+                        <h3>Political Posts Mind Map — 2D</h3>
+                        <p>Network visualization of UK political posts in 2D.</p>
                         <span class="badge badge-interactive">Interactive</span>
                     </a>
-                    
                     <a href="political_posts_mindmap_3d.html" class="chart-card">
-                        <h3>3D Political Network</h3>
-                        <p>Three-dimensional network visualization of political connections.</p>
+                        <h3>Political Posts Mind Map — 3D</h3>
+                        <p>Network visualization of UK political posts in 3D.</p>
                         <span class="badge badge-interactive">Interactive</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📉 Demographic & Economic Analysis</h2>
+                <div class="chart-grid">
+                    <a href="lords_membership_by_type_1958_present.png" class="chart-card">
+                        <h3>Lords Membership By Type</h3>
+                        <p>Historical composition of the House of Lords by membership type (1958–present).</p>
+                        <span class="badge badge-summary">PNG</span>
+                    </a>
+                    <a href="fig2_child_intervention_by_tenure.png" class="chart-card">
+                        <h3>Child Intervention by Tenure</h3>
+                        <p>Analysis of child intervention outcomes relative to tenure length.</p>
+                        <span class="badge badge-summary">PNG</span>
+                    </a>
+                    <a href="fig3_female_employment_vs_fertility.png" class="chart-card">
+                        <h3>Female Employment vs. Fertility</h3>
+                        <p>Correlation analysis between female employment rates and fertility.</p>
+                        <span class="badge badge-summary">PNG</span>
+                    </a>
+                    <a href="fig4_lgbtq_vs_births.png" class="chart-card">
+                        <h3>LGBTQ+ Population vs. Births</h3>
+                        <p>Relationship between LGBTQ+ population identification and birth rates.</p>
+                        <span class="badge badge-summary">PNG</span>
+                    </a>
+                    <a href="Fig5_ChangeInCostOfHousing_vs_ChangeInFertility.png" class="chart-card">
+                        <h3>Housing Cost vs. Fertility</h3>
+                        <p>Impact of housing cost inflation on fertility trends.</p>
+                        <span class="badge badge-summary">PNG</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🧾 Data Exports</h2>
+                <div class="chart-grid">
+                    <a href="cabinet_members_tenure_profile.csv" class="chart-card">
+                        <h3>Cabinet Members Tenure Profile (CSV)</h3>
+                        <p>Individual statistics for cabinet members including tenure patterns and career metrics.</p>
+                        <span class="badge badge-data">Data</span>
+                    </a>
+                    <a href="appointments_detail.csv" class="chart-card">
+                        <h3>Appointments Detail (CSV)</h3>
+                        <p>Detailed record of cabinet appointments with timing relative to elections.</p>
+                        <span class="badge badge-data">Data</span>
+                    </a>
+                    <a href="election_cycle_analysis.csv" class="chart-card">
+                        <h3>Election Cycle Analysis (CSV)</h3>
+                        <p>Appointment patterns across election cycles.</p>
+                        <span class="badge badge-data">Data</span>
+                    </a>
+                    <a href="months_to_election_analysis.csv" class="chart-card">
+                        <h3>Months to Election (CSV)</h3>
+                        <p>Appointments by proximity to election dates.</p>
+                        <span class="badge badge-data">Data</span>
+                    </a>
+                    <a href="per_election_analysis.csv" class="chart-card">
+                        <h3>Per Election Analysis (CSV)</h3>
+                        <p>Per-election statistics on appointments and patterns.</p>
+                        <span class="badge badge-data">Data</span>
+                    </a>
+                    <a href="parliamentary_phase_analysis.csv" class="chart-card">
+                        <h3>Parliamentary Phase Analysis (CSV)</h3>
+                        <p>Appointments by parliamentary phase/quarter.</p>
+                        <span class="badge badge-data">Data</span>
+                    </a>
+                    <a href="final_year_analysis.csv" class="chart-card">
+                        <h3>Final Year Analysis (CSV)</h3>
+                        <p>Cabinet appointments in the final year before elections.</p>
+                        <span class="badge badge-data">Data</span>
+                    </a>
+                    <a href="pension_reform_comparison.csv" class="chart-card">
+                        <h3>Pension Reform Comparison (CSV)</h3>
+                        <p>Comparison of appointment patterns pre and post 2015 pension reform.</p>
+                        <span class="badge badge-data">Data</span>
+                    </a>
+                    <a href="icd_code_summary.csv" class="chart-card">
+                        <h3>ICD Code Summary (CSV)</h3>
+                        <p>Summary of ICD-10 medical classification codes.</p>
+                        <span class="badge badge-data">Data</span>
                     </a>
                 </div>
             </div>
