@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scottish National Party (SNP) - Donation Analysis</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+
+* {{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}}
+
+body {{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+}}
+
+/* ===== HEADER ===== */
+.header {{
+    background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3f51b5 100%);
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}}
+
+.header h1 {{
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}}
+
+.header p {{
+    font-size: 1.1em;
+    opacity: 0.95;
+    margin: 5px 0;
+}}
+
+.header .timestamp {{
+    font-size: 0.9em;
+    opacity: 0.7;
+    margin-top: 15px;
+    font-style: italic;
+}}
+
+/* ===== CONTAINER ===== */
+.container {{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+}}
+
+/* ===== SECTIONS ===== */
+.section {{
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}}
+
+.section h2 {{
+    color: #1a237e;
+    border-bottom: 3px solid #283593;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: 600;
+}}
+
+.section h3 {{
+    color: #283593;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    font-weight: 600;
+}}
+
+.section p {{
+    margin-bottom: 15px;
+    color: #666;
+}}
+
+/* ===== STATISTICS CARDS ===== */
+.stats-grid {{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}}
+
+.stat-card {{
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-left: 5px solid #1a237e;
+    transition: transform 0.2s, box-shadow 0.2s;
+}}
+
+.stat-card:hover {{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}}
+
+.stat-card.accent1 {{
+    border-left-color: #4CAF50;
+}}
+
+.stat-card.accent2 {{
+    border-left-color: #2196F3;
+}}
+
+.stat-card.accent3 {{
+    border-left-color: #FF9800;
+}}
+
+.stat-card.accent4 {{
+    border-left-color: #f44336;
+}}
+
+.stat-label {{
+    color: #666;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.stat-value {
+    font-size: 2em;
+    font-weight: bold;
+    color: #1a237e;
+    word-break: break-word;
+}
+
+.stat-subvalue {
+    color: #999;
+    font-size: 0.85em;
+    margin-top: 8px;
+}
+
+/* ===== CHARTS ===== */
+.chart-container {
+    margin: 20px 0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* ===== BADGES ===== */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: bold;
+    color: white;
+    margin-right: 8px;
+    margin-bottom: 5px;
+}
+
+.badge-success {
+    background-color: #4CAF50;
+}
+
+.badge-info {
+    background-color: #2196F3;
+}
+
+.badge-warning {
+    background-color: #FF9800;
+}
+
+.badge-danger {
+    background-color: #f44336;
+}
+
+.badge-secondary {
+    background-color: #9C27B0;
+}
+
+.badge-neutral {
+    background-color: #999;
+}
+
+/* Specific donation types */
+.badge-cash {
+    background-color: #4CAF50;
+}
+
+.badge-non-cash {
+    background-color: #2196F3;
+}
+
+.badge-sponsorship {
+    background-color: #FF9800;
+}
+
+.badge-public-fund {
+    background-color: #9C27B0;
+}
+
+.badge-bequest {
+    background-color: #f44336;
+}
+
+.badge-other {
+    background-color: #999;
+}
+
+/* Cabinet categories */
+.badge-stalwart {
+    background-color: #c8e6c9;
+    color: #1b5e20;
+}
+
+.badge-pawn {
+    background-color: #ffcdd2;
+    color: #b71c1c;
+}
+
+.badge-one-hit {
+    background-color: #bbdefb;
+    color: #0d47a1;
+}
+
+/* ===== INSIGHT BOX ===== */
+.insight {
+    background-color: #e3f2fd;
+    border-left: 4px solid #2196F3;
+    padding: 20px;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.insight h3 {
+    color: #1565c0;
+    margin-bottom: 10px;
+}
+
+.insight ul {
+    list-style-position: inside;
+    line-height: 1.8;
+}
+
+.insight li {
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.insight strong {
+    color: #1a237e;
+}
+
+/* ===== TABLES ===== */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15px 0;
+    font-size: 0.95em;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+    color: #1a237e;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-muted {
+    color: #666;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-1 {
+    margin-bottom: 10px;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
+.mt-1 {
+    margin-top: 10px;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .header {
+        padding: 30px 20px;
+    }
+    
+    .header h1 {
+        font-size: 1.8em;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    table {
+        font-size: 0.85em;
+    }
+    
+    th, td {
+        padding: 8px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Scottish National Party (SNP) - Donation Analysis</h1>
+        <p>Comprehensive analysis of political donations received</p>
+        <div class="timestamp">Generated: 2026-01-16 10:56:13</div>
+        
+
+    <p style="font-size: 0.95em; opacity: 0.8;">
+        Interactive dashboard with comprehensive analysis and filtering capabilities
+    </p>
+    
+    </div>
+    
+    <div class="container">
+        
+    <div class="section">
+        <h2>About This Dashboard</h2>
+        <p>Use the <strong>Time Period</strong> dropdown menu at the top of the visualizations to explore donations across different time ranges. All panels update simultaneously when you change the time period.</p>
+        <p>Donation types represented:</p>
+        <div style="margin: 10px 0;">
+            <span class="badge badge-cash">Cash</span>
+            <span class="badge badge-non-cash">Non-Cash</span>
+            <span class="badge badge-sponsorship">Sponsorship</span>
+            <span class="badge badge-public-fund">Public Fund</span>
+            <span class="badge badge-bequest">Bequest</span>
+            <span class="badge badge-other">Other</span>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Interactive Visualizations</h2>
+        <h3>Donation Analysis</h3>
+        <div class="chart-container">
+            <html>
+<head><meta charset="utf-8" /></head>
+<body>
+    <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.3.0.min.js" integrity="sha256-bO3dS6yCpk9aK4gUpNELtCiDeSYvGYnK7jFI58NQnHI=" crossorigin="anonymous"></script>                <div id="donation-chart" class="plotly-graph-div" style="height:900px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("donation-chart")) {                    Plotly.newPlot(                        "donation-chart",                        [{"hovertemplate":"\u003cb\u003e%{label}\u003c\u002fb\u003e\u003cbr\u003eGBP %{value:,.0f}\u003cbr\u003e%{percent}\u003cextra\u003e\u003c\u002fextra\u003e","labels":["Bequest","Cash","Non-Cash","Other","Public Fund"],"values":{"dtype":"f8","bdata":"H4XrURsZVUH2KFxfGiRiQYXrUbhSuQNBzczMzHg18UBxPQpfAf5tQQ=="},"visible":true,"type":"pie","domain":{"x":[0.0,0.44],"y":[0.575,1.0]}},{"hovertemplate":"%{y}\u003cbr\u003eGBP %{x:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"rgba(150, 100, 200, 0.8)"},"orientation":"h","text":["GBP 523K","GBP 620K","GBP 833K","GBP 1.11M","GBP 1.40M","GBP 1.54M","GBP 2.25M","GBP 2.25M","GBP 2.29M","GBP 10.51M"],"textposition":"outside","visible":true,"x":{"dtype":"f8","bdata":"cT0K1xPoH0G4HoVrIusiQaRwPQrGbSlBw\u002fUoXBL+MEEAAABAhVQ1QWZmZuZRjTdBAAAAAIgqQUEAAAAATDRBQQAAAABsgkFB4XoURvEKZEE="},"y":["Finance and Administration Fees Office","Ms Estelle Brownrig","Scottish Parliament Corporate Body","Mr Edwin G Morgan","Electoral Commission","The Electoral Commission","Mr Colin Weir","Mrs Christine Weir","Brian Souter","House of Commons"],"type":"bar","xaxis":"x","yaxis":"y"},{"fill":"tozeroy","fillcolor":"rgba(100, 150, 200, 0.2)","hovertemplate":"%{x}\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"rgba(100, 150, 200, 1)","width":2},"mode":"lines+markers","visible":true,"x":["2001-03","2001-04","2001-05","2001-06","2001-07","2001-08","2001-09","2001-10","2001-12","2002-01","2002-02","2002-03","2002-04","2002-05","2002-06","2002-07","2002-08","2002-09","2002-10","2002-11","2002-12","2003-01","2003-02","2003-03","2003-04","2003-05","2003-06","2003-07","2003-08","2003-09","2003-10","2003-11","2003-12","2004-01","2004-03","2004-04","2004-05","2004-06","2004-07","2004-08","2004-09","2004-10","2004-11","2004-12","2005-01","2005-02","2005-03","2005-04","2005-05","2005-06","2005-07","2005-08","2005-09","2005-10","2005-11","2005-12","2006-01","2006-02","2006-03","2006-04","2006-05","2006-06","2006-07","2006-08","2006-09","2006-10","2006-11","2006-12","2007-01","2007-02","2007-03","2007-04","2007-05","2007-06","2007-07","2007-08","2007-09","2007-10","2007-11","2007-12","2008-01","2008-02","2008-03","2008-04","2008-05","2008-06","2008-07","2008-08","2008-09","2008-10","2008-11","2008-12","2009-01","2009-02","2009-03","2009-04","2009-05","2009-06","2009-07","2009-08","2009-09","2009-10","2009-11","2009-12","2010-01","2010-02","2010-03","2010-04","2010-06","2010-07","2010-09","2010-10","2010-11","2010-12","2011-01","2011-02","2011-03","2011-04","2011-05","2011-06","2011-07","2011-08","2011-09","2011-10","2011-11","2011-12","2012-01","2012-02","2012-03","2012-04","2012-05","2012-06","2012-07","2012-08","2012-09","2012-10","2012-11","2012-12","2013-01","2013-02","2013-03","2013-04","2013-05","2013-06","2013-07","2013-08","2013-09","2013-10","2013-11","2013-12","2014-01","2014-02","2014-03","2014-04","2014-05","2014-06","2014-07","2014-08","2014-09","2014-10","2014-11","2014-12","2015-01","2015-02","2015-03","2015-04","2015-05","2015-06","2015-07","2015-08","2015-09","2015-10","2015-11","2015-12","2016-01","2016-02","2016-03","2016-04","2016-05","2016-06","2016-07","2016-08","2016-09","2016-10","2016-11","2016-12","2017-01","2017-02","2017-03","2017-04","2017-05","2017-06","2017-07","2017-08","2017-09","2017-10","2017-11","2017-12","2018-01","2018-02","2018-03","2018-04","2018-05","2018-06","2018-07","2018-09","2018-10","2018-11","2018-12","2019-01","2019-02","2019-03","2019-04","2019-05","2019-07","2019-08","2019-09","2019-10","2019-11","2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08","2020-09","2020-10","2020-11","2020-12","2021-01","2021-02","2021-03","2021-04","2021-05","2021-06","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01","2022-02","2022-03","2022-04","2022-05","2022-06","2022-07","2022-08","2022-09","2022-10","2022-11","2022-12","2023-01","2023-02","2023-03","2023-04","2023-06","2023-07","2023-08","2023-09","2023-10","2023-11","2023-12","2024-01","2024-02","2024-03","2024-04","2024-05","2024-06","2024-07","2024-09","2024-10","2024-11","2024-12","2025-01","2025-02","2025-03","2025-04","2025-05","2025-06"],"y":{"dtype":"f8","bdata":"16NwPYol8kCQwvUo3EPeQHsUrkfZNuNAhutRuD6v0kDhehSuNyviQMP1KFzPqsFAZmZmZpbJ10DhehSuh\u002fjRQAAAAAAAguRAAAAAAACIw0B7FK5H0X\u002fdQOxRuB6BrPBAexSuR5FQ20A9CtejsKHKQMP1KFx\u002fQ9BAHoXrUZiV2kC4HoXrkZ\u002faQLgeheuh099AhutRuH5a3EBI4XoUjpThQJqZmZm5wN5ASOF6FA4Y3kDMzMzMzEjcQFK4HoXL7uhANDMzM\u002fO81EAfhetRyOjoQBSuR+E6RslAj8L1KHw24EDhehSu9\u002fvVQD4K16MoYuJAFK5H4Woz40AehetRKArdQArXo3Ch6vhApHA9CndR+EAUrkfhOsfCQDMzMzMj19ZAwvUoXC\u002fi2kBcj8L12HngQOtRuB5VE9RAMzMzM0Nr5EBmZmZm1ubfQGZmZmaWXtRAFK5H4Qp52kAehetRuDPUQFyPwvUo2JdAhetRuL63xkBmZmZm\u002fv3hQBSuR+HaaOZACtejcOVW5kD2KFyPQoPRQFyPwvXolNJANDMzM4NG00AfhetRqMvRQKRwPQqHy9BA9ihcjwKA0kDXo3A9uoHWQAAAAABgUMRAUrgehbus3UAfhetRiPj1QPYoXI8Ky+NAUrgehVtO20CkcD0KdynxQBSuR+Hql9FAMzMzM2ve5kBcj8L1KD3kQNejcD0Sf\u002f1AKVyPwnZhEUFxPQrXGSsCQQAAAABwH\u002fpAAAAAAEBT3UAAAAAArOMVQcP1KFy6ERdBPQrXo06WBEEAAAAAlIfzQOxRuB6lztJAhutRuN7a3kAAAAAAoEHNQDMzMzM3lfpA9ihcj9Ik4kDsUbge5RHfQNejcD3KP8lA16NwPUr9xUDXo3A9yvHHQOJ6FK6XINJA7FG4HlVR0ECuR+F6hATtQI\u002fC9ShowfhA7FG4HlVg3EB7FK5H1RnxQNejcD2qxspAFK5H4Sbp9EDsUbgeVQPdQNejcD2q3sZA7FG4HvU76ED2KFyPquzhQB6F61H4lNRAAAAAANhM6UDC9Shcz7DoQM3MzMxMRdhAAAAAADBo20AzMzMz0wDJQM3MzMxs8tVAAAAAAGATx0DNzMzMFEv4QI\u002fC9Si8ht9AAAAAAGATx0AAAAAAYPXLQFyPwvWgDPtAhetRuNSuDUEUrkfhclbpQAAAAACUg\u002f5APQrXo1AfyUAehetRqC\u002fcQB6F61GoL9xAUrgehXpNH0GkcD0KtTEAQfYoXI9qX+hAmpmZmcGDAEHsUbgeRbbfQAAAAAAKzANB7FG4ntYBLEEzMzMzDzv1QEjhehQJNC9BhetRuD6JzkA9CtejUGDPQFK4HoV76OdAAAAAAACI4kDXo3A9ynu+QHE9CteXQv9AAAAAAFRvAUEAAAAA8G3QQAAAAADwm+pAzczMzLxf0EBmZmZm1qgJQR+F61GYEtJAAAAAAHho70AAAAAAXrcCQQAAAAAwUdxAAAAAAPDA10AAAAAA4O3NQAAAAADg+ctAAAAAACJAAEEUrkfhGmncQD0K16NQ2MxAcT0K17MJ7UAUrkfhKtfRQOJ6FK43\u002fNpAKVyPwlXYzEAUrkfhKkLVQOJ6FK43jtNAmpmZmbGj6kBxPQpX4fcuQRSuR+EqMNhAuB6F6+Ga\u002fEBSuB6FE9v0QArXo7DkqzFBAAAAAFx89EA9CtejbksBQUjhetRbqjVB7FG4HoU60kDXo3A9Cp\u002fNQOxRuB6F19BA16NwPQqfzUDhehSuRwbXQEjhehTOQDBBAAAAAADUvkAAAAAAQM8AQQAAAABQ2wdB16NwPVpuAkGuR+F65Nj5QClcj8LV9f1AKVyPwlXb90AUrkfhKggCQSlcj8I11\u002fhAKVyPwlXb90CamZmZB5MDQRSuR+GKewFBCtejcH1bA0FI4XoUOG0LQQAAAACQTfhAKVyPwvX860AAAAAAkL76QIXrUbjKvflAAAAAAJBN+EAAAAAAkE34QAAAAADgUflAAAAAANAb+UAAAAAAkE34QAAAAACQTfhAKVyPwnF\u002fIkEehetR5vIFQc3MzMy+oQZBj8L1KCCaAkEAAAAArPnwQJDC9Sj8b\u002fpAAAAAAIY0DUEAAAAAGF\u002fvQEjhehTWZftAAAAAABhf70AAAAAAGF\u002fvQAAAAAAYX+9A7FG4HnGBCkFI4XoUAK8EQexRuB7BVvBAexSuRx8hCkH2KFyPThgAQexRuB7BVvBA7FG4HkGJ8kDsUbgeQSHxQOxRuB5BlfBA7FG4HkEY8EDD9ShcI5D+QD4K16PUnBFBPgrXo8b8CEHD9Shcv24AQeJ6FK7vLAhBw\u002fUoXL9u8EDD9Shcv1D1QMP1KFw\u002fGPRAAAAAAHA25UCPwvUoWI4CQZqZmZmXqwVBKVyPwi2s9UDiehSuoVgGQQrXo3Dp8hBBcT0K13sN9kDhehSuL\u002fPmQM3MzMyc2PBAcT0K13sN9kBxPQrXew32QHE9Ctd7DfZAcT0K13uP9kBxPQrXew32QFyPwvV+4hdBcT0K1\u002ftL9kDC9ShcS5wWQTMzMzNNZgZBSOF6FII5\u002f0A+CtejoFj3QBSuR+HuT\u002fxAexSuR2Ev9kA+CtejsNUFQXsUrkdhL\u002fZAexSuR2HF9kB7FK5HYS\u002f2QHsUrkdhL\u002fZA16NwPZBSBkGamZmZOWL3QAAAAAAAiNNACtejcKUpEEHsUbgeJf4IQZqZmZk5YvdAmpmZmTli90CamZmZOWL3QJqZmZk5YvdAZmZmZm4qFUHNzMzMOGL3QJqZmZk5XPhAmpmZmTli90ApXI\u002fCUQ\u002f7QK5H4XrUkA5BrkfhevY2CkEpXI\u002fC0db5QClcj8LR1vlAMzMzM9tr\u002fUAUrkfhaMEDQSlcj8JRD\u002ftAKVyPwtHW+UApXI\u002fC0db5QHsUrkdRD\u002ftA61G4HkHRAkFcj8L1iDj5QJqZmZlifhZBAAAAAEQQEUEpXI9CvKQlQXE9CteDXMpAcT0K14NcykB7FK5HoYzNQLgehetBCtNAcT0K14NcykApXI\u002fC9WjPQNejcD3aXd9A16NwPdox3kDXo3A92jHeQA=="},"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003eBequest\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Bequest","showlegend":true,"visible":true,"y":{"dtype":"f8","bdata":"AAAAAACIw0DsUbgeJbzuQFK4HoWLJsVAw\u002fUoXKeW80DXo3A9yiS2QB+F61GoPd1AhetRuDJbBkEAAAAAYP\u002fjQAAAAAAAiLNAuB6F641Y90AAAAAAAIjTQAAAAAAAlNFAAAAAAABMzUDsUbge1SbdQAAAAAAAiMNAAAAAAAC930A9CtejkBbCQAAAAAAATL1AAAAAAICiCUHNzMzMrLPJQClcj8L1prpA7FG4ntYBLEF7FK5HmcXuQFK4HoV7ceZAcT0K15fR\u002fEDXo3A9ynu+QGZmZmY46QdBAAAAAABq6EAAAAAAAJoAQQAAAAAAiMNAAAAAAABAn0AAAAAAAIjDQAAAAAAAiMNAPQrXo3D4ykC4HoXrQTHxQOxRuB6Fup5AAAAAAABAv0AAAAAAAGrYQAAAAAAAauhAUrgehcutyEAAAAAAAIjjQFK4HoXrINRAAAAAAADD7kAfhetR4IDlQAAAAADAXAVBj8L1KJTd5EBSuB6F41LuQFyPwvVUbgFBAAAAAACIw0CuR+F6xO\u002fsQAAAAAAAQJ9AAAAAAABq6EA9CtejYFraQAAAAAAATO1AAAAAAAD5xEAAAAAAAEz9QHE9CtdDKM1AFK5H4e6i9UBSuB6Fx6P2QAAAAAAAQJ9AAAAAAACI00AAAAAAgE8SQQAAAACAhA5BPQrXozAf00BmZmZmNoLYQAAAAAAAF\u002fFAAAAAAABMzUAAAAAAwHX2QAAAAAAAiNNAcT0K12Ok2EAAAAAAgAcOQQAAAAAAQK9AAAAAAABq6EBSuB6FS6jMQJqZmZnlP\u002f9A4XoUrl+G5UDhehSuieQIQRSuR+FW3gtBH4XrUbgxpEA="},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003eCash\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Cash","showlegend":true,"visible":true,"y":{"dtype":"f8","bdata":"AAAAAABAn0AAAAAAAGrYQAAAAAAA4JVAAAAAAACIw0AAAAAAAHCXQAAAAAAAAJZAAAAAAAC0tEAAAAAAAMCSQAAAAAAAwJJAAAAAAAAAmUAAAAAAAIjDQAAAAAAAcKdAAAAAAACIo0AAAAAAADCRQFyPwvXoL8RAAAAAAACIo0AAAAAAAECfQDMzMzMzxpVAAAAAAABQmUAAAAAAAESdQAAAAAAAcJdAAAAAAAAAeUAAAAAAAJTBQAAAAAAAVqNAAAAAAADAkkAAAAAAAMCSQAAAAAAAiNNAAAAAAACIs0AAAAAAAHy1QAAAAAAAiMNAAAAAAADAkkAAAAAAAHC3QAAAAAAAcLdApHA9ChfIs0AAAAAAAAiQQAAAAAAAGJBAAAAAAABAn0AAAAAAAGrIQAAAAAAAashAAAAAAABq6EAAAAAAAHCXQK5H4Xo0ecRAAAAAAACwqEAAAAAAAFirQOxRuB6Fp6FAAAAAAABlzUAAAAAAAHHLQAAAAAAAgrRAAAAAAACou0AAAAAAAECPQAAAAAAAiMNAAAAAAABq+EAAAAAAAGroQAAAAAAAiONAAAAAAAC0xEAAAAAAAOzDQAAAAAAAiMNAAAAAAAAPxEAAAAAAAM64QAAAAAAAiMNAAAAAAABMvUAAAAAAAHC3QAAAAACATxJBAAAAAABMzUAAAAAAAIjDQAAAAAAAcLdAAAAAAAActkAAAAAAAHi0QAAAAAAAtbNAAAAAAADAkkAAAAAAAIizQAAAAAAAQJ9AAAAAAABAr0AAAAAAAMCCQAAAAAAAQI9AAAAAAAAklUAAAAAAAIizQAAAAACAhP5AAAAAAABqCEEAAAAAAEzdQAAAAAAAathAAAAAAACI00AAAAAAAJOzQAAAAAAAQI9AAAAAAABAn0AAAAAAAECvQAAAAAAATN1AAAAAAABMzUAAAAAAAHCXQAAAAAAAiMNAAAAAAABq6EAAAAAAAECfQAAAAAAAQI9AAAAAAABwp0AAAAAAAHCnQAAAAAAAiLNAAAAAAACIs0AAAAAAAECfQAAAAAAAiMNAAAAAAADwnkAAAAAAAFibQAAAAAAAIIxAAAAAAABIj0AAAAAAABSaQAAAAAAAeLRAAAAAAACIs0AAAAAAAEztQAAAAAAAiMNAAAAAAABAv0AAAAAAAIjDQAAAAAAAauhAAAAAAABAn0AAAAAAALiQQAAAAAAAQK9AKVyPwnXlp0AAAAAAAKq0QAAAAAAAvc9AMzMzMzPXjkAAAAAAAIizQJqZmZmZl4RAAAAAAABAn0AAAAAAAHCXQAAAAAAAYJBAAAAAAACIw0AAAAAAAIizQDMzMzMzP4xApHA9Cld\u002fpEAAAAAAAIijQAAAAAAAauhAAAAAAACIw0D2KFyPQg29QAAAAAAATM1AmpmZmZkqmEAAAAAAAIijQAAAAAAAiLNAAAAAAACIs0AAAAAAAEDPQFyPwvWoaKNAAAAAAABAn0AAAAAAACCcQAAAAAAAiKNAAAAAAABQpEAAAAAAAECfQAAAAAAAQJ9AAAAAAABkuUAAAAAAANSXQAAAAACAhB5BAAAAAABq6EAAAAAAAIjDQAAAAAAAiMNAAAAAAABAn0AAAAAAAHC3QAAAAAAAauhAAAAAAAAX8UAAAAAAAEzNQAAAAAAAjsNAAAAAAABAv0AAAAAAALCdQAAAAAAA5JtAAAAAAACU0UAAAAAAgIQeQQAAAACAhB5BAAAAAADZvkAAAAAAAHCnQAAAAAAAQJ9AAAAAAACIw0AAAAAAAIizQAAAAAAAiLNAAAAAAACIo0BSuB6F64OkQAAAAAAAQL9AAAAAAABwl0AAAAAAAHCXQAAAAAAAAJ5AAAAAAADipEAAAAAAAIijQAAAAAAAcJdAAAAAAAAAnkAAAAAAAHCnQAAAAAAAQJ9AAAAAAABAn0AAAAAAgIQeQQAAAACAhB5BAAAAAACIw0AAAAAAAPbDQAAAAAAAcKdAAAAAAACQpUAAAAAAgIQuQQAAAACAT\u002fJAAAAAAAC820AAAAAAAEC\u002fQAAAAAAATM1AAAAAAACIw0AAAAAAAECfQAAAAAAAQJ9AAAAAAABAr0AAAAAAgIQeQQAAAACAhB5BAAAAAABqGEEAAAAAwHrwQAAAAABAatRAAAAAAABYu0AAAAAAAECfQAAAAAAAiLNAAAAAAABYq0AAAAAAgIQeQQAAAACAhB5BAAAAAABq6EAAAAAAAHCnQAAAAAAAlKFAAAAAAADqxUAAAAAAADiYQAAAAAAAiLNAAAAAAADQq0AAAAAAAECfQAAAAAAAiMNAAAAAAAB4nkAAAAAAAIijQAAAAAAAauhAAAAAAABwp0AAAAAAAIjDQAAAAAAASqBAAAAAAADIqUAAAAAAgIQOQQAAAACAhA5BAAAAAACIs0AAAAAAAIizQAAAAAAAsKhAAAAAAABAj0AAAAAAAECPQAAAAAAA4KBAAAAAAACI00AAAAAAAIjDQAAAAAAAiMNAAAAAAADgoEAAAAAAAIizQAAAAAAAiMNAAAAAAACIs0AAAAAAAECPQAAAAAAAQI9AAAAAAACIw0AAAAAAAGroQAAAAAAAiMNAAAAAAABAj0AAAAAAAECPQAAAAAAAcKdAAAAAAACIs0AAAAAAAHC3QAAAAAAAiMNAAAAAAACIw0AAAAAAAIizQAAAAAAAWLtAAAAAAACI00AAAAAAAEzdQAAAAAAAiKNAAAAAAACIo0AAAAAAAHCnQAAAAACAhA5B"},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003eNon-Cash\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Non-Cash","showlegend":true,"visible":true,"y":{"dtype":"f8","bdata":"rkfhelQKt0C4HoXrUTeUQLgehetRN5RAuB6F61E3lEC4HoXrUTeUQLgehetRN5RAuB6F61E3lEAAAAAAANCIQAAAAAAA0IhAuB6F61E3tEC4HoXrUTeUQAAAAAAA0IhAuB6F61E3lEDNzMzMzMeUQGZmZmZmpqBAuB6F61E2g0AAAAAAAMqoQAAAAAAAeK5AAAAAAICuokAAAAAAAAyfQAAAAAAA6LJAAAAAAAA0mUA9CtejcLebQAAAAAAAEJVAAAAAAABAz0AAAAAAAHC3QAAAAAAAcKdAAAAAAABAn0AAAAAAAECgQAAAAAAAWKtAAAAAAABAj0AAAAAAAECgQAAAAAAAQKBAAAAAAABAoEAAAAAAAECgQAAAAAAA+LFAAAAAAAD4sUAAAAAAAPixQAAAAAAA+LFAAAAAAAD4sUAAAAAAAECgQAAAAAAABcRAAAAAAABAoEAAAAAAAECgQAAAAAAAQKBAAAAAAADAokAAAAAAAMCiQAAAAAAAwKJAAAAAAABQpEAAAAAAAMCiQAAAAAAAwKJAAAAAAADAokAAAAAAAFCkQAAAAAAAwKJAAAAAAADAskAAAAAAAMCSQAAAAAAAwJJA"},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003eOther\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Other","showlegend":true,"visible":true,"y":{"dtype":"f8","bdata":"AAAAAACIw0AAAAAAAEDfQDMzMzPj0dtA"},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003ePublic Fund\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Public Fund","showlegend":true,"visible":true,"y":{"dtype":"f8","bdata":"H4XrUbjfxUD2KFyPoozSQNejcD2qYd9AAAAAAABU00AfhetRuN\u002fFQOxRuB5FxMJA7FG4HmVLyUAfhetROJrCQMP1KFzPqsFAw\u002fUoXM+qwUDD9Shcz6rBQD0K16PQdcdAhetRuD6Mz0AK16NwXejNQOF6FK6H+NFAexSuR9F\u002f3UD2KFyPonDDQHE9CtejhqVAUrgehft22kA9CtejsKHKQMP1KFx\u002fQ9BAUrgehft22kAfhetRuDKLQOF6FK4n5cFA9ihcjyLlwUAUrkfh6kDRQEjhehT+rNFAUrgehXse0UAUrkfhWqnCQB+F61F4lNBAKVyPwhVP0kAzMzMzs9LQQPYoXI8i5cFA9ihcjyLlwUD2KFyPIuXBQK5H4XqkvNJA4XoUrtfN10AfhetRuBezQHE9Ctez19pAKVyPwvXapkAAAAAAQFq\u002fQEjhehSuid1AmpmZmblzwkAUrkfhunPCQBSuR+G6c8JAKVyPwjUKzECuR+F6NITJQJqZmZl5Y8xAFK5H4bpzwkAUrkfhunPCQBSuR+G6c8JASOF6FO7bxUA9Ctej8EnDQBSuR+HaLMVAZmZmZkbPw0AUrkfhunPCQBSuR+G6c8JAFK5H4bpzwkAUrkfhunPCQPYoXI\u002fCYsNAFK5H4TrHwkAUrkfhunPCQMP1KFyvdMZAexSuR+Fuk0DsUbgeRXC+QB+F61E4Ns5A9ihcj8K7p0AUrkfhunPCQI\u002fC9Sg8BMNAFK5H4ToEw0AUrkfhWhTCQEjhehSu1JBAcT0K16NwmECPwvUoXISnQOxRuB4lPc9ASOF6FA5Yx0A9CtejsBq3QBSuR+E6BMNAFK5H4ToEw0AUrkfhOgTDQB+F61H4H8NAKVyPwnXbxkApXI\u002fCNV\u002fBQBSuR+E6BMNAFK5H4ToEw0AUrkfhOgTDQFyPwvUo2JdAhetRuL63xkAAAAAAMCPYQAAAAAAAiMNAH4XrUbhhy0DhehSupxPEQEjhehQuJb1ApHA9CieT3EBI4XoU7nPEQEjhehTuc8RASOF6FG4+v0D2KFyPAgjCQJqZmZmZJL5AFK5H4ZqKxUBxPQrXA4XEQHE9CtcDhcRArkfhehQkukB7FK5HAXvAQD0K16PwS8JAcT0K1wOFxEBxPQrXA4XEQHE9CtcDhcRAAAAAAGBQxEDD9Shcb0\u002fCQFK4HoX7MOhAcT0K1wOF1EBxPQrXA4XEQK5H4Xr04NJA7FG4HkUmukAfhetRWJPCQAAAAABgEMVAAAAAAGAQxUAAAAAAYBDFQFK4HoXrPrxAmpmZmZkmu0DhehSuh6a8QAAAAABgEMVAAAAAAGAQxUAAAAAAYBDFQLgehesxmMNA7FG4HoXhwkBSuB6Fi9HCQAAAAABgEMVAAAAAAGAQxUAAAAAAYBDFQK5H4Xr02cNAMzMzM9N\u002fxUBcj8L12ArXQAAAAACAEMVAAAAAAIAQxUAAAAAAgBDFQAAAAABADeBAAAAAAICWw0AAAAAAALi8QB+F61H4M7pApHA9Cpf0vkCkcD0K19WJQKRwPQrXsp1ArkfhenQu6UDD9ShcT\u002f3FQNejcD1K\u002fcVA16NwPUr9xUDXo3A9Sv3FQNejcD1K\u002fcVA16NwPUr9xUCamZmZOe7QQKRwPQpXEa1A16NwPUr9xUDXo3A9Sv3FQNejcD1K\u002fcVA16NwPUr9xUDXo3A9Sv3FQNejcD1K\u002fcVAZmZmZh5v5kDD9Shcr97GQNejcD2q3sZA16NwParexkCkcD0Kl9TGQAAAAAAAmudA16NwParexkDXo3A9qt7GQNejcD2q3sZAH4XrUVgxyECuR+F6NJHGQNejcD2q3sZA16NwParexkDXo3A9qt7GQAAAAAAAWbtA16NwParexkDXo3A9qt7GQNejcD2q3sZAAAAAAACZyUAAAAAAgPjJQAAAAABgE8dAAAAAAGATx0AAAAAAYBPHQAAAAABgE8dAAAAAAGATx0AAAAAAYBPHQJqZmZk5d8lAUrgehQs07EDsUbgeJUfMQAAAAABgE8dAAAAAAGATx0AAAAAAYBPHQI\u002fC9Sh8Nc1AAAAAAGATx0BmZmZmJrjMQAAAAABgE8dAw\u002fUoXO+gx0DsUbgeVR\u002fZQEjhehQG5eJAAAAAAJSD\u002fkA9CtejUB\u002fJQD0K16NQH8lAPQrXo1AfyUA9CtejUB\u002fJQD0K16NQH8lAPQrXo1AfyUAAAAAAAOXNQMP1KFwPvMpA16NwPQq8ykDXo3A9CrzKQAAAAADAV+RAAAAAADRs\u002fUDXo3A9ChDEQNejcD0KsspA7FG4HsV1zEA9CtejUHjLQIXrUbg+ic5AAAAAAADmy0AAAAAAALLKQAAAAABsX\u002f9AAAAAAHid40AAAAAA4PnLQAAAAADg+ctAAAAAAOD5y0CF61G4fp7LQAAAAADg+ctAH4XrUZgS0kAAAAAA4PnLQAAAAADg+ctAAAAAAOD5y0AAAAAA4PnLQAAAAADg+ctAAAAAAOD5y0AAAAAA4PnLQClcj8JV2MxAPQrXo1DYzEAAAAAABGf\u002fQMP1KFyvj81AKVyPwlXYzEDD9Shcb2nPQAAAAABI6uRAw\u002fUoXG9Mz0ApXI\u002fCVdjMQClcj8JV2MxAKVyPwlXYzEApXI\u002fCVdjMQClcj8JV2MxAw\u002fUoXA+fzUCPwvUoPKPLQNejcD0Kn81AAAAAAFjv5EApXI\u002fCaXv\u002fQEjhehSubpNA16NwPQqfzUDXo3A9Cp\u002fNQNejcD0Kn81A16NwPQqfzUDXo3A9Cp\u002fNQNejcD0Kn81AAAAAAMBdskDXo3A9Cp\u002fNQOF6FK7H5dFA16NwPQqfzUAAAAAAkCP8QAAAAAAA4ItAAAAAAAAuq0AAAAAAABjOQAAAAABQ2\u002fdAAAAAAFDb90Bcj8L12MDlQAAAAABI\u002fPlArkfheuRn90ApXI\u002fCVdv3QClcj8JV2\u002fdAKVyPwlXb90ApXI\u002fCVdv3QClcj8JV2\u002fdAKVyPwlXb90ApXI\u002fCVdv3QAAAAACQTfhAAAAAAJBN+EAAAAAAkE34QAAAAABgwuJAj8L1KOCM\u002fkApXI\u002fC9fzrQAAAAACQTfhAhetRuMq9+UAAAAAAkE34QAAAAACQTfhAAAAAAJBN+EAAAAAAkE34QAAAAACQTfhAAAAAAJBN+EBI4XoUDrH4QHE9CteT69pAhetRuA6x+EBSuB6Fu8PUQOF6FK7nVP5AFK5H4UoF+0AAAAAArPnwQAAAAAAYX+9AFK5H4epd5EAAAAAAGF\u002fvQAAAAAAYX+9AAAAAABhf70AAAAAAGF\u002fvQAAAAAAYX+9AAAAAABhf70D2KFyPUHUCQfYoXI+aOORA7FG4HkEY8EDsUbgeQRjwQOxRuB5BGPBAexSuR+nJ7UDsUbgeQRjwQAAAAABcGPBA7FG4HkEY8EDsUbgeQRjwQOxRuB5BGPBA7FG4HkEY8EDsUbgeQRjwQOxRuB5BGPBAw\u002fUoXL9u8EDD9Shcv27wQMP1KFy\u002fbvBAmpmZmcl2AkFSuB6Fa5zoQMP1KFy\u002fbvBAw\u002fUoXL9u8EDD9Shcv27wQMP1KFy\u002fbvBAw\u002fUoXL9u8EBI4XoUvrTXQB+F61HghexAj8L1KECh9UAfhetRQLT1QClcj8ItrPVAcT0K13sN9kBxPQrXew32QHE9Ctd7DfZAuB6F62Ge6ECuR+F6fLcAQeF6FK4v8+ZAmpmZmTnz5kBxPQrXew32QHE9Ctd7DfZAcT0K13sN9kBxPQrXew32QHE9Ctd7DfZAcT0K13sN9kBxPQrXew32QHsUrkdhL\u002fZAexSuR2Ev9kCamZmZQejgQDMzMzMNRwZBexSuR0Ho4EB7FK5HYS\u002f2QHsUrkdhL\u002fZAexSuR2Ev9kB7FK5HYS\u002f2QHsUrkdhL\u002fZArkfhemAv9kB7FK5HYS\u002f2QHsUrkdhL\u002fZAmpmZmTli90CamZmZOWL3QJqZmZk5YvdAMzMzMxNG5kA9CtejEJr6QJqZmZk5YvdAmpmZmTli90CamZmZOWL3QJqZmZk5YvdAmpmZmTli90CamZmZOWL3QJqZmZk5YvdAmpmZmTli90DNzMzMOGL3QClcj8LR1vlAKVyPwtHW+UApXI\u002fC0db5QBSuR+EKvOFAKVyPwtHW+UApXI\u002fC0db5QClcj8LR1vlAMzMzMxuX+kApXI\u002fC0db5QClcj8LR1vlAKVyPwtHW+UApXI\u002fC0db5QClcj8LR1vlAexSuR9HW+UC4HoXrEbrhQGZmZmZS3\u002fpAZmZmZlLfCkGamZmZuW\u002fDQPYoXI\u002fEoANBcT0K14Nc2kBxPQrXg1zKQHE9CteDXMpAexSuR6GMzUBxPQrXg1zKQHE9CteDXMpA4XoUrodcykDXo3A92jHeQNejcD3aMd5A16NwPdox3kDhehSuj5H6QA=="},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003e%{label}\u003c\u002fb\u003e\u003cbr\u003eGBP %{value:,.0f}\u003cbr\u003e%{percent}\u003cextra\u003e\u003c\u002fextra\u003e","labels":["Bequest","Cash","Non-Cash","Public Fund"],"values":{"dtype":"f8","bdata":"exSuB+KGOkEAAAAAgB8aQQAAAAAAhNxASOF6ZO0RU0E="},"visible":false,"type":"pie","domain":{"x":[0.0,0.44],"y":[0.575,1.0]}},{"hovertemplate":"%{y}\u003cbr\u003eGBP %{x:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"rgba(150, 100, 200, 0.8)"},"orientation":"h","text":["GBP 50K","GBP 92K","GBP 128K","GBP 228K","GBP 250K","GBP 294K","GBP 370K","GBP 500K","GBP 627K","GBP 4.37M"],"textposition":"outside","visible":false,"x":{"dtype":"f8","bdata":"AAAAAABq6EAAAAAAwHX2QJqZmZnlP\u002f9AFK5H4VbeC0EAAAAAgIQOQVyPwvUL8xFBAAAAAECVFkFwPQrXRIMeQdejcL3dJSNBzczMrDGtUEE="},"y":["Ms Laura Davidson","William Ritchie","Robert Benzie","Thomas McCann","Alexander Adams","Dr Norman Allan","Morven Polson","Ms Estelle Brownrig","Electoral Commission","House of Commons"],"type":"bar","xaxis":"x","yaxis":"y"},{"fill":"tozeroy","fillcolor":"rgba(100, 150, 200, 0.2)","hovertemplate":"%{x}\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"rgba(100, 150, 200, 1)","width":2},"mode":"lines+markers","visible":false,"x":["2021-01","2021-02","2021-03","2021-04","2021-05","2021-06","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01","2022-02","2022-03","2022-04","2022-05","2022-06","2022-07","2022-08","2022-09","2022-10","2022-11","2022-12","2023-01","2023-02","2023-03","2023-04","2023-06","2023-07","2023-08","2023-09","2023-10","2023-11","2023-12","2024-01","2024-02","2024-03","2024-04","2024-05","2024-06","2024-07","2024-09","2024-10","2024-11","2024-12","2025-01","2025-02","2025-03","2025-04","2025-05","2025-06"],"y":{"dtype":"f8","bdata":"cT0K13sN9kBcj8L1fuIXQXE9Ctf7S\u002fZAwvUoXEucFkEzMzMzTWYGQUjhehSCOf9APgrXo6BY90AUrkfh7k\u002f8QHsUrkdhL\u002fZAPgrXo7DVBUF7FK5HYS\u002f2QHsUrkdhxfZAexSuR2Ev9kB7FK5HYS\u002f2QNejcD2QUgZBmpmZmTli90AAAAAAAIjTQArXo3ClKRBB7FG4HiX+CEGamZmZOWL3QJqZmZk5YvdAmpmZmTli90CamZmZOWL3QGZmZmZuKhVBzczMzDhi90CamZmZOVz4QJqZmZk5YvdAKVyPwlEP+0CuR+F61JAOQa5H4Xr2NgpBKVyPwtHW+UApXI\u002fC0db5QDMzMzPba\u002f1AFK5H4WjBA0EpXI\u002fCUQ\u002f7QClcj8LR1vlAKVyPwtHW+UB7FK5HUQ\u002f7QOtRuB5B0QJBXI\u002fC9Yg4+UCamZmZYn4WQQAAAABEEBFBKVyPQrykJUFxPQrXg1zKQHE9CteDXMpAexSuR6GMzUC4HoXrQQrTQHE9CteDXMpAKVyPwvVoz0DXo3A92l3fQNejcD3aMd5A16NwPdox3kA="},"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003eBequest\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Bequest","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"AAAAAIBPEkEAAAAAgIQOQT0K16MwH9NAZmZmZjaC2EAAAAAAABfxQAAAAAAATM1AAAAAAMB19kAAAAAAAIjTQHE9CtdjpNhAAAAAAIAHDkEAAAAAAECvQAAAAAAAauhAUrgehUuozECamZmZ5T\u002f\u002fQOF6FK5fhuVA4XoUronkCEEUrkfhVt4LQR+F61G4MaRA"},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003eCash\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Cash","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"AAAAAABAj0AAAAAAAECPQAAAAAAAiMNAAAAAAABq6EAAAAAAAIjDQAAAAAAAQI9AAAAAAABAj0AAAAAAAHCnQAAAAAAAiLNAAAAAAABwt0AAAAAAAIjDQAAAAAAAiMNAAAAAAACIs0AAAAAAAFi7QAAAAAAAiNNAAAAAAABM3UAAAAAAAIijQAAAAAAAiKNAAAAAAABwp0AAAAAAgIQOQQ=="},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003eNon-Cash\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Non-Cash","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"AAAAAADAokAAAAAAAMCiQAAAAAAAwKJAAAAAAABQpEAAAAAAAMCiQAAAAAAAwKJAAAAAAADAokAAAAAAAFCkQAAAAAAAwKJAAAAAAADAskAAAAAAAMCSQAAAAAAAwJJA"},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003ePublic Fund\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Public Fund","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"cT0K13sN9kBxPQrXew32QHE9Ctd7DfZAexSuR2Ev9kB7FK5HYS\u002f2QJqZmZlB6OBAMzMzMw1HBkF7FK5HQejgQHsUrkdhL\u002fZAexSuR2Ev9kB7FK5HYS\u002f2QHsUrkdhL\u002fZAexSuR2Ev9kCuR+F6YC\u002f2QHsUrkdhL\u002fZAexSuR2Ev9kCamZmZOWL3QJqZmZk5YvdAmpmZmTli90AzMzMzE0bmQD0K16MQmvpAmpmZmTli90CamZmZOWL3QJqZmZk5YvdAmpmZmTli90CamZmZOWL3QJqZmZk5YvdAmpmZmTli90CamZmZOWL3QM3MzMw4YvdAKVyPwtHW+UApXI\u002fC0db5QClcj8LR1vlAFK5H4Qq84UApXI\u002fC0db5QClcj8LR1vlAKVyPwtHW+UAzMzMzG5f6QClcj8LR1vlAKVyPwtHW+UApXI\u002fC0db5QClcj8LR1vlAKVyPwtHW+UB7FK5H0db5QLgehesRuuFAZmZmZlLf+kBmZmZmUt8KQZqZmZm5b8NA9ihcj8SgA0FxPQrXg1zaQHE9CteDXMpAcT0K14NcykB7FK5HoYzNQHE9CteDXMpAcT0K14NcykDhehSuh1zKQNejcD3aMd5A16NwPdox3kDXo3A92jHeQOF6FK6PkfpA"},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003e%{label}\u003c\u002fb\u003e\u003cbr\u003eGBP %{value:,.0f}\u003cbr\u003e%{percent}\u003cextra\u003e\u003c\u002fextra\u003e","labels":["Bequest","Cash","Non-Cash","Public Fund"],"values":{"dtype":"f8","bdata":"AAAAIG4dRkEAAAAAXXQwQQAAAAAgyfFASOF6DI5MZEE="},"visible":false,"type":"pie","domain":{"x":[0.0,0.44],"y":[0.575,1.0]}},{"hovertemplate":"%{y}\u003cbr\u003eGBP %{x:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"rgba(150, 100, 200, 0.8)"},"orientation":"h","text":["GBP 228K","GBP 250K","GBP 250K","GBP 250K","GBP 294K","GBP 370K","GBP 531K","GBP 620K","GBP 1.01M","GBP 8.91M"],"textposition":"outside","visible":false,"x":{"dtype":"f8","bdata":"FK5H4VbeC0EAAAAAgIQOQQAAAACAhA5BAAAAAICEDkFcj8L1C\u002fMRQQAAAABAlRZBexSux7Y1IEG4HoVrIusiQXsUrseAvi5BuB6FSy3\u002fYEE="},"y":["Thomas McCann","Alexander Adams","Mrs Christine Weir","Mr Colin Weir","Dr Norman Allan","Morven Polson","The Electoral Commission","Ms Estelle Brownrig","Electoral Commission","House of Commons"],"type":"bar","xaxis":"x","yaxis":"y"},{"fill":"tozeroy","fillcolor":"rgba(100, 150, 200, 0.2)","hovertemplate":"%{x}\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"rgba(100, 150, 200, 1)","width":2},"mode":"lines+markers","visible":false,"x":["2016-01","2016-02","2016-03","2016-04","2016-05","2016-06","2016-07","2016-08","2016-09","2016-10","2016-11","2016-12","2017-01","2017-02","2017-03","2017-04","2017-05","2017-06","2017-07","2017-08","2017-09","2017-10","2017-11","2017-12","2018-01","2018-02","2018-03","2018-04","2018-05","2018-06","2018-07","2018-09","2018-10","2018-11","2018-12","2019-01","2019-02","2019-03","2019-04","2019-05","2019-07","2019-08","2019-09","2019-10","2019-11","2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08","2020-09","2020-10","2020-11","2020-12","2021-01","2021-02","2021-03","2021-04","2021-05","2021-06","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01","2022-02","2022-03","2022-04","2022-05","2022-06","2022-07","2022-08","2022-09","2022-10","2022-11","2022-12","2023-01","2023-02","2023-03","2023-04","2023-06","2023-07","2023-08","2023-09","2023-10","2023-11","2023-12","2024-01","2024-02","2024-03","2024-04","2024-05","2024-06","2024-07","2024-09","2024-10","2024-11","2024-12","2025-01","2025-02","2025-03","2025-04","2025-05","2025-06"],"y":{"dtype":"f8","bdata":"KVyPwlXb90CamZmZB5MDQRSuR+GKewFBCtejcH1bA0FI4XoUOG0LQQAAAACQTfhAKVyPwvX860AAAAAAkL76QIXrUbjKvflAAAAAAJBN+EAAAAAAkE34QAAAAADgUflAAAAAANAb+UAAAAAAkE34QAAAAACQTfhAKVyPwnF\u002fIkEehetR5vIFQc3MzMy+oQZBj8L1KCCaAkEAAAAArPnwQJDC9Sj8b\u002fpAAAAAAIY0DUEAAAAAGF\u002fvQEjhehTWZftAAAAAABhf70AAAAAAGF\u002fvQAAAAAAYX+9A7FG4HnGBCkFI4XoUAK8EQexRuB7BVvBAexSuRx8hCkH2KFyPThgAQexRuB7BVvBA7FG4HkGJ8kDsUbgeQSHxQOxRuB5BlfBA7FG4HkEY8EDD9ShcI5D+QD4K16PUnBFBPgrXo8b8CEHD9Shcv24AQeJ6FK7vLAhBw\u002fUoXL9u8EDD9Shcv1D1QMP1KFw\u002fGPRAAAAAAHA25UCPwvUoWI4CQZqZmZmXqwVBKVyPwi2s9UDiehSuoVgGQQrXo3Dp8hBBcT0K13sN9kDhehSuL\u002fPmQM3MzMyc2PBAcT0K13sN9kBxPQrXew32QHE9Ctd7DfZAcT0K13uP9kBxPQrXew32QFyPwvV+4hdBcT0K1\u002ftL9kDC9ShcS5wWQTMzMzNNZgZBSOF6FII5\u002f0A+CtejoFj3QBSuR+HuT\u002fxAexSuR2Ev9kA+CtejsNUFQXsUrkdhL\u002fZAexSuR2HF9kB7FK5HYS\u002f2QHsUrkdhL\u002fZA16NwPZBSBkGamZmZOWL3QAAAAAAAiNNACtejcKUpEEHsUbgeJf4IQZqZmZk5YvdAmpmZmTli90CamZmZOWL3QJqZmZk5YvdAZmZmZm4qFUHNzMzMOGL3QJqZmZk5XPhAmpmZmTli90ApXI\u002fCUQ\u002f7QK5H4XrUkA5BrkfhevY2CkEpXI\u002fC0db5QClcj8LR1vlAMzMzM9tr\u002fUAUrkfhaMEDQSlcj8JRD\u002ftAKVyPwtHW+UApXI\u002fC0db5QHsUrkdRD\u002ftA61G4HkHRAkFcj8L1iDj5QJqZmZlifhZBAAAAAEQQEUEpXI9CvKQlQXE9CteDXMpAcT0K14NcykB7FK5HoYzNQLgehetBCtNAcT0K14NcykApXI\u002fC9WjPQNejcD3aXd9A16NwPdox3kDXo3A92jHeQA=="},"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003eBequest\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Bequest","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"UrgehcutyEAAAAAAAIjjQFK4HoXrINRAAAAAAADD7kAfhetR4IDlQAAAAADAXAVBj8L1KJTd5EBSuB6F41LuQFyPwvVUbgFBAAAAAACIw0CuR+F6xO\u002fsQAAAAAAAQJ9AAAAAAABq6EA9CtejYFraQAAAAAAATO1AAAAAAAD5xEAAAAAAAEz9QHE9CtdDKM1AFK5H4e6i9UBSuB6Fx6P2QAAAAAAAQJ9AAAAAAACI00AAAAAAgE8SQQAAAACAhA5BPQrXozAf00BmZmZmNoLYQAAAAAAAF\u002fFAAAAAAABMzUAAAAAAwHX2QAAAAAAAiNNAcT0K12Ok2EAAAAAAgAcOQQAAAAAAQK9AAAAAAABq6EBSuB6FS6jMQJqZmZnlP\u002f9A4XoUrl+G5UDhehSuieQIQRSuR+FW3gtBH4XrUbgxpEA="},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003eCash\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Cash","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"AAAAAACIo0AAAAAAAGroQAAAAAAAcKdAAAAAAACIw0AAAAAAAEqgQAAAAAAAyKlAAAAAAICEDkEAAAAAgIQOQQAAAAAAiLNAAAAAAACIs0AAAAAAALCoQAAAAAAAQI9AAAAAAABAj0AAAAAAAOCgQAAAAAAAiNNAAAAAAACIw0AAAAAAAIjDQAAAAAAA4KBAAAAAAACIs0AAAAAAAIjDQAAAAAAAiLNAAAAAAABAj0AAAAAAAECPQAAAAAAAiMNAAAAAAABq6EAAAAAAAIjDQAAAAAAAQI9AAAAAAABAj0AAAAAAAHCnQAAAAAAAiLNAAAAAAABwt0AAAAAAAIjDQAAAAAAAiMNAAAAAAACIs0AAAAAAAFi7QAAAAAAAiNNAAAAAAABM3UAAAAAAAIijQAAAAAAAiKNAAAAAAABwp0AAAAAAgIQOQQ=="},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003eNon-Cash\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Non-Cash","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"AAAAAABAoEAAAAAAAPixQAAAAAAA+LFAAAAAAAD4sUAAAAAAAPixQAAAAAAA+LFAAAAAAABAoEAAAAAAAAXEQAAAAAAAQKBAAAAAAABAoEAAAAAAAECgQAAAAAAAwKJAAAAAAADAokAAAAAAAMCiQAAAAAAAUKRAAAAAAADAokAAAAAAAMCiQAAAAAAAwKJAAAAAAABQpEAAAAAAAMCiQAAAAAAAwLJAAAAAAADAkkAAAAAAAMCSQA=="},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003ePublic Fund\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Public Fund","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"KVyPwlXb90ApXI\u002fCVdv3QClcj8JV2\u002fdAAAAAAJBN+EAAAAAAkE34QAAAAACQTfhAAAAAAGDC4kCPwvUo4Iz+QClcj8L1\u002fOtAAAAAAJBN+ECF61G4yr35QAAAAACQTfhAAAAAAJBN+EAAAAAAkE34QAAAAACQTfhAAAAAAJBN+EAAAAAAkE34QEjhehQOsfhAcT0K15Pr2kCF61G4DrH4QFK4HoW7w9RA4XoUrudU\u002fkAUrkfhSgX7QAAAAACs+fBAAAAAABhf70AUrkfh6l3kQAAAAAAYX+9AAAAAABhf70AAAAAAGF\u002fvQAAAAAAYX+9AAAAAABhf70AAAAAAGF\u002fvQPYoXI9QdQJB9ihcj5o45EDsUbgeQRjwQOxRuB5BGPBA7FG4HkEY8EB7FK5H6cntQOxRuB5BGPBAAAAAAFwY8EDsUbgeQRjwQOxRuB5BGPBA7FG4HkEY8EDsUbgeQRjwQOxRuB5BGPBA7FG4HkEY8EDD9Shcv27wQMP1KFy\u002fbvBAw\u002fUoXL9u8ECamZmZyXYCQVK4HoVrnOhAw\u002fUoXL9u8EDD9Shcv27wQMP1KFy\u002fbvBAw\u002fUoXL9u8EDD9Shcv27wQEjhehS+tNdAH4XrUeCF7ECPwvUoQKH1QB+F61FAtPVAKVyPwi2s9UBxPQrXew32QHE9Ctd7DfZAcT0K13sN9kC4HoXrYZ7oQK5H4Xp8twBB4XoUri\u002fz5kCamZmZOfPmQHE9Ctd7DfZAcT0K13sN9kBxPQrXew32QHE9Ctd7DfZAcT0K13sN9kBxPQrXew32QHE9Ctd7DfZAexSuR2Ev9kB7FK5HYS\u002f2QJqZmZlB6OBAMzMzMw1HBkF7FK5HQejgQHsUrkdhL\u002fZAexSuR2Ev9kB7FK5HYS\u002f2QHsUrkdhL\u002fZAexSuR2Ev9kCuR+F6YC\u002f2QHsUrkdhL\u002fZAexSuR2Ev9kCamZmZOWL3QJqZmZk5YvdAmpmZmTli90AzMzMzE0bmQD0K16MQmvpAmpmZmTli90CamZmZOWL3QJqZmZk5YvdAmpmZmTli90CamZmZOWL3QJqZmZk5YvdAmpmZmTli90CamZmZOWL3QM3MzMw4YvdAKVyPwtHW+UApXI\u002fC0db5QClcj8LR1vlAFK5H4Qq84UApXI\u002fC0db5QClcj8LR1vlAKVyPwtHW+UAzMzMzG5f6QClcj8LR1vlAKVyPwtHW+UApXI\u002fC0db5QClcj8LR1vlAKVyPwtHW+UB7FK5H0db5QLgehesRuuFAZmZmZlLf+kBmZmZmUt8KQZqZmZm5b8NA9ihcj8SgA0FxPQrXg1zaQHE9CteDXMpAcT0K14NcykB7FK5HoYzNQHE9CteDXMpAcT0K14NcykDhehSuh1zKQNejcD3aMd5A16NwPdox3kDXo3A92jHeQOF6FK6PkfpA"},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003e%{label}\u003c\u002fb\u003e\u003cbr\u003eGBP %{value:,.0f}\u003cbr\u003e%{percent}\u003cextra\u003e\u003c\u002fextra\u003e","labels":["Bequest","Cash","Non-Cash","Other","Public Fund"],"values":{"dtype":"f8","bdata":"hetROGpbK0EK16OwRNI7QQrXo3DFT\u002fFAzczMzHg18UCuR+FaK7hEQQ=="},"visible":false,"type":"pie","domain":{"x":[0.0,0.44],"y":[0.575,1.0]}},{"hovertemplate":"%{y}\u003cbr\u003eGBP %{x:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"rgba(150, 100, 200, 0.8)"},"orientation":"h","text":["GBP 119K","GBP 183K","GBP 190K","GBP 217K","GBP 275K","GBP 289K","GBP 300K","GBP 325K","GBP 523K","GBP 833K"],"textposition":"outside","visible":false,"x":{"dtype":"f8","bdata":"9ihcjy4i\u002fUCF61G4MlsGQa5H4XpwQAdB4XoUrrd3CkEK16NwL8wQQa5H4XrpohFBAAAAAIBPEkEAAAAAINYTQXE9CtcT6B9BpHA9CsZtKUE="},"y":["Corporate Policy Unit","Mr Gordon Campbell Sayer","House of Commons Fees Office","William Crichton Graham","Electoral Commission","The Electoral Commission","Mr Brian Souter","Brian Souter","Finance and Administration Fees Office","Scottish Parliament Corporate Body"],"type":"bar","xaxis":"x","yaxis":"y"},{"fill":"tozeroy","fillcolor":"rgba(100, 150, 200, 0.2)","hovertemplate":"%{x}\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"rgba(100, 150, 200, 1)","width":2},"mode":"lines+markers","visible":false,"x":["2001-03","2001-04","2001-05","2001-06","2001-07","2001-08","2001-09","2001-10","2001-12","2002-01","2002-02","2002-03","2002-04","2002-05","2002-06","2002-07","2002-08","2002-09","2002-10","2002-11","2002-12","2003-01","2003-02","2003-03","2003-04","2003-05","2003-06","2003-07","2003-08","2003-09","2003-10","2003-11","2003-12","2004-01","2004-03","2004-04","2004-05","2004-06","2004-07","2004-08","2004-09","2004-10","2004-11","2004-12","2005-01","2005-02","2005-03","2005-04","2005-05","2005-06","2005-07","2005-08","2005-09","2005-10","2005-11","2005-12","2006-01","2006-02","2006-03","2006-04","2006-05","2006-06","2006-07","2006-08","2006-09","2006-10","2006-11","2006-12","2007-01","2007-02","2007-03","2007-04","2007-05","2007-06","2007-07","2007-08","2007-09","2007-10","2007-11","2007-12","2008-01","2008-02","2008-03","2008-04","2008-05","2008-06","2008-07","2008-08","2008-09","2008-10","2008-11","2008-12","2009-01","2009-02","2009-03","2009-04","2009-05","2009-06","2009-07","2009-08","2009-09","2009-10","2009-11","2009-12","2010-01","2010-02","2010-03","2010-04","2010-06","2010-07","2010-09","2010-10","2010-11","2010-12"],"y":{"dtype":"f8","bdata":"16NwPYol8kCQwvUo3EPeQHsUrkfZNuNAhutRuD6v0kDhehSuNyviQMP1KFzPqsFAZmZmZpbJ10DhehSuh\u002fjRQAAAAAAAguRAAAAAAACIw0B7FK5H0X\u002fdQOxRuB6BrPBAexSuR5FQ20A9CtejsKHKQMP1KFx\u002fQ9BAHoXrUZiV2kC4HoXrkZ\u002faQLgeheuh099AhutRuH5a3EBI4XoUjpThQJqZmZm5wN5ASOF6FA4Y3kDMzMzMzEjcQFK4HoXL7uhANDMzM\u002fO81EAfhetRyOjoQBSuR+E6RslAj8L1KHw24EDhehSu9\u002fvVQD4K16MoYuJAFK5H4Woz40AehetRKArdQArXo3Ch6vhApHA9CndR+EAUrkfhOsfCQDMzMzMj19ZAwvUoXC\u002fi2kBcj8L12HngQOtRuB5VE9RAMzMzM0Nr5EBmZmZm1ubfQGZmZmaWXtRAFK5H4Qp52kAehetRuDPUQFyPwvUo2JdAhetRuL63xkBmZmZm\u002fv3hQBSuR+HaaOZACtejcOVW5kD2KFyPQoPRQFyPwvXolNJANDMzM4NG00AfhetRqMvRQKRwPQqHy9BA9ihcjwKA0kDXo3A9uoHWQAAAAABgUMRAUrgehbus3UAfhetRiPj1QPYoXI8Ky+NAUrgehVtO20CkcD0KdynxQBSuR+Hql9FAMzMzM2ve5kBcj8L1KD3kQNejcD0Sf\u002f1AKVyPwnZhEUFxPQrXGSsCQQAAAABwH\u002fpAAAAAAEBT3UAAAAAArOMVQcP1KFy6ERdBPQrXo06WBEEAAAAAlIfzQOxRuB6lztJAhutRuN7a3kAAAAAAoEHNQDMzMzM3lfpA9ihcj9Ik4kDsUbge5RHfQNejcD3KP8lA16NwPUr9xUDXo3A9yvHHQOJ6FK6XINJA7FG4HlVR0ECuR+F6hATtQI\u002fC9ShowfhA7FG4HlVg3EB7FK5H1RnxQNejcD2qxspAFK5H4Sbp9EDsUbgeVQPdQNejcD2q3sZA7FG4HvU76ED2KFyPquzhQB6F61H4lNRAAAAAANhM6UDC9Shcz7DoQM3MzMxMRdhAAAAAADBo20AzMzMz0wDJQM3MzMxs8tVAAAAAAGATx0DNzMzMFEv4QI\u002fC9Si8ht9AAAAAAGATx0AAAAAAYPXLQFyPwvWgDPtAhetRuNSuDUEUrkfhclbpQAAAAACUg\u002f5APQrXo1AfyUAehetRqC\u002fcQB6F61GoL9xA"},"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003eBequest\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Bequest","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"AAAAAACIw0DsUbgeJbzuQFK4HoWLJsVAw\u002fUoXKeW80DXo3A9yiS2QB+F61GoPd1AhetRuDJbBkEAAAAAYP\u002fjQAAAAAAAiLNAuB6F641Y90AAAAAAAIjTQAAAAAAAlNFAAAAAAABMzUDsUbge1SbdQAAAAAAAiMNAAAAAAAC930A9CtejkBbCQAAAAAAATL1AAAAAAICiCUHNzMzMrLPJQClcj8L1prpA"},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003eCash\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Cash","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"AAAAAABAn0AAAAAAAGrYQAAAAAAA4JVAAAAAAACIw0AAAAAAAHCXQAAAAAAAAJZAAAAAAAC0tEAAAAAAAMCSQAAAAAAAwJJAAAAAAAAAmUAAAAAAAIjDQAAAAAAAcKdAAAAAAACIo0AAAAAAADCRQFyPwvXoL8RAAAAAAACIo0AAAAAAAECfQDMzMzMzxpVAAAAAAABQmUAAAAAAAESdQAAAAAAAcJdAAAAAAAAAeUAAAAAAAJTBQAAAAAAAVqNAAAAAAADAkkAAAAAAAMCSQAAAAAAAiNNAAAAAAACIs0AAAAAAAHy1QAAAAAAAiMNAAAAAAADAkkAAAAAAAHC3QAAAAAAAcLdApHA9ChfIs0AAAAAAAAiQQAAAAAAAGJBAAAAAAABAn0AAAAAAAGrIQAAAAAAAashAAAAAAABq6EAAAAAAAHCXQK5H4Xo0ecRAAAAAAACwqEAAAAAAAFirQOxRuB6Fp6FAAAAAAABlzUAAAAAAAHHLQAAAAAAAgrRAAAAAAACou0AAAAAAAECPQAAAAAAAiMNAAAAAAABq+EAAAAAAAGroQAAAAAAAiONAAAAAAAC0xEAAAAAAAOzDQAAAAAAAiMNAAAAAAAAPxEAAAAAAAM64QAAAAAAAiMNAAAAAAABMvUAAAAAAAHC3QAAAAACATxJBAAAAAABMzUAAAAAAAIjDQAAAAAAAcLdAAAAAAAActkAAAAAAAHi0QAAAAAAAtbNAAAAAAADAkkAAAAAAAIizQAAAAAAAQJ9AAAAAAABAr0AAAAAAAMCCQAAAAAAAQI9AAAAAAAAklUAAAAAAAIizQAAAAACAhP5AAAAAAABqCEEAAAAAAEzdQAAAAAAAathAAAAAAACI00AAAAAAAJOzQAAAAAAAQI9AAAAAAABAn0AAAAAAAECvQAAAAAAATN1AAAAAAABMzUAAAAAAAHCXQAAAAAAAiMNAAAAAAABq6EAAAAAAAECfQAAAAAAAQI9AAAAAAABwp0AAAAAAAHCnQAAAAAAAiLNAAAAAAACIs0AAAAAAAECfQAAAAAAAiMNAAAAAAADwnkAAAAAAAFibQAAAAAAAIIxAAAAAAABIj0AAAAAAABSaQAAAAAAAeLRAAAAAAACIs0AAAAAAAEztQAAAAAAAiMNAAAAAAABAv0AAAAAAAIjDQAAAAAAAauhAAAAAAABAn0AAAAAAALiQQAAAAAAAQK9AKVyPwnXlp0AAAAAAAKq0QAAAAAAAvc9AMzMzMzPXjkAAAAAAAIizQJqZmZmZl4RAAAAAAABAn0AAAAAAAHCXQAAAAAAAYJBAAAAAAACIw0AAAAAAAIizQDMzMzMzP4xApHA9Cld\u002fpEAAAAAAAIijQAAAAAAAauhAAAAAAACIw0D2KFyPQg29QAAAAAAATM1AmpmZmZkqmEAAAAAAAIijQAAAAAAAiLNAAAAAAACIs0AAAAAAAEDPQA=="},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003eNon-Cash\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Non-Cash","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"rkfhelQKt0C4HoXrUTeUQLgehetRN5RAuB6F61E3lEC4HoXrUTeUQLgehetRN5RAuB6F61E3lEAAAAAAANCIQAAAAAAA0IhAuB6F61E3tEC4HoXrUTeUQAAAAAAA0IhAuB6F61E3lEDNzMzMzMeUQGZmZmZmpqBAuB6F61E2g0AAAAAAAMqoQAAAAAAAeK5AAAAAAICuokAAAAAAAAyfQAAAAAAA6LJAAAAAAAA0mUA9CtejcLebQAAAAAAAEJVAAAAAAABAz0AAAAAAAHC3QA=="},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003eOther\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Other","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"AAAAAACIw0AAAAAAAEDfQDMzMzPj0dtA"},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003ePublic Fund\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Public Fund","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"H4XrUbjfxUD2KFyPoozSQNejcD2qYd9AAAAAAABU00AfhetRuN\u002fFQOxRuB5FxMJA7FG4HmVLyUAfhetROJrCQMP1KFzPqsFAw\u002fUoXM+qwUDD9Shcz6rBQD0K16PQdcdAhetRuD6Mz0AK16NwXejNQOF6FK6H+NFAexSuR9F\u002f3UD2KFyPonDDQHE9CtejhqVAUrgehft22kA9CtejsKHKQMP1KFx\u002fQ9BAUrgehft22kAfhetRuDKLQOF6FK4n5cFA9ihcjyLlwUAUrkfh6kDRQEjhehT+rNFAUrgehXse0UAUrkfhWqnCQB+F61F4lNBAKVyPwhVP0kAzMzMzs9LQQPYoXI8i5cFA9ihcjyLlwUD2KFyPIuXBQK5H4XqkvNJA4XoUrtfN10AfhetRuBezQHE9Ctez19pAKVyPwvXapkAAAAAAQFq\u002fQEjhehSuid1AmpmZmblzwkAUrkfhunPCQBSuR+G6c8JAKVyPwjUKzECuR+F6NITJQJqZmZl5Y8xAFK5H4bpzwkAUrkfhunPCQBSuR+G6c8JASOF6FO7bxUA9Ctej8EnDQBSuR+HaLMVAZmZmZkbPw0AUrkfhunPCQBSuR+G6c8JAFK5H4bpzwkAUrkfhunPCQPYoXI\u002fCYsNAFK5H4TrHwkAUrkfhunPCQMP1KFyvdMZAexSuR+Fuk0DsUbgeRXC+QB+F61E4Ns5A9ihcj8K7p0AUrkfhunPCQI\u002fC9Sg8BMNAFK5H4ToEw0AUrkfhWhTCQEjhehSu1JBAcT0K16NwmECPwvUoXISnQOxRuB4lPc9ASOF6FA5Yx0A9CtejsBq3QBSuR+E6BMNAFK5H4ToEw0AUrkfhOgTDQB+F61H4H8NAKVyPwnXbxkApXI\u002fCNV\u002fBQBSuR+E6BMNAFK5H4ToEw0AUrkfhOgTDQFyPwvUo2JdAhetRuL63xkAAAAAAMCPYQAAAAAAAiMNAH4XrUbhhy0DhehSupxPEQEjhehQuJb1ApHA9CieT3EBI4XoU7nPEQEjhehTuc8RASOF6FG4+v0D2KFyPAgjCQJqZmZmZJL5AFK5H4ZqKxUBxPQrXA4XEQHE9CtcDhcRArkfhehQkukB7FK5HAXvAQD0K16PwS8JAcT0K1wOFxEBxPQrXA4XEQHE9CtcDhcRAAAAAAGBQxEDD9Shcb0\u002fCQFK4HoX7MOhAcT0K1wOF1EBxPQrXA4XEQK5H4Xr04NJA7FG4HkUmukAfhetRWJPCQAAAAABgEMVAAAAAAGAQxUAAAAAAYBDFQFK4HoXrPrxAmpmZmZkmu0DhehSuh6a8QAAAAABgEMVAAAAAAGAQxUAAAAAAYBDFQLgehesxmMNA7FG4HoXhwkBSuB6Fi9HCQAAAAABgEMVAAAAAAGAQxUAAAAAAYBDFQK5H4Xr02cNAMzMzM9N\u002fxUBcj8L12ArXQAAAAACAEMVAAAAAAIAQxUAAAAAAgBDFQAAAAABADeBAAAAAAICWw0AAAAAAALi8QB+F61H4M7pApHA9Cpf0vkCkcD0K19WJQKRwPQrXsp1ArkfhenQu6UDD9ShcT\u002f3FQNejcD1K\u002fcVA16NwPUr9xUDXo3A9Sv3FQNejcD1K\u002fcVA16NwPUr9xUCamZmZOe7QQKRwPQpXEa1A16NwPUr9xUDXo3A9Sv3FQNejcD1K\u002fcVA16NwPUr9xUDXo3A9Sv3FQNejcD1K\u002fcVAZmZmZh5v5kDD9Shcr97GQNejcD2q3sZA16NwParexkCkcD0Kl9TGQAAAAAAAmudA16NwParexkDXo3A9qt7GQNejcD2q3sZAH4XrUVgxyECuR+F6NJHGQNejcD2q3sZA16NwParexkDXo3A9qt7GQAAAAAAAWbtA16NwParexkDXo3A9qt7GQNejcD2q3sZAAAAAAACZyUAAAAAAgPjJQAAAAABgE8dAAAAAAGATx0AAAAAAYBPHQAAAAABgE8dAAAAAAGATx0AAAAAAYBPHQJqZmZk5d8lAUrgehQs07EDsUbgeJUfMQAAAAABgE8dAAAAAAGATx0AAAAAAYBPHQI\u002fC9Sh8Nc1AAAAAAGATx0BmZmZmJrjMQAAAAABgE8dAw\u002fUoXO+gx0DsUbgeVR\u002fZQEjhehQG5eJAAAAAAJSD\u002fkA9CtejUB\u002fJQD0K16NQH8lAPQrXo1AfyUA9CtejUB\u002fJQA=="},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003e%{label}\u003c\u002fb\u003e\u003cbr\u003eGBP %{value:,.0f}\u003cbr\u003e%{percent}\u003cextra\u003e\u003c\u002fextra\u003e","labels":["Bequest","Cash","Non-Cash","Public Fund"],"values":{"dtype":"f8","bdata":"H4XrEesXRkEpXI+Sq7FbQQAAAADAA+5Aw\u002fUorP+NXkE="},"visible":false,"type":"pie","domain":{"x":[0.0,0.44],"y":[0.575,1.0]}},{"hovertemplate":"%{y}\u003cbr\u003eGBP %{x:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"rgba(150, 100, 200, 0.8)"},"orientation":"h","text":["GBP 153K","GBP 193K","GBP 218K","GBP 495K","GBP 1.11M","GBP 1.25M","GBP 1.97M","GBP 2.25M","GBP 2.25M","GBP 6.02M"],"textposition":"outside","visible":false,"x":{"dtype":"f8","bdata":"XI\u002fC9aSuAkEAAAAAUocHQaRwPQollApBSOF6FCo6HkHD9ShcEv4wQXsUroeXJDNBAAAAAFAPPkEAAAAAiCpBQQAAAABMNEFBkML1yAX7VkE="},"y":["Ms Maureen Helen Erasmuson","House of Commons Finance and Administration Office","Mr Ian McNish","Electoral Commission","Mr Edwin G Morgan","The Electoral Commission","Brian Souter","Mr Colin Weir","Mrs Christine Weir","House of Commons"],"type":"bar","xaxis":"x","yaxis":"y"},{"fill":"tozeroy","fillcolor":"rgba(100, 150, 200, 0.2)","hovertemplate":"%{x}\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"rgba(100, 150, 200, 1)","width":2},"mode":"lines+markers","visible":false,"x":["2011-01","2011-02","2011-03","2011-04","2011-05","2011-06","2011-07","2011-08","2011-09","2011-10","2011-11","2011-12","2012-01","2012-02","2012-03","2012-04","2012-05","2012-06","2012-07","2012-08","2012-09","2012-10","2012-11","2012-12","2013-01","2013-02","2013-03","2013-04","2013-05","2013-06","2013-07","2013-08","2013-09","2013-10","2013-11","2013-12","2014-01","2014-02","2014-03","2014-04","2014-05","2014-06","2014-07","2014-08","2014-09","2014-10","2014-11","2014-12","2015-01","2015-02","2015-03","2015-04","2015-05","2015-06","2015-07","2015-08","2015-09","2015-10","2015-11","2015-12","2016-01","2016-02","2016-03","2016-04","2016-05","2016-06","2016-07","2016-08","2016-09","2016-10","2016-11","2016-12","2017-01","2017-02","2017-03","2017-04","2017-05","2017-06","2017-07","2017-08","2017-09","2017-10","2017-11","2017-12","2018-01","2018-02","2018-03","2018-04","2018-05","2018-06","2018-07","2018-09","2018-10","2018-11","2018-12","2019-01","2019-02","2019-03","2019-04","2019-05","2019-07","2019-08","2019-09","2019-10","2019-11","2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08","2020-09","2020-10","2020-11","2020-12"],"y":{"dtype":"f8","bdata":"UrgehXpNH0GkcD0KtTEAQfYoXI9qX+hAmpmZmcGDAEHsUbgeRbbfQAAAAAAKzANB7FG4ntYBLEEzMzMzDzv1QEjhehQJNC9BhetRuD6JzkA9CtejUGDPQFK4HoV76OdAAAAAAACI4kDXo3A9ynu+QHE9CteXQv9AAAAAAFRvAUEAAAAA8G3QQAAAAADwm+pAzczMzLxf0EBmZmZm1qgJQR+F61GYEtJAAAAAAHho70AAAAAAXrcCQQAAAAAwUdxAAAAAAPDA10AAAAAA4O3NQAAAAADg+ctAAAAAACJAAEEUrkfhGmncQD0K16NQ2MxAcT0K17MJ7UAUrkfhKtfRQOJ6FK43\u002fNpAKVyPwlXYzEAUrkfhKkLVQOJ6FK43jtNAmpmZmbGj6kBxPQpX4fcuQRSuR+EqMNhAuB6F6+Ga\u002fEBSuB6FE9v0QArXo7DkqzFBAAAAAFx89EA9CtejbksBQUjhetRbqjVB7FG4HoU60kDXo3A9Cp\u002fNQOxRuB6F19BA16NwPQqfzUDhehSuRwbXQEjhehTOQDBBAAAAAADUvkAAAAAAQM8AQQAAAABQ2wdB16NwPVpuAkGuR+F65Nj5QClcj8LV9f1AKVyPwlXb90AUrkfhKggCQSlcj8I11\u002fhAKVyPwlXb90CamZmZB5MDQRSuR+GKewFBCtejcH1bA0FI4XoUOG0LQQAAAACQTfhAKVyPwvX860AAAAAAkL76QIXrUbjKvflAAAAAAJBN+EAAAAAAkE34QAAAAADgUflAAAAAANAb+UAAAAAAkE34QAAAAACQTfhAKVyPwnF\u002fIkEehetR5vIFQc3MzMy+oQZBj8L1KCCaAkEAAAAArPnwQJDC9Sj8b\u002fpAAAAAAIY0DUEAAAAAGF\u002fvQEjhehTWZftAAAAAABhf70AAAAAAGF\u002fvQAAAAAAYX+9A7FG4HnGBCkFI4XoUAK8EQexRuB7BVvBAexSuRx8hCkH2KFyPThgAQexRuB7BVvBA7FG4HkGJ8kDsUbgeQSHxQOxRuB5BlfBA7FG4HkEY8EDD9ShcI5D+QD4K16PUnBFBPgrXo8b8CEHD9Shcv24AQeJ6FK7vLAhBw\u002fUoXL9u8EDD9Shcv1D1QMP1KFw\u002fGPRAAAAAAHA25UCPwvUoWI4CQZqZmZmXqwVBKVyPwi2s9UDiehSuoVgGQQrXo3Dp8hBBcT0K13sN9kDhehSuL\u002fPmQM3MzMyc2PBAcT0K13sN9kBxPQrXew32QHE9Ctd7DfZAcT0K13uP9kA="},"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003eBequest\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Bequest","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"7FG4ntYBLEF7FK5HmcXuQFK4HoV7ceZAcT0K15fR\u002fEDXo3A9ynu+QGZmZmY46QdBAAAAAABq6EAAAAAAAJoAQQAAAAAAiMNAAAAAAABAn0AAAAAAAIjDQAAAAAAAiMNAPQrXo3D4ykC4HoXrQTHxQOxRuB6Fup5AAAAAAABAv0AAAAAAAGrYQAAAAAAAauhAUrgehcutyEAAAAAAAIjjQFK4HoXrINRAAAAAAADD7kAfhetR4IDlQAAAAADAXAVBj8L1KJTd5EBSuB6F41LuQFyPwvVUbgFBAAAAAACIw0CuR+F6xO\u002fsQAAAAAAAQJ9AAAAAAABq6EA9CtejYFraQAAAAAAATO1AAAAAAAD5xEAAAAAAAEz9QHE9CtdDKM1AFK5H4e6i9UBSuB6Fx6P2QAAAAAAAQJ9AAAAAAACI00A="},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003eCash\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Cash","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"XI\u002fC9ahoo0AAAAAAAECfQAAAAAAAIJxAAAAAAACIo0AAAAAAAFCkQAAAAAAAQJ9AAAAAAABAn0AAAAAAAGS5QAAAAAAA1JdAAAAAAICEHkEAAAAAAGroQAAAAAAAiMNAAAAAAACIw0AAAAAAAECfQAAAAAAAcLdAAAAAAABq6EAAAAAAABfxQAAAAAAATM1AAAAAAACOw0AAAAAAAEC\u002fQAAAAAAAsJ1AAAAAAADkm0AAAAAAAJTRQAAAAACAhB5BAAAAAICEHkEAAAAAANm+QAAAAAAAcKdAAAAAAABAn0AAAAAAAIjDQAAAAAAAiLNAAAAAAACIs0AAAAAAAIijQFK4HoXrg6RAAAAAAABAv0AAAAAAAHCXQAAAAAAAcJdAAAAAAAAAnkAAAAAAAOKkQAAAAAAAiKNAAAAAAABwl0AAAAAAAACeQAAAAAAAcKdAAAAAAABAn0AAAAAAAECfQAAAAACAhB5BAAAAAICEHkEAAAAAAIjDQAAAAAAA9sNAAAAAAABwp0AAAAAAAJClQAAAAACAhC5BAAAAAIBP8kAAAAAAALzbQAAAAAAAQL9AAAAAAABMzUAAAAAAAIjDQAAAAAAAQJ9AAAAAAABAn0AAAAAAAECvQAAAAACAhB5BAAAAAICEHkEAAAAAAGoYQQAAAADAevBAAAAAAEBq1EAAAAAAAFi7QAAAAAAAQJ9AAAAAAACIs0AAAAAAAFirQAAAAACAhB5BAAAAAICEHkEAAAAAAGroQAAAAAAAcKdAAAAAAACUoUAAAAAAAOrFQAAAAAAAOJhAAAAAAACIs0AAAAAAANCrQAAAAAAAQJ9AAAAAAACIw0AAAAAAAHieQAAAAAAAiKNAAAAAAABq6EAAAAAAAHCnQAAAAAAAiMNAAAAAAABKoEAAAAAAAMipQAAAAACAhA5BAAAAAICEDkEAAAAAAIizQAAAAAAAiLNAAAAAAACwqEAAAAAAAECPQAAAAAAAQI9AAAAAAADgoEAAAAAAAIjTQAAAAAAAiMNAAAAAAACIw0AAAAAAAOCgQAAAAAAAiLNAAAAAAACIw0AAAAAAAIizQA=="},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003eNon-Cash\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Non-Cash","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"AAAAAABwp0AAAAAAAECfQAAAAAAAQKBAAAAAAABYq0AAAAAAAECPQAAAAAAAQKBAAAAAAABAoEAAAAAAAECgQAAAAAAAQKBAAAAAAAD4sUAAAAAAAPixQAAAAAAA+LFAAAAAAAD4sUAAAAAAAPixQAAAAAAAQKBAAAAAAAAFxEAAAAAAAECgQAAAAAAAQKBAAAAAAABAoEA="},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003ePublic Fund\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Public Fund","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"PQrXo1AfyUA9CtejUB\u002fJQAAAAAAA5c1Aw\u002fUoXA+8ykDXo3A9CrzKQNejcD0KvMpAAAAAAMBX5EAAAAAANGz9QNejcD0KEMRA16NwPQqyykDsUbgexXXMQD0K16NQeMtAhetRuD6JzkAAAAAAAObLQAAAAAAAsspAAAAAAGxf\u002f0AAAAAAeJ3jQAAAAADg+ctAAAAAAOD5y0AAAAAA4PnLQIXrUbh+nstAAAAAAOD5y0AfhetRmBLSQAAAAADg+ctAAAAAAOD5y0AAAAAA4PnLQAAAAADg+ctAAAAAAOD5y0AAAAAA4PnLQAAAAADg+ctAKVyPwlXYzEA9CtejUNjMQAAAAAAEZ\u002f9Aw\u002fUoXK+PzUApXI\u002fCVdjMQMP1KFxvac9AAAAAAEjq5EDD9Shcb0zPQClcj8JV2MxAKVyPwlXYzEApXI\u002fCVdjMQClcj8JV2MxAKVyPwlXYzEDD9ShcD5\u002fNQI\u002fC9Sg8o8tA16NwPQqfzUAAAAAAWO\u002fkQClcj8Jpe\u002f9ASOF6FK5uk0DXo3A9Cp\u002fNQNejcD0Kn81A16NwPQqfzUDXo3A9Cp\u002fNQNejcD0Kn81A16NwPQqfzUAAAAAAwF2yQNejcD0Kn81A4XoUrsfl0UDXo3A9Cp\u002fNQAAAAACQI\u002fxAAAAAAADgi0AAAAAAAC6rQAAAAAAAGM5AAAAAAFDb90AAAAAAUNv3QFyPwvXYwOVAAAAAAEj8+UCuR+F65Gf3QClcj8JV2\u002fdAKVyPwlXb90ApXI\u002fCVdv3QClcj8JV2\u002fdAKVyPwlXb90ApXI\u002fCVdv3QClcj8JV2\u002fdAAAAAAJBN+EAAAAAAkE34QAAAAACQTfhAAAAAAGDC4kCPwvUo4Iz+QClcj8L1\u002fOtAAAAAAJBN+ECF61G4yr35QAAAAACQTfhAAAAAAJBN+EAAAAAAkE34QAAAAACQTfhAAAAAAJBN+EAAAAAAkE34QEjhehQOsfhAcT0K15Pr2kCF61G4DrH4QFK4HoW7w9RA4XoUrudU\u002fkAUrkfhSgX7QAAAAACs+fBAAAAAABhf70AUrkfh6l3kQAAAAAAYX+9AAAAAABhf70AAAAAAGF\u002fvQAAAAAAYX+9AAAAAABhf70AAAAAAGF\u002fvQPYoXI9QdQJB9ihcj5o45EDsUbgeQRjwQOxRuB5BGPBA7FG4HkEY8EB7FK5H6cntQOxRuB5BGPBAAAAAAFwY8EDsUbgeQRjwQOxRuB5BGPBA7FG4HkEY8EDsUbgeQRjwQOxRuB5BGPBA7FG4HkEY8EDD9Shcv27wQMP1KFy\u002fbvBAw\u002fUoXL9u8ECamZmZyXYCQVK4HoVrnOhAw\u002fUoXL9u8EDD9Shcv27wQMP1KFy\u002fbvBAw\u002fUoXL9u8EDD9Shcv27wQEjhehS+tNdAH4XrUeCF7ECPwvUoQKH1QB+F61FAtPVAKVyPwi2s9UBxPQrXew32QHE9Ctd7DfZAcT0K13sN9kC4HoXrYZ7oQK5H4Xp8twBB4XoUri\u002fz5kCamZmZOfPmQHE9Ctd7DfZAcT0K13sN9kBxPQrXew32QHE9Ctd7DfZA"},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003e%{label}\u003c\u002fb\u003e\u003cbr\u003eGBP %{value:,.0f}\u003cbr\u003e%{percent}\u003cextra\u003e\u003c\u002fextra\u003e","labels":["Bequest","Cash","Non-Cash","Public Fund"],"values":{"dtype":"f8","bdata":"exSuB+KGOkEAAAAAgB8aQQAAAAAAhNxASOF6ZO0RU0E="},"visible":false,"type":"pie","domain":{"x":[0.0,0.44],"y":[0.575,1.0]}},{"hovertemplate":"%{y}\u003cbr\u003eGBP %{x:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"rgba(150, 100, 200, 0.8)"},"orientation":"h","text":["GBP 50K","GBP 92K","GBP 128K","GBP 228K","GBP 250K","GBP 294K","GBP 370K","GBP 500K","GBP 627K","GBP 4.37M"],"textposition":"outside","visible":false,"x":{"dtype":"f8","bdata":"AAAAAABq6EAAAAAAwHX2QJqZmZnlP\u002f9AFK5H4VbeC0EAAAAAgIQOQVyPwvUL8xFBAAAAAECVFkFwPQrXRIMeQdejcL3dJSNBzczMrDGtUEE="},"y":["Ms Laura Davidson","William Ritchie","Robert Benzie","Thomas McCann","Alexander Adams","Dr Norman Allan","Morven Polson","Ms Estelle Brownrig","Electoral Commission","House of Commons"],"type":"bar","xaxis":"x","yaxis":"y"},{"fill":"tozeroy","fillcolor":"rgba(100, 150, 200, 0.2)","hovertemplate":"%{x}\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"rgba(100, 150, 200, 1)","width":2},"mode":"lines+markers","visible":false,"x":["2021-01","2021-02","2021-03","2021-04","2021-05","2021-06","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01","2022-02","2022-03","2022-04","2022-05","2022-06","2022-07","2022-08","2022-09","2022-10","2022-11","2022-12","2023-01","2023-02","2023-03","2023-04","2023-06","2023-07","2023-08","2023-09","2023-10","2023-11","2023-12","2024-01","2024-02","2024-03","2024-04","2024-05","2024-06","2024-07","2024-09","2024-10","2024-11","2024-12","2025-01","2025-02","2025-03","2025-04","2025-05","2025-06"],"y":{"dtype":"f8","bdata":"cT0K13sN9kBcj8L1fuIXQXE9Ctf7S\u002fZAwvUoXEucFkEzMzMzTWYGQUjhehSCOf9APgrXo6BY90AUrkfh7k\u002f8QHsUrkdhL\u002fZAPgrXo7DVBUF7FK5HYS\u002f2QHsUrkdhxfZAexSuR2Ev9kB7FK5HYS\u002f2QNejcD2QUgZBmpmZmTli90AAAAAAAIjTQArXo3ClKRBB7FG4HiX+CEGamZmZOWL3QJqZmZk5YvdAmpmZmTli90CamZmZOWL3QGZmZmZuKhVBzczMzDhi90CamZmZOVz4QJqZmZk5YvdAKVyPwlEP+0CuR+F61JAOQa5H4Xr2NgpBKVyPwtHW+UApXI\u002fC0db5QDMzMzPba\u002f1AFK5H4WjBA0EpXI\u002fCUQ\u002f7QClcj8LR1vlAKVyPwtHW+UB7FK5HUQ\u002f7QOtRuB5B0QJBXI\u002fC9Yg4+UCamZmZYn4WQQAAAABEEBFBKVyPQrykJUFxPQrXg1zKQHE9CteDXMpAexSuR6GMzUC4HoXrQQrTQHE9CteDXMpAKVyPwvVoz0DXo3A92l3fQNejcD3aMd5A16NwPdox3kA="},"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003eBequest\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Bequest","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"AAAAAIBPEkEAAAAAgIQOQT0K16MwH9NAZmZmZjaC2EAAAAAAABfxQAAAAAAATM1AAAAAAMB19kAAAAAAAIjTQHE9CtdjpNhAAAAAAIAHDkEAAAAAAECvQAAAAAAAauhAUrgehUuozECamZmZ5T\u002f\u002fQOF6FK5fhuVA4XoUronkCEEUrkfhVt4LQR+F61G4MaRA"},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003eCash\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Cash","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"AAAAAABAj0AAAAAAAECPQAAAAAAAiMNAAAAAAABq6EAAAAAAAIjDQAAAAAAAQI9AAAAAAABAj0AAAAAAAHCnQAAAAAAAiLNAAAAAAABwt0AAAAAAAIjDQAAAAAAAiMNAAAAAAACIs0AAAAAAAFi7QAAAAAAAiNNAAAAAAABM3UAAAAAAAIijQAAAAAAAiKNAAAAAAABwp0AAAAAAgIQOQQ=="},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003eNon-Cash\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Non-Cash","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"AAAAAADAokAAAAAAAMCiQAAAAAAAwKJAAAAAAABQpEAAAAAAAMCiQAAAAAAAwKJAAAAAAADAokAAAAAAAFCkQAAAAAAAwKJAAAAAAADAskAAAAAAAMCSQAAAAAAAwJJA"},"type":"box","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003ePublic Fund\u003c\u002fb\u003e\u003cbr\u003eGBP %{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","name":"Public Fund","showlegend":false,"visible":false,"y":{"dtype":"f8","bdata":"cT0K13sN9kBxPQrXew32QHE9Ctd7DfZAexSuR2Ev9kB7FK5HYS\u002f2QJqZmZlB6OBAMzMzMw1HBkF7FK5HQejgQHsUrkdhL\u002fZAexSuR2Ev9kB7FK5HYS\u002f2QHsUrkdhL\u002fZAexSuR2Ev9kCuR+F6YC\u002f2QHsUrkdhL\u002fZAexSuR2Ev9kCamZmZOWL3QJqZmZk5YvdAmpmZmTli90AzMzMzE0bmQD0K16MQmvpAmpmZmTli90CamZmZOWL3QJqZmZk5YvdAmpmZmTli90CamZmZOWL3QJqZmZk5YvdAmpmZmTli90CamZmZOWL3QM3MzMw4YvdAKVyPwtHW+UApXI\u002fC0db5QClcj8LR1vlAFK5H4Qq84UApXI\u002fC0db5QClcj8LR1vlAKVyPwtHW+UAzMzMzG5f6QClcj8LR1vlAKVyPwtHW+UApXI\u002fC0db5QClcj8LR1vlAKVyPwtHW+UB7FK5H0db5QLgehesRuuFAZmZmZlLf+kBmZmZmUt8KQZqZmZm5b8NA9ihcj8SgA0FxPQrXg1zaQHE9CteDXMpAcT0K14NcykB7FK5HoYzNQHE9CteDXMpAcT0K14NcykDhehSuh1zKQNejcD3aMd5A16NwPdox3kDXo3A92jHeQOF6FK6PkfpA"},"type":"box","xaxis":"x3","yaxis":"y3"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.56,1.0]},"yaxis":{"anchor":"x","domain":[0.575,1.0]},"xaxis2":{"anchor":"y2","domain":[0.0,0.44],"title":{"text":"Month"}},"yaxis2":{"anchor":"x2","domain":[0.0,0.425],"title":{"text":"Total Donations (GBP)"}},"xaxis3":{"anchor":"y3","domain":[0.56,1.0]},"yaxis3":{"anchor":"x3","domain":[0.0,0.425],"title":{"text":"Donation Value (GBP)"},"type":"log"},"annotations":[{"font":{"size":12,"color":"black"},"showarrow":false,"text":"\u003cb\u003eTime Period:\u003c\u002fb\u003e","x":0.01,"xanchor":"left","xref":"paper","y":1.02,"yanchor":"bottom","yref":"paper"},{"font":{"size":12,"color":"black"},"showarrow":false,"text":"\u003cb\u003eTime Period:\u003c\u002fb\u003e","x":0.01,"xanchor":"left","xref":"paper","y":1.02,"yanchor":"bottom","yref":"paper"},{"font":{"size":12,"color":"black"},"showarrow":false,"text":"\u003cb\u003eTime Period:\u003c\u002fb\u003e","x":0.01,"xanchor":"left","xref":"paper","y":1.02,"yanchor":"bottom","yref":"paper"},{"font":{"size":12,"color":"black"},"showarrow":false,"text":"\u003cb\u003eTime Period:\u003c\u002fb\u003e","x":0.01,"xanchor":"left","xref":"paper","y":1.02,"yanchor":"bottom","yref":"paper"}],"title":{"text":"Scottish National Party (SNP) - Detailed Donation Analysis\u003cbr\u003e\u003csub\u003eTime Period: All Years | All donation types included\u003c\u002fsub\u003e"},"font":{"size":11},"height":900,"showlegend":false,"hovermode":"closest","updatemenus":[{"active":0,"bgcolor":"rgba(255, 255, 255, 0.9)","bordercolor":"#888","borderwidth":2,"buttons":[{"args":[{"visible":[true,true,true,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title.text":"Scottish National Party (SNP) - Detailed Donation Analysis\u003cbr\u003e\u003csub\u003eTime Period: All Years | All donation types included\u003c\u002fsub\u003e"}],"label":"All Years","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,true,true,true,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title.text":"Scottish National Party (SNP) - Detailed Donation Analysis\u003cbr\u003e\u003csub\u003eTime Period: Last 5 Years | All donation types included\u003c\u002fsub\u003e"}],"label":"Last 5 Years","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title.text":"Scottish National Party (SNP) - Detailed Donation Analysis\u003cbr\u003e\u003csub\u003eTime Period: Last 10 Years | All donation types included\u003c\u002fsub\u003e"}],"label":"Last 10 Years","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]},{"title.text":"Scottish National Party (SNP) - Detailed Donation Analysis\u003cbr\u003e\u003csub\u003eTime Period: 2001-2010 | All donation types included\u003c\u002fsub\u003e"}],"label":"2001-2010","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,true,true,true,false,false,false,false,false,false,false,false,false]},{"title.text":"Scottish National Party (SNP) - Detailed Donation Analysis\u003cbr\u003e\u003csub\u003eTime Period: 2011-2020 | All donation types included\u003c\u002fsub\u003e"}],"label":"2011-2020","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,true,true,true,false,false]},{"title.text":"Scottish National Party (SNP) - Detailed Donation Analysis\u003cbr\u003e\u003csub\u003eTime Period: 2021-Present | All donation types included\u003c\u002fsub\u003e"}],"label":"2021-Present","method":"update"}],"direction":"down","type":"dropdown","x":0.01,"xanchor":"left","y":1.0,"yanchor":"top"}]},                        {"responsive": true}                    )                };            </script>        </div>
+</body>
+</html>
+        </div>
+    </div>
+    
+        
+
+<div class="section">
+    <h2>Donation Type Reference</h2>
+    <p>Understanding the different categories of political donations:</p>
+    <br>
+    <p>
+        <span class="badge badge-cash">Cash</span>
+        Direct monetary contributions to political parties
+    </p>
+    <br>
+    <p>
+        <span class="badge badge-non-cash">Non-Cash</span>
+        In-kind donations (goods, services, resources)
+    </p>
+    <br>
+    <p>
+        <span class="badge badge-sponsorship">Sponsorship</span>
+        Funding for party events and activities
+    </p>
+    <br>
+    <p>
+        <span class="badge badge-public-fund">Public Fund</span>
+        State-funded donations or grants
+    </p>
+    <br>
+    <p>
+        <span class="badge badge-bequest">Bequest</span>
+        Donations from wills and legacies
+    </p>
+    <br>
+    <p>
+        <span class="badge badge-other">Other</span>
+        Miscellaneous donation types
+    </p>
+</div>
+
+        
+    <div class="footer">
+        
+    <p>Data source: Electoral Commission</p>
+    <p>For more information, visit: www.electoralcommission.org.uk</p>
+    
+        <p>Last updated: 2026-01-16 10:56:13</p>
+    </div>
+    
+    </div>
+</body>
+</html>

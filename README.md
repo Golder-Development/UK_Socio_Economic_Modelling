@@ -169,6 +169,46 @@ This separation allows:
 * visible artefacts,
 * and discussion without requiring execution.
 
+### Recent Output: Political Donations Analysis
+
+A comprehensive suite of interactive dashboards analyzing UK political funding patterns (2001-2025):
+
+**Summary Dashboard:**
+* [political_donations_summary_dashboard.html](generated_charts/political_donations_summary_dashboard.html)
+* 6-panel analytics grid with key statistics
+* Overview of donation patterns, donor types, and temporal trends
+* Professional styling with color-coded donation categories
+
+**Party-Specific Dashboards:**
+* Individual dashboards for 9 major UK political parties
+* Time-period filtering to compare different eras
+* Donation type breakdowns and donor analysis
+* Examples: Conservative, Labour, Lib Dems, SNP, Green Party, UKIP, Plaid Cymru, DUP, Reform UK
+
+**Aggregate Analyses:**
+* Party comparison heatmaps
+* Donor type distribution
+* Temporal trend analysis
+* Summary statistics across all parties
+
+**Key Findings:**
+* Total donations tracked: £1.55 billion (90,006 records)
+* 23,238 unique donors identified
+* Cash donations dominate (£1.1B), followed by public funding (£252M)
+* Average donation size: £17,266
+
+**To regenerate these visualizations:**
+
+```bash
+# Individual party dashboards and aggregate analyses
+python visuals/political_donations_interactive.py
+
+# Comprehensive summary dashboard
+python visuals/political_donations_summary_dashboard.py
+```
+
+For detailed information about these visualizations, see [VISUALIZATION_UPDATE_SUMMARY.txt](VISUALIZATION_UPDATE_SUMMARY.txt).
+
 ---
 
 ## 🧑‍🤝‍🧑 Collaboration & contribution

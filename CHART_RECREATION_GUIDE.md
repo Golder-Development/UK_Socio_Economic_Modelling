@@ -5,6 +5,30 @@ This document maps each chart in `generated_charts/` to the script that creates 
 ## Status: ✅ ALL CHARTS CAN BE RECREATED
 
 Last verified: January 16, 2026
+Last updated: Added Political Donations Interactive Suite (13 charts)
+
+---
+
+## Political Donations Analysis
+
+### NEW: Interactive Political Donations Suite
+
+- **Outputs**: 
+  - `generated_charts/donations_by_party_summary.html` (all parties comparison)
+  - `generated_charts/donations_donor_type_analysis.html` (donor type trends)
+  - `generated_charts/donations_time_analysis.html` (temporal patterns)
+  - `generated_charts/donations_party_heatmap.html` (comparative metrics)
+  - `generated_charts/donations_by_party_<PARTY>.html` (9 party-specific dashboards)
+- **Script**: `visuals/political_donations_interactive.py`
+- **Command**: `python visuals/political_donations_interactive.py`
+- **Features**:
+  - Time period filters (by year, quarter, month)
+  - Donor type breakdowns (Cash, Non-Cash, Sponsorship, Public Funds, Bequests)
+  - Party-specific and comparative views
+  - Donor concentration and loyalty metrics
+  - Interactive heatmaps and trend analysis
+- **Data Source**: `data_sources/dashboard_demo_readonly/source/Donations_accepted_by_political_parties.csv`
+- **Status**: ✅ Active (Created: January 16, 2026)
 
 ---
 

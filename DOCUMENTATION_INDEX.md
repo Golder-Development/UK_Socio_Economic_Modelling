@@ -54,6 +54,18 @@
 - [build_sos_churn_by_parliament.py](visuals/build_sos_churn_by_parliament.py) - SoS turnover analysis
 - [data_sources/parliament/most recent output/README.md](data_sources/parliament/most recent output/README.md) - Output file descriptions
 
+### Political Donations Analysis
+
+- [political_donations_interactive.py](visuals/political_donations_interactive.py) - Party-specific dashboards and aggregate analyses
+- [political_donations_summary_dashboard.py](visuals/political_donations_summary_dashboard.py) - Comprehensive overview dashboard
+- **Generated Files** (in `generated_charts/`):
+  - `political_donations_summary_dashboard.html` - Main overview with 6-panel analytics
+  - `donations_by_party_*.html` - Individual dashboards for 9 major parties
+  - `donations_by_party_summary.html` - Cross-party comparison
+  - `donations_donor_type_analysis.html` - Breakdown by donation type
+  - `donations_time_analysis.html` - Temporal trend analysis
+  - `donations_party_heatmap.html` - Comparative heatmap
+
 ### Visualizations
 
 - [create_tenure_visualization.py](data_sources/parliament/create_tenure_visualization.py) - Interactive Plotly visualization
@@ -97,6 +109,11 @@
 → Run: `python data_sources/parliament/create_tenure_visualization.py`
 → Output: `generated_charts/cabinet_ministers_tenure_parliament_*.html`
 
+**Generate political donations dashboards**
+→ Run: `python visuals/political_donations_interactive.py` (party-specific)
+→ Run: `python visuals/political_donations_summary_dashboard.py` (overview)
+→ Output: `generated_charts/political_donations_*.html` (multiple files)
+
 **Find parliament periods data**
 → Location: `data_sources/parliament/most recent output/parliaments_periods.json`
 → Docs: [most recent output/README.md](data_sources/parliament/most recent output/README.md)
@@ -119,7 +136,7 @@
 REPOSITORY_ARCHITECTURE.md         ← Project structure & both repos
 DEVELOPER_REFERENCE.md              ← Daily work guide
 SCRIPT_UPDATE_SUMMARY.md            ← Recent script updates
-VISUALIZATION_UPDATE_SUMMARY.txt    ← Visualization features
+VISUALIZATION_UPDATE_SUMMARY.txt    ← Visualization features (Cabinet + Political Donations)
 ```
 
 ### Parliament Data Folder
@@ -147,6 +164,12 @@ data_sources/parliament/
 ```
 generated_charts/
 ├── cabinet_ministers_tenure_parliament_*.html ← Interactive viz
+├── political_donations_summary_dashboard.html  ← Donations overview
+├── donations_by_party_*.html                   ← Party-specific dashboards
+├── donations_by_party_summary.html             ← Party comparison
+├── donations_donor_type_analysis.html          ← Type breakdown
+├── donations_time_analysis.html                ← Temporal trends
+├── donations_party_heatmap.html                ← Comparative heatmap
 └── README.md
 ```
 
@@ -162,6 +185,8 @@ generated_charts/
 | QUICK_REFERENCE.md           | Parliament scripts   | ✅ Complete | Previously   |
 | CABINET_MINISTERS_README.md  | Cabinet dataset      | ✅ Complete | Previously   |
 | most recent output/README.md | Output files         | ✅ Complete | Previously   |
+| political_donations_interactive.py | Donations script | ✅ Complete | 2026-01-16   |
+| political_donations_summary_dashboard.py | Dashboard script | ✅ Complete | 2026-01-16   |
 
 ---
 
@@ -172,7 +197,10 @@ generated_charts/
 - Cabinet Ministers: `data_sources/parliament/most recent extract/cabinet_ministers.csv`
 - Parliament Periods: `data_sources/parliament/most recent output/parliaments_periods.json`
 - Churn Summary: `data_sources/parliament/most recent output/parliamentary_churn_summary.csv`
-- Visualization: `generated_charts/cabinet_ministers_tenure_parliament_*.html`
+- Cabinet Visualization: `generated_charts/cabinet_ministers_tenure_parliament_*.html`
+- Donations Summary: `generated_charts/political_donations_summary_dashboard.html`
+- Party Donations: `generated_charts/donations_by_party_*.html`
+- Donations Data: `data_sources/dashboard_demo_readonly/output/cleaned_donations.csv`
 
 **Related Project**:
 
@@ -206,6 +234,6 @@ Use the **"I want to..."** section above to find the right document
 
 ---
 
-**Last Updated**: January 15, 2026  
-**Status**: Complete and organized  
+**Last Updated**: January 16, 2026  
+**Status**: Complete with Political Donations visualizations  
 **Audience**: Developers, analysts, data engineers

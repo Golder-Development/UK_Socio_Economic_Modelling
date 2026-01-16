@@ -139,6 +139,29 @@ Explore the published outputs hosted via GitHub Pages:
 - **Political Posts Mind Map — 3D**: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/political_posts_mindmap_3d.html>
   - Network visualization of UK political posts in 3D.
 
+### Political Donations Analysis
+
+- **Political Donations - Party Comparison Dashboard**: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/donations_by_party_summary.html>
+  - Interactive dashboard comparing donation patterns across all major UK political parties with time series, donor concentration, and type breakdowns.
+
+- **Political Donations - Donor Type Analysis**: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/donations_donor_type_analysis.html>
+  - Analysis of donation types (Cash, Non-Cash, Sponsorship, Public Funds, Bequests) with trends and party distributions.
+
+- **Political Donations - Temporal Analysis**: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/donations_time_analysis.html>
+  - Monthly donation trends and donor activity patterns over time.
+
+- **Political Donations - Party Comparison Heatmap**: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/donations_party_heatmap.html>
+  - Normalized metrics heatmap comparing parties across key donation dimensions.
+
+- **Conservative Party Donations**: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/donations_by_party_conservative_and_unionist_party.html>
+  - Detailed donation analysis for the Conservative and Unionist Party.
+
+- **Labour Party Donations**: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/donations_by_party_labour_party.html>
+  - Detailed donation analysis for the Labour Party.
+
+- **Liberal Democrats Donations**: <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/donations_by_party_liberal_democrats.html>
+  - Detailed donation analysis for the Liberal Democrats.
+
 ### Demographic & Economic Analysis
 
 - **Lords Membership By Type (1958–Present)** (PNG): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/lords_membership_by_type_1958_present.png>
