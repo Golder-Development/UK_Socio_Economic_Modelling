@@ -481,7 +481,12 @@ def main() -> int:
     xml_bytes = _read_xml_bytes(in_path)
     posts = parse_posts(xml_bytes)
     g = build_graph(posts, top_k_edges=6)
-    out_path = Path("political_posts_mindmap.html")
+    
+    # Write both 2D and 3D versions to generated_charts directory
+    charts_dir = Path(__file__).parent.parent / "generated_charts"
+    charts_dir.mkdir(exist_ok=True, parents=True)
+    
+    out_path = charts_dir / "political_posts_mindmap.html"
     write_html(g, out_path)
     print(f"Wrote: {out_path.resolve()}")
     print(f"Posts: {len(posts)} | Nodes: {g.number_of_nodes()} | Edges: {g.number_of_edges()}")

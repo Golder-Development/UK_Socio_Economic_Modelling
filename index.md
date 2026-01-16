@@ -76,8 +76,22 @@ Explore the published outputs hosted via GitHub Pages:
 - **Cabinet Churn & Tenure Report** (Interactive HTML): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/cabinet_churn_report.html>
   - Analysis of senior Cabinet position turnover and tenure length across parliaments (1966 onwards). Combines churn rate trends with tenure distribution data by parliament, including media era markers.
 
+- **Individual Cabinet Analysis** (Interactive HTML): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/individual_cabinet_analysis.html>
+  - Detailed analysis of individual cabinet members' tenure patterns, career trajectories, and categorization by stability and longevity.
+
 - **Cabinet Ministers Tenure by Parliament** (Interactive HTML): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/cabinet_ministers_tenure_parliament_20260115_132049.html>
   - Scatter plot visualization of Cabinet ministers' tenure versus parliament duration.
+
+### Election & Pension Analysis
+
+- **Election Pension Theory Analysis** (Interactive HTML): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/election_pension_theory_analysis.html>
+  - Comprehensive analysis of cabinet appointments around parliamentary elections, investigating whether governments increase appointments and shorten tenures near elections to qualify more members for cabinet pensions.
+
+- **Final Year Pension Analysis** (Interactive HTML): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/final_year_pension_analysis.html>
+  - Focused analysis of cabinet appointment patterns in the final year before elections, examining potential pension qualification strategies.
+
+- **Pension Reform Impact Analysis** (Interactive HTML): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/pension_reform_impact.html>
+  - Analysis of how the 2015 pension reform affected pre-election cabinet turnover patterns, comparing generous defined benefit pensions (pre-2015) with defined contribution schemes (post-2015).
 
 ### Mortality Dashboards
 
@@ -143,6 +157,34 @@ Explore the published outputs hosted via GitHub Pages:
   - Analysis of housing cost inflation impact on fertility trends.
 
 ### Data Exports
+
+#### Cabinet & Political Data
+
+- **Cabinet Members Tenure Profile** (CSV): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/cabinet_members_tenure_profile.csv>
+  - Detailed individual statistics for cabinet members including tenure patterns and career metrics.
+
+- **Appointments Detail** (CSV): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/appointments_detail.csv>
+  - Detailed record of cabinet appointments with timing relative to elections.
+
+- **Election Cycle Analysis** (CSV): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/election_cycle_analysis.csv>
+  - Analysis of appointment patterns across election cycles.
+
+- **Months to Election Analysis** (CSV): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/months_to_election_analysis.csv>
+  - Breakdown of appointments by proximity to election dates.
+
+- **Per Election Analysis** (CSV): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/per_election_analysis.csv>
+  - Per-election statistics on appointments and patterns.
+
+- **Parliamentary Phase Analysis** (CSV): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/parliamentary_phase_analysis.csv>
+  - Analysis of appointments by parliamentary phase/quarter.
+
+- **Final Year Analysis** (CSV): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/final_year_analysis.csv>
+  - Data on cabinet appointments in final year before elections.
+
+- **Pension Reform Comparison** (CSV): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/pension_reform_comparison.csv>
+  - Comparison of appointment patterns pre and post 2015 pension reform.
+
+#### Mortality Data
 
 - **ICD Code Summary** (CSV): <https://golder-development.github.io/UK_Socio_Economic_Modelling/generated_charts/icd_code_summary.csv>
   - Summary of ICD-10 medical classification codes.
