@@ -257,12 +257,16 @@ fig.update_layout(
     showlegend=True
 )
 
-fig.write_html('generated_charts/pension_reform_impact.html')
-print(f"\n✓ Generated: generated_charts/pension_reform_impact.html")
+# Save with proper path handling for GitHub Pages compatibility
+from pathlib import Path
+output_dir = Path(__file__).parent.parent / "generated_charts"
+output_path = output_dir / "pension_reform_impact.html"
+fig.write_html(str(output_path), include_plotlyjs='cdn')
+print(f"\n✓ Generated: {output_path}")
 
 # Save detailed results
 combined_df = pd.concat([pre_df, post_df], ignore_index=True)
-combined_df.to_csv('generated_charts/pension_reform_comparison.csv', index=False)
+combined_df.to_csv(str(output_dir / 'pension_reform_comparison.csv'), index=False)
 print(f"✓ Saved: generated_charts/pension_reform_comparison.csv")
 
 print("\n" + "="*100)

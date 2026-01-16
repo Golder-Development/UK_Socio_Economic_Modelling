@@ -471,7 +471,7 @@ def create_party_summary_dashboard(df: pd.DataFrame) -> None:
     fig.update_yaxes(title_text="Total Donations (GBP)", row=3, col=1)
     
     output_path = OUTPUT_DIR / "donations_by_party_summary.html"
-    fig.write_html(str(output_path))
+    fig.write_html(str(output_path), include_plotlyjs='cdn')
     print("[DONE] Generated: {0}".format(output_path))
 
 
@@ -577,7 +577,7 @@ def create_donor_type_analysis(df: pd.DataFrame) -> None:
     fig.update_yaxes(title_text="Total Value (GBP)", row=2, col=2)
     
     output_path = OUTPUT_DIR / "donations_donor_type_analysis.html"
-    fig.write_html(str(output_path))
+    fig.write_html(str(output_path), include_plotlyjs='cdn')
     print("[DONE] Generated: {0}".format(output_path))
 
 
@@ -680,7 +680,7 @@ def create_time_analysis(df: pd.DataFrame) -> None:
     )
     
     output_path = OUTPUT_DIR / "donations_time_analysis.html"
-    fig.write_html(str(output_path))
+    fig.write_html(str(output_path), include_plotlyjs='cdn')
     print("[DONE] Generated: {0}".format(output_path))
 
 
@@ -837,7 +837,19 @@ def create_party_specific_dashboard(df: pd.DataFrame, party: str) -> None:
     fig.update_xaxes(title_text="Month", row=2, col=1)
     fig.update_yaxes(title_text="Total Donations (GBP)", row=2, col=1)
     fig.update_yaxes(title_text="Donation Value (GBP)", row=2, col=2, type='log')
-    safe_party_name = party.lower().replace(' ', '_').replace('&', 'and')
+    
+    # Sanitize party name for GitHub Pages compatibility
+    # Remove special characters, dots, parentheses, and normalize spacing
+    safe_party_name = party.lower()
+    safe_party_name = safe_party_name.replace('&', 'and')
+    safe_party_name = safe_party_name.replace('(', '').replace(')', '')
+    safe_party_name = safe_party_name.replace('.', '').replace('-', '_')
+    safe_party_name = safe_party_name.replace(' ', '_')
+    # Remove consecutive underscores
+    while '__' in safe_party_name:
+        safe_party_name = safe_party_name.replace('__', '_')
+    safe_party_name = safe_party_name.strip('_')
+    
     output_path = OUTPUT_DIR / "donations_by_party_{0}.html".format(safe_party_name)
     
     # Generate chart HTML
@@ -924,7 +936,7 @@ def create_comparative_heatmap(df: pd.DataFrame) -> None:
     )
     
     output_path = OUTPUT_DIR / "donations_party_heatmap.html"
-    fig.write_html(str(output_path))
+    fig.write_html(str(output_path), include_plotlyjs='cdn')
     print("[DONE] Generated: {0}".format(output_path))
 
 

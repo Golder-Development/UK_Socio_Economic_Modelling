@@ -285,7 +285,11 @@ fig.update_layout(
     hovermode='x unified'
 )
 
-fig.write_html('generated_charts/final_year_pension_analysis.html')
-print(f"✓ Saved: generated_charts/final_year_pension_analysis.html")
+# Save with proper path handling for GitHub Pages compatibility
+from pathlib import Path
+output_dir = Path(__file__).parent.parent / "generated_charts"
+output_path = output_dir / "final_year_pension_analysis.html"
+fig.write_html(str(output_path), include_plotlyjs='cdn')
+print(f"✓ Saved: {output_path}")
 
 print("\n✓ Analysis complete!")
