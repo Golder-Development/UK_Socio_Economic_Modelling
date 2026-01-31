@@ -275,7 +275,7 @@ def load_donations_data():
     try:
         # Try multiple possible data source locations
         potential_paths = [
-            Path(__file__).parent.parent / 'data_sources' / 'dashboard_demo_readonly' / 'output' / 'cleaned_donations.csv',
+            Path(__file__).parent.parent / 'data_sources' / 'dashboard_demo_readonly' / 'output' / 'cleaned_donations.zip',
             Path(__file__).parent.parent / 'data_sources' / 'political_donations.csv',
             Path(__file__).parent.parent / 'generated_charts' / 'political_donations.csv',
         ]

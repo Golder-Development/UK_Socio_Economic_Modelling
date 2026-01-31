@@ -47,7 +47,7 @@ os.environ['PYTHONIOENCODING'] = 'utf-8'
 warnings.filterwarnings('ignore')
 
 # Configuration
-DATA_FILE = Path(__file__).parent.parent / "data_sources" / "dashboard_demo_readonly" / "output" / "cleaned_donations.csv"
+DATA_FILE = Path(__file__).parent.parent / "data_sources" / "dashboard_demo_readonly" / "output" / "cleaned_donations.zip"
 OUTPUT_DIR = Path(__file__).parent.parent / "generated_charts"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
